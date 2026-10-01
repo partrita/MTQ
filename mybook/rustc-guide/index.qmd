@@ -10094,12 +10094,9 @@ cargo tree --package rustc_driver
 
 포함 항목:
 
-- [`src/ci`]: CI 구성 정보. 수많은 플랫폼 상에서 수많은 테스트를 구동하므로 그 규모가 매우 크다.
-- [`src/doc`]: 몇몇 서브모듈 북을 포함하여 다양한 문서들.
-- [`src/etc`]: 기타 유틸리티 스크립트들.
-
-[`src/ci`]: https://github.com/rust-lang/rust/tree/HEAD/src/ci
-[`src/etc`]: https://github.com/rust-lang/rust/tree/HEAD/src/etc
+- `src/ci`: CI 구성 정보. 수많은 플랫폼 상에서 수많은 테스트를 구동하므로 그 규모가 매우 크다.
+- `src/doc`: 몇몇 서브모듈 북을 포함하여 다양한 문서들.
+- `src/etc`: 기타 유틸리티 스크립트들.
 
 
 ## 쿼리: 수요 기반 컴파일 {#query}
@@ -23764,8 +23761,8 @@ Is this still accurate?
 
 여기서 주요한 흥미로운 지점은 다음과 같다:
 
-- [`ConstKind::Unevaluated`]: `TyKind::Alias`와 동일하며 장기적으로는 이름이 변경되어야 한다 (`ty::AliasKind`와 대응되는 `AliasConstKind` 도입과 함께).
-- [`ConstKind::Value`]: 모노모피제이션(단구화) 이후의 `ty::Const`의 최종 값이다. 이는 `TyKind::Str` 또는 `TyKind::ADT`와 같은 완전히 구체적인 타입과 다소 유사하다.
+- `ConstKind::Unevaluated`: `TyKind::Alias`와 동일하며 장기적으로는 이름이 변경되어야 한다 (`ty::AliasKind`와 대응되는 `AliasConstKind` 도입과 함께).
+- `ConstKind::Value`: 모노모피제이션(단구화) 이후의 `ty::Const`의 최종 값이다. 이는 `TyKind::Str` 또는 `TyKind::ADT`와 같은 완전히 구체적인 타입과 다소 유사하다.
 
 *모든* 종류의 상수 인자와 이들이 타입 시스템에서 실제로 어떻게 표현되는지에 대한 전체 목록은 [`ConstKind`] 타입을 참조하라.
 
@@ -28168,10 +28165,10 @@ rustc 빌드 프로세스는 LLVM 도구들을 `build/host/llvm/bin`으로 빌�
 이들은 직접 호출할 수 있다.
 이 도구들에는 다음이 포함된다:
 
- * [`llc`]: 비트코드(`.bc` 파일)를 실행 가능한 코드로 컴파일한다; 이를 사용해 LLVM 백엔드 버그를 복제할 수 있다.
- * [`opt`]: LLVM 최적화 패스를 실행하는 비트코드 변환기이다.
- * [`bugpoint`]: 거대한 테스트 케이스를 작고 유용한 테스트 케이스로 축소한다.
- * 및 기타 다수 (일부는 아래 텍스트에서 참조됨).
+- `llc`: 비트코드(`.bc` 파일)를 실행 가능한 코드로 컴파일한다; 이를 사용해 LLVM 백엔드 버그를 복제할 수 있다.
+- `opt`: LLVM 최적화 패스를 실행하는 비트코드 변환기이다.
+- `bugpoint`: 거대한 테스트 케이스를 작고 유용한 테스트 케이스로 축소한다.
+- 및 기타 다수 (일부는 아래 텍스트에서 참조됨).
 
 [`llc`]: https://llvm.org/docs/CommandGuide/llc.html
 [`opt`]: https://llvm.org/docs/CommandGuide/opt.html

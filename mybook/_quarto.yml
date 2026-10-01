@@ -128,6 +128,7 @@ book:
         - twelve-monotasks/index.qmd
         - time-management-dummies/index.qmd
         - focus-simplicity-manifesto-book/index.qmd
+        - pomodoro-technique/index.qmd
         - art-of-laziness/index.qmd
         - art-creative-thinking/index.qmd
         - journaling-habit/index.qmd
@@ -148,6 +149,7 @@ book:
         - ego-is-the-enemy/index.qmd
         - stop-worrying-start-living/index.qmd
         - mindfulness-dummies/index.qmd
+        - waking-up/index.qmd
         - ikigai/index.qmd
         - awakening-ikigai/index.qmd
         - minimalist-guide/index.qmd

@@ -6,7 +6,7 @@ author:
  - "Travis Gerke"
 date: "2026-08-15"
 engine: markdown
-bibliography: citations.bib
+bibliography: causal-inf-r/citations.bib
 ---
 
 ```{.r}
