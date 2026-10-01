@@ -766,6 +766,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../pomodoro-technique/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">포모도로 테크닉</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../art-of-laziness/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">게으름의 기술</span></a>
   </div>
 </li>
@@ -863,6 +868,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../mindfulness-dummies/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">바보도 이해하는 마음챙김</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../waking-up/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">깨어남</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -5894,7 +5904,7 @@ rust.codegen-units = 0  # num_cpus</code></pre>
 </section>
 <section id="문서-작성하기" class="level3">
 <h3 class="anchored" data-anchor-id="문서-작성하기">문서 작성하기</h3>
-<p>문서 개선 기여는 언제나 환영한다. <code>doc.rust-lang.org</code> 사이트 소스는 소스 트리 내 <a href="몇몇 서브모듈 북을 포함하여 다양한 문서들."><code>src/doc</code></a> 경로에 위치하며 표준 API 문서는 소스 코드 자체(<a href="https://github.com/rust-lang/rust/blob/HEAD/library/std/src/lib.rs#L"><code>library/std/src/lib.rs</code></a> 등)에서 자동 생성된다. 문서 관련 풀 리퀘스트도 다른 일반 PR과 동일한 방식으로 처리된다.</p>
+<p>문서 개선 기여는 언제나 환영한다. <code>doc.rust-lang.org</code> 사이트 소스는 소스 트리 내 <a href="https://github.com/rust-lang/rust/tree/HEAD/src/doc"><code>src/doc</code></a> 경로에 위치하며 표준 API 문서는 소스 코드 자체(<a href="https://github.com/rust-lang/rust/blob/HEAD/library/std/src/lib.rs#L"><code>library/std/src/lib.rs</code></a> 등)에서 자동 생성된다. 문서 관련 풀 리퀘스트도 다른 일반 PR과 동일한 방식으로 처리된다.</p>
 <p>문서 관련 이슈를 탐색하려면 <a href="https://github.com/rust-lang/rust/issues?q=is%3Aopen%20is%3Aissue%20label%3AA-docs">A-docs 라벨</a>을 확인하라.</p>
 <p>문서 작성 스타일 지침은 <a href="https://github.com/rust-lang/rfcs/blob/master/text/1574-more-api-documentation-conventions.md#appendix-a-full-conventions-text">RFC 1574</a>에서 확인할 수 있다.</p>
 <p>표준 라이브러리 문서를 빌드하려면 <code>x doc --stage 1 library --open</code> 명령을 실행하라. 특정 북 문서(예: unstable book)를 빌드하려면 <code>x doc src/doc/unstable-book</code> 명령을 구동한다. 결과물은 <code>build/host/doc</code>에 생성되며 기본 브라우저로 자동 열린다. 자세한 정보는 <a href="#building-documentation">문서 빌드하기</a> 섹션을 참조하라.</p>
@@ -8829,9 +8839,9 @@ Build completed successfully in 0:00:00</code></pre>
 <p><code>rust-lang/rust</code> 저장소에는 정식 Rust 배포판을 빌드하는 것과 관련된 기타 수많은 요소들이 포함되어 있다. 보통 개발 과정에서 이들에 대해 걱정하실 필요는 없다.</p>
 <p>포함 항목:</p>
 <ul>
-<li></li>
-<li></li>
-<li></li>
+<li><code>src/ci</code>: CI 구성 정보. 수많은 플랫폼 상에서 수많은 테스트를 구동하므로 그 규모가 매우 크다.</li>
+<li><code>src/doc</code>: 몇몇 서브모듈 북을 포함하여 다양한 문서들.</li>
+<li><code>src/etc</code>: 기타 유틸리티 스크립트들.</li>
 </ul>
 </section>
 </section>
@@ -17727,8 +17737,8 @@ Is this still accurate?
 <p>존재하는 대부분의 <code>ty::Const</code> 종류는 존재하는 타입의 종류와 직접적으로 대응된다. 예를 들어 <code>ConstKind::Param</code>은 <code>TyKind::Param</code>과 동일하다.</p>
 <p>여기서 주요한 흥미로운 지점은 다음과 같다:</p>
 <ul>
-<li><a href="https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/type.ConstKind.html#variant.Unevaluated"><code>ConstKind::Unevaluated</code></a>: <code>TyKind::Alias</code>와 동일하며 장기적으로는 이름이 변경되어야 한다 (<code>ty::AliasKind</code>와 대응되는 <code>AliasConstKind</code> 도입과 함께).</li>
-<li></li>
+<li><code>ConstKind::Unevaluated</code>: <code>TyKind::Alias</code>와 동일하며 장기적으로는 이름이 변경되어야 한다 (<code>ty::AliasKind</code>와 대응되는 <code>AliasConstKind</code> 도입과 함께).</li>
+<li><code>ConstKind::Value</code>: 모노모피제이션(단구화) 이후의 <code>ty::Const</code>의 최종 값이다. 이는 <code>TyKind::Str</code> 또는 <code>TyKind::ADT</code>와 같은 완전히 구체적인 타입과 다소 유사하다.</li>
 </ul>
 <p><em>모든</em> 종류의 상수 인자와 이들이 타입 시스템에서 실제로 어떻게 표현되는지에 대한 전체 목록은 <a href="https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/type.ConstKind.html"><code>ConstKind</code></a> 타입을 참조하라.</p>
 <p>추론 변수는 꽤 단조로우며 거의 모든 곳에서 타입 추론 변수와 동일하게 처리된다. 상수 파라미터 역시 마찬가지로 단조로우며 거의 모든 곳에서 타입 파라미터의 사용과 동일하게 처리된다. 그러나 파싱, 이름 확인(name resolution) 및 AST 하위 변환(lowering) 중에 처리되는 방식에는 몇 가지 흥미로운 미묘함이 있다: <a href="#ambig-unambig-ty-and-consts">ambig-unambig-ty-and-consts</a>.</p>
@@ -20616,9 +20626,9 @@ s.as_bytes();
 <p>공식 컴파일러(나이틀리 포함)는 LLVM 단언(assertion)이 비활성화되어 있으므로 LLVM 단언 실패가 컴파일러 크래시(ICE가 아닌 “진짜” 크래시)나 다른 종류의 이상 동작으로 나타날 수 있다. 이러한 문제를 겪고 있다면 LLVM 단언이 활성화된 컴파일러(“alt” 나이틀리 또는 bootstrap.toml에 <code>llvm.assertions = true</code>를 설정하여 직접 빌드한 컴파일러)를 사용하여 무언가 나타나는지 확인해 보는 것이 좋은 방법이다.</p>
 <p>rustc 빌드 프로세스는 LLVM 도구들을 <code>build/host/llvm/bin</code>으로 빌드한다. 이들은 직접 호출할 수 있다. 이 도구들에는 다음이 포함된다:</p>
 <ul>
-<li></li>
-<li></li>
-<li></li>
+<li><code>llc</code>: 비트코드(<code>.bc</code> 파일)를 실행 가능한 코드로 컴파일한다; 이를 사용해 LLVM 백엔드 버그를 복제할 수 있다.</li>
+<li><code>opt</code>: LLVM 최적화 패스를 실행하는 비트코드 변환기이다.</li>
+<li><code>bugpoint</code>: 거대한 테스트 케이스를 작고 유용한 테스트 케이스로 축소한다.</li>
 <li>및 기타 다수 (일부는 아래 텍스트에서 참조됨).</li>
 </ul>
 <p>기본적으로 Rust 빌드 시스템은 LLVM 소스 코드나 빌드 구성 설정 변경 사항을 검사하지 않는다. 따라서 <code>rustc</code>에 링크된 LLVM을 다시 빌드해야 하는 경우 먼저 <code>build/host/llvm/</code>에 위치해야 하는 <code>.llvm-stamp</code> 파일을 삭제하라.</p>
