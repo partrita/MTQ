@@ -198,7 +198,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../python-mastery/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">python 고급 기술</span></a>
+  <a href="../python-mastery/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">고급 파이썬 기술</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../effective-python/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Effective Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -208,7 +213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../learn-rust/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python으로 Rust 배우기</span></a>
+  <a href="../learn-rust/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">파이썬 개발자를 위한 Rust</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -244,6 +249,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../writing-for-developers/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">개발자를 위한 글쓰기</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../own-your-tech-career/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">개발자 커리어 셀프 매니지먼트</span></a>
   </div>
 </li>
       </ul>
@@ -305,7 +315,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../py-gapminder/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python gapminder 실습</span></a>
+  <a href="../py-gapminder/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">파이썬 데이터 분석 및 시각화 실습</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -407,7 +417,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../streamline-lab-py/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python 으로 연구실 효율화</span></a>
+  <a href="../streamline-lab-py/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">파이썬으로 연구실 효율화</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -686,6 +696,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../how-to-write-essays/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">에세이 작성법</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../improve-handwriting/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">손글씨 향상시키기</span></a>
   </div>
 </li>
@@ -742,7 +757,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../time-management-dummies/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">바보도 이해하는 성공적인 시간 관리</span></a>
+  <a href="../time-management-dummies/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">누구나 쉽게 배우는 시간 관리 (Time Management For Dummies)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -914,6 +929,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../wicked/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">위키드</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../essay-change-think/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">당신의 생각을 바꾸는 101가지 생각</span></a>
   </div>
 </li>
       </ul>
@@ -1295,7 +1315,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> fibonacci(n<span class="op">:</span> <span class="dt">u32</span>) <span class="op">-&gt;</span> <span class="dt">Vec</span><span class="op">&lt;</span><span class="dt">u64</span><span class="op">&gt;</span> <span class="op">{</span> <span class="kw">let</span> <span class="kw">mut</span> sequence <span class="op">=</span> <span class="dt">Vec</span><span class="pp">::</span>new()<span class="op">;</span> <span class="cf">if</span> n <span class="op">==</span> <span class="dv">0</span> <span class="op">{</span> <span class="cf">return</span> sequence<span class="op">;</span> <span class="op">}</span> sequence<span class="op">.</span>push(<span class="dv">0</span>)<span class="op">;</span> <span class="cf">if</span> n <span class="op">==</span> <span class="dv">1</span> <span class="op">{</span> <span class="cf">return</span> sequence<span class="op">;</span> <span class="op">}</span> sequence<span class="op">.</span>push(<span class="dv">1</span>)<span class="op">;</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> sequence<span class="op">.</span>len() <span class="op">&lt;</span> n <span class="kw">as</span> <span class="dt">usize</span> <span class="op">{</span> <span class="kw">let</span> next <span class="op">=</span> <span class="cf">match</span> sequence[sequence<span class="op">.</span>len() <span class="op">-</span> <span class="dv">1</span>]<span class="op">.</span>checked_add(sequence[sequence<span class="op">.</span>len() <span class="op">-</span> <span class="dv">2</span>]) <span class="op">{</span> <span class="cn">Some</span>(sum) <span class="op">=&gt;</span> sum<span class="op">,</span> <span class="cn">None</span> <span class="op">=&gt;</span> <span class="cf">break</span><span class="op">,</span> <span class="co">// Stop if we would overflow }; sequence.push(next); } sequence }</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 업데이트된 버전에서는 더 큰 수를 다룰 수 있도록 u32 대신 u64를 사용한다. 또한 checked_add 메서드를 사용하는데, 이 메서드는 덧셈이 오버플로되면 None을 반환한다. 덕분에 u64가 표현할 수 있는 한계에 도달하면 우아하게 숫자 생성을 멈출 수 있다.</p>
+<p>이 업데이트된 버전에서는 더 큰 수를 다룰 수 있도록 u 대신 u64를 사용한다. 또한 checked_add 메서드를 사용하는데, 이 메서드는 덧셈이 오버플로되면 None을 반환한다. 덕분에 u64가 표현할 수 있는 한계에 도달하면 우아하게 숫자 생성을 멈출 수 있다.</p>
 <p>테스트도 이 변경 사항을 반영하도록 업데이트해야 한다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span>cfg<span class="at">(</span>test<span class="at">)]</span> <span class="kw">mod</span> tests <span class="op">{</span> <span class="kw">use</span> <span class="kw">super</span><span class="pp">::</span><span class="op">*;</span></span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1335,7 +1355,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> add(a<span class="op">:</span> <span class="dt">i32</span><span class="op">,</span> b<span class="op">:</span> <span class="dt">i32</span>) <span class="op">-&gt;</span> <span class="dt">i32</span> <span class="op">{</span> a <span class="op">+</span> b <span class="op">}</span></span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">{</span> <span class="kw">let</span> result <span class="op">=</span> add(<span class="dv">5</span><span class="op">,</span> <span class="dv">3</span>)<span class="op">;</span> <span class="pp">println!</span>(<span class="st">"The sum is: {}"</span><span class="op">,</span> result)<span class="op">;</span> <span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>여기서 add는 두 개의 i32 매개변수를 받아 그 합을 역시 i32로 반환한다. 함수의 마지막 표현식은 암묵적으로 반환되므로 <code>return</code> 키워드를 명시적으로 쓸 필요가 없다. 다만 함수에서 일찍 빠져나오려면 return 키워드를 사용할 수 있다:</p>
+<p>여기서 add는 두 개의 i 매개변수를 받아 그 합을 역시 i32로 반환한다. 함수의 마지막 표현식은 암묵적으로 반환되므로 <code>return</code> 키워드를 명시적으로 쓸 필요가 없다. 다만 함수에서 일찍 빠져나오려면 return 키워드를 사용할 수 있다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> is_even(n<span class="op">:</span> <span class="dt">i32</span>) <span class="op">-&gt;</span> <span class="dt">bool</span> <span class="op">{</span> <span class="cf">if</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">{</span> <span class="cf">return</span> <span class="cn">true</span><span class="op">;</span> <span class="op">}</span> <span class="cn">false</span> <span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Rust는 아무것도 반환하지 않는 함수도 지원하는데, 이는 유닛(unit) 타입 ()으로 표시된다. 타입을 지정하지 않으면 이것이 기본 반환 타입이다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> do_something() <span class="op">-&gt;</span> () <span class="op">{</span> <span class="pp">println!</span>(<span class="st">"Doing something"</span>)<span class="op">;</span> <span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1425,9 +1445,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Rust에서 데이터 타입(data type)은 정보가 프로그램 내에서 저장·조작되는 방식을 정의하는 데 결정적인 역할을 한다. 이 언어는 풍부한 내장 타입을 제공하며 사용자 정의 타입을 만드는 메커니즘도 갖추고 있다. 이 포괄적인 타입 시스템은 타입 안전성을 보장하고 흔한 프로그래밍 오류를 컴파일 타임에 예방한다.</p>
 <p>Rust의 데이터 타입은 크게 원시(primitive) 타입, 복합(compound) 타입, 사용자 정의(custom) 타입의 세 그룹으로 나눌 수 있다.</p>
 <p>원시 타입은 Rust에서 가장 기본적인 데이터 타입이다. 단일 값을 나타내며 하드웨어가 직접 구현한다. Rust는 여러 원시 타입을 제공한다:</p>
-<p>정수(integer) 타입에는 부호 있는(signed) 것과 부호 없는(unsigned) 것이 있다. 부호 있는 정수는 양수와 음수를 모두 표현할 수 있고 부호 없는 정수는 음이 아닌 수만 표현할 수 있다. Rust는 다양한 크기의 정수 타입을 제공한다: 부호 있는 정수로 i8, i16, i32, i64, i128, isize가 있고 부호 없는 정수로 u8, u16, u32, u64, u128, usize가 있다. 타입 이름의 숫자는 값을 저장하는 데 쓰이는 비트 수를 나타낸다.</p>
+<p>정수(integer) 타입에는 부호 있는(signed) 것과 부호 없는(unsigned) 것이 있다. 부호 있는 정수는 양수와 음수를 모두 표현할 수 있고 부호 없는 정수는 음이 아닌 수만 표현할 수 있다. Rust는 다양한 크기의 정수 타입을 제공한다: 부호 있는 정수로 i, i, i, i, i, isize가 있고 부호 없는 정수로 u, u, u, u, u, usize가 있다. 타입 이름의 숫자는 값을 저장하는 데 쓰이는 비트 수를 나타낸다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb57"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> a<span class="op">:</span> <span class="dt">i32</span> <span class="op">=</span> <span class="op">-</span><span class="dv">42</span><span class="op">;</span> <span class="kw">let</span> b<span class="op">:</span> <span class="dt">u64</span> <span class="op">=</span> <span class="dv">42</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>부동소수점(floating-point) 타입은 소수점이 있는 숫자를 나타낸다. Rust는 단정밀도인 f32와 배정밀도인 f64, 두 가지 부동소수점 타입을 제공한다.</p>
+<p>부동소수점(floating-point) 타입은 소수점이 있는 숫자를 나타낸다. Rust는 단정밀도인 f32와 배정밀도인 f, 두 가지 부동소수점 타입을 제공한다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> pi<span class="op">:</span> <span class="dt">f64</span> <span class="op">=</span> <span class="dv">3.14159265359</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>불리언(boolean) 타입인 bool은 true 아니면 false 두 값만 가질 수 있다. 불리언은 조건문과 논리 연산에 자주 사용된다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb59"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> is_rust_awesome<span class="op">:</span> <span class="dt">bool</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1465,11 +1485,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="숫자-데이터-타입">숫자 데이터 타입</h2>
 <p>Rust는 다양한 프로그래밍 요구에 맞춰 포괄적인 숫자 데이터 타입 집합을 제공한다. 이 타입들은 정수와 부동소수점 수의 두 그룹으로 나뉜다. 각 타입은 저마다 특성과 용례가 있어 개발자가 자신의 요구 사항에 가장 적합한 타입을 선택할 수 있다.</p>
 <p>Rust의 정수는 부호 있는 것과 부호 없는 것이 있다. 부호 있는 정수는 양수와 음수를 모두, 부호 없는 정수는 음이 아닌 수만 표현할 수 있다. Rust는 다양한 값 범위에 맞춰 여러 크기의 정수 타입을 제공한다:</p>
-<p>부호 있는 정수: - i8: 8비트 부호 있는 정수 (-128 ~ 127) - i16: 16비트 부호 있는 정수 (-32,768 ~ 32,767) - i32: 32비트 부호 있는 정수 (-2,147,483,648 ~ 2,147,483,647) - i64: 64비트 부호 있는 정수 (-9,223,372,036,854,775,808 ~ 9,223,372,036,854,775,807) - i128: 128비트 부호 있는 정수 (매우 넓은 범위) - isize: 포인터 크기 부호 있는 정수 (대상 아키텍처에 따라 다름)</p>
-<p>부호 없는 정수: - u8: 8비트 부호 없는 정수 (0 ~ 255) - u16: 16비트 부호 없는 정수 (0 ~ 65,535) - u32: 32비트 부호 없는 정수 (0 ~ 4,294,967,295) - u64: 64비트 부호 없는 정수 (0 ~ 18,446,744,073,709,551,615) - u128: 128비트 부호 없는 정수 (매우 넓은 범위) - usize: 포인터 크기 부호 없는 정수 (대상 아키텍처에 따라 다름)</p>
+<p>부호 있는 정수:</p>
+<ul>
+<li>i8: 8비트 부호 있는 정수 (-128 ~ 127)</li>
+<li>i16: 16비트 부호 있는 정수 (-32, ~ 32,767)</li>
+<li>i32: 32비트 부호 있는 정수 (-2,,, ~ 2,,,647)</li>
+<li>i64: 64비트 부호 있는 정수 (-9,,,,,, ~ 9,,,,,,807)</li>
+<li>i128: 128비트 부호 있는 정수 (매우 넓은 범위)</li>
+<li>isize: 포인터 크기 부호 있는 정수 (대상 아키텍처에 따라 다름)</li>
+</ul>
+<p>부호 없는 정수:</p>
+<ul>
+<li>u8: 8비트 부호 없는 정수 (0 ~ 255)</li>
+<li>u16: 16비트 부호 없는 정수 (0 ~ 65,535)</li>
+<li>u32: 32비트 부호 없는 정수 (0 ~ 4,,,295)</li>
+<li>u64: 64비트 부호 없는 정수 (0 ~ 18,,,,,,615)</li>
+<li>u128: 128비트 부호 없는 정수 (매우 넓은 범위)</li>
+<li>usize: 포인터 크기 부호 없는 정수 (대상 아키텍처에 따라 다름)</li>
+</ul>
 <p>정수 변수를 선언할 때 타입을 명시적으로 지정하거나 문맥에 따라 추론하게 할 수 있다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> x<span class="op">:</span> <span class="dt">i32</span> <span class="op">=</span> <span class="dv">42</span><span class="op">;</span> <span class="kw">let</span> y <span class="op">=</span> <span class="dv">100u8</span><span class="op">;</span> <span class="kw">let</span> z <span class="op">=</span> <span class="op">-</span><span class="dv">15_i8</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>위 예제에서 x는 명시적으로 i32로 선언되었고 y는 u8 접미사 때문에 u8로 추론되었으며 z는 _i8 접미사로 i8로 선언되었다.</p>
+<p>위 예제에서 x는 명시적으로 i32로 선언되었고 y는 u 접미사 때문에 u8로 추론되었으며 z는 _i 접미사로 i8로 선언되었다.</p>
 <p>Rust는 소수점이 있는 숫자를 위한 부동소수점 타입도 제공한다. 두 가지가 있다:</p>
 <ul>
 <li>f32: 32비트 부동소수점 수 (단정밀도)</li>
@@ -1478,8 +1514,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Rust의 부동소수점 수는 IEEE 754 표준을 따른다. 기본적으로 별도 지정이 없으면 f64를 사용한다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb69"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> pi <span class="op">=</span> <span class="dv">3.14159</span><span class="op">;</span> <span class="co">// f64 by default let e: f32 = 2.71828;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>숫자 타입을 다룰 때 Rust는 숫자 리터럴을 쓰는 다양한 방법을 제공한다. 리터럴에는 타입 접미사와 가독성을 위한 시각적 구분자를 넣을 수 있다:</p>
-<p>정수 리터럴: - 십진수: 98_222 - 16진수: 0xff - 8진수: 0o77 - 2진수: 0b1111_0000 - 바이트(u8 전용): b’A’</p>
-<p>부동소수점 리터럴: - 일반: 3.14 - 과학적 표기법: 2.5e-3</p>
+<p>정수 리터럴:</p>
+<ul>
+<li>십진수: 98_222</li>
+<li>16진수: 0xff</li>
+<li>8진수: 0o</li>
+<li>2진수: 0b1111_0000</li>
+<li>바이트(u 전용): b’A’</li>
+</ul>
+<p>부동소수점 리터럴:</p>
+<ul>
+<li>일반: 3.</li>
+<li>과학적 표기법: 2.5e-3</li>
+</ul>
 <p>숫자 리터럴에는 밑줄을 시각적 구분자로 사용해 가독성을 높일 수 있다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> large_number <span class="op">=</span> <span class="dv">1_000_000</span><span class="op">;</span> <span class="kw">let</span> binary <span class="op">=</span> <span class="dv">0b1111_1111</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>숫자 타입에 연산을 수행할 때 Rust는 엄격한 타입 검사를 적용한다. 명시적 변환 없이 서로 다른 숫자 타입 간의 연산은 할 수 없다:</p>
@@ -1726,7 +1773,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="산술-연산" class="level2">
 <h2 class="anchored" data-anchor-id="산술-연산">산술 연산</h2>
 <p>산술 연산(arithmetic operation)은 Rust의 많은 계산의 기초이다. 이 연산들을 효율적이고 안전하게 수행하는 방법을 이해하는 것은 견고하고 고성능인 애플리케이션 개발에 매우 중요하다. 이 절에서는 정수 산술, 부동소수점 산술, 그리고 오버플로 처리라는 중요한 주제를 다룬다.</p>
-<p>Rust의 정수 산술은 단순하고 효율적이다. 덧셈, 뺄셈, 곱셈, 나눗셈, 나머지 같은 표준 산술 연산을 지원하며 i8, i16, i32, i64, i128, u8, u16, u32, u64, u128을 포함한 모든 정수 타입에 수행할 수 있다.</p>
+<p>Rust의 정수 산술은 단순하고 효율적이다. 덧셈, 뺄셈, 곱셈, 나눗셈, 나머지 같은 표준 산술 연산을 지원하며 i, i, i, i, i, u, u, u, u, u128을 포함한 모든 정수 타입에 수행할 수 있다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb124"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> a <span class="op">=</span> <span class="dv">10</span><span class="op">;</span> <span class="kw">let</span> b <span class="op">=</span> <span class="dv">3</span><span class="op">;</span></span>
 <span id="cb124-2"><a href="#cb124-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb124-3"><a href="#cb124-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> sum <span class="op">=</span> a <span class="op">+</span> b<span class="op">;</span> <span class="kw">let</span> difference <span class="op">=</span> a <span class="op">-</span> b<span class="op">;</span> <span class="kw">let</span> product <span class="op">=</span> a <span class="op">*</span> b<span class="op">;</span> <span class="kw">let</span> quotient <span class="op">=</span> a <span class="op">/</span> b<span class="op">;</span> <span class="kw">let</span> remainder <span class="op">=</span> a <span class="op">%</span> b<span class="op">;</span></span>
@@ -1737,7 +1784,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb125"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> a<span class="op">:</span> <span class="dt">i32</span> <span class="op">=</span> <span class="dv">10</span><span class="op">;</span> <span class="kw">let</span> b<span class="op">:</span> <span class="dt">i64</span> <span class="op">=</span> <span class="dv">3</span><span class="op">;</span></span>
 <span id="cb125-2"><a href="#cb125-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb125-3"><a href="#cb125-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> result <span class="op">=</span> a <span class="kw">as</span> <span class="dt">i64</span> <span class="op">+</span> b<span class="op">;</span> <span class="pp">println!</span>(<span class="st">"Result: {}"</span><span class="op">,</span> result)<span class="op">;</span> <span class="co">// Output: 13</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Rust의 부동소수점 산술은 f32와 f64 타입에 대한 연산이다. 이 타입들은 IEEE 754 부동소수점 표준을 따른다. 부동소수점 연산 자체는 대체로 단순하지만 부동소수점 표현에 내재된 정밀도 문제 가능성을 인지하는 것이 매우 중요하다.</p>
+<p>Rust의 부동소수점 산술은 f32와 f 타입에 대한 연산이다. 이 타입들은 IEEE 754 부동소수점 표준을 따른다. 부동소수점 연산 자체는 대체로 단순하지만 부동소수점 표현에 내재된 정밀도 문제 가능성을 인지하는 것이 매우 중요하다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb126"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> x<span class="op">:</span> <span class="dt">f64</span> <span class="op">=</span> <span class="dv">10.5</span><span class="op">;</span> <span class="kw">let</span> y<span class="op">:</span> <span class="dt">f64</span> <span class="op">=</span> <span class="dv">3.2</span><span class="op">;</span></span>
 <span id="cb126-2"><a href="#cb126-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb126-3"><a href="#cb126-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> sum <span class="op">=</span> x <span class="op">+</span> y<span class="op">;</span> <span class="kw">let</span> difference <span class="op">=</span> x <span class="op">-</span> y<span class="op">;</span> <span class="kw">let</span> product <span class="op">=</span> x <span class="op">*</span> y<span class="op">;</span> <span class="kw">let</span> quotient <span class="op">=</span> x <span class="op">/</span> y<span class="op">;</span></span>
@@ -2083,7 +2130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb175-3"><a href="#cb175-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> numbers <span class="op">=</span> <span class="pp">vec!</span>[<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">4</span><span class="op">,</span> <span class="dv">5</span>]<span class="op">;</span> <span class="kw">let</span> (sum<span class="op">,</span> count<span class="op">,</span> average) <span class="op">=</span> calculate_stats(<span class="op">&amp;</span>numbers)<span class="op">;</span> <span class="pp">println!</span>(<span class="st">"Sum: {}, Count: {}, Average: {:.2}"</span><span class="op">,</span> sum<span class="op">,</span> count<span class="op">,</span> average)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>반면 배열(array)은 같은 타입 원소의 고정 크기 컬렉션이다. 메모리에 연속적으로 저장되며 길이가 컴파일 시점에 알려져 있다. 배열은 대괄호로 정의한다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb176"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb176-1"><a href="#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> array<span class="op">:</span> [<span class="dt">i32</span><span class="op">;</span> <span class="dv">5</span>] <span class="op">=</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">4</span><span class="op">,</span> <span class="dv">5</span>]<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>타입 어노테이션 [i32; 5]는 i32 원소 5개짜리 배열을 나타낸다. 반복되는 값으로 배열을 만들 수도 있다:</p>
+<p>타입 어노테이션 [i; 5]는 i 원소 5개짜리 배열을 나타낸다. 반복되는 값으로 배열을 만들 수도 있다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb177"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb177-1"><a href="#cb177-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> zeros <span class="op">=</span> [<span class="dv">0</span><span class="op">;</span> <span class="dv">10</span>]<span class="op">;</span> <span class="co">// Creates an array of 10 zeros</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>배열의 원소에 접근하려면 대괄호 표기법을 사용한다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb178"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb178-1"><a href="#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> first <span class="op">=</span> array[<span class="dv">0</span>]<span class="op">;</span> <span class="kw">let</span> second <span class="op">=</span> array[<span class="dv">1</span>]<span class="op">;</span> <span class="pp">println!</span>(<span class="st">"First: {}, Second: {}"</span><span class="op">,</span> first<span class="op">,</span> second)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2395,7 +2442,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb238"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb238-1"><a href="#cb238-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> sum(numbers<span class="op">:</span> <span class="op">&amp;</span>[<span class="dt">i32</span>]) <span class="op">-&gt;</span> <span class="dt">i32</span> <span class="op">{</span> numbers<span class="op">.</span>iter()<span class="op">.</span>sum() <span class="op">}</span></span>
 <span id="cb238-2"><a href="#cb238-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb238-3"><a href="#cb238-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> v <span class="op">=</span> <span class="pp">vec!</span>[<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">4</span><span class="op">,</span> <span class="dv">5</span>]<span class="op">;</span> <span class="pp">println!</span>(<span class="st">"Sum of all numbers: {}"</span><span class="op">,</span> sum(<span class="op">&amp;</span>v))<span class="op">;</span> <span class="pp">println!</span>(<span class="st">"Sum of the first three numbers: {}"</span><span class="op">,</span> sum(<span class="op">&amp;</span>v[<span class="op">..</span><span class="dv">3</span>]))<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 예제에서 sum 함수는 i32 값의 어떤 슬라이스든, 벡터 전체든 일부든, 다룰 수 있다.</p>
+<p>이 예제에서 sum 함수는 i 값의 어떤 슬라이스든, 벡터 전체든 일부든, 다룰 수 있다.</p>
 <p>수명은 슬라이스를 다룰 때 결정적인 역할을 한다. 슬라이스는 참조이므로 유효한 수명이 필요하다. 대부분의 경우 Rust 컴파일러가 올바른 수명을 추론하지만 때로는 명시적으로 지정해야 한다.</p>
 <p>수명이 중요해지는 예제이다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb239"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb239-1"><a href="#cb239-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> longest<span class="op">&lt;</span><span class="ot">'a</span><span class="op">&gt;</span>(x<span class="op">:</span> <span class="op">&amp;</span><span class="ot">'a</span> <span class="dt">str</span><span class="op">,</span> y<span class="op">:</span> <span class="op">&amp;</span><span class="ot">'a</span> <span class="dt">str</span>) <span class="op">-&gt;</span> <span class="op">&amp;</span><span class="ot">'a</span> <span class="dt">str</span> <span class="op">{</span> <span class="cf">if</span> x<span class="op">.</span>len() <span class="op">&gt;</span> y<span class="op">.</span>len() <span class="op">{</span> x <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span> y <span class="op">}</span> <span class="op">}</span></span>
@@ -2854,7 +2901,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb317-6"><a href="#cb317-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb317-7"><a href="#cb317-7" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> fibonacci() <span class="op">-&gt;</span> Fibonacci <span class="op">{</span> Fibonacci <span class="op">{</span> current<span class="op">:</span> <span class="dv">0</span><span class="op">,</span> next<span class="op">:</span> <span class="dv">1</span> <span class="op">}</span> <span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이 이터레이터는 무한한 피보나치 수열을 생성한다. 이제 이 이터레이터와 몇 가지 컴비네이터로 문제를 풀어보자:</p>
-<p>4,000,000 미만의 모든 짝수 피보나치 수의 합을 구하라.</p>
+<p>4,, 미만의 모든 짝수 피보나치 수의 합을 구하라.</p>
 <p>커스텀 이터레이터와 이터레이터 컴비네이터로 이 문제를 풀 수 있다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb318"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb318-1"><a href="#cb318-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> sum_even_fibonacci_below_limit(limit<span class="op">:</span> <span class="dt">u64</span>) <span class="op">-&gt;</span> <span class="dt">u64</span> <span class="op">{</span> fibonacci() <span class="op">.</span>take_while(<span class="op">|&amp;</span>x<span class="op">|</span> x <span class="op">&lt;</span> limit) <span class="op">.</span>filter(<span class="op">|&amp;</span>x<span class="op">|</span> x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>) <span class="op">.</span>sum() <span class="op">}</span></span>
 <span id="cb318-2"><a href="#cb318-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -3256,7 +3303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb356"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb356-1"><a href="#cb356-1" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span>derive<span class="at">(</span><span class="bu">Debug</span><span class="at">)]</span> <span class="kw">struct</span> Point <span class="op">{</span> x<span class="op">:</span> <span class="dt">i32</span><span class="op">,</span> y<span class="op">:</span> <span class="dt">i32</span><span class="op">,</span> <span class="op">}</span></span>
 <span id="cb356-2"><a href="#cb356-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb356-3"><a href="#cb356-3" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">{</span> <span class="kw">let</span> point <span class="op">=</span> Point <span class="op">{</span> x<span class="op">:</span> <span class="dv">10</span><span class="op">,</span> y<span class="op">:</span> <span class="dv">20</span> <span class="op">};</span> <span class="pp">std::thread::</span>spawn(<span class="kw">move</span> <span class="op">||</span> <span class="op">{</span> <span class="pp">println!</span>(<span class="st">"Point in new thread: {:?}"</span><span class="op">,</span> point)<span class="op">;</span> <span class="op">}</span>)<span class="op">.</span>join()<span class="op">.</span>unwrap()<span class="op">;</span> <span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 예제에서 Point는 i32 값만 담고 있고 i32 자체가 Send이므로 Point도 Send인다. 따라서 point를 새 스레드로 안전하게 이동할 수 있다.</p>
+<p>이 예제에서 Point는 i 값만 담고 있고 i 자체가 Send이므로 Point도 Send인다. 따라서 point를 새 스레드로 안전하게 이동할 수 있다.</p>
 <p>반면 Sync 트레이트는 타입이 여러 스레드 간에 공유되어도 안전함을 나타낸다. 타입 T가 Sync라면 &amp;T(T에 대한 공유 참조)가 Send인다. 즉, 여러 스레드에서 동시에 안전하게 접근할 수 있다.</p>
 <p>Send이면서 Sync인 타입을 보여주는 예제이다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb357"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb357-1"><a href="#cb357-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::sync::</span>Arc<span class="op">;</span></span>
@@ -3557,7 +3604,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>컴파일 타임 오류는 컴파일 과정에서 발생한다. 이 오류들은 프로그램의 빌드와 실행을 막는다. Rust 컴파일러는 코드가 실행되기 전에 폭넓은 잠재적 문제를 잡아내는 데 특히 뛰어난다. 타입 불일치, 문법 오류, 정적으로 감지 가능한 일부 논리 오류까지 포함된다. 컴파일러가 개발 과정 초기에 이런 오류를 잡는 능력은 큰 장점이며 버그가 프로덕션 코드로 흘러들 가능성을 줄여 준다.</p>
 <p>예를 들어 다음 코드를 보라:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb382"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb382-1"><a href="#cb382-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">{</span> <span class="kw">let</span> x<span class="op">:</span> <span class="dt">i32</span> <span class="op">=</span> <span class="st">"hello"</span><span class="op">;</span> <span class="pp">println!</span>(<span class="st">"{}"</span><span class="op">,</span> x)<span class="op">;</span> <span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 코드는 i32 타입 변수에 문자열 리터럴을 할당하려 하므로 컴파일에 실패한다. Rust 컴파일러는 타입 불일치를 설명하는 오류 메시지를 출력하여 프로그램이 실행되기 전에 문제를 바로잡을 수 있게 한다.</p>
+<p>이 코드는 i 타입 변수에 문자열 리터럴을 할당하려 하므로 컴파일에 실패한다. Rust 컴파일러는 타입 불일치를 설명하는 오류 메시지를 출력하여 프로그램이 실행되기 전에 문제를 바로잡을 수 있게 한다.</p>
 <p>반면 런타임 오류는 프로그램 실행 중에 발생한다. 컴파일 타임에 감지할 수 없으며 프로그램 운영 중 특정 조건이 충족될 때만 나타나는 오류이다. 흔한 예로 0으로 나누기, 배열 범위 밖 접근, 네트워크 실패 등이 있다.</p>
 <p>Rust의 런타임 오류 처리 접근 방식은 독특하고 강력하다. 많은 다른 언어처럼 예외(exception)에 의존하는 대신 Rust는 타입 기반 에러 처리를 사용한다. 이는 주로 Result와 Option이라는 두 가지 핵심 타입으로 달성된다.</p>
 <p>Result 타입은 실패할 수 있는 연산에 사용된다. 성공을 위한 Ok와 실패를 위한 Err 두 변형(variant)을 가진 열거형이다. 간단한 예제이다:</p>
@@ -3587,7 +3634,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Rust의 Result와 Option 타입은 에러 처리와 잠재적으로 없는 값 다루기에 대한 언어의 접근 방식의 근간이다. 이 타입들은 오류와 옵셔널 데이터를 구조화된 방식으로 처리하여 더 안전하고 견고한 코드를 장려한다.</p>
 <p>Result 타입은 실패할 수 있는 연산에 사용된다. 성공을 위한 Ok(T)와 실패를 위한 Err(E) 두 변형을 가진 열거형이다. T는 성공 값의 타입, E는 오류 타입을 나타낸다. 기본 예제이다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb387"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb387-1"><a href="#cb387-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> divide(a<span class="op">:</span> <span class="dt">f64</span><span class="op">,</span> b<span class="op">:</span> <span class="dt">f64</span>) <span class="op">-&gt;</span> <span class="dt">Result</span><span class="op">&lt;</span><span class="dt">f64</span><span class="op">,</span> <span class="dt">String</span><span class="op">&gt;</span> <span class="op">{</span> <span class="cf">if</span> b <span class="op">==</span> <span class="dv">0.0</span> <span class="op">{</span> <span class="cn">Err</span>(<span class="st">"Division by zero"</span><span class="op">.</span>to_string()) <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span> <span class="cn">Ok</span>(a <span class="op">/</span> b) <span class="op">}</span> <span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 함수는 Result&lt;f64, String&gt;을 반환한다. Ok 변형은 나눗셈 결과를 담고 Err 변형은 String으로 된 오류 메시지를 담는다.</p>
+<p>이 함수는 Result&lt;f, String&gt;을 반환한다. Ok 변형은 나눗셈 결과를 담고 Err 변형은 String으로 된 오류 메시지를 담는다.</p>
 <p>Result를 사용할 때는 패턴 매칭을 자주 활용한다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb388"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb388-1"><a href="#cb388-1" aria-hidden="true" tabindex="-1"></a><span class="cf">match</span> divide(<span class="dv">10.0</span><span class="op">,</span> <span class="dv">2.0</span>) <span class="op">{</span> <span class="cn">Ok</span>(result) <span class="op">=&gt;</span> <span class="pp">println!</span>(<span class="st">"Result: {}"</span><span class="op">,</span> result)<span class="op">,</span> <span class="cn">Err</span>(e) <span class="op">=&gt;</span> <span class="pp">println!</span>(<span class="st">"Error: {}"</span><span class="op">,</span> e)<span class="op">,</span> <span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Option 타입은 있을 수도 없을 수도 있는 값에 사용된다. 값이 있는 경우를 위한 Some(T)과 없는 경우를 위한 None 두 변형이 있다. 이 타입은 널 포인터 예외 회피에 특히 유용하다:</p>
@@ -4224,7 +4271,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="성능-테스팅" class="level2">
 <h2 class="anchored" data-anchor-id="성능-테스팅">성능 테스팅</h2>
 <p>성능 테스팅과 벤치마킹(benchmarking)은 소프트웨어 개발의 중요한 측면이며 특히 Rust 같은 시스템 프로그래밍 언어에서 그렇다. 이 절에서는 Rust에서 코드 성능을 측정하고 최적화하는 기법을 살펴본다.</p>
-<p>Rust는 테스트 프레임워크를 통해 내장 벤치마킹 도구를 제공한다. 다만 Rust 1.68 기준 벤치마킹은 나이틀리(nightly) 채널에서만 사용 가능하다. 벤치마크를 사용하려면 lib.rs나 main.rs 파일 맨 위에 다음 어트리뷰트를 추가해야 한다:</p>
+<p>Rust는 테스트 프레임워크를 통해 내장 벤치마킹 도구를 제공한다. 다만 Rust 1. 기준 벤치마킹은 나이틀리(nightly) 채널에서만 사용 가능하다. 벤치마크를 사용하려면 lib.rs나 main.rs 파일 맨 위에 다음 어트리뷰트를 추가해야 한다:</p>
 <p>#![feature(test)]</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb510"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb510-1"><a href="#cb510-1" aria-hidden="true" tabindex="-1"></a><span class="kw">extern</span> <span class="kw">crate</span> test<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>기본 벤치마크 함수는 다음과 같다:</p>
@@ -4654,7 +4701,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb567-9"><a href="#cb567-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="dv">0</span><span class="op">..</span><span class="dv">5</span> <span class="op">{</span> <span class="pp">println!</span>(<span class="st">"Value at index {}: {}"</span><span class="op">,</span> i<span class="op">,</span> <span class="op">*</span>ptr<span class="op">.</span>add(i))<span class="op">;</span> <span class="op">}</span></span>
 <span id="cb567-10"><a href="#cb567-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb567-11"><a href="#cb567-11" aria-hidden="true" tabindex="-1"></a>dealloc(ptr <span class="kw">as</span> <span class="op">*</span><span class="kw">mut</span> <span class="dt">u8</span><span class="op">,</span> layout)<span class="op">;</span> <span class="op">}</span> <span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 예제에서는 i32 값 5개짜리 배열을 위한 메모리를 할당한다. Layout::array 함수로 할당을 위한 메모리 레이아웃(layout)을 만들고 alloc 함수가 이 레이아웃을 기반으로 메모리를 할당한다.</p>
+<p>이 예제에서는 i 값 5개짜리 배열을 위한 메모리를 할당한다. Layout::array 함수로 할당을 위한 메모리 레이아웃(layout)을 만들고 alloc 함수가 이 레이아웃을 기반으로 메모리를 할당한다.</p>
 <p>반환된 포인터가 null이 아닌지 확인해 할당 성공 여부를 검사하는 것이 매우 중요하다. 할당에 실패하면 alloc은 널 포인터를 반환한다.</p>
 <p>할당 후에는 포인터로 할당된 메모리에 값을 쓰고 읽을 수 있다. raw 포인터가 관련된 모든 연산은 Rust가 이런 연산의 메모리 안전을 보장할 수 없으므로 unsafe 블록 안에서 수행해야 함에 유의하라.</p>
 <p>마지막으로 dealloc 함수로 메모리를 해제한다. 올바른 해제를 위해 할당에 사용한 동일한 레이아웃을 전달하는 것이 중요하다.</p>
@@ -5231,8 +5278,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../learn-rust/index.html" class="pagination-link" aria-label="Python으로 Rust 배우기">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Python으로 Rust 배우기</span></span>
+      <a href="../learn-rust/index.html" class="pagination-link" aria-label="파이썬 개발자를 위한 Rust">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">파이썬 개발자를 위한 Rust</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
