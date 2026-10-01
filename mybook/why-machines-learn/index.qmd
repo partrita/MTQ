@@ -676,6 +676,7 @@ $$y\mathbf{w}_{\text{new}}^T\mathbf{x} = y(\mathbf{w}_{\text{old}} + y\mathbf{x}
 #### 퍼셉트론 수렴 증명
 
 **가정**:
+
 - $\mathbf{w}$: 0으로 초기화된 $d$차원 가중치 벡터.
 - $\mathbf{w}^*$: 퍼셉트론이 학습해야 하는 $d$차원 가중치 벡터. 선형 분리 초평면에 수직이다. $\mathbf{w}^*$를 크기가 1인 단위 벡터라고 하자.
 - $\mathbf{x}$: 입력 데이터 포인트(인스턴스)를 나타내는 벡터. $\mathbf{x}$는 $d$차원 벡터이며 원소 $[x_1, x_2, \dots, x_d]$를 갖는다. $n$개의 데이터 포인트가 있다면 각 인스턴스는 더 큰 $n \times d$ 행렬 $\mathbf{X}$($n$개 행, $d$개 열)의 한 행이 된다.
@@ -1131,6 +1132,7 @@ $$\text{error}(e) = d - y = d - \mathbf{w}^T\mathbf{x}$$
 $$\mathbf{w}_{\text{new}} = \mathbf{w}_{\text{old}} + \mu(-\nabla)$$
 
 여기서:
+
 - $\mu$ = 보폭 (step size, 학습률)
 - $\nabla$ = 그레이디언트 (gradient)
 
@@ -1153,6 +1155,7 @@ $$\mathbf{w}_{\text{new}} = \mathbf{w}_{\text{old}} + \mu(-\nabla_{\text{est}})$
 $$\mathbf{w}_{\text{new}} = \mathbf{w}_{\text{old}} + 2\mu\varepsilon\mathbf{x}$$
 
 여기서:
+
 - $\mu$ = 보폭 (학습률)
 - $\varepsilon$ = 단일 데이터 포인트에 기초한 오차
 - $\mathbf{x}$ = 단일 데이터 포인트를 나타내는 벡터

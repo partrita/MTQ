@@ -743,6 +743,7 @@ XLOOKUP(search_key, lookup_range, result_range,...)
 - result_range = 원하는 결과를 포함하는 2번째 시트의 열 또는 행
 
 이후에는 3개의 *선택 사항*이 있으며 대부분의 경우 생략하고 기본값을 사용할 수 있다.
+
 - missing_value = 일치 항목을 찾을 수 없는 경우 반환할 값(기본적으로 #N/A)
 - match_mode = 일치 항목을 찾는 정밀도 수준(기본값은 정확히 일치를 의미하는 0)
 - search_mode = 일치 항목을 검색하는 방향(기본값은 처음부터 끝까지를 의미하는 1)
@@ -3222,6 +3223,7 @@ Google Sheets에서는 어떤 표든 온라인에 게시할 수 있으며 [9장�
 ![아래의 각 임베드 코드를 W3Schools TryIt iframe 페이지의 선택된 텍스트 위치에 붙여넣어 어떻게 작동하는지 테스트해 보라.](images/09-embed/w3schools-tryit-iframe.png){#fig-w3schools-tryit-iframe width=750}
 
 ### Google Sheets에서 가져오기 {-}
+
 1. [6장에서 했던 것처럼 Google Sheets 차트](#chart-google)를 만든 후, [\@fig-google-sheets-publish]에서 보듯 차트 우측 상단의 점 3개 케밥 메뉴를 클릭하여 게시(publish)한다.
 
 
@@ -3242,6 +3244,7 @@ Google Sheets에서는 어떤 표든 온라인에 게시할 수 있으며 [9장�
 4. 이제 선호하는 플랫폼에 임베드 코드를 올바르게 삽입하는 방법을 배우기 위해 이 장의 [웹사이트에 코드 붙여넣기 섹션](#paste-code)으로 넘어가라.
 
 ### Datawrapper에서 가져오기 {-}
+
 1. [6장의 Datawrapper 차트](#chart-datawrapper)나 [7장의 지도](#map), 또는 [8장의 인터랙티브 표](#table)를 만든 후, 마지막 화면으로 이동하여 [\@fig-datawrapper-publish]에서 보듯 *게시(Publish)* 버튼을 클릭한다. 이렇게 하면 차트나 지도의 인터랙티브 버전이 온라인에 게시된다. 원하는 경우 동일한 화면의 더 아래에서 정적 이미지를 내보낼 수도 있다.
 
 
@@ -3269,6 +3272,7 @@ Datawrapper 임베드 코드는 *길지만*, 자세히 보면 전반부에는 `s
 팁: Datawrapper iframe 태그 출처는 일반적인 형식 `https://datawrapper.dwcdn.net/abcdef/1/`을 따르며 여기서 `1`은 게시한 차트나 지도의 첫 번째 버전을 의미한다. 시각화를 편집하고 다시 게시하면, Datawrapper는 마지막 숫자(예: `2` 등)를 증가시키고 이전 링크를 *현재 버전*으로 *자동 리디렉션*하여 독자가 항상 최신 버전을 볼 수 있게 한다.
 
 ### Tableau Public에서 가져오기 {-}
+
 1. [6장에서 Tableau Public 차트](#chart-tableau)나 [7장에서 지도](#map-tableau)를 생성한 후, [\@fig-tableau-public-publish]에 표시된 것처럼 데스크톱 애플리케이션 메뉴에서 *파일 > Tableau Public에 저장(File > Save to Tableau Public)*을 선택하여 온라인에 워크시트, 대시보드 또는 스토리를 게시한다.
 
 
@@ -4782,6 +4786,7 @@ CSV 파일의 포인트 데이터를 읽고 "즉석에서" 마커가 생성된�
 
 1. 이 템플릿의 코드가 저장된 [GitHub 리포지토리](https://github.com/HandsOnDataViz/leaflet-map-csv)를 방문한다. 로그인되어 있는지 확인하고
 *Use this template button*을 눌러 자신의 GitHub 계정에 이 리포지토리의 사본을 만든다.
+
 2. 포인트 데이터를 `data.csv` 안에 넣는다. 템플릿이 읽는 유일한 관련 열은 *Latitude*, *Longitude* 및 *Title*이다.
 처음 두 열은 마커의 위치를 결정하고 마지막 열은 팝업에 표시된다. 열의 순서는 중요하지 않는다. 데이터 세트에 다른 열이 있을 수 있지만
 무시된다.
@@ -4880,6 +4885,7 @@ var map = L.map('map', {
 이 템플릿은 [CSV](#csv) 및 [GeoJSON](#geojson) 형식의 데이터에서 작동한다. Excel 파일이 있는 경우 스프레드시트 도구를 사용하여 CSV 형식으로 저장한다. CSV 파일에는 위도 열과 경도 열이 있어야 하며 모든 행이 지오코딩되어야 한다. 주소 또는 위치 데이터만 있는 경우 2장에서 [지오코딩](#geocode)하는 방법을 알아보라.
 
 ### 2단계: 이 템플릿 다운로드 및 편집 {-}
+
 1. 이 프로젝트를 다운로드하거나 복제하고 원하는 텍스트 편집기를 실행한다. `/js/map.js`를 열고 `SearchableMapLib.initialize` 함수에서 지도 옵션을 설정한다.
   - `map_centroid` - 지도의 중심으로 설정할 위도/경도이다.
   - `filePath` - 지도 데이터 파일의 경로이다. 이 파일은 csv 또는 geojson 형식이어야 하며 `data` 폴더에 배치해야 한다. 이 파일의 첫 번째 줄은 머리글이어야 하며 위도 열과 경도 열이 있어야 한다.
@@ -4893,6 +4899,7 @@ var map = L.map('map', {
   - `/js/searchable_map_lib.js` - 사용자 지정 필터에 대한 논리는 265번째 줄 부근에서 시작한다.
 
 ### 3단계: 지도 게시 {-}
+
 1. 게시하기 전에 [이 장의 Google Sheets API 키 가져오기 섹션](#google-sheets-api-key)과 비슷하지만 다른 [무료 Google Maps API 키](https://developers.google.com/maps/documentation/javascript/get-api-key)를 얻어야 한다. `index.html`의 이 줄에 있는 Google Maps API 키를 독자의 키로 바꾼다. `<script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=[YOUR KEY HERE]"></script>`
 2. 이 지도와 모든 지원 파일 및 폴더를 사이트에 업로드한다. 이 지도에는 백엔드 코드가 필요하지 않으므로 [10장에 설명된 GitHub Pages](#github), [Netlify](https://www.netlify.com) 또는 고유한 웹 서버와 같은 모든 호스트에서 작동한다.
 

@@ -17,6 +17,7 @@ book:
     - part: "프로그래밍 언어 및 소프트웨어 엔지니어링"
       chapters:
         - python-mastery/index.qmd
+        - effective-python/index.qmd
         - swift-for-py/index.qmd
         - learn-rust/index.qmd
         - rust-essentials/index.qmd
@@ -26,6 +27,7 @@ book:
         - think-like-cto/index.qmd
         - beyond-vibe-coding/index.qmd
         - writing-for-developers/index.qmd
+        - own-your-tech-career/index.qmd
     - part: "인공지능, LLM 및 머신러닝"
       chapters:
         - why-machines-learn/index.qmd
@@ -112,6 +114,7 @@ book:
         - craft-of-research/index.qmd
         - everybody-needs-an-editor/index.qmd
         - writing-to-learn/index.qmd
+        - how-to-write-essays/index.qmd
         - improve-handwriting/index.qmd
     - part: "생산성, 시간 관리 및 습관 형성"
       chapters:
@@ -158,6 +161,7 @@ book:
         - truth-about-everything/index.qmd
         - science-of-living/index.qmd
         - wicked/index.qmd
+        - essay-change-think/index.qmd
 
 engine: markdown
 

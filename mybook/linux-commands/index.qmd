@@ -156,9 +156,9 @@ SELinux 컨텍스트 형식: `사용자:역할:유형:수준`
 **열별 상세 설명:**
 
 1. **파일 유형 및 권한** (`-rw-r--r--`):
-   - 첫 번째 문자: 파일 유형 (`-` = 일반 파일, `d` = 디렉터리, `l` = 심볼릭 링크, `b` = 블록 장치, `c` = 문자 장치, `p` = 파이프, `s` = 소켓)
-   - 다음 9개 문자: 3개 그룹(소유자, 그룹, 기타 사용자)에 대한 권한
-     - `r` = 읽기, `w` = 쓰기, `x` = 실행, `-` = 권한 없음
+ - 첫 번째 문자: 파일 유형 (`-` = 일반 파일, `d` = 디렉터리, `l` = 심볼릭 링크, `b` = 블록 장치, `c` = 문자 장치, `p` = 파이프, `s` = 소켓)
+ - 다음 9개 문자: 3개 그룹(소유자, 그룹, 기타 사용자)에 대한 권한
+ - `r` = 읽기, `w` = 쓰기, `x` = 실행, `-` = 권한 없음
 
 2. **링크 수** (`1`): 파일에 대한 하드 링크 수
 
@@ -188,9 +188,9 @@ drwxr-xr-x 2 user group 4.0K Jan 15 10:25 documents
 |**와일드카드**|**설명**|**예시**|**매칭 대상**|
 |:---|:---|:---|:---|
 |`*`|임의의 개수의 문자와 매칭|`ls *.txt`|`.txt`로 끝나는 모든 파일|
-|`?`|정확히 한 문자와 매칭|`ls file?.txt`|`file1.txt`, `file2.txt` (단, `file10.txt`는 제외)|
-|`[]`|대괄호 안의 문자 중 하나와 매칭|`ls file[123].txt`|`file1.txt`, `file2.txt`, `file3.txt` 매칭|
-|`[!]`|대괄호 안에 없는 문자와 매칭|`ls file[!3].txt`|`file1.txt`, `file2.txt` (단, `file3.txt`는 제외)|
+|`?`|정확히 한 문자와 매칭|`ls file?.txt`|`file.txt`, `file.txt` (단, `file.txt`는 제외)|
+|`[]`|대괄호 안의 문자 중 하나와 매칭|`ls file.txt`|`file.txt`, `file.txt`, `file.txt` 매칭|
+|`[!]`|대괄호 안에 없는 문자와 매칭|`ls file[!3].txt`|`file.txt`, `file.txt` (단, `file.txt`는 제외)|
 |`{}`|쉼표로 구분된 패턴 중 하나와 매칭|`ls *.{jpg,png,gif}`|해당 확장자를 가진 모든 이미지 파일|
 
 **예시:**
@@ -248,7 +248,7 @@ Linux에서 `alias` 명령어를 사용하면 명령어 동작을 쉽게 커스�
 
 2. **영구 적용**: 이 별칭은 현재 세션에서만 유효하다. 영구적으로 유지하려면 셸의 설정 파일에 별칭을 추가하라.
 
-    - **Bash**: `~/.bashrc` 파일 끝에 별칭을 추가한다.
+ - **Bash**: `~/.bashrc` 파일 끝에 별칭을 추가한다.
 
         ```bash
         echo 'alias ls="ls --color=auto -lh"' >> ~/.bashrc
@@ -261,22 +261,22 @@ Linux에서 `alias` 명령어를 사용하면 명령어 동작을 쉽게 커스�
 
 **1. 대용량 디렉터리에서 재귀 목록 나열 피하기:**
 
-   - 하위 디렉터리와 파일이 많은 디렉터리에서 `-R` 플래그는 속도가 느릴 수 있다.
-   - 더 디테일한 제어를 위해 `find` 명령어를 사용하는 것을 고려하라: `find /path -type f`
+ - 하위 디렉터리와 파일이 많은 디렉터리에서 `-R` 플래그는 속도가 느릴 수 있다.
+ - 더 디테일한 제어를 위해 `find` 명령어를 사용하는 것을 고려하라: `find /path -type f`
 
 **2. 스크립트에서 색상 출력 비활성화:**
 
-   - 성능을 향상시키기 위해 출력을 파이프하거나 스크립트 내에서는 `--color=never`를 사용하라.
-   - 예시: `ls --color=never | grep pattern`
+ - 성능을 향상시키기 위해 출력을 파이프하거나 스크립트 내에서는 `--color=never`를 사용하라.
+ - 예시: `ls --color=never | grep pattern`
 
 **3. 대용량 디렉터리의 출력 제한:**
 
-   - `head`와 조합하여 처음 몇 개의 항목만 확인하라: `ls -1 | head -n 20`
-   - 또는 파일 목록을 출력하지 않고 개수만 세려면 `ls -1 | wc -l`을 사용하라.
+ - `head`와 조합하여 처음 몇 개의 항목만 확인하라: `ls -1 | head -n 20`
+ - 또는 파일 목록을 출력하지 않고 개수만 세려면 `ls -1 | wc -l`을 사용하라.
 
 **4. 가능한 경우 와일드카드 대신 구체적인 경로 사용:**
 
-   - 정확한 파일 이름을 알고 있는 경우 `ls /var/log/sys*`보다 `ls /var/log/syslog`가 더 빠른다.
+ - 정확한 파일 이름을 알고 있는 경우 `ls /var/log/sys*`보다 `ls /var/log/syslog`가 더 빠른다.
 
 ### 주요 사용 사례:
 
@@ -868,6 +868,7 @@ touch [OPTION]... FILE...
 ```
 touch file.txt
 ```
+
 2. **`file.txt`가 존재하면** 해당 파일의 시간을 현재 시스템 시간으로 설정한다. 파일이 존재하지 않으면 아무 작업도 수행하지 않는다.
 
 ```bash
@@ -1041,8 +1042,8 @@ cal 12 2000
 
 6. 논리 또는 부울 연산:
 
-- `expr1 && expr2`: 두 표현식이 모두 0이 아니면 결과는 `1`이다.
-- `expr1 || expr2`: 두 표현식 중 하나라도 0이 아니면 결과는 `1`이다.
+- `expr && expr2`: 두 표현식이 모두 0이 아니면 결과는 `1`이다.
+- `expr || expr2`: 두 표현식 중 하나라도 0이 아니면 결과는 `1`이다.
 - `! expr`: `expr`이 0이면 결과는 `1`이다.
 
 ```text
@@ -1094,7 +1095,7 @@ df [OPTION]... [FILE]...
 | **단축 플래그** | **긴 플래그** | **설명** |
 |:--|:--|:--|
 | `-a` | `--all` | 의사 파일 시스템, 중복 파일 시스템 및 접근할 수 없는 파일 시스템을 포함한다. |
-| `-B` | `--block-size=SIZE` | 출력하기 전에 크기를 `SIZE` 단위로 조정한다. 예를 들어 `-BM`은 크기를 1,048,576바이트 단위로 표시한다. `SIZE` 형식은 아래를 참조하라. |
+| `-B` | `--block-size=SIZE` | 출력하기 전에 크기를 `SIZE` 단위로 조정한다. 예를 들어 `-BM`은 크기를 1,,576바이트 단위로 표시한다. `SIZE` 형식은 아래를 참조하라. |
 | `-h` | `--human-readable` | 1024의 거듭제곱 단위로 크기를 표시한다. (예: `1023M`) |
 | `-H` | `--si` | 1000의 거듭제곱 단위로 크기를 표시한다. (예: `1.1G`) |
 | `-i` | `--inodes` | 블록 사용량 대신 아이노드 정보를 나열한다. |
@@ -2231,7 +2232,7 @@ echo "│   System Info   │"
 echo "└─────────────────┘"
 ```
 
-###  색상 출력
+### 색상 출력
 
 ```bash
 # ANSI color codes
@@ -2249,9 +2250,9 @@ echo -e "\033[1mBold text\033[0m"
 echo -e "\033[3mItalic text\033[0m"
 ```
 
-##  실무 활용 방안
+## 실무 활용 방안
 
-###  시스템 정보 출력
+### 시스템 정보 출력
 
 ```bash
 # System status script
@@ -2264,7 +2265,7 @@ echo "Uptime: $(uptime -p)"
 echo "Memory Usage: $(free -h | grep Mem | awk '{print $3"/"$2}')"
 ```
 
-###  설정 파일 자동 생성
+### 설정 파일 자동 생성
 
 ```bash
 # Generate configuration file
@@ -2275,7 +2276,7 @@ echo "debug=false" >> app.conf
 echo "log_level=info" >> app.conf
 ```
 
-###  로그 파일 관리
+### 로그 파일 관리
 
 ```bash
 # Structured logging
@@ -2292,7 +2293,7 @@ log_info "Application started"
 log_error "Database connection failed"
 ```
 
-###  대화형 메뉴 생성
+### 대화형 메뉴 생성
 
 ```bash
 # Simple menu system
@@ -2309,9 +2310,9 @@ show_menu() {
 }
 ```
 
-##  명령어 대체 및 변수 활용
+## 명령어 대체 및 변수 활용
 
-###  명령어 대체
+### 명령어 대체
 
 ```bash
 # Display command output
@@ -2323,7 +2324,7 @@ echo "Free disk space: $(df -h / | tail -1 | awk '{print $4}')"
 echo "System: $(uname -s), Kernel: $(uname -r), Architecture: $(uname -m)"
 ```
 
-###  배열 및 변수 조작
+### 배열 및 변수 조작
 
 ```bash
 # Array display
@@ -2345,7 +2346,7 @@ echo "Lowercase: ${text,,}"
 
 ## 오류 처리 및 검증
 
-###  입력값 검증
+### 입력값 검증
 
 ```bash
 # Check if variable is set
@@ -2359,7 +2360,7 @@ fi
 [ -d "/tmp" ] && echo "Directory /tmp exists" || echo "Directory /tmp not found"
 ```
 
-###  오류 메시지 처리
+### 오류 메시지 처리
 
 ```bash
 # Error to stderr
@@ -2374,9 +2375,9 @@ else
 fi
 ```
 
-##  대화형 기능
+## 대화형 기능
 
-###  사용자 입력 프롬프트
+### 사용자 입력 프롬프트
 
 ```bash
 # Simple prompt
@@ -2395,7 +2396,7 @@ case $answer in
 esac
 ```
 
-###  진행률 표시기
+### 진행률 표시기
 
 ```bash
 # Simple progress bar
@@ -2416,7 +2417,7 @@ echo -e "\nDone!"
 
 ## Other Commands와의 통합
 
-###  파이프 및 리디렉션 활용
+### 파이프 및 리디렉션 활용
 
 ```bash
 # Pipe to other commands
@@ -2430,7 +2431,7 @@ echo "$PATH" | tr ':' '\n' | sort | uniq
 echo "Important message" | tee -a important.log
 ```
 
-###  데이터 가공 및 처리
+### 데이터 가공 및 처리
 
 ```bash
 # Generate data for processing
@@ -2580,10 +2581,10 @@ finger [-l] [-m] [-p] [-s] [username]
 
 ### 추가 정보
 
-**기본 형식:**  
+**기본 형식:** 
 기본 형식에는 로그인 이름, 사용자 전체 이름, 터미널 이름 및 쓰기 상태와 같은 항목이 포함된다. 또한 유휴 시간, 로그인 시간 및 시스템별 정보도 제공한다.
 
-**긴 형식:**  
+**긴 형식:** 
 긴 형식에서는 사용자의 홈 디렉터리, 로그인 셸, `.plan` 파일 및 `.project` 파일의 내용과 같은 정보가 추가로 표시된다.
 
 ***
@@ -3146,19 +3147,19 @@ Linux/Unix에서 `lscpu`는 CPU 아키텍처 정보를 표시하는 데 사용�
 
 ## 옵션
 
-`-a, --all`  
-온라인 CPU와 오프라인 CPU를 모두 출력에 포함한다(`-e`의 기본 동작). 이 옵션은 `-e` 또는 `-p` 옵션과 함께 사용할 때만 지정할 수 있다.  
+`-a, --all` 
+온라인 CPU와 오프라인 CPU를 모두 출력에 포함한다(`-e`의 기본 동작). 이 옵션은 `-e` 또는 `-p` 옵션과 함께 사용할 때만 지정할 수 있다. 
 예시: `lsof -a`
 
-`-b, --online`  
-출력을 온라인 CPU로 제한한다(`-p`의 기본 동작). 이 옵션은 `-e` 또는 `-p` 옵션과 함께 사용할 때만 지정할 수 있다.  
+`-b, --online` 
+출력을 온라인 CPU로 제한한다(`-p`의 기본 동작). 이 옵션은 `-e` 또는 `-p` 옵션과 함께 사용할 때만 지정할 수 있다. 
 예시: `lscpu -b`
 
-`-c, --offline`  
+`-c, --offline` 
 출력을 오프라인 CPU로 제한한다. 이 옵션은 `-e` 또는 `-p` 옵션과 함께 사용할 때만 지정할 수 있다.
 
-`-e, --extended [=list]`  
-CPU 정보를 사람이 읽기 쉬운 형식으로 표시한다.  
+`-e, --extended [=list]` 
+CPU 정보를 사람이 읽기 쉬운 형식으로 표시한다. 
 예시: `lsof -e`
 
 자세한 내용은 `man lscpu` 또는 `lscpu --help`를 사용하여 확인할 수 있다.
@@ -3298,7 +3299,7 @@ mv [options] source (file or directory) destination
 mv old_name.txt new_name.txt
 ```
 
-2. 현재 디렉터리의 `_essay.txt_` 파일을 `_assignments_`라는 디렉터리로 이동하면서 `_essay1.txt_`로 이름을 변경한다.
+2. 현재 디렉터리의 `_essay.txt_` 파일을 `_assignments_`라는 디렉터리로 이동하면서 `_essay.txt_`로 이름을 변경한다.
 
 ```bash
 mv essay.txt assignments/essay1.txt
@@ -3845,15 +3846,15 @@ hostname [-a|--alias] [-d|--domain] [-f|--fqdn|--long] [-A|--all-fqdns] [-i|--ip
 ### 예시:
 
 1. ``` hostname -a, hostname --alias ```
-    호스트의 별칭(alias)을 표시한다(사용 중단된 옵션이므로 사용을 권장하지 않는다).
+ 호스트의 별칭(alias)을 표시한다(사용 중단된 옵션이므로 사용을 권장하지 않는다).
 
 2. ```hostname -s, hostname --short```
-    짧은 호스트 이름을 출력한다(첫 번째 마침표 앞부분만 표시).
+ 짧은 호스트 이름을 출력한다(첫 번째 마침표 앞부분만 표시).
 
-3.  ```hostname -V, hostname --version```
-    버전 정보를 표준 출력으로 표시하고 정상 종료한다.
+3. ```hostname -V, hostname --version```
+ 버전 정보를 표준 출력으로 표시하고 정상 종료한다.
 
-###  도움말 확인
+### 도움말 확인
 
 `hostname` 명령어에 대한 자세한 가이드를 보려면 다음 명령을 실행하라.
 
@@ -3950,8 +3951,8 @@ rm [OPTION] [FILE|DIRECTORY]
 
 1. `rm`은 기본적으로 디렉터리를 삭제하지 않는다. 나열된 각 디렉터리와 그 안의 모든 내용을 삭제하려면 `-r`, `-R`, `--recursive` 옵션을 사용한다.
 2. `-foo`처럼 이름이 `-`로 시작하는 파일을 삭제하려면 다음 명령어 중 하나를 사용한다.
-   - `rm -- -foo`
-   - `rm ./-foo`
+ - `rm -- -foo`
+ - `rm ./-foo`
 3. 삭제한 파일이나 디렉터리를 실제로 복구할 수 없도록 하려면 `shred` 명령어 사용을 고려하라.
 
 # `ifconfig` 명령어
@@ -4057,7 +4058,7 @@ MTU를 사용하면 인터페이스에서 전송되는 패킷의 최대 크기�
 ifconfig eth0:0 10.10.1.24
 ```
 
-별칭 네트워크 주소는 네트워크 인터페이스와 동일한 서브넷 마스크에 속해야 한다. 예를 들어 `eth0` 네트워크의 IP 주소가 `10.10.1.23`이라면 별칭 IP 주소는 `10.10.1.24`가 될 수 있다. 인터페이스의 서브넷 마스크가 `255.255.255.224`이므로 `10.10.2.24`는 유효하지 않은 IP 주소이다.
+별칭 네트워크 주소는 네트워크 인터페이스와 동일한 서브넷 마스크에 속해야 한다. 예를 들어 `eth0` 네트워크의 IP 주소가 `10...23`이라면 별칭 IP 주소는 `10...24`가 될 수 있다. 인터페이스의 서브넷 마스크가 `255...224`이므로 `10...24`는 유효하지 않은 IP 주소이다.
 
 15. 네트워크 별칭을 제거한다.
 
@@ -4456,7 +4457,7 @@ ip monitor all
 
 | **옵션** | **설명** |
 |:---|:---|
-| `-4, -6` | IPv4 또는 IPv6 프로토콜 패밀리를 사용한다. |
+| `-4, -6` | IPv 또는 IPv 프로토콜 패밀리를 사용한다. |
 | `-b, -batch` | 파일에서 명령어를 읽는다. |
 | `-c, -color` | 색상이 적용된 출력을 사용한다. |
 | `-d, -details` | 상세 정보를 표시한다. |
@@ -4474,7 +4475,7 @@ ip monitor all
 | **객체** | **설명** |
 |:---|:---|
 | `link` | 네트워크 장치(인터페이스) |
-| `addr` | IPv4 또는 IPv6 주소 |
+| `addr` | IPv 또는 IPv 주소 |
 | `route` | 라우팅 테이블 항목 |
 | `rule` | 라우팅 정책 데이터베이스의 규칙 |
 | `neigh` | 이웃(ARP) 테이블 항목 |
@@ -4990,7 +4991,7 @@ $ wget [options] [URL]
 
 ### 예시
 
-이 예시에서는 서로 다른 소스에서 Ubuntu 20.04 데스크톱 ISO 파일을 다운로드한다. 터미널을 열고 다음 `wget` 명령어를 입력한다. 그러면 다운로드가 시작된다. 다운로드가 완료되기까지 몇 분이 걸릴 수 있다.
+이 예시에서는 서로 다른 소스에서 Ubuntu 20. 데스크톱 ISO 파일을 다운로드한다. 터미널을 열고 다음 `wget` 명령어를 입력한다. 그러면 다운로드가 시작된다. 다운로드가 완료되기까지 몇 분이 걸릴 수 있다.
 
 1. 일반적인 다운로드 시작
 
@@ -5127,11 +5128,11 @@ yes [STRING]
 
 1. `--help`
 
-   > 이 도움말을 표시한 후 종료한다.
+ > 이 도움말을 표시한 후 종료한다.
 
 2. `--version`
 
-   > 버전 정보를 출력한 후 종료한다.
+ > 버전 정보를 출력한 후 종료한다.
 
 # `last` 명령어
 
@@ -5310,17 +5311,17 @@ iostat -p sda 2 6
 
 ### 추가 플래그와 기능:
 
-| **짧은 플래그**                  | **설명**                                            |
+| **짧은 플래그** | **설명** |
 | :------------------------------ | :--------------------------------------------------------- |
-| `-x`                            | 더 자세한 통계 정보를 표시한다.                  |
-| `-c`                            | CPU 통계만 표시한다.                               |
-| `-d`                            | 장치 보고서만 표시한다                             |
-| `-xd                            | 장치에 대한 확장 I/O 통계만 표시한다.               |
-| `-k`                            | 통계를 킬로바이트 또는 메가바이트 단위로 수집한다.          |
-| `-k23`                          | 지연 간격을 두고 CPU 및 장치 통계를 표시한다.              |
-| `-j ID mmcbkl0 sda6 -x -m 2 2`  | 영속적인 장치 이름 통계를 표시한다.                 |
-| `-p `                           | 블록 장치에 대한 통계를 표시한다.                      |
-| `-N `                           | LVM2 통계 정보를 표시한다.                       |
+| `-x` | 더 자세한 통계 정보를 표시한다. |
+| `-c` | CPU 통계만 표시한다. |
+| `-d` | 장치 보고서만 표시한다 |
+| `-xd | 장치에 대한 확장 I/O 통계만 표시한다. |
+| `-k` | 통계를 킬로바이트 또는 메가바이트 단위로 수집한다. |
+| `-k23` | 지연 간격을 두고 CPU 및 장치 통계를 표시한다. |
+| `-j ID mmcbkl sda -x -m 2 2` | 영속적인 장치 이름 통계를 표시한다. |
+| `-p ` | 블록 장치에 대한 통계를 표시한다. |
+| `-N ` | LVM 통계 정보를 표시한다. |
 # `sudo` 명령어
 
 `sudo`(“substitute user do” 또는 “super user do”) 명령어는 적절한 권한을 가진 사용자가 슈퍼유저와 같은 다른 사용자의 권한으로 명령어를 실행할 수 있도록 한다.
@@ -6241,7 +6242,7 @@ sudo iptables -R INPUT 1 -p tcp --dport 443 -j ACCEPT
 
 ## Common Rule 예제
 
-###  특정 포트 허용 및 차단 {.unnumbered}
+### 특정 포트 허용 및 차단 {.unnumbered}
 
 ```bash
 # Allow SSH (port 22)
@@ -6257,7 +6258,7 @@ sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 8080 -j DROP
 ```
 
-###  IP 주소별 허용 및 차단 {.unnumbered}
+### IP 주소별 허용 및 차단 {.unnumbered}
 
 ```bash
 # Allow specific IP
@@ -6273,7 +6274,7 @@ sudo iptables -A INPUT -s 192.168.1.0/24 -j ACCEPT
 sudo iptables -A INPUT -m iprange --src-range 192.168.1.100-192.168.1.200 -j DROP
 ```
 
-###  네트워크 인터페이스별 허용 및 차단 {.unnumbered}
+### 네트워크 인터페이스별 허용 및 차단 {.unnumbered}
 
 ```bash
 # Allow traffic on loopback
@@ -6288,7 +6289,7 @@ sudo iptables -A INPUT -i eth1 -j DROP
 
 ## 고급 규칙
 
-###  상태 기반 연결(Stateful Connections) {.unnumbered}
+### 상태 기반 연결(Stateful Connections) {.unnumbered}
 
 ```bash
 # Allow established and related connections
@@ -6298,7 +6299,7 @@ sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 sudo iptables -A INPUT -m state --state NEW -p tcp --dport 22 -j ACCEPT
 ```
 
-###  연결 속도 및 요청 수 제한 {.unnumbered}
+### 연결 속도 및 요청 수 제한 {.unnumbered}
 
 ```bash
 # Limit SSH connections (6 per minute)
@@ -6308,7 +6309,7 @@ sudo iptables -A INPUT -p tcp --dport 22 -m limit --limit 6/min -j ACCEPT
 sudo iptables -A INPUT -p icmp --icmp-type echo-request -m limit --limit 1/sec -j ACCEPT
 ```
 
-###  시간대별 규칙 적용 {.unnumbered}
+### 시간대별 규칙 적용 {.unnumbered}
 
 ```bash
 # Allow access during business hours
@@ -6318,7 +6319,7 @@ sudo iptables -A INPUT -p tcp --dport 80 -m time --timestart 09:00 --timestop 17
 sudo iptables -A INPUT -p tcp --dport 22 -m time --weekdays Mon,Tue,Wed,Thu,Fri -j ACCEPT
 ```
 
-###  다중 포트 일괄 규칙 {.unnumbered}
+### 다중 포트 일괄 규칙 {.unnumbered}
 
 ```bash
 # Allow multiple ports
@@ -6396,7 +6397,7 @@ sudo tail -f /var/log/syslog | grep "DROPPED:"
 
 ## 일반적인 방화벽 구성
 
-###  기본 데스크톱 방화벽 설정 {.unnumbered}
+### 기본 데스크톱 방화벽 설정 {.unnumbered}
 
 ```bash
 #!/bin/bash
@@ -6424,7 +6425,7 @@ sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 sudo iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
 ```
 
-###  웹 서버 방화벽 설정 {.unnumbered}
+### 웹 서버 방화벽 설정 {.unnumbered}
 
 ```bash
 #!/bin/bash
@@ -6451,7 +6452,7 @@ sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 sudo iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
 ```
 
-###  라우터 및 게이트웨이 구성 {.unnumbered}
+### 라우터 및 게이트웨이 구성 {.unnumbered}
 
 ```bash
 #!/bin/bash
@@ -6701,8 +6702,8 @@ lsof +d [PATH_TO_DIR]
 | **옵션** | **추가 옵션** | **설명** |
 |:---|:---|:---|
 | `-i` | `tcp` / `udp` / `:port` | 실행 중인 모든 네트워크 연결을 나열한다. 추가로 UDP, TCP 또는 지정한 포트의 연결만 나열할 수 있다. |
-| `-i4` | - | IPv4 연결을 사용하는 모든 프로세스를 나열한다. |
-| `-i6` | - | IPv6 연결을 사용하는 모든 프로세스를 나열한다. |
+| `-i4` | - | IPv 연결을 사용하는 모든 프로세스를 나열한다. |
+| `-i6` | - | IPv 연결을 사용하는 모든 프로세스를 나열한다. |
 | `-c` | `[PROCESS_NAME]` | 지정한 이름의 특정 프로세스가 연 모든 파일을 나열한다. |
 | `-p` | `[PROCESS_ID]` | 지정한 프로세스 ID가 연 모든 파일을 나열한다. |
 | `-p` | `^[PROCESS_ID]` | 지정한 프로세스 ID가 열지 않은 모든 파일을 나열한다. |
@@ -7226,9 +7227,10 @@ sleep NUMBER[SUFFIX]...
 
 다음과 같은 옵션을 지원한다.
 
-1.   --help
-	   > 도움말을 표시하고 종료한다
-2.  --version
+1. --help
+	 > 도움말을 표시하고 종료한다
+
+2. --version
 	 > 버전 정보를 출력하고 종료한다
 
 
@@ -7574,22 +7576,22 @@ ionice [options] <command>
 - 유휴 I/O 우선순위를 가진 프로그램은 **정해진 유예 시간 동안 다른 프로그램이 디스크 I/O를 요청하지 않을 때만** 디스크 사용 시간을 할당받는다.
 - 유휴 프로세스가 정상적인 시스템 활동에 미치는 영향은 **0이어야 한다**.
 - 이 스케줄링 클래스는 **우선순위 인수를 사용하지 않는다**.
-- 현재 이 스케줄링 클래스는 일반 사용자도 사용할 수 있다(커널 2.6.25부터).
+- 현재 이 스케줄링 클래스는 일반 사용자도 사용할 수 있다(커널 2..25부터).
 
 ### 최선 노력(Best Effort)
 
 - 특정 I/O 우선순위를 요청하지 않은 모든 프로세스에 적용되는 **기본 스케줄링 클래스**인다.
 - 우선순위 값은 `0`부터 `7`까지이며 **숫자가 낮을수록 우선순위가 높다**.
 - 동일한 최선 노력 우선순위로 실행되는 프로그램은 **라운드 로빈 방식**으로 처리된다.
-- 커널 2.6.26 이전에는 I/O 우선순위를 요청하지 않은 프로세스가 형식상 `None` 스케줄링 클래스를 사용했다. 그러나 I/O 스케줄러는 이러한 프로세스를 최선 노력 클래스에 속한 것처럼 처리한다.
+- 커널 2.. 이전에는 I/O 우선순위를 요청하지 않은 프로세스가 형식상 `None` 스케줄링 클래스를 사용했다. 그러나 I/O 스케줄러는 이러한 프로세스를 최선 노력 클래스에 속한 것처럼 처리한다.
 - 최선 노력 클래스 내의 우선순위는 프로세스의 CPU nice 수준에서 동적으로 계산된다.
 
 ```text
 io_priority = (cpu_nice + 20) / 5
 ```
 
-- 커널 2.6.26 이후 CFQ I/O 스케줄러에서는 I/O 우선순위를 요청하지 않은 프로세스가 CPU 스케줄링 클래스를 상속한다.
-- 즉, **프로세스의 I/O 우선순위는 CPU nice 수준에서 파생된다**(커널 2.6.26 이전의 경우).
+- 커널 2.. 이후 CFQ I/O 스케줄러에서는 I/O 우선순위를 요청하지 않은 프로세스가 CPU 스케줄링 클래스를 상속한다.
+- 즉, **프로세스의 I/O 우선순위는 CPU nice 수준에서 파생된다**(커널 2.. 이전의 경우).
 
 ### 실시간(Real Time)
 
@@ -7620,14 +7622,14 @@ io_priority = (cpu_nice + 20) / 5
 | `$ ionice` | `none: prio 4` | 인수 없이 `ionice`를 실행하면 현재 프로세스의 클래스와 우선순위를 표시한다. |
 | `$ ionice -p 101` | `none: prio 4` | 지정한 PID를 가진 프로세스의 세부 정보(클래스와 우선순위)를 표시한다. |
 | `$ ionice -p 2` | `none: prio 4` | PID가 2인 프로세스의 클래스와 우선순위를 확인한다. 이 프로세스의 클래스는 `none`, 우선순위는 `4`이다. |
-| `$ ionice -c2 -n0 -p2` | `2 (best-effort), priority 0, process 2` | PID가 2인 프로세스를 최우선순위의 best-effort 프로세스로 설정한다. |
+| `$ ionice -c -n -p2` | `2 (best-effort), priority 0, process 2` | PID가 2인 프로세스를 최우선순위의 best-effort 프로세스로 설정한다. |
 | `$ ionice -p 2` | `best-effort: prio 0` | PID가 2인 프로세스의 업데이트된 세부 정보를 확인한다. |
-| `$ ionice /bin/ls` |  | `/bin/ls`의 우선순위와 클래스를 확인한다. |
-| `$ ionice -n4 -p2` |  | PID가 2인 프로세스의 우선순위를 `4`로 설정한다. |
+| `$ ionice /bin/ls` | | `/bin/ls`의 우선순위와 클래스를 확인한다. |
+| `$ ionice -n -p2` | | PID가 2인 프로세스의 우선순위를 `4`로 설정한다. |
 | `$ ionice -p 2` | `best-effort: prio 4` | 앞의 명령어 실행 결과와 비교한다. 우선순위가 `0`에서 `4`로 변경되었다. |
-| `$ ionice -c0 -n4 -p2` | `ionice: ignoring given class data for none class` | 커널 2.6.26 이전에는 I/O 우선순위를 요청하지 않은 프로세스가 형식상 `None` 클래스를 사용했다. 그러나 I/O 스케줄러는 해당 프로세스를 best-effort 클래스로 처리한다. |
-| `-t` 옵션 |  | 오류를 무시하는 옵션이다. |
-| `$ ionice -c0 -n4 -p2 -t` |  | 앞의 경고를 무시하려면 `-t` 옵션을 사용할 수 있다. 이 옵션은 오류를 무시한다. |
+| `$ ionice -c -n -p2` | `ionice: ignoring given class data for none class` | 커널 2.. 이전에는 I/O 우선순위를 요청하지 않은 프로세스가 형식상 `None` 클래스를 사용했다. 그러나 I/O 스케줄러는 해당 프로세스를 best-effort 클래스로 처리한다. |
+| `-t` 옵션 | | 오류를 무시하는 옵션이다. |
+| `$ ionice -c -n -p -t` | | 앞의 경고를 무시하려면 `-t` 옵션을 사용할 수 있다. 이 옵션은 오류를 무시한다. |
 
 
 ## 결론
@@ -7721,6 +7723,7 @@ ping -c 5 google.com
 ```
 ping -s 40 -c 5 google.com
 ```
+
 5. **ping 패킷 사이의 시간 간격 변경:**
 
 기본적으로 `ping`은 다음 패킷을 전송하기 전에 1초 동안 기다린다. `-i` 옵션을 사용하면 이 시간을 변경할 수 있다.
@@ -8054,7 +8057,7 @@ ssh sample.ssh.com  ls /tmp/doc
 |:---|:---|
 | `-1` | SSH가 SSH-1 프로토콜만 사용하도록 강제한다. |
 | `-2` | SSH가 SSH-2 프로토콜만 사용하도록 강제한다. |
-| `-4` | IPv4 주소만 사용한다. |
+| `-4` | IPv 주소만 사용한다. |
 | `-A` | 인증 에이전트 연결 전달을 활성화한다. |
 | `-a` | 인증 에이전트 연결 전달을 비활성화한다. |
 | `-B bind_interface` | 대상 호스트에 연결하기 전에 `bind_interface`의 주소에 바인딩한다. 둘 이상의 주소를 가진 시스템에서만 유용하다. |
@@ -8093,9 +8096,9 @@ ssh sample.ssh.com  ls /tmp/doc
 | `-v` | 상세 모드이다. 연결을 설정하는 동안 수행하는 모든 작업을 표시하며 연결 실패를 디버깅할 때 유용하다. |
 | `-W host:port` | 클라이언트의 표준 입력과 출력을 보안 채널을 통해 지정한 `host:port`로 전달한다. `-N`, `-T`, `ExitOnForwardFailure`, `ClearAllForwardings`가 자동으로 적용된다. |
 | `-w local_tun[remote_tun]` | 지정한 터널 장치를 사용하여 클라이언트와 서버 사이에 터널 장치 전달을 설정한다. 장치는 숫자 ID 또는 다음 사용 가능한 터널 장치를 사용하는 `any`로 지정할 수 있다. `remote_tun`을 생략하면 기본값은 `any`이다. |
-| `-X` | X11 전달(GUI 전달)을 활성화한다. |
-| `-x` | X11 전달(GUI 전달)을 비활성화한다. |
-| `-Y` | 신뢰된 X11 전달을 활성화한다. |
+| `-X` | X 전달(GUI 전달)을 활성화한다. |
+| `-x` | X 전달(GUI 전달)을 비활성화한다. |
+| `-Y` | 신뢰된 X 전달을 활성화한다. |
 | `-y` | syslog 시스템 모듈을 사용하여 로그 정보를 전송한다. 기본적으로 이 정보는 표준 오류로 전송된다. |
 
 # `awk` 명령어
@@ -8105,19 +8108,19 @@ Awk는 고급 텍스트 처리를 위해 설계된 범용 스크립팅 언어이
 #### AWK로 할 수 있는 작업
 
 1. **AWK 작업**
-   - (a) 파일을 한 줄씩 검색한다.
-   - (b) 각 입력 줄을 필드로 나눈다.
-   - (c) 입력 줄 또는 필드를 패턴과 비교한다.
-   - (d) 일치하는 줄에 대해 작업을 수행한다.
+ - (a) 파일을 한 줄씩 검색한다.
+ - (b) 각 입력 줄을 필드로 나눈다.
+ - (c) 입력 줄 또는 필드를 패턴과 비교한다.
+ - (d) 일치하는 줄에 대해 작업을 수행한다.
 
 2. **유용한 용도**
-   - (a) 데이터 파일을 변환한다.
-   - (b) 형식이 지정된 보고서를 생성한다.
+ - (a) 데이터 파일을 변환한다.
+ - (b) 형식이 지정된 보고서를 생성한다.
 
 3. **프로그래밍 구성 요소**
-   - (a) 출력 줄의 형식을 지정한다.
-   - (b) 산술 연산과 문자열 연산을 수행한다.
-   - (c) 조건문과 반복문을 사용한다.
+ - (a) 출력 줄의 형식을 지정한다.
+ - (b) 산술 연산과 문자열 연산을 수행한다.
+ - (c) 조건문과 반복문을 사용한다.
 
 #### 구문
 
@@ -8234,7 +8237,7 @@ crontab -e
 crontab -u www-data -e 
 ```
 
-###  도움말 확인
+### 도움말 확인
 
 `crontab` 명령어에 대한 전체 가이드를 확인하려면 다음을 참조하라.
 
@@ -8393,7 +8396,7 @@ ps [OPTIONS] [USER 또는 PID]
 | `-h` | `--highlight-all` | 현재 프로세스와 해당 조상 프로세스를 강조 표시한다. |
 | `-H PID` | `--highlight-pid=PID` | 지정한 프로세스와 해당 조상 프로세스를 강조 표시한다. |
 | `-g` | `--show-pgids` | 프로세스 그룹 ID를 표시한다. `-c` 옵션이 함께 적용된다. |
-| `-G` | `--vt100` | VT100 선 그리기 문자를 사용한다. |
+| `-G` | `--vt100` | VT 선 그리기 문자를 사용한다. |
 | `-l` | `--long` | 긴 줄을 잘라내지 않는다. |
 | `-n` | `--numeric-sort` | PID를 기준으로 출력을 정렬한다. |
 | `-N type` | `--ns-sort=type` | 네임스페이스 유형(cgroup, ipc, mnt, net, pid, user, uts)을 기준으로 정렬한다. |
@@ -8742,6 +8745,7 @@ find . -type f -exec sed -i 's/{search_regex}/{replace_value}/g' {} +
 ```
 sed [OPTION]... {script-only-if-no-other-script} [INPUT-FILE]... 
 ```
+
 - `OPTION` `sed` 옵션이다. 파일을 직접 수정하거나, 조용히 실행하거나, 심볼릭 링크를 따라가거나, 행 길이를 지정하거나, NUL 데이터를 사용하는 등의 기능이 있다.
 - `{script-only-if-no-other-script}` 사용 가능한 경우 해당 스크립트를 명령어에 추가한다.
 - `INPUT-FILE` 입력 스트림이다. 파일 또는 파이프라인에서 전달된 입력을 의미한다.
@@ -8963,6 +8967,7 @@ Vim에 대해 더 알아보려면 다음 문서를 참고하라.
 `chown` 명령어를 사용하면 파일이나 디렉터리의 소유권을 변경할 수 있다. 사용자와 그룹은 Linux의 기본 구성 요소이며 `chown`을 사용하여 파일이나 디렉터리의 소유자를 변경할 수 있다. 디렉터리의 소유권을 재귀적으로 변경하는 것도 가능하다. `chown`은 지정한 파일 또는 디렉터리의 소유자를 변경하는 명령어이다. [ibm](https://www.ibm.com/docs/ko/ssw_aix_72/c_commands/chown.html)
 
 ### 예시:
+
 1. 파일의 소유자를 변경한다.
 
 ```bash
@@ -8995,7 +9000,7 @@ chown [-OPTION] [DIRECTORY_PATH]
 
 # `find` 명령어
 
-`find` 명령어는 이름, 크기, 수정 시간, 권한 등 다양한 조건을 기준으로 파일과 디렉터리를 검색할 수 있는 Linux의 강력한 유틸리티 중 하나이다. `chown`은 파일이나 디렉터리의 소유자와 그룹을 변경할 때 사용하며 `-R` 옵션을 사용하면 하위 항목에도 재귀적으로 적용된다. [rhrhth23.tistory](https://rhrhth23.tistory.com/47)
+`find` 명령어는 이름, 크기, 수정 시간, 권한 등 다양한 조건을 기준으로 파일과 디렉터리를 검색할 수 있는 Linux의 강력한 유틸리티 중 하나이다. `chown`은 파일이나 디렉터리의 소유자와 그룹을 변경할 때 사용하며 `-R` 옵션을 사용하면 하위 항목에도 재귀적으로 적용된다. [rhrhth.tistory](https://rhrhth.tistory.com/47)
 
 ## 기본 구문
 
@@ -9442,19 +9447,19 @@ chmod [OPTIONS] MODE FILE(s)
 ```
 
 - `[OPTIONS]`:
-  - `-R`: 재귀적 옵션이다. 디렉터리 안의 모든 파일에 적용한다는 의미다.
+ - `-R`: 재귀적 옵션이다. 디렉터리 안의 모든 파일에 적용한다는 의미다.
 
 - `MODE`: 권한을 설정하는 다양한 방식이다.
 
 - **기호 모드 설명**
-  - `u`: 사용자
-  - `g`: 그룹
-  - `o`: 기타 사용자
-  - `=`: 권한 설정
-  - `r`: 읽기
-  - `w`: 쓰기
-  - `x`: 실행
-  - 예를 들어 `u=rwx`는 사용자가 읽고, 쓰고, 실행할 수 있다는 의미다.
+ - `u`: 사용자
+ - `g`: 그룹
+ - `o`: 기타 사용자
+ - `=`: 권한 설정
+ - `r`: 읽기
+ - `w`: 쓰기
+ - `x`: 실행
+ - 예를 들어 `u=rwx`는 사용자가 읽고, 쓰고, 실행할 수 있다는 의미다.
 
 - **숫자 모드 설명**
 
@@ -9724,8 +9729,8 @@ $ nc -zv host.ip 20-2000 # 확인할 포트 범위
 
 | **단축 플래그** | **설명** |
 |:---|:---|
-| `-4` | `nc`가 IPv4 주소를 사용하도록 강제한다. |
-| `-6` | `nc`가 IPv6 주소를 사용하도록 강제한다. |
+| `-4` | `nc`가 IPv 주소를 사용하도록 강제한다. |
+| `-6` | `nc`가 IPv 주소를 사용하도록 강제한다. |
 | `-b` | 브로드캐스트를 허용한다. |
 | `-D` | 소켓 디버깅을 활성화한다. |
 | `-i` | 송수신하는 행 사이의 시간 간격을 지정한다. |
@@ -9936,7 +9941,7 @@ banner 101LinuxCommands
 
 # `alias` 명령
 
-`alias` 명령을 사용하면 명령의 단축키를 만들거나 사용자 지정 명령을 정의할 수 있다.  
+`alias` 명령을 사용하면 명령의 단축키를 만들거나 사용자 지정 명령을 정의할 수 있다. 
 주로 긴 명령을 입력하지 않기 위해 사용한다.
 
 ### 예제:
@@ -9962,7 +9967,7 @@ alias la='ls -A'
 
 - **Bash**: ~/.bashrc
 - **ZSH**: ~/.zshrc
-- **Fish**  ~/.config/fish/config.fish
+- **Fish** ~/.config/fish/config.fish
 
 다음과 같이 선호하는 편집기로 파일을 열 수 있다.
 
@@ -9999,9 +10004,9 @@ unalias -a
 
 반환 상태는 다음 세 가지이다.
 
-    0 : 지정한 모든 명령을 찾았고 실행할 수 있음.
-    1 : 지정한 명령 중 하나 이상이 존재하지 않거나 실행할 수 없음.
-    2 : 잘못된 옵션이 지정됨.
+ 0 : 지정한 모든 명령을 찾았고 실행할 수 있음.
+ 1 : 지정한 명령 중 하나 이상이 존재하지 않거나 실행할 수 없음.
+ 2 : 잘못된 옵션이 지정됨.
 
 ### 예제
 
@@ -10093,7 +10098,7 @@ date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
 
 ### 추가 플래그와 기능:
 
-|**짧은 플래그**   |**긴 플래그**   |**설명**   |
+|**짧은 플래그** |**긴 플래그** |**설명** |
 |:---|:---|:---|
 |`-d`|`--date=STRING`|지정한 문자열을 형식화된 날짜로 변환|
 |`-f`|`--file=DATEFILE`|`--date`와 같지만 파일에 사용|
@@ -10111,7 +10116,7 @@ date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
 
 ### 예제:
 
-|**명령**   |**출력**   |
+|**명령** |**출력** |
 |:---|:---|
 |`$ date "+%D"`|`10/22/21`|
 |`$ date "+%D %T"`|`10/22/21 05:33:51`|
@@ -10125,13 +10130,13 @@ date "+%[format-options ...]"
 
 ### 출력 날짜와 시간을 제어하는 형식 지정자 목록:
 
-|**지정자**   |**설명**   |
+|**지정자** |**설명** |
 |:---|:---|
 |`%a`|축약된 요일 이름 *(예: Sun)*|
 |`%A`|전체 요일 이름 *(예: Sunday)*|
 |`%b`|축약된 월 이름 *(예: Jan)*|
 |`%B`|전체 월 이름 *(예: January)*|
-|`%c`|날짜와 시간 *(예: Thu Mar  3 23:05:25 2005)*|
+|`%c`|날짜와 시간 *(예: Thu Mar 3 23:05:25 2005)*|
 |`%C`|세기. %Y와 같지만 마지막 두 자리를 생략 *(예: 20)*|
 |`%d`|월의 일 *(예: 01)*|
 |`%D`|날짜. %m/%d/%y와 같음|
@@ -10207,7 +10212,7 @@ mount [-fnrsvw] [-t fstype] [-o options] device dir
 
 ### 추가 플래그와 기능:
 
-|**짧은 플래그**   |**긴 플래그**   |**설명**   |
+|**짧은 플래그** |**긴 플래그** |**설명** |
 |:---|:---|:---|
 |`-h`|`--help`|도움말을 표시하고 종료|
 |`-n`|`--no-mtab`|/etc/mtab에 기록하지 않고 마운트|
@@ -10243,7 +10248,7 @@ nice [  -Increment|  -n Increment ] Command [ Argument ... ]
 
 ### 플래그:
 
-|**짧은 플래그**   |**긴 플래그**   |**설명**   |
+|**짧은 플래그** |**긴 플래그** |**설명** |
 |:---|:---|:---|
 |`-Increment`|-|할당할 우선순위 값인 Increment인다.|
 |`-n Increment`|-|`-Increment`와 같다.|
@@ -10274,7 +10279,7 @@ wc [OPTION]... [FILE]...
 
 ### 추가 플래그와 기능:
 
-|**짧은 플래그**   |**긴 플래그**   |**설명**   |
+|**짧은 플래그** |**긴 플래그** |**설명** |
 |:---|:---|:---|
 |`-c` | `--bytes` | 바이트 수 출력|
 |`-m` | `--chars` | 문자 수 출력|
@@ -10347,12 +10352,12 @@ tr [options] string1 [string2]
 
 ### 추가 플래그와 기능:
 
-| **짧은 플래그** | **긴 플래그** | **설명**                                                                                               |
+| **짧은 플래그** | **긴 플래그** | **설명** |
 | :------------- | :------------ | :------------------------------------------------------------------------------------------------------------ |
-| `-C`           |               | string1의 문자 집합을 보수 집합으로 만든다. 즉 `-C ab`는 `a`와 `b`를 제외한 모든 문자를 포함한다. |
-| `-c`           |               | -C와 같다.                                                                                                   |
-| `-d`           |               | 입력에서 string1의 문자를 삭제한다.                                                                  |
-| `-s`           |               | string1에 문자 시퀀스가 있으면 하나로 결합한다.                                       |
+| `-C` | | string1의 문자 집합을 보수 집합으로 만든다. 즉 `-C ab`는 `a`와 `b`를 제외한 모든 문자를 포함한다. |
+| `-c` | | -C와 같다. |
+| `-d` | | 입력에서 string1의 문자를 삭제한다. |
+| `-s` | | string1에 문자 시퀀스가 있으면 하나로 결합한다. |
 
 # `fdisk` 명령
 
@@ -10362,7 +10367,7 @@ tr [options] string1 [string2]
 - 기존 드라이브 수정.
 - 새 파티션을 위한 공간 생성.
 - 데이터를 새 파티션으로 이동.
-  
+ 
 
 ### 예제:
 
@@ -10537,7 +10542,7 @@ fold [OPTION]... [FILE]...
 fold -w[n] [FILE]
 ```
 
- 예: file1.txt의 줄을 60열 너비로 줄바꿈한다
+ 예: file.txt의 줄을 60열 너비로 줄바꿈한다
 
 ```
 fold -w60 file1.txt
@@ -10631,7 +10636,7 @@ aplay --help
    $ aplay -d 10 -r 2500hz sample.mp3
    ```
 
-   > `sample.mp3` 파일을 2500Hz 주파수로 10초 동안 재생한다.
+ > `sample.mp3` 파일을 2500Hz 주파수로 10초 동안 재생한다.
 
 2. 2500Hz 주파수로 전체 오디오 클립 재생:
 
@@ -10639,7 +10644,7 @@ aplay --help
    $ aplay -r 2500hz sample.mp3
    ```
 
-   > `sample.mp3` 파일을 2500Hz 주파수로 재생한다.
+ > `sample.mp3` 파일을 2500Hz 주파수로 재생한다.
 
 3. 버전 정보 출력:
 
@@ -10647,7 +10652,7 @@ aplay --help
    $ aplay --version
    ```
 
-   > 버전 정보를 출력한다 (예: `aplay: version 1.1.0`).
+ > 버전 정보를 출력한다 (예: `aplay: version 1..0`).
 
 ***
 
@@ -11246,19 +11251,19 @@ $ cmp [OPTION]... FILE1 [FILE2]
 
 다음 예제에서는 세 개의 파일이 있다고 가정한다.
 
-`file1.txt` 내용:
+`file.txt` 내용:
 
 ```text
 hello world
 ```
 
-`file2.txt` 내용:
+`file.txt` 내용:
 
 ```text
 hello world
 ```
 
-`file3.txt` 내용:
+`file.txt` 내용:
 
 ```text
 hello World
@@ -11294,7 +11299,7 @@ $ cmp -l file1.txt file3.txt
 
 #### 설명
 
-이 출력은 7번째 바이트에서 `file1.txt`가 8진수 값 `167`(문자 `w`)을 가지고 있는 반면, `file3.txt`는 8진수 값 `127`(문자 `W`)을 가진다는 의미다.
+이 출력은 7번째 바이트에서 `file.txt`가 8진수 값 `167`(문자 `w`)을 가지고 있는 반면, `file.txt`는 8진수 값 `127`(문자 `W`)을 가진다는 의미다.
 
 ### 처음 `n`바이트만 비교(`--bytes` 또는 `-n`) {.unnumbered}
 
@@ -11910,9 +11915,9 @@ journalctl -r
 - `"2024-01-01 12:00:00"`
 - `"yesterday"`
 - `"today"`
-- `"1 hour ago"`
-- `"30 minutes ago"`
-- `"2 days ago"`
+- `" hour ago"`
+- `" minutes ago"`
+- `" days ago"`
 
 ## 출력 형식
 
@@ -13936,7 +13941,7 @@ traceroute -m 15 google.com
 traceroute -q 1 google.com
 ```
 
-8. **IPv6 강제 사용**
+8. **IPv 강제 사용**
 
 ```bash
 traceroute -6 ipv6.google.com
@@ -14053,7 +14058,7 @@ paris-traceroute google.com
 
 ## traceroute 변형
 
-### IPv6 Traceroute {.unnumbered}
+### IPv Traceroute {.unnumbered}
 
 ```bash
 # IPv6 경로 추적
@@ -14206,7 +14211,7 @@ mtr --report google.com
 mtr --report-cycles 10 google.com
 ```
 
-### hping3 (고급 프로빙) {.unnumbered}
+### hping (고급 프로빙) {.unnumbered}
 
 ```bash
 sudo apt install hping3
@@ -14371,62 +14376,62 @@ nmcli [OPTIONS...] { help | general | networking | radio | connection | device |
 
 #### Options
 
-| **Short Flag** | **Long Flag**          | **설명**                                                                                                |
+| **Short Flag** | **Long Flag** | **설명** |
 | :------------- | :--------------------- | :------------------------------------------------------------------------------------------------------------- |
-| `-a`           | `--ask`                | 필수 인수가 누락되면 nmcli가 중지하고 입력을 요청한다(비대화형 옵션에는 사용하지 않음)              |
-| `-c`           | `--color`{yes/no}      | 색상 출력을 제어한다. yes는 색상을 활성화하고 no는 비활성화한다                                         |
-| `-h`           | `--help`               | 도움말 정보를 출력한다                                                                                        |
-| `-p`           | `--pretty`             | 헤더를 포함해 더 이해하기 쉬운 출력을 생성하고 값을 정렬한다                |
-| `-v`           | `--version`            | nmcli 버전을 표시한다                                                                                        |
-| `-f`           | `--fields`{field1,...} | 출력할 필드를 지정한다. 유효한 필드 이름은 명령에 따라 다른다. |
-| `-g`           | `--get-value`{field1,.}| 특정 필드의 값을 출력한다. --mode tabular --terse --fields의 단축형이다 |
+| `-a` | `--ask` | 필수 인수가 누락되면 nmcli가 중지하고 입력을 요청한다(비대화형 옵션에는 사용하지 않음) |
+| `-c` | `--color`{yes/no} | 색상 출력을 제어한다. yes는 색상을 활성화하고 no는 비활성화한다 |
+| `-h` | `--help` | 도움말 정보를 출력한다 |
+| `-p` | `--pretty` | 헤더를 포함해 더 이해하기 쉬운 출력을 생성하고 값을 정렬한다 |
+| `-v` | `--version` | nmcli 버전을 표시한다 |
+| `-f` | `--fields`{field,...} | 출력할 필드를 지정한다. 유효한 필드 이름은 명령에 따라 다른다. |
+| `-g` | `--get-value`{field,.}| 특정 필드의 값을 출력한다. --mode tabular --terse --fields의 단축형이다 |
 
 #### General Commands
 
-| **Command**                    |**설명**                                                       |
+| **Command** |**설명** |
 | :----------------------------- | :------------------------------------------------------------------- |
-| `nmcli general status`         | NetworkManager의 전체 상태 표시                                   |
-| `nmcli general hostname`       | 현재 호스트 이름 표시                                             |
+| `nmcli general status` | NetworkManager의 전체 상태 표시 |
+| `nmcli general hostname` | 현재 호스트 이름 표시 |
 
 #### Networking Commands
 
-| **Command**                    | **설명**                                                      |
+| **Command** | **설명** |
 | :----------------------------- | :------------------------------------------------------------------- |
-| `nmcli networking on`          | 모든 네트워킹 활성화                                                |
-| `nmcli networking off`         | 모든 네트워킹 비활성화                                               |
-| `nmcli networking connectivity`| 네트워크 연결 상태 확인                                    |
+| `nmcli networking on` | 모든 네트워킹 활성화 |
+| `nmcli networking off` | 모든 네트워킹 비활성화 |
+| `nmcli networking connectivity`| 네트워크 연결 상태 확인 |
 
 #### Radio Commands
 
-| **Command**                    | **설명**                                                      |
+| **Command** | **설명** |
 | :----------------------------- | :------------------------------------------------------------------- |
-| `nmcli radio wifi on`          | Wi-Fi 무선 기능 활성화                                                   |
-| `nmcli radio wifi off`         | Wi-Fi 무선 기능 비활성화                                                  |
-| `nmcli radio all`              | 모든 무선 스위치의 상태 표시                                    |
-| `nmcli radio wifi`             | Wi-Fi 무선 기능 상태 표시                                              |
+| `nmcli radio wifi on` | Wi-Fi 무선 기능 활성화 |
+| `nmcli radio wifi off` | Wi-Fi 무선 기능 비활성화 |
+| `nmcli radio all` | 모든 무선 스위치의 상태 표시 |
+| `nmcli radio wifi` | Wi-Fi 무선 기능 상태 표시 |
 
 #### Connection Management Commands
 
-| **Command**                                      | **설명**                                    |
+| **Command** | **설명** |
 | :----------------------------------------------- | :------------------------------------------------- |
-| `nmcli connection show`                          | 저장된 모든 연결 프로필 나열                 |
-| `nmcli connection show --active`                 | 활성 연결만 나열                       |
-| `nmcli connection show "NAME"`                   | 특정 연결의 상세 정보 표시       |
-| `nmcli connection up "NAME"`                     | 연결 활성화                              |
-| `nmcli connection down "NAME"`                   | 연결 비활성화                            |
-| `nmcli connection modify "NAME" [OPTIONS]`       | 연결 설정 수정                         |
-| `nmcli connection delete "NAME"`                 | 연결 프로필 삭제                        |
-| `nmcli connection reload`                        | 디스크에서 모든 연결 파일 다시 로드              |
+| `nmcli connection show` | 저장된 모든 연결 프로필 나열 |
+| `nmcli connection show --active` | 활성 연결만 나열 |
+| `nmcli connection show "NAME"` | 특정 연결의 상세 정보 표시 |
+| `nmcli connection up "NAME"` | 연결 활성화 |
+| `nmcli connection down "NAME"` | 연결 비활성화 |
+| `nmcli connection modify "NAME" [OPTIONS]` | 연결 설정 수정 |
+| `nmcli connection delete "NAME"` | 연결 프로필 삭제 |
+| `nmcli connection reload` | 디스크에서 모든 연결 파일 다시 로드 |
 
 #### Device Management Commands
 
-| **Command**                                      | **설명**                                    |
+| **Command** | **설명** |
 | :----------------------------------------------- | :------------------------------------------------- |
-| `nmcli device status`                            | 모든 장치의 상태 표시                         |
-| `nmcli device show "DEVICE"`                     | 특정 장치의 상세 정보 표시             |
-| `nmcli device disconnect "DEVICE"`               | 장치 연결 해제                           |
-| `nmcli device wifi list`                         | 사용 가능한 모든 Wi-Fi 네트워크 나열                  |
-| `nmcli device wifi connect "SSID" password "PWD"`| 암호로 보호된 Wi-Fi에 연결                |
+| `nmcli device status` | 모든 장치의 상태 표시 |
+| `nmcli device show "DEVICE"` | 특정 장치의 상세 정보 표시 |
+| `nmcli device disconnect "DEVICE"` | 장치 연결 해제 |
+| `nmcli device wifi list` | 사용 가능한 모든 Wi-Fi 네트워크 나열 |
+| `nmcli device wifi connect "SSID" password "PWD"`| 암호로 보호된 Wi-Fi에 연결 |
 
 # `badblocks` 명령
 
@@ -14596,7 +14601,7 @@ sudo badblocks -wsv /dev/mmcblk0
 
 ## 파일 시스템 통합
 
-### ext2/ext3/ext4 {.unnumbered}
+### ext2/ext3/ext {.unnumbered}
 
 ```bash
 # Create filesystem with bad block check
@@ -14823,7 +14828,7 @@ fsck [options] [filesystem...]
 
 ## 주요 기능
 
-- **여러 파일 시스템 지원**: ext2, ext3, ext4, XFS 등과 함께 작동
+- **여러 파일 시스템 지원**: ext, ext, ext, XFS 등과 함께 작동
 - **자동 감지**: 파일 시스템 유형을 자동으로 감지할 수 있음
 - **대화형 복구**: 수정 전에 확인을 요청
 - **배치 모드**: 사용자 상호작용 없이 자동 실행 가능
@@ -14893,7 +14898,7 @@ sudo fsck -C /dev/sdb1
 
 ## 파일 시스템별 명령
 
-### ext2/ext3/ext4 (e2fsck) {.unnumbered}
+### ext2/ext3/ext (e2fsck) {.unnumbered}
 
 ```bash
 # Check ext4 file system
@@ -14922,7 +14927,7 @@ sudo xfs_repair /dev/sdb1
 sudo xfs_repair -v /dev/sdb1
 ```
 
-### FAT32 (fsck.fat) {.unnumbered}
+### FAT (fsck.fat) {.unnumbered}
 
 ```bash
 # Check FAT32 file system
@@ -15304,7 +15309,7 @@ sudo ionice -c 3 fsck /dev/sdb1
 
 # `mkfs` 명령
 
-`mkfs`(파일 시스템 생성) 명령은 저장 장치에 파일 시스템을 생성하는 데 사용된다. 이 명령은 파티션이나 전체 디스크를 ext4, XFS, FAT32 등의 특정 파일 시스템 유형으로 포맷한다. 이는 저장 장치를 Linux 시스템에서 사용할 수 있도록 준비하는 데 필수적이다.
+`mkfs`(파일 시스템 생성) 명령은 저장 장치에 파일 시스템을 생성하는 데 사용된다. 이 명령은 파티션이나 전체 디스크를 ext, XFS, FAT 등의 특정 파일 시스템 유형으로 포맷한다. 이는 저장 장치를 Linux 시스템에서 사용할 수 있도록 준비하는 데 필수적이다.
 
 ## 구문
 
@@ -15315,7 +15320,7 @@ mkfs.type [options] device
 
 ## 주요 기능
 
-- **다양한 파일 시스템 지원**: ext2/3/4, XFS, FAT32, NTFS 등
+- **다양한 파일 시스템 지원**: ext2/3/4, XFS, FAT, NTFS 등
 - **사용자 지정 매개변수**: 블록 크기, inode 비율, 레이블 및 기능
 - **빠른 포맷과 전체 포맷**: 신속한 포맷 또는 철저한 초기화
 - **고급 옵션**: 암호화, 압축 및 성능 조정
@@ -15355,7 +15360,7 @@ sudo mkfs.ntfs /dev/sdb1
 
 ## 파일 시스템별 옵션
 
-### ext4 File System {.unnumbered}
+### ext File System {.unnumbered}
 
 ```bash
 # Basic ext4 creation
@@ -15374,7 +15379,7 @@ sudo mkfs.ext4 -i 4096 /dev/sdb1
 sudo mkfs.ext4 -J size=128 /dev/sdb1
 ```
 
-### Advanced ext4 Options
+### Advanced ext Options
 
 ```bash
 # Disable journaling (ext2-like)
@@ -15425,7 +15430,7 @@ sudo mkfs.xfs -i size=512 /dev/sdb1
 sudo mkfs.xfs -d agcount=8 /dev/sdb1
 ```
 
-### FAT32 File System {.unnumbered}
+### FAT File System {.unnumbered}
 
 ```bash
 # Basic FAT32 creation
@@ -16270,7 +16275,7 @@ echo "Source: /path/to/source" >> archive_info.txt
 - **적절한 형식 선택**: 최신 시스템에는 `newc` 형식을 사용하라.
 - **권한 보존**: `-m` 옵션을 사용하고 적절한 사용자 권한으로 실행하라.
 - **아카이브 테스트**: 항상 아카이브의 무결성을 확인하라.
-- **압축 사용**: 공간을 효율적으로 사용하려면 gzip, bzip2 또는 xz와 함께 사용하라.
+- **압축 사용**: 공간을 효율적으로 사용하려면 gzip, bzip 또는 xz와 함께 사용하라.
 - **특수 파일 처리**: 장치 파일과 심볼릭 링크를 주의해서 다루라.
 - **네트워크 보안**: 원격 작업에는 안전한 통신 채널을 사용하라.
 - **백업 전략**: 정기적으로 백업하고 백업 상태를 확인하라.
@@ -20658,9 +20663,9 @@ sudo cfdisk /dev/sdb
 ### 기타 일반적인 유형
 
 - **07**: NTFS/HPFS
-- **0c**: FAT32 LBA
+- **0c**: FAT LBA
 - **ef**: EFI 시스템 파티션
-- **01**: FAT12
+- **01**: FAT
 
 ## 명령줄 옵션
 
@@ -20896,7 +20901,7 @@ fdisk -l
 ### gparted와 비교
 
 - **cfdisk**: 텍스트 기반, 가벼움
-- **gparted**: 그래픽 인터페이스, X11 필요
+- **gparted**: 그래픽 인터페이스, X 필요
 
 ## 중요 참고 사항
 
@@ -20913,7 +20918,7 @@ fdisk -l
 
 # ifplugstatus 명령
 
-`ifplugstatus` 명령은 Linux 시스템에서 네트워크 인터페이스의 **물리적 링크 상태**를 확인하는 진단 유틸리티이다. 인터페이스(예: eth0, enp0s3, wlan0)에 네트워크 케이블이 연결되어 있는지 보고한다. 유선 네트워크 연결 문제를 해결하고 케이블이 빠졌는지 감지할 때 특히 유용하다.
+`ifplugstatus` 명령은 Linux 시스템에서 네트워크 인터페이스의 **물리적 링크 상태**를 확인하는 진단 유틸리티이다. 인터페이스(예: eth, enp0s, wlan0)에 네트워크 케이블이 연결되어 있는지 보고한다. 유선 네트워크 연결 문제를 해결하고 케이블이 빠졌는지 감지할 때 특히 유용하다.
 
 ## 문법
 
@@ -20923,7 +20928,7 @@ ifplugstatus [options] [interface]
 
 ### 매개변수
 
-- interface 확인할 네트워크 인터페이스(예: eth0, enp0s3, wlan0)
+- interface 확인할 네트워크 인터페이스(예: eth, enp0s, wlan0)
 
 - options 출력을 사용자 지정하는 선택적 플래그
 
@@ -20997,12 +21002,12 @@ wlan0: link beat not detected
 
 | 옵션 | 설명 |
 |--------|-------------|
-| `-a`   | 모든 인터페이스 표시(기본 동작) |
-| `-i`   | 특정 인터페이스 지정 |
-| `-s`   | 짧은 요약만 표시 |
-| `-v`   | 더 자세한 정보를 포함한 상세 출력 |
-| `-q`   | 조용한 모드 최소한의 출력 |
-| `-h`   | 도움말 정보 표시 |
+| `-a` | 모든 인터페이스 표시(기본 동작) |
+| `-i` | 특정 인터페이스 지정 |
+| `-s` | 짧은 요약만 표시 |
+| `-v` | 더 자세한 정보를 포함한 상세 출력 |
+| `-q` | 조용한 모드 최소한의 출력 |
+| `-h` | 도움말 정보 표시 |
 
 ## 실용적인 예
 
@@ -21047,7 +21052,7 @@ eth0: link beat detected
 enp0s3: link beat not detected
 ```
 
-- 인터페이스 이름: eth0, enp0s3 등
+- 인터페이스 이름: eth, enp0s 등
 
 - 링크 상태: 물리적 링크(케이블 또는 신호)의 존재 여부를 나타낸다.
 
@@ -21116,9 +21121,9 @@ sudo ifplugstatus eth0
 | 명령 | 설명 |
 |-----------------------|-------------------------------------------------------|
 | `ip a` (권장) / `ifconfig` | 모든 네트워크 인터페이스와 세부 정보를 표시한다. `ip a`는 최신 도구이고 `ifconfig`는 레거시 도구다. |
-| `ethtool eth0`        | 네트워크 인터페이스의 고급 정보를 가져온다. |
+| `ethtool eth0` | 네트워크 인터페이스의 고급 정보를 가져온다. |
 | `nmcli device status` | NetworkManager를 통해 연결 상태를 확인한다. |
-| `ping`                | 케이블 연결을 확인한 후 네트워크 도달 가능성을 테스트한다. |
+| `ping` | 케이블 연결을 확인한 후 네트워크 도달 가능성을 테스트한다. |
 
 ## 중요 참고 사항
 
@@ -21237,7 +21242,7 @@ column -t -s, data.txt
 - 인터페이스 **활성화 또는 비활성화**
 - 시스템 **호스트 이름** 설정 또는 변경
 - **Wi-Fi 네트워크** 연결
-- **IPv4 / IPv6 설정** 관리
+- **IPv / IPv 설정** 관리
 
 특히 그래픽 데스크톱 환경이 없는 서버나 시스템에서 유용하다.
 
@@ -21249,31 +21254,31 @@ column -t -s, data.txt
 
 1. **기본 메뉴 인터페이스 열기:**
 
-   `nmtui`  
-   *연결 편집*, *연결 활성화*, *시스템 호스트 이름 설정* 옵션이 있는 기본 TUI(텍스트 사용자 인터페이스) 창을 연다.
+ `nmtui` 
+ *연결 편집*, *연결 활성화*, *시스템 호스트 이름 설정* 옵션이 있는 기본 TUI(텍스트 사용자 인터페이스) 창을 연다.
 
 2. **네트워크 연결 직접 편집:**
 
-   `nmtui edit`  
-   이더넷과 Wi-Fi 네트워크 연결을 생성·수정·삭제할 수 있다.
+ `nmtui edit` 
+ 이더넷과 Wi-Fi 네트워크 연결을 생성·수정·삭제할 수 있다.
 
 3. **연결 직접 활성화 또는 비활성화:**
 
-   `nmtui connect`  
-   네트워크 인터페이스를 활성화하거나 비활성화할 수 있는 *연결 활성화* 메뉴를 연다.
+ `nmtui connect` 
+ 네트워크 인터페이스를 활성화하거나 비활성화할 수 있는 *연결 활성화* 메뉴를 연다.
 
 4. **시스템 호스트 이름 설정 또는 변경:**
 
-   `nmtui hostname`  
-   네트워크에서 시스템을 식별할 때 사용하는 호스트 이름을 설정하는 대화 상자를 연다.
+ `nmtui hostname` 
+ 네트워크에서 시스템을 식별할 때 사용하는 호스트 이름을 설정하는 대화 상자를 연다.
 
 5. **특정 Wi-Fi 네트워크에 직접 연결:**
 
-   `nmtui connect "MyWiFiNetwork"`  
-   지정한 Wi-Fi 네트워크가 통신 범위 안에 있으면 연결한다.
+ `nmtui connect "MyWiFiNetwork"` 
+ 지정한 Wi-Fi 네트워크가 통신 범위 안에 있으면 연결한다.
 
-6. **인터페이스 종료:**  
-   **Tab → Quit**을 사용하거나 **Esc**를 누른다.
+6. **인터페이스 종료:** 
+ **Tab → Quit**을 사용하거나 **Esc**를 누른다.
 
 
 ### 🧩 일반 옵션 및 하위 명령
@@ -21301,24 +21306,24 @@ column -t -s, data.txt
 **1. 고정 IP 주소 구성:**
 
 `nmtui edit ` 
-→ 이더넷 연결 선택  
-→ “IPv4 CONFIGURATION”을 *Manual*로 설정  
-→ IP, 게이트웨이, DNS 입력  
+→ 이더넷 연결 선택 
+→ “IPv CONFIGURATION”을 *Manual*로 설정 
+→ IP, 게이트웨이, DNS 입력 
 → 저장 → 연결 활성화
 
 **2. 터미널에서 Wi-Fi에 연결:**
 
-`nmtui connect`  
-→ 무선 인터페이스 선택  
-→ SSID 선택  
-→ 비밀번호 입력  
+`nmtui connect` 
+→ 무선 인터페이스 선택 
+→ SSID 선택 
+→ 비밀번호 입력 
 → 연결 활성화
 
 **3. 호스트 이름 변경:**
 
-`nmtui hostname`  
-→ 새 호스트 이름 입력  
-→ 확인 후 종료  
+`nmtui hostname` 
+→ 새 호스트 이름 입력 
+→ 확인 후 종료 
 → 새 호스트 이름이 즉시 적용된다.
 
 
@@ -21346,13 +21351,13 @@ column -t -s, data.txt
 ### 🧾 예제: `nmtui`로 이더넷 구성
 
 `sudo nmtui` 
-→ **연결 편집** 선택  
-→ **Wired connection 1** 선택  
-→ IPv4를 **Manual**로 설정  
+→ **연결 편집** 선택 
+→ **Wired connection 1** 선택 
+→ IPv4를 **Manual**로 설정 
 → 다음 값 입력:
-Address: 192.168.1.50/24  
-Gateway: 192.168.1.1  
-DNS: 8.8.8.8  
+Address: 192...50/24 
+Gateway: 192... 
+DNS: 8... 
 → 저장 → 뒤로 → **연결 활성화** → **Wired connection 1** 선택
 
 ✅ 이제 네트워크 연결에서 고정 IP를 사용한다.

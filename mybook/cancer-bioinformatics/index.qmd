@@ -667,11 +667,13 @@ Kallisto 스위트에는 RSEM 결과와 비교 가능한 형식으로 발현량�
  l Include in command line.
  Position: 2.
  Separate prefix with empty string.
+
 6. Output Ports는 실행 결과물 중 무엇을 "저장"할지 지정하게 해 준다. 이렇게 하면 도구가 많은 파일을 만들더라도 회수하고 싶은 것만 저장된다. "Output" 메뉴에서 생성된 인덱스 파일의 Output Port를 만드라.
  (a) ID: index, Type: File.
  (b) glob에는 동적 표현식을 만든다. 인덱스 파일 이름을 동적 표현식으로 강제 입력으로 설정했으므로, 같은 표현식으로 파일을 glob해야 한다: $job.inputs.index_filename
  (c) Metadata:
  l Inherit Metadata From Input: #fasta.
+
 7. 원하는 "Additional Information"을 설정한다.
 8. Test 탭으로 동적 표현식이 올바르게 평가되는지 확인한다. "index_filename"의 변화가 "Resulting command line" 팝업 필드에 인쇄된 명령줄에 반영되어야 한다.
 
@@ -913,6 +915,7 @@ TCGA-untar TCGA의 페어드엔드 리드는 TARGZ 파일로 저장된다. 파�
 
 1. Input Port를 만든다.
  입력을 스테이징하고 명령줄에 포함한다.
+
 2. Base Command를 "tar xzf"로 설정한다.
 3. 두 개의 Output Port를 만든다. FASTQ 파일마다 하나씩이다.
 4. 각 포트에 사용자 정의 메타데이터 필드 "paired-end"를 추가한다. fastq1은 값 "1"(정수), fastq2는 "2"로 한다.
@@ -931,9 +934,11 @@ $ cut -f 1,6 input_file.tsv | tail -n+1 | awk '{col=$1; split(col, colArr,"."); 
 1. Base Command를 "cut."으로 설정한다.
 2. 탭 구분 입력 파일의 Input Port를 만든다.
  (a) Include in command line.
+
 3. 잘라낼 열의 Input Port를 만든다.
  (a) Include in command line.
  (b) Prefix: -f.
+
 4. tail로 헤더를 잘라내고, awk로 Transcript ID에서 Ensembl 버전을 잘라내고, sort로 첫 번째 열 기준 정렬하는 Argument를 만든다:
  (a) Position: 2
  (b) Value: | tail -n+1 | awk '{col=$1; split; $1=colArr} 1' | sort -k1
@@ -1824,6 +1829,7 @@ dbSNP144 데이터베이스의 흔한 SNP 데이터와 UCSC knownGene hg19 카�
 :::
 
 ASE 분석에 적합한 유전자 수; 우리는 수학적 공식을 정의했다. 이것은 개인당 이형접합 SNP 빈도 나타내는 값 I이 주어졌을 때, 다음 가정하에:
+
 - ASE 분석 수행 충분한 n개 SNPs
 - 개인 유전체 전역 이형접합 SNPs 균등 분포
 - SNPs 독립
@@ -2327,6 +2333,7 @@ WGS, WES, 또는 RNA 시퀀싱 선택 여부와 무관하게 계산 도구는 �
 전반적인 워크플로와 각 단계의 도구·모범 사례 권장에 초점을 맞출 것이다.
 
 > [신생항원(Neoepitope) 식별 파이프라인 워크플로 개요]
+>
 > 1. 시료 준비: 종양 조직 샘플 및 상동 대조 정상 조직 샘플 수집
 > 2. 시퀀싱 플랫폼: 전체 유전체 시퀀싱(WGS), 전체 엑솜 시퀀싱(WES), 전사체 시퀀싱(RNA-Seq)
 > 3. 서열 전처리 및 정량: 염기 호출(Base calling) → 품질 관리 → 참조 서열 정렬(Mapping) 및 mRNA 발현량 정량
@@ -3269,6 +3276,7 @@ TBEST 가장 가능성 높은 사용은 나열된 순서로 이 작업 수행 �
 2. HC 알고리즘 명세. 두 항목 구성:
  (a) 클러스터될 객체 사이 쌍별 비유사성 계산 방법. TBEST는 넓은 선택 허용한다. 핵심 R 함수(hclust)에 정의된 모든 비유사성 옵션 외에, TBEST는 상관 기반 비유사성도 허용한다. M의 임의 두 행 X와 Y에 대해 1Cor(X,Y)로 정의되며, Cor는 Pearson, Spearman, Kendall 상관일 수 있다.
  (b) HC 연결 방법은 hclust 허용 연결 옵션 중 하나로 선택해야 한다. 예: "complete", "average".
+
 3. 단단함 귀무분포 명세. TBEST 기저 아이디어는 주어진 클래스 내 데이터 모든 치환으로 자란 트리 노드 단단함 계산해 얻어진다는 것이다.
 
 따라서 데이터 허용된 치환 클래스가 단단함 귀무분포 정의한다.
@@ -3630,6 +3638,7 @@ Riddick 등은 NCI60 세포줄 종양 예측 랜덤 포레스트 기반 접근�
 1. 데이터 전처리: 종양 배양 대해 각 유전체 특성화 수치 벡터 표현 데이터 처리.
 
 유전체 특성화 데이터셋
+
 1. 데이터 전처리: Dataset 1 / Dataset2 / Dataset D
 2. 특징 선택: Feature Selection ×3
 3. 각 데이터셋 랜덤 포레스트 훈련: RF₁ / RF₂ / RF_D
