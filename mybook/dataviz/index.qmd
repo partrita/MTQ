@@ -5,8 +5,8 @@ author:
   - "Jack Dougherty"
   - "Ilya Ilyankou"
 date: "2026-08-06"
-bibliography: dataviz/data/dataviz.bib
-csl: dataviz/data/chicago-fullnote-bibliography.csl
+bibliography: data/dataviz.bib
+csl: data/chicago-fullnote-bibliography.csl
 ---
 
 
