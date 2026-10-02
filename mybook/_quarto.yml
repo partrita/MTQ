@@ -23,6 +23,7 @@ book:
         - rust-essentials/index.qmd
         - rust-python/index.qmd
         - rustc-guide/index.qmd
+        - async-rust/index.qmd
         - software-architecture-decisions/index.qmd
         - think-like-cto/index.qmd
         - beyond-vibe-coding/index.qmd
@@ -103,6 +104,7 @@ book:
         - leaders-guide-presenting/index.qmd
         - five-types-of-wealth/index.qmd
         - latte-factor/index.qmd
+        - zero-to-one/index.qmd
     - part: "커뮤니케이션, 설득 및 글쓰기 기술"
       chapters:
         - talk-like-ted/index.qmd
@@ -164,6 +166,8 @@ book:
         - science-of-living/index.qmd
         - wicked/index.qmd
         - essay-change-think/index.qmd
+        - little-book-of-stoicism/index.qmd
+        - power-of-now/index.qmd
 
 engine: markdown
 
