@@ -1,5 +1,5 @@
 ---
-title: "Effective Python"
+title: "효율적인 파이썬"
 subtitle: "더 나은 파이썬을 위한 125가지 구체적인 방법"
 author: "Brett Slatkin"
 ---

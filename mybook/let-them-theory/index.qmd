@@ -1,5 +1,5 @@
 ---
-title: "놓아줘 이론"
+title: "내버려두기"
 author: "멜 로빈스(Mel Robbins)"
 ---
 
