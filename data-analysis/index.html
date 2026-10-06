@@ -262,6 +262,11 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../async-rust/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Async Rust</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../software-architecture-decisions/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">소프트웨어 아키텍처 의사결정</span></a>
   </div>
 </li>
@@ -667,6 +672,11 @@ window.Quarto = {
   <a href="../latte-factor/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">라떼 팩터</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../zero-to-one/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">제로 투 원</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -700,7 +710,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../think-again-argue/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Think Again: How to Reason and Argue</span></a>
+  <a href="../think-again-argue/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">다시 생각하기: 추론과 논증의 기술</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -786,7 +796,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../time-management-dummies/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1부: 혁명의 시작: 간단한 첫걸음</span></a>
+  <a href="../time-management-dummies/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">누구나 쉽게 배우는 시간 관리</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -973,6 +983,16 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../essay-change-think/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">당신의 생각을 바꾸는 101가지 생각</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../little-book-of-stoicism/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">스토아 철학 소요(小要)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../power-of-now/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">지금 이 순간의 힘 (The Power of Now)</span></a>
   </div>
 </li>
       </ul>
@@ -22897,11 +22917,11 @@ P(Y \mid X) \ne P(Y) \text{이면 } X\text{가 } Y\text{의 원인이다.}
 <li><p><a href="#sec-experimental-design">실험설계</a>, 특히 <a href="#sec-the-gold-standard-randomized-controlled-trials">무작위 대조 시험(RCT)</a>은 인과추론의 표준(Gold standard)으로 간주된다. 단위(예: 고객, 사용자, 지역)를 처치 집단이나 통제 집단에 무작위로 배정함으로써 교란요인을 제거하고 처치 효과를 명확하게 해석할 수 있다. 그러나 많은 비즈니스 환경에서 진정한 무작위 배정은 비용이 많이 들거나 비실용적이거나 윤리적 제약이 따른다.</p></li>
 <li><p><a href="#sec-quasi-experimental">준실험설계</a>는 무작위 배정이 불가능할 때 대안을 제공한다. 이러한 설계는 관찰 데이터와 통계적 기법에 의존하여 실험의 조건을 근사한다. 적용 면에서는 더 유연하지만 신뢰할 수 있는 인과적 통찰을 얻기 위해 일반적으로 더 강력한 가정과 세심한 방법론적 구현이 필요하다.</p></li>
 </ul>
-<p>표 <a href="#tbl-exp-vs-quasi-exp" class="quarto-xref">Table&nbsp;<span>49.1</span></a> 는이 두 가지 접근법의 주요 차이점을 요약하여 실증 연구에서의 강점, 한계, 활용 사례를 보여준다.</p>
+<p>표 <a href="#tbl-exp-vs-quasi-exp" class="quarto-xref">Table&nbsp;<span>50.1</span></a> 는이 두 가지 접근법의 주요 차이점을 요약하여 실증 연구에서의 강점, 한계, 활용 사례를 보여준다.</p>
 <div id="tbl-exp-vs-quasi-exp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-exp-vs-quasi-exp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;49.1: 실험설계와 준실험설계의 주요 차이점
+Table&nbsp;50.1: 실험설계와 준실험설계의 주요 차이점
 </figcaption>
 <div aria-describedby="tbl-exp-vs-quasi-exp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -26226,17 +26246,17 @@ Y_i(d, g) \perp (D_i, G_i) \mid X_i, X_i^{\mathcal{N}}.
 <p><span class="math inline">\(N\)</span>명의 응답자로 구성된 유한 모집단과 이진(binary) 설문 문항을 고려해 보자. <span class="math inline">\(C_{it} \in \{0, 1\}\)</span> 를 시행 <span class="math inline">\(t \in \{1, 2\}\)</span> 에서 응답자 <span class="math inline">\(i\)</span>의 관측된 선택이라 하자. 여기서 두 시행은 일정 시간 간격과 중간 개입 문항들로 분리되어 있다. 개인 수준 설문 불안정성(individual-level survey instability)을 다음의 지시변수로 정의한다.</p>
 <p><span id="eq-individual-d"><span class="math display">\[
 D_i \;=\; \mathbb{1}\!\left( C_{i1} \neq C_{i2} \right),
-\tag{53.1}\]</span></span></p>
-<p>그리고 모집단 평균 불안정성(population mean instability)은 모집단 전체에 대한 식 <a href="#eq-individual-d" class="quarto-xref">Equation&nbsp;<span>53.1</span></a> 의 <span class="math inline">\(D_i\)</span>의 평균이다.</p>
+\tag{54.1}\]</span></span></p>
+<p>그리고 모집단 평균 불안정성(population mean instability)은 모집단 전체에 대한 식 <a href="#eq-individual-d" class="quarto-xref">Equation&nbsp;<span>54.1</span></a> 의 <span class="math inline">\(D_i\)</span>의 평균이다.</p>
 <p><span id="eq-population-d"><span class="math display">\[
 \Delta \;=\; \frac{1}{N} \sum_{i=1}^{N} D_i.
-\tag{53.2}\]</span></span></p>
-<p>식 <a href="#eq-population-d" class="quarto-xref">Equation&nbsp;<span>53.2</span></a> 에서 그 여집합인 <span class="math inline">\(1 - \Delta\)</span> 는 이진 문항에 대한 <em>응답자 내 신뢰도(intra-respondent reliability)</em>라고도 불리ㄴ다. 이는 평가자 간 신뢰도(동일 대상에 대한 <em>평가자 간</em> 일치도), 내적 일관성(크론바흐 <span class="math inline">\(\alpha\)</span>, 척도 내 <em>문항 간</em> 일치도; 제 <a href="#sec-classical-reliability" class="quarto-xref"><span>고전 신뢰도 이론과 그 한계</span></a> 절), 단일차원성(문항들이 단일 잠재 요인에 적재되는지 여부)과 개념적으로 명확히 다르다. 응답자 내 신뢰도는 응답자 내·문항 내 차원의 신뢰도 개념이다.</p>
+\tag{54.2}\]</span></span></p>
+<p>식 <a href="#eq-population-d" class="quarto-xref">Equation&nbsp;<span>54.2</span></a> 에서 그 여집합인 <span class="math inline">\(1 - \Delta\)</span> 는 이진 문항에 대한 <em>응답자 내 신뢰도(intra-respondent reliability)</em>라고도 불리ㄴ다. 이는 평가자 간 신뢰도(동일 대상에 대한 <em>평가자 간</em> 일치도), 내적 일관성(크론바흐 <span class="math inline">\(\alpha\)</span>, 척도 내 <em>문항 간</em> 일치도; 제 <a href="#sec-classical-reliability" class="quarto-xref"><span>고전 신뢰도 이론과 그 한계</span></a> 절), 단일차원성(문항들이 단일 잠재 요인에 적재되는지 여부)과 개념적으로 명확히 다르다. 응답자 내 신뢰도는 응답자 내·문항 내 차원의 신뢰도 개념이다.</p>
 <p>포함 지시변수 <span class="math inline">\(S_i \in \{0,1\}\)</span> 및 포함 확률 <span class="math inline">\(\pi_i^{\mathrm{(samp)}}\)</span> 을 갖는 표본설계 하에서 추출된 <span class="math inline">\(n &lt; N\)</span>명의 표본에 대해, <span class="math inline">\(\Delta\)</span>의 설계 기반 비편향 호비츠-톰슨(Horvitz–Thompson) 추정량은 다음과 같다.</p>
 <p><span id="eq-ht-d"><span class="math display">\[
 \widehat{\Delta} \;=\; \frac{1}{N}\sum_{i=1}^{N} \frac{S_i\, D_i}{\pi_i^{\mathrm{(samp)}}}.
-\tag{53.3}\]</span></span></p>
-<p>비복원 단순 무작위 추출 및 무시 가능한 무응답 하에서, 식 <a href="#eq-ht-d" class="quarto-xref">Equation&nbsp;<span>53.3</span></a> 는 표본평균 <span class="math inline">\(\bar D = n^{-1} \sum_{i:S_i=1} D_i\)</span> 로 단순화된다. 본 장의 나머지 부분에서는 <span class="math inline">\(\bar D\)</span>를 사용한다. 표본설계가 단순 무작위에서 벗어날 때 필요한 설계 기반 보정은 표본추출 장에서 다룬다.</p>
+\tag{54.3}\]</span></span></p>
+<p>비복원 단순 무작위 추출 및 무시 가능한 무응답 하에서, 식 <a href="#eq-ht-d" class="quarto-xref">Equation&nbsp;<span>54.3</span></a> 는 표본평균 <span class="math inline">\(\bar D = n^{-1} \sum_{i:S_i=1} D_i\)</span> 로 단순화된다. 본 장의 나머지 부분에서는 <span class="math inline">\(\bar D\)</span>를 사용한다. 표본설계가 단순 무작위에서 벗어날 때 필요한 설계 기반 보정은 표본추출 장에서 다룬다.</p>
 </section>
 <section id="식별-가정" class="level3">
 <h3 class="anchored" data-anchor-id="식별-가정">식별 가정</h3>
@@ -26275,8 +26295,8 @@ D_i \;=\; \mathbb{1}\!\left( C_{i1} \neq C_{i2} \right),
 <p>셋째, <span class="math inline">\(\bar D\)</span>는 결과변수의 한계 분포(marginal distribution)에 의존하지 않지만 상관계수는 의존한다. 고전적인 관계식은 다음과 같다.</p>
 <p><span id="eq-rtt-vs-d"><span class="math display">\[
 r_{tt} \;=\; 1 - \frac{\bar D}{2 p (1-p)},
-\tag{53.4}\]</span></span></p>
-<p>여기서 <span class="math inline">\(p = \Pr(C = 1)\)</span> 이다. 식 <a href="#eq-rtt-vs-d" class="quarto-xref">Equation&nbsp;<span>53.4</span></a> 는 한계 의존성을 명시적으로 보여준다. <span class="math inline">\(\bar D\)</span>를 고정할 때, <span class="math inline">\(p\)</span>가 <span class="math inline">\(\tfrac{1}{2}\)</span>에 가까워질수록 <span class="math inline">\(r_{tt}\)</span>는 0을 향해 줄어드ㄴ다. 이는 이분화된 데이터에 대한 폴리코릭 상관계수 및 피어슨 상관계수가 한계 분포에 의존한다는 고전적 사실의 이진 문항 버전이다. <span class="citation" data-cites="achen">@achen</span> 가 정치행동론에서의 표준적 논의를 제시했으며 광범위한 심리측정 문헌 <span class="citation" data-cites="alwin2007margins">[@alwin2007margins]</span>도 순서형 문항에 대해 동일한 패턴을 확인하고 있다.</p>
+\tag{54.4}\]</span></span></p>
+<p>여기서 <span class="math inline">\(p = \Pr(C = 1)\)</span> 이다. 식 <a href="#eq-rtt-vs-d" class="quarto-xref">Equation&nbsp;<span>54.4</span></a> 는 한계 의존성을 명시적으로 보여준다. <span class="math inline">\(\bar D\)</span>를 고정할 때, <span class="math inline">\(p\)</span>가 <span class="math inline">\(\tfrac{1}{2}\)</span>에 가까워질수록 <span class="math inline">\(r_{tt}\)</span>는 0을 향해 줄어드ㄴ다. 이는 이분화된 데이터에 대한 폴리코릭 상관계수 및 피어슨 상관계수가 한계 분포에 의존한다는 고전적 사실의 이진 문항 버전이다. <span class="citation" data-cites="achen">@achen</span> 가 정치행동론에서의 표준적 논의를 제시했으며 광범위한 심리측정 문헌 <span class="citation" data-cites="alwin2007margins">[@alwin2007margins]</span>도 순서형 문항에 대해 동일한 패턴을 확인하고 있다.</p>
 <p>표는 이러한 의존성을 구체적으로 보여준다. 동일한 <span class="math inline">\(\bar D = 0.20\)</span>에 대해, 내포된 <span class="math inline">\(r_{tt}\)</span>는 <span class="math inline">\(p = 0.5\)</span>일 때 0.60에서 <span class="math inline">\(p = 0.2\)</span>일 때 0.38까지 변한다. <span class="math inline">\(r_{tt}\)</span>만 보는 독자는 한계 분포에 따라 동일한 기저 응답 과정에 대해 전혀 다른 결론을 내리게 된다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="rtt-d-comparison" data-echo="FALSE"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="rtt-d-comparison-1"><a href="#rtt-d-comparison-1" aria-hidden="true" tabindex="-1"></a>rtt_table <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
 <span id="rtt-d-comparison-2"><a href="#rtt-d-comparison-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">D-bar</span><span class="st">`</span>   <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.10</span>, <span class="fl">0.10</span>, <span class="fl">0.10</span>, <span class="fl">0.20</span>, <span class="fl">0.20</span>, <span class="fl">0.20</span>, <span class="fl">0.30</span>, <span class="fl">0.30</span>, <span class="fl">0.30</span>),</span>
@@ -26298,8 +26318,8 @@ r_{tt} \;=\; 1 - \frac{\bar D}{2 p (1-p)},
 <p><span class="math inline">\(D_i \in \{0,1\}\)</span> 이며 단순 무작위 추출 하에서 응답자 간에 독립적으로 추출되므로, <span class="math inline">\(\bar D\)</span>는 모집단 분산 <span class="math inline">\(\Delta(1-\Delta)\)</span>를 갖는 독립적인 베르누이<span class="math inline">\((\Delta)\)</span> 확률변수들의 표본평균이다. 표준오차는 다음과 같다.</p>
 <p><span id="eq-se-d"><span class="math display">\[
 \mathrm{SE}(\bar D) \;=\; \sqrt{\frac{\Delta(1-\Delta)}{n}} \;\approx\; \sqrt{\frac{\bar D(1-\bar D)}{n}}.
-\tag{53.5}\]</span></span></p>
-<p>식 <a href="#eq-se-d" class="quarto-xref">Equation&nbsp;<span>53.5</span></a> 에 기초한 양측 <span class="math inline">\(1 - \alpha\)</span> 왈드(Wald) 신뢰구간은 <span class="math inline">\(\bar D \pm z_{1-\alpha/2}\mathrm{SE}(\bar D)\)</span> 이다. 소표본이거나 <span class="math inline">\(\bar D\)</span>가 0 또는 0.5에 가까운 경우 왈드 구간 대신 클로퍼-피어슨(Clopper–Pearson) 정확 신뢰구간이나 윌슨 스코어(Wilson score) 구간을 사용하는 것이 바람직한다. 제 <a href="#sec-survey-reliability-applied" class="quarto-xref"><span>R을 활용한 실무 워크플로</span></a> 절에서 두 방법을 모두 예시한다.</p>
+\tag{54.5}\]</span></span></p>
+<p>식 <a href="#eq-se-d" class="quarto-xref">Equation&nbsp;<span>54.5</span></a> 에 기초한 양측 <span class="math inline">\(1 - \alpha\)</span> 왈드(Wald) 신뢰구간은 <span class="math inline">\(\bar D \pm z_{1-\alpha/2}\mathrm{SE}(\bar D)\)</span> 이다. 소표본이거나 <span class="math inline">\(\bar D\)</span>가 0 또는 0.5에 가까운 경우 왈드 구간 대신 클로퍼-피어슨(Clopper–Pearson) 정확 신뢰구간이나 윌슨 스코어(Wilson score) 구간을 사용하는 것이 바람직한다. 제 <a href="#sec-survey-reliability-applied" class="quarto-xref"><span>R을 활용한 실무 워크플로</span></a> 절에서 두 방법을 모두 예시한다.</p>
 <p>비이진 문항의 경우 <span class="math inline">\(\bar D\)</span>의 자연스러운 일반화는 응답자 내 평균 절대 불일치(mean absolute discrepancy)이며 순서형 문항의 경우 반복 측정 간의 응답자 내 스피어만 순위 상관계수이다. 수학적 형식은 바뀌지만 <em>내재적 확률성을 식별하기 위해 동일 세션 내 반복 측정 종속변수를 사용한다</em>는 핵심 개념은 동일하다.</p>
 </section>
 </section>
@@ -26311,37 +26331,37 @@ r_{tt} \;=\; 1 - \frac{\bar D}{2 p (1-p)},
 <p>기초적인 참고 문헌은 <span class="citation" data-cites="lord">@lord</span> 이다. 관측 점수 <span class="math inline">\(X\)</span>는 진점수 <span class="math inline">\(T\)</span>와 오차항 <span class="math inline">\(E\)</span>로 분해된다.</p>
 <p><span id="eq-classical-decomp"><span class="math display">\[
 X \;=\; T + E,\qquad \mathrm{Var}(X) \;=\; \mathrm{Var}(T) + \mathrm{Var}(E),
-\tag{53.6}\]</span></span></p>
+\tag{54.6}\]</span></span></p>
 <p>여기서 정의상 <span class="math inline">\(\mathrm{Cov}(T, E) = 0\)</span> 이다. 측정의 신뢰도는 다음과 같다.</p>
 <p><span id="eq-reliability"><span class="math display">\[
 \rho \;=\; \frac{\mathrm{Var}(T)}{\mathrm{Var}(T) + \mathrm{Var}(E)} \;=\; 1 - \frac{\mathrm{Var}(E)}{\mathrm{Var}(X)},
-\tag{53.7}\]</span></span></p>
-<p>이는 $$ 사이의 값이다. 식 <a href="#eq-reliability" class="quarto-xref">Equation&nbsp;<span>53.7</span></a> 의 <span class="math inline">\(\rho\)</span>에 대한 표준 추정량은 데이터의 성격에 따라 달라진다.</p>
+\tag{54.7}\]</span></span></p>
+<p>이는 $$ 사이의 값이다. 식 <a href="#eq-reliability" class="quarto-xref">Equation&nbsp;<span>54.7</span></a> 의 <span class="math inline">\(\rho\)</span>에 대한 표준 추정량은 데이터의 성격에 따라 달라진다.</p>
 </section>
 <section id="다문항-척도를-위한-크론바흐-알파" class="level3">
 <h3 class="anchored" data-anchor-id="다문항-척도를-위한-크론바흐-알파">다문항 척도를 위한 크론바흐 알파</h3>
 <p>측정이 <span class="math inline">\(k\)</span>개 문항 척도로 구성될 때, 표준적인 내적 일관성 추정량은 <span class="citation" data-cites="cronbach1951coefficient">@cronbach1951coefficient</span> 의 <span class="math inline">\(\alpha\)</span>이다.</p>
 <p><span id="eq-alpha"><span class="math display">\[
 \alpha \;=\; \frac{k}{k - 1} \left( 1 - \frac{\sum_{j=1}^{k} \mathrm{Var}(X_j)}{\mathrm{Var}\!\left(\sum_{j=1}^{k} X_j\right)} \right),
-\tag{53.8}\]</span></span></p>
-<p>식 <a href="#eq-alpha" class="quarto-xref">Equation&nbsp;<span>53.8</span></a> 는 문항들이 <span class="math inline">\(\tau\)</span>-동등(tau-equivalent)하다는 가정 하에서 <span class="math inline">\(\rho\)</span>의 하한값이다. 크론바흐 <span class="math inline">\(\alpha\)</span>는 응답자 내·문항 내 노이즈에 대해 침묵하며 <em>문항 간</em> 일관성만을 요약한다. <span class="math inline">\(\alpha = 0.95\)</span>인 척도라도 개별 문항 각각에서는 여전히 <span class="math inline">\(\bar D = 0.25\)</span>를 나타낼 수 있다.</p>
+\tag{54.8}\]</span></span></p>
+<p>식 <a href="#eq-alpha" class="quarto-xref">Equation&nbsp;<span>54.8</span></a> 는 문항들이 <span class="math inline">\(\tau\)</span>-동등(tau-equivalent)하다는 가정 하에서 <span class="math inline">\(\rho\)</span>의 하한값이다. 크론바흐 <span class="math inline">\(\alpha\)</span>는 응답자 내·문항 내 노이즈에 대해 침묵하며 <em>문항 간</em> 일관성만을 요약한다. <span class="math inline">\(\alpha = 0.95\)</span>인 척도라도 개별 문항 각각에서는 여전히 <span class="math inline">\(\bar D = 0.25\)</span>를 나타낼 수 있다.</p>
 </section>
 <section id="alpha의-우수한-대안인-오메가-계수" class="level3">
 <h3 class="anchored" data-anchor-id="alpha의-우수한-대안인-오메가-계수"><span class="math inline">\(\alpha\)</span>의 우수한 대안인 오메가 계수</h3>
 <p>크론바흐 <span class="math inline">\(\alpha\)</span>가 학계의 기본 신뢰도 통계량으로 널리 쓰이고 있지만 심리측정학자들은 <span class="math inline">\(\tau\)</span>-동등성 가정이 무너질 때 <span class="math inline">\(\alpha\)</span>가 형편없는 하한값이자 진정한 신뢰도의 왜곡된 점추정치라고 수십 년간 지적해 왔다. 현대적인 대안은 척도의 요인분석적 표현에서 도출되는 <span class="citation" data-cites="mcdonald1999test">@mcdonald1999test</span> 의 오메가 계수(<span class="math inline">\(\omega\)</span>)이다. 요인 적재량 <span class="math inline">\(\lambda_j\)</span>와 문항 잔차 분산 <span class="math inline">\(\psi_j^2\)</span>를 갖는 단일 요인 척도에 대해, 총점수 신뢰도는 다음과 같다.</p>
 <p><span id="eq-omega"><span class="math display">\[
 \omega_t \;=\; \frac{(\sum_{j} \lambda_j)^2}{(\sum_{j} \lambda_j)^2 + \sum_{j} \psi_j^2}.
-\tag{53.9}\]</span></span></p>
-<p>동류 척도(congeneric scales)의 경우 식 <a href="#eq-omega" class="quarto-xref">Equation&nbsp;<span>53.9</span></a> 에서 <span class="math inline">\(\omega_t \ge \alpha\)</span> 가 성립하며 등호는 <span class="math inline">\(\tau\)</span>-동등성(동일한 적재량) 하에서만 성립한다. <span class="citation" data-cites="revelle2009coefficients">@revelle2009coefficients</span> 는 총점수 신뢰도로서 <span class="math inline">\(\omega_t\)</span>를, 일반 요인에 기인하는 분산 비율로서 <span class="math inline">\(\omega_h\)</span>를 사용하고 <span class="math inline">\(\alpha\)</span>는 폐기해야 한다고 주장한다. R의 <code>psych</code> 패키지는 세 가지를 모두 보고한다. 실무자에게는 학계의 보고 관행이 따라잡을 때까지 <span class="math inline">\(\alpha\)</span>와 함께 <span class="math inline">\(\omega_t\)</span>를 병기할 것을 권장한다.</p>
+\tag{54.9}\]</span></span></p>
+<p>동류 척도(congeneric scales)의 경우 식 <a href="#eq-omega" class="quarto-xref">Equation&nbsp;<span>54.9</span></a> 에서 <span class="math inline">\(\omega_t \ge \alpha\)</span> 가 성립하며 등호는 <span class="math inline">\(\tau\)</span>-동등성(동일한 적재량) 하에서만 성립한다. <span class="citation" data-cites="revelle2009coefficients">@revelle2009coefficients</span> 는 총점수 신뢰도로서 <span class="math inline">\(\omega_t\)</span>를, 일반 요인에 기인하는 분산 비율로서 <span class="math inline">\(\omega_h\)</span>를 사용하고 <span class="math inline">\(\alpha\)</span>는 폐기해야 한다고 주장한다. R의 <code>psych</code> 패키지는 세 가지를 모두 보고한다. 실무자에게는 학계의 보고 관행이 따라잡을 때까지 <span class="math inline">\(\alpha\)</span>와 함께 <span class="math inline">\(\omega_t\)</span>를 병기할 것을 권장한다.</p>
 </section>
 <section id="일반화가능도-이론" class="level3">
 <h3 class="anchored" data-anchor-id="일반화가능도-이론">일반화가능도 이론</h3>
-<p>고전 검사 이론은 분산을 단일 진점수 성분과 단일 오차 성분으로만 분할한다(식 <a href="#eq-classical-decomp" class="quarto-xref">Equation&nbsp;<span>53.6</span></a>). 일반화가능도 이론(G-이론) <span class="citation" data-cites="cronbach1972dependability">[@cronbach1972dependability]</span>은 이를 문항, 평가자, 측정 시점 및 분석가가 개별적으로 식별하고자 하는 기타 모든 분산 원인 등 다중의 식별된 국면(facets)으로 일반화한다. 이 프레임워크는 특정 의사결정 맥락(절대적 해석 대 상대적 해석)에 맞춘 <em>일반화가능도 계수</em> <span class="math inline">\(E\rho^2\)</span>를 산출하며 대안적 측정 설계(더 많은 문항, 평가자, 시점) 하에서 신뢰도가 어떻게 변할지 분석가가 예측할 수 있게 해준다.</p>
-<p>G-이론은 식 <a href="#eq-three-way-decomp" class="quarto-xref">Equation&nbsp;<span>53.11</span></a> 의 3원 분해를 수용하기에 가장 자연스러운 이론적 기반이다. 내재적 확률성은 G-이론이 일급 객체로 다루는 응답자-측정시점 간 상호작용 분산 성분이다. R의 <code>gtheory</code> 패키지가 표준 분산 성분 추정을 구현한다. 본 장에서 다루는 것 이상으로 분산 분해를 심화하고자 하는 분석가에게 적합한 틀로서 G-이론을 언급해 둔다.</p>
+<p>고전 검사 이론은 분산을 단일 진점수 성분과 단일 오차 성분으로만 분할한다(식 <a href="#eq-classical-decomp" class="quarto-xref">Equation&nbsp;<span>54.6</span></a>). 일반화가능도 이론(G-이론) <span class="citation" data-cites="cronbach1972dependability">[@cronbach1972dependability]</span>은 이를 문항, 평가자, 측정 시점 및 분석가가 개별적으로 식별하고자 하는 기타 모든 분산 원인 등 다중의 식별된 국면(facets)으로 일반화한다. 이 프레임워크는 특정 의사결정 맥락(절대적 해석 대 상대적 해석)에 맞춘 <em>일반화가능도 계수</em> <span class="math inline">\(E\rho^2\)</span>를 산출하며 대안적 측정 설계(더 많은 문항, 평가자, 시점) 하에서 신뢰도가 어떻게 변할지 분석가가 예측할 수 있게 해준다.</p>
+<p>G-이론은 식 <a href="#eq-three-way-decomp" class="quarto-xref">Equation&nbsp;<span>54.11</span></a> 의 3원 분해를 수용하기에 가장 자연스러운 이론적 기반이다. 내재적 확률성은 G-이론이 일급 객체로 다루는 응답자-측정시점 간 상호작용 분산 성분이다. R의 <code>gtheory</code> 패키지가 표준 분산 성분 추정을 구현한다. 본 장에서 다루는 것 이상으로 분산 분해를 심화하고자 하는 분석가에게 적합한 틀로서 G-이론을 언급해 둔다.</p>
 </section>
 <section id="검사-재검사-상관계수-및-하이즈-와일리-심플렉스" class="level3">
 <h3 class="anchored" data-anchor-id="검사-재검사-상관계수-및-하이즈-와일리-심플렉스">검사-재검사 상관계수 및 하이즈-와일리 심플렉스</h3>
-<p>종단적 설계에서 자연스러운 신뢰도 추정량은 식 <a href="#eq-rtt-vs-d" class="quarto-xref">Equation&nbsp;<span>53.4</span></a> 에 정의된 검사-재검사 상관계수 <span class="math inline">\(r_{tt}\)</span>이다. 고전적인 반론 <span class="citation" data-cites="heise1969separating wiley1970estimation">[@heise1969separating; @wiley1970estimation]</span>은 측정 시점 간의 간격이 0이 아닌 한, <span class="math inline">\(r_{tt}\)</span>가 <em>비신뢰성</em>(응답자 내부 측정 노이즈)과 <em>진정한 변화</em>(응답자 내부 태도 변화)를 혼동한다는 점이다.</p>
+<p>종단적 설계에서 자연스러운 신뢰도 추정량은 식 <a href="#eq-rtt-vs-d" class="quarto-xref">Equation&nbsp;<span>54.4</span></a> 에 정의된 검사-재검사 상관계수 <span class="math inline">\(r_{tt}\)</span>이다. 고전적인 반론 <span class="citation" data-cites="heise1969separating wiley1970estimation">[@heise1969separating; @wiley1970estimation]</span>은 측정 시점 간의 간격이 0이 아닌 한, <span class="math inline">\(r_{tt}\)</span>가 <em>비신뢰성</em>(응답자 내부 측정 노이즈)과 <em>진정한 변화</em>(응답자 내부 태도 변화)를 혼동한다는 점이다.</p>
 <p><span class="citation" data-cites="heise1969separating">@heise1969separating</span> 은 동일 문항을 세 번 측정하면 자기회귀 측정 모델의 적률 조건을 사용하여 신뢰도와 안정성을 분리할 수 있음을 보여주었다. 시점 <span class="math inline">\(t\)</span>에서의 관측 점수를 <span class="math inline">\(X_t\)</span>, 잠재 진점수를 <span class="math inline">\(T_t\)</span>라 하고 다음을 가정한다.</p>
 <p><span class="math display">\[
 \begin{align}
@@ -26352,7 +26372,7 @@ T_t &amp;= \beta_t T_{t-1} + U_t, &amp; U_t &amp;\sim \mathcal{N}(0, \sigma_U^2)
 <p>아래 제시된 하이즈 추정량의 식별을 위해서는 <span class="math inline">\(\mathrm{Var}(T_t)\)</span>가 시간에 따라 불변하여 신뢰도 <span class="math inline">\(\rho = \mathrm{Var}(T_t)/\mathrm{Var}(X_t)\)</span>가 웨이브 간에 일정하다는 정상성 가정(stationarity assumption)이 필요하다. <span class="citation" data-cites="wiley1970estimation">@wiley1970estimation</span> 은 추가 웨이브를 활용하여가 가정을 완화하고 시간에 따라 변하는 오차 분산을 허용하는 심플렉스의 최대우도 버전을 개발했다. 정상성 가정 하에서 3개 웨이브가 주어지면 세 가지 쌍별 상관계수 <span class="math inline">\(r_{12}, r_{23}, r_{13}\)</span>이 <span class="math inline">\((\rho, \beta_1, \beta_2)\)</span>를 과대식별하여 다음과 같은 하이즈 추정량을 도출한다.</p>
 <p><span id="eq-heise"><span class="math display">\[
 \hat\rho_2 \;=\; \frac{r_{12} \cdot r_{23}}{r_{13}},\qquad \hat\beta_1 \;=\; \frac{r_{13}}{r_{23}},\qquad \hat\beta_2 \;=\; \frac{r_{13}}{r_{12}}.
-\tag{53.10}\]</span></span></p>
+\tag{54.10}\]</span></span></p>
 <p>하이즈-와일리 심플렉스는 사회학 및 정치학에서 종단적 신뢰도 추정을 위한 고전적 도구로 남아 있다.</p>
 <blockquote class="blockquote">
 <p>심플렉스가 내재적 확률성에 대해 침묵하는 이유. 심플렉스는 <em>웨이브 간 독립적인 측정 오차를 가정</em>하는 웨이브 간 공분산으로부터 <span class="math inline">\(\rho\)</span>와 <span class="math inline">\(\beta_t\)</span>를 식별한다. 만약 잔차 노이즈의 일부가 각 측정 시점에서 응답자 수준의 분포로부터 새롭게 추출되는 내재적 확률성이라면, 심플렉스는 이를 <span class="math inline">\(\sigma_E^2\)</span>로 흡수하여 “측정 오차”로 명명한다. 이 분해는 수학적으로는 일관되지만 “더 나은 측정 도구를 통해 원칙적으로 제거할 수 있는 노이즈”라는 실질적 해석은 틀린 것이다.</p>
@@ -26366,15 +26386,15 @@ T_t &amp;= \beta_t T_{t-1} + U_t, &amp; U_t &amp;\sim \mathcal{N}(0, \sigma_U^2)
 </section>
 <section id="sec-three-way-decomp" class="level2">
 <h2 class="anchored" data-anchor-id="sec-three-way-decomp">3원 분산 분해</h2>
-<p>식 <a href="#eq-classical-decomp" class="quarto-xref">Equation&nbsp;<span>53.6</span></a> 의 고전적 분해는 신호(signal)가 아닌 모든 것을 단일 잔차로 뭉뚱그리ㄴ다. 우리는 이를 다음과 같이 대체해야 한다고 주장한다.</p>
+<p>식 <a href="#eq-classical-decomp" class="quarto-xref">Equation&nbsp;<span>54.6</span></a> 의 고전적 분해는 신호(signal)가 아닌 모든 것을 단일 잔차로 뭉뚱그리ㄴ다. 우리는 이를 다음과 같이 대체해야 한다고 주장한다.</p>
 <p><span id="eq-three-way-decomp"><span class="math display">\[
 \mathrm{Var}(X) \;=\; \underbrace{\mathrm{Var}(T)}_{\text{신호}} \;+\; \underbrace{\mathrm{Var}(M)}_{\text{측정 오차 (도구 측면)}} \;+\; \underbrace{\mathrm{Var}(S)}_{\text{내재적 확률성 (응답자 측면)}},
-\tag{53.11}\]</span></span></p>
-<p>식 <a href="#eq-three-way-decomp" class="quarto-xref">Equation&nbsp;<span>53.11</span></a> 에서 <span class="math inline">\(T, M, S\)</span>는 쌍별로 무상관이다. 세 번째 항은 측정 도구의 결함이 아니라 <em>응답자</em>의 응답 생성 과정에 속하는 노이즈를 포착한다. 새로운 신뢰도 비율은 다음과 같다.</p>
+\tag{54.11}\]</span></span></p>
+<p>식 <a href="#eq-three-way-decomp" class="quarto-xref">Equation&nbsp;<span>54.11</span></a> 에서 <span class="math inline">\(T, M, S\)</span>는 쌍별로 무상관이다. 세 번째 항은 측정 도구의 결함이 아니라 <em>응답자</em>의 응답 생성 과정에 속하는 노이즈를 포착한다. 새로운 신뢰도 비율은 다음과 같다.</p>
 <p><span id="eq-rho-star"><span class="math display">\[
 \rho^{\ast} \;=\; \frac{\mathrm{Var}(T)}{\mathrm{Var}(T) + \mathrm{Var}(M) + \mathrm{Var}(S)}.
-\tag{53.12}\]</span></span></p>
-<p>식 <a href="#eq-rho-star" class="quarto-xref">Equation&nbsp;<span>53.12</span></a> 에 정의된 <span class="math inline">\(\rho^{\ast}\)</span>는 일반적으로 <span class="math inline">\(\rho^{\ast} \le \rho\)</span>를 만족한다. 고전적인 <span class="math inline">\(\rho\)</span>는 <span class="math inline">\(\mathrm{Var}(M) + \mathrm{Var}(S)\)</span>를 단일 잔차로 혼동하지만 <span class="math inline">\(\rho^{\ast}\)</span>는 둘을 분리한다.</p>
+\tag{54.12}\]</span></span></p>
+<p>식 <a href="#eq-rho-star" class="quarto-xref">Equation&nbsp;<span>54.12</span></a> 에 정의된 <span class="math inline">\(\rho^{\ast}\)</span>는 일반적으로 <span class="math inline">\(\rho^{\ast} \le \rho\)</span>를 만족한다. 고전적인 <span class="math inline">\(\rho\)</span>는 <span class="math inline">\(\mathrm{Var}(M) + \mathrm{Var}(S)\)</span>를 단일 잔차로 혼동하지만 <span class="math inline">\(\rho^{\ast}\)</span>는 둘을 분리한다.</p>
 <p>이는 단순한 용어상의 구분이 아니며 직접적인 실증적 결과를 수반한다(표).</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="two-vs-three" data-echo="FALSE"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="two-vs-three-1"><a href="#two-vs-three-1" aria-hidden="true" tabindex="-1"></a>two_vs_three <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
 <span id="two-vs-three-2"><a href="#two-vs-three-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">질문 (Question)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"도구 개선이 잔차를 줄여주는가?"</span>,</span>
@@ -26436,32 +26456,32 @@ T_t &amp;= \beta_t T_{t-1} + U_t, &amp; U_t &amp;\sim \mathcal{N}(0, \sigma_U^2)
 <p><span class="math inline">\(\theta_i \in \{0, 1\}\)</span> 를 응답자 <span class="math inline">\(i\)</span>의 진정한 선호라 하고(제 <a href="#sec-classical-reliability" class="quarto-xref"><span>고전 신뢰도 이론과 그 한계</span></a> 절의 고전 신뢰도 비율 <span class="math inline">\(\rho\)</span>와의 혼동을 피하기 위해 <span class="math inline">\(\rho\)</span> 대신 <span class="math inline">\(\theta\)</span>를 사용함), $_i $ 를 <span class="math inline">\(\theta_i = 1\)</span>일 것이라는 그들의 신념이라 하자. (특이적 충격이 없는) 기대효용 하에서 응답자는 항상 옳을 확률이 더 높은 선택지를 선택한다.</p>
 <p><span id="eq-eu"><span class="math display">\[
 C_{it} \;=\; \mathbb{1}\!\left( \pi_i &gt; 0. \right).
-\tag{53.13}\]</span></span></p>
-<p>식 <a href="#eq-eu" class="quarto-xref">Equation&nbsp;<span>53.13</span></a> 하에서는 <span class="math inline">\(\pi_{i1} = \pi_{i2}\)</span>가 모든 응답자에 대해 <span class="math inline">\(C_{i1} = C_{i2}\)</span>를 함의하므로, 자신의 선호를 알고 있는 모든 응답자에 대해 <span class="math inline">\(D_i = 0\)</span>이 된다. 이 모형은 불안정성이 전혀 관측되지 않을 것으로 예측하지만 이는 합리적인 크기의 표본에서는 실증적으로 명백히 거짓이다.</p>
+\tag{54.13}\]</span></span></p>
+<p>식 <a href="#eq-eu" class="quarto-xref">Equation&nbsp;<span>54.13</span></a> 하에서는 <span class="math inline">\(\pi_{i1} = \pi_{i2}\)</span>가 모든 응답자에 대해 <span class="math inline">\(C_{i1} = C_{i2}\)</span>를 함의하므로, 자신의 선호를 알고 있는 모든 응답자에 대해 <span class="math inline">\(D_i = 0\)</span>이 된다. 이 모형은 불안정성이 전혀 관측되지 않을 것으로 예측하지만 이는 합리적인 크기의 표본에서는 실증적으로 명백히 거짓이다.</p>
 </section>
 <section id="확률효용-확률적-입력-결정론적-의사결정-규칙" class="level3">
 <h3 class="anchored" data-anchor-id="확률효용-확률적-입력-결정론적-의사결정-규칙">확률효용 (확률적 입력, 결정론적 의사결정 규칙)</h3>
 <p>이산선택 모델링의 기초가 되는 경제학적 해결책은 결정 직전에 평균이 0인 충격을 추가하는 것이다.</p>
 <p><span id="eq-rum"><span class="math display">\[
 C_{it} \;=\; \mathbb{1}\!\left( \pi_i + \eta_{it} &gt; 0. \right),\qquad \eta_{it} \perp \!\!\! \perp \eta_{is}\ \text{for}\ t \neq s,
-\tag{53.14}\]</span></span></p>
-<p>여기서 <span class="math inline">\(\eta_{it}\)</span>는 각 시행마다 새롭게 추출된다. 이것이 <span class="citation" data-cites="hainmueller2014causal">@hainmueller2014causal</span> AMCE 추정량을 포함한 모든 로짓(logit) 및 프로빗(probit) 이산선택 모형의 기초이다. 식 <a href="../marketing-research/index.html#eq-rum" class="quarto-xref">Equation&nbsp;<span>114.1</span></a> 하에서 불안정성은 양수이지만 <span class="math inline">\(|\pi_i - 0.5|\)</span>가 커지거나 <span class="math inline">\(\mathrm{Var}(\eta_{it})\)</span>가 0으로 줄어들면 사라진다. 응답자당 불안정성은 다음과 같다.</p>
+\tag{54.14}\]</span></span></p>
+<p>여기서 <span class="math inline">\(\eta_{it}\)</span>는 각 시행마다 새롭게 추출된다. 이것이 <span class="citation" data-cites="hainmueller2014causal">@hainmueller2014causal</span> AMCE 추정량을 포함한 모든 로짓(logit) 및 프로빗(probit) 이산선택 모형의 기초이다. 식 <a href="../marketing-research/index.html#eq-rum" class="quarto-xref">Equation&nbsp;<span>115.1</span></a> 하에서 불안정성은 양수이지만 <span class="math inline">\(|\pi_i - 0.5|\)</span>가 커지거나 <span class="math inline">\(\mathrm{Var}(\eta_{it})\)</span>가 0으로 줄어들면 사라진다. 응답자당 불안정성은 다음과 같다.</p>
 <p><span id="eq-rum-instab"><span class="math display">\[
 \Delta_i^{\mathrm{RUM}} \;=\; 2\, p_i (1 - p_i),\qquad p_i \;=\; \Pr(\pi_i + \eta_{it} &gt; 0.5),
-\tag{53.15}\]</span></span></p>
-<p>식 <a href="#eq-rum-instab" class="quarto-xref">Equation&nbsp;<span>53.15</span></a> 는 임의의 단봉 대칭 충격에 대해 <span class="math inline">\(|\pi_i - 0.5|\)</span>의 엄격한 감소함수이다. RUM은 일탈이 평균이 0인 충격으로 유입되는 한 <span class="citation" data-cites="kahneman1979prospect">@kahneman1979prospect</span> 의 전망이론적 기대효용 일탈과 일관성을 갖지만 본질적으로 확률적인 선택과는 일치하지 않는다.</p>
+\tag{54.15}\]</span></span></p>
+<p>식 <a href="#eq-rum-instab" class="quarto-xref">Equation&nbsp;<span>54.15</span></a> 는 임의의 단봉 대칭 충격에 대해 <span class="math inline">\(|\pi_i - 0.5|\)</span>의 엄격한 감소함수이다. RUM은 일탈이 평균이 0인 충격으로 유입되는 한 <span class="citation" data-cites="kahneman1979prospect">@kahneman1979prospect</span> 의 전망이론적 기대효용 일탈과 일관성을 갖지만 본질적으로 확률적인 선택과는 일치하지 않는다.</p>
 </section>
 <section id="확률-일치-환원-불가능한-확률성" class="level3">
 <h3 class="anchored" data-anchor-id="확률-일치-환원-불가능한-확률성">확률 일치 (환원 불가능한 확률성)</h3>
 <p>심리학적 대안은 신념이 완벽하게 알려져 있을 때조차 선택 자체를 확률적인 것으로 취급한다.</p>
 <p><span id="eq-pm"><span class="math display">\[
 C_{it} \;\sim\; \mathrm{Bernoulli}(\pi_i),\qquad C_{i1} \perp \!\!\! \perp C_{i2}\mid \pi_i.
-\tag{53.16}\]</span></span></p>
-<p>식 <a href="#eq-pm" class="quarto-xref">Equation&nbsp;<span>53.16</span></a> 하에서는 <span class="math inline">\(\pi_i\)</span>에 대해 완벽한 정보를 가진 응답자라 하더라도 반드시 더 높은 확률의 선택지를 선택하는 것은 <em>아니다</em>. 기대되는 응답자당 불안정성은 다음과 같다.</p>
+\tag{54.16}\]</span></span></p>
+<p>식 <a href="#eq-pm" class="quarto-xref">Equation&nbsp;<span>54.16</span></a> 하에서는 <span class="math inline">\(\pi_i\)</span>에 대해 완벽한 정보를 가진 응답자라 하더라도 반드시 더 높은 확률의 선택지를 선택하는 것은 <em>아니다</em>. 기대되는 응답자당 불안정성은 다음과 같다.</p>
 <p><span id="eq-pm-instability"><span class="math display">\[
 \Delta_i^{\mathrm{PM}} \;=\; 2\, \pi_i (1 - \pi_i),
-\tag{53.17}\]</span></span></p>
-<p>식 <a href="#eq-pm-instability" class="quarto-xref">Equation&nbsp;<span>53.17</span></a> 는 <span class="math inline">\(\pi_i \in (0, 1)\)</span>일 때 항상 엄격한 양수이며 <span class="math inline">\(\pi_i = 0.5\)</span>에서 최댓값 <span class="math inline">\(0.5\)</span>에 도달한다. 확률 일치(Probability matching)는 인간, 영장류, 어류, 비둘기, 꿀벌에서 모두 관찰되었으며 이를 없애기 위한 반세기의 설계 노력에도 불구하고 실험 의사결정 과학에서 가장 일관되게 재현되는 발견 중 하나로 남아 있다 <span class="citation" data-cites="vulkan lo2021">[@vulkan; @lo2021]</span>. 이 현상은 단순한 기이함이 아니다. 인센티브가 부여된 금융 의사결정 실험에서도 통계 교육을 받은 피험자들조차 극대화하기보다는 체계적으로 무작위화를 선택하며 <span class="citation" data-cites="lo2021">[@lo2021]</span>, 확률 일치를 <em>예측</em>하는 강화학습 모형은 실험적 게임 플레이 데이터에 자연스럽게 적합하다 <span class="citation" data-cites="erev1998predicting">[@erev1998predicting]</span>.</p>
+\tag{54.17}\]</span></span></p>
+<p>식 <a href="#eq-pm-instability" class="quarto-xref">Equation&nbsp;<span>54.17</span></a> 는 <span class="math inline">\(\pi_i \in (0, 1)\)</span>일 때 항상 엄격한 양수이며 <span class="math inline">\(\pi_i = 0.5\)</span>에서 최댓값 <span class="math inline">\(0.5\)</span>에 도달한다. 확률 일치(Probability matching)는 인간, 영장류, 어류, 비둘기, 꿀벌에서 모두 관찰되었으며 이를 없애기 위한 반세기의 설계 노력에도 불구하고 실험 의사결정 과학에서 가장 일관되게 재현되는 발견 중 하나로 남아 있다 <span class="citation" data-cites="vulkan lo2021">[@vulkan; @lo2021]</span>. 이 현상은 단순한 기이함이 아니다. 인센티브가 부여된 금융 의사결정 실험에서도 통계 교육을 받은 피험자들조차 극대화하기보다는 체계적으로 무작위화를 선택하며 <span class="citation" data-cites="lo2021">[@lo2021]</span>, 확률 일치를 <em>예측</em>하는 강화학습 모형은 실험적 게임 플레이 데이터에 자연스럽게 적합하다 <span class="citation" data-cites="erev1998predicting">[@erev1998predicting]</span>.</p>
 </section>
 <section id="응용-분석가에게-이것이-중요한-이유" class="level3">
 <h3 class="anchored" data-anchor-id="응용-분석가에게-이것이-중요한-이유">응용 분석가에게 이것이 중요한 이유</h3>
@@ -26677,7 +26697,7 @@ C_{it} \;\sim\; \mathrm{Bernoulli}(\pi_i),\qquad C_{i1} \perp \!\!\! \perp C_{i2
 <p>내재적 확률성은 추정치의 분산을 팽창시키며 유효 표본 크기를 감소시키ㄴ다. 이진 결과변수의 경우, 노이즈가 없는 완벽한 응답 하에서의 유효 표본 크기 <span class="math inline">\(n_{\text{eff}}\)</span>는 다음과 같이 근사할 수 있다.</p>
 <p><span id="eq-neff"><span class="math display">\[
 n_{\text{eff}} \;\approx\; n \,(1 - 2\bar D)^2.
-\tag{53.18}\]</span></span></p>
+\tag{54.18}\]</span></span></p>
 <p>예를 들어 <span class="math inline">\(\bar D = 0.20\)</span>인 경우, <span class="math inline">\(n = 1000\)</span>명의 표본은 통계적 정밀도 측면에서 노이즈가 없는 데이터의 약 <span class="math inline">\(1000 \times (1 - 0.40)^2 = 360\)</span>명에 불과한 정보를 제공한다. 표본 크기 계획 시 이를 반드시 고려해야 한다.</p>
 </section>
 <section id="컨조인트-및-이산선택-분석" class="level3">
@@ -26694,21 +26714,21 @@ n_{\text{eff}} \;\approx\; n \,(1 - 2\bar D)^2.
 </section>
 <section id="sec-attenuation-correction" class="level3">
 <h3 class="anchored" data-anchor-id="sec-attenuation-correction">이진 회귀분석을 위한 닫힌 형태의 감쇄 보정</h3>
-<p>이진 설문 결과변수를 공변량에 회귀시키는 광범위한 분석의 경우, 가장 단순하면서도 방어 가능한 보정은 응답자 내부 노이즈를 대칭적 오분류(symmetric misclassification)로 처리하는 것이다. 회귀분석의 관측된 이진 결과변수를 <span class="math inline">\(Y_i\)</span>라 하자(제 <a href="#sec-defining-instability" class="quarto-xref"><span>설문 응답 불안정성의 정의</span></a> 절의 세션 내 반복 측정 표기법에서 첫 번째 시행인 <span class="math inline">\(Y_i = C_{i1}\)</span>과 동일함). <em>진정한</em> 이진 결과변수가 <span class="math inline">\(Y^\ast\)</span>이고 관측된 <span class="math inline">\(Y\)</span>가 확률 <span class="math inline">\(1 - q\)</span>로 <span class="math inline">\(Y^\ast\)</span>와 같고 확률 <span class="math inline">\(q\)</span>로 <span class="math inline">\(1 - Y^\ast\)</span>와 같으며 <span class="math inline">\(q\)</span>는 시행당 반전 확률이고 노이즈는 공변량과 독립이라고 가정해 보자. <span class="math inline">\(Y\)</span>를 <span class="math inline">\(X\)</span>에 회귀시키는 <em>선형 확률 모형(LPM)</em>의 경우, 고전적인 Aigner (1973) 및 <span class="citation" data-cites="bound2001measurement">@bound2001measurement</span> 결과는 감쇄 인자 <span class="math inline">\(1 - 2q\)</span>를 제공한다(따라서 식 <a href="#eq-beta-corr" class="quarto-xref">Equation&nbsp;<span>53.21</span></a> 의 보정은 선형 회귀에 대해 정확하다). <span class="math inline">\(Y\)</span>를 <span class="math inline">\(X\)</span>에 회귀시키는 <em>로지스틱 회귀</em>의 경우 감쇄는 <span class="math inline">\(1 - 2q\)</span>로 단순 곱셈되지 않으며 해당 보정은 <span class="citation" data-cites="clayton">@clayton</span> 의 구조적 컨조인트 추정량이나 다음에 설명할 SIMEX 절차를 필요로 한다. 제 <a href="#sec-survey-reliability-applied" class="quarto-xref"><span>R을 활용한 실무 워크플로</span></a> 절의 6단계에서는 선형 확률 적합에는 정확하고 로지스틱 적합에는 근사적인 1차 조정으로 닫힌 형태의 보정을 적용하며 7단계에서는 보다 강건한 대안으로 SIMEX를 적용한다.</p>
+<p>이진 설문 결과변수를 공변량에 회귀시키는 광범위한 분석의 경우, 가장 단순하면서도 방어 가능한 보정은 응답자 내부 노이즈를 대칭적 오분류(symmetric misclassification)로 처리하는 것이다. 회귀분석의 관측된 이진 결과변수를 <span class="math inline">\(Y_i\)</span>라 하자(제 <a href="#sec-defining-instability" class="quarto-xref"><span>설문 응답 불안정성의 정의</span></a> 절의 세션 내 반복 측정 표기법에서 첫 번째 시행인 <span class="math inline">\(Y_i = C_{i1}\)</span>과 동일함). <em>진정한</em> 이진 결과변수가 <span class="math inline">\(Y^\ast\)</span>이고 관측된 <span class="math inline">\(Y\)</span>가 확률 <span class="math inline">\(1 - q\)</span>로 <span class="math inline">\(Y^\ast\)</span>와 같고 확률 <span class="math inline">\(q\)</span>로 <span class="math inline">\(1 - Y^\ast\)</span>와 같으며 <span class="math inline">\(q\)</span>는 시행당 반전 확률이고 노이즈는 공변량과 독립이라고 가정해 보자. <span class="math inline">\(Y\)</span>를 <span class="math inline">\(X\)</span>에 회귀시키는 <em>선형 확률 모형(LPM)</em>의 경우, 고전적인 Aigner (1973) 및 <span class="citation" data-cites="bound2001measurement">@bound2001measurement</span> 결과는 감쇄 인자 <span class="math inline">\(1 - 2q\)</span>를 제공한다(따라서 식 <a href="#eq-beta-corr" class="quarto-xref">Equation&nbsp;<span>54.21</span></a> 의 보정은 선형 회귀에 대해 정확하다). <span class="math inline">\(Y\)</span>를 <span class="math inline">\(X\)</span>에 회귀시키는 <em>로지스틱 회귀</em>의 경우 감쇄는 <span class="math inline">\(1 - 2q\)</span>로 단순 곱셈되지 않으며 해당 보정은 <span class="citation" data-cites="clayton">@clayton</span> 의 구조적 컨조인트 추정량이나 다음에 설명할 SIMEX 절차를 필요로 한다. 제 <a href="#sec-survey-reliability-applied" class="quarto-xref"><span>R을 활용한 실무 워크플로</span></a> 절의 6단계에서는 선형 확률 적합에는 정확하고 로지스틱 적합에는 근사적인 1차 조정으로 닫힌 형태의 보정을 적용하며 7단계에서는 보다 강건한 대안으로 SIMEX를 적용한다.</p>
 <p><span id="eq-attn-corr"><span class="math display">\[
 \widehat\beta_{\text{naive}}^{\,\text{LPM}} \;=\; (1 - 2q)\,\beta_{\text{true}}
 \quad\Longleftrightarrow\quad
 \widehat\beta_{\text{corrected}}^{\,\text{LPM}} \;=\; \frac{\widehat\beta_{\text{naive}}^{\,\text{LPM}}}{1 - 2q}.
-\tag{53.19}\]</span></span></p>
+\tag{54.19}\]</span></span></p>
 <p>설문 내 반복 측정은 <span class="math inline">\(q\)</span>를 식별한다. 독립적인 노이즈 하에서 <span class="math inline">\(\bar D = 2q(1-q)\)</span> 이므로 다음이 성립한다.</p>
 <p><span id="eq-q-from-d"><span class="math display">\[
 \widehat q \;=\; \frac{1 - \sqrt{1 - 2 \bar D}}{2}, \qquad 1 - 2\widehat q \;=\; \sqrt{1 - 2\bar D}.
-\tag{53.20}\]</span></span></p>
-<p>식 <a href="#eq-attn-corr" class="quarto-xref">Equation&nbsp;<span>53.19</span></a> 와 <a href="#eq-q-from-d" class="quarto-xref">Equation&nbsp;<span>53.20</span></a> 를 결합하면 실용적인 추정량이 도출된다.</p>
+\tag{54.20}\]</span></span></p>
+<p>식 <a href="#eq-attn-corr" class="quarto-xref">Equation&nbsp;<span>54.19</span></a> 와 <a href="#eq-q-from-d" class="quarto-xref">Equation&nbsp;<span>54.20</span></a> 를 결합하면 실용적인 추정량이 도출된다.</p>
 <p><span id="eq-beta-corr"><span class="math display">\[
 \widehat\beta_{\text{corrected}} \;=\; \frac{\widehat\beta_{\text{naive}}}{\sqrt{1 - 2\bar D}}.
-\tag{53.21}\]</span></span></p>
-<p>표준오차 보정은 델타 방법(delta method)에 의해 따르거나, 보다 간단하게는 회귀분석과 <span class="math inline">\(\bar D\)</span> 추정에 대해 결합 쌍별 부트스트랩(paired-bootstrap) 재표집을 수행하여 도출할 수 있다(제 <a href="#sec-survey-reliability-applied" class="quarto-xref"><span>R을 활용한 실무 워크플로</span></a> 절, 6단계). 식 <a href="#eq-beta-corr" class="quarto-xref">Equation&nbsp;<span>53.21</span></a> 는 기저 노이즈가 대칭적 오분류가 아닌 확률 일치일 때 근사적이다. 우리는 이를 유용한 1차 조정으로 취급하며 구조적 컨조인트 보정에 대해는 <span class="citation" data-cites="clayton">@clayton</span> 를 참조한다.</p>
+\tag{54.21}\]</span></span></p>
+<p>표준오차 보정은 델타 방법(delta method)에 의해 따르거나, 보다 간단하게는 회귀분석과 <span class="math inline">\(\bar D\)</span> 추정에 대해 결합 쌍별 부트스트랩(paired-bootstrap) 재표집을 수행하여 도출할 수 있다(제 <a href="#sec-survey-reliability-applied" class="quarto-xref"><span>R을 활용한 실무 워크플로</span></a> 절, 6단계). 식 <a href="#eq-beta-corr" class="quarto-xref">Equation&nbsp;<span>54.21</span></a> 는 기저 노이즈가 대칭적 오분류가 아닌 확률 일치일 때 근사적이다. 우리는 이를 유용한 1차 조정으로 취급하며 구조적 컨조인트 보정에 대해는 <span class="citation" data-cites="clayton">@clayton</span> 를 참조한다.</p>
 </section>
 <section id="simex-대안" class="level3">
 <h3 class="anchored" data-anchor-id="simex-대안">SIMEX 대안</h3>
@@ -26732,7 +26752,7 @@ n_{\text{eff}} \;\approx\; n \,(1 - 2\bar D)^2.
 <li>선행 몰두(Preoccupation) 응답의 분포.</li>
 <li>사전 연습 TOT의 분포(중앙값, IQR, 보정된 기준선 미만 백분율).</li>
 <li>플래그된 하위 집합과 플래그되지 않은 하위 집합에 대해 별도로 계산된 조건부 평균 및 유의미한 차이 여부에 대한 간략한 기술.</li>
-<li>이진 결과변수에 대한 회귀분석 보고 시 나이브 계수와 함께 식 <a href="#eq-beta-corr" class="quarto-xref">Equation&nbsp;<span>53.21</span></a> 의 보정된 계수 병기.</li>
+<li>이진 결과변수에 대한 회귀분석 보고 시 나이브 계수와 함께 식 <a href="#eq-beta-corr" class="quarto-xref">Equation&nbsp;<span>54.21</span></a> 의 보정된 계수 병기.</li>
 </ul>
 <p>이러한 항목들을 추가하는 데는 공간이 거의 들지 않지만 보고된 추정치가 실제로 무엇을 나타내는지 독자가 평가하는 능력을 크게 향상시키ㄴ다.</p>
 </section>
@@ -27093,7 +27113,7 @@ n_{\text{eff}} \;\approx\; n \,(1 - 2\bar D)^2.
 <p>잠재 특질을 <span class="math inline">\(Y_i^\ast\)</span>라 하자. 범주 <span class="math inline">\(k \in \{1, \dots, K\}\)</span>를 가진 순서형 척도에서 관측된 자기평가 <span class="math inline">\(y_i\)</span>는 다음과 같이 생성된다.</p>
 <p><span id="eq-cutpoints"><span class="math display">\[
 y_i \;=\; k \quad \Longleftrightarrow \quad \tau_i^{(k-1)} \;\le\; Y_i^\ast \;&lt;\; \tau_i^{(k)},
-\tag{53.22}\]</span></span></p>
+\tag{54.22}\]</span></span></p>
 <p>여기서 <span class="math inline">\(\tau_i^{(0)} = -\infty\)</span>, <span class="math inline">\(\tau_i^{(K)} = +\infty\)</span> 이며 절단점 <span class="math inline">\(\boldsymbol{\tau}_i = (\tau_i^{(1)}, \dots, \tau_i^{(K-1)})\)</span> 은 응답자마다 다르다. 이를 차등 문항 기능(differential item functioning, DIF)이라 부른다. <span class="math inline">\(\boldsymbol{\tau}_i\)</span>가 응답자 특성(예: 국가, 교육 수준)에 따라 변하면 관측된 순서형 점수 <span class="math inline">\(y_i\)</span>의 단순 비교는 편향된다.</p>
 </section>
 <section id="비네트를-통한-식별" class="level3">
@@ -27101,7 +27121,7 @@ y_i \;=\; k \quad \Longleftrightarrow \quad \tau_i^{(k-1)} \;\le\; Y_i^\ast \;&l
 <p><span class="math inline">\(J\)</span>개의 비네트가 제공된다고 하자. 각 비네트 <span class="math inline">\(j\)</span>는 고정된 객관적 특질 수준 <span class="math inline">\(\theta_j\)</span>를 가진 가상 인물을 묘사한다. 응답자 <span class="math inline">\(i\)</span>의 비네트 <span class="math inline">\(j\)</span>에 대한 관측된 평정 <span class="math inline">\(z_{ij}\)</span>는 자기평가와 동일한 절단점 <span class="math inline">\(\boldsymbol{\tau}_i\)</span>를 따른다.</p>
 <p><span id="eq-vignette-rating"><span class="math display">\[
 z_{ij} \;=\; k \quad \Longleftrightarrow \quad \tau_i^{(k-1)} \;\le\; \theta_j + \epsilon_{ij} \;&lt;\; \tau_i^{(k)}.
-\tag{53.23}\]</span></span></p>
+\tag{54.23}\]</span></span></p>
 <p>두 가지 핵심 가정이 식별을 가능하게 한다.</p>
 <ol type="1">
 <li>응답 일관성(Response consistency). 응답자 <span class="math inline">\(i\)</span>는 가상 인물(비네트)을 평가할 때와 자신을 평가할 때 동일한 절단점 <span class="math inline">\(\boldsymbol{\tau}_i\)</span>를 사용한다.</li>
@@ -27118,7 +27138,7 @@ z_{ij} \;=\; k \quad \Longleftrightarrow \quad \tau_i^{(k-1)} \;\le\; \theta_j +
 <p><span class="citation" data-cites="warner1965randomized">@warner1965randomized</span> 의 고전적 기법은 동전 던지기와 같은 무작위화 장치를 사용하여 응답자의 답변을 보호한다. 예를 들어 응답자는 동전을 던져 앞면이 나오면 진실을 답하고 뒷면이 나오면 “예”라고 답한다. 조사자는 개별 응답자가 진실을 말했는지 알 수 없지만 전체 표본에서 민감한 행동의 참 비율 <span class="math inline">\(\pi\)</span>를 비편향적으로 복원할 수 있다.</p>
 <p><span id="eq-rrt"><span class="math display">\[
 \widehat\pi \;=\; \frac{\widehat P - (1 - p_{\text{truth}})}{p_{\text{truth}}},
-\tag{53.24}\]</span></span></p>
+\tag{54.24}\]</span></span></p>
 <p>여기서 <span class="math inline">\(\widehat P\)</span>는 관측된 “예” 비율이며 <span class="math inline">\(p_{\text{truth}}\)</span>는 진실을 응답하도록 배정된 확률이다.</p>
 </section>
 <section id="목록-실험-문항-계수-기법" class="level3">
@@ -27183,12 +27203,12 @@ z_{ij} \;=\; k \quad \Longleftrightarrow \quad \tau_i^{(k-1)} \;\le\; \theta_j +
 <p>1단계: 다수준 모형 적합. 인구통계학적 범주 <span class="math inline">\(j\)</span>와 지리적 단위 <span class="math inline">\(s\)</span>의 교차 셀 <span class="math inline">\(c = (j, s)\)</span>에 속한 개인 <span class="math inline">\(i\)</span>의 응답 <span class="math inline">\(Y_i\)</span>에 대해 다수준 로짓 모형을 적합하다.</p>
 <p><span id="eq-mrp-stage1"><span class="math display">\[
 \Pr(Y_i = 1) \;=\; \text{logit}^{-1}\left( \alpha + \mathbf{X}_j \boldsymbol{\beta} + \alpha_{s[i]}^{\text{state}} + \alpha_{j[i]}^{\text{demo}} \right),
-\tag{53.25}\]</span></span></p>
+\tag{54.25}\]</span></span></p>
 <p>여기서 주 수준 효과 <span class="math inline">\(\alpha_s^{\text{state}} \sim \mathcal{N}(0, \sigma_{\text{state}}^2)\)</span> 및 인구통계 효과들은 부분 풀링(partial pooling)을 통해 정규화되어 데이터가 희소한 셀에서도 과적합 없이 안정적인 추정치를 도출한다.</p>
 <p>2단계: 인구총조사 기반 사후계층화. 센서스(Census) 데이터로부터 각 셀 <span class="math inline">\(c\)</span>의 실제 모집단 수 <span class="math inline">\(N_c\)</span>를 가져와 각 지리적 단위 <span class="math inline">\(s\)</span>에 대한 모집단 지지도를 가중 평균으로 계산한다.</p>
 <p><span id="eq-mrp-stage2"><span class="math display">\[
 \widehat\theta_s \;=\; \frac{\sum_{c \in s} N_c \, \widehat\pi_c}{\sum_{c \in s} N_c}.
-\tag{53.26}\]</span></span></p>
+\tag{54.26}\]</span></span></p>
 <p>그림은 2단계 MRP 파이프라인을 보여준다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="fig-mrp-pipeline" data-fig.cap="2단계 다수준 회귀 및 사후계층화(MRP) 파이프라인. 표본 데이터의 다수준 모델링과 센서스 사후계층화를 결합합니다." data-fig.width="7" data-fig.height="3.5" data-echo="FALSE" data-dev="png"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="fig-mrp-pipeline-1"><a href="#fig-mrp-pipeline-1" aria-hidden="true" tabindex="-1"></a>DiagrammeR<span class="sc">::</span><span class="fu">grViz</span>(<span class="st">"</span></span>
 <span id="fig-mrp-pipeline-2"><a href="#fig-mrp-pipeline-2" aria-hidden="true" tabindex="-1"></a><span class="st">digraph mrp {</span></span>
@@ -27327,22 +27347,22 @@ z_{ij} \;=\; k \quad \Longleftrightarrow \quad \tau_i^{(k-1)} \;\le\; \theta_j +
 <ol type="1">
 <li><p><em>개념적 이해.</em> 설문 도구 측면의 측정 오차 감소(더 명확한 문구 표현, 정밀한 응답 척도)가 일반적으로 <span class="math inline">\(\bar D\)</span>를 감소시키지 못하는 이유를 본인의 언어로 설명하시오. 어떠한 상황에서 문구 수정이 <span class="math inline">\(\bar D\)</span>를 감소시킬 수 있는가?</p></li>
 <li><p><em>수학적 유도.</em> 신념 <span class="math inline">\(\pi_i\)</span>를 가진 확률 일치(probability matching) 하에서 <span class="math inline">\(\Delta_i = 2\pi_i(1 - \pi_i)\)</span>임을 증명하시오. 어떤 <span class="math inline">\(\pi_i\)</span> 값에서 <span class="math inline">\(\Delta_i\)</span>가 극대화되는가? 내포된 최댓값은 얼마인가?</p></li>
-<li><p><em>수학적 유도.</em> 식 <a href="#eq-rtt-vs-d" class="quarto-xref">Equation&nbsp;<span>53.4</span></a> 를 증명하시오. 그런 다음 표 의 수치들을 다시 도출하고 검사-재검사 상관계수만을 보고하는 연구들에 대해 이것이 시사하는 바를 논하시오.</p></li>
-<li><p><em>하이즈 심플렉스.</em> 식 <a href="#eq-heise" class="quarto-xref">Equation&nbsp;<span>53.10</span></a> 를 사용하여 <span class="math inline">\(r_{12} = 0.7\)</span>, <span class="math inline">\(r_{23} = 0.7\)</span>, <span class="math inline">\(r_{13} = 0.5\)</span>일 때 <span class="math inline">\(\hat\rho_2\)</span>를 계산하시오. 결과를 해석하고 이것이 <span class="math inline">\(\rho^{\ast}\)</span>와 <span class="math inline">\(\rho\)</span> 간의 비교에 대해 무엇을 시사하는지 설명하시오.</p></li>
+<li><p><em>수학적 유도.</em> 식 <a href="#eq-rtt-vs-d" class="quarto-xref">Equation&nbsp;<span>54.4</span></a> 를 증명하시오. 그런 다음 표 의 수치들을 다시 도출하고 검사-재검사 상관계수만을 보고하는 연구들에 대해 이것이 시사하는 바를 논하시오.</p></li>
+<li><p><em>하이즈 심플렉스.</em> 식 <a href="#eq-heise" class="quarto-xref">Equation&nbsp;<span>54.10</span></a> 를 사용하여 <span class="math inline">\(r_{12} = 0.7\)</span>, <span class="math inline">\(r_{23} = 0.7\)</span>, <span class="math inline">\(r_{13} = 0.5\)</span>일 때 <span class="math inline">\(\hat\rho_2\)</span>를 계산하시오. 결과를 해석하고 이것이 <span class="math inline">\(\rho^{\ast}\)</span>와 <span class="math inline">\(\rho\)</span> 간의 비교에 대해 무엇을 시사하는지 설명하시오.</p></li>
 <li><p><em>시뮬레이션.</em> 제 <a href="#sec-survey-reliability-applied" class="quarto-xref"><span>R을 활용한 실무 워크플로</span></a> 절의 시뮬레이션을 수정하여 <span class="math inline">\(\pi_i\)</span>가 공변량 <span class="math inline">\(x_i\)</span>에 의존하도록 설정하시오. <span class="math inline">\(x_i\)</span>의 수준별로 <span class="math inline">\(\bar D\)</span>를 별도로 추정하고 그 변동이 모집단에 대해 무엇을 말해주는지 논하시오.</p></li>
 <li><p><em>실무 설계.</em> 귀하의 연구 분야 주제에 대해 동일 설문 내 반복 종속변수 프로토콜을 설계하시오. 핵심 문항, 방해 문항의 개수 및 유형, 사전 연습 문항, 선행 몰두 문항을 구체화하시오. 제 <a href="#sec-filters" class="quarto-xref"><span>필터 설계: 5가지 기준</span></a> 절의 기준을 사용하여 각 선택을 정당화하시오.</p></li>
 <li><p><em>비판적 검토.</em> 조작 점검 문항에 실패한 피험자를 제외할 때 발생하는 편향에 관한 <span class="citation" data-cites="aronow2019note">@aronow2019note</span> 를 읽으시오. 그 발견과 제 <a href="#sec-filters" class="quarto-xref"><span>필터 설계: 5가지 기준</span></a> 절에서 주의력 확인 문항을 <em>1차</em> 필터로 사용하지 말라는 권장사항을 조화시키시오. 두 권장사항이 일치하는 지점은 어디이며 본 장이 더 나아간 지점은 어디인가?</p></li>
-<li><p><em>재현 연구.</em> 이진 핵심 종속변수를 사용하는 출판된 설문 기반 논문을 하나 선택하시오. 잔차 분산의 10%가 내재적 확률성이라는 가정 하에 내포된 <span class="math inline">\(\bar D\)</span> 기준선을 계산(또는 보고된 수치로부터 추정)하시오. 식 <a href="#eq-beta-corr" class="quarto-xref">Equation&nbsp;<span>53.21</span></a> 의 닫힌 형태 보정을 적용하시오. 해당 논문의 핵심 주장이 여전히 유지되는가?</p></li>
+<li><p><em>재현 연구.</em> 이진 핵심 종속변수를 사용하는 출판된 설문 기반 논문을 하나 선택하시오. 잔차 분산의 10%가 내재적 확률성이라는 가정 하에 내포된 <span class="math inline">\(\bar D\)</span> 기준선을 계산(또는 보고된 수치로부터 추정)하시오. 식 <a href="#eq-beta-corr" class="quarto-xref">Equation&nbsp;<span>54.21</span></a> 의 닫힌 형태 보정을 적용하시오. 해당 논문의 핵심 주장이 여전히 유지되는가?</p></li>
 <li><p><em>SIMEX.</em> 제 <a href="#sec-survey-reliability-applied" class="quarto-xref"><span>R을 활용한 실무 워크플로</span></a> 절의 7단계 SIMEX 절차를 <span class="math inline">\(\lambda \in \{0., 1., 1., 2., 2., 3.0\}\)</span>으로 재실행하고 외삽된 추정치를 닫힌 형태 추정치와 비교하시오. 두 추정치는 언제 갈라지는가?</p></li>
 <li><p><em>컨조인트 분석.</em> 10개 속성과 2개 프로파일 강제 선택 설계를 갖는 컨조인트 실험에서 (i) <span class="math inline">\(\bar D\)</span>를 측정하고 (ii) <span class="citation" data-cites="clayton">@clayton</span> 보정을 적용하는 방안을 개략적으로 서술하시오. 추가 측정에 드는 응답자 시간 비용은 얼마인가?</p></li>
 <li><p><em>타당도 (MTMM).</em> 3가지 방법(리커트 자기보고 목록 실험, 행동적 지불의사 과업)으로 3가지 특질(정부 신뢰, 기업 신뢰, 과학자 신뢰)을 측정한 데이터가 있다. <span class="math inline">\(9 \times 9\)</span> MTMM 상관계수 행렬을 스케치하시오. 단일특질-이종방법 항목, 이종특질-단일방법 항목, 이종특질-이종방법 항목을 식별하시오. 어떤 패턴이 수렴 타당도를 만족하는가? 어떤 패턴이 판별 타당도를 만족하는가? 답변에 <span class="citation" data-cites="campbell1959convergent">@campbell1959convergent</span> 를 인용하시오.</p></li>
 <li><p><em>조사 방식 효과.</em> 단일 민감 문항에 대한 사회적 바람직성 편향을 추정하기 위한 개체 내(within-subject) 조사 방식 비교를 설계하시오. 어떤 방식들을 비교해야 하는가? 식별 가정은 무엇인가? <span class="citation" data-cites="heerwegh2009mode">@heerwegh2009mode</span> 설계가 조사 방식과 표본의 교란을 피하는 데 어떻게 도움이 되는가?</p></li>
 <li><p><em>MRP.</em> <span class="math inline">\(n = 800\)</span>명의 미국 성인 비확률 온라인 표본을 보유하고 있으며 특정 정책에 대한 주 수준 지지도를 추정하고자 한다. (i) 식 <span class="quarto-unresolved-ref">?eq-mrp-stage</span> 의 다수준 모형, (ii) 셀 정의 공변량, (iii) 모집단 참조 추출틀, (iv) 필요한 셀별 모집단 비율을 명시하시오. <span class="citation" data-cites="lax2009estimate">@lax2009estimate</span> 를 따라 단순 분할 집계와 MRP 추정치의 정밀도를 비교하시오.</p></li>
-<li><p><em>앵커링 비네트.</em> 4점 척도에서 “의료계에 대한 신뢰” 자기보고를 보정하기 위한 3개의 비네트를 설계하시오. 각 비네트는 객관적 신뢰도가 응답자 간에 일정하게 고정된 가상의 의사를 묘사해야 한다. 각 비네트의 객관적 수준 선택을 정당화하시오. 식 <a href="#eq-vignette-rating" class="quarto-xref">Equation&nbsp;<span>53.23</span></a> 를 사용하여 응답자별 절단점을 어떻게 복원할지 설명하시오.</p></li>
+<li><p><em>앵커링 비네트.</em> 4점 척도에서 “의료계에 대한 신뢰” 자기보고를 보정하기 위한 3개의 비네트를 설계하시오. 각 비네트는 객관적 신뢰도가 응답자 간에 일정하게 고정된 가상의 의사를 묘사해야 한다. 각 비네트의 객관적 수준 선택을 정당화하시오. 식 <a href="#eq-vignette-rating" class="quarto-xref">Equation&nbsp;<span>54.23</span></a> 를 사용하여 응답자별 절단점을 어떻게 복원할지 설명하시오.</p></li>
 <li><p><em>민감한 질문.</em> 낙인찍힌 정치적 입장에 대한 지지도를 연구하고 있다. 목록 실험, 무작위 응답 기법, 지지 실험 중 하나를 실행할 수 있다. 각 설계에 대해 (i) 식별 가정, (ii) 추정량, (iii) 직접 질문 대비 분산 손실(페널티)을 기술하시오. 어떤 기법을 사용하겠으며 그 이유는 무엇인가? <span class="citation" data-cites="rosenfeld2016empirical">@rosenfeld2016empirical</span> 의 실증적 증거를 인용하시오.</p></li>
 <li><p><em>부주의 응답 탐지.</em> 접근 가능한 다문항 리커트 그리드가 포함된 설문 도구를 활용하시오. 제 <a href="#sec-survey-reliability-applied" class="quarto-xref"><span>R을 활용한 실무 워크플로</span></a> 절의 9단계 코드를 따라 (i) 최장 연속 동일 응답 지표, (ii) 응답자 내 SD, (iii) 개인-전체 상관, (iv) 마할라노비스 거리를 구현하시오. 결합 분포를 보고하고 플래그 임계값을 결정한 후 그 근거를 제시하시오.</p></li>
 <li><p><em>응답 양식.</em> 16번 연습문제의 동일한 도구를 사용하여 <span class="citation" data-cites="greenleaf1992measuring">@greenleaf1992measuring</span> 에 따라 극단 응답 양식(ERS)을 추정하시오. ERS와 실질 척도 점수 간의 상관계수를 계산하시오. 그 상관관계가 척도의 타당도에 대해 무엇을 시사하는가?</p></li>
-<li><p><em><span class="math inline">\(\omega\)</span> 대 <span class="math inline">\(\alpha\)</span> 계수.</em> 16번 연습문제의 다문항 척도에 대해 <code>psych</code> 패키지를 사용하여 크론바흐 <span class="math inline">\(\alpha\)</span>와 맥도널드 <span class="math inline">\(\omega_t\)</span>(식 <a href="#eq-omega" class="quarto-xref">Equation&nbsp;<span>53.9</span></a>)를 모두 계산하시오. 둘을 비교하시오. 어떤 조건에서 일치하고 어떤 조건에서 불일치하는가?</p></li>
+<li><p><em><span class="math inline">\(\omega\)</span> 대 <span class="math inline">\(\alpha\)</span> 계수.</em> 16번 연습문제의 다문항 척도에 대해 <code>psych</code> 패키지를 사용하여 크론바흐 <span class="math inline">\(\alpha\)</span>와 맥도널드 <span class="math inline">\(\omega_t\)</span>(식 <a href="#eq-omega" class="quarto-xref">Equation&nbsp;<span>54.9</span></a>)를 모두 계산하시오. 둘을 비교하시오. 어떤 조건에서 일치하고 어떤 조건에서 불일치하는가?</p></li>
 <li><p><em>MTurk 품질 감사.</em> <span class="citation" data-cites="kay2025why">@kay2025why</span> 와 <span class="citation" data-cites="shimoni2025assessing">@shimoni2025assessing</span> 을 읽으시오. 두 논문 모두 MTurk 데이터 품질에 대해 강한 결론에 도달하지만 해당 플랫폼을 구제할 수 있는지에 대해 의견이 엇갈리ㄴ다. (i) 각 연구가 내린 표본추출 결정(자격 수준, 스크리닝 도구, 보상), (ii) 각 연구가 사용한 진단법, (iii) 두 연구의 결론을 조화시킬 수 있는 가장 작은 설계 차이를 규명하시오. 그런 다음 귀하의 다음 온라인 연구에서 어떤 결론을 채택하겠는지 기술하고 그 선택을 방어하시오.</p></li>
 <li><p><em>의미론적 반의어 진단.</em> 귀하의 연구 분야 구성개념에 대해 6문항 의미론적 반의어 쌍 세트(3개 쌍, 주의 깊은 응답자라면 두 문항 간에 완벽에 가까운 음의 상관관계를 보여야 하도록 작성된 쌍)를 설계하시오. 선택한 두 플랫폼에 이를 적용하고 쌍 내 문항 간 상관계수를 보고하시오. <span class="citation" data-cites="kay2025why">@kay2025why</span> 를 따라가 패턴을 플랫폼 품질 진단으로 해석하시오.</p></li>
 </ol>
@@ -27645,7 +27665,7 @@ Y_3\\
 \bar{Y_3}\\
 \end{array}\right]
 \end{aligned}
-\tag{54.1}\]</span></span> Thus, the estimated treatment means are:</p>
+\tag{55.1}\]</span></span> Thus, the estimated treatment means are:</p>
 <p><span class="math display">\[
 \hat{\mu}_i = \bar{Y_i}, \quad i = 1,,
 \]</span></p>
@@ -27782,7 +27802,7 @@ Y_{32}\\
 \end{array}\right)\\
 \mathbf{y} &amp;= \mathbf{X\beta} +\mathbf{\epsilon}
 \end{aligned}
-\tag{54.2}\]</span></span> However, the matrix:</p>
+\tag{55.2}\]</span></span> However, the matrix:</p>
 <p><span class="math display">\[
 \mathbf{X'X} =
 \left(
@@ -27829,7 +27849,7 @@ E(Y_{ij}) = \mu + \tau_i = \mu_i = \text{mean response for the $i$-th treatment}
 <p><span class="math display">\[
 \mu, \tau_1, \tau_2, ..., \tau_{a-1}
 \]</span></p>
-<p>Rewriting Equation <a href="#eq-unsolvable" class="quarto-xref">Equation&nbsp;<span>54.2</span></a>:</p>
+<p>Rewriting Equation <a href="#eq-unsolvable" class="quarto-xref">Equation&nbsp;<span>55.2</span></a>:</p>
 <p><span class="math display">\[\begin{equation}
 \begin{aligned}
 \left(\begin{array}{c}
@@ -28032,7 +28052,7 @@ E(\mathbf{b})
 <div id="tbl-anova-one-way-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-anova-one-way-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;54.1: One-way ANOVA summary.
+Table&nbsp;55.1: One-way ANOVA summary.
 </figcaption>
 <div aria-describedby="tbl-anova-one-way-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -33615,11 +33635,11 @@ Y_{it} = \alpha + \beta_1 \text{Post}_t + \beta_2 \text{Treat}_i + \beta_3 Z_i +
 \]</span></p>
 <p>이제 <span class="math inline">\(\beta_4\)</span>는 기준 조절 그룹에 대한 DiD 효과이고 <span class="math inline">\(\beta_5\)</span>는 그룹 간 <em>DiD 효과의 차이(Difference in DiDs)</em>이다. 이전과 마찬가지로 평행 추세 가정은 <span class="math inline">\(Z_i\)</span>의 각 값 내에서 개별적으로 적용되며 처치가 도입되기 전부터 하위 그룹 간 사전 추세가 달랐다면 조절 분석은 무너질 수 있다.</p>
 <p>세 가지 전략 모두에서 시각화는 선택이 아닌 필수이다. 신뢰대(Confidence bands)와 함께 <span class="math inline">\(Z_i\)</span> 값에 따른 처치 효과를 보여주는 한계 효과 플롯은 어떠한 회귀 계수 표보다 조절 효과를 정직하게 전달한다. 그룹별 개별 회귀선을 보여주는 상호작용 플롯은 하위 그룹 이질성을 한눈에 파악할 수 있게 한다. <span class="math inline">\(\beta_5\)</span>와 그 <span class="math inline">\(p\)</span>-값만을 표로 제시하는 것은 동일한 분석을 직접 수행해보지 않은 독자를 오도할 수 있다.</p>
-<p>표 <a href="#tbl-quasi-exp-mech-approach" class="quarto-xref">Table&nbsp;<span>56.1</span></a> 는 위에서 논의한 세 가지 기전 분석 접근법(매개 분석, 하위 그룹 분석, 상호작용 항)의 목표, 핵심 가정, 일반적인 위험 요소를 요약하여 질문에 적합한 도구를 매칭할 수 있도록 돕는다.</p>
+<p>표 <a href="#tbl-quasi-exp-mech-approach" class="quarto-xref">Table&nbsp;<span>57.1</span></a> 는 위에서 논의한 세 가지 기전 분석 접근법(매개 분석, 하위 그룹 분석, 상호작용 항)의 목표, 핵심 가정, 일반적인 위험 요소를 요약하여 질문에 적합한 도구를 매칭할 수 있도록 돕는다.</p>
 <div id="tbl-quasi-exp-mech-approach" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-quasi-exp-mech-approach-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;56.1: 기전 분석 접근법.
+Table&nbsp;57.1: 기전 분석 접근법.
 </figcaption>
 <div aria-describedby="tbl-quasi-exp-mech-approach-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -33707,7 +33727,7 @@ Table&nbsp;56.1: 기전 분석 접근법.
 </section>
 <section id="외적-타당성-및-향후-연구-방향" class="level3">
 <h3 class="anchored" data-anchor-id="외적-타당성-및-향후-연구-방향">외적 타당성 및 향후 연구 방향</h3>
-<p>깔끔한 추정치라 할지라도 일차적으로는 특정 표본, 특정 환경, 그리고 설계가 우연히 식별해 낸 모집단의 특정 단면에 대한 답이다. 외적 타당성에 대한 몇 가지 우려가 이어지는 장들 전반에서 반복된다. 표 <a href="#tbl-quasi-exp-examples-limitation" class="quarto-xref">Table&nbsp;<span>56.2</span></a> 은 설계 군별로 가장 흔한 위협들을 대표적인 진단 도구 및 표준적인 해결책/점검법과 함께 정리하여 이러한 방법론을 접하는 독자가 무엇을 확인해야 하는지 빠르게 파악할 수 있도록 돕는다.</p>
+<p>깔끔한 추정치라 할지라도 일차적으로는 특정 표본, 특정 환경, 그리고 설계가 우연히 식별해 낸 모집단의 특정 단면에 대한 답이다. 외적 타당성에 대한 몇 가지 우려가 이어지는 장들 전반에서 반복된다. 표 <a href="#tbl-quasi-exp-examples-limitation" class="quarto-xref">Table&nbsp;<span>57.2</span></a> 은 설계 군별로 가장 흔한 위협들을 대표적인 진단 도구 및 표준적인 해결책/점검법과 함께 정리하여 이러한 방법론을 접하는 독자가 무엇을 확인해야 하는지 빠르게 파악할 수 있도록 돕는다.</p>
 <p>첫 번째는 식별 범위(Scope of identification)이다: 많은 설계가 모집단 ATE가 아닌 국소적 평균 처치 효과(LATE)를 제공한다(공식 정의는 <a href="#sec-notation-quasi-experimental">추정 대상 표기법</a> 참조). <a href="#sec-examiner-design">판사 IV / 심사관 설계</a> 연구는 한계 피고인에 대해만 효과를 식별하고 <a href="#sec-regression-discontinuity">RD</a>는 기준점에서만 효과를 식별하며 <a href="#sec-difference-in-differences">DiD</a>는 처치 집단에 대한 ATT를 식별한다. 이들은 오류(Bug)가 아니라 신뢰성의 대가이지만 “전체” 효과로 포장하지 말고 해당 추정 대상(Estimand) 그대로 보고해야 한다.</p>
 <p>두 번째는 표본 및 환경 특이성(Sample and setting specificity)이다. 한 주에서 평가된 정책은 노동 시장, 인구 통계, 또는 초기 결과가 다른 주에는 일반화되지 않을 수 있다. 한 제품 카테고리에서의 플랫폼 실험은 다른 카테고리에 일반화되지 않을 수 있다. 일반화는 당연시되는 것이 아니라 실질적인 논증을 필요로 하는 실질적인 주장이다.</p>
 <p>세 번째는 정책적 관련성(Policy relevance)이다. 추정치가 내적으로 타당하고 외적으로 이전 가능하더라도 개입의 규모(Scale)가 논의 중인 정책과 다를 수 있다: 소규모 파일럿은 균형 효과, 혼잡, 또는 정치적 피드백 때문에 전국적 시행으로 일반화되지 않을 수 있다. 해당되는 경우 이를 솔직하게 명시하라.</p>
@@ -33715,7 +33735,7 @@ Table&nbsp;56.1: 기전 분석 접근법.
 <div id="tbl-quasi-exp-examples-limitation" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-quasi-exp-examples-limitation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;56.2: 한계점과 대응 방안 예시.
+Table&nbsp;57.2: 한계점과 대응 방안 예시.
 </figcaption>
 <div aria-describedby="tbl-quasi-exp-examples-limitation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -33803,11 +33823,11 @@ Y_i(\mathbf{Z}) = Y_i(Z_i) \qquad \text{모든 } \mathbf{Z}_{-i}\text{에 대해
 <p>그리고 이후 장들의 추정량들은 명확한 목표 대상을 갖게 된다. 반면 SUTVA가 실패하면 목표 대상 자체가 모호해지며 표준 추정량들은 정밀도를 과대평가하는 신뢰구간과 함께 그 모호한 대상을 향해 기계적으로 수렴하게 된다.</p>
 <p>두 가지 실패 유형이 반복된다. 첫 번째는 <a href="#sec-no-interference">간섭(Interference)</a>으로, 한 단위의 처치가 다른 단위의 결과를 변화시키는 경우이다. 일부 고객에게 적용된 충성도 프로그램은 입소문을 통해 미적용 고객에게 영향을 미칠 수 있고 백신은 비접종자의 감염 위험을 줄이며 특정 산업에 대한 세제 혜택은 다른 산업의 노동과 자본을 끌어온다. 이에 대한 해결책은 간섭의 존재를 부정하는 것이 아니라 모델링하는 것이다: 지리적 파급을 위한 공간 계량경제학, 사회적 파급을 위한 네트워크 기반 인과추론, 설계된 파급을 위한 무작위 포화 설계(Randomized saturation designs) 등이 있다.</p>
 <p>두 번째는 <a href="#sec-no-hidden-variations-in-treatment">처치 내 숨겨진 변이(Hidden treatment heterogeneity)</a>로, 우리가 “처치”라고 부르는 것이 실제로는 구별 가능한 개입들의 혼합물인 경우이다. 판매 프로모션이 어떤 고객에게는 10% 할인이고 다른 고객에게는 25% 할인일 수 있으며 직업 훈련 프로그램이 한 곳에서는 6주, 다른 곳에서는 12주 동안 운영될 수 있다. 이들을 하나로 묶으면 정의되지 않은 혼합물에 대한 평균을 추정하게 된다. 해결책은 각 단위가 받은 처치 버전을 정의하거나 반응이 다른 하위 모집단을 특성화하는 주 층화(Principal stratification)를 사용하여 이질성을 명시적으로 모델링하는 것이다.</p>
-<p>두 가지 실패 유형은 표 <a href="#tbl-quasi-exp-violating-sutva" class="quarto-xref">Table&nbsp;<span>56.3</span></a> 에 요약되어 있다.</p>
+<p>두 가지 실패 유형은 표 <a href="#tbl-quasi-exp-violating-sutva" class="quarto-xref">Table&nbsp;<span>57.3</span></a> 에 요약되어 있다.</p>
 <div id="tbl-quasi-exp-violating-sutva" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-quasi-exp-violating-sutva-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;56.3: SUTVA 위반의 결과.
+Table&nbsp;57.3: SUTVA 위반의 결과.
 </figcaption>
 <div aria-describedby="tbl-quasi-exp-violating-sutva-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -33856,11 +33876,11 @@ Y_i(\mathbf{Z}) = Y_i(Z_i,\, \mathbf{Z}_{\mathcal{N}(i)}),
 <section id="간섭의-특수한-유형" class="level5">
 <h5 class="anchored" data-anchor-id="간섭의-특수한-유형">간섭의 특수한 유형</h5>
 <p>몇 가지 간섭 패턴은 이름을 붙일 만큼 자주 나타난다. 완전 간섭(Complete interference)은 소규모의 완전 연결된 소셜 네트워크나 가격이 전역적으로 청산되는 단일 시장처럼 모든 단위의 결과가 다른 모든 단위의 처치에 의존하도록 한다. 여기서 <span class="math inline">\(\mathcal{N}(i)\)</span>가 전체 모집단이기 때문에 추정 문저자가 특히 어렵다. 부분 간섭(Partial interference)은 파급을 식별 가능한 그룹 내로 제한하고 그룹 간에는 허용하지 않는다. 예를 들어 한 교실 내의 학생들은 서로 영향을 미치지만 다른 학교의 학생들에게는 영향을 미치지 않으며 한 상권 내의 고객들은 서로 영향을 미치지만 먼 도시의 고객들에게는 영향을 미치지 않는다. 부분 간섭은 그룹 내 개체들이 독립적이지 않더라도 그룹 자체를 독립적인 단위로 취급할 수 있게 해주므로 실증적으로 가장 다루기 쉬운 경우이다. 네트워크 간섭(Network interference)은 그 중간에 위치한다: 파급이 알려진 그래프(트위터 팔로우, 공급망 관계, 주거 도로망)를 따라 전달되며 목표는 이를 무시하는 것이 아니라 그래프 구조를 활용하여 처치 효과의 전달을 모델링하는 것이다. 각 패턴은 서로 다른 식별 논리를 요구하며 현재 각각 독립된 연구 분야를 형성하고 있다.</p>
-<p>통계학자와 경제학자는 대략 동일한 의미를 갖는 두 가지 다른 어휘를 사용하여 상호 간섭 없음에 대해 이야기하는 경향이 있다. 경제학자들은이 문구를 들으면 즉시 익숙한 표현들로 번역한다: “외부효과 없음(No externalities)”, “동료 효과 없음(No peer effects)”, “부분 균형(Partial equilibrium)”, “대규모 시장에서의 미세한 충격(Small shock in a big market)”, “전략적 상호작용 없음(No strategic interaction)”. 이들 각각은 어떤 경로를 배제하고 있는지에 중점을 둘 뿐, <em>한 경제 주체의 행동이 다른 주체의 결과에 영향을 미치지 않는다</em>는 점을 말하는 방식이다. 표 <a href="#tbl-quasi-exp-no-interference" class="quarto-xref">Table&nbsp;<span>56.4</span></a> 는 통계적 표현과 경제학적 표현, 그리고 기본 직관을 나란히 정리하여 통계학적 훈련을 받은 독자가 시차 없이 경제학자의 논증을 따라갈 수 있도록 돕는다.</p>
+<p>통계학자와 경제학자는 대략 동일한 의미를 갖는 두 가지 다른 어휘를 사용하여 상호 간섭 없음에 대해 이야기하는 경향이 있다. 경제학자들은이 문구를 들으면 즉시 익숙한 표현들로 번역한다: “외부효과 없음(No externalities)”, “동료 효과 없음(No peer effects)”, “부분 균형(Partial equilibrium)”, “대규모 시장에서의 미세한 충격(Small shock in a big market)”, “전략적 상호작용 없음(No strategic interaction)”. 이들 각각은 어떤 경로를 배제하고 있는지에 중점을 둘 뿐, <em>한 경제 주체의 행동이 다른 주체의 결과에 영향을 미치지 않는다</em>는 점을 말하는 방식이다. 표 <a href="#tbl-quasi-exp-no-interference" class="quarto-xref">Table&nbsp;<span>57.4</span></a> 는 통계적 표현과 경제학적 표현, 그리고 기본 직관을 나란히 정리하여 통계학적 훈련을 받은 독자가 시차 없이 경제학자의 논증을 따라갈 수 있도록 돕는다.</p>
 <div id="tbl-quasi-exp-no-interference" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-quasi-exp-no-interference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;56.4: 경제학자의 관점에서의 상호 간섭 없음.
+Table&nbsp;57.4: 경제학자의 관점에서의 상호 간섭 없음.
 </figcaption>
 <div aria-describedby="tbl-quasi-exp-no-interference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -33908,11 +33928,11 @@ Table&nbsp;56.4: 경제학자의 관점에서의 상호 간섭 없음.
 </figure>
 </div>
 <p>대부분의 경제 환경에서 간섭 없음은 매우 강한 가정이며 정확하게 성립하기 어렵다. 시장은 서로 연결되어 있으므로 한 시장의 가격 변화는 대체재와 보완재로 전파될 수 있다. 경제 주체들은 전략적이므로 경쟁자, 소비자, 근로자는 타인의 처치에 반응하여 자신의 행동을 조정한다. 자원은 희소하므로 노동, 자본, 신용을 한 용도로 끌어당기는 처치는 다른 용도로부터 이를 빼앗아 온다. 정보, 이주, 전염의 네트워크는 분석가가 별개로 생각하고 싶어 하는 결과들을 서로 연결한다.</p>
-<p>경제학자들은 통상적으로 <em>부분 균형(Partial equilibrium)</em> 관점을 채택하여가 어려움을 관리한다: 일반 균형 피드백을 무시할 수 있을 만큼 충분히 작은 시장의 단면을 분석하고 나머지는 그대로 둔다. 때로는 이것이 정직한 접근이다. 대규모 경쟁 시장에서의 미세한 충격은 실제로 무시할 수 있는 파급 효과만을 갖는다. 하지만 때로는 희망사항에 불과할 수 있으며 올바른 대응은 파급 효과를 명시적으로 모델링하거나 설계가 정책 논의에서 실제로 중요하게 여기지 않을 수 있는 부분 균형 수량을 식별하고 있음을 인정하는 것이다. 표 <a href="#tbl-quasi-exp-violations-econ" class="quarto-xref">Table&nbsp;<span>56.5</span></a> 은 대표적인 위반 사례와 각각이 작동하는 경로를 정리한다.</p>
+<p>경제학자들은 통상적으로 <em>부분 균형(Partial equilibrium)</em> 관점을 채택하여가 어려움을 관리한다: 일반 균형 피드백을 무시할 수 있을 만큼 충분히 작은 시장의 단면을 분석하고 나머지는 그대로 둔다. 때로는 이것이 정직한 접근이다. 대규모 경쟁 시장에서의 미세한 충격은 실제로 무시할 수 있는 파급 효과만을 갖는다. 하지만 때로는 희망사항에 불과할 수 있으며 올바른 대응은 파급 효과를 명시적으로 모델링하거나 설계가 정책 논의에서 실제로 중요하게 여기지 않을 수 있는 부분 균형 수량을 식별하고 있음을 인정하는 것이다. 표 <a href="#tbl-quasi-exp-violations-econ" class="quarto-xref">Table&nbsp;<span>57.5</span></a> 은 대표적인 위반 사례와 각각이 작동하는 경로를 정리한다.</p>
 <div id="tbl-quasi-exp-violations-econ" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-quasi-exp-violations-econ-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;56.5: 경제학에서의 주요 위반 사례.
+Table&nbsp;57.5: 경제학에서의 주요 위반 사례.
 </figcaption>
 <div aria-describedby="tbl-quasi-exp-violations-econ-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -34104,11 +34124,11 @@ Y(1), Y(0) \;\not\perp\!\!\!\perp\; Z \mid X,
 <p>어떤 하위 모집단이 항상 처치를 받고(규칙, 자격 요건, 또는 거의 확실성을 낳는 강한 자기 선택으로 인해) 다른 하위 모집단은 절대 처치를 받지 않는다면, 그 설계는 암묵적으로 “모집단”의 정의를 재규정한 것이다. 추론은 두 군 모두가 지지(Support)를 갖는 영역으로 제한되며 그 이상의 외삽은 데이터가 아닌 모델링 가정에 불과하다.</p>
 <section id="공통-지지-가정-위반의-함의" class="level4">
 <h4 class="anchored" data-anchor-id="공통-지지-가정-위반의-함의">공통 지지 가정 위반의 함의</h4>
-<p>공통 지지 위반의 실무적 결과는 미묘한다. 회귀 적합의 실패로 나타나는 것이 아니라, 회귀 모델이 경고 없이 수행하는 은밀한 외삽으로 나타나기 때문이다. 표 <a href="#tbl-quasi-exp-consequences-overlap" class="quarto-xref">Table&nbsp;<span>56.6</span></a> 은 가장 흔한 네 가지 패턴을 요약한다.</p>
+<p>공통 지지 위반의 실무적 결과는 미묘한다. 회귀 적합의 실패로 나타나는 것이 아니라, 회귀 모델이 경고 없이 수행하는 은밀한 외삽으로 나타나기 때문이다. 표 <a href="#tbl-quasi-exp-consequences-overlap" class="quarto-xref">Table&nbsp;<span>57.6</span></a> 은 가장 흔한 네 가지 패턴을 요약한다.</p>
 <div id="tbl-quasi-exp-consequences-overlap" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-quasi-exp-consequences-overlap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;56.6: 공통 지지 가정 위반의 결과.
+Table&nbsp;57.6: 공통 지지 가정 위반의 결과.
 </figcaption>
 <div aria-describedby="tbl-quasi-exp-consequences-overlap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -34169,7 +34189,7 @@ Table&nbsp;56.6: 공통 지지 가정 위반의 결과.
 </section>
 <section id="중첩-모집단에-대한-평균-처치-효과" class="level4">
 <h4 class="anchored" data-anchor-id="중첩-모집단에-대한-평균-처치-효과">중첩 모집단에 대한 평균 처치 효과</h4>
-<p>공통 지지가 약할 때 ATE는 전체적으로 식별되지 않을 수 있고 ATT는 추정하기 까다로울 수 있으며 이때 ATO가 유용한 제3의 길을 제공한다: 처치가 진정으로 경쟁적이었던 하위 모집단에 대해 정의된 추정 대상이다. 그 해석은 “어느 쪽으로든 갈 수 있었던 단위들에 대한 평균 처치 효과”이며 때로는 데이터셋에서 정책적으로 가장 관련성 높은 수량이고 때로는 다소 난해한 수량일 수 있다. 어느 쪽이든 경쟁 추정량들이 불안정할 때 안정적으로 추정된다. 표 <a href="#tbl-quasi-exp-causal-estimands" class="quarto-xref">Table&nbsp;<span>56.7</span></a> 는 세 추정 대상을 나란히 비교하여 각각이 지칭하는 대상 모집단과 각각이 부과하는 공통 지지 요구사항의 강도를 나열한다.</p>
+<p>공통 지지가 약할 때 ATE는 전체적으로 식별되지 않을 수 있고 ATT는 추정하기 까다로울 수 있으며 이때 ATO가 유용한 제3의 길을 제공한다: 처치가 진정으로 경쟁적이었던 하위 모집단에 대해 정의된 추정 대상이다. 그 해석은 “어느 쪽으로든 갈 수 있었던 단위들에 대한 평균 처치 효과”이며 때로는 데이터셋에서 정책적으로 가장 관련성 높은 수량이고 때로는 다소 난해한 수량일 수 있다. 어느 쪽이든 경쟁 추정량들이 불안정할 때 안정적으로 추정된다. 표 <a href="#tbl-quasi-exp-causal-estimands" class="quarto-xref">Table&nbsp;<span>57.7</span></a> 는 세 추정 대상을 나란히 비교하여 각각이 지칭하는 대상 모집단과 각각이 부과하는 공통 지지 요구사항의 강도를 나열한다.</p>
 <p>ATO는 중첩 가중치(Overlap weights)를 통해 구현된다:</p>
 <p><span class="math display">\[
 W_i \;=\; P(Z_i = 1 \mid X_i)(1 - P(Z_i = 1 \mid X_i)).
@@ -34178,7 +34198,7 @@ W_i \;=\; P(Z_i = 1 \mid X_i)(1 - P(Z_i = 1 \mid X_i)).
 <div id="tbl-quasi-exp-causal-estimands" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-quasi-exp-causal-estimands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;56.7: 인과 추정 대상의 비교.
+Table&nbsp;57.7: 인과 추정 대상의 비교.
 </figcaption>
 <div aria-describedby="tbl-quasi-exp-causal-estimands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -34399,7 +34419,7 @@ p_i^{*} \;=\; m \cdot p_i.
 <div id="tbl-quasi-exp-comparison-perspectives" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-quasi-exp-comparison-perspectives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;56.8: 두 관점의 비교.
+Table&nbsp;57.8: 두 관점의 비교.
 </figcaption>
 <div aria-describedby="tbl-quasi-exp-comparison-perspectives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -34446,15 +34466,15 @@ Table&nbsp;56.8: 두 관점의 비교.
 </div>
 </figure>
 </div>
-<p>두 흐름은 상호보완적이며 많은 실증 프로젝트가 두 요소의 결합을 포함한다. 예를 들어 정책 질문이 설계가 식별하는 모집단을 넘어설 때 설계 기반 추정치를 모델 기반 외삽으로 보완할 수 있으며 무시가능성 가정을 완화하기 위해 모델 기반 프레임워크에 부분적인 설계 특징(준무작위 시프터, 패널 차분)을 보완할 수 있다. 표 <a href="#tbl-quasi-exp-comparison-perspectives" class="quarto-xref">Table&nbsp;<span>56.8</span></a> 는 해석에 가장 큰 영향을 미치는 차원들(의존하는 가정의 유형, 강점과 약점, 대표적인 연구 유형)을 따라 두 관점의 대조를 보여준다.</p>
+<p>두 흐름은 상호보완적이며 많은 실증 프로젝트가 두 요소의 결합을 포함한다. 예를 들어 정책 질문이 설계가 식별하는 모집단을 넘어설 때 설계 기반 추정치를 모델 기반 외삽으로 보완할 수 있으며 무시가능성 가정을 완화하기 위해 모델 기반 프레임워크에 부분적인 설계 특징(준무작위 시프터, 패널 차분)을 보완할 수 있다. 표 <a href="#tbl-quasi-exp-comparison-perspectives" class="quarto-xref">Table&nbsp;<span>57.8</span></a> 는 해석에 가장 큰 영향을 미치는 차원들(의존하는 가정의 유형, 강점과 약점, 대표적인 연구 유형)을 따라 두 관점의 대조를 보여준다.</p>
 <section id="sec-design-based" class="level3">
 <h3 class="anchored" data-anchor-id="sec-design-based">설계 기반 관점</h3>
-<p>설계 기반 관점은 세상에 대한 질문(<em>여기서 진정으로 무작위 배정에 준하는 처치 변이는 무엇인가?</em>)으로 시작하여 종종 제도적 세부사항에 대한 긴 탐색을 거쳐 주로 그 변이에 식별의 기초를 둔 모델로 끝을 맺는다. 설계가 보다 정교한 모델이 시도해야 했을 작업을 이미 수행했기 때문에 모델 자체는 종종 매우 단순하다. 표 <a href="#tbl-quasi-exp-design-based-causal" class="quarto-xref">Table&nbsp;<span>56.9</span></a> 는 본 파트에서 설계에 가장 크게 의존하는 방법론들을 요약한다.</p>
+<p>설계 기반 관점은 세상에 대한 질문(<em>여기서 진정으로 무작위 배정에 준하는 처치 변이는 무엇인가?</em>)으로 시작하여 종종 제도적 세부사항에 대한 긴 탐색을 거쳐 주로 그 변이에 식별의 기초를 둔 모델로 끝을 맺는다. 설계가 보다 정교한 모델이 시도해야 했을 작업을 이미 수행했기 때문에 모델 자체는 종종 매우 단순하다. 표 <a href="#tbl-quasi-exp-design-based-causal" class="quarto-xref">Table&nbsp;<span>57.9</span></a> 는 본 파트에서 설계에 가장 크게 의존하는 방법론들을 요약한다.</p>
 <p>설계 기반 접근법은 표준적인 관찰 추론이 가장 방어하기 어려운 환경(무작위 시험이 불가능할 때, 처치 선택 편향이 심각할 때, 무시가능성을 위해 비관찰 교란요인에 대한 강한 주장이 필요할 때)에서 그 가치를 입증한다. 이를 사용하는 대가는 변이를 직접 찾아내야 한다는 점이다. 연구가 불연속 기준점을 마음대로 만들어낼 수 없고 정책 충격을 인위적으로 제조할 수 없으며 오래된 데이터셋을 소급하여 무작위화할 수는 없다. 본 파트를 활용하는 대부분의 실증 프로젝트는 문헌 검토와 자연 실험 탐색으로 시작되며 방법론의 선택은 발견된 변이에 따라 결정된다.</p>
 <div id="tbl-quasi-exp-design-based-causal" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-quasi-exp-design-based-causal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;56.9: 설계 기반 인과추론 방법론 요약.
+Table&nbsp;57.9: 설계 기반 인과추론 방법론 요약.
 </figcaption>
 <div aria-describedby="tbl-quasi-exp-design-based-causal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -34511,7 +34531,7 @@ Table&nbsp;56.9: 설계 기반 인과추론 방법론 요약.
 </section>
 <section id="sec-model-based-perspective" class="level3">
 <h3 class="anchored" data-anchor-id="sec-model-based-perspective">모델 기반 관점</h3>
-<p><a href="#sec-model-based-perspective">모델 기반 관점</a>은 어떠한 설계도 도움을 주지 못할 때 선택하는 방법이다. 기준점도 없고 정책 충격도 없으며 도구 변수도 없다; 보유한 것은 풍부한 공변량을 가진 관찰 데이터와 답이 필요한 질문뿐이다. 전략은 변수 간의 관계를 명시적으로 지정하고 모델을 사용하여 교란을 통제하며 그에 따른 반사실로부터 처치 효과를 읽어내는 것이다. 표 <a href="#tbl-quasi-exp-model-based" class="quarto-xref">Table&nbsp;<span>56.10</span></a> 는 실무에서 자주 사용되는 네 가지 모델 기반 방법론 군과 각각이 기초하는 핵심 가정, 그리고 마케팅이나 경제학의 대표적인 예시를 요약한다.</p>
+<p><a href="#sec-model-based-perspective">모델 기반 관점</a>은 어떠한 설계도 도움을 주지 못할 때 선택하는 방법이다. 기준점도 없고 정책 충격도 없으며 도구 변수도 없다; 보유한 것은 풍부한 공변량을 가진 관찰 데이터와 답이 필요한 질문뿐이다. 전략은 변수 간의 관계를 명시적으로 지정하고 모델을 사용하여 교란을 통제하며 그에 따른 반사실로부터 처치 효과를 읽어내는 것이다. 표 <a href="#tbl-quasi-exp-model-based" class="quarto-xref">Table&nbsp;<span>57.10</span></a> 는 실무에서 자주 사용되는 네 가지 모델 기반 방법론 군과 각각이 기초하는 핵심 가정, 그리고 마케팅이나 경제학의 대표적인 예시를 요약한다.</p>
 <p>이는 툴킷에서 가장 화려하지 않은 부분이지만 어쩌면 가장 중대한 부분일 수 있다. 학술 저널 외부의 비즈니스 및 정책 보고서에 등장하는 대부분의 인과적 주장은 모델 기반이다. 기업과 정부가 관심을 갖는 대부분의 의사결정에 필요한 설계 기반 식별 데이터가 존재하지 않기 때문이다. 트레이드오프는 직접적이다: 설계 기반 방법론은 신뢰성을 위해 일반성을 포기하는 반면, 모델 기반 방법론은 설계 기반 방법론이 도달할 수 없는 질문을 다루기 위해 신뢰성의 일부를 포기한다. 어느 쪽도 절대적으로 우월하지 않으며 적절한 도구는 활용 가능한 변이와 모델링 가정에 얼마나 확신을 가질 수 있는지에 따라 달라진다.</p>
 <section id="모델-기반-접근법의-핵심-특성" class="level4">
 <h4 class="anchored" data-anchor-id="모델-기반-접근법의-핵심-특성">모델 기반 접근법의 핵심 특성</h4>
@@ -34523,7 +34543,7 @@ Table&nbsp;56.9: 설계 기반 인과추론 방법론 요약.
 <div id="tbl-quasi-exp-model-based" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-quasi-exp-model-based-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;56.10: 모델 기반 인과추론 방법론 요약.
+Table&nbsp;57.10: 모델 기반 인과추론 방법론 요약.
 </figcaption>
 <div aria-describedby="tbl-quasi-exp-model-based-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -34605,11 +34625,11 @@ Table&nbsp;56.10: 모델 기반 인과추론 방법론 요약.
 <p><em>식별이 “무작위 배정에 준하는” 설계에 얼마나 의존하고 있으며 구조적 또는 통계적 모델링 가정에 얼마나 의존하고 있는가?</em></p>
 </blockquote>
 <p>답이 주로 “설계”라면 실패는 문헌이 진단 도구를 가지고 있는 설계상의 식별 가능한 문제(사전 추세, 기준점 주변 조작, 약한 도구 변수)로 나타날 것이다. 답이 주로 “모델”이라면 실패는 단일 회귀 출력에서는 보이지 않을 수 있는 사양 선택에 대한 은밀한 민감도로 나타날 것이다.</p>
-<p>대부분의 실제 연구는 그 중간 어딘가에 위치하며 정직한 답은 “대략 다음과 같은 비율로 둘 다”이다. 표 <a href="#tbl-quasi-exp-model-vs-design" class="quarto-xref">Table&nbsp;<span>56.11</span></a> 은 두 관점을 나란히 요약한다.</p>
+<p>대부분의 실제 연구는 그 중간 어딘가에 위치하며 정직한 답은 “대략 다음과 같은 비율로 둘 다”이다. 표 <a href="#tbl-quasi-exp-model-vs-design" class="quarto-xref">Table&nbsp;<span>57.11</span></a> 은 두 관점을 나란히 요약한다.</p>
 <div id="tbl-quasi-exp-model-vs-design" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-quasi-exp-model-vs-design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;56.11: 모델 기반 vs.&nbsp;설계 기반 인과추론의 주요 차이점.
+Table&nbsp;57.11: 모델 기반 vs.&nbsp;설계 기반 인과추론의 주요 차이점.
 </figcaption>
 <div aria-describedby="tbl-quasi-exp-model-vs-design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -34660,11 +34680,11 @@ Table&nbsp;56.11: 모델 기반 vs.&nbsp;설계 기반 인과추론의 주요 �
 </section>
 <section id="sec-notation-quasi-experimental" class="level2">
 <h2 class="anchored" data-anchor-id="sec-notation-quasi-experimental">본 파트에서 사용되는 표기법</h2>
-<p>본 파트의 장들 전반에 걸쳐 다음 표기법이 일관되게 사용된다(표 <a href="#tbl-quasi-exp-notation" class="quarto-xref">Table&nbsp;<span>56.12</span></a>). 개별 장에서는 필요한 경우 첨자(예: 시간 <span class="math inline">\(t\)</span>, 그룹 <span class="math inline">\(g\)</span>)를 추가할 수 있다.</p>
+<p>본 파트의 장들 전반에 걸쳐 다음 표기법이 일관되게 사용된다(표 <a href="#tbl-quasi-exp-notation" class="quarto-xref">Table&nbsp;<span>57.12</span></a>). 개별 장에서는 필요한 경우 첨자(예: 시간 <span class="math inline">\(t\)</span>, 그룹 <span class="math inline">\(g\)</span>)를 추가할 수 있다.</p>
 <div id="tbl-quasi-exp-notation" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-quasi-exp-notation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;56.12: 준실험 파트 전반의 표기 규약.
+Table&nbsp;57.12: 준실험 파트 전반의 표기 규약.
 </figcaption>
 <div aria-describedby="tbl-quasi-exp-notation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -34742,11 +34762,11 @@ Table&nbsp;56.12: 준실험 파트 전반의 표기 규약.
 </section>
 <section id="sec-choosing-a-quasi-experimental-method" class="level2">
 <h2 class="anchored" data-anchor-id="sec-choosing-a-quasi-experimental-method">방법론 선택: 의사결정 프레임워크</h2>
-<p>단 하나의 준실험 방법론이 다른 모든 방법론을 압도하지는 않는다. 올바른 선택은 데이터의 구조, 처치의 특성, 그리고 연구자가 방어하고자 하는 식별 가정에 달려 있다. 표 <a href="#tbl-quasi-exp-method-selection" class="quarto-xref">Table&nbsp;<span>56.13</span></a> 은 본 파트에서 소개된 방법론들을 대략적인 식별 신뢰성 순서로 일반적인 연구 환경과 매칭한다.</p>
+<p>단 하나의 준실험 방법론이 다른 모든 방법론을 압도하지는 않는다. 올바른 선택은 데이터의 구조, 처치의 특성, 그리고 연구자가 방어하고자 하는 식별 가정에 달려 있다. 표 <a href="#tbl-quasi-exp-method-selection" class="quarto-xref">Table&nbsp;<span>57.13</span></a> 은 본 파트에서 소개된 방법론들을 대략적인 식별 신뢰성 순서로 일반적인 연구 환경과 매칭한다.</p>
 <div id="tbl-quasi-exp-method-selection" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-quasi-exp-method-selection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;56.13: 연구 환경과 방법론을 매칭하는 의사결정 프레임워크.
+Table&nbsp;57.13: 연구 환경과 방법론을 매칭하는 의사결정 프레임워크.
 </figcaption>
 <div aria-describedby="tbl-quasi-exp-method-selection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -34961,11 +34981,11 @@ E[Y(0)|X=x] \text{ 및 } E[Y(1)|X=x] \text{는 } x = c \text{에서 연속이다
 <li><p>기준값의 외생성: 기준값을 조작할 수 없어야 한다. 기준값에서 교란을 일으키는 개입도 없어야 한다.</p></li>
 <li><p>교란변수의 불연속 부재: 다른 공변량은 기준값에서 매끄러워야 한다. 흔히 처치와 무관한 공변량에 점프가 있는지 확인한다.</p></li>
 </ol>
-<p>가능한 위반의 예는 표 <a href="#tbl-rd-threat-validity" class="quarto-xref">Table&nbsp;<span>57.1</span></a> 를 참조하라.</p>
+<p>가능한 위반의 예는 표 <a href="#tbl-rd-threat-validity" class="quarto-xref">Table&nbsp;<span>58.1</span></a> 를 참조하라.</p>
 <div id="tbl-rd-threat-validity" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rd-threat-validity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;57.1: RD 타당성에 대한 위협.
+Table&nbsp;58.1: RD 타당성에 대한 위협.
 </figcaption>
 <div aria-describedby="tbl-rd-threat-validity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -35414,7 +35434,7 @@ Z_i = \alpha_0 + \alpha_1 f(X_i) + I(X_i \geq c) \alpha_2 + [f(X_i) \times I(X_i
 <p>회귀 불연속 설계는 연구 대상 행위자가 실행변수 <span class="math inline">\(X_i\)</span>를 조작할 수 없다는 가정에 의존한다. 그러나 <span class="citation" data-cites="mccrary2008manipulation은">@mccrary2008manipulation은</span> 기준값에서 <span class="math inline">\(X_i\)</span> 밀도의 불연속이 조작을 나타낼 수 있으며 이 경우 RD 추정치가 타당하지 않을 수 있음을 보였다. 조작이 탐지되었을 때의 일반적인 대응은 다음과 같다.</p>
 <ul>
 <li>조작이 탐지되지 않으면 RD 분석을 진행한다.</li>
-<li>조작이 탐지되면 “도넛홀” 방법(즉, 기준값 근처 관측치 제외)을 사용하지만 이는 RD 원칙과 모순된다(표 <a href="#tbl-rd-doughnut-hole" class="quarto-xref">Table&nbsp;<span>57.2</span></a>).</li>
+<li>조작이 탐지되면 “도넛홀” 방법(즉, 기준값 근처 관측치 제외)을 사용하지만 이는 RD 원칙과 모순된다(표 <a href="#tbl-rd-doughnut-hole" class="quarto-xref">Table&nbsp;<span>58.2</span></a>).</li>
 </ul>
 <p>그러나가 규칙을 엄격히 따를 경우 두 가지 문저자가 생길 수 있다.</p>
 <ol type="1">
@@ -35505,7 +35525,7 @@ P(D = 1|X = c^+, M = 0) &gt; P(D = 1|X = c^-, M = 0).
 <div id="tbl-rd-doughnut-hole" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rd-doughnut-hole-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;57.2: 조작에 강건한 RD 설계와 도넛홀 RD 설계의 비교.
+Table&nbsp;58.2: 조작에 강건한 RD 설계와 도넛홀 RD 설계의 비교.
 </figcaption>
 <div aria-describedby="tbl-rd-doughnut-hole-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -36566,12 +36586,12 @@ Y_i = \alpha + \beta_1 (X_{1i} - C_1) + \beta_2 (X_{2i} - C_2) + \tau D_i + \lam
 <p>FDR estimates these jointly by minimizing a Mumford-Shah-type functional adapted to regression:</p>
 <p><span id="eq-fdr-mumford-shah"><span class="math display">\[
 (\hat m, \hat S) \;=\; \arg\min_{m, S} \;\; \sum_{i=1}^n (Y_i - m(X_i))^2 \;+\; \alpha \int_{\mathbb{R}^d \setminus S} \|\nabla m(x)\|^2 \, dx \;+\; \beta \, \mathcal{H}^{d-1}(S),
-\tag{57.1}\]</span></span></p>
+\tag{58.1}\]</span></span></p>
 <p>where <span class="math inline">\(\mathcal{H}^{d-1}(S)\)</span> is the <span class="math inline">\((d-1)\)</span>-dimensional Hausdorff measure of <span class="math inline">\(S\)</span> (arc length when <span class="math inline">\(d=2\)</span>, surface area when <span class="math inline">\(d=3\)</span>), <span class="math inline">\(\alpha &gt; 0\)</span> penalizes wiggliness within each region, and <span class="math inline">\(\beta &gt; 0\)</span> penalizes the total size of the jump set. The three terms balance data fidelity, within-region smoothness, and parsimony of the segmentation.</p>
 </section>
 <section id="identification-assumptions-1" class="level3">
 <h3 class="anchored" data-anchor-id="identification-assumptions-1">Identification Assumptions</h3>
-<p>Consistent recovery of <span class="math inline">\((m, S)\)</span> under (<a href="#eq-fdr-mumford-shah" class="quarto-xref">Equation&nbsp;<span>57.1</span></a>) requires the data-generating process and the penalty schedule to satisfy a set of regularity conditions <span class="citation" data-cites="gunsilius2023free">[@gunsilius2023free]</span>.</p>
+<p>Consistent recovery of <span class="math inline">\((m, S)\)</span> under (<a href="#eq-fdr-mumford-shah" class="quarto-xref">Equation&nbsp;<span>58.1</span></a>) requires the data-generating process and the penalty schedule to satisfy a set of regularity conditions <span class="citation" data-cites="gunsilius2023free">[@gunsilius2023free]</span>.</p>
 <ol type="1">
 <li><em>Compactness</em>. The support of <span class="math inline">\(X_i\)</span> is compact, <span class="math inline">\(X_i \in \mathcal{X} \subset \mathbb{R}^d\)</span>.</li>
 <li><em>Piecewise smoothness</em>. There exists a finite partition <span class="math inline">\(\{\Omega_1, \ldots, \Omega_K\}\)</span> of <span class="math inline">\(\mathcal{X}\)</span> such that the restriction of <span class="math inline">\(m\)</span> to each <span class="math inline">\(\Omega_k\)</span> extends to a function in a Sobolev space <span class="math inline">\(W^{1,2}\)</span>. The number of regions <span class="math inline">\(K\)</span> is finite but unknown.</li>
@@ -36584,12 +36604,12 @@ Y_i = \alpha + \beta_1 (X_{1i} - C_1) + \beta_2 (X_{2i} - C_2) + \tau D_i + \lam
 </section>
 <section id="실무-추정" class="level3">
 <h3 class="anchored" data-anchor-id="실무-추정">실무 추정</h3>
-<p>Direct minimization of (<a href="#eq-fdr-mumford-shah" class="quarto-xref">Equation&nbsp;<span>57.1</span></a>) is intractable because <span class="math inline">\(S\)</span> is a free geometric object. Two standard relaxations make the problem solvable.</p>
+<p>Direct minimization of (<a href="#eq-fdr-mumford-shah" class="quarto-xref">Equation&nbsp;<span>58.1</span></a>) is intractable because <span class="math inline">\(S\)</span> is a free geometric object. Two standard relaxations make the problem solvable.</p>
 <p><em>Ambrosio-Tortorelli relaxation</em>. Replace the jump set <span class="math inline">\(S\)</span> with a continuous edge field $v : $ that approaches <span class="math inline">\(0\)</span> near jumps and <span class="math inline">\(1\)</span> in smooth regions. The relaxed functional is</p>
 <p><span class="math display">\[
 \sum_{i=1}^n (Y_i - m(X_i))^2 \;+\; \alpha \int_{\mathcal{X}} v(x)^2 \, \|\nabla m(x)\|^2 \, dx \;+\; \beta \int_{\mathcal{X}} \left( \epsilon \|\nabla v(x)\|^2 + \tfrac{1}{4\epsilon} (1 - v(x))^2 \right) dx.
 \]</span></p>
-<p><span class="citation" data-cites="ambrosio1992approximation">@ambrosio1992approximation</span> prove <span class="math inline">\(\Gamma\)</span>-convergence to (<a href="#eq-fdr-mumford-shah" class="quarto-xref">Equation&nbsp;<span>57.1</span></a>) as <span class="math inline">\(\epsilon \to 0\)</span>. In code one fixes a small <span class="math inline">\(\epsilon\)</span> and alternates two convex sub-problems: solve for <span class="math inline">\(m\)</span> with <span class="math inline">\(v\)</span> fixed (a weighted ridge regression), then solve for <span class="math inline">\(v\)</span> with <span class="math inline">\(m\)</span> fixed (a quadratic problem in <span class="math inline">\(v\)</span>).</p>
+<p><span class="citation" data-cites="ambrosio1992approximation">@ambrosio1992approximation</span> prove <span class="math inline">\(\Gamma\)</span>-convergence to (<a href="#eq-fdr-mumford-shah" class="quarto-xref">Equation&nbsp;<span>58.1</span></a>) as <span class="math inline">\(\epsilon \to 0\)</span>. In code one fixes a small <span class="math inline">\(\epsilon\)</span> and alternates two convex sub-problems: solve for <span class="math inline">\(m\)</span> with <span class="math inline">\(v\)</span> fixed (a weighted ridge regression), then solve for <span class="math inline">\(v\)</span> with <span class="math inline">\(m\)</span> fixed (a quadratic problem in <span class="math inline">\(v\)</span>).</p>
 <p><em>Graph-cut discretization</em>. Discretize <span class="math inline">\(\mathcal{X}\)</span> on a regular grid of nodes connected by edges. Replace <span class="math inline">\(\int \|\nabla m\|^2\)</span> with <span class="math inline">\(\sum_{(i,j) \in E} w_{ij} (m_i - m_j)^2\)</span> and <span class="math inline">\(\mathcal{H}^{d-1}(S)\)</span> with the total weight of cut edges where <span class="math inline">\(m\)</span> jumps. The resulting problem is a graph-cut problem that admits convex relaxation and is solved with ADMM or alternating-direction proximal splitting. Computational cost scales as <span class="math inline">\(O(n \cdot |\text{grid}| \cdot \text{iterations})\)</span>; in <span class="math inline">\(d = 2\)</span> on a <span class="math inline">\(200 \times 200\)</span> grid this is a matter of minutes.</p>
 <p>A 1D analog of the FDR objective is the <em>fused lasso</em> (also called 1D total-variation denoising), which replaces <span class="math inline">\(\mathcal{H}^{d-1}(S)\)</span> with the <span class="math inline">\(\ell_1\)</span> norm of consecutive differences. The fused lasso is fully convex, has well-developed solvers in the <code>genlasso</code> package, and produces the same qualitative output that FDR produces in higher dimensions: a piecewise-constant fit whose jump locations are recovered from the data. The following demonstration uses the 1D problem to make the FDR pipeline concrete.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="fdr-1d-demo" data-message="FALSE" data-warning="FALSE"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="fdr-1d-demo-1"><a href="#fdr-1d-demo-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>({</span>
@@ -36931,7 +36951,7 @@ Y_i = \alpha + f(X_i) \beta + \tau D_i + \gamma C_j + \epsilon_i.
 <div id="tbl-rd-packages-in-r" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rd-packages-in-r-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;57.3: Packages in R for RD estimation.
+Table&nbsp;58.3: Packages in R for RD estimation.
 </figcaption>
 <div aria-describedby="tbl-rd-packages-in-r-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -37425,11 +37445,11 @@ Y_i = \alpha_0 + X_i \alpha_1 + LW_i \alpha_2 + \epsilon_i
 <blockquote class="blockquote">
 <p>예시: 5년 동안 월별 고용률에 미친 최저임금 인상의 영향을 평가하는 경우.</p>
 </blockquote>
-<p>표 <a href="#tbl-its-differences-rdit-its" class="quarto-xref">Table&nbsp;<span>58.1</span></a> 는 RDiT와 ITS의 사용 시점을 보여준다.</p>
+<p>표 <a href="#tbl-its-differences-rdit-its" class="quarto-xref">Table&nbsp;<span>59.1</span></a> 는 RDiT와 ITS의 사용 시점을 보여준다.</p>
 <div id="tbl-its-differences-rdit-its" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-its-differences-rdit-its-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;58.1: RDiT와 ITS의 차이점.
+Table&nbsp;59.1: RDiT와 ITS의 차이점.
 </figcaption>
 <div aria-describedby="tbl-its-differences-rdit-its-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -37519,11 +37539,11 @@ Y_t = \alpha_0 + \alpha_1 (T_t - T^*) + \tau D_t + \alpha_2 (T_t - T^*) D_t + \e
 <li><span class="math inline">\(h\)</span>는 <span class="math inline">\(T^*\)</span>에 가까운 관측치만을 사용하도록 선택된 대역폭(bandwidth)이다.</li>
 <li><span class="math inline">\(\tau\)</span>는 처치 효과(<span class="math inline">\(T^*\)</span>에서의 불연속성/점프)를 나타낸다.</li>
 </ul>
-<p>RDiT는 <span class="math inline">\(T^*\)</span> 주변의 국소적 윈도우에 초점을 맞추기 때문에, 절단점에서 즉각적인 점프가 예상되고 절단점 근처의 관측치들이 처치 여부를 제외하고는 서로 유사할 가능성이 높을 때 가장 적합하다(표 <a href="#tbl-its-instead-of-rd" class="quarto-xref">Table&nbsp;<span>58.2</span></a>).</p>
+<p>RDiT는 <span class="math inline">\(T^*\)</span> 주변의 국소적 윈도우에 초점을 맞추기 때문에, 절단점에서 즉각적인 점프가 예상되고 절단점 근처의 관측치들이 처치 여부를 제외하고는 서로 유사할 가능성이 높을 때 가장 적합하다(표 <a href="#tbl-its-instead-of-rd" class="quarto-xref">Table&nbsp;<span>59.2</span></a>).</p>
 <div id="tbl-its-instead-of-rd" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-its-instead-of-rd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;58.2: 전통적 RD 대신 RDiT가 사용되는 경우.
+Table&nbsp;59.2: 전통적 RD 대신 RDiT가 사용되는 경우.
 </figcaption>
 <div aria-describedby="tbl-its-instead-of-rd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -37645,7 +37665,7 @@ Y_t = \delta_0 + \sum_{j} \delta_j X_{jt} + \nu_t
 <section id="rdit의-장점" class="level3">
 <h3 class="anchored" data-anchor-id="rdit의-장점">RDiT의 장점</h3>
 <p>시간 회귀 단절의 주요 장점 중 하나는 표준 <a href="#sec-difference-in-differences">이중차분법</a> 접근법을 적용할 수 없는 사례를 다룰 수 있다는 점이다. 이는 일반적으로 처치 시행에 횡단면적 변동이 없을 때 발생한다. 즉, 모든 단위가 동시에 처치를 받아 비교할 미처치 통제 집단이 남아있지 않은 경우이다. 이러한 경우 RDiT는 처치 배정의 시간적 불연속성을 활용하여 실행 가능한 대안을 제공한다.</p>
-<p>실무적으로 가장 신뢰할 수 있는 연구들은 RDiT와 DiD 중 하나를 선택하기보다 두 방법을 결합하는 경우가 많다(표 <a href="#tbl-its-comparison-other-methods" class="quarto-xref">Table&nbsp;<span>58.3</span></a>). <span class="citation" data-cites="auffhammer2011clearing">@auffhammer2011clearing</span> 은 처치 효과가 개인 및 지리적 공간에 따라 어떻게 달라지는지 살펴보기 위해 두 설계를 겹쳐 사용하며 각 방법의 식별 변동을 사용하여 다른 방법을 검증한다. <span class="citation" data-cites="gallego2013effect">@gallego2013effect</span> 는 DiD 통제 집단의 타당성이 의심될 때 RDiT와 DiD 추정치를 의도적으로 대조하여 한 단계 더 나아간다. 두 추정량 간의 불일치 자체가 숨겨진 편향에 대한 진단 도구가 된다.</p>
+<p>실무적으로 가장 신뢰할 수 있는 연구들은 RDiT와 DiD 중 하나를 선택하기보다 두 방법을 결합하는 경우가 많다(표 <a href="#tbl-its-comparison-other-methods" class="quarto-xref">Table&nbsp;<span>59.3</span></a>). <span class="citation" data-cites="auffhammer2011clearing">@auffhammer2011clearing</span> 은 처치 효과가 개인 및 지리적 공간에 따라 어떻게 달라지는지 살펴보기 위해 두 설계를 겹쳐 사용하며 각 방법의 식별 변동을 사용하여 다른 방법을 검증한다. <span class="citation" data-cites="gallego2013effect">@gallego2013effect</span> 는 DiD 통제 집단의 타당성이 의심될 때 RDiT와 DiD 추정치를 의도적으로 대조하여 한 단계 더 나아간다. 두 추정량 간의 불일치 자체가 숨겨진 편향에 대한 진단 도구가 된다.</p>
 <p>DiD의 대안이 되는 것 외에도 RDiT는 단순한 사전/사후 비교보다 더 뛰어난 장점을 제공한다. 순진한 전후 분석과 달리 RDiT는 시간 추세에 대한 유연한 통제를 통합할 수 있어 시간적 교란 요인으로 인한 가짜 결과의 위험을 줄여준다.</p>
 <p>사건 연구(Event study) 방법, 특히 현대적 구현 방식은 크게 발전하여 연구자들이 장기간에 걸친 처치 효과를 연구할 수 있게 되었다. 그럼에도 불구하고 RDiT는 여전히 다음과 같은 몇 가지 장점을 갖는다:</p>
 <ol type="1">
@@ -37655,7 +37675,7 @@ Y_t = \delta_0 + \sum_{j} \delta_j X_{jt} + \nu_t
 <div id="tbl-its-comparison-other-methods" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-its-comparison-other-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;58.3: 다른 방법론과의 비교.
+Table&nbsp;59.3: 다른 방법론과의 비교.
 </figcaption>
 <div aria-describedby="tbl-its-comparison-other-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -38007,11 +38027,11 @@ Table&nbsp;58.3: 다른 방법론과의 비교.
 <li><p>선택 편향 (Selection bias)<br>
 특정 개인이나 환경에만 개입이 적용되는 경우 기존의 차이가 결과를 교란할 수 있다. 다중 집단 또는 비교 시계열을 포함하는 설계가 이러한 편향을 완화하는 데 도움이 될 수 있다.</p></li>
 </ul>
-<p>표 <a href="#tbl-its-scenarios" class="quarto-xref">Table&nbsp;<span>58.4</span></a> 의 4가지 시나리오는 개입 후 결과변수가 취할 수 있는 정성적 패턴을 설명하며 모형의 선택은 분석가가 어떤 패턴을 예상하는지에 따라 결정되어야 한다. 즉각적인 수준 변화만을 허용하는 명세(<span class="math inline">\(D_t\)</span>에 대한 단일 더미)는 지속적이거나 점진적인 반응을 기계적으로 놓치게 되는 반면, 더 풍부한 분할 명세는 4가지 시나리오를 모두 유연하게 포착할 수 있다. 유연성의 대가는 더 많은 모수를 위해 더 많은 데이터가 필요하다는 점이다. 즉, 개입 전후 기간이 희소할 경우 분할 모형은 노이즈를 기울기 변화 및 지속 효과 계수로 흡수해 버릴 수 있다.</p>
+<p>표 <a href="#tbl-its-scenarios" class="quarto-xref">Table&nbsp;<span>59.4</span></a> 의 4가지 시나리오는 개입 후 결과변수가 취할 수 있는 정성적 패턴을 설명하며 모형의 선택은 분석가가 어떤 패턴을 예상하는지에 따라 결정되어야 한다. 즉각적인 수준 변화만을 허용하는 명세(<span class="math inline">\(D_t\)</span>에 대한 단일 더미)는 지속적이거나 점진적인 반응을 기계적으로 놓치게 되는 반면, 더 풍부한 분할 명세는 4가지 시나리오를 모두 유연하게 포착할 수 있다. 유연성의 대가는 더 많은 모수를 위해 더 많은 데이터가 필요하다는 점이다. 즉, 개입 전후 기간이 희소할 경우 분할 모형은 노이즈를 기울기 변화 및 지속 효과 계수로 흡수해 버릴 수 있다.</p>
 <div id="tbl-its-scenarios" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-its-scenarios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;58.4: ITS의 시나리오.
+Table&nbsp;59.4: ITS의 시나리오.
 </figcaption>
 <div aria-describedby="tbl-its-scenarios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -38683,7 +38703,7 @@ Note
 <li><a href="#sec-synthetic-control">SC</a>처럼 가중치 재부여(reweighting)를 통해 처치 전 추세의 차이를 조정한다.</li>
 <li><a href="#sec-difference-in-differences">DID</a>처럼 가법적(additive) 개체 수준의 평행이동에 불변(invariant)이며 대규모 패널 데이터에도 유효하다.</li>
 </ul>
-<p>SDID의 핵심 장점은 “이중적(double)” 의미에서 로버스트(robust)하다는 점이다(이는 결과 모형이나 성향점수 모형 중 하나만 정확히 지정되면 되는 확장 역확률 가중 추정량의 형식적 <em>이중 로버스트(doubly robust)</em> 특성과 혼동하지 말아야 한다). SDID는 <a href="#sec-difference-in-differences">DID</a>의 식별 가정(평행 추세) 또는 <a href="#sec-synthetic-control">합성 통제법</a>의 식별 가정(도너 볼록 껍질 내 처치 전 적합) 중 어느 하나만 성립해도 일치성(consistency)을 유지한다는 실무적 의미에서 “이중으로 로버스트”하며 합성 가중치를 사용하여 평행 추세로부터의 이탈을 보정한다(표 <a href="#tbl-synthdid-key-diff-did-sc" class="quarto-xref">Table&nbsp;<span>59.1</span></a>). 이로 인해 SDID는 처치 할당이 시간에 따라 결과에 영향을 미치는 잠재 요인과 상관되어 있는 상황에서 특히 유용하다.</p>
+<p>SDID의 핵심 장점은 “이중적(double)” 의미에서 로버스트(robust)하다는 점이다(이는 결과 모형이나 성향점수 모형 중 하나만 정확히 지정되면 되는 확장 역확률 가중 추정량의 형식적 <em>이중 로버스트(doubly robust)</em> 특성과 혼동하지 말아야 한다). SDID는 <a href="#sec-difference-in-differences">DID</a>의 식별 가정(평행 추세) 또는 <a href="#sec-synthetic-control">합성 통제법</a>의 식별 가정(도너 볼록 껍질 내 처치 전 적합) 중 어느 하나만 성립해도 일치성(consistency)을 유지한다는 실무적 의미에서 “이중으로 로버스트”하며 합성 가중치를 사용하여 평행 추세로부터의 이탈을 보정한다(표 <a href="#tbl-synthdid-key-diff-did-sc" class="quarto-xref">Table&nbsp;<span>60.1</span></a>). 이로 인해 SDID는 처치 할당이 시간에 따라 결과에 영향을 미치는 잠재 요인과 상관되어 있는 상황에서 특히 유용하다.</p>
 <ul>
 <li>SDID는 처치 할당에 영향을 미치는 체계적인 개체 수준 효과를 명시적으로 고려한다.</li>
 <li>이는 처치가 지속적인 개체 특성에 기초하여 비무작위로 할당될 때 특히 유용하다.</li>
@@ -38697,7 +38717,7 @@ Note
 <div id="tbl-synthdid-key-diff-did-sc" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-synthdid-key-diff-did-sc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;59.1: <a href="#sec-difference-in-differences">DID</a>와 <a href="#sec-synthetic-control">SC</a>의 주요 차이점.
+Table&nbsp;60.1: <a href="#sec-difference-in-differences">DID</a>와 <a href="#sec-synthetic-control">SC</a>의 주요 차이점.
 </figcaption>
 <div aria-describedby="tbl-synthdid-key-diff-did-sc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -38816,11 +38836,11 @@ SDID는 다음과 같은 경우에 특히 효과적이다:</li>
 </section>
 <section id="방법론-간-비교" class="level3">
 <h3 class="anchored" data-anchor-id="방법론-간-비교">방법론 간 비교</h3>
-<p>표 <a href="#tbl-synthdid-comparison-methods" class="quarto-xref">Table&nbsp;<span>59.2</span></a> 는 <a href="#sec-difference-in-differences">DID</a>, <a href="#sec-synthetic-control">SC</a>, SDID 간의 주요 차이점을 요약한다:</p>
+<p>표 <a href="#tbl-synthdid-comparison-methods" class="quarto-xref">Table&nbsp;<span>60.2</span></a> 는 <a href="#sec-difference-in-differences">DID</a>, <a href="#sec-synthetic-control">SC</a>, SDID 간의 주요 차이점을 요약한다:</p>
 <div id="tbl-synthdid-comparison-methods" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-synthdid-comparison-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;59.2: 방법론 간 비교.
+Table&nbsp;60.2: 방법론 간 비교.
 </figcaption>
 <div aria-describedby="tbl-synthdid-comparison-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -38859,14 +38879,14 @@ Table&nbsp;59.2: 방법론 간 비교.
 \]</span><br>
 여기서:</p>
 <ul>
-<li><span class="math inline">\(\hat{\delta}_t = \frac{1}{N_t} \sum_{i = N_c + 1}^{N} \hat{\delta}_i\)</span>는 처치 후 처치 개체들의 평균 편차를 나타낸다(표 <a href="#tbl-synthdid-sc-did-sdid-estimators" class="quarto-xref">Table&nbsp;<span>59.3</span></a>).</li>
+<li><span class="math inline">\(\hat{\delta}_t = \frac{1}{N_t} \sum_{i = N_c + 1}^{N} \hat{\delta}_i\)</span>는 처치 후 처치 개체들의 평균 편차를 나타낸다(표 <a href="#tbl-synthdid-sc-did-sdid-estimators" class="quarto-xref">Table&nbsp;<span>60.3</span></a>).</li>
 <li><span class="math inline">\(\sum_{i = 1}^{N_c} \hat{w}_i^{sdid} \hat{\delta}_i\)</span>는 가중 통제 개체 편차를 사용하여 차이를 조정한다.</li>
 </ul>
-<p>이를 “통제 집단의 변화”가 합성 도너 가중치를 사용하여 계산되고 “변화” 자체는 (단순한 처치 전 기간 평균이 아니라) 합성 시점 가중치를 사용하여 계산되는 이중차분으로 이해할 수 있다. 표 <a href="#tbl-synthdid-sc-did-sdid-estimators" class="quarto-xref">Table&nbsp;<span>59.3</span></a> 는 이러한 계통적 유사성을 명확히 보여준다. SC, DID, SDID 계열의 모든 추정량은 동일한 일반적 형태(처치 집단의 변화에서 가중 통제 집단의 변화를 뺀 것)를 취하며 단지 <em>어떤</em> 가중치를 사용하는지와 시간에 따른 변화를 <em>어떻게</em> 요약하는지에서만 차이가 난다.</p>
+<p>이를 “통제 집단의 변화”가 합성 도너 가중치를 사용하여 계산되고 “변화” 자체는 (단순한 처치 전 기간 평균이 아니라) 합성 시점 가중치를 사용하여 계산되는 이중차분으로 이해할 수 있다. 표 <a href="#tbl-synthdid-sc-did-sdid-estimators" class="quarto-xref">Table&nbsp;<span>60.3</span></a> 는 이러한 계통적 유사성을 명확히 보여준다. SC, DID, SDID 계열의 모든 추정량은 동일한 일반적 형태(처치 집단의 변화에서 가중 통제 집단의 변화를 뺀 것)를 취하며 단지 <em>어떤</em> 가중치를 사용하는지와 시간에 따른 변화를 <em>어떻게</em> 요약하는지에서만 차이가 난다.</p>
 <div id="tbl-synthdid-sc-did-sdid-estimators" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-synthdid-sc-did-sdid-estimators-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;59.3: SC, DID, SDID 추정량 요약.
+Table&nbsp;60.3: SC, DID, SDID 추정량 요약.
 </figcaption>
 <div aria-describedby="tbl-synthdid-sc-did-sdid-estimators-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -39185,11 +39205,11 @@ Y_{it} = X_{it} \beta + \varepsilon_{it}
 <li><p>연구 결과에 따르면 SynthDiD는 다른 방법들에 비해 평균 처치 효과에 대해 서로 다른 추정치를 산출한다.</p></li>
 <li><p>시뮬레이션 결과는 이러한 차이가 SynthDiD의 데이터 생성 과정 가정(잠재 요인 모델)이 전통적인 DiD 방법이 가정하는 가법적 고정효과 모델보다 실제 데이터와 더 밀접하게 일치하기 때문일 수 있음을 시사한다.</p></li>
 </ul>
-<p>처치 효과의 이질성을 탐색하기 위해 하위집단 분석(subgroup analysis)을 수행할 수 있다 <span class="citation" data-cites="berman2022value">[@berman2022value, p. 1092]</span>. 표 <a href="#tbl-synthdid-subgroup-analysis" class="quarto-xref">Table&nbsp;<span>59.4</span></a> 는 유효한 하위집단 분석을 수행하는 방법들을 보여준다.</p>
+<p>처치 효과의 이질성을 탐색하기 위해 하위집단 분석(subgroup analysis)을 수행할 수 있다 <span class="citation" data-cites="berman2022value">[@berman2022value, p. 1092]</span>. 표 <a href="#tbl-synthdid-subgroup-analysis" class="quarto-xref">Table&nbsp;<span>60.4</span></a> 는 유효한 하위집단 분석을 수행하는 방법들을 보여준다.</p>
 <div id="tbl-synthdid-subgroup-analysis" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-synthdid-subgroup-analysis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;59.4: 처치 효과 이질성 탐색을 위한 하위집단 분석 전략.
+Table&nbsp;60.4: 처치 효과 이질성 탐색을 위한 하위집단 분석 전략.
 </figcaption>
 <div aria-describedby="tbl-synthdid-subgroup-analysis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -39449,7 +39469,7 @@ Table&nbsp;59.4: 처치 효과 이질성 탐색을 위한 하위집단 분석 �
 <div id="tbl-did-potential-outcomes-simple" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-did-potential-outcomes-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.1: Potential outcomes by treatment status and time.
+Table&nbsp;61.1: Potential outcomes by treatment status and time.
 </figcaption>
 <div aria-describedby="tbl-did-potential-outcomes-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -39600,7 +39620,7 @@ E[Y(0)_{t=1} - Y(0)_{t=0} \mid D = 1] = E[Y(0)_{t=1} - Y(0)_{t=0} \mid D = 0].
 <div id="tbl-did-group-time-average-outcomes" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-did-group-time-average-outcomes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.2: DiD table of group-time average outcomes.
+Table&nbsp;61.2: DiD table of group-time average outcomes.
 </figcaption>
 <div aria-describedby="tbl-did-group-time-average-outcomes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -39693,7 +39713,7 @@ Y_{igt} = \alpha_g + \gamma_t + \beta I_{gt} + \delta X_{igt} + \epsilon_{igt}
 <div id="tbl-did-event-time-coding" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-did-event-time-coding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.3: Event-time coding around treatment.
+Table&nbsp;61.3: Event-time coding around treatment.
 </figcaption>
 <div aria-describedby="tbl-did-event-time-coding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -40002,7 +40022,7 @@ E_{imrt} &amp;= \alpha + BTB_{m (t - 3)} \theta_1 + BTB_{m (t - 2)} \theta_2 + B
 <div id="tbl-did-estimator-illustration-state-level" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-did-estimator-illustration-state-level-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.4: DiD estimator illustration using a state-level example.
+Table&nbsp;61.4: DiD estimator illustration using a state-level example.
 </figcaption>
 <div aria-describedby="tbl-did-estimator-illustration-state-level-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -40163,7 +40183,7 @@ Y_{idt} = \beta_0 + POST_t \beta_1 + Treat_d \beta_2 + (POST_t \times Treat_d)\b
 <div id="tbl-did-group-level-design-matrix" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-did-group-level-design-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.5: Group-level design matrix for difference-in-differences.
+Table&nbsp;61.5: Group-level design matrix for difference-in-differences.
 </figcaption>
 <div aria-describedby="tbl-did-group-level-design-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -40470,7 +40490,7 @@ Y_{it} = \alpha_i + \lambda_t + \tau W_{it} + \beta X_{it} + \epsilon_{it},
 <div id="tbl-did-goodman-bacon-comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-did-goodman-bacon-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.6: Goodman-Bacon comparison types.
+Table&nbsp;61.6: Goodman-Bacon comparison types.
 </figcaption>
 <div aria-describedby="tbl-did-goodman-bacon-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -40690,7 +40710,7 @@ Ensure no other policies or shocks coincide with the staggered treatment rollout
 </section>
 <section id="sec-bayesian-did" class="level2">
 <h2 class="anchored" data-anchor-id="sec-bayesian-did">베이지안 이중차분법</h2>
-<p>본 절의 표기법은 기초 장의 표 <a href="#tbl-quasi-exp-notation" class="quarto-xref">Table&nbsp;<span>56.12</span></a> 규칙을 따른다.</p>
+<p>본 절의 표기법은 기초 장의 표 <a href="#tbl-quasi-exp-notation" class="quarto-xref">Table&nbsp;<span>57.12</span></a> 규칙을 따른다.</p>
 <p>표준 <a href="#sec-difference-in-differences">이중차분법(Difference-in-Differences, DiD)</a> 추정량은 빈도주의(frequentist) 방식에 기반한다. 이는 처치효과의 점추정치(point estimate), 추정된 표준오차(standard error), 그리고 반복 표본추출(repeated sampling)에 기반하여 정당화되는 신뢰구간(confidence interval)을 산출한다. 이러한 체계는 패널 데이터가 크고 처치 시점이 동일하며 연구자가 신뢰구간을 포함한 단일 수치만을 보고하는 것으로 충분할 때 잘 작동한다. 베이지안 DiD 공식화는 식별 논리(동일한 평행 추세 가정이 설계를 뒷받침함)를 그대로 유지하면서도, 추론 체계를 관심 대상 모수에 대한 사후분포(posterior distribution)로 대체한다. 연구자는 점추정치와 표준오차 대신, 처치집단에 대한 평균 처치효과(Average Treatment Effect on the Treated, ATT), 특정 코호트별 또는 시점별 효과, 그리고 의사결정자가 관심을 가질 만한 이러한 값들의 모든 함수에 대해 완전한 분포를 얻게 된다.</p>
 <p>이러한 재구성은 실증 연구에서 자주 마주치는 세 가지 상황에서 큰 이점을 발휘한다. 첫째, 패널의 크기가 작아 점근적 정규 근사(asymptotic normal approximation)를 신뢰하기 어려울 때, 사후분포는 점근성에 의존하는 샌드위치 추정량 대신 유한 표본의 불확실성을 정직하게 반영한다. 둘째, 여러 코호트나 개체에 걸쳐 처치효과가 이질적(heterogeneous)일 때, 부분 풀링(partial pooling)은 코호트 수준의 잡음이 많은 추정치들을 공통 값으로 억지로 강제하지 않으면서도 정보를 공유하여 안정화한다. 셋째, 분석가가 처치효과를 재고 결정, 가격 책정 규칙, 규제 비용-편익 분석과 같은 후속 의사결정에 반영해야 할 때, 사후분포는 손실 함수(loss function)에 적분될 수 있는 미지의 효과에 대한 확률분포라는, 의사결정 이론이 정확히 요구하는 대상을 제공한다.</p>
 <section id="이원고정효과-회귀에서-확률-모델로의-전환" class="level3">
@@ -40795,7 +40815,7 @@ p(\tau)\, p(\boldsymbol{\alpha})\, p(\boldsymbol{\gamma})\, p(\sigma)\, \cdots,
 </section>
 <section id="sec-nonparametric-did" class="level2">
 <h2 class="anchored" data-anchor-id="sec-nonparametric-did">비모수 이중차분법 및 잠재 요인 모형</h2>
-<p>본 절의 표기법은 기초 장의 표 <a href="#tbl-quasi-exp-notation" class="quarto-xref">Table&nbsp;<span>56.12</span></a> 규칙을 따른다.</p>
+<p>본 절의 표기법은 기초 장의 표 <a href="#tbl-quasi-exp-notation" class="quarto-xref">Table&nbsp;<span>57.12</span></a> 규칙을 따른다.</p>
 <p>본 절에서는 강한 함수 형태 가정(functional-form assumptions)에 의존하지 않고 패널 데이터 환경에서 평균 처치효과를 식별하고 추정하는 방법을 다룬다. 표준적인 이원고정효과(Two-Way Fixed Effects, TWFE) 모형과 선형 요인 모형(linear factor model)은 미관측 개체 고유 성분 및 시간 고유 성분에 선형성(linearity) 또는 가법성(additivity)을 부여하므로 구현이 용이하지만 제약적이다. 여기서 소개하는 프레임워크는 잠재적 결과(potential outcomes), 잠재 개체 요인(latent unit factors), 잠재 시간 요인(latent time factors), 그리고 특이 오차(idiosyncratic shocks) 간의 완전한 비모수적(nonparametric) 관계를 허용한다. 목표는 횡단면 및 시계열 차원 모두에서 미관측 이질성을 허용하는 패널 내에서, TWFE 회귀가 요구하는 것보다 훨씬 약한 함수 형태 가정 하에 처치집단에 대한 평균 처치효과(Average Treatment Effect on the Treated, ATT)를 추정하는 것이다.</p>
 <p>이러한 접근법의 학문적 계보는 <span class="citation" data-cites="athey2006identification">@athey2006identification</span> 의 비선형 이중차분법 모형과 <span class="citation" data-cites="lee2015panel">@lee2015panel</span> 의 비모수 고정효과 패널 회귀로 이어지며 두 연구 모두 교과서적 DiD가 부과하는 가법적 선형 구조를 완화한다. 우리는 개체 및 시간 효과를 미지의 함수를 통해 결과 변수에 영향을 미치는 잠재 요인으로 취급함으로써가 기초 위에서 논의를 전개한다.</p>
 <section id="설정-및-잠재적-결과" class="level3">
@@ -40924,7 +40944,7 @@ E_\beta\Bigl[\bigl(\mu(\alpha, \beta) - \mu(\alpha', \beta)\bigr)\,\mu(\alpha', 
 </section>
 <section id="sec-temporal-causal-inference" class="level2">
 <h2 class="anchored" data-anchor-id="sec-temporal-causal-inference">시차를 둔 코호트를 활용한 시간적 인과추론</h2>
-<p>이 절의 표기법은 기초 편의 표 <a href="#tbl-quasi-exp-notation" class="quarto-xref">Table&nbsp;<span>56.12</span></a> 관례를 따른다.</p>
+<p>이 절의 표기법은 기초 편의 표 <a href="#tbl-quasi-exp-notation" class="quarto-xref">Table&nbsp;<span>57.12</span></a> 관례를 따른다.</p>
 <p>지금까지 개발된 이중차분법(DiD) 설계는 모두 최소한 일정 기간 동안 처치를 받지 않는 통제집단이 존재한다는 점에 의존한다. 특정 정책이 일부 주에만 적용되고 다른 주에는 적용되지 않거나, 가격 변동이 특정 시장에만 적용되고 인접 시장에는 적용되지 않거나, 제품 기능이 처치군에만 배포되고 홀드아웃(holdout) 집단에는 배포되지 않는 식이다. 문제는 모든 대상에 사건이 동시에 발생하는 경우다. 공개적으로 발표된 데이터 유출, 리콜, 규제 당국의 판결, 바이럴 뉴스 등은 전체 모집단에 거의 동시에 알려지므로, 통제집단으로 기능할 사건을 인지하지 못한 동시점의 비교 단위가 존재하지 않는다. A/B 테스트, 무작위 통제 시험, 시험 시장(test markets), 기존 DiD와 같은 전통적인 실험 및 준실험 도구는 모두 명확한 비교집단을 전제하는데, 널리 알려진 충격이 발생한 후에는 그러한 집단이 아예 존재하지 않는다. 설령 사건을 인지하지 못한 단위를 찾아낸다 하더라도, 사건을 놓쳤다는 바로 그 이유 때문에 이들은 모집단을 대표하지 못한다.</p>
 <p><span class="citation" data-cites="turjeman2023data가">@turjeman2023data가</span> 제안한 시간적 인과추론(Temporal causal inference)은 동일한 역년(calendar time) 시점의 다른 모집단 대신, 동일한 모집단의 과거 이력 시점에서 통제집단을 구축하여가 문제를 해결한다. 이 아이디어는 사건이 발생할 때 서로 다른 단위들이 각자의 수명 주기나 가입 기간(tenure)의 서로 다른 단계에 있다는 사실을 활용한다. 유출 발생 3주 전에 서비스에 가입한 사용자는 참여 초기 단계에서 충격을 경험하는 반면, 3년 전에 가입한 사용자는 성숙한 관계의 깊은 단계에서 충격을 겪는다. 사용자 행동이 역년 시간보다는 주로 가입 기간에 따른 궤적을 따른다면, 사건이 발생하기 전에 관측된 오랜 코호트의 초기 가입 기간 경험을 통해 충격을 겪은 신규 코호트가 사건이 없었을 경우 어떻게 행동했을지 예측할 수 있다.</p>
 <section id="시차를-둔-가입-기간에서-처치-및-통제-코호트로" class="level3">
@@ -41019,7 +41039,7 @@ E_\beta\Bigl[\bigl(\mu(\alpha, \beta) - \mu(\alpha', \beta)\bigr)\,\mu(\alpha', 
 </section>
 <section id="sec-instrumented-did" class="level2">
 <h2 class="anchored" data-anchor-id="sec-instrumented-did">도구변수 이중차분법</h2>
-<p>이 절의 표기법은 기초 편의 표 <a href="#tbl-quasi-exp-notation" class="quarto-xref">Table&nbsp;<span>56.12</span></a> 관례를 따른다.</p>
+<p>이 절의 표기법은 기초 편의 표 <a href="#tbl-quasi-exp-notation" class="quarto-xref">Table&nbsp;<span>57.12</span></a> 관례를 따른다.</p>
 <p>일반적인 이중차분법(DiD)을 정당화하는 평행 추세 가정은 미처치 잠재적 결과에 대한 가정이다. 즉 처치가 없었더라면 처치군과 통제군이 평행한 경로로 움직였을 것이라는 가정이다. 이 가정이 위배되는 흔한 이유는 두 집단이 처치 여부뿐만 아니라 노출 자체의 궤적에서도 차이를 보이고 이러한 노출 추세의 분기가 시간에 따라 영향력이 변하는 관측되지 않은 요인에 의해 유발되기 때문이다. 노출 추세가 분기되어 결과의 추세가 갈라질 때, 일반적인 DiD는 그 격차를 처치 효과로 귀인하여 편향을 초래한다. <span class="citation" data-cites="ye2022instrumented가">@ye2022instrumented가</span> 개발한 도구변수 이중차분법(Instrumented Difference-in-Differences)은 결과 추세에 직접 작용하지 않으면서 노출 추세를 교란하는 도구변수를 도입하여 정확히 이러한 상황을 해결한다.</p>
 <p>동기가 되는 연구 설계는 기준 시점(baseline) 이후 단위들이 처치를 규칙적으로 받도록 유도하는 권장(encouragement) 또는 인센티브가 제공되는 종단 연구(반복 횡단면 자료 포함 가능)다. 이 권장은 노출 추세에 대한 도구변수 역할을 수행한다. 권장이 결과 추세에 직접적인 영향을 미치지 않는다면, 노출의 비평행 추세를 따르는 결과의 비평행 추세는 모두 처치 효과로 귀인될 수 있다. 따라서가 방법은 차별적 노출로 인해 발생한 평행 추세 위배를 식별의 기회로 전환한다.</p>
 <section id="도구변수가-제공하는-이점" class="level3">
@@ -41059,7 +41079,7 @@ E_\beta\Bigl[\bigl(\mu(\alpha, \beta) - \mu(\alpha', \beta)\bigr)\,\mu(\alpha', 
 </section>
 <section id="sec-modern-estimators-for-staggered-adoption" class="level2">
 <h2 class="anchored" data-anchor-id="sec-modern-estimators-for-staggered-adoption">시차적 도입을 위한 현대적 추정량</h2>
-<p>이 절의 표기법은 기초 편의 표 <a href="#tbl-quasi-exp-notation" class="quarto-xref">Table&nbsp;<span>56.12</span></a> 관례를 따른다.</p>
+<p>이 절의 표기법은 기초 편의 표 <a href="#tbl-quasi-exp-notation" class="quarto-xref">Table&nbsp;<span>57.12</span></a> 관례를 따른다.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -43062,7 +43082,7 @@ B_{it}(j, l) = \frac{V_{i, t- l,j}- \sum_{i' \in \mathcal{M}_{it}}w_{it}^{i'}V_{
 <li><p>모형의 유연성: <a href="#sec-two-way-fixed-effects">TWFE</a>를 괴롭히는 <em>엄격한 외생성(strict exogeneity)</em> 가정을 완화하면서 풍부한 시계열 구조, 비선형 회귀, 또는 머신러닝 학습기를 결합할 수 있다.</p></li>
 <li><p>투명한 진단: 처치 전 예측 오차(예: <span class="math inline">\(\text{RMSE}_{\text{pre}}\)</span>)는 일반 DiD에는 없는 모형 적합도에 대한 구체적인 점검을 제공한다.</p></li>
 </ul>
-<p>주요 반사실 추정량군은 표 <a href="#tbl-did-counterfactual-estimators" class="quarto-xref">Table&nbsp;<span>60.7</span></a> 에 요약되어 있다.</p>
+<p>주요 반사실 추정량군은 표 <a href="#tbl-did-counterfactual-estimators" class="quarto-xref">Table&nbsp;<span>61.7</span></a> 에 요약되어 있다.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 18%">
@@ -43087,7 +43107,7 @@ B_{it}(j, l) = \frac{V_{i, t- l,j}- \sum_{i' \in \mathcal{M}_{it}}w_{it}^{i'}V_{
 <div id="tbl-did-counterfactual-estimators" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-did-counterfactual-estimators-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.7: DiD를 위한 주요 반사실(대치) 추정량군: 핵심 아이디어, 대표적 가정 및 R 구현.
+Table&nbsp;61.7: DiD를 위한 주요 반사실(대치) 추정량군: 핵심 아이디어, 대표적 가정 및 R 구현.
 </figcaption>
 <div aria-describedby="tbl-did-counterfactual-estimators-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -43329,11 +43349,11 @@ Y_{N1} &amp; ? &amp; Y_{N3} &amp; \cdots &amp; ?
 \end{pmatrix}
 \]</span></p>
 <p>행렬 형태</p>
-<p>표 <a href="#tbl-did-matrix-shape" class="quarto-xref">Table&nbsp;<span>60.8</span></a> 는 패널 행렬 형태를 결측 패턴 및 해당하는 방법론 문헌에 매핑한다.</p>
+<p>표 <a href="#tbl-did-matrix-shape" class="quarto-xref">Table&nbsp;<span>61.8</span></a> 는 패널 행렬 형태를 결측 패턴 및 해당하는 방법론 문헌에 매핑한다.</p>
 <div id="tbl-did-matrix-shape" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-did-matrix-shape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.8: 패널 행렬 형태, 처치 패턴 및 각 영역에 적용되는 회귀 또는 행렬 완성 문헌.
+Table&nbsp;61.8: 패널 행렬 형태, 처치 패턴 및 각 영역에 적용되는 회귀 또는 행렬 완성 문헌.
 </figcaption>
 <div aria-describedby="tbl-did-matrix-shape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -43399,7 +43419,7 @@ Y_{it} = L_{it} + \sum_{p=1}^{P} \sum_{q=1}^{Q} X_{ip} H_{pq} Z_{qt} + \mu_i + \
 <li><span class="math inline">\(V_{it}\)</span>: 시간 가변 공변량</li>
 <li><span class="math inline">\(H\)</span>: 상호작용 효과. 라쏘(Lasso) 유형의 <span class="math inline">\(l_1\)</span> 노름(<span class="math inline">\(||H|| = \sum_{p = 1}^p \sum_{q = 1}^Q |H_{pq}|\)</span>)을 사용하여 <span class="math inline">\(H \to 0\)</span>으로 축소한다.</li>
 </ul>
-<p><span class="math inline">\(L\)</span>을 정규화하기 위한 몇 가지 옵션이 표 <a href="#tbl-did-matrix-completion-regularizers" class="quarto-xref">Table&nbsp;<span>60.9</span></a> 에 요약되어 있다.</p>
+<p><span class="math inline">\(L\)</span>을 정규화하기 위한 몇 가지 옵션이 표 <a href="#tbl-did-matrix-completion-regularizers" class="quarto-xref">Table&nbsp;<span>61.9</span></a> 에 요약되어 있다.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 13%">
@@ -43423,7 +43443,7 @@ Y_{it} = L_{it} + \sum_{p=1}^{P} \sum_{q=1}^{Q} X_{ip} H_{pq} Z_{qt} + \mu_i + \
 <div id="tbl-did-matrix-completion-regularizers" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-did-matrix-completion-regularizers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.9: 행렬 완성에서 저랭크 행렬 <span class="math inline">\(L\)</span>에 대한 정규화 옵션(페널티 형태, 성질 및 실행 가능성 포함).
+Table&nbsp;61.9: 행렬 완성에서 저랭크 행렬 <span class="math inline">\(L\)</span>에 대한 정규화 옵션(페널티 형태, 성질 및 실행 가능성 포함).
 </figcaption>
 <div aria-describedby="tbl-did-matrix-completion-regularizers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -44401,7 +44421,7 @@ Y_{it} = \alpha_i + \gamma_t + \beta \cdot D_{it} + \epsilon_{it}.
 </section>
 <section id="sec-nonlinear-did" class="level3">
 <h3 class="anchored" data-anchor-id="sec-nonlinear-did">비선형 이중차분법</h3>
-<p>이 절의 표기법은 기초 장의 표 <a href="#tbl-quasi-exp-notation" class="quarto-xref">Table&nbsp;<span>56.12</span></a> 규칙을 따른다.</p>
+<p>이 절의 표기법은 기초 장의 표 <a href="#tbl-quasi-exp-notation" class="quarto-xref">Table&nbsp;<span>57.12</span></a> 규칙을 따른다.</p>
 <p>표준 <a href="#sec-difference-in-differences">이중차분법(DiD)</a> 추정량은 미처치 잠재적 결과가 집단 간에 선형 추세를 따른다고 가정한다. 즉, 처치가 없었더라면 처치 집단과 통제 집단이 평행한 선을 따라 이동했을 것이라는 가정이다. 이는 실수선 전체에 걸쳐 자유롭게 변하는 연속형 결과(로그 임금, 로그 지출, 유권자 득표율 등)에 대해는 타당한 가정이지만 결과가 유계이거나 이산형이거나 제약이 있는 경우에는 무너진다. 선형 추세가 “미처치 고용률” <span class="math inline">\(-0.05\)</span>나 “예측 이탈 비율” <span class="math inline">\(1.13\)</span>을 산출한다면 이는 실제로 아무것도 예측하지 못한 것이며 이러한 예측 위에 구축된 추정량은 선형 명세가 경고하지 못하는 방식으로 잘못 명세된다.</p>
 <p>이 문저자가 중요한 경우는 실증 연구에서 흔히 발생한다.</p>
 <ul>
@@ -45083,11 +45103,11 @@ E[Y_{it}(0)] = E[Y_{i,t'}(0)] \quad \text{모든 } i \text{ 및 시점 } t, t'\t
 <li>시사점: 이 가정이 식별 자체에 필수적인 것은 아니지만 추정과 해석을 단순화한다. 처치 효과가 시간이나 단위 특성과 상호작용하여 변할 때 표준 추정치는 편향될 수 있다.</li>
 <li>대안적 접근법: 최근 DiD 방법(예: Callaway &amp; Sant’Anna, Sun &amp; Abraham)은 처치 효과 이질성을 허용하여가 가정을 완화한다.</li>
 </ul>
-<p>표준 DiD 설정에서 연구자들은 종종 “효과 가산성”과 “효과 동질성”이라는 표현을 혼용한다. 관례적인 수준 선형 모형이 두 개념을 모두 내포하고 있기 때문이다. 그러나 엄밀히 말해 둘은 동일하지 않다(표 <a href="#tbl-did-differences-effect-additivity-homogeneity" class="quarto-xref">Table&nbsp;<span>60.10</span></a>).</p>
+<p>표준 DiD 설정에서 연구자들은 종종 “효과 가산성”과 “효과 동질성”이라는 표현을 혼용한다. 관례적인 수준 선형 모형이 두 개념을 모두 내포하고 있기 때문이다. 그러나 엄밀히 말해 둘은 동일하지 않다(표 <a href="#tbl-did-differences-effect-additivity-homogeneity" class="quarto-xref">Table&nbsp;<span>61.10</span></a>).</p>
 <div id="tbl-did-differences-effect-additivity-homogeneity" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-did-differences-effect-additivity-homogeneity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.10: 효과 가산성과 효과 동질성의 차이점.
+Table&nbsp;61.10: 효과 가산성과 효과 동질성의 차이점.
 </figcaption>
 <div aria-describedby="tbl-did-differences-effect-additivity-homogeneity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -45950,11 +45970,11 @@ Y_{it}(0) \;=\; h_t(U_i),
 </section>
 <section id="qdid-대-cic" class="level4">
 <h4 class="anchored" data-anchor-id="qdid-대-cic">QDiD 대 CiC</h4>
-<p>QDiD와 CiC는 모두 <code>qte</code> 패키지에서 구현할 수 있다. 둘 다 분포 DiD 가정에 기반하지만 두 번째 가정에서 차이가 있다. QDiD는 추가로 코퓰러 안정성(기간 간 결과 순위 간의 의존성이 안정적이라는 가정)을 요구한다. CiC는 대신 순위 불변성과 미관측 이질성의 지지 집합 포함 조건에 의존한다. 표 <a href="#tbl-cic-vs-qdid-summary" class="quarto-xref">Table&nbsp;<span>60.11</span></a> 는 둘의 주요 대비를 요약한다.</p>
+<p>QDiD와 CiC는 모두 <code>qte</code> 패키지에서 구현할 수 있다. 둘 다 분포 DiD 가정에 기반하지만 두 번째 가정에서 차이가 있다. QDiD는 추가로 코퓰러 안정성(기간 간 결과 순위 간의 의존성이 안정적이라는 가정)을 요구한다. CiC는 대신 순위 불변성과 미관측 이질성의 지지 집합 포함 조건에 의존한다. 표 <a href="#tbl-cic-vs-qdid-summary" class="quarto-xref">Table&nbsp;<span>61.11</span></a> 는 둘의 주요 대비를 요약한다.</p>
 <div id="tbl-cic-vs-qdid-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cic-vs-qdid-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.11: QDiD와 CiC의 핵심 대비.
+Table&nbsp;61.11: QDiD와 CiC의 핵심 대비.
 </figcaption>
 <div aria-describedby="tbl-cic-vs-qdid-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -46036,11 +46056,11 @@ Table&nbsp;60.11: QDiD와 CiC의 핵심 대비.
 </section>
 <section id="sec-cic-vs-qdid" class="level2">
 <h2 class="anchored" data-anchor-id="sec-cic-vs-qdid">CiC 대 QDiD: 상세 대비</h2>
-<p>CiC와 QDiD는 모두 패널 환경에서 분위수 처치 효과를 제공하지만 <em>서로 다른</em> 식별 가정에 기반하며 <em>서로 다른</em> 반사실 질문에 답한다. 표 <a href="#tbl-cic-vs-qdid-detailed" class="quarto-xref">Table&nbsp;<span>60.12</span></a> 는 두 방법의 세부적인 비교를 제시한다.</p>
+<p>CiC와 QDiD는 모두 패널 환경에서 분위수 처치 효과를 제공하지만 <em>서로 다른</em> 식별 가정에 기반하며 <em>서로 다른</em> 반사실 질문에 답한다. 표 <a href="#tbl-cic-vs-qdid-detailed" class="quarto-xref">Table&nbsp;<span>61.12</span></a> 는 두 방법의 세부적인 비교를 제시한다.</p>
 <div id="tbl-cic-vs-qdid-detailed" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cic-vs-qdid-detailed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.12: 식별 가정, 척도 불변성 및 이질성 해석에 따른 QDiD와 CiC의 상세 비교.
+Table&nbsp;61.12: 식별 가정, 척도 불변성 및 이질성 해석에 따른 QDiD와 CiC의 상세 비교.
 </figcaption>
 <div aria-describedby="tbl-cic-vs-qdid-detailed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -46748,11 +46768,11 @@ Note
 <li>수행의 용이성: 사건 연구에는 주가 자료와 간단한 계량경제 모형만 필요하므로 연구자가 폭넓게 활용할 수 있다.</li>
 </ul>
 <p>사건 연구의 사건 유형</p>
-<p>표 <a href="#tbl-event-study-event-types" class="quarto-xref">Table&nbsp;<span>60.13</span></a> 은 사건 연구에서 일반적으로 분석하는 사건을 기업 내부 사건과 기업 외부 사건으로 구분한다.</p>
+<p>표 <a href="#tbl-event-study-event-types" class="quarto-xref">Table&nbsp;<span>61.13</span></a> 은 사건 연구에서 일반적으로 분석하는 사건을 기업 내부 사건과 기업 외부 사건으로 구분한다.</p>
 <div id="tbl-event-study-event-types" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-event-study-event-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.13: 사건 연구에서 분석하는 내부 사건과 외부 사건의 범주 및 대표 사례.
+Table&nbsp;61.13: 사건 연구에서 분석하는 내부 사건과 외부 사건의 범주 및 대표 사례.
 </figcaption>
 <div aria-describedby="tbl-event-study-event-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -46783,11 +46803,11 @@ Table&nbsp;60.13: 사건 연구에서 분석하는 내부 사건과 외부 사�
 <p>이 기법은 금융 분야에서 탄생했다. <span class="citation" data-cites="fama1969adjustment">@fama1969adjustment</span> 는 주식분할 발표를 이용해 겉보기에는 단순한 질문을 던졌다. 가격은 새 정보에 즉시 조정되는가, 아니면 며칠 또는 몇 주에 걸쳐 조정되는가? 답은 효율적 시장 가설에 중요했지만 사건을 선택하고 기간을 정의하며 정상 수익률을 계산하고 그 차이를 사건에 귀속하는 <em>도구 체계</em> 자체는 일반적이었다. 이 도구 체계가 마련되자 명확한 사건과 시장 반응이 존재하는 모든 분야에서 이를 활용하기 시작했다.</p>
 <p>다음으로 경영 연구자들이 이를 도입했다. 1990년대 후반에는 질문이 시장 효율성에서 경영 의사결정으로 이동했다. 경영자의 선택은 실제로 주주 가치를 창출하는가, 그렇다면 어떤 선택이 그러한가? <span class="citation" data-cites="mcwilliams1997event">@mcwilliams1997event</span> 는이 방법이 경영 연구에 도입된 과정을 검토하고 짧은 기간, 신중한 사건 정의, 교란 사건에 대한 주의 등 이후 실무를 형성한 방법론적 주의사항을 제시했다. 이 검토 논문은 금융 외 분야에 사건 연구를 적용하려는 연구자에게 여전히 표준적인 출발점이다.</p>
 <p>마케팅 연구자들은 이 도구 체계를 이사회와 CFO가 이미 사용하는 언어, 즉 주가로 마케팅 의사결정을 정당화하는 데 활용했다. 브랜드 인수, 유명인 보증, 신제품 출시가 가치를 창출한다고 가정할 때, 사건 연구를 이용하면 뉴스가 발표된 날 시장도 그렇게 판단했는지 확인할 수 있다. 마케팅 사건 연구는 두 갈래로 발전했다. 첫째는 <em>기업 주도(firm-initiated)</em> 사건, 즉 기업이 선택해 실행한 일을 다룬다. 둘째는 <em>비기업 주도(non-firm-initiated)</em> 사건, 즉 대개 기업의 통제 밖에서 발생한 일을 다룬다.</p>
-<p>표 <a href="#tbl-event-study-firm-initiated" class="quarto-xref">Table&nbsp;<span>60.14</span></a> 와 <a href="#tbl-event-study-non-firm" class="quarto-xref">Table&nbsp;<span>60.15</span></a> 은 각 갈래의 대표 연구를 사건 유형별로 정리한 것이다. 이 표들은 “창출된 가치”가 “시장 반응”으로 대리될 수 있음을 수용할 때 사건 연구가 기업 사명 변경부터 데이터 유출에 이르기까지 얼마나 넓은 주제를 다룰 수 있는지 보여준다.</p>
+<p>표 <a href="#tbl-event-study-firm-initiated" class="quarto-xref">Table&nbsp;<span>61.14</span></a> 와 <a href="#tbl-event-study-non-firm" class="quarto-xref">Table&nbsp;<span>61.15</span></a> 은 각 갈래의 대표 연구를 사건 유형별로 정리한 것이다. 이 표들은 “창출된 가치”가 “시장 반응”으로 대리될 수 있음을 수용할 때 사건 연구가 기업 사명 변경부터 데이터 유출에 이르기까지 얼마나 넓은 주제를 다룰 수 있는지 보여준다.</p>
 <div id="tbl-event-study-firm-initiated" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-event-study-firm-initiated-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.14: 기업 주도 활동에 대한 마케팅 사건 연구 분류.
+Table&nbsp;61.14: 기업 주도 활동에 대한 마케팅 사건 연구 분류.
 </figcaption>
 <div aria-describedby="tbl-event-study-firm-initiated-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -46836,7 +46856,7 @@ Table&nbsp;60.14: 기업 주도 활동에 대한 마케팅 사건 연구 분류.
 <div id="tbl-event-study-non-firm" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-event-study-non-firm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.15: 외부 사건 범주별 비기업 주도 활동에 대한 마케팅 사건 연구.
+Table&nbsp;61.15: 외부 사건 범주별 비기업 주도 활동에 대한 마케팅 사건 연구.
 </figcaption>
 <div aria-describedby="tbl-event-study-non-firm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -46896,11 +46916,11 @@ Table&nbsp;60.15: 외부 사건 범주별 비기업 주도 활동에 대한 마�
 <section id="단계-사건-식별" class="level3">
 <h3 class="anchored" data-anchor-id="단계-사건-식별">1단계: 사건 식별</h3>
 <p>사건 연구는 주식 시장이 새로운 정보를 효율적으로 반영한다는 가정 하에 특정 사건이 기업의 주가에 미치는 영향을 분석한다. 사건은 기업의 기대 현금 흐름이나 할인율에 영향을 미쳐야 한다 <span class="citation" data-cites="sorescu">[@sorescu, p. 191]</span>.</p>
-<p>표 <a href="#tbl-event-study-event-categories" class="quarto-xref">Table&nbsp;<span>60.16</span></a> 는 자주 분석되는 광범위한 사건 범주와 구체적인 사례를 정리한 것이다.</p>
+<p>표 <a href="#tbl-event-study-event-categories" class="quarto-xref">Table&nbsp;<span>61.16</span></a> 는 자주 분석되는 광범위한 사건 범주와 구체적인 사례를 정리한 것이다.</p>
 <div id="tbl-event-study-event-categories" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-event-study-event-categories-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.16: 사건 연구에서 분석되는 주요 사건 범주 및 대표 사례.
+Table&nbsp;61.16: 사건 연구에서 분석되는 주요 사건 범주 및 대표 사례.
 </figcaption>
 <div aria-describedby="tbl-event-study-event-categories-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -46946,11 +46966,11 @@ Table&nbsp;60.16: 사건 연구에서 분석되는 주요 사건 범주 및 대�
 <h3 class="anchored" data-anchor-id="단계-사건-기간과-추정-기간-정의">2단계: 사건 기간과 추정 기간 정의</h3>
 <section id="추정-기간" class="level4">
 <h4 class="anchored" data-anchor-id="추정-기간">추정 기간</h4>
-<p>추정 기간은 사건 전 정상(기대) 수익률을 계산하는 데 사용된다. 표 <a href="#tbl-event-study-estimation-window" class="quarto-xref">Table&nbsp;<span>60.17</span></a> 는 문헌에서 사용되는 일반적인 선택을 요약한다.</p>
+<p>추정 기간은 사건 전 정상(기대) 수익률을 계산하는 데 사용된다. 표 <a href="#tbl-event-study-estimation-window" class="quarto-xref">Table&nbsp;<span>61.17</span></a> 는 문헌에서 사용되는 일반적인 선택을 요약한다.</p>
 <div id="tbl-event-study-estimation-window" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-event-study-estimation-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.17: 대표적 사건 연구 논문들의 추정 기간 설정.
+Table&nbsp;61.17: 대표적 사건 연구 논문들의 추정 기간 설정.
 </figcaption>
 <div aria-describedby="tbl-event-study-estimation-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -46984,11 +47004,11 @@ Table&nbsp;60.17: 대표적 사건 연구 논문들의 추정 기간 설정.
 </section>
 <section id="사건-기간" class="level4">
 <h4 class="anchored" data-anchor-id="사건-기간">사건 기간</h4>
-<p>사건 기간은 사건에 대한 시장의 반응을 포착한다. 적절한 기간 길이는 사건 유형과 정보 전파 속도에 따라 달라진다(표 <a href="#tbl-event-study-event-window" class="quarto-xref">Table&nbsp;<span>60.18</span></a>).</p>
+<p>사건 기간은 사건에 대한 시장의 반응을 포착한다. 적절한 기간 길이는 사건 유형과 정보 전파 속도에 따라 달라진다(표 <a href="#tbl-event-study-event-window" class="quarto-xref">Table&nbsp;<span>61.18</span></a>).</p>
 <div id="tbl-event-study-event-window" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-event-study-event-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.18: 대표적 논문들의 사건 기간 길이.
+Table&nbsp;61.18: 대표적 논문들의 사건 기간 길이.
 </figcaption>
 <div aria-describedby="tbl-event-study-event-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -47107,11 +47127,11 @@ CAR^{OB} = \frac{CAR^{SHV}}{\text{레버리지 효과}}
 </section>
 <section id="마케팅-사건은-언제-비영업-자산이나-부채에-영향을-미치는가" class="level3">
 <h3 class="anchored" data-anchor-id="마케팅-사건은-언제-비영업-자산이나-부채에-영향을-미치는가">마케팅 사건은 언제 비영업 자산이나 부채에 영향을 미치는가?</h3>
-<p>대부분의 마케팅 사건은 영업 비즈니스 가치에 영향을 미치지만 드물게 비영업 자산이나 부채에도 영향을 미친다(표 <a href="#tbl-event-study-financial-structure" class="quarto-xref">Table&nbsp;<span>60.19</span></a>).</p>
+<p>대부분의 마케팅 사건은 영업 비즈니스 가치에 영향을 미치지만 드물게 비영업 자산이나 부채에도 영향을 미친다(표 <a href="#tbl-event-study-financial-structure" class="quarto-xref">Table&nbsp;<span>61.19</span></a>).</p>
 <div id="tbl-event-study-financial-structure" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-event-study-financial-structure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.19: 영업 가치 대신 비영업 자산이나 부채에 영향을 미칠 수 있는 마케팅 사건.
+Table&nbsp;61.19: 영업 가치 대신 비영업 자산이나 부채에 영향을 미칠 수 있는 마케팅 사건.
 </figcaption>
 <div aria-describedby="tbl-event-study-financial-structure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -47682,11 +47702,11 @@ BHAR_{t=1}^{T} = \prod_{t=1}^{T} (1 + R_{it}) - \prod_{t=1}^{T} (1 + E(R_{it}))
 <p><span class="math display">\[
 \Pi_{t = s}^{T} (1 + E(R_{it})) = \sum_{i=s}^{n_t} \left( w_{is} \prod_{t=1}^{T} (1 + R_{it}) \right)
 \]</span></p>
-<p>WRDS 장기 사건 연구 도구의 주요 파라미터(표 <a href="#tbl-event-study-wrds-parameters" class="quarto-xref">Table&nbsp;<span>60.20</span></a>):</p>
+<p>WRDS 장기 사건 연구 도구의 주요 파라미터(표 <a href="#tbl-event-study-wrds-parameters" class="quarto-xref">Table&nbsp;<span>61.20</span></a>):</p>
 <div id="tbl-event-study-wrds-parameters" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-event-study-wrds-parameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.20: WRDS 장기 사건 연구 파라미터.
+Table&nbsp;61.20: WRDS 장기 사건 연구 파라미터.
 </figcaption>
 <div aria-describedby="tbl-event-study-wrds-parameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -47721,11 +47741,11 @@ Table&nbsp;60.20: WRDS 장기 사건 연구 파라미터.
 <p><span class="math display">\[
 LCAR_{iT} = \sum_{t = 1}^{T} (R_{it} - R_{pt})
 \]</span></p>
-<p>표 <a href="#tbl-event-study-lcar-vs-bhar" class="quarto-xref">Table&nbsp;<span>60.21</span></a> 는 LCAR과 BHAR의 특성을 비교한다.</p>
+<p>표 <a href="#tbl-event-study-lcar-vs-bhar" class="quarto-xref">Table&nbsp;<span>61.21</span></a> 는 LCAR과 BHAR의 특성을 비교한다.</p>
 <div id="tbl-event-study-lcar-vs-bhar" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-event-study-lcar-vs-bhar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.21: 장기 누적 비정상 수익률(LCAR) 대 매수 후 보유 비정상 수익률(BHAR).
+Table&nbsp;61.21: 장기 누적 비정상 수익률(LCAR) 대 매수 후 보유 비정상 수익률(BHAR).
 </figcaption>
 <div aria-describedby="tbl-event-study-lcar-vs-bhar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -47932,11 +47952,11 @@ E(R_i) = R_f + \beta_i (E(R_m) - R_f)
 R = R_f + \Lambda f + \epsilon
 \]</span></p>
 <p>다수의 체계적 위험 요인을 허용한다.</p>
-<p>표 <a href="#tbl-event-study-return-models" class="quarto-xref">Table&nbsp;<span>60.22</span></a> 는 주요 기대수익률 모형을 비교 요약한다.</p>
+<p>표 <a href="#tbl-event-study-return-models" class="quarto-xref">Table&nbsp;<span>61.22</span></a> 는 주요 기대수익률 모형을 비교 요약한다.</p>
 <div id="tbl-event-study-return-models" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-event-study-return-models-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.22: 사건 연구를 위한 기대수익률 모형 비교.
+Table&nbsp;61.22: 사건 연구를 위한 기대수익률 모형 비교.
 </figcaption>
 <div aria-describedby="tbl-event-study-return-models-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -48037,11 +48057,11 @@ Table&nbsp;60.22: 사건 연구를 위한 기대수익률 모형 비교.
 </section>
 <section id="사건-연구의-적용" class="level2">
 <h2 class="anchored" data-anchor-id="사건-연구의-적용">사건 연구의 적용</h2>
-<p>사건 연구 소프트웨어 목록(표 <a href="#tbl-event-study-r-packages" class="quarto-xref">Table&nbsp;<span>60.23</span></a>):</p>
+<p>사건 연구 소프트웨어 목록(표 <a href="#tbl-event-study-r-packages" class="quarto-xref">Table&nbsp;<span>61.23</span></a>):</p>
 <div id="tbl-event-study-r-packages" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-event-study-r-packages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.23: 사건 연구 관련 소프트웨어 패키지.
+Table&nbsp;61.23: 사건 연구 관련 소프트웨어 패키지.
 </figcaption>
 <div aria-describedby="tbl-event-study-r-packages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -48233,11 +48253,11 @@ Table&nbsp;60.23: 사건 연구 관련 소프트웨어 패키지.
 <p>현대 응용경제학에서 “사건 연구”라는 용어는 금융 사건 연구뿐만 아니라 패널 데이터에서 처치 시점 전후의 동적 효과를 추적하는 동적 이중차분법(Dynamic DiD) 회귀를 의미하기도 한다.</p>
 <section id="금융-사건-연구와-패널-계량경제학적-사건-연구" class="level3">
 <h3 class="anchored" data-anchor-id="금융-사건-연구와-패널-계량경제학적-사건-연구">금융 사건 연구와 패널 계량경제학적 사건 연구</h3>
-<p>표 <a href="#tbl-event-study-comparison" class="quarto-xref">Table&nbsp;<span>60.24</span></a> 은 두 방법의 핵심 차이를 비교한다.</p>
+<p>표 <a href="#tbl-event-study-comparison" class="quarto-xref">Table&nbsp;<span>61.24</span></a> 은 두 방법의 핵심 차이를 비교한다.</p>
 <div id="tbl-event-study-comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-event-study-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.24: 금융 사건 연구 대 계량경제학적 사건 연구 비교.
+Table&nbsp;61.24: 금융 사건 연구 대 계량경제학적 사건 연구 비교.
 </figcaption>
 <div aria-describedby="tbl-event-study-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -48568,7 +48588,7 @@ E[D_{1i} - D_{0i} ] = P[D_{1i} &gt; D_{0i}].
 <div id="tbl-iv-compliance-types" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-iv-compliance-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.25: Compliance types in IV: switchers (compliers) versus non-switchers (always- and never-takers).
+Table&nbsp;61.25: Compliance types in IV: switchers (compliers) versus non-switchers (always- and never-takers).
 </figcaption>
 <div aria-describedby="tbl-iv-compliance-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -48907,7 +48927,7 @@ S = E[Z' u u' Z] = \lim_{N \to \infty} N^{-1} [Z' \Omega Z].
 <div id="tbl-iv-2sls-vs-gmm" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-iv-2sls-vs-gmm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.26: 2SLS versus IV-GMM along instrument usage, weighting, efficiency, and overidentification testing.
+Table&nbsp;61.26: 2SLS versus IV-GMM along instrument usage, weighting, efficiency, and overidentification testing.
 </figcaption>
 <div aria-describedby="tbl-iv-2sls-vs-gmm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -49334,11 +49354,11 @@ V = (Q_{ZX})^{-1} Q_{Zuu} (Q_{ZX}')^{-1}
 \hat{\beta}_{GMM} = \arg \min_{\beta} \left( \frac{1}{n} \sum_{i=1}^n Z_i (Y_i - X_i' \beta) \right)' W \left( \frac{1}{n} \sum_{i=1}^n Z_i (Y_i - X_i' \beta) \right)
 \]</span></p>
 <p>여기서 최적 가중 행렬은 <span class="math inline">\(W = \Omega^{-1}\)</span>이다.</p>
-<p>표 <a href="#tbl-iv-summary-conditions" class="quarto-xref">Table&nbsp;<span>60.27</span></a> 는 IV/GMM 식별 및 추론에 필요한 조건들을 요약한다.</p>
+<p>표 <a href="#tbl-iv-summary-conditions" class="quarto-xref">Table&nbsp;<span>61.27</span></a> 는 IV/GMM 식별 및 추론에 필요한 조건들을 요약한다.</p>
 <div id="tbl-iv-summary-conditions" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-iv-summary-conditions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.27: IV 및 GMM 식별과 추론을 위한 조건 요약.
+Table&nbsp;61.27: IV 및 GMM 식별과 추론을 위한 조건 요약.
 </figcaption>
 <div aria-describedby="tbl-iv-summary-conditions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -49409,11 +49429,11 @@ Y = \beta X + u
 \hat{t}^2 = \hat{t}^2_{AR} \times \frac{1}{1 - \hat{\rho} \frac{\hat{t}_{AR}}{\hat{f}} + \frac{\hat{t}^2_{AR}}{\hat{f}^2}}
 \]</span></p>
 <p>여기서 <span class="math inline">\(\hat{t}^2_{AR} \sim \chi^2(1)\)</span>, <span class="math inline">\(\hat{f} = \hat{\pi} / \sqrt{\hat{V}_N(\hat{\pi})}\)</span>는 1단계 강도, <span class="math inline">\(\hat{\rho}\)</span>는 1단계 잔차와 <span class="math inline">\(u\)</span> 간의 상관계수다.</p>
-<p>표 <a href="#tbl-iv-inference-scenarios" class="quarto-xref">Table&nbsp;<span>60.28</span></a> 는 도구변수 강도와 내생성 수준에 따른 추론 품질을 요약한다.</p>
+<p>표 <a href="#tbl-iv-inference-scenarios" class="quarto-xref">Table&nbsp;<span>61.28</span></a> 는 도구변수 강도와 내생성 수준에 따른 추론 품질을 요약한다.</p>
 <div id="tbl-iv-inference-scenarios" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-iv-inference-scenarios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.28: 도구변수 강도 및 내생성에 따른 표준 IV 추론 품질.
+Table&nbsp;61.28: 도구변수 강도 및 내생성에 따른 표준 IV 추론 품질.
 </figcaption>
 <div aria-describedby="tbl-iv-inference-scenarios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -49478,11 +49498,11 @@ AR(\beta_0) = \frac{(Y - \beta_0 X)' P_Z (Y - \beta_0 X)}{\hat{\sigma}^2} \sim \
 <li>도구변수 강도와 무관하게 유효하다.</li>
 <li>비정규성, 이분산성, 군집 및 자기상관 하에서도 확장 가능하다 <span class="citation" data-cites="staiger1997instrumental stock2000gmm moreira2019optimal">[@staiger1997instrumental; @stock2000gmm; @moreira2019optimal]</span>.</li>
 </ul>
-<p>표 <a href="#tbl-iv-ar-validity" class="quarto-xref">Table&nbsp;<span>60.29</span></a> 는 다양한 오차 구조에서의 AR 검정 타당성을 요약한다.</p>
+<p>표 <a href="#tbl-iv-ar-validity" class="quarto-xref">Table&nbsp;<span>61.29</span></a> 는 다양한 오차 구조에서의 AR 검정 타당성을 요약한다.</p>
 <div id="tbl-iv-ar-validity" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-iv-ar-validity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.29: 오차 구조별 Anderson-Rubin 검정의 타당성.
+Table&nbsp;61.29: 오차 구조별 Anderson-Rubin 검정의 타당성.
 </figcaption>
 <div aria-describedby="tbl-iv-ar-validity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -49553,11 +49573,11 @@ Table&nbsp;60.29: 오차 구조별 Anderson-Rubin 검정의 타당성.
 <section id="sec-tf-procedure" class="level3">
 <h3 class="anchored" data-anchor-id="sec-tf-procedure">tF 절차</h3>
 <p><span class="citation" data-cites="lee2022valid">@lee2022valid</span> 는 단일 식별 IV 모형을 위해 tF 절차를 도입했다. 가설 검정을 역전시켜 신뢰집합을 구성하는 AR 검정과 달리, tF 절차는 표준오차를 1단계 F-통계량에 따라 직접 조정한다.</p>
-<p>표 <a href="#tbl-iv-ar-vs-tf" class="quarto-xref">Table&nbsp;<span>60.30</span></a> 는 AR 검정과 tF 절차를 비교한다.</p>
+<p>표 <a href="#tbl-iv-ar-vs-tf" class="quarto-xref">Table&nbsp;<span>61.30</span></a> 는 AR 검정과 tF 절차를 비교한다.</p>
 <div id="tbl-iv-ar-vs-tf" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-iv-ar-vs-tf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.30: 단일 식별 IV에서 Anderson-Rubin 검정과 tF 절차의 비교.
+Table&nbsp;61.30: 단일 식별 IV에서 Anderson-Rubin 검정과 tF 절차의 비교.
 </figcaption>
 <div aria-describedby="tbl-iv-ar-vs-tf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -49659,11 +49679,11 @@ Table&nbsp;60.30: 단일 식별 IV에서 Anderson-Rubin 검정과 tF 절차의 �
 <li>내생성 수준(<span class="math inline">\(\rho\)</span>)이 온건하고(<span class="math inline">\(|\rho| &lt; 0.76\)</span>) 1단계 F-통계량이 극단적으로 약하지 않다면 기존 t-검정과 신뢰구간이 실무적으로 양호하게 작동한다.</li>
 <li>1단계 부호 선별(First-Stage Sign Screening): 1단계 추정치의 부호가 이론적 예상과 일치하는 표본만 활용함으로써(<span class="math inline">\(\hat{\pi} &gt; 0\)</span>), 신뢰구간 포함확률을 훼손하지 않으면서 IV 추정량의 중위수 편향을 절반으로 줄일 수 있다.</li>
 </ul>
-<p>표 <a href="#tbl-iv-ak-ar-tf" class="quarto-xref">Table&nbsp;<span>60.31</span></a> 는 AK 부호 선별, AR 검정, tF 절차를 비교한다.</p>
+<p>표 <a href="#tbl-iv-ak-ar-tf" class="quarto-xref">Table&nbsp;<span>61.31</span></a> 는 AK 부호 선별, AR 검정, tF 절차를 비교한다.</p>
 <div id="tbl-iv-ak-ar-tf" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-iv-ak-ar-tf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.31: AK 1단계 부호 선별, AR 검정, tF 절차 비교.
+Table&nbsp;61.31: AK 1단계 부호 선별, AR 검정, tF 절차 비교.
 </figcaption>
 <div aria-describedby="tbl-iv-ak-ar-tf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -49795,11 +49815,11 @@ Y = \beta_1 X_1 + \beta_2 X_2 + \epsilon
 <section id="sec-kleibergen-paap-rk-statistic" class="level4">
 <h4 class="anchored" data-anchor-id="sec-kleibergen-paap-rk-statistic">Kleibergen-Paap rk 통계량</h4>
 <p>이분산성 또는 비-i.i.d. 오차 하에서 과소식별(underidentification)과 약한 식별을 검정하는 강건한 통계량이다.</p>
-<p>표 <a href="#tbl-iv-kp-vs-cd" class="quarto-xref">Table&nbsp;<span>60.32</span></a> 는 Kleibergen-Paap rk 통계량과 Cragg-Donald 통계량을 비교한다.</p>
+<p>표 <a href="#tbl-iv-kp-vs-cd" class="quarto-xref">Table&nbsp;<span>61.32</span></a> 는 Kleibergen-Paap rk 통계량과 Cragg-Donald 통계량을 비교한다.</p>
 <div id="tbl-iv-kp-vs-cd" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-iv-kp-vs-cd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.32: IV 식별 및 약한 도구변수 진단을 위한 Kleibergen-Paap rk 대 Cragg-Donald 통계량 비교.
+Table&nbsp;61.32: IV 식별 및 약한 도구변수 진단을 위한 Kleibergen-Paap rk 대 Cragg-Donald 통계량 비교.
 </figcaption>
 <div aria-describedby="tbl-iv-kp-vs-cd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -49861,11 +49881,11 @@ Table&nbsp;60.32: IV 식별 및 약한 도구변수 진단을 위한 Kleibergen-
 </section>
 <section id="약한-도구변수-검정-비교" class="level4">
 <h4 class="anchored" data-anchor-id="약한-도구변수-검정-비교">약한 도구변수 검정 비교</h4>
-<p>표 <a href="#tbl-iv-weak-instrument-tests" class="quarto-xref">Table&nbsp;<span>60.33</span></a> 는 주요 약한 도구변수 진단 도구들을 비교 요약한다.</p>
+<p>표 <a href="#tbl-iv-weak-instrument-tests" class="quarto-xref">Table&nbsp;<span>61.33</span></a> 는 주요 약한 도구변수 진단 도구들을 비교 요약한다.</p>
 <div id="tbl-iv-weak-instrument-tests" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-iv-weak-instrument-tests-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.33: 약한 도구변수 진단 검정 요약.
+Table&nbsp;61.33: 약한 도구변수 진단 검정 요약.
 </figcaption>
 <div aria-describedby="tbl-iv-weak-instrument-tests-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -50051,11 +50071,11 @@ Table&nbsp;60.33: 약한 도구변수 진단 검정 요약.
 <li>기각 시 원인 불명: 어느 도구변수가 문제인지, 모형의 함수 형태 오설정 때문인지 구분 불가.</li>
 <li>처치 효과 이질성 하에서의 기각: 모든 도구변수가 유효하더라도 서로 다른 순응자 집단의 LATE를 식별하는 경우 J-검정이 기각될 수 있음 <span class="citation" data-cites="angrist2000interpretation parente2012cautionary">[@angrist2000interpretation; @parente2012cautionary]</span>.</li>
 </ol>
-<p>표 <a href="#tbl-iv-jtest-misinterpretations" class="quarto-xref">Table&nbsp;<span>60.34</span></a> 는 J-검정에 대한 흔한 오해와 올바른 이해를 대비한다.</p>
+<p>표 <a href="#tbl-iv-jtest-misinterpretations" class="quarto-xref">Table&nbsp;<span>61.34</span></a> 는 J-검정에 대한 흔한 오해와 올바른 이해를 대비한다.</p>
 <div id="tbl-iv-jtest-misinterpretations" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-iv-jtest-misinterpretations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.34: 과식별 J-검정에 대한 흔한 오해와 올바른 이해.
+Table&nbsp;61.34: 과식별 J-검정에 대한 흔한 오해와 올바른 이해.
 </figcaption>
 <div aria-describedby="tbl-iv-jtest-misinterpretations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -50174,11 +50194,11 @@ LATE = \mathbb{E}[\beta_{1i} \mid \text{Compliers}]
 <section id="순방향-설계-한계-처리효과" class="level4">
 <h4 class="anchored" data-anchor-id="순방향-설계-한계-처리효과">순방향 설계: 한계 처리효과</h4>
 <p><span class="citation" data-cites="mogstad2024instrumental">@mogstad2024instrumental</span> 등이 강조하는 순방향 설계(Forward Engineering)는 처음부터 처치 효과의 미관측 이질성을 명시적으로 모형화한다. 한계 처치 효과(MTE) 프레임워크 <span class="citation" data-cites="heckman2005structural">[@heckman2005structural]</span>는 처치 선택 성향 <span class="math inline">\(U_i = u\)</span>에 따른 처치 효과 곡선 <span class="math inline">\(\text{MTE}(u)\)</span>를 추정하여 ATE, LATE, TT 등을 통합적으로 도출한다.</p>
-<p>표 <a href="#tbl-iv-late-vs-mte" class="quarto-xref">Table&nbsp;<span>60.35</span></a> 는 전통적 IV와 MTE 접근법을 비교한다.</p>
+<p>표 <a href="#tbl-iv-late-vs-mte" class="quarto-xref">Table&nbsp;<span>61.35</span></a> 는 전통적 IV와 MTE 접근법을 비교한다.</p>
 <div id="tbl-iv-late-vs-mte" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-iv-late-vs-mte-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.35: 이질적 효과 하에서 전통적 IV 대 한계 처치 효과(MTE) 접근법 비교.
+Table&nbsp;61.35: 이질적 효과 하에서 전통적 IV 대 한계 처치 효과(MTE) 접근법 비교.
 </figcaption>
 <div aria-describedby="tbl-iv-late-vs-mte-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -50317,11 +50337,11 @@ Table&nbsp;60.35: 이질적 효과 하에서 전통적 IV 대 한계 처치 효�
 <p>수요 방정식: <span class="math display">\[c_{jt} = \phi_{cj} p_t + \mathbf{b}_{cj}' \mathbf{x}_{t-1} + u_{cjt} + u_{\psi jt}\]</span></p>
 <p>점유율 가중 소비와 단순 평균 소비의 차이 <span class="math inline">\(c_t - \bar{c}_t = \sum s_{cj} (c_{jt} - \bar{c}_t)\)</span>는 내생적 가격 <span class="math inline">\(p_t\)</span> 및 공통 글로벌 충격과 직교하므로 공급 탄력성 <span class="math inline">\(\phi_q\)</span>에 대한 강력하고 타당한 도구변수가 된다.</p>
 <p>상관된 글로벌 충격을 처리하기 위해 요인 구조(공통 글로벌 요인, 부문 요인, 특이 충격)를 결합한 구조적 VAR 모형을 완전정보최대우도법(FIML)으로 추정한다.</p>
-<p>도구변수법과 <a href="#sec-matching-methods">매칭 방법</a>은 컷오프나 패널 구조가 없을 때 관측 데이터에서 인과효과를 추정하는 대표적 방법이다(표 <a href="#tbl-iv-vs-matching" class="quarto-xref">Table&nbsp;<span>60.36</span></a>).</p>
+<p>도구변수법과 <a href="#sec-matching-methods">매칭 방법</a>은 컷오프나 패널 구조가 없을 때 관측 데이터에서 인과효과를 추정하는 대표적 방법이다(표 <a href="#tbl-iv-vs-matching" class="quarto-xref">Table&nbsp;<span>61.36</span></a>).</p>
 <div id="tbl-iv-vs-matching" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-iv-vs-matching-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.36: 도구변수법과 매칭 방법의 비교.
+Table&nbsp;61.36: 도구변수법과 매칭 방법의 비교.
 </figcaption>
 <div aria-describedby="tbl-iv-vs-matching-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -53210,11 +53230,11 @@ w_i = \prod_{t=1}^{T} \frac{1}{\mathbb{P}(A_{it} \mid \bar{A}_{i,t-1}, \bar{X}_{
 </section>
 <section id="마케팅-실증-예제" class="level4">
 <h4 class="anchored" data-anchor-id="마케팅-실증-예제">마케팅 실증 예제</h4>
-<p>표 <a href="#tbl-rosenbaum-gamma-marketing" class="quarto-xref">Table&nbsp;<span>60.37</span></a> 는 실제 마케팅 연구에서 처치효과를 무효화하는 데 필요한 임계 <span class="math inline">\(\Gamma\)</span> 값을 보고한다.</p>
+<p>표 <a href="#tbl-rosenbaum-gamma-marketing" class="quarto-xref">Table&nbsp;<span>61.37</span></a> 는 실제 마케팅 연구에서 처치효과를 무효화하는 데 필요한 임계 <span class="math inline">\(\Gamma\)</span> 값을 보고한다.</p>
 <div id="tbl-rosenbaum-gamma-marketing" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rosenbaum-gamma-marketing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;60.37: 주요 마케팅 연구의 임계 Rosenbaum <span class="math inline">\(\Gamma\)</span> 값.
+Table&nbsp;61.37: 주요 마케팅 연구의 임계 Rosenbaum <span class="math inline">\(\Gamma\)</span> 값.
 </figcaption>
 <div aria-describedby="tbl-rosenbaum-gamma-marketing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -55584,7 +55604,7 @@ Cov(\mathbf{X}, \epsilon) = 0
 <h3 class="anchored" data-anchor-id="내생적-표본-선택-1">내생적 표본 선택</h3>
 <p>표본에 포함될 가능성이 결과변수와 관련될 때 표본 선택은 내생성의 원인이 된다.</p>
 <p>예시(노동경제학): 취업자만 사용해 교육이 임금에 미치는 효과를 추정하면 현재 일하지 않는 사람은 제외된다. 취업 여부가 비관측 특성(예: 동기)과 상관된다면 임금방정식은 편향된다.</p>
-<p>요약 표: 내생성의 유형은 표 <a href="#tbl-endog-types" class="quarto-xref">Table&nbsp;<span>62.1</span></a> 에 정리되어 있다.</p>
+<p>요약 표: 내생성의 유형은 표 <a href="#tbl-endog-types" class="quarto-xref">Table&nbsp;<span>63.1</span></a> 에 정리되어 있다.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 38%">
@@ -55611,7 +55631,7 @@ Cov(\mathbf{X}, \epsilon) = 0
 <div id="tbl-endog-types" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-endog-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;62.1: 내생성의 일반적인 원인, 각 원인을 유발하는 메커니즘 및 대표적인 예시 맥락.
+Table&nbsp;63.1: 내생성의 일반적인 원인, 각 원인을 유발하는 메커니즘 및 대표적인 예시 맥락.
 </figcaption>
 <div aria-describedby="tbl-endog-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -55875,11 +55895,11 @@ Y_i = \beta X_i + u_i,
 <li>그러나 추정치의 불확실성은 커진다. 신뢰구간이 넓어져 특히 소표본에서 통계적으로 유의한 효과를 발견하기 어려워질 수 있다.</li>
 </ul>
 <p>요약 표: 측정오차의 결과</p>
-<p>표 <a href="#tbl-endog-measurement-error-consequences" class="quarto-xref">Table&nbsp;<span>62.2</span></a> 는 회귀변수와 결과변수의 측정오차가 초래하는 결과를 비교한다.</p>
+<p>표 <a href="#tbl-endog-measurement-error-consequences" class="quarto-xref">Table&nbsp;<span>63.2</span></a> 는 회귀변수와 결과변수의 측정오차가 초래하는 결과를 비교한다.</p>
 <div id="tbl-endog-measurement-error-consequences" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-endog-measurement-error-consequences-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;62.2: 회귀변수와 결과변수의 고전적 측정오차가 OLS의 편향, 일치성 및 추론에 미치는 결과.
+Table&nbsp;63.2: 회귀변수와 결과변수의 고전적 측정오차가 OLS의 편향, 일치성 및 추론에 미치는 결과.
 </figcaption>
 <div aria-describedby="tbl-endog-measurement-error-consequences-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -56103,11 +56123,11 @@ $$ plim&nbsp; = + plim&nbsp;[(’ )^{-1} ’ W
 이항 회귀변수의 비고전적 오차(예: 오분류)도 편향을 일으키지만 IV 방법은 여전히 적용된다. 예를 들어 설문자료에서 교육수준이 잘못 보고되었다면 유효한 도구(예: 정책에 따른 변이)로 오분류 편향을 보정할 수 있다.</p></li>
 </ol>
 <p>요약</p>
-<p>표 <a href="#tbl-endog-classical-vs-nonclassical-error" class="quarto-xref">Table&nbsp;<span>62.3</span></a> 는 고전적 측정오차와 비고전적 측정오차를 비교한다.</p>
+<p>표 <a href="#tbl-endog-classical-vs-nonclassical-error" class="quarto-xref">Table&nbsp;<span>63.3</span></a> 는 고전적 측정오차와 비고전적 측정오차를 비교한다.</p>
 <div id="tbl-endog-classical-vs-nonclassical-error" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-endog-classical-vs-nonclassical-error-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;62.3: 편향의 방향, 일치성 및 해결책을 기준으로 비교한 고전적 측정오차와 비고전적 측정오차.
+Table&nbsp;63.3: 편향의 방향, 일치성 및 해결책을 기준으로 비교한 고전적 측정오차와 비고전적 측정오차.
 </figcaption>
 <div aria-describedby="tbl-endog-classical-vs-nonclassical-error-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -56800,11 +56820,11 @@ P_i^* = \Phi^{-1}\!\big(F_P(P_i)\big) = \frac{P_i - \mu_P}{\sigma_P} .
 <li>복잡한 상황에서는 최신 변형(2sCOPE)을 선호하라.</li>
 <li>식별 근거를 투명하게 공개하라.</li>
 </ol>
-<p>표 <a href="#tbl-copula-vs-iv" class="quarto-xref">Table&nbsp;<span>62.4</span></a> 는 도구변수 기반 구제책 대비 코풀라 보정의 특징을 요약한다.</p>
+<p>표 <a href="#tbl-copula-vs-iv" class="quarto-xref">Table&nbsp;<span>63.4</span></a> 는 도구변수 기반 구제책 대비 코풀라 보정의 특징을 요약한다.</p>
 <div id="tbl-copula-vs-iv" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-copula-vs-iv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;62.4: 내생 회귀변수에 대한 도구변수 기반 구제책과 Gaussian Copula 보정법의 비교.
+Table&nbsp;63.4: 내생 회귀변수에 대한 도구변수 기반 구제책과 Gaussian Copula 보정법의 비교.
 </figcaption>
 <div aria-describedby="tbl-copula-vs-iv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -57259,11 +57279,11 @@ y_i = x_i' \beta + \delta \lambda_i + \nu_i
 <li>유효한 도구변수가 존재하는 경우: 통제함수 또는 IV 접근법 활용 가능.</li>
 <li>정규성 가정이 성립하고 선택이 모수적인 경우: Heckman 또는 FIML이 편향을 보정함.</li>
 </ul>
-<p>표 <a href="#tbl-endog-selection-methods" class="quarto-xref">Table&nbsp;<span>62.5</span></a> 는 내생적 표본 선택을 다루는 방법들을 요약한다.</p>
+<p>표 <a href="#tbl-endog-selection-methods" class="quarto-xref">Table&nbsp;<span>63.5</span></a> 는 내생적 표본 선택을 다루는 방법들을 요약한다.</p>
 <div id="tbl-endog-selection-methods" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-endog-selection-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;62.5: 내생적 표본 선택을 다루는 방법들의 데이터 요구사항, 핵심 가정 및 장단점 비교.
+Table&nbsp;63.5: 내생적 표본 선택을 다루는 방법들의 데이터 요구사항, 핵심 가정 및 장단점 비교.
 </figcaption>
 <div aria-describedby="tbl-endog-selection-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -57626,7 +57646,7 @@ Table&nbsp;62.5: 내생적 표본 선택을 다루는 방법들의 데이터 요
 <div id="tbl-endog-switching-scenarios" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-endog-switching-scenarios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;62.6: 전환 회귀 시나리오와 수렴성, 편향 및 분산에 대한 영향.
+Table&nbsp;63.6: 전환 회귀 시나리오와 수렴성, 편향 및 분산에 대한 영향.
 </figcaption>
 <div aria-describedby="tbl-endog-switching-scenarios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -57786,11 +57806,11 @@ Y_j \mid D = t \sim \mathcal{N}(\beta_{0t} + \beta_{1t} t_j, \sigma_t^2), \quad 
 </section>
 <section id="선택-모형과의-비교" class="level4">
 <h4 class="anchored" data-anchor-id="선택-모형과의-비교">선택 모형과의 비교</h4>
-<p>표 <a href="#tbl-endog-selection-vs-pattern-mixture" class="quarto-xref">Table&nbsp;<span>62.7</span></a> 는 비무작위 결측에 대한 선택 모형과 패턴-혼합 모형을 비교한다.</p>
+<p>표 <a href="#tbl-endog-selection-vs-pattern-mixture" class="quarto-xref">Table&nbsp;<span>63.7</span></a> 는 비무작위 결측에 대한 선택 모형과 패턴-혼합 모형을 비교한다.</p>
 <div id="tbl-endog-selection-vs-pattern-mixture" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-endog-selection-vs-pattern-mixture-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;62.7: 비무작위 결측(MNAR) 데이터에 대한 선택 모형과 패턴-혼합 모형의 분해 방식, 모형화 대상 및 식별 가정 비교.
+Table&nbsp;63.7: 비무작위 결측(MNAR) 데이터에 대한 선택 모형과 패턴-혼합 모형의 분해 방식, 모형화 대상 및 식별 가정 비교.
 </figcaption>
 <div aria-describedby="tbl-endog-selection-vs-pattern-mixture-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -58411,11 +58431,11 @@ f_{\mathrm{obs}}(p) \propto f(p \mid \mu) s(p).
 <li>순수 출판 편향: <span class="math inline">\(s(p)=\mathbb{1}\{p\le \alpha\}\)</span> (엄격한 임계값에 의한 절단).</li>
 <li>p-해킹: <span class="math inline">\(s(p)\)</span>가 <span class="math inline">\(\alpha\)</span> 바로 아래에서 급증하거나 스파이크를 형성함 (0. 바로 아래에서의 군집화; bunching).</li>
 </ul>
-<p>표 <a href="#tbl-p-hacking-bias-comparison" class="quarto-xref">Table&nbsp;<span>63.1</span></a> 은 출판 편향과 p-해킹의 차이를 요약한다.</p>
+<p>표 <a href="#tbl-p-hacking-bias-comparison" class="quarto-xref">Table&nbsp;<span>64.1</span></a> 은 출판 편향과 p-해킹의 차이를 요약한다.</p>
 <div id="tbl-p-hacking-bias-comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-p-hacking-bias-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;63.1: 출판 편향과 p-해킹의 메커니즘 및 패턴 비교.
+Table&nbsp;64.1: 출판 편향과 p-해킹의 메커니즘 및 패턴 비교.
 </figcaption>
 <div aria-describedby="tbl-p-hacking-bias-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -58604,11 +58624,11 @@ Table&nbsp;63.1: 출판 편향과 p-해킹의 메커니즘 및 패턴 비교.
 <section id="강건-베이지안-메타분석" class="level4">
 <h4 class="anchored" data-anchor-id="강건-베이지안-메타분석">강건 베이지안 메타분석</h4>
 <p>효과 모형과 편향 모형(PET-PEESE, 가중함수 등)에 대한 베이지안 모형 평균화를 수행하여 모형 불확실성을 통합한다 <span class="citation" data-cites="bartovs2020robma">[@bartovs2020robma]</span>.</p>
-<p>표 <a href="#tbl-p-hacking-discourse" class="quarto-xref">Table&nbsp;<span>63.2</span></a> 는 문헌에서의 주요 논쟁과 방법론별 특징을 요약한다.</p>
+<p>표 <a href="#tbl-p-hacking-discourse" class="quarto-xref">Table&nbsp;<span>64.2</span></a> 는 문헌에서의 주요 논쟁과 방법론별 특징을 요약한다.</p>
 <div id="tbl-p-hacking-discourse" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-p-hacking-discourse-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;63.2: p-해킹 및 출판 편향에 관한 주요 통계 방법론 비교.
+Table&nbsp;64.2: p-해킹 및 출판 편향에 관한 주요 통계 방법론 비교.
 </figcaption>
 <div aria-describedby="tbl-p-hacking-discourse-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -59714,11 +59734,11 @@ P(Y \mid \operatorname{do}(X)) = \sum_m P(M = m \mid X) \sum_{x'} P(Y \mid M = m
 <li>민감도 분석: 미관측 교란의 위험이 있을 때 <code>sensemakr</code>를 적용하여 결론의 강건성을 검증한다.</li>
 <li>투명한 가정 보고: 인과적 결론의 타당성은 기저 가정의 타당성에 의해 좌우되므로 가정을 명시적으로 보고한다.</li>
 </ol>
-<p>표 <a href="#tbl-when-to-control" class="quarto-xref">Table&nbsp;<span>65.1</span></a> 은 역할별 통제 여부 결정 지침을 요약한다.</p>
+<p>표 <a href="#tbl-when-to-control" class="quarto-xref">Table&nbsp;<span>66.1</span></a> 은 역할별 통제 여부 결정 지침을 요약한다.</p>
 <div id="tbl-when-to-control" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-when-to-control-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;65.1: 인과적 역할에 따른 변수 통제 결정 가이드.
+Table&nbsp;66.1: 인과적 역할에 따른 변수 통제 결정 가이드.
 </figcaption>
 <div aria-describedby="tbl-when-to-control-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -59974,11 +59994,11 @@ y_i = \beta_0+ \beta_1 \log(\mathrm{budget}_i + 1)+ \beta_2 \log(\mathrm{us\_gro
 <span id="cb472-3"><a href="#cb472-3" aria-hidden="true" tabindex="-1"></a>fit2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="at">data =</span> PetersenCL)</span>
 <span id="cb472-4"><a href="#cb472-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb472-5"><a href="#cb472-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summ</span>(fit2, <span class="at">robust =</span> <span class="st">"HC3"</span>, <span class="at">cluster =</span> <span class="st">"firm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>표 <a href="#tbl-report-sandwich-variants" class="quarto-xref">Table&nbsp;<span>66.1</span></a> 는 주요 샌드위치 추정량 유형을 요약한다.</p>
+<p>표 <a href="#tbl-report-sandwich-variants" class="quarto-xref">Table&nbsp;<span>67.1</span></a> 는 주요 샌드위치 추정량 유형을 요약한다.</p>
 <div id="tbl-report-sandwich-variants" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-report-sandwich-variants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;66.1: 샌드위치 이분산 강건 분산 추정량 유형.
+Table&nbsp;67.1: 샌드위치 이분산 강건 분산 추정량 유형.
 </figcaption>
 <div aria-describedby="tbl-report-sandwich-variants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -60477,11 +60497,11 @@ Table&nbsp;66.1: 샌드위치 이분산 강건 분산 추정량 유형.
 <p>강건한 발견이란 복수의 타당한 사양 전반에서 일관되게 유지되는 결과를 의미한다. 모든 사양에서 계수 추정치가 완전히 동일해야 함을 뜻하지는 않는다. 어느 정도의 변동은 자연스러우며 그 자체로 유용한 정보를 제공한다. 핵심은 실질적인 결론(효과의 부호, 통계적 유의성, 경제적 크기)이 합리적인 모형화 변동에도 불구하고 일관되게 유지되는가이다.</p>
 <section id="강건성-검정-계열-분류" class="level3">
 <h3 class="anchored" data-anchor-id="강건성-검정-계열-분류">강건성 검정 계열 분류</h3>
-<p>강건성 검정은 상호 대체 가능한 것이 아니다. 각 계열은 인과적 주장에 대한 고유한 위협 요인을 겨냥하며 설득력 있는 연구는 자신의 설계와 관련된 각 계열에서 최소 하나 이상의 도구를 채택해야 한다. 표 <a href="#tbl-robustness-families" class="quarto-xref">Table&nbsp;<span>68.1</span></a> 는 주요 강건성 검정 계열과 대표적 방법론을 정리한다.</p>
+<p>강건성 검정은 상호 대체 가능한 것이 아니다. 각 계열은 인과적 주장에 대한 고유한 위협 요인을 겨냥하며 설득력 있는 연구는 자신의 설계와 관련된 각 계열에서 최소 하나 이상의 도구를 채택해야 한다. 표 <a href="#tbl-robustness-families" class="quarto-xref">Table&nbsp;<span>69.1</span></a> 는 주요 강건성 검정 계열과 대표적 방법론을 정리한다.</p>
 <div id="tbl-robustness-families" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-robustness-families-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;68.1: 강건성 검정 계열 분류 및 대표 기법.
+Table&nbsp;69.1: 강건성 검정 계열 분류 및 대표 기법.
 </figcaption>
 <div aria-describedby="tbl-robustness-families-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -64457,7 +64477,7 @@ X &amp;\sim \text{Norm}(10, 3) \\
 <h3 class="anchored" data-anchor-id="수식-상호참조">수식 상호참조</h3>
 <p><span id="eq-test"><span class="math display">\[
 a = b
-\tag{88.1}\]</span></span></p>
+\tag{89.1}\]</span></span></p>
 <p>본문에서 참조할 때는 <code>@eq-test</code> 형식을 사용한다.</p>
 </section>
 <section id="주요-수학-기호-표" class="level3">

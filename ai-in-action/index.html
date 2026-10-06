@@ -284,6 +284,11 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../async-rust/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Async Rust</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../software-architecture-decisions/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">소프트웨어 아키텍처 의사결정</span></a>
   </div>
 </li>
@@ -689,6 +694,11 @@ window.Quarto = {
   <a href="../latte-factor/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">라떼 팩터</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../zero-to-one/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">제로 투 원</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -722,7 +732,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../think-again-argue/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Think Again: How to Reason and Argue</span></a>
+  <a href="../think-again-argue/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">다시 생각하기: 추론과 논증의 기술</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -808,7 +818,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../time-management-dummies/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1부: 혁명의 시작: 간단한 첫걸음</span></a>
+  <a href="../time-management-dummies/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">누구나 쉽게 배우는 시간 관리</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -995,6 +1005,16 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../essay-change-think/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">당신의 생각을 바꾸는 101가지 생각</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../little-book-of-stoicism/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">스토아 철학 소요(小要)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../power-of-now/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">지금 이 순간의 힘 (The Power of Now)</span></a>
   </div>
 </li>
       </ul>
@@ -17072,7 +17092,7 @@ R(h) \;\le\; \hat{R}_S(h) \;+\; O\!\left(\sqrt{\frac{\mathrm{VC}(\mathcal{H})\,\
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-loop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;29.1: The empirical loop in machine learning research. Each stage is a deliberate opportunity for a claim to fail.
+Figure&nbsp;30.1: The empirical loop in machine learning research. Each stage is a deliberate opportunity for a claim to fail.
 </figcaption>
 </figure>
 </div>
@@ -19717,7 +19737,7 @@ f_\theta(x) = \sigma(\theta^\top x),
 <p>추천 시스템을 생각해 봅시다. 사용자 집합 <span class="math inline">\(\mathcal{U}\)</span>, 아이템 집합 <span class="math inline">\(\mathcal{I}\)</span>, 그리고 각 사용자 및 아이템 쌍에 예측된 관련성 점수를 할당하는 함수 <span class="math inline">\(f: \mathcal{U} \times \mathcal{I} \to \mathbb{R}\)</span>가 있다. 시스템은 주어진 사용자 <span class="math inline">\(u\)</span>에 대해 다음 식을 풀어 아이템을 추천한다.</p>
 <p><span id="eq-017-recommendation"><span class="math display">\[
 i^* = \operatorname{argmax}_{i \in \mathcal{I}} f(u, i)
-\tag{37.1}\]</span></span></p>
+\tag{38.1}\]</span></span></p>
 <p>이 단일 표현식은 집합 (<span class="math inline">\(\mathcal{U}\)</span>, <span class="math inline">\(\mathcal{I}\)</span>), 데카르트 곱 (<span class="math inline">\(\mathcal{U} \times \mathcal{I}\)</span>), 함수 (<span class="math inline">\(f\)</span>), 실수 (<span class="math inline">\(\mathbb{R}\)</span>), 그리고 argmax 연산자를 사용한다. 이러한 객체들에 대한 정확한 정의 없이는 이 표현식이 모호해진다.</p>
 <p>이 장의 목표는 이어지는 모든 공식이 명확한 의미를 갖도록 정밀하고 자립적인 기초를 다지는 것이다.</p>
 <hr>
@@ -19736,7 +19756,7 @@ i^* = \operatorname{argmax}_{i \in \mathcal{I}} f(u, i)
 <div id="tbl-017-standard-sets" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-017-standard-sets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;37.1: 이 책 전반에서 사용되는 표준 숫자 집합들.
+Table&nbsp;38.1: 이 책 전반에서 사용되는 표준 숫자 집합들.
 </figcaption>
 <div aria-describedby="tbl-017-standard-sets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -19802,7 +19822,7 @@ Table&nbsp;37.1: 이 책 전반에서 사용되는 표준 숫자 집합들.
 <p>임의의 집합 <span class="math inline">\(\mathcal{A}, \mathcal{B} \subseteq \mathcal{X}\)</span>에 대해:</p>
 <p><span id="eq-017-de-morgan"><span class="math display">\[
 (\mathcal{A} \cup \mathcal{B})^c = \mathcal{A}^c \cap \mathcal{B}^c, \qquad (\mathcal{A} \cap \mathcal{B})^c = \mathcal{A}^c \cup \mathcal{B}^c.
-\tag{37.2}\]</span></span></p>
+\tag{38.2}\]</span></span></p>
 <p><strong>첫 번째 법칙의 증명.</strong> <span class="math inline">\(x \in (\mathcal{A} \cup \mathcal{B})^c\)</span>라고 가정해 봅시다. 그러면 <span class="math inline">\(x \notin \mathcal{A} \cup \mathcal{B}\)</span>이며 이는 <span class="math inline">\(x \notin \mathcal{A}\)</span>이고 <span class="math inline">\(x \notin \mathcal{B}\)</span>임을 의미한다. 따라서 <span class="math inline">\(x \in \mathcal{A}^c\)</span>이고 <span class="math inline">\(x \in \mathcal{B}^c\)</span>이므로, <span class="math inline">\(x \in \mathcal{A}^c \cap \mathcal{B}^c\)</span>가 성립한다. 역방향의 포함 관계도 동일한 논리를 역으로 적용하여 성립한다. <span class="math inline">\(\square\)</span></p>
 </section>
 <section id="데카르트-곱" class="level3">
@@ -19810,7 +19830,7 @@ Table&nbsp;37.1: 이 책 전반에서 사용되는 표준 숫자 집합들.
 <p><span class="math inline">\(\mathcal{A}\)</span>와 <span class="math inline">\(\mathcal{B}\)</span>의 <strong>데카르트 곱</strong>(Cartesian product)은 다음과 같다.</p>
 <p><span id="eq-017-cartesian"><span class="math display">\[
 \mathcal{A} \times \mathcal{B} = \{(a, b) : a \in \mathcal{A}, \; b \in \mathcal{B}\}.
-\tag{37.3}\]</span></span></p>
+\tag{38.3}\]</span></span></p>
 <p>이는 <span class="math inline">\(n\)</span>개의 집합으로 일반화 된다: <span class="math inline">\(\mathcal{A}_1 \times \mathcal{A}_2 \times \cdots \times \mathcal{A}_n\)</span>. 공간 <span class="math inline">\(\mathbb{R}^d = \mathbb{R} \times \mathbb{R} \times \cdots \times \mathbb{R}\)</span> (<span class="math inline">\(d\)</span>번 곱함)은 머신러닝의 모든 특징 벡터(feature vector)의 근간이 되는 데카르트 곱이다.</p>
 </section>
 <section id="몇집합" class="level3">
@@ -19904,7 +19924,7 @@ Table&nbsp;37.1: 이 책 전반에서 사용되는 표준 숫자 집합들.
 <p>반사성, 대칭성, 추이성을 모두 만족하는 관계를 <strong>동치 관계(equivalence relation)</strong>라고 하며 <span class="math inline">\(\sim\)</span>로 나타냅니다. 동치 관계는 <span class="math inline">\(\mathcal{S}\)</span>를 서로소인 <strong>동치류(equivalence classes)</strong>로 분할한다.</p>
 <p><span id="eq-017-equiv-class"><span class="math display">\[
 [a] = \{x \in \mathcal{S} : x \sim a\}.
-\tag{37.4}\]</span></span></p>
+\tag{38.4}\]</span></span></p>
 <p><strong>ML에서의 예시.</strong> 훈련된 모델들에 대한 관계를 다음과 같이 정의해 본다. <span class="math inline">\(m_1\)</span>과 <span class="math inline">\(m_2\)</span>가 (수치적 허용 오차 내에서) 동일한 테스트 정확도를 달성하는 경우 <span class="math inline">\(m_1 \sim m_2\)</span>라고 한다. 이는 동치 관계이며 각 동치류는 성능 수준에 따라 모델들을 그룹화하므로 모델 선택의 기초가 된다.</p>
 </section>
 <section id="부분-순서와-전순서" class="level3">
@@ -19938,7 +19958,7 @@ Table&nbsp;37.1: 이 책 전반에서 사용되는 표준 숫자 집합들.
 <div id="tbl-017-function-types" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-017-function-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;37.2: 함수 타입과 머신러닝 관점의 해석.
+Table&nbsp;38.2: 함수 타입과 머신러닝 관점의 해석.
 </figcaption>
 <div aria-describedby="tbl-017-function-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -19982,7 +20002,7 @@ Table&nbsp;37.2: 함수 타입과 머신러닝 관점의 해석.
 <p><span class="math inline">\(L\)</span>개의 레이어를 가진 심층 신경망은 다음과 같이 계산한다.</p>
 <p><span id="eq-017-nn-composition"><span class="math display">\[
 \hat{y} = f_L \circ f_{L-1} \circ \cdots \circ f_1(\mathbf{x}),
-\tag{37.5}\]</span></span></p>
+\tag{38.5}\]</span></span></p>
 <p>여기서 각 <span class="math inline">\(f_\ell\)</span>은 매개변수화된 함수(아핀 변환에 이은 비선형 활성화 함수)이다. 오차 역전파의 핵심인 미적분학의 연쇄 법칙(chain rule)은 합성함수의 도함수에 대한 정리이다.</p>
 </section>
 <section id="역함수" class="level3">
@@ -20062,7 +20082,7 @@ Table&nbsp;37.2: 함수 타입과 머신러닝 관점의 해석.
 <div id="tbl-017-connectives" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-017-connectives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;37.3: 논리 연결 연산자.
+Table&nbsp;38.3: 논리 연결 연산자.
 </figcaption>
 <div aria-describedby="tbl-017-connectives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -20111,7 +20131,7 @@ Table&nbsp;37.3: 논리 연결 연산자.
 <div id="tbl-017-truth-table" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-017-truth-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;37.4: 기본 논리 연결 연산자의 진리표.
+Table&nbsp;38.4: 기본 논리 연결 연산자의 진리표.
 </figcaption>
 <div aria-describedby="tbl-017-truth-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -20208,7 +20228,7 @@ Table&nbsp;37.4: 기본 논리 연결 연산자의 진리표.
 <h3 class="anchored" data-anchor-id="negation-of-quantified-statements">Negation of quantified statements</h3>
 <p><span id="eq-017-quantifier-negation"><span class="math display">\[
 \neg(\forall x, \; P(x)) \equiv \exists x, \; \neg P(x), \qquad \neg(\exists x, \; P(x)) \equiv \forall x, \; \neg P(x).
-\tag{37.6}\]</span></span></p>
+\tag{38.6}\]</span></span></p>
 <p><strong>예시.</strong> “모델 <span class="math inline">\(f\)</span>가 훈련 오차 0을 달성한다”라는 진술은 <span class="math inline">\(\forall i \in \{1, \dots, n\}, \; f(\mathbf{x}_i) = y_i\)</span>로 쓸 수 있다. 이 진술의 부정인 “<span class="math inline">\(f\)</span>가 최소한 하나의 훈련 오차를 범한다”는 <span class="math inline">\(\exists i \in \{1, \dots, n\}, \; f(\mathbf{x}_i) \neq y_i\)</span>가 된다.</p>
 </section>
 <section id="nested-quantifiers" class="level3">
@@ -20397,7 +20417,7 @@ Table&nbsp;37.4: 기본 논리 연결 연산자의 진리표.
 <p><strong>벡터</strong> <span class="math inline">\(\mathbf{v} \in \mathbb{R}^d\)</span>는 실수들의 순서쌍 <span class="math inline">\(d\)</span>-튜플이다.</p>
 <p><span id="eq-018-vector"><span class="math display">\[
 \mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \\ \vdots \\ v_d \end{pmatrix}
-\tag{38.1}\]</span></span></p>
+\tag{39.1}\]</span></span></p>
 <p>벡터는 볼드체 소문자(<span class="math inline">\(\mathbf{v}\)</span>, <span class="math inline">\(\mathbf{w}\)</span>, <span class="math inline">\(\mathbf{x}\)</span>)로 표기한다. 성분 <span class="math inline">\(v_i\)</span>는 <span class="math inline">\(i\)</span>번째 <strong>성분</strong> 또는 <strong>좌표</strong>입니다. 정수 <span class="math inline">\(d\)</span>는 <strong>차원</strong>입니다.</p>
 </section>
 <section id="vector-operations" class="level3">
@@ -20405,11 +20425,11 @@ Table&nbsp;37.4: 기본 논리 연결 연산자의 진리표.
 <p><strong>더하기.</strong> <span class="math inline">\(\mathbf{u}, \mathbf{v} \in \mathbb{R}^d\)</span>에 대한 덧셈은 성분별로 이루어진다.</p>
 <p><span id="eq-018-vector-addition"><span class="math display">\[
 \mathbf{u} + \mathbf{v} = \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \\ \vdots \\ u_d + v_d \end{pmatrix}
-\tag{38.2}\]</span></span></p>
+\tag{39.2}\]</span></span></p>
 <p><strong>스칼라 곱.</strong> <span class="math inline">\(\alpha \in \mathbb{R}\)</span> 및 <span class="math inline">\(\mathbf{v} \in \mathbb{R}^d\)</span>에 대해 다음과 같다.</p>
 <p><span id="eq-018-scalar-multiplication"><span class="math display">\[
 \alpha \mathbf{v} = \begin{pmatrix} \alpha v_1 \\ \alpha v_2 \\ \vdots \\ \alpha v_d \end{pmatrix}
-\tag{38.3}\]</span></span></p>
+\tag{39.3}\]</span></span></p>
 <p>이 두 연산은 벡터 공간을 정의하는 데 필요한 유일한 요소이다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb247"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb247-1"><a href="#cb247-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
 <span id="cb247-2"><a href="#cb247-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-018-vector-operations</span></span>
@@ -20487,7 +20507,7 @@ Table&nbsp;37.4: 기본 논리 연결 연산자의 진리표.
 <div id="tbl-018-vector-space-axioms" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-018-vector-space-axioms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;38.1: 실수 벡터 공간을 정의하는 8가지 공리.
+Table&nbsp;39.1: 실수 벡터 공간을 정의하는 8가지 공리.
 </figcaption>
 <div aria-describedby="tbl-018-vector-space-axioms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -20589,7 +20609,7 @@ Table&nbsp;38.1: 실수 벡터 공간을 정의하는 8가지 공리.
 <p>벡터 <span class="math inline">\(\mathbf{v}_1, \dots, \mathbf{v}_k \in V\)</span>의 <strong>선형결합</strong>(linear combination)은 다음과 같은 형태의 임의의 벡터를 의미한다.</p>
 <p><span id="eq-018-linear-combination"><span class="math display">\[
 \mathbf{w} = \sum_{i=1}^{k} \alpha_i \mathbf{v}_i = \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_k \mathbf{v}_k
-\tag{38.4}\]</span></span></p>
+\tag{39.4}\]</span></span></p>
 <p>여기서 <span class="math inline">\(\alpha_1, \dots, \alpha_k \in \mathbb{R}\)</span>은 스칼라(이를 <strong>계수</strong> 또는 <strong>가중치</strong>라고 부른다)이다.</p>
 </section>
 <section id="생성" class="level3">
@@ -20597,7 +20617,7 @@ Table&nbsp;38.1: 실수 벡터 공간을 정의하는 8가지 공리.
 <p><span class="math inline">\(\{\mathbf{v}_1, \dots, \mathbf{v}_k\}\)</span>의 <strong>생성</strong>(span)은 가능한 모든 선형결합의 집합이다.</p>
 <p><span id="eq-018-span"><span class="math display">\[
 \text{span}(\mathbf{v}_1, \dots, \mathbf{v}_k) = \left\{ \sum_{i=1}^{k} \alpha_i \mathbf{v}_i : \alpha_i \in \mathbb{R} \right\}
-\tag{38.5}\]</span></span></p>
+\tag{39.5}\]</span></span></p>
 <p>생성은 항상 <span class="math inline">\(V\)</span>의 부분공간이 된다. 기하학적으로, 영벡터가 아닌 하나의 벡터의 생성은 원점을 지나는 직선이며 평행하지 않은 두 벡터의 생성은 원점을 지나는 평면이다.</p>
 </section>
 <section id="선형독립" class="level3">
@@ -20605,7 +20625,7 @@ Table&nbsp;38.1: 실수 벡터 공간을 정의하는 8가지 공리.
 <p>벡터 <span class="math inline">\(\mathbf{v}_1, \dots, \mathbf{v}_k\)</span>가 <strong>선형독립</strong>(linearly independent)이라는 것은 다음 방정식의</p>
 <p><span id="eq-018-linear-independence"><span class="math display">\[
 \sum_{i=1}^{k} \alpha_i \mathbf{v}_i = \mathbf{0}
-\tag{38.6}\]</span></span></p>
+\tag{39.6}\]</span></span></p>
 <p>유일한 해가 <span class="math inline">\(\alpha_1 = \alpha_2 = \cdots = \alpha_k = 0\)</span>뿐임을 의미한다. 그렇지 않다면 이 벡터들은 <strong>선형종속</strong>(linearly dependent)이며 최소한 하나의 벡터는 다른 벡터들의 선형결합으로 나타낼 수 있다.</p>
 <p><strong>이것이 중요한 이유.</strong> 디자인 행렬 <span class="math inline">\(\mathbf{X}\)</span>의 특징(feature)들이 선형종속이면 <span class="math inline">\(\mathbf{X}^\top \mathbf{X}\)</span>가 특이(singular) 행렬이 되어 규제(regularization) 없이는 일반 최소제곱 해를 구할 수 없게 된다. 회귀 분석에서 선형종속성(다중공선성)을 감지하고 제거하는 것은 표준적인 전처리 단계이다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb248"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb248-1"><a href="#cb248-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: false</span></span>
@@ -20685,7 +20705,7 @@ Table&nbsp;38.1: 실수 벡터 공간을 정의하는 8가지 공리.
 <p>모든 벡터 <span class="math inline">\(\mathbf{v} \in V\)</span>는 기저 벡터들의 선형 결합으로 <strong>유일하게</strong> 나타낼 수 있다.</p>
 <p><span id="eq-018-basis-expansion"><span class="math display">\[
 \mathbf{v} = \sum_{i=1}^{d} c_i \mathbf{b}_i
-\tag{38.7}\]</span></span></p>
+\tag{39.7}\]</span></span></p>
 <p>스칼라 <span class="math inline">\(c_1, \dots, c_d\)</span>는 <span class="math inline">\(\mathcal{B}\)</span>에 대한 <span class="math inline">\(\mathbf{v}\)</span>의 <strong>좌표(coordinates)</strong>(또는 <strong>성분(components)</strong>)이다.</p>
 </section>
 <section id="표준-기저" class="level3">
@@ -20695,16 +20715,16 @@ Table&nbsp;38.1: 실수 벡터 공간을 정의하는 8가지 공리.
 <section id="차원" class="level3">
 <h3 class="anchored" data-anchor-id="차원">차원</h3>
 <div id="thm-018-dimension" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 38.1 (차원 정리)</strong></span> 유한 차원 벡터 공간 <span class="math inline">\(V\)</span>의 모든 기저는 동일한 개수의 원소를 가진다. 이 공통된 기수(cardinality)를 <span class="math inline">\(V\)</span>의 <strong>차원(dimension)</strong>이라 하며 <span class="math inline">\(\dim(V)\)</span>로 나타냅니다.</p>
+<p><span class="theorem-title"><strong>Theorem 39.1 (차원 정리)</strong></span> 유한 차원 벡터 공간 <span class="math inline">\(V\)</span>의 모든 기저는 동일한 개수의 원소를 가진다. 이 공통된 기수(cardinality)를 <span class="math inline">\(V\)</span>의 <strong>차원(dimension)</strong>이라 하며 <span class="math inline">\(\dim(V)\)</span>로 나타냅니다.</p>
 </div>
 <p><span class="math inline">\(\mathbb{R}^d\)</span>의 경우 차원은 <span class="math inline">\(d\)</span>입니다. 행렬 <span class="math inline">\(\mathbf{A}\)</span>의 열 공간(column space)의 차원은 <span class="math inline">\(\mathbf{A}\)</span>의 <strong>계수(rank)</strong>입니다.</p>
 <p><span id="eq-018-rank"><span class="math display">\[
 \text{rank}(\mathbf{A}) = \dim(\text{Col}(\mathbf{A}))
-\tag{38.8}\]</span></span></p>
+\tag{39.8}\]</span></span></p>
 <p><strong>차원 정리 (Rank-nullity theorem).</strong> <span class="math inline">\(\mathbf{A} \in \mathbb{R}^{m \times n}\)</span>에 대해 다음이 성립한다.</p>
 <p><span id="eq-018-rank-nullity"><span class="math display">\[
 \text{rank}(\mathbf{A}) + \dim(\text{Null}(\mathbf{A})) = n
-\tag{38.9}\]</span></span></p>
+\tag{39.9}\]</span></span></p>
 <p>이 항등식은 행렬이 매핑하는 “유용한” 방향의 수(rank)와 0으로 축소되는 방향의 수(nullity)를 연결해 준다.</p>
 </section>
 <section id="기저-변환" class="level3">
@@ -20712,7 +20732,7 @@ Table&nbsp;38.1: 실수 벡터 공간을 정의하는 8가지 공리.
 <p><span class="math inline">\(\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_d\}\)</span>와 <span class="math inline">\(\mathcal{B}' = \{\mathbf{b}'_1, \dots, \mathbf{b}'_d\}\)</span>가 <span class="math inline">\(V\)</span>의 두 기저일 때, 다음과 같이 좌표를 변환하는 가역적인 <strong>기저 변환 행렬(change-of-basis matrix)</strong> <span class="math inline">\(\mathbf{P}\)</span>가 존재한다.</p>
 <p><span id="eq-018-change-of-basis"><span class="math display">\[
 [\mathbf{v}]_{\mathcal{B}'} = \mathbf{P}^{-1} [\mathbf{v}]_{\mathcal{B}}
-\tag{38.10}\]</span></span></p>
+\tag{39.10}\]</span></span></p>
 <p>여기서 <span class="math inline">\([\mathbf{v}]_{\mathcal{B}}\)</span>는 기저 <span class="math inline">\(\mathcal{B}\)</span>에 대한 <span class="math inline">\(\mathbf{v}\)</span>의 좌표 벡터를 나타냅니다. PCA는 공분산 행렬의 고유벡터 기저로 표준 기저를 변환하는 기저 변환에 해당하며 차원을 축소하기 위해 상위 <span class="math inline">\(k\)</span>개의 고유벡터만을 선택한다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb249"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb249-1"><a href="#cb249-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: false</span></span>
 <span id="cb249-2"><a href="#cb249-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -20760,13 +20780,13 @@ Table&nbsp;38.1: 실수 벡터 공간을 정의하는 8가지 공리.
 <p><span class="math inline">\(\mathbf{u}, \mathbf{v} \in \mathbb{R}^d\)</span>의 <strong>내적</strong>(dot product, 유클리드 내적)은 다음과 같다.</p>
 <p><span id="eq-018-dot-product"><span class="math display">\[
 \mathbf{u} \cdot \mathbf{v} = \mathbf{u}^\top \mathbf{v} = \sum_{i=1}^{d} u_i v_i
-\tag{38.11}\]</span></span></p>
+\tag{39.11}\]</span></span></p>
 <p>내적은 가장 흔히 사용되는 내적(inner product)의 형태이며 거의 모든 머신러닝 알고리즘에 등장한다. 임베딩 공간에서의 유사도 계산, 트랜스포머의 어텐션 스코어 측정, 선형 뉴런의 출력 계산 등에 활용 된다.</p>
 </section>
 <section id="일반-내적" class="level3">
 <h3 class="anchored" data-anchor-id="일반-내적">일반 내적</h3>
 <div id="def-018-inner-product" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 38.1 (내적)</strong></span> 실수 벡터 공간 <span class="math inline">\(V\)</span> 위에 정의된 <strong>내적</strong>은 모든 <span class="math inline">\(\mathbf{u}, \mathbf{v}, \mathbf{w} \in V\)</span>와 <span class="math inline">\(\alpha \in \mathbb{R}\)</span>에 대해 다음 조건을 만족하는 함수 <span class="math inline">\(\langle \cdot, \cdot \rangle : V \times V \to \mathbb{R}\)</span>입니다.</p>
+<p><span class="theorem-title"><strong>Definition 39.1 (내적)</strong></span> 실수 벡터 공간 <span class="math inline">\(V\)</span> 위에 정의된 <strong>내적</strong>은 모든 <span class="math inline">\(\mathbf{u}, \mathbf{v}, \mathbf{w} \in V\)</span>와 <span class="math inline">\(\alpha \in \mathbb{R}\)</span>에 대해 다음 조건을 만족하는 함수 <span class="math inline">\(\langle \cdot, \cdot \rangle : V \times V \to \mathbb{R}\)</span>입니다.</p>
 <ol type="1">
 <li><strong>대칭성 (Symmetry)</strong>: <span class="math inline">\(\langle \mathbf{u}, \mathbf{v} \rangle = \langle \mathbf{v}, \mathbf{u} \rangle\)</span>.</li>
 <li><strong>첫 번째 인자에 대한 선형성 (Linearity in the first argument)</strong>: <span class="math inline">\(\langle \alpha \mathbf{u} + \mathbf{v}, \mathbf{w} \rangle = \alpha \langle \mathbf{u}, \mathbf{w} \rangle + \langle \mathbf{v}, \mathbf{w} \rangle\)</span>.</li>
@@ -20780,12 +20800,12 @@ Table&nbsp;38.1: 실수 벡터 공간을 정의하는 8가지 공리.
 <p><strong>노름</strong>은 벡터의 “크기”를 측정한다. 내적은 다음과 같이 노름을 유도한다.</p>
 <p><span id="eq-018-induced-norm"><span class="math display">\[
 \|\mathbf{v}\| = \sqrt{\langle \mathbf{v}, \mathbf{v} \rangle}
-\tag{38.12}\]</span></span></p>
+\tag{39.12}\]</span></span></p>
 <p>머신러닝에서 가장 흔히 쓰이는 노름들은 다음과 같다.</p>
 <div id="tbl-018-norms" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-018-norms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;38.2: 흔히 사용되는 벡터 노름과 머신러닝에서의 역할.
+Table&nbsp;39.2: 흔히 사용되는 벡터 노름과 머신러닝에서의 역할.
 </figcaption>
 <div aria-describedby="tbl-018-norms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -20866,9 +20886,9 @@ Table&nbsp;38.2: 흔히 사용되는 벡터 노름과 머신러닝에서의 역�
 <section id="코시-슈바르츠-부등식" class="level3">
 <h3 class="anchored" data-anchor-id="코시-슈바르츠-부등식">코시-슈바르츠 부등식</h3>
 <div id="thm-018-cauchy-schwarz" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 38.2 (코시-슈바르츠 부등식내적 공간의 임의의 <span class="math inline">\(\mathbf{u}, \mathbf{v}\)</span>에 대해,)</strong></span> <span id="eq-018-cauchy-schwarz"><span class="math display">\[
+<p><span class="theorem-title"><strong>Theorem 39.2 (코시-슈바르츠 부등식내적 공간의 임의의 <span class="math inline">\(\mathbf{u}, \mathbf{v}\)</span>에 대해,)</strong></span> <span id="eq-018-cauchy-schwarz"><span class="math display">\[
 |\langle \mathbf{u}, \mathbf{v} \rangle| \leq \|\mathbf{u}\| \cdot \|\mathbf{v}\|
-\tag{38.13}\]</span></span></p>
+\tag{39.13}\]</span></span></p>
 <p>이 성립하며 등호는 <span class="math inline">\(\mathbf{u}\)</span>와 <span class="math inline">\(\mathbf{v}\)</span>가 선형 종속일 때만 성립한다.</p>
 </div>
 <p><em>증명.</em> 만약 <span class="math inline">\(\mathbf{v} = \mathbf{0}\)</span>이면 양변은 모두 0이 된다. 그렇지 않은 경우, 임의의 <span class="math inline">\(t \in \mathbb{R}\)</span>에 대해 양의 선형성에 의해 다음이 성립한다.</p>
@@ -20893,14 +20913,14 @@ Table&nbsp;38.2: 흔히 사용되는 벡터 노름과 머신러닝에서의 역�
 <p><strong>주요 성질.</strong> 영벡터가 아닌 직교 벡터들의 집합은 항상 선형 독립이다. 정규직교 기저는 좌표 추출이 내적 연산으로 단순화되기 때문에 계산적으로 편리하다. 만약 <span class="math inline">\(\{\mathbf{q}_1, \dots, \mathbf{q}_d\}\)</span>가 정규직교 기저라면 다음이 성립한다.</p>
 <p><span id="eq-018-orthonormal-expansion"><span class="math display">\[
 \mathbf{v} = \sum_{i=1}^{d} \langle \mathbf{v}, \mathbf{q}_i \rangle \, \mathbf{q}_i
-\tag{38.14}\]</span></span></p>
+\tag{39.14}\]</span></span></p>
 </section>
 <section id="직교-투영" class="level3">
 <h3 class="anchored" data-anchor-id="직교-투영">직교 투영</h3>
 <p>정규직교 기저 <span class="math inline">\(\{\mathbf{q}_1, \dots, \mathbf{q}_k\}\)</span>를 가지는 부분공간 <span class="math inline">\(W\)</span> 위로의 <span class="math inline">\(\mathbf{v}\)</span>의 <strong>직교 투영</strong>은 다음과 같다.</p>
 <p><span id="eq-018-projection"><span class="math display">\[
 \text{proj}_W(\mathbf{v}) = \sum_{i=1}^{k} \langle \mathbf{v}, \mathbf{q}_i \rangle \, \mathbf{q}_i
-\tag{38.15}\]</span></span></p>
+\tag{39.15}\]</span></span></p>
 <p>잔차 <span class="math inline">\(\mathbf{v} - \text{proj}_W(\mathbf{v})\)</span>는 <span class="math inline">\(W\)</span>의 모든 벡터와 직교한다. 이는 최소제곱 회귀의 기하학적 기초가 된다. 즉, 적합된 값 <span class="math inline">\(\hat{\mathbf{y}} = \mathbf{X}(\mathbf{X}^\top \mathbf{X})^{-1}\mathbf{X}^\top \mathbf{y}\)</span>는 <span class="math inline">\(\mathbf{y}\)</span>를 <span class="math inline">\(\mathbf{X}\)</span>의 열공간으로 투영한 것이며 잔차는 <span class="math inline">\(\mathbf{X}\)</span>의 모든 열과 직교한다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb251"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb251-1"><a href="#cb251-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: false</span></span>
 <span id="cb251-2"><a href="#cb251-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-018-projection</span></span>
@@ -20965,7 +20985,7 @@ Table&nbsp;38.2: 흔히 사용되는 벡터 노름과 머신러닝에서의 역�
 <p>선형 독립인 벡터들 <span class="math inline">\(\{\mathbf{v}_1, \dots, \mathbf{v}_k\}\)</span>이 주어졌을 때, <strong>그람-슈미트 과정</strong>은 동일한 부분공간을 생성하는 정규직교 집합 <span class="math inline">\(\{\mathbf{q}_1, \dots, \mathbf{q}_k\}\)</span>를 생성한다.</p>
 <p><span id="eq-018-gram-schmidt"><span class="math display">\[
 \tilde{\mathbf{q}}_i = \mathbf{v}_i - \sum_{j=1}^{i-1} \langle \mathbf{v}_i, \mathbf{q}_j \rangle \, \mathbf{q}_j, \qquad \mathbf{q}_i = \frac{\tilde{\mathbf{q}}_i}{\|\tilde{\mathbf{q}}_i\|}
-\tag{38.16}\]</span></span></p>
+\tag{39.16}\]</span></span></p>
 <p>이는 최소제곱 문제를 수치적으로 안정되게 해결하는 데 사용되는 QR 분해 <span class="math inline">\(\mathbf{A} = \mathbf{Q}\mathbf{R}\)</span>의 기초가 된다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb252"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb252-1"><a href="#cb252-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: false</span></span>
 <span id="cb252-2"><a href="#cb252-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -21014,7 +21034,7 @@ Table&nbsp;38.2: 흔히 사용되는 벡터 노름과 머신러닝에서의 역�
 <p>벡터 공간 사이의 함수 <span class="math inline">\(T: V \to W\)</span>가 모든 <span class="math inline">\(\mathbf{u}, \mathbf{v} \in V\)</span> 및 <span class="math inline">\(\alpha \in \mathbb{R}\)</span>에 대해 다음을 만족하면 <strong>선형 사상</strong>(선형 변환)이라고 한다.</p>
 <p><span id="eq-018-linear-map"><span class="math display">\[
 T(\alpha \mathbf{u} + \mathbf{v}) = \alpha T(\mathbf{u}) + T(\mathbf{v})
-\tag{38.17}\]</span></span></p>
+\tag{39.17}\]</span></span></p>
 <p>모든 선형 사상 <span class="math inline">\(T: \mathbb{R}^n \to \mathbb{R}^m\)</span>은 <span class="math inline">\(T(\mathbf{x}) = \mathbf{A}\mathbf{x}\)</span>를 만족하는 행렬 <span class="math inline">\(\mathbf{A} \in \mathbb{R}^{m \times n}\)</span>로 표현할 수 있다. 이 대응 관계는 일대일이다. 즉, 기저가 고정되면 행렬이 <strong>곧</strong> 선형 사상이다.</p>
 </section>
 <section id="기하학적-해석" class="level3">
@@ -21023,7 +21043,7 @@ T(\alpha \mathbf{u} + \mathbf{v}) = \alpha T(\mathbf{u}) + T(\mathbf{v})
 <div id="tbl-018-geometric-transforms" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-018-geometric-transforms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;38.3: 기하학적 선형 변환과 행렬 표현.
+Table&nbsp;39.3: 기하학적 선형 변환과 행렬 표현.
 </figcaption>
 <div aria-describedby="tbl-018-geometric-transforms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -21123,7 +21143,7 @@ Table&nbsp;38.3: 기하학적 선형 변환과 행렬 표현.
 <li><span class="math inline">\(\mathbf{Q}\)</span>의 열 벡터들은 <strong>주성분(Principal components)</strong>이며 이는 설명된 분산(Variance explained) 크기 순으로 정렬된 <span class="math inline">\(\mathbb{R}^d\)</span>의 정규직교 기저가 된다.</li>
 <li>상위 <span class="math inline">\(k\)</span>개의 주성분으로 투영한다: <span class="math inline">\(\mathbf{Z} = \mathbf{X}\mathbf{Q}_k \in \mathbb{R}^{n \times k}\)</span>. 여기서 <span class="math inline">\(\mathbf{Q}_k\)</span>는 <span class="math inline">\(\mathbf{Q}\)</span>의 첫 <span class="math inline">\(k\)</span>개 열을 포함한다.</li>
 </ol>
-<p>이는 표준 기저에서 고유벡터 기저로의 기저 변환(<a href="#eq-018-change-of-basis" class="quarto-xref">Equation&nbsp;<span>38.10</span></a>)에 이어, <span class="math inline">\(k\)</span>차원 부분공간으로 절단(Truncation)하는 과정과 같다.</p>
+<p>이는 표준 기저에서 고유벡터 기저로의 기저 변환(<a href="#eq-018-change-of-basis" class="quarto-xref">Equation&nbsp;<span>39.10</span></a>)에 이어, <span class="math inline">\(k\)</span>차원 부분공간으로 절단(Truncation)하는 과정과 같다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb254"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb254-1"><a href="#cb254-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: false</span></span>
 <span id="cb254-2"><a href="#cb254-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-018-pca-demo</span></span>
 <span id="cb254-3"><a href="#cb254-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "PCA on synthetic 2-D data. Left: original data with principal component directions (eigenvectors scaled by eigenvalues). Right: data projected onto the first principal component."</span></span>
@@ -31572,7 +31592,7 @@ R_{\text{dep}}(f) = \mathbb{E}_{(x,y) \sim p_{\text{dep}}}[\ell(f(x), y)] \neq \
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-frame-chain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 68.1: From the target population to the analyzed sample, each arrow can introduce a distinct error.
+Figure 69.1: From the target population to the analyzed sample, each arrow can introduce a distinct error.
 </figcaption>
 </figure>
 </div>
@@ -31794,7 +31814,7 @@ n_{\text{eff}} = \frac{\left(\sum_{i=1}^{n} w_i\right)^2}{\sum_{i=1}^{n} w_i^2},
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 69.1: The four stages of a scraping pipeline and the failure path that keeps a single bad page from aborting a large run.
+Figure 70.1: The four stages of a scraping pipeline and the failure path that keeps a single bad page from aborting a large run.
 </figcaption>
 </figure>
 </div>
@@ -31979,7 +31999,7 @@ W_k \sim \mathrm{Uniform}\bigl(0,\; \min(d_{\max},\, d_0 \cdot 2^{k})\bigr),
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-decision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 69.2: Choosing the cheapest acquisition method that works. Each downward step costs more in time, memory, and fragility.
+Figure 70.2: Choosing the cheapest acquisition method that works. Each downward step costs more in time, memory, and fragility.
 </figcaption>
 </figure>
 </div>
@@ -33535,7 +33555,7 @@ P(\text{at least one false positive}) = 1 - (1 - \alpha)^m,
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-eda-loop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 75.1: The exploratory loop. Each answer either raises a sharper question or, once surprises run out, hardens into a documented hypothesis.
+Figure 76.1: The exploratory loop. Each answer either raises a sharper question or, once surprises run out, hardens into a documented hypothesis.
 </figcaption>
 </figure>
 </div>
@@ -34304,7 +34324,7 @@ S \;=\; \{\, r_i \in D \;:\; \pi(r_i) \in B \,\},
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mantra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 78.1: The information-seeking loop. Each step maps to an interaction the reader can drive, and each must respect the latency budget.
+Figure 79.1: The information-seeking loop. Each step maps to an interaction the reader can drive, and each must respect the latency budget.
 </figcaption>
 </figure>
 </div>
@@ -36070,7 +36090,7 @@ Fold 3: train [..t3]              test (t3..t4]</code></pre>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-embargo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 83.1: One fold of time ordered validation with an embargo gap separating train and test.
+Figure 84.1: One fold of time ordered validation with an embargo gap separating train and test.
 </figcaption>
 </figure>
 </div>
@@ -39445,7 +39465,7 @@ else:
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-temporal-split-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 97.1: 전방 체이닝: 모든 학습 데이터는 검증보다 앞서고 검증은 테스트보다 앞서며 미래 예측 레이블이 경계를 넘어 유출되지 않도록 엠바고 공백을 둡니다.
+Figure 98.1: 전방 체이닝: 모든 학습 데이터는 검증보다 앞서고 검증은 테스트보다 앞서며 미래 예측 레이블이 경계를 넘어 유출되지 않도록 엠바고 공백을 둡니다.
 </figcaption>
 </figure>
 </div>
@@ -53831,7 +53851,7 @@ F_1 = \frac{2 \cdot \text{precision} \cdot \text{recall}}{\text{precision} + \te
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-uns-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 141.1: 비지도 학습의 고전적 목표들과 표현 학습으로의 수렴.
+Figure 142.1: 비지도 학습의 고전적 목표들과 표현 학습으로의 수렴.
 </figcaption>
 </figure>
 </div>
@@ -53977,7 +53997,7 @@ C = \{C_1, C_2, \ldots, C_k\}, \qquad \bigcup_{j=1}^{k} C_j = X, \qquad C_a \cap
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-clustering-decisions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 142.1: 군집화 방법을 정의하는 네 가지 직교적 모델링 결정.
+Figure 143.1: 군집화 방법을 정의하는 네 가지 직교적 모델링 결정.
 </figcaption>
 </figure>
 </div>
@@ -54075,7 +54095,7 @@ c_j = \frac{\sum_{i} u_{ij}^{m}\, x_i}{\sum_{i} u_{ij}^{m}}.
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dendrogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 142.2: 덴드로그램. 특정 높이에서 절단하면 평탄한 군집 분할을 얻습니다.
+Figure 143.2: 덴드로그램. 특정 높이에서 절단하면 평탄한 군집 분할을 얻습니다.
 </figcaption>
 </figure>
 </div>
@@ -54099,7 +54119,7 @@ Figure 142.2: 덴드로그램. 특정 높이에서 절단하면 평탄한 군�
 <div id="tbl-families" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-families-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 142.1: 군집화 알고리즘 계열 비교
+Table 143.1: 군집화 알고리즘 계열 비교
 </figcaption>
 <div aria-describedby="tbl-families-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top" style="width:100%;">
@@ -57794,7 +57814,7 @@ L\, v = \lambda\, G\, v .
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-axes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 164.1: The two design axes that determine method selection in anomaly detection.
+Figure 165.1: The two design axes that determine method selection in anomaly detection.
 </figcaption>
 </figure>
 </div>
@@ -59943,7 +59963,7 @@ F_1 = \frac{2 \cdot \text{Precision} \cdot \text{Recall}}{\text{Precision} + \te
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-confusion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 173.1: How each prediction lands in one of the four confusion-matrix cells.
+Figure 174.1: How each prediction lands in one of the four confusion-matrix cells.
 </figcaption>
 </figure>
 </div>
@@ -67543,7 +67563,7 @@ p_t =
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-focal-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 205.1: How focal loss reshapes the per example contribution from logits to weighted loss.
+Figure 206.1: How focal loss reshapes the per example contribution from logits to weighted loss.
 </figcaption>
 </figure>
 </div>
@@ -73258,7 +73278,7 @@ x_\ell = H_\ell\!\left( [\, x_0, x_1, \ldots, x_{\ell-1} \,] \right),
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tradeoffs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 228.1: The three competing forces in architecture design.
+Figure 229.1: The three competing forces in architecture design.
 </figcaption>
 </figure>
 </div>
@@ -73424,7 +73444,7 @@ def block(x):
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-block-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 228.2: Pre-norm transformer block. Each sublayer is wrapped in a residual skip so the identity path stays clean.
+Figure 229.2: Pre-norm transformer block. Each sublayer is wrapped in a residual skip so the identity path stays clean.
 </figcaption>
 </figure>
 </div>
@@ -75012,7 +75032,7 @@ $$(t) = _{}
 <div id="tbl-similarity-term-across-domains" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-similarity-term-across-domains-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 235.1: 도메인 간 유사성 용어
+Table 236.1: 도메인 간 유사성 용어
 </figcaption>
 <div aria-describedby="tbl-similarity-term-across-domains-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top">
@@ -75087,7 +75107,7 @@ Table 235.1: 도메인 간 유사성 용어
 <div id="tbl-embedding-eval-distance-metrics" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-embedding-eval-distance-metrics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 235.2: 거리 측정법
+Table 236.2: 거리 측정법
 </figcaption>
 <div aria-describedby="tbl-embedding-eval-distance-metrics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top">
@@ -75360,7 +75380,7 @@ Table 235.2: 거리 측정법
 <div id="tbl-embedding-eval-condition-number" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-embedding-eval-condition-number-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 236.1: 조건번호 해석
+Table 237.1: 조건번호 해석
 </figcaption>
 <div aria-describedby="tbl-embedding-eval-condition-number-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top">
@@ -75630,7 +75650,7 @@ Table 236.1: 조건번호 해석
 <div id="tbl-embedding-eval-isotropic-metrics" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-embedding-eval-isotropic-metrics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 236.2: 등방성 측정법
+Table 237.2: 등방성 측정법
 </figcaption>
 <div aria-describedby="tbl-embedding-eval-isotropic-metrics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top">
@@ -76764,7 +76784,7 @@ Table 236.2: 등방성 측정법
 <div id="tbl-starting-point-temporal-stability" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-starting-point-temporal-stability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 236.3: Starting Point for Temporal Stability Monitoring
+Table 237.3: Starting Point for Temporal Stability Monitoring
 </figcaption>
 <div aria-describedby="tbl-starting-point-temporal-stability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top">
@@ -76836,7 +76856,7 @@ Table 236.3: Starting Point for Temporal Stability Monitoring
 <div id="tbl-embedding-eval-common-scoring-functions" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-embedding-eval-common-scoring-functions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 237.1: Common Scoring Functions
+Table 238.1: Common Scoring Functions
 </figcaption>
 <div aria-describedby="tbl-embedding-eval-common-scoring-functions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top">
@@ -77666,7 +77686,7 @@ Table 237.1: Common Scoring Functions
 <div id="tbl-embedding-eval-python-packages-link-pred-eval-metrics" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-embedding-eval-python-packages-link-pred-eval-metrics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 237.2: Python Packages for Link Prediction Evaluation Metrics
+Table 238.2: Python Packages for Link Prediction Evaluation Metrics
 </figcaption>
 <div aria-describedby="tbl-embedding-eval-python-packages-link-pred-eval-metrics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top">
@@ -86236,7 +86256,7 @@ A: I can answer that directly: 42.</code></pre>
 <p>여기서 <span class="math inline">\(v^\pi\)</span>은 현재 정책의 예상 값이고 <span class="math inline">\(\alpha = 1/N\)</span>은 학습률 역할을 한다. <span class="math inline">\(k\)</span> 및 <span class="math inline">\(r_k\)</span>의 무작위성에 대한 평균을 계산한 이 업데이트에는 예상되는 사항이 있다.</p>
 <p><span id="eq-498-드리프트"><span class="math display">\[
 \mathbb{E}[d\pi_a] \;=\; \frac{\pi_a}{v^\pi}\big(q_a^\pi - v^\pi\big), \qquad q_a^\pi = \mathbb{E}[r_a],
-\tag{249.1}\]</span></span></p>
+\tag{250.1}\]</span></span></p>
 <p>이것이 진화론적 게임 이론의 <strong>복제자 역학</strong>입니다. 모집단에서 옵션이 차지하는 비중은 옵션의 품질 <span class="math inline">\(q_a^\pi\)</span>이 모집단의 현재 평균 <span class="math inline">\(v^\pi\)</span>을 얼마나 초과하는지에 비례하여 정확히 증가하고 그렇지 않으면 줄어듭니다. 이는 토론에 있어 직관적이다. 답변에 대한 지지는 그룹의 현재 평균 신념보다 더 나은 성과를 낼 때만 증가한다.</p>
 <p><strong>명제 2(Soma et al. 2024).</strong> 로컬의 순전히 모방적인 가중치 투표 규칙을 독립적으로 따르는 <span class="math inline">\(N\)</span> 에이전트 모집단은 모집단 수준에서 <em>정확히</em> <span class="math inline">\(\alpha = 1/N\)</span>와 함께 <span class="math inline">\(\alpha\)</span>-MCL을 실행하는 단일 강화 학습 에이전트이다. 여기서 각 에이전트는 테스트된 하나의 병렬 작업 샘플 <span class="math inline">\(a^{(i)} \sim \pi\)</span>을 제공한다. 보상 분배의 자체 개인 사본에 대해. 즉, <strong>군집은 단순히 산적 학습자와 유사할 뿐만 아니라 인구 규모에 따라 학습 속도를 설정하는 하나이다.</strong></p>
 <p>다음 시뮬레이션은 동등성을 구체적으로 만든다. 동일한 <span class="math inline">\(n\)</span> 옵션 품질 환경에서 <span class="math inline">\(N\)</span> 에이전트 가중치 유권자 떼와 단일 에이전트 <span class="math inline">\(\alpha\)</span>-MCL 도적을 나란히 실행하고 해당 정책 궤적이 Monte Carlo 노이즈와 일치하는지 확인한다.</p>
@@ -86441,7 +86461,7 @@ A: I can answer that directly: 42.</code></pre>
 <p>이 로그 비율 벡터는 역할의 의도된 효과에 대한 프록시이다. “이 질문을 하위 질문으로 분할”이라는 단어가 실제로 확률 질량으로 구매하는 것이다. <strong>Role Anchor</strong>는 드리프트가 발생하기 전 초기화 시 <span class="math inline">\(\delta_m(h; \theta_0)\)</span> 값을 기준으로 이 양이 보존되도록 엔드투엔드 훈련을 정규화한다.</p>
 <p><span id="eq-498-역할-앵커"><span class="math display">\[
 \max_{\theta}\; \mathbb{E}\big[R(\text{terminal output})\big] \;-\; \lambda \sum_{m=1}^{M} \underbrace{\mathbb{E}_h\, D\big(\delta_m(h;\theta),\, \delta_m(h;\theta_0)\big)}_{A_m(\theta),\ \text{the anchor penalty}},
-\tag{249.2}\]</span></span></p>
+\tag{250.2}\]</span></span></p>
 <p><span class="math inline">\(D\)</span>을 사용하면 현재 역할 효과와 참조 역할 효과 간의 차이가 발생한다. <a href="#eq-498-role-anchor" class="quarto-xref">Equation <span class="quarto-unresolved-ref">eq-498-role-anchor</span></a>가 수행하지 <em>않는</em> 작업을 주의 깊게 참고하라. 모듈의 출력을 초기 값으로 고정하지 않으므로 단순히 학습을 방해할 수 있다. 역할 프롬프트에 따른 <em>차이</em>만 고정하여 모듈이 주어진 작업을 자유롭게 개선할 수 있도록 한다. Caoet al. 이 판독값과 일치하는 기울기 분석을 보고한다. 정규화는 학습 신호를 균일하게 억제하는 대신 역할 드리프트 방향과의 정렬을 줄인다. <span class="math inline">\(\lambda\)</span> 강도는 터미널 정확도와 역할 충실도 사이의 경계를 휩쓸고 논문에서는 정확도 비용이 실제이며 파이프라인 및 앵커 강도에 따라 달라진다는 점을 명시적으로 밝혔습니다.</p>
 <p><strong>헤드라인 번호.</strong> 분해기 파이프라인에서 모듈을 해당 역할로 유지하면 <strong>명백한 RL 이득</strong>의 86%가 지워진다. 엔드-투-엔드 훈련이 제공하는 것으로 보이는 거의 모든 개선은 파이프라인이 분해에서 더 나아지는 것이 아니라 분해자가 자신의 역할을 넘어 답을 밀수입하는 것이었다. 즉, 최종 정확도는 복합 시스템이 실제로 학습한 내용을 거의 10배 이상 과장할 수 있다.</p>
 <p>아래 시뮬레이션은 2모듈 장난감 파이프라인에서 이 현상을 처음부터 끝까지 재현한다. 분해자는 역할 프롬프트에 따라 소프트맥스가 제공하는 확률을 사용하여 세 가지 동작(질문 분할, 다시 설명, 답변 설명) 중에서 선택한다. “분할”에 배치된 질량은 솔버가 사용할 수 있는 합법적인 증거 채널의 크기를 조정하고 “답변”에 배치한 질량은 분해기의 자체 매개변수 추측을 솔버에 직접 유출하는 역할 위반 채널의 크기를 조정한다. 훈련은 종단 간 RL 실행에 포함된 정보인 최종 정확도만 관찰하는 보상 전용 언덕 오르기이다. 역할 충실도는 <span class="math inline">\(\exp(-A(\theta))\)</span>이며 <span class="math inline">\(A\)</span>은 참조에서 현재 역할 효과의 평균 제곱 편차이다. 따라서 <span class="math inline">\(1\)</span>는 역할 프롬프트가 초기화 시 수행한 작업을 정확하게 수행함을 의미하고 <span class="math inline">\(0\)</span>은 해당 효과가 삭제되었음을 의미한다.</p>
@@ -91291,7 +91311,7 @@ s \approx \Pr(\text{fraud} \mid \text{signals}) .
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-signal-channels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 265.1: Four channels by which a face image can correlate with a label. Only the first is a genuine trait signal.
+Figure 266.1: Four channels by which a face image can correlate with a label. Only the first is a genuine trait signal.
 </figcaption>
 </figure>
 </div>
@@ -91360,7 +91380,7 @@ Figure 265.1: Four channels by which a face image can correlate with a label. O
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-decision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 265.2: A go / no-go screen for any proposed face-based feature.
+Figure 266.2: A go / no-go screen for any proposed face-based feature.
 </figcaption>
 </figure>
 </div>
@@ -91430,7 +91450,7 @@ Figure 265.2: A go / no-go screen for any proposed face-based feature.
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-700-two-axes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 266.1: Two complementary scaling axes. Pre-training scale and test-time compute each push accuracy upward as compute grows on a log scale.
+Figure 267.1: Two complementary scaling axes. Pre-training scale and test-time compute each push accuracy upward as compute grows on a log scale.
 </figcaption>
 </figure>
 </div>
@@ -91445,7 +91465,7 @@ Figure 266.1: Two complementary scaling axes. Pre-training scale and test-time 
 <p><span class="math inline">\(x\)</span> 프롬프트를 수정하고 모델 <span class="math inline">\(\pi\)</span>이 완전한 응답 <span class="math inline">\(y \sim \pi(\cdot \mid x)\)</span>에 대한 분포를 유도하도록 한다. 각 응답에는 (유한) 답변 세트 <span class="math inline">\(\mathcal{A}\)</span>에서 가져온 최종 답변 <span class="math inline">\(a(y)\)</span>이 포함 된다. <span class="math inline">\(a^\star\)</span>이 정답을 나타냅니다. <em>단일 샘플</em>이 확률적으로 성공함</p>
 <p><span id="eq-700-단일"><span class="math display">\[
 p \;=\; \Pr_{y \sim \pi}\big[\, a(y) = a^\star \,\big].
-\tag{266.1}\]</span></span></p>
+\tag{267.1}\]</span></span></p>
 <p>테스트 시간 계산 방법은 <span class="math inline">\(N\)</span> 독립 샘플 <span class="math inline">\(y_1, \dots, y_N\)</span>을 추출하고 해당 답변을 하나의 예측 <span class="math inline">\(\hat a_N\)</span>로 결합한다. 두 가지 표준 결합자는 <strong>자체 일관성</strong>(<span class="math inline">\(a(y_i)\)</span>에 대한 과반수 투표)과 <strong>best-of-N</strong>(검증자가 가장 높은 점수를 받은 후보 선택)이다.</p>
 </section>
 <section id="sec-700-passn" class="level3">
@@ -91453,7 +91473,7 @@ p \;=\; \Pr_{y \sim \pi}\big[\, a(y) = a^\star \,\big].
 <p><span class="math inline">\(N\)</span> 샘플에 정답이 나타날 때마다 정답을 인식하는 오라클 검증자가 있다고 가정한다. Best of N은 적어도 하나의 샘플이 정확할 때 정확하게 성공한다. 독립적인 표본을 사용하면,</p>
 <p><span id="eq-700-passn"><span class="math display">\[
 \Pr[\hat a_N = a^\star] \;=\; 1 - (1 - p)^N \;=\; \text{pass@}N.
-\tag{266.2}\]</span></span></p>
+\tag{267.2}\]</span></span></p>
 <p>이는 <span class="math inline">\(p\)</span>에서 <span class="math inline">\(1\)</span> 방향으로 단조롭게 상승하고 작은 <span class="math inline">\(p\)</span>의 경우 포화되기 전에 처음에는 거의 선형적으로 상승한다(<span class="math inline">\(Np \ll 1\)</span>의 경우 <span class="math inline">\(\approx Np\)</span>). 첫 번째 성공을 얻기 위해 예상되는 샘플 수는 기하 분포의 평균인 <span class="math inline">\(1/p\)</span>입니다. 이는 오라클 검증 파이프라인이 계획해야 하는 컴퓨팅 예산이다. 방정식 <a href="#eq-700-passn" class="quarto-xref">Equation <span class="quarto-unresolved-ref">eq-700-passn</span></a>은 낙관적 상한선이다. 이는 검증자가 올바른 답보다 잘못된 답을 선택하지 않는다고 가정한다. 실제 검증자는 그렇지 않으며 <a href="#sec-700-imperfect" class="quarto-xref"><span class="quarto-unresolved-ref">sec-700-imperfect</span></a> 섹션은 그 차이를 정확하게 만든다.</p>
 </section>
 <section id="sec-700-majority" class="level3">
@@ -91461,11 +91481,11 @@ p \;=\; \Pr_{y \sim \pi}\big[\, a(y) = a^\star \,\big].
 <p>자체 일관성에는 외부 검증자가 필요하지 않다. 가장 빈번한 최종 답변을 취함으로써 추론 경로를 소외시킵니다. 먼저 깨끗한 이진 사례를 생각해 보라. 정답은 단일 지배적인 선택 요소와 경쟁하고 각 샘플은 <span class="math inline">\(p\)</span> 확률로 정확하며 <span class="math inline">\(N\)</span>(홀수) 샘플에 투표한다. 올바른 샘플 수 <span class="math inline">\(K \sim \text{Binomial}(N, p)\)</span>이 <span class="math inline">\(N/2\)</span>을 초과하면 투표가 올바른 것이다.</p>
 <p><span id="eq-700-다수"><span class="math display">\[
 \Pr[\hat a_N = a^\star] \;=\; \sum_{k = \lceil N/2 \rceil}^{N} \binom{N}{k} p^{k} (1-p)^{N-k}.
-\tag{266.3}\]</span></span></p>
+\tag{267.3}\]</span></span></p>
 <p><span class="math inline">\(p &gt; \tfrac12\)</span>인 경우 이 확률은 <span class="math inline">\(1\)</span>이 <span class="math inline">\(N \to \infty\)</span>가 되는 경향이 있다(큰 수의 법칙에 따라 올바른 투표의 경험적 비율이 <span class="math inline">\(p &gt; \tfrac12\)</span>이 된다). <span class="math inline">\(p &lt; \tfrac12\)</span>인 경우 <span class="math inline">\(0\)</span> 경향이 있다. <strong>다수 투표는 모델이 가장 자주 믿는 모든 것을 증폭시키므로 모델이 해당 문제에 대해 우연보다 나은 경우에만 도움이 된다.</strong> 회프딩 경계는 비율을 명시적으로 만든다. <span class="math inline">\(\Delta = p - \tfrac &gt; 0\)</span>을 사용하면</p>
 <p><span id="eq-700-hoeffding"><span class="math display">\[
 \Pr[\text{majority wrong}] \;=\; \Pr\!\Big[\tfrac{K}{N} \le \tfrac12\Big] \;\le\; \exp\!\big(-2 N \Delta^2\big).
-\tag{266.4}\]</span></span></p>
+\tag{267.4}\]</span></span></p>
 <p>오류는 샘플 수에 따라 기하급수적으로 감소하지만 비율은 마진 제곱 <span class="math inline">\(\Delta^2\)</span>에 의해 결정 된다. 확률보다 거의 높은 모델(<span class="math inline">\(\Delta\)</span> 작음)은 이점을 실현하기 위해 많은 샘플이 필요하다. 이것이 바로 우리가 플롯할 계산 대 정확도 절충안이다. 현실적인 다중 방해 요인 사례(올바른 질량 <span class="math inline">\(p\)</span>, 나머지는 여러 잘못된 답변에 분산됨)는 잘못된 투표가 분할되고 복수 임계값을 지우기가 더 쉽기 때문에 양방향 경계보다 더 잘 작동한다. <a href="#sec-700-self-consistency" class="quarto-xref"><span class="quarto-unresolved-ref">sec-700-self-consistency</span></a> 섹션의 코드에서 해당 사례를 직접 측정한다.</p>
 </section>
 <section id="sec-700-imperfect" class="level3">
@@ -91478,7 +91498,7 @@ p \;=\; \Pr_{y \sim \pi}\big[\, a(y) = a^\star \,\big].
 <p>병렬 방법은 독립적인 표본을 추출하여 폭을 탐색한다. 대신 순차적 테스트 시간 컴퓨팅은 <em>하나의 궤적</em> 내에서 토큰을 소비한다. 모델은 긴 추적을 작성하고 중간 결과를 확인하고 수정한다. 공식적으로, 생각의 긴 사슬은 <span class="math inline">\(z_1, \dots, z_T\)</span> 단계의 잠재 시퀀스를 통해 답을 인수분해한다.</p>
 <p><span id="eq-700-cot"><span class="math display">\[
 \pi(a \mid x) \;=\; \sum_{z_{1:T}} \pi(a \mid x, z_{1:T}) \prod_{t=1}^{T} \pi(z_t \mid x, z_{&lt;t}),
-\tag{266.5}\]</span></span></p>
+\tag{267.5}\]</span></span></p>
 <p>깊이의 가치는 중간 단계를 <em>조건화하고 수정</em>할 수 있다는 것이다. 나중 단계에서는 이전 단계가 잘못되었음을 감지하고 이를 재정의할 수 있다. 이는 단일 전달 응답으로는 수행할 수 없는 작업이다. 이는 결과 보상 강화 학습이 직접적으로 인센티브를 부여하는 행동이다(강화 학습 장의 주제). 2025년까지의 연구 합의는 폭과 깊이가 <strong>구성</strong>되며 최적의 분할은 문제에 따라 다르다는 것이다. 쉬운 문제는 과도한 검색에서 낭비를 계산하지만 두 가지 모두에서 가장 어려운 이점은 있다.</p>
 </section>
 <section id="sec-700-verification-axis" class="level3">
@@ -91487,7 +91507,7 @@ p \;=\; \Pr_{y \sim \pi}\big[\, a(y) = a^\star \,\big].
 <p>첫 번째 조치는 검증자에게 개별 라벨을 요청하는 것을 중단하는 것이다. 표준 LM 심사위원은 모델에게 점수 토큰(예: <span class="math inline">\(\{0,\dots,G\}\)</span>의 정수)을 내보내고 단일 샘플링 토큰을 읽도록 요청하여 모델이 자체 불확실성에 대해 알고 있는 모든 것을 삭제한다. 대신, 고정된 점수 토큰 세트 <span class="math inline">\(\{v_1,\dots,v_G\}\)</span>에 대한 검증자의 다음 토큰 <em>배포</em>를 읽고 그 기대치를 받아들이다. 각 점수 토큰에서 스칼라로의 단조로운 맵 <span class="math inline">\(\phi(v_g)\in\)</span>을 사용하면 프롬프트 <span class="math inline">\(x\)</span>에 대한 후보 추적 <span class="math inline">\(\tau\)</span>의 연속 점수는 다음과 같다.</p>
 <p><span id="eq-700-verifier-점수"><span class="math display">\[
 s(x,\tau) \;=\; \mathbb{E}_{v \sim p_\theta(\cdot\mid x,\tau)}\big[\phi(v)\big] \;=\; \sum_{g=1}^{G} p_\theta\big(v_g \mid x, \tau\big)\,\phi(v_g).
-\tag{266.6}\]</span></span></p>
+\tag{267.6}\]</span></span></p>
 <p>이는 무료이다. 점수 매기기 위치의 로짓은 이산 라벨을 생성하는 정방향 패스에서 이미 계산되었으므로 <a href="#eq-700-verifier-score" class="quarto-xref">Equation <span class="quarto-unresolved-ref">eq-700-verifier-score</span></a>는 한 번의 검증자 호출 비용을 지불하고 1비트 판단을 보정된 실수로 바꾼다. 그 가치는 세 개의 독립적인 방향을 따라 <em>확장</em>된다는 것이다. 각 방향은 <a href="#sec-700-imperfect" class="quarto-xref"><span class="quarto-unresolved-ref">sec-700-imperfect</span></a>가 바인딩 제약 조건으로 식별한 유효 노이즈 <span class="math inline">\(\sigma\)</span>을 줄인다.</p>
 <ul>
 <li><strong>점수 세분화 <span class="math inline">\(G\)</span>.</strong>**: 점수 토큰이 많을수록 $$의 더 미세한 분할이 제공되므로 동일한 거친 버킷에서 충돌하는 대신 실제로 더 나은 추적이 더 나쁜 추적과 분리 된다. 경험적으로 점수의 신호 대 잡음 비율은 <span class="math inline">\(G\)</span>에 따라 증가한다(논문에서는 SNR이 <span class="math inline">\(G{=}1\)</span>의 <span class="math inline">\(0.775\)</span>에서 <span class="math inline">\(G{=}20\)</span>의 <span class="math inline">\(0.799\)</span>로 상승한다고 보고한다).</li>
@@ -91497,7 +91517,7 @@ s(x,\tau) \;=\; \mathbb{E}_{v \sim p_\theta(\cdot\mid x,\tau)}\big[\phi(v)\big] 
 <p>세 가지를 모두 결합하면 총 보상은 기준에 대한 평균과 예상 점수의 반복이다.</p>
 <p><span id="eq-700-검증자-보상"><span class="math display">\[
 R(x,\tau) \;=\; \frac{1}{C\,K}\sum_{c=1}^{C}\sum_{k=1}^{K}\sum_{g=1}^{G} p_\theta\big(v_g \mid x, c, \tau\big)\,\phi(v_g),
-\tag{266.7}\]</span></span></p>
+\tag{267.7}\]</span></span></p>
 <p><span class="math inline">\(K\)</span> 및 <span class="math inline">\(C\)</span>은 문자 그대로의 평균이므로 추가된 각 읽기 또는 기준은 <a href="#sec-700-imperfect" class="quarto-xref"><span class="quarto-unresolved-ref">sec-700-imperfect</span></a> 모델에서 <span class="math inline">\(\sigma\)</span>을 축소하여 일반 리샘플링이 이동할 수 없는 N개 최고 상한선을 들어 올린다. 모든 쌍 비교에 대한 <span class="math inline">\(O(N^2)\)</span> 비용 없이 점수를 선택 항목으로 바꾸기 위해 연속 점수는 <span class="math inline">\(O(Nk)\)</span>에서 실행되는 피벗 토너먼트 랭커에 공급 된다. 무작위 링 패스는 위치 편향을 취소하고 상위 <span class="math inline">\(k\)</span> 후보자는 피벗이 되며 나머지는 피벗 세트에 대해서만 비교 된다. 검증자 교육이 필요하지 않으며 에이전트 선택에 대한 최첨단 기술인 Terminal-Bench V2의 <span class="math inline">\(86.5\%\)</span> 및 SWE-Bench Verified의 <span class="math inline">\(78.2\%\)</span>에 도달한다. 동일한 연속 신호는 강화 학습에 대한 <em>밀도</em> 보상의 두 배가 되어 GRPO(섹션 <a href="#sec-700-r1" class="quarto-xref"><span class="quarto-unresolved-ref">sec-700-r1</span></a>의 R 뒤에 있는 알고리즘)의 샘플 효율성을 향상시킵니다. 여기서 희소 결과 보상은 긴 궤적에서 정책에 배울 것이 거의 없다.</p>
 </section>
 </section>
@@ -91532,7 +91552,7 @@ R(x,\tau) \;=\; \frac{1}{C\,K}\sum_{c=1}^{C}\sum_{k=1}^{K}\sum_{g=1}^{G} p_\thet
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-700-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 266.2: Test-time compute methods organized by breadth versus depth.
+Figure 267.2: Test-time compute methods organized by breadth versus depth.
 </figcaption>
 </figure>
 </div>
@@ -91544,7 +91564,7 @@ Figure 266.2: Test-time compute methods organized by breadth versus depth.
 <div id="tbl-700-orm-prm-hrm" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-700-orm-prm-hrm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 266.1: Wang et al. 이후 ORM, PRM 및 HRM 비교. (2026, 표 1).
+Table 267.1: Wang et al. 이후 ORM, PRM 및 HRM 비교. (2026, 표 1).
 </figcaption>
 <div aria-describedby="tbl-700-orm-prm-hrm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top">
@@ -91589,17 +91609,17 @@ Table 266.1: Wang et al. 이후 ORM, PRM 및 HRM 비교. (2026, 표 1).
 <p><strong>계층적 감독.</strong> 추론 궤적에 <span class="math inline">\(N\)</span> 단계 <span class="math inline">\(s_1, \dots, s_N\)</span>이 있고 <span class="math inline">\(R(\cdot)\)</span>이 단계를 올바른 것으로 분류하도록 학습된 단계 수준 보상 함수라고 가정한다. PRM의 훈련 세트에는 단계당 하나의 행이 있다.</p>
 <p><span id="eq-700-dprm"><span class="math display">\[
 D_{\text{PRM}} = \{(s_i,\, R(s_i)) \mid 1 \le i \le N\}.
-\tag{266.8}\]</span></span></p>
+\tag{267.8}\]</span></span></p>
 <p><strong>계층적 보상 모델(HRM)</strong>은 단일 교육 예제로 병합된 <em>연속적인</em> 단계 쌍당 하나의 추가 행으로 이를 강화한다.</p>
 <p><span id="eq-700-dhrm"><span class="math display">\[
 D_{\text{HRM}} = D_{\text{PRM}} \,\cup\, \{(s_i \,\Vert\, s_{i+1},\; R(s_i \,\Vert\, s_{i+1})) \mid 1 \le i &lt; N\},
-\tag{266.9}\]</span></span></p>
+\tag{267.9}\]</span></span></p>
 <p>여기서 <span class="math inline">\(\Vert\)</span>은 연결을 나타냅니다. <span class="math inline">\(D_{\text{HRM}}\)</span>은 <span class="math inline">\(D_{\text{PRM}}\)</span>의 엄격한 상위 집합이다. 모든 단일 단계 예시는 그대로 유지되며 모델은 추가적으로 각 2단계 범위를 일관된 단위로 표시한다. 결정적으로 HRM은 <em>추론 인터페이스</em>가 아닌 <em>훈련 데이터</em>만 변경한다. 테스트 시 PRM과 마찬가지로 한 번에 한 단계씩 <span class="math inline">\(R(s_i)\)</span>의 점수를 매깁니다. 따라서 이는 추가 대기 시간이나 서비스 비용이 전혀 없는 Best of N 또는 빔 검색 파이프라인의 드롭인 대체품이다.</p>
 <p>병합된 범위에 첨부된 라벨은 “두 단계가 모두 올바른 경우 올바른” 것이 아니다. PRM800K의 수동 주석에는 포지티브, 네거티브, 중립의 세 가지 클래스가 있다. 왕 외. 비진행적 추론에 불이익을 주기 위해 의도적으로 부정적인 레이블이 지정된 연속 중립/부정 단계를 사용하여 표 <a href="#tbl-700-hrm-labels" class="quarto-xref">Table <span class="quarto-unresolved-ref">tbl-700-hrm-labels</span></a>의 규칙에 따라 병합 레이블을 정의한다.</p>
 <div id="tbl-700-hrm-labels" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-700-hrm-labels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 266.2: HRM의 병합 단계 라벨링 규칙(Wang et al. 2026, 표 6). 자세히 읽어보라. 병합된 라벨은 <em>현재</em> 단계의 버킷(양성 여부)에만 의존하며 ‘이전 단계’ 열은 결과를 변경하지 않는다. <a href="#sec-700-hrm-code" class="quarto-xref"><span class="quarto-unresolved-ref">sec-700-hrm-code</span></a> 섹션은 ​​모든 라벨 조합에 대한 이러한 감소를 확인하고 음수 단계 2가 양수 단계 3으로 대체되는 궤적을 작동한다. 이는 정확히 원본 문서에서 그림 1의 작업 예이다.
+Table 267.2: HRM의 병합 단계 라벨링 규칙(Wang et al. 2026, 표 6). 자세히 읽어보라. 병합된 라벨은 <em>현재</em> 단계의 버킷(양성 여부)에만 의존하며 ‘이전 단계’ 열은 결과를 변경하지 않는다. <a href="#sec-700-hrm-code" class="quarto-xref"><span class="quarto-unresolved-ref">sec-700-hrm-code</span></a> 섹션은 ​​모든 라벨 조합에 대한 이러한 감소를 확인하고 음수 단계 2가 양수 단계 3으로 대체되는 궤적을 작동한다. 이는 정확히 원본 문서에서 그림 1의 작업 예이다.
 </figcaption>
 <div aria-describedby="tbl-700-hrm-labels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top">
@@ -91640,7 +91660,7 @@ Table 266.2: HRM의 병합 단계 라벨링 규칙(Wang et al. 2026, 표 6). �
 <div id="tbl-700-hrm-bestofn" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-700-hrm-bestofn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 266.3: 정책으로서의 PRM800K 테스트 세트, Qwen.5-72B-Math-Instruct의 N 최고 정확도(Wang et al. 2026, 표 2).
+Table 267.3: 정책으로서의 PRM800K 테스트 세트, Qwen.5-72B-Math-Instruct의 N 최고 정확도(Wang et al. 2026, 표 2).
 </figcaption>
 <div aria-describedby="tbl-700-hrm-bestofn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top">
@@ -91688,7 +91708,7 @@ Table 266.3: 정책으로서의 PRM800K 테스트 세트, Qwen.5-72B-Math-Instr
 <div id="tbl-700-hrm-일반화" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-700-hrm-일반화-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 266.4: 도메인 외부 일반화, Qwen.5-7B-Math-Instruct를 사용한 N 최선(Wang et al. 2026, 표 5, 선택된 열).
+Table 267.4: 도메인 외부 일반화, Qwen.5-7B-Math-Instruct를 사용한 N 최선(Wang et al. 2026, 표 5, 선택된 열).
 </figcaption>
 <div aria-describedby="tbl-700-hrm-일반화-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top" style="width:100%;">
@@ -91752,11 +91772,11 @@ Table 266.4: 도메인 외부 일반화, Qwen.5-7B-Math-Instruct를 사용한 N
 <p>HNC의 정당화는 표본 평균에 대한 짧고 정확한 주장이다. MCTS 노드의 <span class="math inline">\(N\)</span> 하위 분기를 i.i.d로 모델링한다. Bernoulli(<span class="math inline">\(\theta\)</span>) 정확성 표시기 <span class="math inline">\(X_1, \dots, X_N\)</span>, 여기서 <span class="math inline">\(\theta\)</span>은 분기의 하위 트리가 올바른 것으로 판단되는 (알 수 없는) 실제 확률이다. MCTS는 자녀의 표본 평균으로 부모의 점수를 추정한다.</p>
 <p><span id="eq-700-hnc-이전"><span class="math display">\[
 \hat\theta_N = \frac{1}{N}\sum_{j=1}^{N} X_j, \qquad \mathbb{E}[\hat\theta_N] = \theta, \qquad \operatorname{Var}(\hat\theta_N) = \frac{\theta(1-\theta)}{N} \equiv \frac{\sigma^2}{N},
-\tag{266.10}\]</span></span></p>
+\tag{267.10}\]</span></span></p>
 <p>Bernoulli 표본 평균의 표준 평균과 분산. HNC는 <em>값에 관계없이</em> 무작위로 균일하게 선택된 하나의 하위 항목을 삭제하고 나머지 <span class="math inline">\(N-1\)</span>에 대해 다시 정규화한다. <span class="math inline">\(N\)</span> 하위 항목은 i.i.d.이므로 그 중 하나를 무작위로 균일하게 삭제하면 i.i.d가 남는다. 동일한 Bernoulli(<span class="math inline">\(\theta\)</span>) 분포에서 추출된 <span class="math inline">\(N-1\)</span> 크기의 표본이므로 재정규화된 추정량은 더 작은 i.i.d의 표본 평균에 지나지 않는다. 견본:</p>
 <p><span id="eq-700-hnc-이후"><span class="math display">\[
 \hat\theta_{N-1} = \frac{1}{N-1}\sum_{j \ne k} X_j, \qquad \mathbb{E}[\hat\theta_{N-1}] = \theta, \qquad \operatorname{Var}(\hat\theta_{N-1}) = \frac{\theta(1-\theta)}{N-1} \equiv \frac{\sigma^2}{N-1}.
-\tag{266.11}\]</span></span></p>
+\tag{267.11}\]</span></span></p>
 <p>추정기는 <strong>편향되지 않은</strong> 상태를 유지한다(<a href="#eq-700-hnc-before" class="quarto-xref">Equation <span class="quarto-unresolved-ref">eq-700-hnc-before</span></a> 및 <a href="#eq-700-hnc-after" class="quarto-xref">Equation <span class="quarto-unresolved-ref">eq-700-hnc-after</span></a> 평균은 <span class="math inline">\(\theta\)</span>에 대해). 이는 HNC가 체계적인 레이블 오류의 소스가 아닌 데이터 확대로 사용하기에 안전한 이유이다. 그러나 <span class="math inline">\(N - 1 &lt; N\)</span> 때문에 분산이 엄격하게 <em>증가</em>합니다. <span class="math inline">\(\sigma^2/(N-1) &gt; \sigma^2/N\)</span>: HNC는 의도적으로 제어된 노이즈를 주입한다. 이것이 바로 병합된 예제를 중복이 아닌 독특하고 유용한 교육 포인트로 만드는 것이다. 인플레이션 요인은 <span class="math inline">\(\frac{\sigma^2/(N-1)}{\sigma^2/N} = \frac{N}{N-1}\)</span>입니다. 이는 작은 <span class="math inline">\(N\)</span>에 대해서만 크고 <span class="math inline">\(N\)</span>이 성장함에 따라 <span class="math inline">\(1\)</span>되는 경향이 있다. 따라서 문서에서 실제로 사용하는 트리 너비(노드당 5~6명의 하위)에 대해 추가된 노이즈는 실제이지만 제한적이며 대략 20~25%의 분산 증가이다. <a href="#sec-700-hrm-code" class="quarto-xref"><span class="quarto-unresolved-ref">sec-700-hrm-code</span></a> 섹션에서는 직접적인 Monte Carlo 시뮬레이션과 기호 검사를 통해 편견과 분산 공식을 모두 확인한다.</p>
 <p>PRM800K에서 MCTS 생성 궤적에 HNC를 적용하고(Qwen.5-7B-Math-Instruct를 롤아웃 정책으로 사용하고 수동 레이블이 전혀 없음) 이전과 같이 Qwen.5-1.5B-Math를 미세 조정하면 HRM이 세 가지 다른 정책 모델(DeepSeek-Math-7B, DeepSeek-Math-7B, DeepSeek-Math-7B, Qwen.5-7B-Math-Instruct 및 Qwen.5-72B-Math-Instruct), 추가되는 훈련 비용은 적다. 약 30% 더 많은 훈련 예제이지만 MCTS 롤아웃 자체에서 소비하는 2, GPU 시간에 비해 1.5B 보상 모델을 미세 조정하는 데는 120 대 84 A GPU 시간이 소요 된다. 또한 이 백서는 자동 레이블이 지정된 데이터를 사용하여 고정 참조 모델에 대해 KL 정규화 목표 <span class="math inline">\(\mathcal{L} = \mathcal{L}_{\text{LM}} + \lambda \log D_{\text{KL}}(P \Vert Q)\)</span>을 사용하여 신뢰도가 높은 궤적에서 정책 모델 자체(자체 학습)를 미세 조정한다. 원시 KL 발산(범위 0 ~ 20,000)이 원인 언어 모델링 손실(범위 0 ~ 12)을 압도하고 옵티마이저가 추론을 학습하는 대신 참조 분포 일치로 축소되기 때문에 실제로 KL 용어 내부의 로그가 필요하다.</p>
 <p><strong>이 패턴은 과거 텍스트를 일반화한다.</strong> Zhang et al. (2025)는 수학 텍스트 외부의 동일한 계층적 감독 아이디어를 <em>기호적 컴퓨터 비전</em>에 완전히 적용한다. 즉, 다이어그램(기하학 그림 또는 차트)을 픽셀이 아닌 기하학적 기본 요소, 점, 선, 모양 및 이들 간의 관계로 구문 분석한다. 그들의 <strong>기호 계층적 프로세스 보상 모델</strong>은 구문 분석 계층, 포인트-라인 일관성, 라인-형태 일관성 및 형태-관계 일관성의 여러 수준에서 자체 감독 기호 자동 인코더를 보상한다. 이는 HRM의 단일 단계 대 다단계 분할을 정확히 반영하지만 “단계”는 이제 한 줄의 산술 대신 기하학적 구조의 한 수준을 의미한다. 보상 해킹 문제는 <a href="#sec-700-hrm" class="quarto-xref"><span class="quarto-unresolved-ref">sec-700-hrm</span></a> 진단과 동일한 단일 섹션이며(평평한 단일 레벨 보상은 전체 구조가 잘못되면서 로컬로 만족하기 쉽다) 수정 사항은 동일한 형태이다(한 레벨 내뿐만 아니라 레벨 전체의 일관성을 감독). 다이어그램이 많은 벤치마크에서는 보고된 이득이 크다. 즉, 기하학적 재구성 오류가 98.2% 감소하고 MathGlance, MathVerse 및 GeoQA의 정확도가 픽셀 전용 기준선에 비해 두 자리 수로 향상되었다. 제거할 가치가 있는 결과는 도메인 특정이 아니라 아키텍처이다. 계층적 프로세스 감독은 대상이 자연스러운 다중 레벨 구조, 텍스트 추론 단계, 기하학적 기본 요소 또는 기타 평평한 단일 레벨 보상을 활용할 수 있는 모든 보상 모델에 대한 일반적인 방법이다.</p>
@@ -92579,11 +92599,11 @@ Table 266.4: 도메인 외부 일반화, Qwen.5-7B-Math-Instruct를 사용한 N
 <p><strong>모니터링 가능성 격차가 정확해졌습니다.</strong> <span class="math inline">\(H \in \{0, 1\}\)</span>은 모델이 <span class="math inline">\(\Pr[H = 1] = \tfrac12\)</span>을 사용하여 특정 쿼리에서 숨겨진 측면 목표를 추구하는지 여부를 나타내고 <span class="math inline">\(T\)</span>는 표시되는 토큰 추적을 나타냅니다. <strong>CoT 모니터</strong>는 <span class="math inline">\(m : T \mapsto \{0,1\}\)</span> 결정 규칙이다. 균형 잡힌 탐지 정확도는 <span class="math inline">\(\mathrm{Acc}(m) = \tfrac12\Pr[m(T) = 1 \mid H = 1] + \tfrac12\Pr[m(T) = 0 \mid H = 0]\)</span>입니다. 아무리 영리하더라도 모든 종류의 최고의 모니터는 우도비 테스트이며 Le Cam의 정체성은 그 정확성을 정확하게 제공한다.</p>
 <p><span id="eq-700-모니터-lecam"><span class="math display">\[
 \mathrm{Acc}^\star \;=\; \sup_{m} \mathrm{Acc}(m) \;=\; \frac{1}{2}\Big(1 + d_{\mathrm{TV}}\big(P_{T \mid H=1},\, P_{T \mid H=0}\big)\Big).
-\tag{266.12}\]</span></span></p>
+\tag{267.12}\]</span></span></p>
 <p>추적의 한계 법칙에 대해 <span class="math inline">\(\bar P = \tfrac12(P_{T\mid H=1} + P_{T\mid H=0})\)</span>을 작성한다. 균일한 사전 하에서 숨겨진 목표와 보이는 추적 사이의 상호 정보는 Jensen-Shannon 분기, <span class="math inline">\(I(H; T) = \tfrac D_{\mathrm{KL}}(P_{T\mid H=1} \Vert \bar P) + \tfrac D_{\mathrm{KL}}(P_{T\mid H=0} \Vert \bar P)\)</span>입니다. 각 혼합 구성 요소는 다른 구성 요소인 <span class="math inline">\(d_{\mathrm{TV}}(P_{T \mid H=h}, \bar P) = \tfrac d_{\mathrm{TV}}(P_{T\mid H=1}, P_{T\mid H=0})\)</span>의 절반에 위치하므로 Pinsker의 부등식 <span class="math inline">\(D_{\mathrm{KL}} \ge 2 d_{\mathrm{TV}}^2\)</span>을 각 항에 적용하고 평균을 구하면 <span class="math inline">\(I(H;T) \ge \tfrac d_{\mathrm{TV}}^2\)</span>이 된다. <a href="#eq-700-monitor-lecam" class="quarto-xref">Equation <span class="quarto-unresolved-ref">eq-700-monitor-lecam</span></a>으로 대체:</p>
 <p><span id="eq-700-모니터-바운드"><span class="math display">\[
 \mathrm{Acc}^\star \;\le\; \frac{1}{2} \;+\; \frac{1}{2}\sqrt{2\, I(H; T)}.
-\tag{266.13}\]</span></span></p>
+\tag{267.13}\]</span></span></p>
 <p><a href="#eq-700-monitor-bound" class="quarto-xref">Equation <span class="quarto-unresolved-ref">eq-700-monitor-bound</span></a> 등식은 CoT 모니터링의 정직한 상한선이며 모니터에 대해서는 전혀 언급하지 않는다. 감지는 보이는 토큰이 전달하는 숨겨진 목표에 대한 정보의 양에 따라 제한되므로 더 강력한 모니터, 더 큰 모니터 또는 모니터 집합이 이를 이길 수 없다. 계산이 모니터가 읽을 수 없는 채널로 마이그레이션되면 <span class="math inline">\(I(H;T) \to 0\)</span> 및 <span class="math inline">\(\mathrm{Acc}^\star \to \tfrac12\)</span>: 기회가 발생한다. Claude Opus 4. 숨겨진 제약 조건 결과는 정확히 측면 목표가 0에 가까운 <span class="math inline">\(I(H;T)\)</span>로 만족되는 경우이다.</p>
 <p>아래 시뮬레이션은 붕괴를 정량적으로 만든다. 숨겨진 목표에 대한 작업의 일부 <span class="math inline">\(\alpha\)</span>은 필러 토큰에 의해 수행되며 서명을 남기지 않는 반면, 그 중 <span class="math inline">\(1 - \alpha\)</span>은 모니터가 읽는 가시적 추적 기능을 교란시킵니다. 세 곡선 모두 <em>동일</em> 수량, 균형 잡힌 감지 정확도를 보고하므로 직접 비교할 수 있다. 시뮬레이션된 모니터의 균형 정확도를 Monte Carlo로 측정하고 이를 <a href="#eq-700-monitor-lecam" class="quarto-xref">Equation <span class="quarto-unresolved-ref">eq-700-monitor-lecam</span></a>의 정확한 Le Cam 최적 및 <a href="#eq-700-monitor-bound" class="quarto-xref">Equation <span class="quarto-unresolved-ref">eq-700-monitor-bound</span></a>의 정보 경계와 비교한다. 시뮬레이션된 모니터는 <span class="math inline">\(\delta/2\)</span>에서 임계값이 지정된 우도 비율 테스트 자체이므로 샘플링 노이즈까지 Le Cam 최적을 추적하고 모든 곳에서 경계 아래에 있어야 한다.</p>
 <div class="sourceCode" id="cb1185"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1185-1"><a href="#cb1185-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-700-invisible-reasoning</span></span>
@@ -99682,7 +99702,7 @@ y(i) \;=\; \alpha_K(i)\, k(i) \;+\; \alpha_L(i)\, \ell(i),
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-llm-economics-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 287.1: Conceptual map of the economics of large language models
+Figure 288.1: Conceptual map of the economics of large language models
 </figcaption>
 </figure>
 </div>
@@ -99734,7 +99754,7 @@ Figure 287.1: Conceptual map of the economics of large language models
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-creative-convergence-ai-assistance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 288.1: The Creative Convergence Effect of AI Assistance
+Figure 289.1: The Creative Convergence Effect of AI Assistance
 </figcaption>
 </figure>
 </div>
@@ -99842,7 +99862,7 @@ Figure 288.1: The Creative Convergence Effect of AI Assistance
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-transformation-knowledge-work-processes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 289.1: The Transformation of Knowledge Work Processes
+Figure 290.1: The Transformation of Knowledge Work Processes
 </figcaption>
 </figure>
 </div>
@@ -99948,7 +99968,7 @@ e_s \;=\; B_s\, h^{p}_{s} \;+\; \min\!\big(a_s,\; \phi_s\, h^{r}_{s}\big),
 <div id="tbl-ai-productivity-impact-by-sector" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ai-productivity-impact-by-sector-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 289.1: 부문 및 작업 유형별 AI 생산성 영향
+Table 290.1: 부문 및 작업 유형별 AI 생산성 영향
 </figcaption>
 <div aria-describedby="tbl-ai-productivity-impact-by-sector-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top">
@@ -101078,7 +101098,7 @@ Throughout, the chapters are written to be largely self contained, but there is 
 <div id="tbl-data-annotation-major-players" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data-annotation-major-players-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;308.1: 데이터 주석 사업의 주요 플레이어
+Table&nbsp;309.1: 데이터 주석 사업의 주요 플레이어
 </figcaption>
 <div aria-describedby="tbl-data-annotation-major-players-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -101150,14 +101170,14 @@ Table&nbsp;308.1: 데이터 주석 사업의 주요 플레이어
 </div>
 </figure>
 </div>
-<p><a href="#tbl-data-annotation-major-players" class="quarto-xref">Table&nbsp;<span>308.1</span></a>는 이 시장의 주요 플레이어를 보여준다.</p>
+<p><a href="#tbl-data-annotation-major-players" class="quarto-xref">Table&nbsp;<span>309.1</span></a>는 이 시장의 주요 플레이어를 보여준다.</p>
 </section>
 <section id="오픈-소스-도구" class="level3">
 <h3 class="anchored" data-anchor-id="오픈-소스-도구">오픈 소스 도구</h3>
 <div id="tbl-data-annotation-open-source-tools" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data-annotation-open-source-tools-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;308.2: 오픈 소스 도구
+Table&nbsp;309.2: 오픈 소스 도구
 </figcaption>
 <div aria-describedby="tbl-data-annotation-open-source-tools-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -101209,7 +101229,7 @@ Table&nbsp;308.2: 오픈 소스 도구
 </div>
 </figure>
 </div>
-<p><a href="#tbl-data-annotation-open-source-tools" class="quarto-xref">Table&nbsp;<span>308.2</span></a>는 시장에서 사용 가능한 현재 오픈 소스를 보여준다.</p>
+<p><a href="#tbl-data-annotation-open-source-tools" class="quarto-xref">Table&nbsp;<span>309.2</span></a>는 시장에서 사용 가능한 현재 오픈 소스를 보여준다.</p>
 <p><strong>우리의 선택: 라벨 스튜디오</strong></p>
 <p>이 가이드에 Label Studio가 필요한 이유:</p>
 <ul>
@@ -102231,7 +102251,7 @@ Table&nbsp;308.2: 오픈 소스 도구
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-video-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;309.1: Keyframe-based video annotation workflow
+Figure&nbsp;310.1: Keyframe-based video annotation workflow
 </figcaption>
 </figure>
 </div>
@@ -105484,7 +105504,7 @@ Figure&nbsp;309.1: Keyframe-based video annotation workflow
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-system-architecture-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;313.1: Complete annotation platform architecture
+Figure&nbsp;314.1: Complete annotation platform architecture
 </figcaption>
 </figure>
 </div>
@@ -105604,7 +105624,7 @@ f(Y, \mathbf{M} \mid \theta, \phi) = f(Y \mid \theta) \, f(\mathbf{M} \mid Y, \p
 <p>관측 데이터에 대한 우도 함수(observed-data likelihood)는 결측된 성분 <span class="math inline">\(Y_{\text{mis}}\)</span>에 대해 적분을 수행하여 얻어진다:</p>
 <p><span id="eq-observed-likelihood"><span class="math display">\[
 L(\theta, \phi \mid Y_{\text{obs}}, \mathbf{M}) = \int f(Y_{\text{obs}}, Y_{\text{mis}} \mid \theta) \, f(\mathbf{M} \mid Y_{\text{obs}}, Y_{\text{mis}}, \phi) \, dY_{\text{mis}}
-\tag{314.1}\]</span></span></p>
+\tag{315.1}\]</span></span></p>
 <p>이 식은 결측 데이터 분석의 가장 근본적인 기본 방정식이다. 결측 메커니즘의 전체 분류 체계와 다양한 통계 방법론의 수학적 타당성은 모두 이 적분식을 어떻게 단순화할 수 있는가로부터 도출 된다.</p>
 <hr>
 </section>
@@ -105616,7 +105636,7 @@ L(\theta, \phi \mid Y_{\text{obs}}, \mathbf{M}) = \int f(Y_{\text{obs}}, Y_{\tex
 <p><strong>정의.</strong> 결측이 발생할 확률이 관측된 데이터 값이나 결측된 데이터 값 모두와 완전히 독립적인 경우, 해당 데이터를 <strong>완전 무작위 결측(MCAR)</strong>이라고 정의한다:</p>
 <p><span id="eq-mcar"><span class="math display">\[
 f(\mathbf{M} \mid Y_{\text{obs}}, Y_{\text{mis}}, \phi) = f(\mathbf{M} \mid \phi) \quad \forall \; Y_{\text{obs}}, Y_{\text{mis}}
-\tag{314.2}\]</span></span></p>
+\tag{315.2}\]</span></span></p>
 <p>동치 표현으로, <span class="math inline">\(\mathbf{M} \perp\!\!\!\perp Y\)</span> (결측 지시자가 모든 데이터 변수와 상호 독립)이다.</p>
 <p><strong>통계적 함의:</strong></p>
 <ul>
@@ -105646,7 +105666,7 @@ E[\bar{Y}_{\text{cc}}] = E\left[E\left[\bar{Y}_{\text{cc}} \mid \mathbf{M}\right
 <p><strong>정의.</strong> 관측된 데이터가 주어졌을 때, 결측이 발생할 확률이 결측된 데이터 값 자체에는 의존하지 않고 오직 관측된 데이터 값에만 의존하는 경우, 해당 데이터를 <strong>무작위 결측(MAR)</strong>이라고 정의한다:</p>
 <p><span id="eq-mar"><span class="math display">\[
 f(\mathbf{M} \mid Y_{\text{obs}}, Y_{\text{mis}}, \phi) = f(\mathbf{M} \mid Y_{\text{obs}}, \phi) \quad \forall \; Y_{\text{mis}}
-\tag{314.3}\]</span></span></p>
+\tag{315.3}\]</span></span></p>
 <p>동치 표현으로, <span class="math inline">\(\mathbf{M} \perp\!\!\!\perp Y_{\text{mis}} \mid Y_{\text{obs}}\)</span>입니다.</p>
 <p><strong>통계적 함의:</strong></p>
 <ul>
@@ -105705,7 +105725,7 @@ E[Y \cdot (1 - \pi(X))] = E\left[E[Y \mid X] \cdot (1 - \pi(X))\right] = E[\mu_Y
 <p><strong>정의.</strong> 관측된 데이터를 모두 조건부로 통제한 후에도 결측 확률이 결측된 데이터 값 자체에 직접적으로 의존하는 경우, 해당 데이터를 <strong>비무작위 결측(MNAR)</strong>, <strong>비무시성 결측(nonignorable missingness)</strong> 또는 <strong>NMAR</strong>이라고 정의한다:</p>
 <p><span id="eq-mnar"><span class="math display">\[
 f(\mathbf{M} \mid Y_{\text{obs}}, Y_{\text{mis}}, \phi) \neq f(\mathbf{M} \mid Y_{\text{obs}}, \phi)
-\tag{314.4}\]</span></span></p>
+\tag{315.4}\]</span></span></p>
 <p>즉, <span class="math inline">\(\mathbf{M} \not\perp\!\!\!\perp Y_{\text{mis}} \mid Y_{\text{obs}}\)</span>입니다.</p>
 <p><strong>통계적 함의:</strong></p>
 <ul>
@@ -107007,11 +107027,11 @@ E[XY \mid M=0] &amp;= E_{X}\left[ E_{Y}[XY \mid X, M=0] \mid M=0 \right] \\
 <p><strong>E-단계(Expectation step):</strong> 관측 데이터 <span class="math inline">\(Y_{\text{obs}}\)</span> 및 현재 모수 <span class="math inline">\(\theta^{(t)}\)</span> 하에서 결측치 <span class="math inline">\(Y_{\text{mis}}\)</span>에 대한 완전 데이터 로그우도의 조건부 기댓값을 계산한다:</p>
 <p><span id="eq-estep"><span class="math display">\[
 Q(\theta \mid \theta^{(t)}) = E_{Y_{\text{mis}} \mid Y_{\text{obs}}, \theta^{(t)}}\left[\ell_c(\theta \mid Y_{\text{obs}}, Y_{\text{mis}})\right]
-\tag{314.5}\]</span></span></p>
+\tag{315.5}\]</span></span></p>
 <p><strong>M-단계(Maximization step):</strong> 계산된 목적함수 <span class="math inline">\(Q(\theta \mid \theta^{(t)})\)</span>를 <span class="math inline">\(\theta\)</span>에 대해 최대화하여 다음 추정치를 도출한다:</p>
 <p><span id="eq-mstep"><span class="math display">\[
 \theta^{(t+1)} = \arg\max_\theta Q(\theta \mid \theta^{(t)})
-\tag{314.6}\]</span></span></p>
+\tag{315.6}\]</span></span></p>
 <p><strong>주요 수학적 특성:</strong></p>
 <ol type="1">
 <li><strong>단조 수렴성 (Monotone ascent):</strong> 모든 반복 단계에서 관측 로그우도가 단조 증가한다: <span class="math inline">\(L(\theta^{(t+1)} \mid Y_{\text{obs}}) \geq L(\theta^{(t)} \mid Y_{\text{obs}})\)</span>. 이는 젠센 부등식에 의해 보장 된다.</li>
@@ -107362,16 +107382,16 @@ E[Y_{i,\text{mis}} \mid Y_{i,\text{obs}}, \mu^{(t)}, \Sigma^{(t)}] = \mu_{\text{
 </ol>
 <p><strong>최종 점 추정량:</strong> <span id="eq-mi-point"><span class="math display">\[
 \bar{\theta} = \frac{1}{m} \sum_{j=1}^m \hat{\theta}^{(j)}
-\tag{314.7}\]</span></span></p>
+\tag{315.7}\]</span></span></p>
 <p><strong>대체 내 분산 (Within-imputation variance):</strong> <span id="eq-mi-within"><span class="math display">\[
 \bar{W} = \frac{1}{m} \sum_{j=1}^m \hat{W}^{(j)}
-\tag{314.8}\]</span></span></p>
+\tag{315.8}\]</span></span></p>
 <p><strong>대체 간 분산 (Between-imputation variance):</strong> <span id="eq-mi-between"><span class="math display">\[
 B = \frac{1}{m-1} \sum_{j=1}^m (\hat{\theta}^{(j)} - \bar{\theta})(\hat{\theta}^{(j)} - \bar{\theta})'
-\tag{314.9}\]</span></span></p>
+\tag{315.9}\]</span></span></p>
 <p><strong>총 분산 (Total variance):</strong> <span id="eq-mi-total"><span class="math display">\[
 T = \bar{W} + \left(1 + \frac{1}{m}\right) B
-\tag{314.10}\]</span></span></p>
+\tag{315.10}\]</span></span></p>
 <p><span class="math inline">\((1 + 1/m)\)</span> 항은 유한한 대체 횟수 <span class="math inline">\(m\)</span>으로 인한 불확실성을 보정하는 인자이다. <span class="math inline">\(m \to \infty\)</span>임에 따라 <span class="math inline">\(T \to \bar{W} + B\)</span>로 수렴한다.</p>
 <p><strong>추론을 위한 자유도:</strong></p>
 <p>스칼라 모수 <span class="math inline">\(\theta\)</span>에 대한 검정 통계량의 기준 분포는 <span class="math inline">\(t\)</span>-분포를 따른다:</p>
@@ -107808,7 +107828,7 @@ T = \bar{W} + \left(1 + \frac{1}{m}\right) B
 <p><span class="math inline">\(Y\)</span>의 모평균에 대한 Horvitz-Thompson 형태의 IPW 추정량은 다음과 같다:</p>
 <p><span id="eq-ipw"><span class="math display">\[
 \hat{\mu}_{\text{IPW}} = \frac{1}{n} \sum_{i=1}^n \frac{R_i Y_i}{\hat{\pi}_i}
-\tag{314.11}\]</span></span></p>
+\tag{315.11}\]</span></span></p>
 <p>또는 정규화된 형태인 <strong>Hajek 추정량</strong>을 사용할 수 있다:</p>
 <p><span class="math display">\[
 \hat{\mu}_{\text{Hajek}} = \frac{\sum_{i=1}^n R_i Y_i / \hat{\pi}_i}{\sum_{i=1}^n R_i / \hat{\pi}_i}
@@ -107981,7 +108001,7 @@ T = \bar{W} + \left(1 + \frac{1}{m}\right) B
 <p>모평균 <span class="math inline">\(\mu = E[Y]\)</span> 추정을 위한 AIPW 추정량:</p>
 <p><span id="eq-aipw"><span class="math display">\[
 \hat{\mu}_{\text{AIPW}} = \frac{1}{n} \sum_{i=1}^n \left[\frac{R_i Y_i}{\hat{\pi}(X_i)} - \frac{R_i - \hat{\pi}(X_i)}{\hat{\pi}(X_i)} \hat{m}(X_i)\right]
-\tag{314.12}\]</span></span></p>
+\tag{315.12}\]</span></span></p>
 <p>여기서 <span class="math inline">\(\hat{\pi}(X_i)\)</span>는 추정된 응답 성향점수이고 <span class="math inline">\(\hat{m}(X_i) = \hat{E}[Y \mid X_i]\)</span>는 추정된 결과 회귀 함수이다.</p>
 <p><strong>이중 강건성의 수학적 유도:</strong></p>
 <p>AIPW 추정 방정식을 다음과 같이 정리한다:</p>
@@ -114750,7 +114770,7 @@ g_j(\mathbf{x}) = \mathbf{w}_j^\top \mathbf{x} = \sum_{i=1}^I w_{ji} x_i
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-decision-flowchart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;326.1: Decision flowchart for selecting appropriate temporal evaluation strategy.
+Figure&nbsp;327.1: Decision flowchart for selecting appropriate temporal evaluation strategy.
 </figcaption>
 </figure>
 </div>
