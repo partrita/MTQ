@@ -66,6 +66,7 @@ book:
         - practical-bioinformatics-lab/index.qmd
         - statistical-bioinformatics/index.qmd
         - cancer-bioinformatics/index.qmd
+        - cell-biology-numbers/index.qmd
     - part: "단백질 공학, 면역학 및 항체 치료제"
       chapters:
         - protein-engineering/index.qmd
