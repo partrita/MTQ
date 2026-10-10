@@ -20,6 +20,16 @@ jobs:
           cache: true
           activate-environment: default
 
+      - name: Enable swap for large Quarto book render
+        # The 137-chapter book needs more virtual memory than the runner's
+        # RAM during Deno's in-memory render; without swap it OOMs at [138/138].
+        run: |
+          sudo fallocate -l 8G /swapfile || sudo dd if=/dev/zero of=/swapfile bs=1M count=8192
+          sudo chmod 600 /swapfile
+          sudo mkswap /swapfile
+          sudo swapon /swapfile
+          free -h
+
       - name: Generate TXT for e-book readers
         run: pixi run python mybook/qmd_to_txt.py
 
@@ -37,3 +47,5 @@ jobs:
           path: mybook
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Raise Deno's heap ceiling (default ~8 GB hits "heap limit" on this book).
+          QUARTO_DENO_EXTRA_OPTIONS: "--v8-flags=--max-old-space-size=12288"

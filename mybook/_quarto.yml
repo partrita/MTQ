@@ -6,6 +6,10 @@ book:
   title: "Machine translation"
   author: "Taeyoon Kim"
   date: "2025-11-11"
+  # Disabled: full-text search index (fuse.js) is built fully in-memory by
+  # Deno and OOMs (~8 GB heap limit) on CI for a 137-chapter / ~88 MB book.
+  # Re-enable only if the book is split or the runner gets much more RAM.
+  search: false
   chapters:
     - index.qmd
     - part: "기초 컴퓨터 과학 및 시스템 도구"
