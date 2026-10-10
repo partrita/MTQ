@@ -50,5 +50,9 @@ jobs:
           path: mybook
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Raise Deno's heap ceiling (default ~8 GB hits "heap limit" on this book).
-          QUARTO_DENO_EXTRA_OPTIONS: "--v8-flags=--max-old-space-size=12288"
+          # Raise Deno's heap ceiling (Quarto defaults to 8 GB, which hits
+          # "heap limit" on this book). Must use QUARTO_DENO_V8_OPTIONS:
+          # Quarto already passes its own --v8-flags=..., and Deno rejects
+          # a second --v8-flags outright. Values here are appended to
+          # Quarto's list, and V8 lets the last occurrence win.
+          QUARTO_DENO_V8_OPTIONS: "--max-old-space-size=12288,--max-heap-size=12288"
