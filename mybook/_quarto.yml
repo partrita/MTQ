@@ -178,6 +178,8 @@ format:
       - cosmo
       - brand
     number-sections: false
+    code-tools:
+      source: true
 
 execute:
   freeze: true

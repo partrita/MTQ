@@ -16,7 +16,7 @@ SKIP_DIRS = {"docs", "_freeze", ".quarto", "site_libs"}
 
 IMG_MD = re.compile(r"!\[([^\]]*)\]\([^)]*\)")
 HTML_IMG = re.compile(r"<img\b[^>]*>", re.IGNORECASE)
-DIV_MARK = re.compile(r"^:::\s*(\{[^}]*\})?\s*$", re.M)
+DIV_MARK = re.compile(r"^:::\s*(\{[^}]*\})?\s*$", re.MULTILINE)
 SHORTCODE = re.compile(r"\{\{<[^>]*>\}\}")
 
 
@@ -35,7 +35,7 @@ def qmd_to_txt(text):
     if marker_at != -1:
         body = body[:marker_at]
     title = ""
-    m = re.search(r'^title:\s*["\']?(.*?)["\']?\s*$', fm, re.M)
+    m = re.search(r'^title:\s*["\']?(.*?)["\']?\s*$', fm, re.MULTILINE)
     if m:
         title = m.group(1).strip()
 
@@ -66,7 +66,7 @@ def ensure_download_link(qmd: Path, txt_name: str):
         changed = True
     fm, body = split_front_matter(text)
     if txt_name not in fm:
-        if re.search(r"^resources:\s*$", fm, re.M):
+        if re.search(r"^resources:\s*$", fm, re.MULTILINE):
             fm = re.sub(
                 r"(?m)^resources:\s*$",
                 f"resources:\n- {txt_name}",
