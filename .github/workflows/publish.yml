@@ -20,6 +20,16 @@ jobs:
           cache: true
           activate-environment: default
 
+      - name: Generate TXT for e-book readers
+        run: pixi run python mybook/qmd_to_txt.py
+
+      - name: Commit regenerated TXT/links
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A mybook
+          git diff --cached --quiet || { git commit -m "chore: regenerate txt [skip ci]" && git push; }
+
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:

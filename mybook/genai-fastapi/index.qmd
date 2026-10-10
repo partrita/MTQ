@@ -2,7 +2,10 @@
 title: "FastAPI로 AI 서비스 구축"
 sourceTitle: "맥락이 풍부한(Context-Rich) 생성형 AI 애플리케이션 개발을 위한 실전 접근법"
 author: "알리레자 파란데(Alireza Parandeh)"
+resources:
+- index.txt
 ---
+
 
 # 서문
 
@@ -14290,3 +14293,8 @@ FastAPI를 활용하여 생성형 AI 서비스를 구축하는 흥미진진한 �
 책을 마무리하며 강조하고 싶은 점은, 생성형 AI 애플리케이션 구축을 위한 배움의 여정은 이제 막 시작되었을 뿐이라는 사실이다. 앞으로 흥미진진한 발전이 계속 이어질 것이며 이 분야의 최신 동향을 꾸준히 주목해 주시기를 권한다. 여러분의 학습을 돕기 위해 앞으로도 새로운 리소스를 지속적으로 추가할 예정이니, 이 책의 [저장소](https://github.com/Ali-Parandeh/building-generative-ai-services)와 [웹사이트](https://buildinggenai.com)를 계속 확인해 주시기 바란다.
 
 이 책을 통해 웹 서비스와 통합된 생성형 AI 모델에 대한 깊은 이해를 얻고 이 모델들이 프로덕션에 적용되었을 때 산업을 혁신할 수 있는 잠재력을 확인하셨기를 바란다. 이 책을 나침반 삼아, 역동적으로 변화하는 생성형 AI 서비스의 지형을 능숙하게 헤쳐 나가며 급변하는 이 분야에 의미 있는 기여를 하실 수 있기를 진심으로 응원한다.
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

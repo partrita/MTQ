@@ -2,7 +2,10 @@
 title: "열두 가지 단일 과업"
 subtitle: "한 번에 한 가지 일에 집중하는 12가지 기술"
 author: "대처 와인(Thatcher Wine)"
+resources:
+- index.txt
 ---
+
 
 # 서문
 
@@ -2797,3 +2800,8 @@ Go Teach!
 이 책이 여러분의 단일 과업 근육을 단단하게 만드는 데 도움이 되었고 필요할 때 그것을 실전에 투입할 수 있기를 바란다.
 
 당신의 소중한 주의를 조금 내주셔서 고맙다. 그것이 얼마나 가치 있는지 나는 안다.
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

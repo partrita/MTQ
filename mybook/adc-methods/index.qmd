@@ -1,7 +1,10 @@
 ---
 title: "ADC 방법 및 프로토콜"
 author: "L. 네이선 튜미(L. Nathan Tumey)"
+resources:
+- index.txt
 ---
+
 
 # 1장: 현재 ADC 발굴 및 개발 동향 개요
 
@@ -3104,3 +3107,8 @@ ADC는 생체 투여 후 체내 순환 및 조직 분포 과정에서 탈접합(
 14. PNPP 조제 직후 사용: PNPP 기질은 빛과 열에 따라 자가 분해되므로 사용 직전에 녹여 차광 상태로 사용한다.
 15. 플레이트 리더 치수 최적화: 384웰 미세 플레이트 판독 전 리더기의 모서리 웰 치수 최적화(Plate dimension optimization)를 수행하여 광학 빔 중심 정렬을 확보한다.
 16. 동역학적 흡광 측정: 기질 분주 후 즉시(5분 이내) 판독을 시작하여 초기 효소 반응 속도를 측정함으로써 높은 선형 범위와 정확성을 확보한다.
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

@@ -3,7 +3,10 @@ title: "하이파이브 습관"
 subtitle: "매일 아침 거울 속 나에게 하이파이브 나를 응원하는 가장 작고 강력한 습관"
 author: "멜 로빈스(Mel Robbins)"
 date: "2021-08-03"
+resources:
+- index.txt
 ---
+
 
 # 1장: 당신은 하이파이브 인생을 살 자격이 있다
 
@@ -2517,3 +2520,8 @@ TV 쇼를 진행하며 세상 정점에 선 기분을 느끼던 사람이 몇 �
 ![하이파이브 저널 템플릿: 몸을 가라앉히고 머릿속 비우기](images/p228.jpg)
 
 ![하이파이브 저널 템플릿: 영혼의 날개 펴기](images/p229.jpg)
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

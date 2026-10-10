@@ -2,7 +2,10 @@
 title: "효율적인 파이썬"
 subtitle: "더 나은 파이썬을 위한 125가지 구체적인 방법"
 author: "Brett Slatkin"
+resources:
+- index.txt
 ---
+
 
 ## Chapter 1: 파이썬답게 생각하기
 
@@ -23386,3 +23389,8 @@ System check identified no issues (0 silenced).
 ```
 
 또 다른 대안은 PyInstaller([https://pyinstaller.org](https://pyinstaller.org))인데, 파이썬 실행 파일 자체까지 묶어서 사용자가 앱을 실행하려고 시스템에 다른 걸 설치할 필요가 없게 해줘요. 어떤 방식을 선택하든 문서를 꼼꼼히 읽고, 사용해야 하는 모듈과 그 모듈이 실행 환경에 대해 하는 가정과 호환되는지 실험으로 검증하세요.
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

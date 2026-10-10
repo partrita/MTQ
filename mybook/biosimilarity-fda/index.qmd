@@ -2,7 +2,10 @@
 title: "바이오시밀러: FDA의 관점"
 subtitle: "Biosimilarity: The FDA Perspective"
 author: "Sarfaraz K. Niazi"
+resources:
+- index.txt
 ---
+
 
 # 서문
 
@@ -3279,3 +3282,7 @@ FDA의 바이오시밀러 제도는 난치성 중증 질환을 치료하는 가�
 > — 마거릿 햄버그(Dr. Margaret Hamburg), 전 FDA 국장
 :::
 
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

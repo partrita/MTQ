@@ -3,7 +3,10 @@ engine: markdown
 title: "데이터 분석 가이드"
 author: "Mike Nguyen"
 date: "2026-08-15"
+resources:
+- index.txt
 ---
+
 
 ```{.r include="FALSE" eval="FALSE" #setup}
 knitr::opts_chunk$set(
@@ -64543,3 +64546,8 @@ $$(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathbf{y}$$
 
 
 # 참고문헌 {-}
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

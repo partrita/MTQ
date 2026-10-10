@@ -1,6 +1,9 @@
 ---
 title: "파이썬 개발자를 위한 Rust"
+resources:
+- index.txt
 ---
+
 
 러스트(Rust)와 파이썬(Python) 예제 코드를 바탕으로 핵심 동작 원리를 짚어보는 실전 가이드다.
 
@@ -14932,3 +14935,8 @@ for i = 1 to 10 {
 }
 print total
 ```
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

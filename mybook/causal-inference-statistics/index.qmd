@@ -2,7 +2,10 @@
 title: "통계학에서의 인과추론"
 author: "주데아 펄(Judea Pearl)"
 date: "2016-02-12"
+resources:
+- index.txt
 ---
+
 
 # 서문
 
@@ -2500,3 +2503,8 @@ Treatment Homework 0 0. 1 0.
 98. Virgil 29 BC Georgics. Verse 490, Book 2.
 99. Wainer H 1991 Adjusting for differential base rates: Lord's paradox again. *Psychological Bulletin* **109**, 147151.
 100. Wooldridge J 2013 Introductory Econometrics: A Modern Approach 5th international edn. South-Western, Mason, OH.
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

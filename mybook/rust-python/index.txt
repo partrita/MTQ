@@ -1,0 +1,759 @@
+# Rust-Python 바인딩
+
+## 개요
+
+이 문서는 `rust-python-binding` 저장소에 포함된 모든 예제 프로젝트의 코드와 구조를 설명한다.
+
+Rust의 메모리 안전성과 고성능 연산 능력, Python의 풍부한 생태계와 빠른 프로토타이핑 장점을 결합하려고 **PyO3**(Rust-Python 바인딩 프레임워크)와 **Maturin**(빌드 및 패키징 도구)을 활용한다.
+
+### 저장소 서브프로젝트 구성
+
+저장소는 난이도와 용도에 따라 다음 6개 프로젝트로 구성된다.
+
+| 디렉토리 | 핵심 주제 | 주요 내용 |
+| :--- | :--- | :--- |
+| **`string_sum`** | 기초 바인딩 & 모듈 구성 | 기본 함수 바인딩, `Bound` 스마트 포인터, 서브모듈(Submodule) 등록 |
+| **`fibonacci`** | 연산 성능 가속 | CPU 바운드 연산의 Rust 가속 및 Python과의 성능 비교 |
+| **`guessing-game`** | 대화형 I/O 연동 | Rust의 표준 입출력(`std::io`) 및 외부 크레이트(`rand`) 연동 |
+| **`gil`** | GIL 제어 및 멀티스레딩 | `py.allow_threads`를 통한 GIL 해제와 `Python::with_gil` 재획득 |
+| **`quiver-pdb`** | 파일 파싱 & CLI 패키징 | 대용량 생물정보학 PDB 데이터 파서, 클래스(`#[pyclass]`) 및 Click CLI 결합 |
+| **`polodb-python`** | 임베디드 NoSQL DB 바인딩 | Rust 엔진(`polodb_core`), BSON-Python 타입 변환기, CRUD 인터페이스 |
+
+***
+
+## Maturin & PyO 빌드 시스템
+
+### 빌드 도구: Maturin
+
+Maturin은 Rust 기반 Python 확장 모듈(`cdylib`)을 빌드하고 휠(Wheel, `.whl`) 패키지로 배포할 수 있게 돕는 빌드 백엔드다.
+
+#### 주요 명령어
+
+- `maturin develop`: 현재 Python 가상환경에 모듈을 빌드해 바로 설치한다(개발용).
+- `maturin develop --release`: 컴파일 최적화(`-O3` 수준)를 적용한 릴리즈 빌드로 설치한다.
+- `maturin build`: 배포 가능한 휠(`.whl`) 파일을 `target/wheels`에 생성한다.
+- `maturin sdist`: 소스 배포판(Source Distribution)을 생성한다.
+
+### 프로젝트 설정 파일 구조
+
+Rust-Python 혼합 프로젝트는 `Cargo.toml`과 `pyproject.toml`을 함께 사용한다.
+
+#### `Cargo.toml` 설정 예시
+
+Rust 동적 라이브러리로 빌드하려면 `crate-type = ["cdylib"]` 지정이 필수다.
+
+```toml
+[package]
+name = "my_project"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "my_project"
+crate-type = ["cdylib"] # C-호환 동적 라이브러리 생성
+
+[dependencies]
+pyo3 = { version = "0.24.0", features = ["extension-module"] }
+```
+
+#### `pyproject.toml` 설정 예시
+
+```toml
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "my_project"
+requires-python = ">=3.8"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+# 혼합 프로젝트인 경우 파이썬 소스 위치 지정 가능
+# python-source = "python"
+```
+
+***
+
+## 프로젝트별 코드 심층 분석
+
+### 1. `string_sum` - 기본 함수 및 서브모듈 구성 {.unnumbered}
+
+`string_sum` 프로젝트는 PyO3의 가장 기본적인 매크로와 서브모듈(Hierarchical Submodule) 선언 방식을 보여준다.
+
+#### Rust 소스 코드 (`string_sum/src/lib.rs`)
+
+```rust
+use pyo3::prelude::*;
+
+/// 두 숫자의 합을 문자열(String)로 포맷팅하여 반환하는 함수
+#[pyfunction]
+fn sum_as_string(a: usize, b: usize) -> PyResult<String> {
+    Ok((a + b).to_string())
+}
+
+/// 입력받은 숫자를 2배로 만드는 함수
+#[pyfunction]
+fn double(x: usize) -> usize {
+    x * 2
+}
+
+/// 파이썬 메인 모듈 정의 (string_sum)
+#[pymodule]
+fn string_sum(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    m.add_function(wrap_pyfunction!(sum_as_string, m)?)?;
+    Ok(())
+}
+
+/// 단독 모듈 정의 예시 (double)
+#[pymodule]
+fn double(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    m.add_function(wrap_pyfunction!(double, m)?)?;
+    Ok(())
+}
+
+/// 서브모듈 계층 구조를 갖는 상위 모듈 (parent_module)
+#[pymodule]
+fn parent_module(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    register_child_module(m)?;
+    Ok(())
+}
+
+/// child_module 서브모듈을 생성하여 parent_module에 등록
+fn register_child_module(parent_module: &Bound<'_, PyModule>) -> PyResult<()> {
+    let child_module = PyModule::new(parent_module.py(), "child_module")?;
+    child_module.add_function(wrap_pyfunction!(func, &child_module)?)?;
+    parent_module.add_submodule(&child_module)
+}
+
+#[pyfunction]
+fn func() -> String {
+    "func".to_string()
+}
+```
+
+#### 코드 분석 및 주요 포인트
+
+1. **`#[pyfunction]`**: Rust 함수를 Python에서 호출할 수 있게 노출한다. 반환값으로 `PyResult<T>`를 사용하면 에러 발생 시 Python 예외를 일으킬 수 있다.
+2. **`Bound<'_, PyModule>` (PyO v.21+ / v.24)**: GIL 수명주기에 안전하게 묶인 PyO3의 스마트 포인터다.
+3. **`wrap_pyfunction!`**: `#[pyfunction]`으로 정의한 Rust 함수를 Python 모듈 객체에 등록하는 래퍼 매크로다.
+4. **서브모듈 등록 (`PyModule::new` & `add_submodule`)**: `parent_module.child_module.func()` 형태의 계층형 Python 네임스페이스를 Rust 쪽에서 구성할 수 있다.
+
+***
+
+### 2. `fibonacci` - 연산 성능 가속 비교 {.unnumbered}
+
+`fibonacci` 프로젝트는 반복문 기반 피보나치 계산을 Rust로 작성하고, Python 순수 구현과 실행 속도를 비교 측정한다.
+
+#### Rust 소스 코드 (`fibonacci/src/lib.rs`)
+
+```rust
+use pyo3::prelude::*;
+
+#[pyfunction]
+fn fib(n: u64) -> u64 {
+    if n < 2 {
+        return n;
+    }
+    let mut a = 0;
+    let mut b = 1;
+    for _ in 2..=n {
+        let temp = a + b;
+        a = b;
+        b = temp;
+    }
+    b
+}
+
+#[pymodule]
+fn fibonacci(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    let py = m.py();
+    m.add_function(wrap_pyfunction!(fib, py)?)?;
+    Ok(())
+}
+```
+
+#### Python 벤치마크 스크립트 (`fibonacci/main.py`)
+
+```python
+import time
+from fibonacci import fib as rust_fib
+
+def py_fib(n: int) -> int:
+    """반복문 기반의 순수 파이썬 피보나치 수열 계산"""
+    if n <= 1:
+        return n
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b
+
+N = 42
+
+# 파이썬 측정
+start_python = time.time()
+python_result = py_fib(N)
+python_time = time.time() - start_python
+print(f"Python으로 계산한 결과 (N={N}): {python_result} (소요 시간: {python_time:.6f} 초)")
+
+# Rust 측정
+start_rust = time.time()
+rust_result = rust_fib(N)
+rust_time = time.time() - start_rust
+print(f"Rust로 계산한 결과 (N={N}): {rust_result} (소요 시간: {rust_time:.6f} 초)")
+
+assert python_result == rust_result, "계산 결과가 일치하지 않습니다!"
+```
+
+#### 코드 분석 및 주요 포인트
+
+- **컴파일 최적화 효과**: Rust가 `u64`를 레지스터에서 직접 다루고 루프 언롤링 최적화를 적용하기 때문에, 반복 연산에서 Python보다 수십~수백 배 빠르다.
+- **타입 자동 변환**: Python 정수(`int`)는 Rust `u64`로 자동 역직렬화(Unmarshaling)되고, 반환 시 다시 Python 객체로 래핑된다.
+
+***
+
+### 3. `guessing-game` - 표준 입출력 및 외부 크레이트 연동 {.unnumbered}
+
+`guessing-game`은 Rust 표준 라이브러리의 입출력(`std::io`)과 외부 난수 생성 라이브러리(`rand`)를 사용해 Python 프로세스 안에서 완전한 대화형 콘솔 게임을 실행한다.
+
+#### Rust 소스 코드 (`guessing-game/src/lib.rs`)
+
+```rust
+use pyo3::prelude::*;
+use rand::Rng;
+use std::cmp::Ordering;
+use std::io;
+
+#[pyfunction]
+fn guess_the_number() {
+    println!("Guess the number!");
+
+    // 1부터 100까지 난수 생성 (rand v0.9+ API)
+    let secret_number = rand::rng().random_range(1..101);
+
+    loop {
+        println!("Please input your guess.");
+
+        let mut guess = String::new();
+
+        // 표준 입력 읽기
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to read line");
+
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
+        println!("You guessed: {}", guess);
+
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("Too big!"),
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            }
+        }
+    }
+}
+
+#[pymodule]
+fn guessing_game(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    m.add_function(wrap_pyfunction!(guess_the_number, m)?)?;
+    Ok(())
+}
+```
+
+#### 코드 분석 및 주요 포인트
+
+- **I/O 스트림 공유**: Rust 함수 안에서 `println!`과 `io::stdin()`을 호출하면 Python 인터프리터가 점유한 표준 입출력 파일 디스크립터(stdout/stdin)를 그대로 공유하므로 곧바로 콘솔과 상호작용한다.
+- **Cargo 의존성 연동**: `Cargo.toml`에 명시한 `rand` 의존성이 바인딩 바이너리에 정적 링크되어, 별도의 C/C++ 런타임 종속성 없이 Python에서 쓸 수 있다.
+
+***
+
+### 4. `gil` - GIL 릴리즈와 멀티스레딩 {.unnumbered}
+
+Python의 CPython 구현체는 멀티스레드 환경에서도 한 번에 하나의 스레드만 바이트코드를 실행할 수 있도록 GIL을 사용한다. `gil` 프로젝트는 Rust가 연산을 수행하는 동안 GIL을 해제해서 Python 스레드와 진짜 병렬 실행을 이루는 기법을 보여준다.
+
+#### Rust 소스 코드 (`gil/src/lib.rs`)
+
+```rust
+use std::thread;
+use std::time::Duration;
+
+use pyo3::prelude::*;
+use pyo3::types::PyList;
+
+#[pyfunction]
+fn double_list(
+    py: Python<'_>,
+    list: Bound<'_, PyList>,
+    result: Bound<'_, PyList>,
+    idx: usize,
+) -> PyResult<()> {
+    println!("Rust: Enter double_list...");
+
+    // 1. GIL 해제 블록: 무거운 I/O나 연산 수행 시 Python 스레드가 동작할 수 있게 허용
+    py.allow_threads(|| {
+        println!("Rust: Release GIL...");
+        thread::sleep(Duration::from_secs(1));
+    });
+
+    // 2. Python 객체에서 Rust 네이티브 데이터 추출 및 변환
+    let doubled: Vec<i32> = list.extract::<Vec<i32>>()?.iter().map(|x| x * 2).collect();
+
+    // 3. Python 힙에 접근하거나 객체를 수정하기 위해 GIL 재획득
+    Python::with_gil(|py| {
+        println!("Rust: Acquire GIL...");
+        thread::sleep(Duration::from_secs(1));
+        let py_list = PyList::new(py, &doubled)?;
+        println!("Rust: Exit...");
+        result.set_item(idx, py_list)
+    })
+}
+
+#[pymodule]
+fn gil(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    let py = m.py();
+    m.add_function(wrap_pyfunction!(double_list, py)?)?;
+    Ok(())
+}
+```
+
+#### Python 동시성 테스트 (`gil/main.py`)
+
+```python
+import time
+import threading
+from gil import double_list
+
+def double_list_py(lst, result, idx):
+    print("Py: Enter double_list_py...")
+    time.sleep(0.1)
+    result[idx] = [x * 2 for x in lst]
+    print("Py: Exit...")
+
+result = [[], []]
+nums = [1, 2, 3]
+
+# t1: Python 함수 실행 스레드
+t1 = threading.Thread(target=double_list_py, args=(nums, result, 0))
+# t2: Rust 함수 실행 스레드 (내부에서 allow_threads 호출)
+t2 = threading.Thread(target=double_list, args=(nums, result, 1))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print(f"Py 결과: {result[0]}")
+print(f"Rust 결과: {result[1]}")
+```
+
+#### 핵심 메커니즘
+```
+[Python Main Process]
+  │
+  ├─ Thread 1 (Python): ──────[ sleep 0.1s ]───[ x*2 ]───[ Exit ]
+  │                                ▲
+  │                       GIL 해제 상태로 병렬 진입
+  │                                │
+  └─ Thread 2 (Rust)  : ──[ allow_threads(1s) ]───[ extract & map ]───[ with_gil(1s) ]───[ Exit ]
+```
+
+- **`py.allow_threads`**: 호출 블록 동안 CPython 인터프리터 잠금을 푼다. 이 구간에서는 다른 Python 스레드가 CPU를 양보받아 동작할 수 있다.
+- **`Python::with_gil`**: GIL이 풀린 상태의 네이티브 스레드에서 Python 객체(`PyList`, `PyDict` 등)를 만들거나 수정할 때 다시 락(Lock)을 얻는다.
+
+***
+
+### 5. `quiver-pdb` - 대용량 단백질 데이터 파서 & Python CLI {.unnumbered}
+
+`quiver-pdb`는 생물정보학에서 쓰는 여러 PDB(Protein Data Bank) 구조 파일을 하나의 압축/태그 기반 아카이브(`.qv`) 파일로 병합, 추출, 분할, 스코어링하는 실전 라이브러리다.
+
+#### 구조체 설계 및 구현 (`quiver-pdb/src/lib.rs`)
+
+```rust
+use pyo3::prelude::*;
+use pyo3::wrap_pyfunction;
+use std::fs::{File, OpenOptions};
+use std::io::{self, BufRead, BufReader, Write, Read};
+use std::path::Path;
+use std::collections::{HashSet, HashMap};
+use std::str::FromStr;
+
+// 1. Rust 순수 비즈니스 로직 구조체
+#[derive(Debug)]
+pub struct QuiverCore {
+    fnm: String,
+    mode: String,
+    tags: Vec<String>,
+}
+
+impl QuiverCore {
+    pub fn new(filename: String, mode: String) -> Result<Self, String> {
+        if mode != "r" && mode != "w" {
+            return Err(format!("Quiver file must be opened in 'r' or 'w' mode, not '{}'", mode));
+        }
+        let tags = Self::read_tags(&filename)?;
+        Ok(QuiverCore { fnm: filename, mode, tags })
+    }
+
+    fn read_tags(filename: &str) -> Result<Vec<String>, String> {
+        if !Path::new(filename).exists() {
+            return Ok(vec![]);
+        }
+        let file = File::open(filename).map_err(|e| e.to_string())?;
+        let reader = BufReader::new(file);
+        let mut tags = Vec::new();
+        for line in reader.lines() {
+            let line = line.map_err(|e| e.to_string())?;
+            if line.starts_with("QV_TAG") {
+                let parts: Vec<_> = line.split_whitespace().collect();
+                if parts.len() > 1 {
+                    tags.push(parts[1].to_string());
+                }
+            }
+        }
+        Ok(tags)
+    }
+
+    // 파일 분할 기능: ntags 단위로 새로운 .qv 파일 생성
+    pub fn split(&self, ntags: usize, outdir: &str, prefix: &str) -> Result<(), String> {
+        if self.mode != "r" {
+            return Err("Quiver file must be opened in read mode.".to_string());
+        }
+        std::fs::create_dir_all(outdir).map_err(|e| e.to_string())?;
+        // ... (버퍼 기반 스트리밍 분할 로직) ...
+        Ok(())
+    }
+}
+
+// 2. PyO3 노출용 래퍼 클래스
+#[pyclass]
+struct Quiver {
+    core: QuiverCore,
+}
+
+#[pymethods]
+impl Quiver {
+    #[new]
+    fn new(filename: String, mode: String) -> PyResult<Self> {
+        match QuiverCore::new(filename, mode) {
+            Ok(core) => Ok(Quiver { core }),
+            Err(e) => Err(pyo3::exceptions::PyValueError::new_err(e)),
+        }
+    }
+
+    fn get_tags(&self) -> Vec<String> {
+        self.core.get_tags()
+    }
+
+    fn size(&self) -> usize {
+        self.core.size()
+    }
+    // ... add_pdb, get_pdblines, split 등 바인딩 메서드 ...
+}
+
+// 3. 독립 pyfunction들: 파일 조작 유틸리티
+#[pyfunction]
+fn extract_pdbs(py: Python, quiver_file: String) -> PyResult<()> { /* ... */ Ok(()) }
+
+#[pyfunction]
+fn extract_scorefile(py: Python, quiver_file: String) -> PyResult<()> { /* ... */ Ok(()) }
+
+#[pyfunction]
+fn qvsplit(py: Python, file: String, ntags: usize, prefix: String, output_dir: String) -> PyResult<()> { /* ... */ Ok(()) }
+
+#[pymodule]
+fn quiver_pdb(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    m.add_function(wrap_pyfunction!(qvfrompdbs, m)?)?;
+    m.add_function(wrap_pyfunction!(extract_pdbs, m)?)?;
+    m.add_function(wrap_pyfunction!(list_tags, m)?)?;
+    m.add_function(wrap_pyfunction!(rename_tags, m)?)?;
+    m.add_function(wrap_pyfunction!(qvslice, m)?)?;
+    m.add_function(wrap_pyfunction!(qvsplit, m)?)?;
+    m.add_function(wrap_pyfunction!(extract_scorefile, m)?)?;
+    m.add_class::<Quiver>()?;
+    Ok(())
+}
+```
+
+#### Python Click CLI 통합 (`qvsplit.py` 예시)
+
+```python
+#!/usr/bin/env python3
+import click
+from quiver_pdb import qvsplit as rust_qvsplit
+
+@click.command()
+@click.argument("file", type=click.Path(exists=True, dir_okay=False))
+@click.argument("ntags", type=int)
+@click.option("--prefix", default="split", help="출력 파일 접두사")
+@click.option("--output-dir", type=click.Path(file_okay=False, writable=True), default=".")
+def qvsplit(file, ntags, prefix, output_dir):
+    """Quiver 파일을 NTAGS 단위의 작은 파일들로 분할합니다."""
+    if ntags <= 0:
+        click.secho("❌ NTAGS는 양의 정수여야 합니다.", fg="red", err=True)
+        raise click.Abort()
+
+    click.secho(f"📂 파일 읽는 중: {file}", fg="blue")
+    try:
+        rust_qvsplit(file, ntags, prefix, output_dir)
+    except Exception as e:
+        click.secho(f"오류 발생: {e}", fg="red", err=True)
+        raise click.Abort()
+
+if __name__ == "__main__":
+    qvsplit()
+```
+
+#### 프로젝트 특징
+
+- **`#[pyclass]` 및 `#[pymethods]`**: Rust 구조체를 Python에서 인스턴스화할 수 있는 클래스로 노출한다 (`Quiver(filename, mode)`).
+- **스트리밍 I/O 성능**: 수 GB 크기의 바이오 데이터셋을 다룰 때는 Python 반복문 대신 Rust의 `BufReader`와 바이트 단위 쓰기를 써서 메모리 점유율을 낮추고 I/O 처리량을 극대화한다.
+- **Python CLI 생태계 활용**: 파싱은 Rust 성능에 맡기고, 터미널 UI는 Python의 `click` 라이브러리로 구축한다.
+
+***
+
+### 6. `polodb-python` - 임베디드 NoSQL 데이터베이스 바인딩 {.unnumbered}
+
+`polodb-python`은 Rust로 작성된 임베디드 문서 지향 데이터베이스 엔진인 `polodb_core`를 Python에서 MongoDB와 비슷한 인터페이스로 쓸 수 있게 바인딩한 프로젝트다.
+
+#### 아키텍처 다이어그램
+
+```
+┌──────────────────────────────────────────────────────────┐
+│                   Python 사용자 레이어                    │
+│     PoloDB("test.db") -> Collection -> insert / find     │
+└─────────────────────────────┬────────────────────────────┘
+                              │ (polodb/core.py)
+┌─────────────────────────────▼────────────────────────────┐
+│                    PyO3 바인딩 레이어                     │
+│               PyDatabase / PyCollection                  │
+└─────────────────────────────┬────────────────────────────┘
+                              │ (helper_type_translator.rs)
+┌─────────────────────────────▼────────────────────────────┐
+│                  양방향 타입 변환 계층                   │
+│   PyDict / PyList / PyAny   <--->   BSON Document / Value │
+└─────────────────────────────┬────────────────────────────┘
+                              │
+┌─────────────────────────────▼────────────────────────────┐
+│                    Rust 네이티브 코어                     │
+│                  polodb_core (NoSQL 엔진)                 │
+└──────────────────────────────────────────────────────────┘
+```
+
+#### 1) 타입 변환기 (`src/helper_type_translator.rs`)
+
+BSON 포맷과 Python 데이터 타입 간의 재귀적 상호 변환을 담당한다.
+
+```rust
+use polodb_core::bson::{Bson, Document};
+use pyo3::prelude::*;
+use pyo3::types::{PyBool, PyBytes, PyDict, PyFloat, PyList, PyString};
+
+// Python Dictionary -> Rust BSON Document
+pub fn convert_py_obj_to_document(py_obj: &Py<PyAny>) -> PyResult<Document> {
+    Python::with_gil(|py| {
+        if let Ok(dict) = py_obj.downcast_bound::<PyDict>(py) {
+            let mut doc = Document::new();
+            for (key, value) in dict.iter() {
+                let key_str: String = key.extract()?;
+                let bson_value = convert_py_obj_to_bson(value.into_pyobject(py).unwrap().as_unbound())?;
+                doc.insert(key_str, bson_value);
+            }
+            Ok(doc)
+        } else {
+            Err(PyErr::new::<pyo3::exceptions::PyTypeError, _>("BSON 변환을 지원하지 않는 타입입니다."))
+        }
+    })
+}
+
+// Rust BSON -> Python Object (PyDict, PyList, PyString, PyFloat 등)
+pub fn bson_to_py_obj(py: Python, bson: &Bson) -> PyObject {
+    match bson {
+        Bson::Null => py.None(),
+        Bson::Int32(i) => i.into_pyobject(py).unwrap().into(),
+        Bson::Int64(i) => i.into_pyobject(py).unwrap().into(),
+        Bson::Double(f) => PyFloat::new(py, *f).into_pyobject(py).unwrap().into(),
+        Bson::String(s) => PyString::new(py, s).into_pyobject(py).unwrap().into(),
+        Bson::Boolean(b) => PyBool::new(py, *b).as_unbound().clone_ref(py).into_any(),
+        Bson::Array(arr) => {
+            let py_list = PyList::empty(py);
+            for item in arr {
+                py_list.append(bson_to_py_obj(py, item)).unwrap();
+            }
+            py_list.into_pyobject(py).unwrap().into()
+        }
+        Bson::Document(doc) => {
+            let py_dict = PyDict::new(py);
+            for (key, value) in doc.iter() {
+                py_dict.set_item(key, bson_to_py_obj(py, value)).unwrap();
+            }
+            py_dict.into_pyobject(py).unwrap().into()
+        }
+        Bson::DateTime(dt) => {
+            let timestamp = dt.timestamp_millis() / 1000;
+            let datetime = py.import("datetime").unwrap().getattr("datetime").unwrap();
+            datetime.call1((timestamp,)).unwrap().into_pyobject(py).unwrap().into()
+        }
+        _ => py.None(),
+    }
+}
+```
+
+#### 2) 데이터베이스 & 컬렉션 래퍼 (`src/py_database.rs`)
+
+데이터베이스 인스턴스를 스레드 안전하게 공유하려고 `Arc<Mutex<Database>>`를 쓴다.
+
+```rust
+#[pyclass]
+pub struct PyDatabase {
+    inner: Arc<Mutex<Database>>,
+}
+
+#[pymethods]
+impl PyDatabase {
+    #[new]
+    fn new(path: &str) -> PyResult<Self> {
+        let db_path = Path::new(path);
+        match Database::open_path(db_path) {
+            Ok(db) => Ok(PyDatabase {
+                inner: Arc::new(Mutex::new(db)),
+            }),
+            Err(e) => Err(PyOSError::new_err(e.to_string())),
+        }
+    }
+
+    pub fn collection(&self, name: &str) -> PyResult<PyCollection> {
+        let guard = self.inner.lock()
+            .map_err(|e| PyRuntimeError::new_err(format!("Failed to lock: {}", e)))?;
+        let rust_collection = guard.collection::<Document>(name);
+        Ok(PyCollection::from(rust_collection))
+    }
+}
+
+#[pyclass]
+pub struct PyCollection {
+    inner: Arc<Collection<Document>>,
+}
+
+#[pymethods]
+impl PyCollection {
+    pub fn insert_one(&self, doc: Py<PyDict>) -> PyResult<PyObject> {
+        Python::with_gil(|py| {
+            let bson_doc = convert_py_obj_to_document(&doc.into_py_any(py).unwrap())?;
+            match self.inner.insert_one(bson_doc) {
+                Ok(result) => {
+                    let dict = PyDict::new(py);
+                    dict.set_item("inserted_id", bson_to_py_obj(py, &result.inserted_id))?;
+                    Ok(dict.into_py_any(py).unwrap())
+                }
+                Err(e) => Err(PyRuntimeError::new_err(format!("Insert error: {}", e))),
+            }
+        })
+    }
+
+    pub fn find_one(&self, py: Python, filter: Py<PyDict>) -> PyResult<Option<PyObject>> {
+        let filter_doc = convert_py_obj_to_document(&filter.into_py_any(py).unwrap())?;
+        match self.inner.find_one(filter_doc) {
+            Ok(Some(result_doc)) => Ok(Some(document_to_pydict(py, result_doc)?.into_py_any(py).unwrap())),
+            Ok(None) => Ok(None),
+            Err(err) => Err(PyRuntimeError::new_err(format!("Find error: {}", err))),
+        }
+    }
+}
+```
+
+#### 3) Pythonic 래퍼 인터페이스 (`polodb/core.py`)
+
+Python 사용자가 Rust 모듈임을 의식하지 않고 직관적으로 쓰도록 Context Manager(`with`)와 딕셔너리 접근자(`db["users"]`)를 지원한다.
+
+```python
+from rust_polodb import PyDatabase, PyCollection
+from typing import List
+
+class PoloDB:
+    def __init__(self, path: str) -> None:
+        self._path = path
+        self.__rust_db = PyDatabase(self._path)
+
+    def __enter__(self):
+        self.__rust_db = PyDatabase(self._path)
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pass
+
+    def __getitem__(self, name: str):
+        return self.collection(name)
+
+    def __getattr__(self, name: str):
+        return self.__getitem__(name)
+
+    def collection(self, name: str):
+        if name not in self.list_collection_names():
+            self.__rust_db.create_collection(name)
+        return Collection(self.__rust_db.collection(name))
+
+    def list_collection_names(self):
+        return self.__rust_db.list_collection_names()
+
+class Collection:
+    def __init__(self, rust_collection: PyCollection) -> None:
+        self.__rust_collection: PyCollection = rust_collection
+
+    def insert_one(self, entry: dict):
+        return self.__rust_collection.insert_one(entry)
+
+    def insert_many(self, entries: list):
+        return self.__rust_collection.insert_many(entries)
+
+    def find_one(self, filter: dict):
+        return self.__rust_collection.find_one(filter)
+
+    def find(self, filter: dict):
+        return self.__rust_collection.find(filter)
+
+    def update_one(self, filter: dict, update_doc: dict, upsert: bool = False):
+        if not upsert:
+            return self.__rust_collection.update_one(filter, update_doc)
+        return self.__rust_collection.upsert(filter, update_doc)
+
+    def delete_one(self, filter: dict):
+        return self.__rust_collection.delete_one(filter)
+
+    def len(self) -> int:
+        return self.__rust_collection.count_documents()
+```
+
+***
+
+## PyO 개발 모범 사례
+
+### 1. Rust-Python 데이터 복사 비용 최소화 {.unnumbered}
+
+- Python과 Rust 간에 대규모 데이터셋(리스트, 딕셔너리)을 주고받을 때는 반복적인 직렬화/역직렬화가 오버헤드로 이어진다.
+- 가능하면 Rust 내부에서 일괄 처리(Batching)를 하거나, `numpy` 배열이나 `pyo3-polars`처럼 버퍼 포인터 기반 무복사(Zero-Copy) 인터페이스를 검토한다.
+
+### 2. GIL 스코프 최소화 {.unnumbered}
+
+- CPU 바운드 연산이나 대기 시간이 긴 I/O 작업은 반드시 `py.allow_threads`로 감싸 GIL을 해제해야 Python 멀티스레드 환경의 응답성을 해치지 않는다.
+
+### 3. 명확한 예외 매핑 {.unnumbered}
+
+- Rust의 `Result<T, E>`는 PyO3의 `PyResult<T>`로 변환하고 상황에 맞는 표준 Python 예외(`PyValueError`, `PyTypeError`, `PyIOError`, `PyRuntimeError`)를 적절히 매핑해야 Python 사용자가 직관적인 에러 핸들링(`try-except`)을 구현할 수 있다.
+
+***
+
+## 요약
+
+| 단계 | 도구/방법 | 주요 이점 |
+| :--- | :--- | :--- |
+| **바인딩 작성** | `PyO3` (`#[pyfunction]`, `#[pyclass]`, `Bound`) | 컴파일 타임 타입 검사 및 안전한 GIL 관리 |
+| **빌드 & 패키징** | `Maturin` (`maturin develop`, `maturin build`) | `Cargo.toml` 기반의 설정 없는 자동 바이너리 휠 생성 |
+| **최적화 & 동시성** | `py.allow_threads` & `Python::with_gil` | GIL 제약을 우회한 진짜 멀티코어 병렬화 |
+| **Pythonic 래핑** | Python 레이어 (`__getitem__`, `Context Manager`) | 순수 Python 라이브러리와 동일한 사용자 경험 제공 |

@@ -2,7 +2,10 @@
 title: "데이터 분석 가이드"
 author: "Mike Nguyen"
 date: "2026-08-15"
+resources:
+- 000_header.txt
 ---
+
 
 ```{r setup, include = FALSE, eval = FALSE}
 knitr::opts_chunk$set(
@@ -19,4 +22,7 @@ knitr::opts_chunk$set(
 options(knitr.duplicate.label = "allow")
 ```
 
-
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](000_header.txt){download="000_header.txt"}
+:::

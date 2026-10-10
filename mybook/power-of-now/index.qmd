@@ -2,7 +2,10 @@
 title: "지금 이 순간의 힘"
 subtitle: "영적 깨달음으로 가는 안내서"
 author: "에크하르트 톨레 (Eckhart Tolle)"
+resources:
+- index.txt
 ---
+
 
 # 머리말
 
@@ -3739,3 +3742,8 @@ author: "에크하르트 톨레 (Eckhart Tolle)"
 > **질문:** "제가 내맡겼다는 것을 어떻게 알 수 있습니까?"
 
 그 질문을 더 이상 던질 필요가 없을 때 알게 됩니다.
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

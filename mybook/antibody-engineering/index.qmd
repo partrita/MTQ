@@ -2,7 +2,10 @@
 title: "항체 공학 입문"
 subtitle: "Introduction to Antibody Engineering (Learning Materials in Biosciences)"
 author: "Florian Rüker, Gordana Wozniak-Knopp (Eds.)"
+resources:
+- index.txt
 ---
+
 
 # 1장 서문
 
@@ -1865,3 +1868,7 @@ GBSI의 “Asilomar 회의” 초점은 웨스턴 블롯, 면역조직화학, �
 - 내재적 분자 이질성에도 불구하고 다클론 항체 시약은 많은 분석 분석에서 더 높은 민감도를 제공하고 검체 준비와 환경 요인으로 인한 완전 비활성화에 덜 취약하므로 연구·진단 환경에서 가치 있다.
 - 과학 출판물에서 항체 기반 시약 보고 시 따라야 할 특정 표준이 있으며, 이는 과학계에 전달되었다.
 
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

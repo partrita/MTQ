@@ -2,7 +2,10 @@
 title: "창의적 사고의 기술"
 author: "John Adair"
 date: 2026-08-24
+resources:
+- index.txt
 ---
+
 
 ## 서론
 
@@ -963,3 +966,8 @@ John Fowles의 소설들은 그와 함께 낮이고 밤이고 살았다. 그것�
 14. 지렛대(levers).
 15. 백파이프(bagpipes).
 16. 관악기(wind instruments).
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

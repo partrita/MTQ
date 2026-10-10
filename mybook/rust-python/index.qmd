@@ -3,7 +3,10 @@ title: "Rust-Python 바인딩"
 subtitle: "PyO & Maturin 실전 바인딩 기법"
 author: "Taeyoon Kim"
 date: "2026-08-16"
+resources:
+- index.txt
 ---
+
 
 ## 개요
 
@@ -763,3 +766,8 @@ class Collection:
 | **빌드 & 패키징** | `Maturin` (`maturin develop`, `maturin build`) | `Cargo.toml` 기반의 설정 없는 자동 바이너리 휠 생성 |
 | **최적화 & 동시성** | `py.allow_threads` & `Python::with_gil` | GIL 제약을 우회한 진짜 멀티코어 병렬화 |
 | **Pythonic 래핑** | Python 레이어 (`__getitem__`, `Context Manager`) | 순수 Python 라이브러리와 동일한 사용자 경험 제공 |
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

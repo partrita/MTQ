@@ -3,7 +3,10 @@ title: "AI의 실제 적용"
 author: "Mike Nguyen"
 date: "2026-08-15"
 bibliography: references.bib
+resources:
+- index.txt
 ---
+
 
 ![](images/intro/logo.jpg){width=50%}
 
@@ -112045,3 +112048,8 @@ from mlforecast.utils import PredictionIntervals
 3. 신뢰 구간 또는 표준 오차 포함
 4. 누수를 수량화하기 위해 무작위 CV 베이스라인과 비교
 5. 엠바고(embargo) 또는 퍼징(purging) 절차 설명
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

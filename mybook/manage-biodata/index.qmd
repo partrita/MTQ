@@ -1,7 +1,10 @@
 ---
 title: "파이썬으로 생물학 데이터 관리하기"
 author: "Allegra Via, Kristian Rother, Anna Tramontano"
+resources:
+- index.txt
 ---
+
 
 불과 몇 년 전만 해도 프로그래밍(programming)은 계산 과학자의 전유물에 가까웠다. 하지만 이제 프로그래밍은 생물학을 비롯한 여러 분야의 전문가에게도 필수 역량으로 자리 잡고 있다. 생물학자가 반드시 전문 프로그래머가 될 필요는 없지만 프로그래밍을 하나의 유용한 도구로 활용한다면 과학적 탐구에 큰 힘이 된다. 이미 경험하셨듯 프로그래밍 기술을 익히면 데이터 관리와 분석 속도를 획기적으로 높일 수 있다. 방대한 데이터를 처리하거나 동일한 분석을 반복해야 할 때, 혹은 특수한 형식의 파일을 파싱(parsing)해야 할 때 프로그래밍은 매우 유용한 해결책이 된다. 그러나 컴퓨터 과학(computer science)이 다소 건조하고 개념적으로 어렵게 느껴져 선뜻 시작하지 못하는 경우도 많다. 바로 이러한 분들을 위해 이 책을 집필했다.
 
@@ -11375,3 +11378,8 @@ BLAST는 인터넷상에서 실행할 수도 있고 로컬 컴퓨터에서 직�
 `my_sequences.fasta`(연습 문제 D.4)에서 단일 서열 레코드(헤더 + 서열)를 복사하여 다른 파일(`query_sequence.seq`)에 저장하라. `my_sequences.fasta` 파일을 BLAST 데이터베이스로 사용할 수 있도록 포맷팅하라. 그 다음 `query_sequence.seq`를 포맷팅된 `my_sequences.fasta` 파일에 대해 BLAST 정렬을 수행하라.
 
 힌트: 레시피 11을 참조하라.
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

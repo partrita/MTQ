@@ -2,7 +2,10 @@
 title: "담화록 및 선집"
 author: "에픽테토스 (Epictetus)"
 date: "2010-10-25"
+resources:
+- index.txt
 ---
+
 
 # 서론
 
@@ -3465,3 +3468,8 @@ date: "2010-10-25"
 - **키티온의 제논(Zeno of Citium, 키프로스 출신), 기원전 334-262년**: 기원전 약 300년경 아테네 스토아 학파를 창설한 인물.
 
 - **제피로스(Zephyrus, 서풍)**: 그리스 신화에 등장하는 서풍의 이름.
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

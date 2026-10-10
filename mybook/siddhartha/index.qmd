@@ -2,7 +2,10 @@
 title: "시다르타"
 subtitle: "인도의 한 이야기"
 author: "헤르만 헤세(Hermann Hesse)"
+resources:
+- index.txt
 ---
+
 
 # 서문
 
@@ -423,3 +426,8 @@ author: "헤르만 헤세(Hermann Hesse)"
 - **삼사라(Samsara)**: 무명(無明)과 갈망으로 인해 끝없이 되풀이되는 생사윤회(生死輪廻)의 고통스러운 세계.
 - **열반(Nirvana)**: 번뇌의 불꽃이 완전히 꺼져 영원한 평화와 해탈에 도달한 궁극의 경지.
 - **마야(Maya)**: 감각적 현상 세계의 덧없고 기만적인 환영.
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

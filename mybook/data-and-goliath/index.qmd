@@ -2,7 +2,10 @@
 title: "데이터와 골리앗"
 subtitle: "The Hidden Battles to Collect Your Data and Control Your World"
 author: "Bruce Schneier"
+resources:
+- index.txt
 ---
+
 
 # 서론
 
@@ -2685,3 +2688,8 @@ TLS(과거의 SSL)는 웹 브라우징의 일부를 암호화하는 프로토콜
 마지막으로 친구들, 그리고 무엇보다 ‘책 쓰는 모드’에 돌입한 나를 너그럽게 참아준 내 배우자 캐런 쿠퍼(Karen Cooper)에게 감사한다. 이번 책이 지난번보다는 수월했다는 것을 알지만 여전히 힘든 시간이었음을 잘 안다.
 
 여러분 모두에게 진심으로 감사드린다.
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

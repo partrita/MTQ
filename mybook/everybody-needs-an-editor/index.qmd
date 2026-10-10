@@ -2,7 +2,10 @@
 title: "누구나 편집자가 필요하다"
 author: "Melissa Harris, Jenn Bane"
 date: 2026-08-24
+resources:
+- index.txt
 ---
+
 
 > 읽기 쉬운 글이야말로 매우 어려운 글이다. - *너새니얼 호손(Nathaniel Hawthorne)*
 
@@ -1865,3 +1868,8 @@ MEF는 디지털 관련 산업 협회이다. LSO는 Lifecycle Service Orchestrat
 초고의 마지막 마침표를 찍는 바로 그 순간, '나는 이 글의 작가다'라는 달콤한 환상에서 깨어나라. 텍스트와 철저히 거리를 두라. 그리고 차갑고 예리한 메스를 든 '편집자'로 돌변하라.
 
 이 세상 모든 작가에겐, 그리고 모든 글에는 편집자가 필요하니까.
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

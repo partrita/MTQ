@@ -1,7 +1,10 @@
 ---
 title: "내버려두기"
 author: "멜 로빈스(Mel Robbins)"
+resources:
+- index.txt
 ---
+
 
 # 서문
 
@@ -3895,3 +3898,8 @@ K 박사(Dr. K)에게 배웠듯이, 이러한 열린 질문은 연구자들이 �
 **1. 뉴스레터**
 
 세계에서 가장 인기 있는 뉴스레터 중 하나이다. 매주 새로운 호가 200만 명 이상에게 발송된다. 개인적이고 영감을 주며 최고의 아이디어와 유용한 조언으로 가득하다.
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

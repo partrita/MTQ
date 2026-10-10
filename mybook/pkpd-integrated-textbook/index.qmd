@@ -2,7 +2,10 @@
 title: "약동학과 약력학"
 subtitle: "An Integrated Approach"
 author: "사라 로젠바움"
+resources:
+- index.txt
 ---
+
 
 # 제1장 서론
 
@@ -12294,3 +12297,8 @@ $$R_3 = \frac{Cl_{\text{int}}}{Cl_{\text{int}}^{\text{Ind}}} = \frac{1}{1 + \fra
 9. Mayhew, B. S., Jones, D. R., and Hall, S. D. (2000) An in vitro model for predicting in vivo inhibition of cytochrome P450 3A4 by metabolic intermediate complex formation, *Drug Metab Dispos*, 28, 1031-1037.
 10. Zhou, S., YungChan, S., CherGoh, B., Chan, E., Duan, W., Huang, M., and McLeod, H. L. (2005) Mechanism-based inhibition of cytochrome P450 3A4 by therapeutic drugs. *Clin Pharmacokinet*, 44, 279-304.
 11. Wolbold, R., Klein, K., Burk, O., Nussler, A. K., Neuhaus, P., Eichelbaum, M., Schwab, M., and Zanger, U. M. (2003) Sex is a major determinant of CYP3A4 expression in human liver. *Hepatology (Baltimore, Md.)*, 38, 978-988.
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

@@ -2,7 +2,10 @@
 title: "누구나 쉽게 배우는 시간 관리"
 subtitle: "Time Management For Dummies"
 author: "더크 젤러(Dirk Zeller)"
+resources:
+- index.txt
 ---
+
 
 # 1부: 혁명의 시작: 간단한 첫걸음
 
@@ -6717,4 +6720,7 @@ $$365\text{일} \times 0.5\text{시간} \div 8\text{시간 (1일 근무)} = 22.8
 
 당장 눈앞에 결과가 보이지 않더라도 시간이 더 필요할 수 있음을 인정하고 인내심을 갖고 시간을 더 투자하라. 진전은 보이지만 결과가 아직 기대에 못 미치더라도 절대 포기하지 마라. 묵묵히 전진을 계속하라.
 
-
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::

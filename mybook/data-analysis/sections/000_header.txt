@@ -1,0 +1,16 @@
+# 데이터 분석 가이드
+
+```{r setup, include = FALSE, eval = FALSE}
+knitr::opts_chunk$set(
+  eval = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.width = 6,
+  fig.height = 4,
+  out.width = '90%',
+  fig.align = 'center',
+  echo = TRUE,
+  cache = FALSE
+)
+options(knitr.duplicate.label = "allow")
+```

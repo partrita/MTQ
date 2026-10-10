@@ -1,6 +1,9 @@
 ---
 title: "고급 알고리즘과 자료구조"
+resources:
+- index.txt
 ---
+
 
 ## 제1장: 자료구조 소개
 
@@ -18374,3 +18377,8 @@ true 편향 알고리즘은 이와 대칭적인 P-R 곡선을 갖는다.
 - 종이책 등록 시 전자책 무료 이용 가능: https://www.manning.com/freebook
 - **ISBN**: 978-1-61729-548-5
 - **MANNING** $59. / Can $79. [eBook 포함]
+
+<!-- txt-download -->
+::: {.callout-tip title="전자책용 TXT"}
+[TXT 다운로드](index.txt){download="index.txt"}
+:::
