@@ -1,10 +1,7 @@
 ---
 title: "생명정보학 프로그래밍(초급)"
 author: "Martin Jones"
-resources:
-- index.txt
 ---
-
 
 ## 저자 소개
 
@@ -5159,8 +5156,3 @@ gat : 904
 gga : 910
 atc : 905
 ```
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

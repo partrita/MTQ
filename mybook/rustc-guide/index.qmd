@@ -1,10 +1,7 @@
 ---
 title: "Rust 컴파일러 개발 가이드"
 author: "The Rust Project Developers"
-resources:
-- index.txt
 ---
-
 
 # 시작하기 {#getting-started}
 
@@ -31206,8 +31203,3 @@ Rust 설계에 직간접적으로 영향을 미친 연구와 Rust 관련 출판�
 
 
 [Crater]: #tests-crater
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

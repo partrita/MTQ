@@ -1,10 +1,7 @@
 ---
 title: "생명정보학 프로그래밍(중급)"
 author: "Ken Youens-Clark"
-resources:
-- index.txt
 ---
-
 
 # 서문
 
@@ -13483,8 +13480,3 @@ dna.py: error: the following arguments are required: DNA
 이 책은 내가 수년 동안 다시 살펴본 로잘린드(Rosalind) 문제들로부터 영감을 받았다. 처음에는 생물학을 더 잘 이해하려고 노력하면서 그다음에는 새로운 프로그래밍 언어를 배우면서 말이다. 나는 처음에 펄(Perl)로 시도했고 이후 자바스크립트, 하스켈, 파이썬, 러스트를 사용하여 다양한 성공을 거두며 시도해 왔다. 여러분도 알고 있는 다른 언어들을 사용하여 솔루션을 작성해 보시길 권한다.
 
 나는 여러분이 자신만의 프로그램에서 재사용할 수 있는 파이썬 패턴들을 보여드리려 노력했다. 무엇보다도 타입(types)과 테스트(tests), 그리고 다양한 포맷팅 및 린팅(linting) 도구들이 여러분이 작성하는 프로그램을 획기적으로 개선할 수 있다는 점을 보여드렸기를 바란다.
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

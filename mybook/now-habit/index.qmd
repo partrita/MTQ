@@ -3,10 +3,7 @@ lang: ko
 title: "지금 습관"
 subtitle: "미루기를 끝내고 죄책감 없이 즐기는 전략"
 author: "닐 A. 피오어(Neil A. Fiore)"
-resources:
-- index.txt
 ---
-
 
 ## 들어가며
 
@@ -272,8 +269,3 @@ resources:
 이제 심리적 안전망을 구축하고, 힘을 주는 긍정적인 내면의 언어를 사용하며, 죄책감 없는 놀이를 누리고, 언스케줄을 통해 차근차근 시작하라.
 
 당신은 더 이상 마감에 쫓기며 자책하는 미루는 사람이 아니다. 당신은 지금 이 순간 자신의 삶을 주도하는 당당한 생산자다. 지금 당장, 가장 작은 첫걸음을 시작하라!
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

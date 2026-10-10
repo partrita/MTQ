@@ -7,10 +7,7 @@ author:
 date: "2026-08-15"
 engine: markdown
 bibliography: citations.bib
-resources:
-- index.txt
 ---
-
 
 ```{.r}
 #| label: setup-main
@@ -16392,8 +16389,3 @@ s8_boots |>
 종종 그러한 문제들에 대해 작동하는 부트스트랩의 변형 버전이 존재한다.
 `survey` 패키지의 저자이자 R 코어 멤버인 Thomas Lumley는 부트스트랩이 바로 작동하지 않는 흔한 상황들(그리고 그러한 시나리오에서 작동하는 변형된 부트스트랩의 예시들)에 대한 훌륭한 요약을 제공한다 [@Lumley_2017].
 또한 @Hesterberg2015 도 참조하라.
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

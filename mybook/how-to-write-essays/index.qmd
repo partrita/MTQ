@@ -2,10 +2,7 @@
 title: "에세이 작성법"
 subtitle: "How to Write Essays: A step-by-step guide for all levels, with sample essays"
 author: "Don Shiach (돈 시아크)"
-resources:
-- index.txt
 ---
-
 
 ## 머리말 (Preface)
 
@@ -309,8 +306,3 @@ resources:
 ## 연습문제 해설 및 모범 답안 (Answers to Practice Sections)
 
 각 장에서 제시된 문장 개선 훈련, 문단 재배치, 오류 수정 연습에 대한 상세한 모범 해설과 가이드라인을 제공하여 독자가 스스로 학습 성과를 점검할 수 있도록 돕습니다.
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

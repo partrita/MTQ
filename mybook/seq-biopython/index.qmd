@@ -1,9 +1,6 @@
 ---
 title: "Biopython을 이용한 심화 생명정보학 분석"
-resources:
-- index.txt
 ---
-
 
 ## 1. 서론: 파이썬과 생명정보학의 결합
 
@@ -213,8 +210,3 @@ Biopython은 생명정보학 분석을 위한 핵심 도구이다. 다만 이 �
 - Cock, P. J., et al. (2009). Biopython: freely available Python tools for computational molecular biology and bioinformatics. Bioinformatics.
 - Chapman, B., & Chang, J. (2000). Biopython: Python tools for computational biology.
 - 공식 문서: [https://biopython.org/wiki/Documentation](https://biopython.org/wiki/Documentation)
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

@@ -3,10 +3,7 @@ title: "미니멀리스트 가이드"
 author: "레오 바바우타(Leo Babauta)"
 date: 2026-08-11
 lang: ko
-resources:
-- index.txt
 ---
-
 
 ::: {.callout-note title="이 책을 읽는 방법"}
 이 책은 정해진 순서대로 따라야 하는 교본이 아니라, 삶을 단순하게 가꾸는 아이디어를 골라 실천해 보는 실용적인 안내서입니다. 모든 방법을 그대로 적용하기보다 자신의 생활 방식과 가치관에 맞는 것부터 천천히 시도해 보세요.
@@ -704,8 +701,3 @@ A: 정해진 엄격한 규칙은 없습니다. 각자의 상황과 가치관에 
 # 저작권 포기 (Public Domain)
 
 이 책은 저작권의 얽매임이 없는 퍼블릭 도메인(Public Domain) 저작물입니다. 저자 레오 바바우타(Leo Babauta)는 이 책에 대한 모든 저작권을 포기하였으므로, 누구나 자유롭게 복사, 배포, 수정, 번역할 수 있습니다.
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

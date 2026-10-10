@@ -2,10 +2,7 @@
 title: "포모도로 테크닉"
 subtitle: "업무와 학습 방식을 혁신한 시간 관리 시스템"
 author: "프란체스코 치릴로(Francesco Cirillo)"
-resources:
-- index.txt
 ---
-
 
 # 제1부: 기초
 
@@ -387,8 +384,3 @@ resources:
 인사/총무             | 연간 건강검진 일정 예약                     | 
 ========================================================================
 ```
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

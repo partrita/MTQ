@@ -2,10 +2,7 @@
 title: "삶의 과학"
 subtitle: "일상의 루틴을 재고해야 하는 219가지 이유"
 author: "스튜어트 파리몬드"
-resources:
-- index.txt
 ---
-
 
 # 머리말
 
@@ -3664,7 +3661,3 @@ BMI가 벨기에산이었다니, 누가 알았을까?
 - 복외측시각교차전핵 (VLPO): 시상하부 근처의 미세한 뇌 영역으로, 수면을 유도하는 신경전달물질을 방출함.
 - REM 및 nREM 수면: REM은 빠른 안구 운동 수면으로 뇌가 깨어 있을 때만큼 활동적이고 꿈을 꿉니다. nREM(비렘수면) 동안 뇌 활동은 더 차분하고 체계적입니다.
 
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

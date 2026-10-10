@@ -3,10 +3,7 @@ title: "단백질 공학 실전 가이드"
 author:
  - Tuck Seng Wong
  - Kang Lan Tee
-resources:
-- index.txt
 ---
-
 
 # 1장 · 문헌 검색
 
@@ -3408,7 +3405,3 @@ CV 개선을 위한 좋은 팁들:
 
 * Fahnert B (2015) On your marks, get set, go!-lessons from the UK in enhancing employability of graduates and postgraduates. FEMS Microbiol Lett 362(19)
 
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

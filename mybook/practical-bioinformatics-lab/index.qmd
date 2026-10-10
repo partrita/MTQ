@@ -2,10 +2,7 @@
 title: "생명정보학 실용 매뉴얼"
 author: "Sufang Wang, Michael Gribskov"
 date: 2026-08-24
-resources:
-- index.txt
 ---
-
 
 ## 서문
 
@@ -1517,8 +1514,3 @@ dev.off()
 1. StatQuest: principal component analysis (PCA), step-by-step. https://www.bilibili.com/video/av
 2. A step-by-step explanation of principal component analysis (PCA). https://builtin.com/data-science/step-step-explanation-principal-component-analysis
 3. Introduction to clustering in machine learning: types, algorithms, and applications. https://hackernoon.com/introduction-to-clustering-in-machine-learning-types-algorithms-and-applications
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

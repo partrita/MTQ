@@ -1,10 +1,7 @@
 ---
 title: "리더를 위한 영향력 가이드"
 subtitle: "The Leaders Guide to Influence"
-resources:
-- index.txt
 ---
-
 
 # 들어가며
 
@@ -2670,8 +2667,3 @@ To influence
 계속 발전하라 - 가끔 이 책을 펴서 이해를 새로 하라. 관련 주제의 다른 책도 읽고, 추가 교육이 필요한 곳을 고민하며, 영향력 있는 리더가 되는 데 필요한 개발을 받으라.
 
 당신의 모든 업무 관계와 설득의 대화에 행운이 함께하기를!
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

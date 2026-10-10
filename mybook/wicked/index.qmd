@@ -2,10 +2,7 @@
 title: "위키드"
 subtitle: "서쪽 마녀의 시간"
 author: "그레고리 맥과이어 (Gregory Maguire)"
-resources:
-- index.txt
 ---
-
 
 ## 프롤로그
 
@@ -7659,8 +7656,3 @@ resources:
 "아직은 아니란다."
 
 끝
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

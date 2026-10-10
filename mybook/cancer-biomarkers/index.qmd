@@ -2,10 +2,7 @@
 title: "암 바이오마커"
 subtitle: "암 진단 및 치료"
 author: "아딥 셰자드 (Adeeb Shehzad)"
-resources:
-- index.txt
 ---
-
 
 # 제1장: 암 바이오마커 개론
 
@@ -4118,8 +4115,3 @@ Fernandez-GarciaD, HillsA, PageK, HastingsRK, ToghillB, GoddardKSetal(2019)Plasm
 Fisher B, Redmond C, Fisher ER, Caplan R (1988) Relative worth of estrogen or progesterone receptor and pathologic characteristics of differentiation as indicators of prognosis in node negative breast cancer patients: findings from National Surgical Adjuvant Breast and Bowel Project Protocol B-06. J Clin Oncol 6(7):1076-1087. https://doi.org/10.1200/JCO.... 1076
 FoijerF, DraviamVM, SorgerPK(2008)Studyingchromosomeinstabilityinthemouse.Biochim BiophysActa1786(1):73-82.https://doi.org/10.1016/j.bbcan...
 Fong Y, Fortner J, Sun RL, Brennan MF, Blumgart LH (1999) Clinical score for predicting recurrenceafterhepaticresectionformetastaticcolorectalcancer:analysisof1001consecutive
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

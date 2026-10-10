@@ -2,10 +2,7 @@
 title: "암 면역치료 방법과 프로토콜"
 subtitle: "Cancer Immunotherapy Methods and Protocols"
 author: "Aikaterini Kafka"
-resources:
-- index.txt
 ---
-
 
 # 제1장 FACS를 이용한 종양 미세환경에서 생존 면역 세포의 분리
 
@@ -5067,8 +5064,3 @@ OD가 약 0.1-0.3(log growth phase)에 도달할 때까지 배양액을 키운�
 30. 용균 회로의 통합 덕에, A 모델에서 종양 축소를 이루려면 SLIC therapeutic 균주의 종양 내 주사가 단 한 번만 필요하다는 것을 이전에 입증했다.
 31. 희석액을 spot한 뒤 열린 화염 근처에서 agar plate를 덮지 않은 채 말리게 하라. 건조되기 전에 너무 빨리 뒤집고 incubator에 넣으면 spot이 번져 어느 콜로니가 어느 희석액에 속하는지 구별하기 어려워진다.
 32. Day 6-8을 시점 범위로 선택한 것은 이때 적응 면역반응(adaptive immune response)이 정점에 이를 것으로 예상되기 때문이다.
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

@@ -2,10 +2,7 @@
 title: "선형대수학: 이론과 실습"
 author: "deepthought"
 date: "2026-08-13"
-resources:
-- index.txt
 ---
-
 
 # 제1부: 이론 선형대수학의 개념적 기초
 
@@ -3392,8 +3389,3 @@ print(f"속도 향상: {slow_time/fast_time:.1f}x")
 1. $n = 500, 1000, 2000$ 각각에 대해 행렬-벡터 곱의 실행 시간을 재보라. 시간이 대략 $n$에 선형적으로 늘어나나요?
 2. 같은 크기의 행렬-행렬 곱($O(n^3)$)과 행렬-벡터 곱($O(n^2)$)의 비용을 비교하라.
 3. `@` 연산자(`A @ x`)를 `.dot()` 대신 사용하라. 차이가 있나요?
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

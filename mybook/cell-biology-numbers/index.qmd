@@ -2,10 +2,7 @@
 title: "숫자로 보는 세포생물학"
 subtitle: "정량적 사고와 페르미 추정을 통한 세포 생물학의 탐구"
 author: "Ron Milo, Rob Phillips"
-resources:
-- index.txt
 ---
-
 
 ## 머리말
 
@@ -2244,8 +2241,3 @@ $$t = \frac{V \cdot c_{in}}{p \cdot A \cdot c_{in}} = \frac{4\pi r^3 / 3}{4\pi r
 - 인체에는 몇 종류의 세포 유형이 존재하는가?
 
 우리는 독자들이 이러한 질문이나 다른 질문들에서 영감을 얻어 생물학적 수치 감각을 향한 자신만의 여정을 시작하기를 바라며 글을 맺는다.
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

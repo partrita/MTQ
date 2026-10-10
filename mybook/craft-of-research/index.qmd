@@ -2,10 +2,7 @@
 title: "연구의 기술"
 subtitle: "The Craft of Research (5th Edition)"
 author: "Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, William T. Fitzgerald"
-resources:
-- index.txt
 ---
-
 
 
 ## 연구자가 되다
@@ -4158,8 +4155,3 @@ The prob­lems began in 1722, when a law of suc­ces­sion passed by Peter the G
 8. Montgomery, Scott L. *The Chicago Guide to Communicating Science.* 2nd ed. University of Chicago Press, 2017.
 9. Roldan, Leslie Ann, and Mary-Lou Pardue. *Writing in Biology: A Brief Guide.* Oxford University Press, 2016.
 10. Tyowua, Andrew Terhemen. *A Practical Guide to Scientific Writing in Chemistry: Scientific Papers, Research Grants and Book Proposals.* CRC Press, 2023.
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

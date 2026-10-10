@@ -7,10 +7,7 @@ author:
 date: "2026-08-06"
 bibliography: data/dataviz.bib
 csl: data/chicago-fullnote-bibliography.csl
-resources:
-- index.txt
 ---
-
 
 
 <!-- BEGIN FILE: index.Rmd -->
@@ -6798,9 +6795,4 @@ Bookdown은 Markdown 형식이 아닌 HTML 형식으로 표가 포함된 Markdow
 
 # 참고문헌 {.unnumbered}
 
-:::
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
 :::

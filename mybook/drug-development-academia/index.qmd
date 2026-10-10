@@ -3,10 +3,7 @@ title: "학술 환경에서의 신약 개발 실무 안내서"
 subtitle: "SPARK 접근법"
 author: "Daria Mochly-Rosen, Kevin Grimes"
 date: 2026-08-24
-resources:
-- index.txt
 ---
-
 
 # 서문
 
@@ -1995,8 +1992,3 @@ SWOT 분석 매트릭스
 12. Elliott RL (2011) *Third world diseases*. Springer, Heidelberg, Germany
 13. Muller-Langer F (2009) *Creating R&D for incentives for medicines for neglected diseases*. Gabler, Wiesbaden, Germany
 14. Trouiller P, Olliaro P, Torreele E, Orbinski J, Laing R, Ford N (2002) Drug development for neglected diseases: a deficient market and a public-health policy failure. *Lancet* 359:2188-2194
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

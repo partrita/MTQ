@@ -3,10 +3,7 @@ engine: markdown
 title: "파이썬 데이터 분석 및 시각화 실습"
 author: "Allen Lee, Carpentry Instructors"
 date: "2026-08-15"
-resources:
-- index.txt
 ---
-
 
 # 소개
 
@@ -2265,9 +2262,4 @@ transform_string('et cetera', 10)
 
 - 더 나은 교육 콘텐츠를 위해 여러분의 소중한 의견을 공유해 주시기 바랍니다.
 
-:::
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
 :::

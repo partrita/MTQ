@@ -2,10 +2,7 @@
 title: "계산통계학 핸드북"
 subtitle: "생명정보 통계학"
 author: "Henry Horng-Shing Lu, Bernhard Schölkopf, Martin T. Wells, Hongyu Zhao"
-resources:
-- index.txt
 ---
-
 
 # 제1부: 단일세포 분석
 
@@ -4054,7 +4051,3 @@ CREF 분석은 전사체 데이터에서 유전자 조절의 기본 원리를 �
 : Esteller M (2008) Epigenetics in cancer. N Engl J Med 358(11):1148-1159
 : Ashley EA (2016) Towards precision medicine. Nat Rev Genet 17(9):507-522
 
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

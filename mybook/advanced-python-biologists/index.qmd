@@ -2,10 +2,7 @@
 title: "생물학자를 위한 고급 파이썬"
 author: "Dr. Martin Jones"
 date: 2026-08-24
-resources:
-- index.txt
 ---
-
 
 # 1장: 소개
 
@@ -5435,8 +5432,3 @@ except InvalidCharacterError:
 # 맺음말
 
 『Advanced Python for Biologists』의 끝이다. 책을 즐기셨고 유용하게 활용하셨기를 바란다.
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

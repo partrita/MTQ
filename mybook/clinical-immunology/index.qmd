@@ -1,10 +1,7 @@
 ---
 title: "임상면역학"
 authors: "Nima Rezael"
-resources:
-- index.txt
 ---
-
 
 # 머리말
 
@@ -11087,8 +11084,3 @@ Transplantation 649
 조혈줄기세포이식(HSCT) 또한 많은 악성 및 비악성 질환의 치료에서 획기적인 발전을 이룩한 이식의 또 다른 한 축이다. HSCT는 암에 대항하는 새로운 접근법으로서 줄기세포 치료 및 면역치료의 개념을 확립하였다. 혈액악성종양에서 HSCT의 성공은 환자에게 강력한 화학방사선요법을 시행할 수 있는 능력과, 공여자 면역계에서 기인하는 강력한 이식편대백혈병(GVL) 효과에 기반한다. 나아가 HSCT는
 
 Transplantation 651 공여자 유래의 조혈 기능과 면역계를 재건해 줌으로써 수많은 비악성 혈액 질환에서도 확립된 치료 옵션으로 자리잡았다. HLA 타이핑, 전처치 요법(conditioning regimen), 지지요법(supportive care)의 발전, 그리고 숙주대이식편 및 이식편대숙주 반응의 본질에 대한 이해 증진은 자가 및 동종 HSCT의 부작용을 최소화하는 데 기여하였다. 강도감소 전처치 요법(reduced-intensity conditioning)의 도입은 독성을 줄이면서도 바람직한 이식편대종양(graft-versus-tumor) 효과를 거둘 수 있게 해 주었다. 또한 GVHD 발생을 줄여 이환율과 사망률을 낮추기 위한 강력한 세포 기반 치료법들이 지속적으로 개발되고 있다. 반일치(haploidentical) HSCT의 발전으로 중증 악성종양 환자들도 공여자를 신속하게 확보할 수 있게 되었다. CRISPR/Cas9 및 탈렌(TALEN)을 포함한 유전자 교정 도구를 이용하면 내인성 T세포수용체(TCR) 및 HLA 유전자를 결손시킬 수 있다. 이를 통해 동종반응성(alloreactivity)을 제거하고 제3자(third-party) 유래 T세포의 면역원성을 낮출 수 있다.
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

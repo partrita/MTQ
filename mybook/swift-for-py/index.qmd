@@ -3,10 +3,7 @@ title: "파이썬 개발자를 위한 Swift"
 subtitle: "Swift 문법, 고급 기능 및 연습 문제"
 author: "Taeyoon Kim"
 date: "2026-02-21"
-resources:
-- index.txt
 ---
-
 
 
 이 가이드는 Swift의 기초를 안내하며 파이썬과의 비교를 곁들여 설명하므로 기존 파이썬 지식을 그대로 활용할 수 있다.
@@ -7027,8 +7024,3 @@ if let result = successfulResultTryOptional {
 // RunLoop.current.run(until: Date(timeIntervalSinceNow: 0.5)) // 잠시 동안 활성 상태 유지
 // 그러나 자동화된 테스트나 간단한 스크립트 실행의 경우 직접 호출이 더 쉽습니다.
 ```
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

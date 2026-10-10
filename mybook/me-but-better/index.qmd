@@ -2,10 +2,7 @@
 title: "더 나아진 나"
 author: 올가 카잔(Olga Khazan)
 date: 2025-03-11
-resources:
-- index.txt
 ---
-
 
 # 서론
 
@@ -2371,8 +2368,3 @@ Daniel A. Briley, William J. Chopik, Jaime Derringer의 연구
 - 잠에서 깨면 "오늘 나는 행복하기로 선택한다!"라고 말한다
 - 명상한다
 - 요가를 한다
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

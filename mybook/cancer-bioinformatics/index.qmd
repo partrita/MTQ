@@ -2,10 +2,7 @@
 title: "암 생명정보학"
 subtitle: "암 유전체 빅데이터 및 워크플로"
 author: "John Torcivia-Rodriguez, Hayley Dingerdissen, Ting-Chia Chang, Raja Mazumder, Gaurav Kaushik, Brandi Davis-Dusenbery, Matthew Hayes, Guoli Sun, Alexander Krasnitz, David Mosen-Ansorena, Matthew D. Wilkerson, Alessandro Romanel, Xu Zhang, Tsui-Ting Ho, Vanessa Isabell Jurtz, Lars Rønn Olsen"
-resources:
-- index.txt
 ---
-
 
 # 암 생명정보학
 
@@ -4711,8 +4708,3 @@ $$ β(x) = m·x^{d_vasc/3} (11) $$
 우리 논거 따르면, 이는 통해 혈관계 프랙탈 차원 2를 유추 가능하게 한다. 방정식 6에서 따라오는 2/3 대신이다.
 
 정확히 종양 표면, 공 표면, 그리고 프랫탈 차원이 기하학적 차원 회복해야 함을 상기하면, 여기 제시된 우리 논거는 이 예시 지지받는다.
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

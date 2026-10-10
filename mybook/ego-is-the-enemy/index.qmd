@@ -1,10 +1,7 @@
 ---
 title: "에고는 적이다"
 author: "라이언 홀리데이(Ryan Holiday)"
-resources:
-- index.txt
 ---
-
 
 # 서론
 
@@ -1703,8 +1700,3 @@ Fac, si facis. (할 거면 해라.) 또 하나 어울리는 라틴 격언이 있
 살아 남은 날의 매일 당신은 세 단계 중 하나에 서게 될 것이다. 열망, 성공, 실패. 각 단계에서 에고와 싸우게 된다. 각 단계에서 실수도 하게 된다.
 
 매일매일 매 순간 바닥을 쓸어야 한다. 그리고 다시 쓸어야 한다.
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

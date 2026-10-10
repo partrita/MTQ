@@ -3,10 +3,7 @@ title: "저널링 습관"
 subtitle: "Journaling Habit"
 author:
   - 레이철 커스크(Rachel Cusk)
-resources:
-- index.txt
 ---
-
 
 # 들어가며
 
@@ -353,8 +350,3 @@ resources:
 > "진정한 자아는 속박이 아니라 해방을 추구한다. 정형화된 틀에 갇히는 것을 거부하고, 무한한 가능성의 바다로 나아가길 갈망한다."
 
 부디 용기를 내어 여러분만의 노트를 펼치고, 결함투성이지만 사랑받아 마땅한 여러분의 진실한 영혼과 마주해 보라. 그 종이 위에서 여러분의 진정한 삶이 비로소 찬란하게 피어날 것이다.
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

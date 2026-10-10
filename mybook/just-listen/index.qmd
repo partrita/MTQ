@@ -2,10 +2,7 @@
 title: "그냥 들어라"
 subtitle: "누구에게나 통하는 대화의 비밀"
 author: "마크 굴스톤(Mark Goulston)"
-resources:
-- index.txt
 ---
-
 
 ## 섹션 I
 
@@ -2582,9 +2579,4 @@ PR과 광고 노력 때문이든 함께 아는 사람 때문이든요. 개인적
 
 가장 존경하고 만나고 싶은 사람은 누구입니까? 인터넷에서 그 사람이 강연하는 장소를 검색하고 초대받을 수 있는지 보라. 혹은 책이 나왔다면 Amazon이나 다른 리뷰 사이트로 책의 '파워 리뷰(power review)'를 올리라. 블로그가 있다면 그 사람이 당신 철학이나 삶을 어떻게 바꿨는지 생각을 올리는 데 쓰라. 또 Facebook, Plaxo, LinkedIn, Twitter 같은 사교·비즈니스 네트워킹 사이트로 긍정적 코멘트를 하라.
 
-:::
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
 :::

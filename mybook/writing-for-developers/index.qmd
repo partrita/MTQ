@@ -1,10 +1,7 @@
 ---
 title: "개발자를 위한 글쓰기"
 author: "피오트르 사르나(Piotr Sarna), 신시아 던롭(Cynthia Dunlop)"
-resources:
-- index.txt
 ---
-
 
 # 1부 기본기
 
@@ -7567,8 +7564,3 @@ PretendPiotr의 초안을 읽은 독자는 Zig를 다루는 것이 어떤 느낌
 친애하는 독자 여러분, 커뮤니티를 이루는 데는 온 마을의 힘이 필요하다. 그것은 여러분과 저, 그리고 우리 사이에 존재하는 모든 이들의 몫이다.
 
 자, 이제 세상으로 나아가 사람들이 읽고 싶어 하는 블로그를 만들고, 커밋하고, 작성하라.
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

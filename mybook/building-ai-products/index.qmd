@@ -3,10 +3,7 @@ title: "AI 제품 만들기"
 subtitle: "AI와 GenAI(생성형 AI) 제품 관리를 위한 필수 안내서"
 author: "마릴리 니카(Marily Nika)"
 date: "2025-02-21"
-resources:
-- index.txt
 ---
-
 
 # 서문
 
@@ -2772,8 +2769,3 @@ AI 통합을 진행해야 하는가? □ 예 □ 아니오
 
 - 전략:
 - 근거:
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::

@@ -4,10 +4,7 @@ title: "마케팅 조사"
 subtitle: "기술적·학술적 접근"
 author: "Mike Nguyen"
 description: "마케팅 조사의 기술적·학술적 다루기: 개념 구성(constructs), 실체적 영역(substantive domains), 그리고 이들을 연결하는 방법론을 다루며 전 과정에 걸쳐 재현 가능한 R 코드를 포함합니다."
-resources:
-- index.txt
 ---
-
 
 <!-- ====== Section from: index.qmd ====== -->
 
@@ -14316,8 +14313,3 @@ flowchart LR
 `r if (knitr::is_html_output()) '
 # 참고문헌 {-}
 '`
-
-<!-- txt-download -->
-::: {.callout-tip title="전자책용 TXT"}
-[TXT 다운로드](index.txt){download="index.txt"}
-:::
