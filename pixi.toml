@@ -9,6 +9,7 @@ version = "0.1.0"
 preview = "quarto preview mybook --no-execute"
 render = "quarto render mybook --no-execute"
 test = "quarto render mybook --no-execute"
+clean = "rm -rf mybook/.quarto/quarto-session-temp* mybook/.quarto/preview"
 
 [dependencies]
 quarto = ">=1.8.27,<2"

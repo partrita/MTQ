@@ -185,8 +185,11 @@ format:
     # format-level flag actually skips search.json). Re-enable only if the
     # book is split or the runner gets much more RAM.
     search: false
-    code-tools:
-      source: true
+    # NOTE: code-tools source embedding duplicated ~27k code blocks into every
+    # page and worsened the Deno OOM during book finalization. code-copy keeps
+    # the copy button without embedding sources. Do not re-enable code-tools
+    # unless the book is split into smaller sub-books.
+    code-copy: true
 
 execute:
   freeze: true

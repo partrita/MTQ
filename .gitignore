@@ -538,3 +538,5 @@ skills-lock.json
 .opencode/
 .slim/deepwork/
 source/
+
+**/*.quarto_ipynb

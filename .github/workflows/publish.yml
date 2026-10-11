@@ -20,19 +20,6 @@ jobs:
           cache: true
           activate-environment: default
 
-      - name: Enable swap for large Quarto book render
-        # The 137-chapter book needs more virtual memory than the runner's
-        # RAM during Deno's in-memory render; without swap it OOMs at [138/138].
-        # Runners may already ship an active /swapfile, so reset it first.
-        run: |
-          sudo swapoff /swapfile 2>/dev/null || true
-          sudo rm -f /swapfile
-          sudo fallocate -l 8G /swapfile || sudo dd if=/dev/zero of=/swapfile bs=1M count=8192
-          sudo chmod 600 /swapfile
-          sudo mkswap /swapfile
-          sudo swapon /swapfile
-          free -h
-
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
@@ -40,9 +27,3 @@ jobs:
           path: mybook
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Raise Deno's heap ceiling (Quarto defaults to 8 GB, which hits
-          # "heap limit" on this book). Must use QUARTO_DENO_V8_OPTIONS:
-          # Quarto already passes its own --v8-flags=..., and Deno rejects
-          # a second --v8-flags outright. Values here are appended to
-          # Quarto's list, and V8 lets the last occurrence win.
-          QUARTO_DENO_V8_OPTIONS: "--max-old-space-size=12288,--max-heap-size=12288"
