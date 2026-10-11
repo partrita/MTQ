@@ -24,6 +24,7 @@ book:
         - rust-python/index.qmd
         - rustc-guide/index.qmd
         - async-rust/index.qmd
+        - rust-best-practices/index.qmd
         - software-architecture-decisions/index.qmd
         - think-like-cto/index.qmd
         - beyond-vibe-coding/index.qmd
