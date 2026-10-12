@@ -179,6 +179,11 @@ format:
       - cosmo
       - brand
     number-sections: false
+    callouts:
+      quote:
+        appearance: simple
+        color: muted
+        icon: chat-quote
     # Disabled: the fuse.js search index is built fully in-memory by Deno
     # during finalization and OOMs on CI for this 137-chapter / ~88 MB book
     # (verified: `book: search:` is a no-op in Quarto 1.9, only the

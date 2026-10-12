@@ -524,8 +524,9 @@ $RECYCLE.BIN/
 
 # Quarto render artifacts
 mybook/site_libs/
-mybook/data_analysis/*.html
 mybook/**/*_files/
+*.html
+!mybook/dataviz/data/*.html
 
 # ScreenFlow recording bundles accidentally copied with book assets
 *.cmproj
