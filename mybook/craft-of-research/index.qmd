@@ -5,6 +5,8 @@ author: "Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, Wi
 ---
 
 
+# 서론: 연구자와 청중
+
 ## 연구자가 되다
 
 연구자라고 하면 떠오르는 이미지가 있는가? 실험복을 입고 현미경을 들여다보는 사람? 도서관 혼자서 메모를 하는 고독한 인물? 대부분의 사람이 그렇게 상상할 것이다. 하지만 당신 자신을 떠올렸을 수도 있다. 호텔이나 레스토랑 리뷰를 검색하거나, 역대 최고 농구 선수가 누구인지 논쟁하기 위해 통계를 모으거나, 좀 더 무겁게는 당신이 사는 지역 공립학교의 교사 부족이 학생들에게 미치는 부정적 영향을 파악하기 위해 자료를 찾는 당신 말이다. 그런 논증을 전개하는 과정에서, 당신은 어디서 정확하고 신뢰할 수 있는 정보를 찾을지 결정해야 했고 부정확한 정보에 맞서야 했을지도 모른다. 당신은 아직 *전문적* 연구자는 아닐지라도, 모든 연구가 요구하는 탐구와 조사 활동에는 익숙할 것이다.
@@ -147,7 +149,7 @@ author: "Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, Wi
 연구는 힘든 작업이지만 어떤 도전적인 작업이든 제대로 수행하듯이, 그 과정과 결과는 큰 만족감을 가져다줄 수 있다. 그 만족감의 상당 부분은 자신의 작업이 관심사를 공유하는 공동체를 풍요롭게 한다는 것을 아는 데서 온다. 특히 그것을 바꿀 수 있다고 믿는 무언가를 발견했을 때 그렇다.
 
 ::: {.callout-tip}
-### 청중 이해를 위한 체크리스트
+#### 청중 이해를 위한 체크리스트
 
 처음부터 청중에 대해 생각하라. 프로젝트를 진행하면서 그들을 더 잘 이해하게 될 것이다. 이 질문들에 일찍 답하고 계획을 시작할 때와 수정할 때 다시 검토하라.
 
@@ -173,11 +175,10 @@ author: "Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, Wi
 :::
 
 
-## 질문하고 답을 찾기
+# 제1부: 질문하고 답을 찾기
 
-### 서문
 
-### 프로젝트 계획하기-개요
+## 프롤로그: 프로젝트 계획하기(개요)
 
 이미 연구 질문이 있고 그 답을 찾는 법을 알고 있다면, 첫 두 장을 빠르게 검토한 다음 나머지 장을 주의 깊게 읽으라. 처음부터 시작한다면, 첫 번째 과제는 가치 있는 연구 *프로젝트*를 찾는 것이다. 즉, 수행하는 연구가 주어진 시간 안에 관리할 수 있을 정도로 구체적인 *주제*를 다루는 프로젝트를 상상해야 한다. 하지만 아무리 구체적인 주제만으로는 충분하지 않다. 연구 프로젝트는 연구 *질문*에서 시작된다. 그것은 당신에게 흥미로운 것뿐만 아니라, 다른 사람들에게도 흥미로운 질문이어야 한다. 그리고 그 질문은 *답*이 있어야 한다.
 
@@ -190,7 +191,7 @@ author: "Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, Wi
 하지만 우리가 제시하는 깔끔한 순서대로 이 단계들을 진행할 수는 없을 것이다. 모든 증거를 갖추기 전에 연구 질문에 대한 잠정적 답을 생각해낼 것이다. 그리고 가치 있는 논증이 있다고 생각할 때, 새로운 출처에서 더 많은, 아마도 다른 증거가 필요하다는 것을 발견할 수 있다. 주제를 수정할 수도 있다. 연구는 쉽고 잘 표시된 길을 따라 익숙한 목적지까지 산책하는 것이 아니다. 덤불이 우거진 숲속의 바위 언덕을 구불구불 오르내리는 것이며 때로는 안개 속에서, 볼 때까지 알아보지 못할 무언가를 찾는 것이다. 경로가 아무리 간접적이어도, 매 단계에서 예상되는 우회를 계획하면(어떤 것은 피할 수도 있다) 진전을 이룰 수 있다.
 
 ::: {.callout-tip}
-### 혼자서와 그룹에서 연구 프로젝트 지속하기
+#### 혼자서와 그룹에서 연구 프로젝트 지속하기
 
 연구 프로젝트는 스프린트보다 마라톤에 가깝다. 하지만 반드시 힘든 과정인 것은 아니다: 느리고 꾸준히가 승리한다. 연구 프로젝트가 몇 주 동안이든, 1년 이상이든, 휴식을 취하거나 프로젝트 완료 전에 진행 상황을 공유하거나(심지어 프로젝트가 새로운 프로젝트를 낳도록 허용하는) 기회가 있을 때, 자기 관리가 중요하다. 글쓰기는 힘든 작업이다. 하지만 많은 활동과 마찬가지로, *더 많이 하는* 것이 시간이 지나면 더 쉽게 만든다. 그리고 *다른 사람들과 함께* 하는 것이 노력을 지속하는 데 도움이 된다.
 
@@ -207,7 +208,7 @@ author: "Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, Wi
 
 
 
-### 주제에서 질문으로
+## 1장. 주제에서 질문으로
 
 이 장에서는 관심 영역에서 주제를 찾고 관리 가능한 범위로 좁힌 다음, 연구를 이끌어갈 수 있는 문제의 씨앗을 찾기 위해 질문하는 법을 논의한다. 경험이 많은 연구자이거나 추구할 주제를 알고 있다면 2장으로 건너뛰어도 된다. 하지만 첫 프로젝트를 시작한다면 이 장이 유용할 것이다.
 
@@ -429,7 +430,7 @@ author: "Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, Wi
 :::
 
 
-### 질문에서 문제로
+## 2장. 질문에서 문제로
 
 이 장에서는 청중이 해결할 가치가 있다고 생각하는 문제로 질문을 전환하는 법을 설명한다. 고급 연구자라면 이 단계가 얼마나 중요한지 알고 있을 것이다. 연구가 처음이라면, 그것의 중요성을 납득시키기를 바란다. 여기서 배우는 것이 모든 미래 프로젝트에 필수적이기 때문이다.
 
@@ -668,17 +669,15 @@ author: "Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, Wi
 :::
 
 
-###
 
-### 자료와 리소스
+# 제2부: 자료와 리소스
 
-### 서문
 
-### 자료와 진정한 연구
+## 프롤로그: 자료와 진정한 연구
 
 연구는 연구 분야와 질문에 따라 다양한 형태를 취할 수 있다. 어떤 연구자들은 실험실에서 실험을 하고; 어떤 연구자들은 자연 세계나 인간 행동을 관찰하고; 어떤 연구자들은 설문조사나 인터뷰를 통해 사람들로부터 데이터를 수집하고; 어떤 연구자들은 다른 방법들 중에서 텍스트, 음향, 시각적, 또는 물질적 자료를 분석하거나 해석한다. 다음 두 장에서는 자료에 기반한 연구에 초점을 맞춘다. 그렇게 하는 이유는, 자료를 다루는 것이 가장 일반적인 연구 형태이자 대부분의 사람들이 처음 배우는 유형이기 때문이다. 3장에서는 자료의 관련성과 신뢰성을 평가하여 찾는 데 초점을 맞춘다. 4장에서는 논증에서 이 자료를 사용하는 준비에 초점을 맞춘다. 이것들을 별도의 단계로 다루지만 실제로는 서로 얽혀 있다. 진정한 연구에서는 모든 자료를 먼저 찾은 다음 읽고 메모하는 것이 아니다. 오히려, 좋은 자료 하나를 찾으면 그것이 다른 자료로 이끈다. 얻은 지식을 사용하여 탐구를 다듬고 질문에 대한 답을 알려주면서 더 읽고 탐구한다. 자료를 찾고, 평가하고, 참여하는 이 순환적 접근은 모든 진정한 연구의 특징이다.
 
-### 자료 찾기와 평가
+## 3장. 자료 찾기와 평가
 
 새로운 연구자이고 대부분의 자료를 도서관이나 온라인에서 찾을 것으로 예상한다면, 이 장은 연구를 위한 계획을 세우는 데 도움이 될 것이다. 더 경험이 있다면 다음 장으로 건너뛰어도 된다.
 
@@ -900,7 +899,7 @@ author: "Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, Wi
 
 
 
-### 자료에 참여하기
+## 4장. 자료에 참여하기
 
 연구를 신뢰할 수 있게 만들려면, 자료를 공정하고 정확하게 사용해야 한다. 이 장에서는 자료에 생산적으로 참여하는 법과, 당신의 사고를 진전시키고 자료에 의존하거나 비판할 때 청중이 당신을 신뢰할 수 있도록 메모하는 법을 설명한다.
 
@@ -1192,13 +1191,11 @@ author: "Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, Wi
 :::
 
 
-### 제3부
+# 제3부: 논증 만들기
 
-### 논증 만들기
 
-### 프롤로그
 
-### 연구 논증 조립하기
+## 프롤로그: 연구 논증 조립하기
 
 모든 데이터를 수집하고 모든 관련 자료를 찾은 후에야 논증을 계획할 수는 없다. 우선, 전부 다 얻을 수는 없을 것이다. 둘째, 기계적이거나 무의미하게 연구를 하게 될 것이다. 점점 더 많은 것을 축적하면서 그것을 어떻게 할지에 대한 감각 없이, 또는 누구도 모르는 곳으로 빵 부스러기를 따라가는 것이다. 물론, 프로젝트의 감을 잡기 위해 약간의 연구를 해야 한다. 하지만 문제와 그 잠재적 해결책에 대한 감각이 생기면, 즉시 논증을 계획하기 시작해야 한다. 연구가 진행됨에 따라 계획은 바뀔 것이다-만약 바뀌지 않는다면, 아마 최고의 사고를 하고 있지 않을 것이다-하지만 일찍 계획을 세우고 진행하면서 수정하면 자료를 더 잘 파악하고 더 의도적으로 연구하는 데 도움이 될 것이다. 독자의 예측 가능한 질문에 답하는 *연구 논증*을 만들려고 시도할 때만, 아직 해야 할 연구가 무엇인지 볼 수 있다.
 
@@ -1211,7 +1208,7 @@ author: "Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, Wi
 사실, 우리는 뜨거운 논쟁을 더 쉽게 알아채지만 우리는 매일 이런 협력적 논쟁을 한다. 뭘 살지-친구와 어떤 휴대폰을 살지, 어떤 책을 읽을지, 피자나 태국 음식 중 어떤 것을 주문할지-를 결정하기 위해 좋은 이유를 교환할 때마다. 그런 친근한 토론과 마찬가지로, 연구 논증은 누구에게도 주장을 강요하지 않는다. 대신, 청중이 있는 곳에서 시작한다. 주장의 이유를 왜 받아들여야 하는지에 대한 예측 가능한 질문들-그것은 당신의 논증을 파괴하기 위해서가 아니라 시험하기 위해서, 두 사람이 공유할 가치가 있는 진실을 찾고 이해하는 데 도움이 되기 위해 묻는 질문들-에서. 물론, 논증을 *쓰*면, 직접 그렇게 물어줄 사람이 없다. 그래서 청중을 대신하여 상상해야 한다. 그 상상된 질문들과 당신의 답변이 논증을 지속적인 대화의 일부로 만든다. 5장에서는 연구 논증을 구성하는 요소를 살펴본다. 6~9장에서는 각 요소를 자세히 설명한다. 제4부에서는 그 논증을 글이나 발표로 어떻게 쓸지 보여줄 것이다.
 
 ::: {.callout-note appearance="simple"}
-### 알아가기
+#### 알아가기
 
 청중에 대해 끊임없이 생각하라는 말을 들어왔지만 모르는 사람의 질문을 상상하는 것만큼 어려운 것은 없다. 경험 많은 연구자들은 자신의 연구 공동체의 많은 구성원들을 개인적으로 알고 있어 이점이 있다. 그들은 프로젝트에 대해 이야기하며 쓰기 전에 아이디어를 시험해 본다. 초보 연구자이거나 학생이라면, 아직 청중을 개인적으로 모를 수 있다. 하지만 그들이 어떻게 쓰고, 논증하고, 생각하는지 이해하기 위해 몇 가지 사전 작업을 할 수 있다:
 
@@ -1223,9 +1220,8 @@ author: "Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, Wi
 :::
 
 
-### 좋은 논증 만들기
+## 5장. 좋은 논증 만들기: 개요
 
-### 개요
 
 이 장에서는 연구 논증이 무엇인지, 그리고 그것을 구성하는 다섯 가지 질문에 대한 답을 설명한다.
 
@@ -1392,7 +1388,7 @@ author: "Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, Wi
 :::
 
 
-### 주장 만들기
+## 6장. 주장 만들기
 
 이 장에서는 연구 질문에 답하는 종류의 주장을 어떻게 식별하는지, 그리고 주장이 논증의 주요 주장으로 기능하기에 충분히 구체적이고 중요한지 어떻게 알 수 있는지 논의한다.
 
@@ -1555,7 +1551,7 @@ hamlet은 셰익스피어의 『Hamlet』에서 중요한 인물이다.
 
 
 
-### 근거와 증거를 구성하다
+## 7장. 근거와 증거를 구성하다
 
 이 장에서는 주장을 지지하는 두 가지 유형-근거와 증거-에 대해 논의한다. 둘을 구별하는 방법, 근거를 활용하여 논증을 구성하는 방법, 그리고 증거의 질을 평가하는 방법을 보여준다.
 
@@ -1727,7 +1723,7 @@ hamlet은 셰익스피어의 『Hamlet』에서 중요한 인물이다.
 
 
 
-### 보증
+## 8장. 보증
 
 보증은 근거를 주장과 연결하는 일반적 원칙이다. 이 장에서는 그것들을 언제, 어떻게 사용하는지 설명한다. 모든 연구 논증에는 주장, 근거, 증거가 있듯이 보증도 있다. 하지만 핵심 요소와 달리, 보증은 종종 명시되지 않는다. 일반적으로, 청중이 그렇지 않으면 논증을 이해하지 못할 때, 또는 청중이 논증에 도전할 것 같을 때만 보증을 명시해야 한다.
 
@@ -2025,7 +2021,7 @@ hamlet은 셰익스피어의 『Hamlet』에서 중요한 인물이다.
 
 
 
-### 인정과 대응
+## 9장. 인정과 대응
 
 논증이 다른 관점을 인정하지 못하면 완성되지 않는다. 이 장에서는 질문, 반대, 대안에 대해 인정하고 대응함으로써 논증을 더 설득력 있게 만드는 방법을 보여준다.
 
@@ -2226,13 +2222,11 @@ hamlet은 셰익스피어의 『Hamlet』에서 중요한 인물이다.
 :::
 
 
-### 제4부
+# 제4부: 논증 전달하기
 
-### 논증 전달하기
 
-### 프롤로그
 
-### 계획하기, 쓰기, 그리고 생각하기
+## 프롤로그: 계획하기, 쓰기, 그리고 생각하기
 
 모든 연구 프로젝트가 공식적인 논문이나 발표로 마무리되는 것은 아니다. 하지만 여러분의 프로젝트가 그렇다면 결국 계획이 필요할 것이다. 많은 저자들은 계획 없이 시작했다가 내용이 명확해짐에 따라 훌륭하지만 본문과 무관한 수많은 페이지를 버리게 된다. 어떤 이들은 정교한 개요(outline), 요약본, 스토리보드가 없으면 작업을 시작조차 하지 못한다. 또 어떤 이들은 글로 본격적인 초고를 쓰기 훨씬 전부터 머릿속으로 초안을 구성하기도 하다. 첫 초고를 시작하는 방식은 자신만의 방법을 찾아야 하지만 요약·분석·비평 작업을 통해 시작부터 논문을 향해 꾸준히 글을 써나간다면 그 순간을 잘 준비할 수 있다.
 
@@ -2268,7 +2262,7 @@ hamlet은 셰익스피어의 『Hamlet』에서 중요한 인물이다.
 
 우리는 연구 내용을 글로 작성해야 하는 또 하나의 이유를 제시한다. 바로 글쓰기가 곧 생각하기(*writing is thinking*)라는 점이다. 연구를 글로 작성하는 것은 궁극적으로 독자와 *함께*, 독자를 *위해* 생각하는 일이다. 타인을 위해 글을 쓸 때 아이디어를 명확히 풀어나갈 수 있으며 이를 통해 자신과 독자 모두 아이디어를 더 깊이 탐구하고 확장하며 결합하고 이해할 수 있게 된다. 타인을 위해 생각하는 것은 다른 어떤 종류의 사고보다 더 신중하고 지속적이며 통찰력 있는-한마디로 더 사려 깊은-사고방식이다.
 
-### 계획하기와 초고 작성하기
+## 10장. 계획하기와 초고 작성하기
 
 논증을 구성했다면 초고를 작성할 준비가 된 것일 수 있다. 그러나 숙련된 필자들은 계획을 세우는 것이 유익하다는 점을 잘 알고 있다. 계획은 일관성 있으면서도 설득력 있는 형태로 논증의 요소들을 체계화하는 데 도움을 준다.
 
@@ -2471,7 +2465,7 @@ hamlet은 셰익스피어의 『Hamlet』에서 중요한 인물이다.
 :::
 
 
-### 수정과 구성
+## 11장. 수정과 구성
 
 이 장에서는 독자에게도 여러분 자신에게만큼 논증이 명확하게 전달되도록 초고를 수정하고 구성하는 방법을 설명한다. 처음에는 이 방법이 다소 기계적으로 보일 수 있지만 바로 그것이 이 방법의 장점이다. 단계별로 차근차근 따라 하다 보면 초고의 구성을 효율적이고 확실하게 분석하고 개선할 수 있다.
 
@@ -2599,7 +2593,7 @@ hamlet은 셰익스피어의 『Hamlet』에서 중요한 인물이다.
 :::
 
 
-### 출처 활용하기
+## 12장. 출처 활용하기
 
 이 장에서는 출처의 텍스트를 글에 통합하는 세 가지 방법(요약, 환언/의역, 인용), 출처를 올바르게 인용하는 방법, 그리고 왜 반드시 그렇게 해야 하는지를 설명한다.
 
@@ -2846,7 +2840,7 @@ Ghosh, Amitav. 2021. *The Nutmeg’s Curse: Parables for a Planet in Crisis.* Un
 :::
 
 
-### 시각적 증거 제시하기
+## 13장. 시각적 증거 제시하기
 
 대부분의 독자는 언어로 된 설명보다 표, 차트, 그래프로 된 양적 증거를 더 쉽게 이해한다. 하지만 특정 데이터와 메시지에는 그에 더 적합한 시각적 형식이 따로 있다. 이 장에서는 독자가 데이터를 쉽게 파악하고 그 데이터가 당신의 주장을 어떻게 뒷받침하는지 이해하도록 돕는 최적의 시각 자료 형태를 선택하는 방법을 알아본다.
 
@@ -3082,7 +3076,7 @@ Ghosh, Amitav. 2021. *The Nutmeg’s Curse: Parables for a Planet in Crisis.* Un
 :::
 
 
-### 서론과 결론
+## 14장. 서론과 결론
 
 좋은 서론은 독자가 흥미를 가지고 글을 읽도록 유도하며 글을 더 잘 이해할 수 있도록 준비시킨다. 좋은 결론은 독자에게 요점에 대한 명확한 진술과 그 중요성에 대한 새로운 인식을 남겨준다. 이 장에서는 서론과 결론을 모두 작성하는 방법을 보여준다. 서론과 결론에 들이는 시간은 여러분에게 가장 중요한 시간이 될 것이다.
 
@@ -3367,9 +3361,8 @@ Ghosh, Amitav. 2021. *The Nutmeg’s Curse: Parables for a Planet in Crisis.* Un
 :::
 
 
-### 문체 다듬기
+## 15장. 문체 다듬기: 명확하게 이야기 전달하기
 
-### 명확하게 이야기 전달하기
 
 지금까지 우리는 보고서의 논증과 구성에 초점을 맞추었다. 이번 장에서는 독자가 명확하고 직설적이라고 느낄 수 있도록 문장을 수정하고 다듬는 방법을 보여준다.
 
@@ -3734,7 +3727,7 @@ The prob­lems began in 1722, when a law of suc­ces­sion passed by Peter the G
 :::
 
 
-### 연구 발표
+## 16장. 연구 발표
 
 이 장에서는 연구 발표를 기획하고, 초안을 작성하고, 발표하는 방법을 보여준다. 유인물이나 슬라이드 같은 발표 보조 자료보다는 현장의 청중을 대할 때 무엇을 해야 하는지에 더 초점을 맞춥니다.
 
@@ -3888,11 +3881,10 @@ The prob­lems began in 1722, when a law of suc­ces­sion passed by Peter the G
 :::
 
 
-### 제5부
+# 제5부: 마지막으로 고려할 사항들
 
-### 마지막으로 고려할 사항들
 
-### 연구의 윤리
+## 17장. 연구의 윤리
 
 이 책에서 우리는 연구를 수행하고 연구 논증을 만들며 소통하는 방법에 대해 실질적인 조언을 많이 제공했다. 또한 이른바 '연구라는 활동(enterprise of research)'에 대한 우리의 생각도 공유했다. 구체적으로 말해, 우리는 연구를 깊이 있는 *사회적* 활동으로 본다. 즉, 연구자 공동체가 세상에 대한 더 나은 이해와 문제에 대한 더 나은 해결책을 함께 추구하면서, 서로 및 관심 있는 다른 청중들과 함께 광범위한 "대화"(때로는 직접 대면하여, 때로는 글이나 출판된 논증을 통해, 때로는 동시대 사람들과, 때로는 세대를 거쳐 가며)에 참여하는 활동이다. 이제 우리는 모든 연구자가 직면해야 하는 몇 가지 윤리적 고려 사항을 공유하고자 하며 여러분이 연구자로 성장함에 따라 이에 대해 더 깊이 생각해 보기를 바란다.
 
@@ -3960,11 +3952,11 @@ The prob­lems began in 1722, when a law of suc­ces­sion passed by Peter the G
 
 그 밖에도 수많은 워런트가 존재한다. 거듭 강조하지만, 특히 사회적 책임의 관점에서 연구 윤리에 관한 결정은 복잡할 수 있으며, 합리적인 사람들 사이에서도 판단이 엇갈릴 수 있다. 여러분의 책임은 프로젝트의 윤리적 고려 사항들을 신중하게 저울질하여 올바른 결정을 내리는 것이다.
 
-### 맺음말
+## 맺음말
 
 이 책을 끝까지 읽어 나가면서 여러분이 유용한 기술들을 습득했을 뿐만 아니라, 자신과 타인을 위한 진정성 있고 윤리적인 연구가 지닌 더 넓은 의미와 가치를 깨닫게 되었기를 바란다. 정보가 지금처럼 풍부하고 도처에 존재하며 접근하기 쉬웠던 시대는 없었다는 것은 주지의 사실이다. 그러나 우리 사회는 그 모든 정보가 과연 우리를 그 이상의 무언가, 즉 지식, 이해, 공감, 지혜로 이끌어 줄 수 있을지에 대한 불안감 역시 겪고 있다. 이러한 맥락에서, 이 책이 여러분에게 길러주고자 했던 역량들-신중하고 철저하게 연구하는 능력, 타인의 생각과 관점에 민감하게 반응하면서 엄밀하고 설득력 있게 사고하고 논증하는 능력, 그리고 명확하고 이해하기 쉽게 소통하는 능력-은 학교나 직장에서 성공하기 위한 열쇠 그 이상의 의미를 지닙니다. 이 역량들은 오늘날 21세기를 살아가는 시민이 갖추어야 할 가장 중요한 자질에 속한다.
 
-### 교사를 위한 조언
+## 18장. 교사를 위한 조언
 
 이 마지막 장에서 우리는 독자 중 특별한 한 그룹, 즉 수업에서 학생들과 함께 이 책을 활용하는 교사들을 향해 이야기하고자 한다. 앞선 17개의 장에서 우리는 연구를 수행하고, 논증을 발전시키며, 이를 논문과 발표를 통해 타인에게 전달하는 방법에 대해 수많은 조언을 제시했다. 여기서는 이 모든 조언의 바탕이 되는 우리의 확신을 다시 한번 되새기고 그것이 *가르침(teaching)*에 시사하는 몇 가지 의미를 살펴보고자 한다. 우리의 관점과 제안은 우리 자신의 학문과 연구뿐만 아니라 교사로서 수년간 쌓아온 직접적인 경험에서 비롯된 것이다. 만약 여러분이 교사가 아니라면, 이 장을 가볍게 훑어보며 '엿듣기'라도 해보시기를 권한다. 다른 사람의 가르침으로부터 배움을 얻거나, 스스로 더 훌륭한 학습자가 되는 데 도움이 될 수 있기 때문이다.
 
@@ -4012,15 +4004,14 @@ The prob­lems began in 1722, when a law of suc­ces­sion passed by Peter the G
 
 마지막으로, 우리는 여러분이 이 책에서 제시한 원칙과 절차를 자신이 가르치는 특정 학생들의 상황에 맞게 유연하게 적용할 것이라 믿고 권장한다. 여러분이 학생들을 가장 잘 알고 있으며 모든 학생과 마찬가지로 여러분의 학생들 역시 자신들의 필요에 전문적이고 유능하며 따뜻한 배려로 응답해 주는 교사로부터 엄청난 혜택을 받게 될 것이다.
 
-### 부록
+# 부록: 서지 및 기타 참고자료 안내
 
-### 서지 및 기타 참고자료 안내
 
 이 목록의 후반부에서 제공하는 자료는 일반적인 성격의 자료와 특정 학문 분야에 관련된 자료로 구분되며 예술 및 인문학(Arts and Humanities), 사회과학(Social Sciences), STEM(과학·기술·공학·수학, Science, Technology, Engineering, and Mathematics) 분야의 넓은 범주로 묶여 있다. 또한 주로 연구(연구 방법 포함)에 중점을 둔 자료와 글쓰기에 중점을 둔 자료를 구분하였다. 그러나 이러한 구분이 절대적으로 엄격한 것은 아니며 많은 자료가 연구와 글쓰기 양쪽을 모두 다룬다.
 
-### 일반 도구, 데이터베이스 및 자료
+## 일반 도구, 데이터베이스 및 자료
 
-#### 주석, 인용 및 발표 도구
+### 주석, 인용 및 발표 도구
 
 4장에서 우리는 전자적 방식으로 노트를 작성하고 인용을 준비하는 다양한 도구의 활용을 포함하여 출처를 능동적으로 다루는 기법을 논의했다. 대부분의 대학 도서관은 교수진, 학생 및 기타 이용자에게 이러한 연구용 도구에 대한 접근 권한을 제공한다. 본서 집필 시점을 기준으로 가장 널리 사용되는 도구 몇 가지는 다음과 같다.
 
@@ -4028,7 +4019,7 @@ The prob­lems began in 1722, when a law of suc­ces­sion passed by Peter the G
 * 인용 관리(Citation-management) 도구: EndNote, Mendeley, Zotero
 * 프레젠테이션(Presentation) 도구: PowerPoint, Prezi
 
-#### 온라인 데이터베이스
+### 온라인 데이터베이스
 
 이러한 데이터베이스의 대부분은 공공 도서관이나 대학 도서관의 구독을 통해 이용할 수 있다. 그러나 일부(예: 미국 의회도서관 온라인 목록, CQ Researcher)는 개별 연구자가 직접 접속할 수도 있다. 또한 가장 보편적인 온라인 이미지 데이터베이스 몇 곳도 함께 수록했다.
 
@@ -4043,7 +4034,7 @@ The prob­lems began in 1722, when a law of suc­ces­sion passed by Peter the G
 9. PubMed (National Library of Medicine), [https://pubmed.ncbi.nlm.nih.gov/](https://pubmed.ncbi.nlm.nih.gov/)
 10. WorldCat, [https://www.oclc.org/en/worldcat.html](https://www.oclc.org/en/worldcat.html)
 
-#### 이미지 데이터베이스
+### 이미지 데이터베이스
 
 1. AP Newsroom (보도 사진 및 영상), [https://newsroom.ap.org/editorial-photos-videos/home](https://newsroom.ap.org/editorial-photos-videos/home)
 2. Artstor, [https://www.artstor.org/](https://www.artstor.org/)
@@ -4051,29 +4042,29 @@ The prob­lems began in 1722, when a law of suc­ces­sion passed by Peter the G
 4. Getty Images, [https://www.gettyimages.com/](https://www.gettyimages.com/)
 5. Google Images, [https://images.google.com/](https://images.google.com/)
 
-#### 데이터의 시각적 표현
+### 데이터의 시각적 표현
 
 1. Evergreen, Stephanie. *Effective Data Visualization: The Right Chart for the Right Data.* 2nd ed. Sage, 2019.
 2. Knaflic, Cole Nussbaumer. *Storytelling with Data: A Data Visualization Guide for Business Professionals.* Wiley, 2015.
 3. Krum, Randy. *Cool Infographics: Effective Communication with Data Visualization and Design.* Wiley and Sons, 2013.
 4. Nicol, Adelheid A. M., and Penny M. Pexman. *Displaying Your Findings: A Practical Guide for Creating Figures, Posters, and Presentations.* 6th ed. American Psychological Association, 2010.
 
-#### 프레젠테이션 발표 및 포스터 디자인
+### 프레젠테이션 발표 및 포스터 디자인
 
 1. Alley, Michael. *The Craft of Scientific Presentations: Critical Steps to Succeed and Critical Errors to Avoid.* 2nd ed. Springer, 2013.
 2. Lacatus, Corina, and Alex Nogues. *Create Your Research Poster.* Sage, 2021.
 3. Rowe, Nicholas. *Academic and Scientific Poster Presentation: A Modern Comprehensive Guide.* Springer International, 2017.
 
-### 연구 안내서
+## 연구 안내서
 
-#### 일반
+### 일반
 
 1. Huddley, Ann H. Charity, Cheryl L. Dickter, and Hannah A. Franz. *The Indispensable Guide to Undergraduate Research: Success in and Beyond College.* Teachers College Press, 2017.
 2. Mann, Thomas. *The Oxford Guide to Library Research.* 4th ed. Oxford University Press, 2015.
 3. Mullaney, Thomas S., and Christopher Rea. *Where Research Begins: Choosing a Research Project That Matters to You (and the World).* University of Chicago Press, 2022.
 4. Turabian, Kate L. *A Manual for Writers of Research Papers, Theses, and Dissertations.* 9th ed. Revised by Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, William T. FitzGerald, and the University of Chicago Press Editorial Staff. University of Chicago Press, 2018.
 
-#### 연구 방법
+### 연구 방법
 
 1. Cresswell, John W., and Cherry N. Poth. *Qualitative Inquiry and Research Design: Choosing among Five Approaches.* 4th ed. Sage, 2017.
 2. Flick, Uwe. *Introducing Research Methodology: A Beginner’s Guide to Doing a Research Project.* Sage, 2020.
@@ -4083,7 +4074,7 @@ The prob­lems began in 1722, when a law of suc­ces­sion passed by Peter the G
 6. Roulston, Kathryn, and Kathleen deMarrais. *Exploring the Archives: A Beginner’s Guide for Qualitative Researchers.* Myers Education Press, 2021.
 7. Yin, Robert K. *Case Study Research and Applications: Design and Methods.* Sage, 2018.
 
-#### 예술 및 인문학
+### 예술 및 인문학
 
 1. Brookbank, Elizabeth, and H. Faye Christenberry. *MLA Guide to Undergraduate Research in Literature.* Modern Language Association, 2019.
 2. Clary-Lemon, Jennifer, Derek N. Mueller, and Kate Pantelides. *Try This: Research Methods for Writers.* WAC Clearinghouse, 2022.
@@ -4097,7 +4088,7 @@ The prob­lems began in 1722, when a law of suc­ces­sion passed by Peter the G
 10. Todd, Molly. *Undergraduate Research in History: A Guide for Students.* Routledge, 2022.
 11. Young, Gregory, and Jenny Olin Shanahan. *Undergraduate Research in Music: A Guide for Students.* Routledge, 2017.
 
-#### 사회과학 (경영학 및 교육학 포함)
+### 사회과학 (경영학 및 교육학 포함)
 
 1. Howard, Christopher. *Thinking Like a Political Scientist: A Practical Guide to Research Methods.* University of Chicago Press, 2017.
 2. Palmer, Ruth J., and Deborah L. Thompson. *Conducting Undergraduate Research in Education: A Guide for Students in Teacher Education Programs.* Taylor and Francis, 2022.
@@ -4105,15 +4096,15 @@ The prob­lems began in 1722, when a law of suc­ces­sion passed by Peter the G
 4. Sekaran, Uma, and Roger Bougie. *Research Methods for Business: A Skill-Building Approach.* 7th ed. Wiley, 2016.
 5. Seligman, Ross A., and Lindsay A. Mitchell. *The Student Survival Guide for Research Methods in Psychology*. Taylor and Francis, 2021.
 
-#### STEM 분야
+### STEM 분야
 
 1. Harland, Darci J. *STEM Student Research Handbook.* National Science Teachers Association, 2011.
 2. Harris, Pamela E., Erik Insko, and Aaron Wootton, eds. *A Project-Based Guide to Undergraduate Research in Mathematics: Starting and Sustaining Accessible Undergraduate Research.* Springer International, 2020.
 3. Northey, Margot, Dianne Draper, and David B. Knight. *Making Sense in Geography and Environmental Sciences: A Student’s Guide to Research and Writing.* 6th ed. Oxford University Press, 2015.
 
-### 글쓰기 안내서
+## 글쓰기 안내서
 
-#### 일반
+### 일반
 
 1. *The Chicago Manual of Style.* 18th ed. University of Chicago Press, 2024.
 2. Germano, William. *On Revision: The Only Writing That Counts.* University of Chicago Press, 2021.
@@ -4121,14 +4112,14 @@ The prob­lems began in 1722, when a law of suc­ces­sion passed by Peter the G
 4. Lipson, Charles. *How to Write a BA Thesis: A Practical Guide from Your First Ideas to Your Finished Paper.* 2nd ed. University of Chicago Press, 2018.
 5. Williams, Joseph M., and Joseph Bizup. *Style: Lessons in Clarity and Grace.* 12th ed. Pearson, 2016.
 
-#### 예술 및 인문학
+### 예술 및 인문학
 
 1. Barnet, Sylvan. *A Short Guide to Writing about Art.* 11th ed. Pearson, 2015.
 2. *MLA Handbook.* 9th ed. Modern Language Association, 2021.
 3. Rogers, Lynne, Karen M. Bottge, and Sara Haefeli. *Writing in Music: A Brief Guide.* Oxford University Press, 2021.
 4. Storey, William Kelleher. *Writing History: A Guide for Students.* 6th ed. Oxford University Press, 2020.
 
-#### 사회과학
+### 사회과학
 
 1. Allen, Jennifer M., and Steven Hougland. *The SAGE Guide to Writing in Criminal Justice Research Methods.* Sage, 2020.
 2. Becker, Howard S. *Writing for Social Scientists: How to Start and Finish Your Thesis, Book, or Article.* 3rd ed. University of Chicago Press, 2020.
@@ -4143,7 +4134,7 @@ The prob­lems began in 1722, when a law of suc­ces­sion passed by Peter the G
 11. Sternberg, Robert J., and Karin Sternberg. *The Psychologist’s Companion: A Guide to Professional Success for Students, Teachers, and Researchers.* 6th ed. Cambridge University Press, 2016.
 12. Van Maanen, John. *Tales of the Field: On Writing Ethnography.* 2nd ed. University of Chicago Press, 2011.
 
-#### STEM 분야
+### STEM 분야
 
 1. Alley, Michael. *The Craft of Scientific Writing.* 4th ed. Springer, 2018.
 2. *The CSE Manual: Scientific Style and Format for Authors, Editors, and Publishers.* 9th ed. University of Chicago Press, 2024.
