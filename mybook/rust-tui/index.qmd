@@ -99,7 +99,7 @@ crossterm = "0.29"
 ratatui = "0.30.2"
 ```
 
-Ratatui 0.30.2는 기본적으로 Crossterm 0.29를 사용하므로 두 버전이 일치합니다. 애플리케이션에서 직접 선언하는 Crossterm 의존성은 항상 Ratatui가 선택하는 메이저 버전과 동일하게 유지해야 합니다. 카고는 호환되지 않는 두 Crossterm 버전을 하나의 애플리케이션으로 함께 컴파일할 수 있지만, 각각의 이벤트 타입과 터미널 상태가 분리되어 버립니다. 이전 버전을 선택해야 한다면 먼저 [Crossterm 버전 호환성](#crossterm-version-compatibility)을 확인하시기 바랍니다.
+Ratatui 0.30.2는 기본적으로 Crossterm 0.29를 사용하므로 두 버전이 일치합니다. 애플리케이션에서 직접 선언하는 Crossterm 의존성은 항상 Ratatui가 선택하는 메이저 버전과 동일하게 유지해야 합니다. 카고는 호환되지 않는 두 Crossterm 버전을 하나의 애플리케이션으로 함께 컴파일할 수 있지만, 각각의 이벤트 타입과 터미널 상태가 분리되어 버립니다. 이전 버전을 선택해야 한다면 먼저 [Crossterm 버전 호환성](#crossterm-version-compatibility)을 확인하세요.
 
 기본적으로 `ratatui`는 `crossterm` 기능을 활성화하지만, 기본 기능을 비활성화하고 알맞은 기능 플래그를 켬으로써 `termion`, `termwiz`, `termina`를 대안으로 사용할 수도 있습니다. 자세한 내용은 [백엔드(Backend)] 섹션을 참조하세요.
 
@@ -154,7 +154,7 @@ ratatui = { version = "0.30.2", default-features = false, features = ["termina"]
 termina = "0.3"
 ```
 
-기능 플래그(Feature flags)를 활용하면 터미널 백엔드를 선택하고, 외부 라이브러리 연동 기능을 켜며, 애플리케이션에서 사용하지 않는 불필요한 코드의 컴파일을 방지할 수 있습니다. 이 페이지에서는 Ratatui 0.30.2에서 제공하는 플래그들을 설명합니다. 어떤 기능이 다른 기능을 함께 활성화하는지는 [docs.rs 기능 의존성 그래프(feature graph)]에서 확인할 수 있습니다. 다른 릴리스 버전을 사용하는 경우 Ratatui 소스 코드의 [기능 정의(feature definitions)]를 참조하시기 바랍니다.
+기능 플래그(Feature flags)를 활용하면 터미널 백엔드를 선택하고, 외부 라이브러리 연동 기능을 켜며, 애플리케이션에서 사용하지 않는 불필요한 코드의 컴파일을 방지할 수 있습니다. 이 페이지에서는 Ratatui 0.30.2에서 제공하는 플래그들을 설명합니다. 어떤 기능이 다른 기능을 함께 활성화하는지는 [docs.rs 기능 의존성 그래프(feature graph)]에서 확인할 수 있습니다. 다른 릴리스 버전을 사용하는 경우 Ratatui 소스 코드의 [기능 정의(feature definitions)]를 참조하세요.
 
 ## 기본 활성화 기능
 
@@ -765,9 +765,9 @@ impl App {
 
 #### 프레임 렌더링
 
-UI를 렌더링하기 위해 애플리케이션은 `Frame`을 인자로 받는 클로저와 함께 `Terminal::draw()`를 호출합니다. `Frame`에서 가장 중요한 메서드는 `Paragraph`, `List` 등과 같이 [`Widget` 트레이트](#appendix-concepts)를 구현한 모든 타입을 렌더링하는 `render_widget()`입니다. 렌더링 관련 코드를 한곳에 모아 체계적으로 관리하기 위해 `App` 구조체에 대해 `Widget` 트레이트를 직접 구현하겠습니다. 이렇게 하면 `Terminal::draw`에 전달되는 클로저 안에서 앱 인스턴스를 전달하여 `Frame::render_widget()`을 바로 호출할 수 있습니다.
+UI를 렌더링하기 위해 애플리케이션은 `Frame`을 인자로 받는 클로저와 함께 `Terminal::draw()`를 호출합니다. `Frame`에서 가장 중요한 메서드는 `Paragraph`, `List` 등과 같이 [`Widget` 트레이트](#appendix-concepts)를 구현한 모든 타입을 렌더링하는 `render_widget()`입니다. 렌더링 관련 코드를 한곳에 모아 체계적으로 관리하기 위해 `App` 구조체에 `Widget` 트레이트를 직접 구현하겠습니다. 이렇게 하면 `Terminal::draw`에 전달되는 클로저 안에서 앱 인스턴스를 전달하여 `Frame::render_widget()`을 바로 호출할 수 있습니다.
 
-먼저 새로운 `impl Widget for &App` 블록을 추가합니다. 렌더 함수는 상태를 전혀 변경하지 않으며, `draw` 호출 이후에도 앱 인스턴스를 계속 사용할 수 있어야 하므로 `App` 타입의 참조자(`&App`)에 대해 트레이트를 구현합니다. 렌더 함수는 제목, 하단 안내 문구, 테두리를 가진 블록을 생성합니다. 그리고 블록 내부에는 애플리케이션의 상태(`App`의 counter 필드 값)를 표시하는 `Paragraph` 위젯을 렌더링합니다. 블록과 문단 위젯은 전달된 전체 영역을 차지하게 됩니다.
+먼저 새로운 `impl Widget for &App` 블록을 추가합니다. 렌더 함수는 상태를 전혀 변경하지 않으며, `draw` 호출 이후에도 앱 인스턴스를 계속 사용할 수 있어야 하므로 `App` 타입의 참조자(`&App`)에 트레이트를 구현합니다. 렌더 함수는 제목, 하단 안내 문구, 테두리를 가진 블록을 생성합니다. 그리고 블록 내부에는 애플리케이션의 상태(`App`의 counter 필드 값)를 표시하는 `Paragraph` 위젯을 렌더링합니다. 블록과 문단 위젯은 전달된 전체 영역을 차지하게 됩니다.
 
 ```{.rust filename="src/main.rs"}
 impl Widget for &App {
@@ -871,7 +871,7 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 ### 인터랙션 처리
 
-애플리케이션은 표준 입력을 통해 사용자로부터 발생하는 이벤트를 수신해야 합니다. 이 예제 애플리케이션에서 다루어야 하는 이벤트는 키 이벤트뿐입니다. 지원되는 다른 이벤트들에 대한 정보는 [Crossterm events module] 문서를 참조하십시오. 창 크기 변경(Resize), 포커스(Focus), 붙여넣기(Paste), 마우스(Mouse) 이벤트 등이 포함됩니다.
+애플리케이션은 표준 입력을 통해 사용자로부터 발생하는 이벤트를 수신해야 합니다. 이 예제 애플리케이션에서 다루어야 하는 이벤트는 키 이벤트뿐입니다. 지원되는 다른 이벤트들에 대한 정보는 [Crossterm events module] 문서를 참조하세요. 창 크기 변경(Resize), 포커스(Focus), 붙여넣기(Paste), 마우스(Mouse) 이벤트 등이 포함됩니다.
 
 보다 발전된 복잡한 애플리케이션에서는 운영체제 시스템, 네트워크 연결 또는 애플리케이션의 다른 백그라운드 작업으로부터 이벤트가 발생할 수도 있습니다.
 
@@ -1409,7 +1409,7 @@ fn main() -> io::Result<()> {
 
 ### 훅 설정하기
 
-Rust 애플리케이션이 실패하는 방식에는 크게 두 가지가 있습니다. The Rust Programming Language(러스트 공식 가이드북)의 [에러 처리(error handling)] 챕터에서 이에 대해 자세히 설명하고 있습니다.
+Rust 애플리케이션이 실패하는 방식에는 크게 두 가지가 있습니다. The Rust Programming Language(러스트 공식 가이드북)의 [에러 처리(error handling)] 챕터에서 이 내용을 자세히 다룹니다.
 
 > Rust는 에러를 크게 _복구 가능한(recoverable)_ 에러와 _복구 불가능한(unrecoverable)_ 에러 두 가지 범주로 나눕니다. _파일을 찾을 수 없는 오류_와 같은 복구 가능한 에러의 경우, 보통 사용자에게 문제를 알리고 작업을 재시도하는 것으로 처리합니다. 반면 복구 불가능한 에러는 항상 배열의 범위를 벗어나 접근하려는 시도와 같은 버그의 증상이며, 프로그램을 즉시 중단해야 합니다. -- <https://doc.rust-lang.org/book/ch09-00-error-handling.html>
 
@@ -1923,7 +1923,7 @@ fn main() -> Result<()> {
 }
 ```
 
-`color_eyre`는 온갖 종류의 에러에 대해 다채롭고 일관되며 보기 좋게 포맷팅된 리포트를 제공하는 에러 리포트 핸들러입니다. color-eyre로 패닉 훅을 설정하는 방법에 대한 자세한 내용은 [해당 섹션](/recipes/apps/panic-hooks/)을 참조하세요.
+`color_eyre`는 다양한 종류의 에러를 알록달록하고 일관되며 보기 좋게 포맷팅해 주는 에러 리포트 핸들러입니다. color-eyre로 패닉 훅을 설정하는 방법은 [해당 섹션](/recipes/apps/panic-hooks/)을 참조하세요.
 
 :::
 
@@ -2198,7 +2198,7 @@ pub fn update(app: &mut App, key_event: KeyEvent) {
 
 연습 과제로, 이 앱을 "엘름 아키텍처(The Elm Architecture)" 원칙에 따라 리팩터링해 볼 수 있을까요?
 
-참고 자료로 [엘름 아키텍처 개념 페이지](#appendix-concepts)를 살펴보시기 바랍니다.
+참고 자료로 [엘름 아키텍처 개념 페이지](#appendix-concepts)를 살펴보세요.
 
 :::
 
@@ -2862,7 +2862,7 @@ fn main() -> Result<()> {
 }
 ```
 
-Tokio는 신뢰성 높은 네트워크 애플리케이션과 비동기 시스템을 구축하기 위한 Rust의 비동기 이벤트 기반 런타임입니다. 자세한 개념과 배경지식은 [Tokio 공식 튜토리얼](https://tokio.rs/tokio/tutorial)을 참고하시기 바랍니다.
+Tokio는 신뢰성 높은 네트워크 애플리케이션과 비동기 시스템을 구축하기 위한 Rust의 비동기 이벤트 기반 런타임입니다. 자세한 개념과 배경지식은 [Tokio 공식 튜토리얼](https://tokio.rs/tokio/tutorial)을 참고하세요.
 
 비동기 구조로 전환하기 위한 첫걸음으로, 코드에 딱 한 가지 변경사항만 적용해 보겠습니다. 바로 `main` 함수에 `#[tokio::main]` 속성을 부여하여 Tokio 비동기 진입점으로 전환하는 것입니다.
 
@@ -4323,7 +4323,7 @@ src
 
 #### main.rs 구조
 
-많은 Ratatui 애플리케이션에서 `main` 파일은 시작/종료 루프와 때에 따라 이벤트 핸들링을 담당하는 진입점 역할을 합니다. 이벤트를 처리하는 다양한 방법에 대해서는 [이벤트 핸들링 (Event Handling)](#appendix-concepts) 문서를 참조하십시오.
+많은 Ratatui 애플리케이션에서 `main` 파일은 시작/종료 루프와 때에 따라 이벤트 핸들링을 담당하는 진입점 역할을 합니다. 이벤트를 처리하는 다양한 방법은 [이벤트 핸들링 (Event Handling)](#appendix-concepts) 문서를 참조하세요.
 
 이 애플리케이션의 `main` 함수에서는 초기화 단계를 실행하고 메인 루프를 시작합니다. 또한 메인 루프의 제어 로직과 이벤트 핸들링 역시 이 파일에 함께 작성할 것입니다.
 
@@ -4353,7 +4353,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
 여기서 출력 대상으로 `stderr`를 사용하고 있음을 알 수 있습니다. 그 이유는 사용자가 완성된 JSON 출력을 `ratatui-tutorial > output.json`과 같이 다른 프로그램이나 파일로 파이프 연결할 수 있도록 지원하기 위함입니다. 이를 구현하기 위해 `stderr`가 `stdout`과 별개의 스트림으로 리다이렉트된다는 점을 이용합니다. 즉, TUI 화면 렌더링 출력은 `stderr`로 보내고, 최종 완성된 JSON 데이터는 `stdout`으로 출력하는 것입니다.
 
-자세한 내용은 [crossterm 공식 문서](https://docs.rs/crossterm/latest/crossterm/)를 참조하십시오.
+자세한 내용은 [crossterm 공식 문서](https://docs.rs/crossterm/latest/crossterm/)를 참조하세요.
 
 #### 상태 생성 및 루프 시작
 
@@ -4414,7 +4414,7 @@ use ratatui::crossterm::terminal::{disable_raw_mode, LeaveAlternateScreen};
 
 상용구 끝부분의 `if` 문은 `run_app` 함수에서 에러가 발생했는지, 아니면 정상적인 `Ok` 상태를 반환했는지를 검사합니다. `Ok` 상태를 반환받았다면 JSON 데이터를 출력해야 하는지 여부를 확인합니다.
 
-만약 `execute!(LeaveAlternateScreen)`을 호출하기 전에 JSON 출력 함수를 먼저 호출하면, 출력 내용이 이전 대체 화면(alternate screen)에 렌더링되어 화면을 빠져나오는 순간 함께 사라져 버립니다. (이 동작 원리에 대한 자세한 내용은 [Crossterm 문서](https://docs.rs/crossterm/latest/crossterm/terminal/struct.LeaveAlternateScreen.html)를 참조하십시오.)
+만약 `execute!(LeaveAlternateScreen)`을 호출하기 전에 JSON 출력 함수를 먼저 호출하면, 출력 내용이 이전 대체 화면(alternate screen)에 렌더링되어 화면을 빠져나오는 순간 함께 사라져 버립니다. (이 동작 원리는 [Crossterm 문서](https://docs.rs/crossterm/latest/crossterm/terminal/struct.LeaveAlternateScreen.html)를 참조하세요.)
 
 따라서 이 모든 과정을 종합한 완성된 `main` 함수는 다음과 같습니다.
 
@@ -4476,7 +4476,7 @@ where
     // --생략--
 ```
 
-이 함수가 `ratatui::backend::Backend` 트레이트에 대해 제네릭으로 작성되었음을 알 수 있습니다. 이전 섹션들에서는 `CrosstermBackend`를 직접 명시(하드코딩)했으나, 이와 같이 트레이트 접근법을 취하면 특정 백엔드에 종속되지 않는 백엔드 독립적(backend-agnostic) 코드를 작성할 수 있습니다.
+이 함수가 `ratatui::backend::Backend` 트레이트를 제네릭 매개변수로 작성되었음을 알 수 있습니다. 이전 섹션들에서는 `CrosstermBackend`를 직접 명시(하드코딩)했으나, 이와 같이 트레이트 접근법을 취하면 특정 백엔드에 종속되지 않는 백엔드 독립적(backend-agnostic) 코드를 작성할 수 있습니다.
 
 이 메서드는 `ratatui::backend::Backend` 트레이트를 구현하는 `Terminal` 타입의 객체를 인자로 받습니다. 이 트레이트는 `ratatui`에 기본 포함된 세 가지 공식 지원 백엔드(`TestBackend`까지 포함하면 네 가지)를 포괄하며, 서드파티 백엔드 구현도 지원합니다.
 
@@ -4938,7 +4938,7 @@ impl App {
 
 ::: {.callout-tip}
 
-레이아웃과 제약 조건(Constraints)에 대해 더 자세히 알아보려면 [레이아웃(Layout)](#appendix-concepts) 개념 페이지를 참조하세요.
+레이아웃과 제약 조건(Constraints)을 더 자세히 알아보려면 [레이아웃(Layout)](#appendix-concepts) 개념 페이지를 참조하세요.
 
 :::
 
@@ -5226,7 +5226,7 @@ Line, Span 및 Style에 대한 자세한 내용은 [텍스트 표시 레시피](
     }
 ```
 
-블록을 변수로 선언한 뒤, 사용자가 현재 편집 중인 블록에만 추가 스타일을 적용하고 있음을 유의 깊게 보시기 바랍니다. 그런 다음 `Paragraph` 위젯을 생성하고 해당 블록 변수들을 할당합니다. 또한 이 위젯들을 렌더링할 때 `popup_block` 영역 대신 `popup_chunks` 레이아웃 영역을 전달했다는 점도 확인하세요.
+블록을 변수로 선언한 뒤, 사용자가 현재 편집 중인 블록에만 추가 스타일을 적용하고 있음을 유의 깊게 살펴보세요. 그런 다음 `Paragraph` 위젯을 생성하고 해당 블록 변수들을 할당합니다. 또한 이 위젯들을 렌더링할 때 `popup_block` 영역 대신 `popup_chunks` 레이아웃 영역을 전달했다는 점도 확인하세요.
 
 #### ui-exit.rs 종료 확인 다이얼로그
 
@@ -5260,7 +5260,7 @@ Line, Span 및 Style에 대한 자세한 내용은 [텍스트 표시 레시피](
 
 #### 결론 및 확장 방향
 
-이 튜토리얼을 통해 `ratatui` 프로그램의 기본적인 동작 흐름을 이해하셨기를 바랍니다. 그러나 이는 `ratatui` 애플리케이션을 작성하는 _수많은 방법 중 하나_일 뿐입니다. `ratatui`는 다른 UI 프레임워크에 비해 상대적으로 저수준(low-level)이므로 거의 모든 애플리케이션 아키텍처 모델을 구현할 수 있습니다. [개념: 애플리케이션 패턴](#appendix-concepts)에서 다양한 패턴을 살펴보고, 여러분의 애플리케이션에 가장 적합한 모델에 대한 영감을 얻어보세요.
+이 튜토리얼로 `ratatui` 프로그램의 기본적인 동작 흐름을 이해하셨길 바랍니다. 그러나 이는 `ratatui` 애플리케이션을 작성하는 _수많은 방법 중 하나_일 뿐입니다. `ratatui`는 다른 UI 프레임워크에 비해 상대적으로 저수준(low-level)이므로 거의 모든 애플리케이션 아키텍처 모델을 구현할 수 있습니다. [개념: 애플리케이션 패턴](#appendix-concepts)에서 다양한 패턴을 살펴보고, 여러분의 애플리케이션에 가장 적합한 모델에 관한 영감을 얻어보세요.
 
 ### 완성된 파일
 
@@ -5276,7 +5276,7 @@ cargo run > test.json
 
 #### Main.rs
 
-```{.rust filename=\"src/main.rs\"}
+```{.rust filename="src/main.rs"}
 use std::{error::Error, io};
 
 use ratatui::{
@@ -5450,7 +5450,7 @@ where
 
 #### App.rs
 
-```{.rust filename=\"src/app.rs\"}
+```{.rust filename="src/app.rs"}
 use std::collections::HashMap;
 
 // ANCHOR: screen_modes
@@ -5527,7 +5527,7 @@ impl App {
 
 #### UI.rs
 
-```{.rust filename=\"src/ui.rs\"}
+```{.rust filename="src/ui.rs"}
 use ratatui::{
     layout::{Constraint, Direction, Layout, Rect},
     style::{Color, Style},
@@ -6653,7 +6653,7 @@ cargo add serde_json
 
 ### 파일 구성
 
-```
+```text
 src/
 ├── main.rs   — 터미널 진입점
 ├── app.rs    — 상태와 상태 전이 (터미널을 모른다)
@@ -7131,7 +7131,7 @@ pub fn draw(app: &App, frame: &mut Frame) {
 }
 ```
 
-`draw`는 `&App`만 받습니다. 상태를 바꾸지 않으니 같은 상태에 대해 항상 같은 결과가 나옵니다. 이것이 스냅샷 테스트의 전제입니다.
+`draw`는 `&App`만 받습니다. 상태를 바꾸지 않으므로 같은 상태에서는 항상 같은 결과가 나옵니다. 이것이 스냅샷 테스트의 전제입니다.
 
 ### 3단계: `TestBackend`로 그려 보기
 
@@ -7791,7 +7791,7 @@ loop {
 }
 ```
 
-즉시 모드 렌더링 패러다임이 낯설다면, [이 아티클(Casey Muratori의 글)](https://caseymuratori.com/blog_0001)과 관련 유튜브 영상을 참고하시기 바랍니다.
+즉시 모드 렌더링 패러다임이 낯설다면, [이 아티클(Casey Muratori의 글)](https://caseymuratori.com/blog_0001)과 관련 유튜브 영상을 참고하세요.
 
 <https://www.youtube.com/watch?v=Z1qyvQsjK5Y>
 
@@ -8247,7 +8247,7 @@ Ratatui에서 위젯은 Rust 트레이트로 구현되어 손쉬운 구현과 �
 
 상태 설계 시 던져볼 만한 유용한 질문은 다음과 같습니다: "이 위젯 값이 재생성될 때 상태도 초기화되어야 하는가?" 그렇다면 위젯이 소유하는 상태로 두어도 좋습니다. 그렇지 않다면 상태를 위젯 외부에 유지하고 이를 인자로 전달하십시오.
 
-다음은 간단한 인사말 Widget에 대해 [`Widget`] 트레이트를 구현한 예제입니다:
+다음은 간단한 인사말 Widget에 [`Widget`] 트레이트를 구현한 예제입니다:
 
 ```rust
 struct GreetingWidget {
@@ -8399,13 +8399,13 @@ Ratatui는 백엔드(backend)를 통해 터미널 에뮬레이터와 인터페�
 
 Ratatui는 다음 백엔드들을 지원합니다:
 
-- [`CrosstermBackend`] 및 `crossterm` 기능 플래그(기본 활성화됨)를 통한 [Crossterm]. 특정 버전 선택에 대한 자세한 내용은 아래의 [Crossterm 버전 호환성](#crossterm-version-compatibility)을 참조하십시오.
+- [`CrosstermBackend`] 및 `crossterm` 기능 플래그(기본 활성화됨)를 통한 [Crossterm]. 특정 버전 선택에 대한 자세한 내용은 아래의 [Crossterm 버전 호환성](#crossterm-version-compatibility)을 참조하세요.
 - [`TermionBackend`] 및 `termion` 기능 플래그를 통한 [Termion].
 - [`TermwizBackend`] 및 `termwiz` 기능 플래그를 통한 [Termwiz].
 - [`TerminaBackend`] 및 `termina` 기능 플래그를 통한 [Termina].
 - 애플리케이션 UI의 단위 테스트에 유용한 [`TestBackend`].
 
-백엔드 선택에 대한 자세한 내용은 [비교 (Comparison)](./comparison/) 문서를 참조하십시오.
+백엔드 선택에 대한 자세한 내용은 [비교 (Comparison)](./comparison/) 문서를 참조하세요.
 
 각 백엔드는 [로우 모드 (Raw Mode)](./raw-mode/)(터미널의 입출력 처리 방식을 변경), 셸 명령이 사용하는 버퍼와 별도의 버퍼에 렌더링할 수 있게 해주는 [대체 화면 (Alternate Screen)](./alternate-screen/), 그리고 애플리케이션이 마우스 이벤트를 캡처할 수 있도록 하는 [마우스 캡처 (Mouse Capture)](./mouse-capture/)를 지원합니다.
 
@@ -8488,11 +8488,11 @@ graph TD;
 
 모든 백엔드를 완벽하게 지원하기 위해 노력하고 있지만, 가장 널리 사용되는 백엔드는 Crossterm입니다. Termion, Termwiz 또는 Termina를 사용해야 할 특별한 이유가 없다면, 대중성 덕분에 Crossterm을 배우는 것이 가장 수월할 것입니다.
 
-로우 모드(Raw mode)는 터미널이 입력과 출력에 대해 어떠한 처리나 조작도 수행하지 않는 모드입니다. 즉, 입력된 문자의 에코(화면 출력), 라인 버퍼링, 특수 문자 처리(예: `CTRL-C` 또는 `SIGINT`)와 같은 기능이 비활성화됩니다. 이는 터미널 입출력을 완벽하게 제어하여 각 키 입력을 직접 처리하려는 애플리케이션에 유용합니다.
+로우 모드(Raw mode)는 터미널이 입력과 출력을 전혀 가공하거나 조작하지 않는 모드입니다. 즉, 입력된 문자의 에코(화면 출력), 라인 버퍼링, 특수 문자 처리(예: `CTRL-C` 또는 `SIGINT`)와 같은 기능이 비활성화됩니다. 이는 터미널 입출력을 완벽하게 제어하여 각 키 입력을 직접 처리하려는 애플리케이션에 유용합니다.
 
-예를 들어 로우 모드에서는 터미널이 입력에 대해 라인 버퍼링을 수행하지 않으므로, 사용자가 엔터 키를 누를 때까지 기다리지 않고 키를 누르는 즉시 애플리케이션에 전달됩니다. 따라서 텍스트 에디터, 터미널 기반 게임 등 실시간 반응형 애플리케이션에 적합합니다.
+예를 들어 로우 모드에서는 터미널이 입력 라인 버퍼링을 수행하지 않으므로, 사용자가 엔터 키를 누를 때까지 기다리지 않고 키를 누르는 즉시 애플리케이션에 전달됩니다. 따라서 텍스트 에디터, 터미널 기반 게임 등 실시간 반응형 애플리케이션에 적합합니다.
 
-각 백엔드는 로우 모드를 서로 다르게 처리하므로 사용하는 백엔드에 따라 동작 방식이 달라질 수 있습니다. 로우 모드를 구현하는 구체적인 세부 사항은 해당 백엔드의 문서를 반드시 참조하십시오.
+각 백엔드는 로우 모드를 서로 다르게 처리하므로 사용하는 백엔드에 따라 동작 방식이 달라질 수 있습니다. 로우 모드를 구현하는 구체적인 세부 사항은 해당 백엔드의 문서를 반드시 참조하세요.
 
 - [`CrosstermBackend`]
 - [`TermionBackend`]
@@ -8593,11 +8593,11 @@ Sleep 5s
 
 이 코드를 직접 실행해 보면서 `EnterAlternateScreen`과 `LeaveAlternateScreen`을 실험해 보십시오.
 
-모든 터미널 에뮬레이터가 대체 화면을 지원하는 것은 아니며, 지원하더라도 처리 방식이 다를 수 있습니다. 따라서 사용하는 백엔드에 따라 동작이 달라질 수 있습니다. 대체 화면을 어떻게 구현하는지 이해하려면 항상 해당 백엔드의 설명서를 참조하십시오.
+모든 터미널 에뮬레이터가 대체 화면을 지원하는 것은 아니며, 지원하더라도 처리 방식이 다를 수 있습니다. 따라서 사용하는 백엔드에 따라 동작이 달라질 수 있습니다. 대체 화면을 어떻게 구현하는지 이해하려면 항상 해당 백엔드의 설명서를 참조하세요.
 
 마우스 캡처(Mouse capture)는 터미널이 클릭, 스크롤, 마우스 이동과 같은 마우스 이벤트를 감지하여 특수 시퀀스나 이벤트 형태로 애플리케이션에 전달하는 모드입니다. 이를 통해 애플리케이션은 마우스 동작을 처리하고 이에 반응하여 터미널 내에서 보다 대화형이고 그래픽적인 사용자 경험을 제공할 수 있습니다. 이는 터미널 기반 게임, 텍스트 에디터 또는 사용자의 보다 직접적인 상호작용이 필요한 프로그램에 특히 유용합니다.
 
-각 백엔드는 마우스 캡처를 다르게 처리하며, 캡처할 수 있는 이벤트의 종류와 표현 방식에 차이가 있습니다. 따라서 사용하는 백엔드에 따라 동작이 달라질 수 있으므로 개발자는 마우스 캡처 구현 방식에 대해 해당 백엔드의 문서를 확인해야 합니다.
+각 백엔드는 마우스 캡처를 다르게 처리하며, 캡처할 수 있는 이벤트의 종류와 표현 방식에 차이가 있습니다. 따라서 사용하는 백엔드에 따라 동작이 달라질 수 있으므로 개발자는 마우스 캡처 구현 방식에 관한 해당 백엔드의 문서를 확인해야 합니다.
 
 ---
 
@@ -8609,7 +8609,7 @@ Sleep 5s
 
 ## 중앙 집중식 이벤트 핸들링
 
-이것은 이벤트가 발생하는 즉시 처리하므로 가장 단순한 방식입니다. 대개 지원되는 다양한 키에 대해 (crossterm의 경우) `event::read()?`의 결과를 매칭하는 단순한 형태입니다.
+이것은 이벤트가 발생하는 즉시 처리하므로 가장 단순한 방식입니다. 대개 지원되는 다양한 키에 따라 (crossterm의 경우) `event::read()?`의 결과를 매칭하는 단순한 형태입니다.
 
 장점: 메시지 전달이 필요 없다는 장점이 있으며, 가능한 모든 키보드 이벤트를 한곳에서 편집하고 관리할 수 있습니다.
 
@@ -8715,7 +8715,7 @@ pub trait Component {
 
 ::: {.callout-tip}
 
-The Elm Architecture를 기반으로 `ratatui`를 사용하는 프레임워크에 관심이 있다면 <https://github.com/veeso/tui-realm/>을 확인해 보시기 바랍니다. 본 페이지의 설명은 이론적 이해와 교육적 목적을 위한 것입니다.
+The Elm Architecture를 기반으로 `ratatui`를 사용하는 프레임워크에 관심이 있다면 <https://github.com/veeso/tui-realm/>을 확인해 보세요. 본 페이지의 설명은 이론적 이해와 교육적 목적을 위한 것입니다.
 
 :::
 
@@ -8902,7 +8902,7 @@ TEA가 유한 상태 머신이라는 용어를 직접 사용하거나 해당 패
 
 ### 3. 뷰(View) 렌더링
 
-Elm 아키텍처에서 뷰 함수는 현재 모델을 받아 사용자를 위한 시각적 표현을 생성하는 역할을 담당합니다. Ratatui의 경우, 모델의 상태를 터미널 UI 요소로 변환합니다. 여기서 중요한 점은 뷰 함수가 반드시 순수 함수(Pure function)로 유지되어야 한다는 것입니다. 즉, 주어진 모델의 상태에 대해 항상 동일한 UI 표현을 생성해야 합니다.
+Elm 아키텍처에서 뷰 함수는 현재 모델을 받아 사용자를 위한 시각적 표현을 생성하는 역할을 담당합니다. Ratatui의 경우, 모델의 상태를 터미널 UI 요소로 변환합니다. 여기서 중요한 점은 뷰 함수가 반드시 순수 함수(Pure function)로 유지되어야 한다는 것입니다. 즉, 주어진 모델 상태에서는 항상 동일한 UI 표현을 생성해야 합니다.
 
 ```rust
 fn view(model: &Model) {
@@ -8925,7 +8925,7 @@ fn view(model: &mut Model, frame: &mut Frame) {
 
 TEA에서는 뷰 함수에 부수 효과(Side-effect)가 없도록 보장해야 합니다. `view()` 함수는 전역 상태를 수정하거나 다른 동작을 수행해서는 안 됩니다. 모델을 시각적 표현으로 매핑하는 것만이 유일한 역할입니다.
 
-모델의 특정 상태에 대해 뷰 함수는 항상 동일한 시각적 결과를 만들어내야 합니다. 이러한 예측 가능성 덕분에 TUI 애플리케이션의 동작을 추론하고 디버깅하기가 훨씬 수월해집니다.
+모델의 특정 상태에서 뷰 함수는 항상 동일한 시각적 결과를 만들어내야 합니다. 이러한 예측 가능성 덕분에 TUI 애플리케이션의 동작을 추론하고 디버깅하기가 훨씬 수월해집니다.
 
 ::: {.callout-note}
 
@@ -9291,7 +9291,7 @@ ratatui = { version = "0.30", default-features = false }
 ratatui = { version = "0.30", default-features = false, features = ["portable-atomic"] }
 ```
 
-추가로, 대상 타깃에 따라 특정 `portable-atomic` 기능을 활성화해야 할 수도 있습니다. 자세한 내용은 [`portable-atomic` 크레이트 문서](https://docs.rs/portable-atomic)를 참조하십시오.
+추가로, 대상 타깃에 따라 특정 `portable-atomic` 기능을 활성화해야 할 수도 있습니다. 자세한 내용은 [`portable-atomic` 크레이트 문서](https://docs.rs/portable-atomic)를 참조하세요.
 
 :::
 
@@ -9385,7 +9385,7 @@ impl Widget for &Greeting {
 
 출처: [block.rs](https://github.com/ratatui/ratatui/blob/ratatui-v0.30.2/ratatui-widgets/examples/block.rs).
 
-```{.bash filename=\"run example\"}
+```{.bash filename="run example"}
 git clone https://github.com/ratatui/ratatui.git --branch ratatui-v0.30.2 --depth 1
 cd ratatui
 cargo run -p ratatui-widgets --example block
@@ -9393,7 +9393,7 @@ cargo run -p ratatui-widgets --example block
 
 ![Block](images/block.gif)
 
-```{.rust filename=\"block.rs\"}
+```{.rust filename="block.rs"}
 //! # [Ratatui] `Block` 예제
 //!
 //! 이 예제의 최신 버전은 저장소의 [위젯 예제] 폴더에서 확인할 수 있습니다.
@@ -9474,7 +9474,7 @@ pub fn render_custom_bordered_block(frame: &mut Frame, area: Rect) {
 [`Paragraph`](https://docs.rs/ratatui/0.30.2/ratatui/widgets/struct.Paragraph.html) 위젯의 구조와 실제 렌더링 사용법을 설명합니다.
 출처: [paragraph.rs](https://github.com/ratatui/ratatui/blob/ratatui-v0.30.2/ratatui-widgets/examples/paragraph.rs).
 
-```{.bash filename=\"run example\"}
+```{.bash filename="run example"}
 git clone https://github.com/ratatui/ratatui.git --branch ratatui-v0.30.2 --depth 1
 cd ratatui
 cargo run -p ratatui-widgets --example paragraph
@@ -9482,7 +9482,7 @@ cargo run -p ratatui-widgets --example paragraph
 
 ![paragraph](images/paragraph.gif)
 
-```{.rust filename=\"paragraph.rs\"}
+```{.rust filename="paragraph.rs"}
 //! # [Ratatui] `Paragraph` 예제
 //!
 //! 이 예제의 최신 버전은 저장소의 [위젯 예제] 폴더에서 확인할 수 있습니다.
@@ -14084,7 +14084,7 @@ fn main() -> color_eyre::Result<()> {
 }
 ```
 
-터미널 초기화 함수에 러스트 기본 패닉 핸들러를 교체하는 코드를 추가합니다. 새 패닉 핸들러는 패닉 상세 정보를 표시하기 전에 터미널을 먼저 복원합니다. 이렇게 구성해 두면 패닉이 발생할 때는 물론, 프로그램 끝까지 처리되지 않고 전파되는 미처리 에러(unhandled error)에 대해서도 터미널이 안전하게 정상 복원됩니다.
+터미널 초기화 함수에 러스트 기본 패닉 핸들러를 교체하는 코드를 추가합니다. 새 패닉 핸들러는 패닉 상세 정보를 표시하기 전에 터미널을 먼저 복원합니다. 이렇게 구성해 두면 패닉이 발생할 때는 물론, 프로그램 끝까지 처리되지 않고 전파되는 미처리 에러(unhandled error)가 발생해도 터미널이 안전하게 정상 복원됩니다.
 
 ```{.rust filename="tui.rs"}
 /// Initialize the terminal
@@ -14259,7 +14259,7 @@ pub fn restore() -> io::Result<()> {
 
 ## 추가 단계
 
-더 고급 설정에 대해서는 `color_eyre`의 공식 문서 및 예제 모음을 참고하십시오. 예:
+더 고급 설정은 `color_eyre` 공식 문서 및 예제 모음을 참고하세요. 예:
 
 - [스팬 추적(span traces) 캡처](https://github.com/eyre-rs/eyre/blob/master/color-eyre/examples/usage.rs)
 - [자동 이슈 URL(issue URL) 구성](https://github.com/eyre-rs/eyre/blob/master/color-eyre/examples/github_issue.rs)
@@ -14340,7 +14340,7 @@ Termion을 사용할 때는 조금 더 신경을 써야 합니다. 로우 모드
 
 `init_tui` 메서드가 터미널을 쿠크드 모드(cooked mode, 로우 모드의 반대인 일반 모드)로 감지할 수 있게 하려면, `init_panic_hook` 함수에서 패닉 훅 내부에서 사용할 `RawTerminal` 인스턴스를 하나 생성한 직후 즉시 로우 모드를 일시 중단(`suspend_raw_mode`)해야 합니다.
 
-Termion은 대체 화면(Alternate Screen)에 대해서도 유사한 래퍼 타입을 제공하지만, 이 타입은 드롭될 때를 제외하고는 대체 화면을 빠져나가는 메서드를 구현하고 있지 않습니다. 따라서 애플리케이션에서는 `IntoAlternateScreen` 래퍼 대신 `ToAlternateScreen` / `ToMainScreen`을 사용해야 합니다. 또한 변경 사항이 즉시 화면에 반영되도록 `stdout().flush()`를 호출하는 것도 잊지 마십시오.
+Termion은 대체 화면(Alternate Screen)에 대해서도 유사한 래퍼 타입을 제공하지만, 이 타입은 드롭될 때를 제외하고는 대체 화면을 빠져나가는 메서드를 구현하고 있지 않습니다. 따라서 애플리케이션에서는 `IntoAlternateScreen` 래퍼 대신 `ToAlternateScreen` / `ToMainScreen`을 사용해야 합니다. 또한 변경 사항이 즉시 화면에 반영되도록 `stdout().flush()`를 호출하는 것도 잊지 마세요.
 
 ```{.rust filename="main.rs"}
 use std::{
@@ -14413,7 +14413,7 @@ Termwiz는 로우 모드를 해제하고 대체 화면을 빠져나가는 메서
 
 일반적인 원칙으로, 원래의 기본 패닉 훅을 보관해 둔 뒤 터미널 복원 작업을 마친 후에 그 훅을 실행해야 합니다. 다음 섹션들에서는 에러와 패닉을 다룰 때 더욱 가독성 높은 출력을 제공해 주는 서드파티 라이브러리들을 살펴보겠습니다.
 
-애플리케이션은 여러 가지 이유로 패닉을 일으킬 수 있습니다(예: `None`에 대해 `.unwrap()`을 호출하는 경우 등). 이러한 상황이 발생했을 때 지켜야 할 모범적인 개발 지침은 다음과 같습니다:
+애플리케이션은 여러 가지 이유로 패닉을 일으킬 수 있습니다(예: `None`에 `.unwrap()`을 호출하는 경우 등). 이러한 상황이 발생했을 때 지켜야 할 모범적인 개발 지침은 다음과 같습니다:
 
 1. 사용자가 오류를 개발자에게 쉽게 제보할 수 있도록 유용한 스택 트레이스(stacktrace)를 제공합니다.
 2. 사용자의 터미널 상태를 엉망인 채로 방치하지 않고, 반드시 원래 상태로 깨끗하게 복원합니다.
@@ -14658,7 +14658,7 @@ pub fn initialize_panic_handler() -> Result<()> {
 
 ::: {.callout-tip}
 
-터미널 및 이벤트 핸들러 구현에 대해 한층 간결하고 모듈화된 방식을 살펴보려면 [`crates-tui`](https://github.com/ratatui/crates-tui/) 저장소의 [`tui.rs`](https://github.com/ratatui/crates-tui/blob/main/src/tui.rs) 및 [`events.rs`](https://github.com/ratatui/crates-tui/blob/main/src/events.rs)를 참조하세요.
+터미널 및 이벤트 핸들러 구현에서 한층 간결하고 모듈화된 방식을 살펴보려면 [`crates-tui`](https://github.com/ratatui/crates-tui/) 저장소의 [`tui.rs`](https://github.com/ratatui/crates-tui/blob/main/src/tui.rs) 및 [`events.rs`](https://github.com/ratatui/crates-tui/blob/main/src/events.rs)를 참조하세요.
 
 :::
 
@@ -14679,7 +14679,7 @@ cargo add color_eyre serde serde_derive # 선택(optional)
 
 아래 코드를 `src/tui.rs` 파일에 작성합니다:
 
-````{.rust filename="src/tui.rs"}
+```{.rust filename="src/tui.rs"}
 use std::{
   ops::{Deref, DerefMut},
   time::Duration,
@@ -14914,13 +14914,13 @@ impl Drop for Tui {
     self.exit().unwrap();
   }
 }
-````
+```
 
 ::: {.callout-note}
 
 ## 왜 `stderr`를 사용할까요?
 
-자세한 내용은 [FAQ](/faq/#should-i-use-stdout-or-stderr)를 참조하십시오.
+자세한 내용은 [FAQ](/faq/#should-i-use-stdout-or-stderr)를 참조하세요.
 
 :::
 
@@ -15060,7 +15060,7 @@ macro_rules! trace_dbg {
 
 로그 레벨은 `${YOUR_CRATE_NAME}_LOGLEVEL` 환경 변수로 조정할 수 있습니다(지정하지 않을 경우 기본값은 `${CARGO_CRATE_NAME}=info`).
 
-또한 로그 파일의 저장 경로는 환경 변수에 따라 유연하게 결정됩니다. 자세한 내용은 [XDG 디렉터리 관련 절](../config-directories/)을 참조하십시오.
+또한 로그 파일의 저장 경로는 환경 변수에 따라 유연하게 결정됩니다. 자세한 내용은 [XDG 디렉터리 관련 절](../config-directories/)을 참조하세요.
 
 ::: {.callout-tip}
 
@@ -15142,7 +15142,7 @@ Data directory: {data_dir_path}"
 
 참고를 위한 전체 `build.rs` 코드는 다음과 같습니다:
 
-````{.rust filename="build.rs"}
+```{.rust filename="build.rs"}
 fn main() {
   let git_output = std::process::Command::new("git").args(["rev-parse", "--git-dir"]).output().ok();
   let git_dir = git_output.as_ref().and_then(|output| {
@@ -15189,7 +15189,7 @@ fn main() {
 
   println!("cargo:rustc-env=RATATUI_TEMPLATE_GIT_INFO={}", git_describe);
 }
-````
+```
 
 ### 설정 디렉터리 표준 경로 관리
 
@@ -15256,7 +15256,7 @@ pub fn get_config_dir() -> eyre::Result<PathBuf> {
 
 전체 소스 코드:
 
-````{.rust filename="main.rs"}
+```{.rust filename="main.rs"}
 // ANCHOR: all
 // ANCHOR: imports
 use ratatui::{
@@ -15343,13 +15343,13 @@ fn draw(frame: &mut Frame) {
 }
 // ANCHOR_END: draw
 // ANCHOR_END: all
-````
+```
 
 ## 환경 구성 및 기본 구조
 
 먼저 `main` 함수와 이벤트 처리 루프를 살펴보겠습니다:
 
-````{.rust filename="main.rs"}
+```{.rust filename="main.rs"}
 enum Action {
     EditFile,
     Quit,
@@ -15388,7 +15388,7 @@ fn handle_events() -> Result<Action> {
         _ => Ok(Action::None),
     }
 }
-````
+```
 
 `main` 함수에서 터미널을 초기화한 후 `run` 루프로 진입하여 화면을 렌더링하고 사용자 입력을 처리합니다. `handle_events` 함수는 키 이벤트를 감지하여 그에 알맞은 `Action`을 반환합니다. 사용자가 `'e'`를 누르면 `Action::EditFile`이 발생하여 `run_editor` 함수가 실행됩니다.
 
@@ -15396,7 +15396,7 @@ fn handle_events() -> Result<Action> {
 
 이제 `Action::EditFile` 액션을 처리하는 `run_editor` 함수의 세부 동작을 살펴보겠습니다:
 
-````{.rust filename="main.rs"}
+```{.rust filename="main.rs"}
 fn run_editor(terminal: &mut Terminal) -> Result<()> {
     stdout().execute(LeaveAlternateScreen)?;
     disable_raw_mode()?;
@@ -15406,7 +15406,7 @@ fn run_editor(terminal: &mut Terminal) -> Result<()> {
     terminal.clear()?;
     Ok(())
 }
-````
+```
 
 TUI 앱 내에서 Vim과 같은 대화형 프로그램을 실행하려면 먼저 터미널 제어권을 완전히 넘겨주어야 합니다.
 
@@ -15736,7 +15736,7 @@ Ratatui 0.30의 이 방식은 이전 버전에서 복잡한 수동 테두리 세
 전체 소스 코드는 공식 저장소에서 확인할 수 있습니다:
 <https://github.com/ratatui/ratatui-website/blob/main/code/recipes/how-to-collapse-borders>
 
-````{.rust filename="collapse-borders.rs"}
+```{.rust filename="collapse-borders.rs"}
 use std::time::Duration;
 
 use color_eyre::Result;
@@ -15807,7 +15807,7 @@ fn draw(frame: &mut Frame) {
     frame.render_widget(top_right_block, top_right);
     frame.render_widget(bottom_right_block, bottom_right);
 }
-````
+```
 
 ### 동적 레이아웃 구성
 
@@ -15876,7 +15876,7 @@ struct Grid {
 }
 ```
 
-이제 `Grid`에 대해 `Widget` 트레이트를 구현합니다:
+이제 `Grid`용 `Widget` 트레이트를 구현합니다:
 
 ```rust
 impl Widget for Grid {
@@ -16474,9 +16474,9 @@ cargo insta review
 
 ::: {.callout-tip}[전체 애플리케이션 테스트하기]
 
-`TestBackend`는 프로세스 내에서 렌더링을 테스트하지만, 이벤트 루프, 키 이벤트 처리, 터미널 설정/복원(setup/teardown) 또는 종료 코드는 다루지 않습니다. 애플리케이션의 이러한 영역까지 검증하려면 가상 터미널(PTY) 내에서 컴파일된 바이너리를 실행하고, 입력을 전달한 뒤 렌더링된 화면에 대해 단언(assert)을 수행할 수 있습니다.
+`TestBackend`는 프로세스 내에서 렌더링을 테스트하지만, 이벤트 루프, 키 이벤트 처리, 터미널 설정/복원(setup/teardown) 또는 종료 코드는 다루지 않습니다. 애플리케이션의 이러한 영역까지 검증하려면 가상 터미널(PTY) 내에서 컴파일된 바이너리를 실행하고, 입력을 전달한 뒤 렌더링된 화면을 단언(assert)할 수 있습니다.
 
-[termlens](https://crates.io/crates/termlens)는 이러한 종류의 엔드투엔드(E2E) 테스트 프레임워크를 제공하는 크레이트 중 하나입니다. 중요한 소수의 핵심 사용자 흐름에 대해 `TestBackend` 스냅샷을 보완하는 용도로 적합하지만, 빠르고 정밀한 위젯 단위 테스트를 완전히 대체하지는 않습니다.
+[termlens](https://crates.io/crates/termlens)는 이러한 종류의 엔드투엔드(E2E) 테스트 프레임워크를 제공하는 크레이트 중 하나입니다. 중요한 소수의 핵심 사용자 흐름에서 `TestBackend` 스냅샷을 보완하는 용도로 적합하지만, 빠르고 정밀한 위젯 단위 테스트를 완전히 대체하지는 않습니다.
 
 <details>
 <summary>PTY 통합 테스트 예시</summary>
@@ -16530,7 +16530,7 @@ Ratatui 애플리케이션에서 위젯 상태를 디버깅하는 것은 다소 
 
 ![Example](images/debug-widget-state.png)
 
-다음 코드는 간단한 폼(form)의 상태에 대해 이를 구현하는 방법을 보여줍니다. 규모가 큰 애플리케이션에서는 더 정교한 디버그 뷰가 필요할 수 있지만 기본 원리는 동일합니다. 애플리케이션 상태에는 켜고 끌 수 있는 `show_debug` 필드가 있으며, `render` 함수는 `show_debug`가 참(`true`)일 때 디버그 정보를 렌더링할 공간을 할당합니다.
+다음 코드는 간단한 폼(form) 상태에서 이를 구현하는 방법을 보여줍니다. 규모가 큰 애플리케이션에서는 더 정교한 디버그 뷰가 필요할 수 있지만 기본 원리는 동일합니다. 애플리케이션 상태에는 켜고 끌 수 있는 `show_debug` 필드가 있으며, `render` 함수는 `show_debug`가 참(`true`)일 때 디버그 정보를 렌더링할 공간을 할당합니다.
 
 ```rust
 //! Demonstrates how to debug widget state in a Rust application by showing a debug view of the state.
@@ -16751,7 +16751,7 @@ Ratatui는 즉시 모드 렌더링 기반 라이브러리이므로 코드를 구
 
 본 문서에서는 온전하게 동작하는 터미널 사용자 인터페이스를 구축하기 위해 코드와 프로젝트를 구성할 수 있는 여러 방법들을 살펴봅니다. 마음에 드는 부분을 자유롭게 골라 사용할 수 있습니다.
 
-또한 다음 링크들도 함께 참고하시기 바랍니다(대략 복잡도가 높아지는 순서대로 나열되어 있습니다):
+또한 다음 링크들도 함께 참고하세요(대략 복잡도가 높아지는 순서대로 나열되어 있습니다):
 
 - <https://github.com/ratatui/ratatui/tree/main/examples>: Ratatui의 다양한 위젯과 기능을 설명하는 단일 파일 예제 모음
 - <https://github.com/ratatui/templates/tree/main/simple>: Ratatui 시작 키트
@@ -16820,7 +16820,7 @@ async fn main() -> Result<()> {
 }
 ```
 
-본질적으로 `main` 함수는 `App`의 인스턴스를 생성하고 `App.run()`을 호출하며, 이 메서드는 "`이벤트 처리` -> `상태 갱신` -> `그리기`" 루프를 실행합니다. 이에 대해서는 뒤에서 자세히 다루겠습니다.
+본질적으로 `main` 함수는 `App`의 인스턴스를 생성하고 `App.run()`을 호출하며, 이 메서드는 "`이벤트 처리` -> `상태 갱신` -> `그리기`" 루프를 실행합니다. 이 내용은 뒤에서 자세히 다루겠습니다.
 
 이 `main.rs` 파일은 반드시 Ratatui에 국한된 것은 아니지만, 터미널 사용자 인터페이스(TUI) 프로그램을 작성할 때 필수적이라고 판단되는 핵심 기능들을 통합하고 있습니다:
 
@@ -16960,7 +16960,7 @@ fn handle_actions(&mut self, tui: &mut Tui) -> Result<()> {
 }
 ```
 
-액션과 마찬가지로 애플리케이션이 실행되는 동안 발생할 수 있는 특정 이벤트들이 있습니다. 예를 들어 키 입력, 마우스 클릭 등이 있습니다. 이를 처리하기 위해 `App` 구조체에는 이러한 이벤트를 담당하는 `handle_event`와 `handle_key_event` 메서드가 있습니다. 이 메서드들 역시 모든 컴포넌트에 대해 정의됩니다. 이벤트가 발생하면 필요한 기능을 수행하고, 경우에 따라 해당 이벤트와 관련된 `Action`을 전송합니다. 이 두 함수의 코드는 다음과 같습니다:
+액션과 마찬가지로 애플리케이션이 실행되는 동안 발생할 수 있는 특정 이벤트들이 있습니다. 예를 들어 키 입력, 마우스 클릭 등이 있습니다. 이를 처리하기 위해 `App` 구조체에는 이러한 이벤트를 담당하는 `handle_event`와 `handle_key_event` 메서드가 있습니다. 이 메서드들 역시 모든 컴포넌트에 정의됩니다. 이벤트가 발생하면 필요한 기능을 수행하고, 경우에 따라 해당 이벤트와 관련된 `Action`을 전송합니다. 이 두 함수의 코드는 다음과 같습니다:
 
 ```rust
 async fn handle_events(&mut self, tui: &mut Tui) -> Result<()> {
@@ -17421,7 +17421,7 @@ fn main() -> Result<()> {
 
 터미널은 각 창마다 두 개의 화면 버퍼(screen buffer)를 가집니다. 기본 화면 버퍼는 터미널을 처음 시작했을 때 마주하게 되는 화면입니다. 두 번째 화면 버퍼인 대체 화면(Alternate Screen)은 `vim`, `less` 등과 같은 대화형 전체 화면 애플리케이션을 실행할 때 사용됩니다.
 
-터미널 사용자 인터페이스가 작동하는 방식에 대해 더 자세히 알고 싶다면, 저자가 JuliaCon2020에서 발표한 8분 분량의 강연 영상을 시청해 보시기 바랍니다:
+터미널 사용자 인터페이스의 작동 방식을 더 자세히 알고 싶다면, 저자가 JuliaCon2020에서 발표한 8분 분량의 강연 영상을 시청해 보세요:
 <https://www.youtube.com/watch?v=-TASx67pphw>
 
 :::
@@ -17659,7 +17659,7 @@ impl Drop for Tui {
 
 ::: {.callout-note}
 
-오류 발생 시 패닉 훅을 활용하여 터미널을 우아하게 정리하는 방법에 대해서는 [패닉 훅(panic hooks)](https://ratatui.rs/recipes/apps/panic-hooks/) 문서를 참조하세요.
+오류 발생 시 패닉 훅을 활용하여 터미널을 우아하게 정리하는 방법은 [패닉 훅(panic hooks)](https://ratatui.rs/recipes/apps/panic-hooks/) 문서를 참조하세요.
 
 :::
 
@@ -17909,7 +17909,7 @@ impl Drop for Tui {
 
 ::: {.callout-tip}
 
-`Action` 패턴은 "메서드 호출의 객체화/구체화(reified method calls)" 개념에 기반합니다. 이 패턴에 대한 자세한 내용은 게임 아키텍처 명저인 [Game Programming Patterns의 Command 장](http://gameprogrammingpatterns.com/command.html)을 참고하시기 바랍니다.
+`Action` 패턴은 "메서드 호출의 객체화/구체화(reified method calls)" 개념에 기반합니다. 이 패턴에 관한 자세한 내용은 게임 아키텍처 명저인 [Game Programming Patterns의 Command 장](http://gameprogrammingpatterns.com/command.html)을 참고하세요.
 
 :::
 
@@ -19421,7 +19421,7 @@ impl Component for FpsCounter {
 
 쇼케이스 등록에 기여하는 방법은 [쇼케이스 등록 가이드](https://ratatui.rs/recipes/apps/submitting-to-the-showcase/) 문서를 참고하세요.
 
-다음 위젯들은 `ratatui` 크레이트에 기본 탑재되어 별도 의존성 없이 즉시 사용할 수 있습니다. 각 위젯의 상세 사양은 [공식 API 문서](https://docs.rs/ratatui/latest/ratatui/widgets/index.html)를 참고하시기 바랍니다.
+다음 위젯들은 `ratatui` 크레이트에 기본 탑재되어 별도 의존성 없이 즉시 사용할 수 있습니다. 각 위젯의 상세 사양은 [공식 API 문서](https://docs.rs/ratatui/latest/ratatui/widgets/index.html)를 참고하세요.
 
 ::: {.callout-note}
 
@@ -19489,7 +19489,7 @@ impl Component for FpsCounter {
 
 쇼케이스 등록에 기여하는 방법은 [쇼케이스 등록 가이드](https://ratatui.rs/recipes/apps/submitting-to-the-showcase/) 문서를 참고하세요.
 
-본 목록에 직접 제작한 위젯을 등록하고 싶다면 [서드파티 위젯 기여 안내(README)](https://github.com/ratatui/ratatui-website/blob/main/code/showcase/widget-showcase-third-party/README.md)를 확인해 주시기 바랍니다.
+본 목록에 직접 제작한 위젯을 등록하고 싶다면 [서드파티 위젯 기여 안내(README)](https://github.com/ratatui/ratatui-website/blob/main/code/showcase/widget-showcase-third-party/README.md)를 확인해 주세요.
 
 ### Ratatui-image   
 
@@ -20024,7 +20024,7 @@ Ratatui 역대 최대 규모의 릴리스 중 하나인 Ratatui 0.30.0 소식을
 
 이번 릴리스에서는 [크레이트 모듈화](#modularization)를 단행하고, 임베디드 타깃을 위한 완전한 [`no_std` 지원](#no_std-support)을 추가했으며, 새로운 [`ratatui::run()`](#execution) API를 도입했고, 주요 [위젯](#widgets) 및 [레이아웃](#layout) 기능을 대폭 개선했습니다. 이 모든 개선 사항은 더욱 강화된 [백엔드](#backend) 유연성과 스타일링 개선과 함께 제공됩니다.
 
-변경 사항 전체 목록은 [변경 로그(changelog)](https://github.com/ratatui/ratatui/blob/main/CHANGELOG.md)를 확인하세요. [이번 릴리스의 호환성을 깨는 변경 사항(breaking changes)](https://github.com/ratatui/ratatui/blob/main/BREAKING-CHANGES.md)도 함께 참고하시기 바랍니다.
+변경 사항 전체 목록은 [변경 로그(changelog)](https://github.com/ratatui/ratatui/blob/main/CHANGELOG.md)를 확인하세요. [이번 릴리스의 호환성을 깨는 변경 사항(breaking changes)](https://github.com/ratatui/ratatui/blob/main/BREAKING-CHANGES.md)도 함께 참고하세요.
 
 ### 모듈화 (Modularization) 🧩 {#modularization}
 
@@ -20214,7 +20214,7 @@ BarChart::grouped(vec![
 다음과 같은 호환성을 깨는 변경 사항이 적용되었습니다:
 
 - `symbols::braille::BLANK` 및 `symbols::braille::DOTS`가 제거되고, 모든 점자 문자의 정렬된 배열로 대체되었습니다.
-- `Marker` 열거형에 `#[non_exhaustive]` 속성이 추가되었으므로, `Marker`에 대해 완전한 패턴 매칭을 수행하던 기존 코드는 와일드카드 매치 암(예: `_ => { /* 다른 케이스 처리 */ }`)을 추가해야 합니다.
+- `Marker` 열거형에 `#[non_exhaustive]` 속성이 추가되었으므로, `Marker`를 대상으로 완전한 패턴 매칭을 수행하던 기존 코드는 와일드카드 매치 암(예: `_ => { /* 다른 케이스 처리 */ }`)을 추가해야 합니다.
 
 :::
 
@@ -20442,7 +20442,7 @@ Color::from((255, 0, 0, 255));
 
 #### 원시 타입 기반 변환 지원
 
-`u8`, `i32`, `f64`, `Cow<'a, str>` 등의 원시(primitive) 타입에 대해 `Styled` 트레이트를 구현했습니다.
+`u8`, `i32`, `f64`, `Cow<'a, str>` 등의 원시(primitive) 타입에 `Styled` 트레이트를 구현했습니다.
 
 ```rust
 let s = Cow::Borrowed("a");
@@ -20610,7 +20610,7 @@ let crossterm_color = crossterm::style::Color::Black;
 ratatui = { version = "0.30.0", features = ["crossterm_0_28"] } # 또는 "crossterm_0_29"
 ```
 
-의존성 그래프에 여러 Crossterm 메이저 버전이 포함되는 경우 위험 요소와 완화 조치에 대해 [Crossterm 버전 호환성](#crossterm-version-compatibility) 문서를 참고하세요.
+의존성 그래프에 여러 Crossterm 메이저 버전이 포함되는 경우 위험 요소와 완화 조치는 [Crossterm 버전 호환성](#crossterm-version-compatibility) 문서를 참고하세요.
 
 #### 백엔드 개선 사항
 
@@ -20628,7 +20628,7 @@ ratatui = { version = "0.30.0", features = ["crossterm_0_28"] } # 또는 "crosst
 
 `WidgetRef`가 더 이상 `Widget`의 블랭킷 구현(blanket implementation)을 갖지 않습니다.
 
-이전에는 `WidgetRef`에 대해 `Widget`을 자동으로 구현해 주었으나, 이제는 반대로 `W: Widget`인 모든 `&W`에 대해 `WidgetRef`를 구현하도록 방향이 바뀌었습니다.
+이전에는 `WidgetRef`를 기반으로 `Widget`을 자동으로 구현해 주었으나, 이제는 반대로 `W: Widget`인 모든 `&W`를 대상으로 `WidgetRef`를 구현하도록 방향이 바뀌었습니다.
 
 ```diff
 -impl WidgetRef for Foo {
@@ -20638,7 +20638,7 @@ ratatui = { version = "0.30.0", features = ["crossterm_0_28"] } # 또는 "crosst
 }
 ```
 
-기존에 `WidgetRef`를 직접 구현하던 모든 위젯은 이제 해당 타입의 참조자(`&Foo`)에 대해 `Widget`을 구현하도록 변경해야 합니다.
+기존에 `WidgetRef`를 직접 구현하던 모든 위젯은 이제 해당 타입의 참조자(`&Foo`)를 대상으로 `Widget`을 구현하도록 변경해야 합니다.
 
 #### 새로운 `FrameExt` 트레이트
 
@@ -20702,7 +20702,7 @@ frame.render_widget_ref(&block, area);
 
 - MSRV(최소 지원 Rust 버전)가 이제 1.86.0입니다.
 - 코드베이스에서 이제 Rust 2024 에디션을 사용합니다.
-- `Constraint`, `Direction`, `Spacing`, `Layout`, `AccentedPalette`, `NonAccentedPalette`, `Palette`, `Padding`, `Borders`, `BorderType`, `ListDirection`, `ScrollbarOrientation`, `ScrollDirection`, `RenderDirection`, 그리고 `HighlightSpacing`, `HorizontalAlignment`, `VerticalAlignment`에 대해 `Serialize`/`Deserialize`를 파생(derive)하도록 구현했습니다.
+- `Constraint`, `Direction`, `Spacing`, `Layout`, `AccentedPalette`, `NonAccentedPalette`, `Palette`, `Padding`, `Borders`, `BorderType`, `ListDirection`, `ScrollbarOrientation`, `ScrollDirection`, `RenderDirection`, 그리고 `HighlightSpacing`, `HorizontalAlignment`, `VerticalAlignment`에 `Serialize`/`Deserialize`를 파생(derive)하도록 구현했습니다.
 - `Style` 역직렬화 시 `add`/`sub` 한정자(modifier) 필드를 생략할 수 있도록 허용했습니다.
 - VS16 너비 이모지가 이제 버퍼에서 올바르게 지워집니다.
 - 빈 셀을 더 잘 표현할 수 있도록 `Cell::symbol`을 `Option<CompactString>`으로 변경했습니다.
@@ -20897,7 +20897,7 @@ let selected = 1u8;
 ratatui = { version = "0.29", features = ["scrolling-regions"] }
 ```
 
-자세한 내용은 [구현 풀 리퀘스트](https://github.com/ratatui/ratatui/pull/1341)를 참조하십시오.
+자세한 내용은 [구현 풀 리퀘스트](https://github.com/ratatui/ratatui/pull/1341)를 참조하세요.
 
 ---
 
@@ -21114,7 +21114,7 @@ _"음식은 오게 마련이란다, 레미. 요리를 사랑하는 사람에게�
 
 Crossterm이 이전 버전(`0.27.0`)과 semver 호환되지 않는 버전인 [0.28.0](https://github.com/crossterm-rs/crossterm/blob/master/CHANGELOG.md#version-028)으로 업데이트되었습니다. Ratatui는 호환되는 버전의 crossterm을 `ratatui::crossterm` 아래에 다시 내보내므로(re-export), 의존성 목록에서 버전 비호환 문제를 방지하는 데 활용할 수 있습니다.
 
-자세한 내용은 [이 이슈](https://github.com/ratatui/ratatui/issues/1298)를 참조하십시오.
+자세한 내용은 [이 이슈](https://github.com/ratatui/ratatui/issues/1298)를 참조하세요.
 
 ---
 
@@ -21317,7 +21317,7 @@ state.select_last();
 
 CI에서 API의 시맨틱 버저닝(Semver) 위반 여부를 검사하기 위해 [`cargo-semver-checks`](https://github.com/obi1kenobi/cargo-semver-checks)를 시험적으로 도입했습니다!
 
-관련 논의는 [해당 PR](https://github.com/ratatui/ratatui/pull/1166)을 참조하십시오.
+관련 논의는 [해당 PR](https://github.com/ratatui/ratatui/pull/1166)을 참조하세요.
 
 ---
 
@@ -21680,7 +21680,7 @@ cargo run --example demo2 --features="crossterm widget-calendar"
 
 이제 많은 위젯을 상태 변경 없이 렌더링할 수 있습니다.
 
-위젯 참조에 대해 `WidgetRef` 트레이트를 구현하고 불변(immutable) 방식으로 구현을 변경했습니다. 이를 통해 `Frame::render_widget()`에 위젯의 참조를 전달하여 위젯을 소모(consume)하지 않고도 렌더링할 수 있습니다. 또한 `Box`로 감싼 위젯(Boxed widget)도 렌더링할 수 있게 되었습니다.
+위젯 참조에 `WidgetRef` 트레이트를 구현하고 불변(immutable) 방식으로 구현을 변경했습니다. 이를 통해 `Frame::render_widget()`에 위젯의 참조를 전달하여 위젯을 소모(consume)하지 않고도 렌더링할 수 있습니다. 또한 `Box`로 감싼 위젯(Boxed widget)도 렌더링할 수 있게 되었습니다.
 
 참고: 이 트레이트는 `unstable-widget-ref` 피처 플래그 뒤에 숨겨져 있습니다. 향후 아래 코드가 `WidgetRef` 대신 단순히 `Widget`을 직접 사용할 수 있도록 하는 방안도 논의 중이므로 접근 방식이 변경될 수 있습니다.
 
@@ -21820,7 +21820,7 @@ assert_eq!(color, Color::Rgb(0, 0, 0));
 
 레이아웃의 기본 캐시 크기를 16에서 500으로 늘렸습니다.
 
-> 이는 노트북 터미널의 열(col)과 행(row) 수를 더한 뒤(171+51 = 222), 넉넉하게 2배를 곱하고 반올림하여 설정한 다소 자의적인 레이아웃 캐시 크기입니다. 이렇게 하면 모든 행과 모든 열에 대해 2배 이상의 레이아웃을 저장할 수 있는 충분한 엔트리가 확보되어 대다수의 애플리케이션에 넉넉합니다.
+> 이는 노트북 터미널의 열(col)과 행(row) 수를 더한 뒤(171+51 = 222), 넉넉하게 2배를 곱하고 반올림하여 설정한 다소 자의적인 레이아웃 캐시 크기입니다. 이렇게 하면 모든 행과 모든 열을 통틀어 2배 이상의 레이아웃을 저장할 수 있는 충분한 엔트리가 확보되어 대다수의 애플리케이션에 넉넉합니다.
 
 더 큰 캐시가 필요한 경우 `Layout::init_cache()`를 통해 캐시 크기를 직접 설정할 수 있습니다.
 
@@ -22222,7 +22222,7 @@ let layout = Layout::new(Direction::Horizontal, [
 
 이번 기능을 통해 호출자가 초과 공간을 `Rect`들에 분배하는 방식을 직접 구성할 수 있도록 지원합니다. 특정 `Rect`에 고정 크기를 부여하고 나머지 `Rect`들이 남은 공간을 차지하도록 유연하게 배치하고 싶을 때 유용합니다.
 
-이 기능을 사용하려면 `Cargo.toml`에 `unstable` 또는 `unstable-segment-size` 피처 플래그를 추가해야 합니다. 타입 명칭에 대해 아직 조율 중이기 때문입니다.
+이 기능을 사용하려면 `Cargo.toml`에 `unstable` 또는 `unstable-segment-size` 피처 플래그를 추가해야 합니다. 타입 명칭을 아직 조율 중이기 때문입니다.
 
 기본 동작은 마지막 세그먼트에 남은 공간을 모두 몰아주는 `SegmentSize::LastTakesRemainder`입니다.
 
@@ -22617,9 +22617,9 @@ error[E0599]: no method named `is_key_press` found for enum `crossterm::event::E
 
 기존 저장소에는 당시에 제기되었던 모든 이슈, 풀 리퀘스트(PR), 토론 내용이 보존되어 있으며, Ratatui에 코드나 문서를 기여하거나 문제를 제기할 때 훌륭한 참고 자료가 됩니다.
 
-우리는 기존 저장소의 모든 PR을 가져와 규모가 작은 많은 PR들을 직접 구현 및 병합했으며, 남은 PR들에 대해서도 분석 메모를 남겼습니다. 이러한 PR들은 임시(draft) PR로 등록되어 [imported from tui](https://github.com/ratatui/ratatui/pulls?q=is%3Apr+is%3Aopen+label%3A%22imported+from+tui%22) 라벨이 부여되어 있습니다. 각 PR의 현재 상태를 문서화해 두었으므로, 관심 있는 분은 누구든지 이를 이어받아 작업을 계속 진행하실 수 있습니다.
+우리는 기존 저장소의 모든 PR을 가져와 규모가 작은 많은 PR들을 직접 구현 및 병합했으며, 남은 PR들에도 분석 메모를 남겼습니다. 이러한 PR들은 임시(draft) PR로 등록되어 [imported from tui](https://github.com/ratatui/ratatui/pulls?q=is%3Apr+is%3Aopen+label%3A%22imported+from+tui%22) 라벨이 부여되어 있습니다. 각 PR의 현재 상태를 문서화해 두었으므로, 관심 있는 분은 누구든지 이를 이어받아 작업을 계속 진행하실 수 있습니다.
 
-이전 저장소에 등록되었던 모든 이슈를 그대로 이전하지는 않았습니다. 따라서 이전 저장소의 이슈를 계속 논의하거나 작업하고자 하는 경우 다음 절차를 따라 주시기 바랍니다:
+이전 저장소에 등록되었던 모든 이슈를 그대로 이전하지는 않았습니다. 따라서 이전 저장소의 이슈를 계속 논의하거나 작업하고자 하는 경우 다음 절차를 따라 주세요:
 
 - 새로운 이슈를 등록합니다.
 - 본문 시작 부분에 기존 이슈를 다음과 같이 참조 링크로 명시합니다:
@@ -22643,7 +22643,7 @@ error[E0599]: no method named `is_key_press` found for enum `crossterm::event::E
 
 `ratatui`는 터미널 UI를 구축하기 위한 도구(위젯)를 제공하지만, 애플리케이션의 구조를 어떻게 짜야 하는지 강제하거나 지시하지 않습니다. 개발자가 자신의 고유한 상황에 맞게 라이브러리를 가장 잘 활용할 방법을 스스로 결정해야 하므로 훨씬 더 높은 유연성을 누릴 수 있습니다.
 
-반면 `tui-realm`은 애플리케이션을 어떻게 구조화해야 하는지, 혹은 데이터가 어떻게 흘러가야 하는지에 대해 더 많은 가이드라인과 규칙을 부과합니다. 이러한 자유를 내어주는 대가로, `tui-realm`을 사용하면 다양한 기능을 기본적으로(Out of the box) 즉시 활용할 수 있으며, `ratatui`에서 동일한 작업을 수행할 때보다 애플리케이션에 작성해야 하는 코드의 양이 줄어들 수 있습니다.
+반면 `tui-realm`은 애플리케이션 구조나 데이터 흐름에 더 많은 가이드라인과 규칙을 부여합니다. 이러한 자유를 내어주는 대가로, `tui-realm`을 사용하면 다양한 기능을 기본적으로(Out of the box) 즉시 활용할 수 있으며, `ratatui`에서 동일한 작업을 수행할 때보다 애플리케이션에 작성해야 하는 코드의 양이 줄어들 수 있습니다.
 
 ### `ratatui`와 `cursive` 라이브러리의 구조적 차이점은 무엇인가요?
 
@@ -22800,7 +22800,7 @@ Ratatui를 사용하면 작성해야 할 코드는 다소 늘어날 수 있지�
 
 `ratatui`를 비롯한 전반적인 TUI 애플리케이션은 [box-drawing characters], [braille characters], 또는 아이콘과 같은 특수 그래픽 문자를 자주 사용합니다. 만약 터미널 글꼴이 해당 문자를 지원하지 않는다면 빈 네모(□)나 대체 문자로 깨져서 표시될 수 있습니다.
 
-이를 해결하기 위해서는 가장 호환성이 뛰어난 [nerd font]를 사용하는 것을 적극 권장합니다. [Kreative Square] 역시 훌륭한 대안입니다. 다만 글꼴마다 일부 문자의 렌더링 형태가 조금씩 다를 수 있다는 점은 유의하시기 바랍니다.
+이를 해결하기 위해서는 가장 호환성이 뛰어난 [nerd font]를 사용하는 것을 적극 권장합니다. [Kreative Square] 역시 훌륭한 대안입니다. 다만 글꼴마다 일부 문자의 렌더링 형태가 조금씩 다를 수 있다는 점은 유의하세요.
 
 또한 [Alacritty (see `builtin_box_drawing`)]나 [ITerm2]와 같은 일부 터미널 에뮬레이터에서는 상자 그리기 문자를 정확하게 렌더링하기 위해 별도의 특수 글꼴을 내부적으로 지정해 사용할 수도 있습니다.
 
@@ -22891,9 +22891,9 @@ fn render_ref(&self, area: Rect, buf: &mut Buffer) {
 
 이 방식은 위젯의 내부 구현 로직 자체에서 경계 처리를 세밀하게 핸들링해야 하는 극히 예외적인 상황에서는 한계가 있을 수 있지만, 그런 경우는 매우 드뭅니다(일반적인 위젯에서 이러한 예외 처리가 필요했던 사례는 거의 없습니다).
 
-레이아웃을 직접 계산할 때 지켜야 할 또 다른 일반적인 원칙은, 계산식 결과가 버퍼 바깥의 좌표를 생성하지 않도록 사전에 보장하는 것입니다. 좌표에 대해 수동으로 수행하는 모든 산술 연산은 잠재적 위험 요소로 간주해야 합니다. `Layout` 코드 자체는 항상 입력 제약 조건 내에 위치하도록 설계되어 있지만, Ratatui 코드베이스의 일부 영역에서는 이러한 처리가 완벽히 견고하지 못한 곳이 소수 존재합니다. (만약 그런 버그를 발견하신다면 이슈로 제보해 주시기 바랍니다!)
+레이아웃을 직접 계산할 때 지켜야 할 또 다른 일반적인 원칙은, 계산식 결과가 버퍼 바깥의 좌표를 생성하지 않도록 사전에 보장하는 것입니다. 좌표에 수동으로 수행하는 모든 산술 연산은 잠재적 위험 요소로 간주해야 합니다. `Layout` 코드 자체는 항상 입력 제약 조건 내에 위치하도록 설계되어 있지만, Ratatui 코드베이스의 일부 영역에서는 이러한 처리가 완벽히 견고하지 못한 곳이 소수 존재합니다. (만약 그런 버그를 발견하신다면 이슈로 제보해 주세요!)
 
-좌표를 계산할 때는 표준 라이브러리에 내장된 메서드(예: `u16::min()`, `u16::clamp()`)를 반드시 활용하십시오. 또한 이와 유사한 제약 조건을 손쉽게 보장할 수 있도록 `Rect::intersection()` 및 `Rect::clamp()` 메서드도 제공되고 있습니다.
+좌표를 계산할 때는 표준 라이브러리에 내장된 메서드(예: `u16::min()`, `u16::clamp()`)를 반드시 활용하세요. 또한 이와 유사한 제약 조건을 손쉽게 보장할 수 있도록 `Rect::intersection()` 및 `Rect::clamp()` 메서드도 제공되고 있습니다.
 
 추가로 텍스트의 행(Row)이나 열(Column) 단위로 동작하는 위젯을 위해, 범위 초과를 유발할 수 있는 증분 오프셋 계산 대신 안전하게 활용할 수 있는 이터레이터인 `Rect::columns()`와 `Rect::rows()`를 제공합니다. 이를 `Iterator::zip()` 메서드와 결합하면 유효한 데이터와 영역의 튜플 쌍을 매우 안전하게 생성할 수 있습니다. 예를 들어 `Text::render()`의 다음 코드처럼 활용할 수 있습니다:
 
