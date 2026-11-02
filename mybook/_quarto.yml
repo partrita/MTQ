@@ -72,6 +72,7 @@ book:
     - part: "단백질 공학, 면역학 및 항체 치료제"
       chapters:
         - protein-engineering/index.qmd
+        - protein-engineering-report/index.qmd
         - clinical-immunology/index.qmd
         - cancer-immunotherapy-methods/index.qmd
         - biomarkers-immunotherapy/index.qmd
