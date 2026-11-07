@@ -82,9 +82,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-01bb7a1379e84c45a3df81b310903cc3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-e0867d476a41e64c95a9ebfbd4f23aeb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-01bb7a1379e84c45a3df81b310903cc3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d078e9b02c756bd711679fd458506033.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-2cf76d743275b7001fb2943810b00824.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d078e9b02c756bd711679fd458506033.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -1043,7 +1043,7 @@ window.Quarto = {
   <li><a href="#plm의-응용" id="toc-plm의-응용" class="nav-link" data-scroll-target="#plm의-응용">PLM의 응용</a></li>
   <li><a href="#결론-및-논의" id="toc-결론-및-논의" class="nav-link" data-scroll-target="#결론-및-논의">결론 및 논의</a>
   <ul class="collapse">
-  <li><a href="#소형-단백질-언어-모델및-규모-조정" id="toc-소형-단백질-언어-모델및-규모-조정" class="nav-link" data-scroll-target="#소형-단백질-언어-모델및-규모-조정">5. 소형 단백질 언어 모델(및 규모 조정)</a></li>
+  <li><a href="#소형-단백질-언어-모델-및-규모-조정" id="toc-소형-단백질-언어-모델-및-규모-조정" class="nav-link" data-scroll-target="#소형-단백질-언어-모델-및-규모-조정">5. 소형 단백질 언어 모델 및 규모 조정</a></li>
   <li><a href="#다중-모드-단백질-언어-모델" id="toc-다중-모드-단백질-언어-모델" class="nav-link" data-scroll-target="#다중-모드-단백질-언어-모델">5. 다중 모드 단백질 언어 모델</a></li>
   <li><a href="#plm의-효율적인-학습-강화" id="toc-plm의-효율적인-학습-강화" class="nav-link" data-scroll-target="#plm의-효율적인-학습-강화">5. PLM의 효율적인 학습 강화</a></li>
   <li><a href="#도메인-특화-plm의-등장" id="toc-도메인-특화-plm의-등장" class="nav-link" data-scroll-target="#도메인-특화-plm의-등장">5. 도메인 특화 PLM의 등장</a></li>
@@ -1549,7 +1549,7 @@ ESM-3
 </tr>
 </tbody></table>
 <section id="인코더-전용-plm" class="level4">
-<h4 class="anchored" data-anchor-id="인코더-전용-plm">3.. 인코더 전용 PLM</h4>
+<h4 class="anchored" data-anchor-id="인코더-전용-plm">3. 인코더 전용 PLM</h4>
 <p>인코더 전용 PLM은 단백질 서열의 문맥적 표현을 추출하도록 설계되어 다양한 단백질 관련 작업의 분류 문제에 특히 적합하다. 이러한 모델은 트랜스포머 구조의 인코더 구성 요소를 사용하여 입력 서열을 처리하고 그들의 복잡한 관계와 특징을 포착한다. 몇 가지 인코더 전용 PLM을 모델별로 요약하면서 다양한 단백질 후속 작업의 훈련에 유용한 정보가 담긴 단백질 표현을 어떻게 만들어내는지 설명한다. 이 장에서 설명하는 인코더 전용 PLM 목록은 표 2에 나와 있다.</p>
 <section id="proteinbert" class="level5">
 <h5 class="anchored" data-anchor-id="proteinbert">ProteinBert</h5>
@@ -1586,7 +1586,7 @@ ESM-3
 </section>
 </section>
 <section id="인코더-디코더-plm" class="level4">
-<h4 class="anchored" data-anchor-id="인코더-디코더-plm">3.. 인코더-디코더 PLM</h4>
+<h4 class="anchored" data-anchor-id="인코더-디코더-plm">3. 인코더-디코더 PLM</h4>
 <p>인코더-디코더 PLM은 단백질 생물학의 서열 대 서열 작업을 해결하기 위해 설계되었다. 이러한 모델은 입력 단백질 서열을 문맥적 표현으로 변환하는 인코더와 대응하는 출력 서열을 생성하는 디코더를 결합하여 단백질 서열 생성 및 공학과 같은 다양한 작업에서 탁월한 성능을 발휘한다. 인코더-디코더 PLM의 인코더 구성 요소는 종종 단백질 표현(즉, 특징 추출기)으로 사용되며 디코더 구성 요소는 단백질 생성에 사용될 수 있다. 이 구조는 ProtT 및 ProstT5와 같은 모델에서 단백질 서열/구조의 복잡한 관계를 포착하는 데 사용된다. 인코더-디코더 PLM 목록은 표 3에 제시되어 있다.</p>
 <p>표 3 학습 데이터셋 및 구조 상세 정보를 포함한 인코더-디코더 PLM 요약</p>
 <table>
@@ -1739,7 +1739,7 @@ xTrimoPGLM
 </section>
 </section>
 <section id="디코더-전용-plm" class="level4">
-<h4 class="anchored" data-anchor-id="디코더-전용-plm">3.. 디코더 전용 PLM</h4>
+<h4 class="anchored" data-anchor-id="디코더-전용-plm">3. 디코더 전용 PLM</h4>
 <p>ProtGPT 와 같은 순수 디코더 전용 모델은 자기 회귀 작업을 위해 설계되었으며 이전 입력을 기반으로 서열을 예측하는 데 집중한다. 디코더 구성 요소만을 사용하여 구축된 모델은 모든 이전 아미노산이 주어졌을 때 서열의 다음 아미노산을 예측한다. 디코더 전용 PLM은 데노보 단백질 서열 생성에서 탁월한 성능을 보였으며 나아가 새로운 기능성 단백질을 설계함으로써 단백질 공학 및 신약 개발 분야에서 우수한 성과를 나타냈다. 이 장에서 설명하는 디코더 전용 PLM 목록은 표 4에 제시되어 있다.</p>
 <section id="progen" class="level5">
 <h5 class="anchored" data-anchor-id="progen">ProGen</h5>
@@ -1928,8 +1928,8 @@ ESM-IF , ProteinMPNN , MIF-ST , ESM-Design , EvoDiff
 <section id="결론-및-논의" class="level2">
 <h2 class="anchored" data-anchor-id="결론-및-논의">결론 및 논의</h2>
 <p>지난 몇 년 동안 단백질 언어 모델 분야에서는 엄청난 진전이 있었다. PLM의 가장 중요한 두 가지 용도는 후속 분류 작업인 단백질 이해 작업과 단백질/항체/생물학적 제제의 공학 및 설계인 단백질 생성 작업이었다. 단백질 서열을 기반으로 한 단백질 언어 모델 분야에서는 엄청난 개선이 있었지만 단백질 구조를 기반으로 한 단백질 언어 모델의 경우 아직 같은 상황이 아니다. AlphaFold 덕분에 모든 단백질에 대해 예측된 구조를 사용할 수 있게 되면서 우리는 단백질 구조 기반 언어 모델 분야에서 더 많은 발전을 보게 될 것이다. 더욱이 NLP 분야의 LLM 기술은 놀라운 속도로 발전하고 있으며 이러한 진보들은 PLM에 통합될 것으로 보이다. 이 분야의 한 가지 과제는 이러한 모델에서 생성된 임베딩에 대한 해석 가능성(interpretability)의 부족이었다. 아래에서는 이 분야에서 나타나고 있는 몇 가지 최신 트렌드를 요약한다.</p>
-<section id="소형-단백질-언어-모델및-규모-조정" class="level3">
-<h3 class="anchored" data-anchor-id="소형-단백질-언어-모델및-규모-조정">5. 소형 단백질 언어 모델(및 규모 조정)</h3>
+<section id="소형-단백질-언어-모델-및-규모-조정" class="level3">
+<h3 class="anchored" data-anchor-id="소형-단백질-언어-모델-및-규모-조정">5. 소형 단백질 언어 모델 및 규모 조정</h3>
 <p>PLM이 문맥적 관계를 이해하는 능력이 뛰어나고 단백질 생물정보학의 후속 작업에서 전통적인 접근 방식들을 앞선다는 점에는 의심의 여지가 없다. 최근에는 자연어 처리(NLP)와 같은 흐름을 따라 단백질 언어 모델의 규모가 계속 커지고 있다. 다만 이런 PLM을 학습시키는 일이 상당한 도전 과제라는 점에 유의해야 한다. 이와 관련하여 계산 요구량이 더 적으면서 대형 모델과 비슷하게 작동하는 소규모 단백질 언어 모델을 탐구하는 연구들이 이어지고 있다. 아울러 효율적인 코드베이스 구축, 현대적 구조 설계 및 데이터 품질 문제 해결을 위한 노력도 이어지고 있다. Amplify 는 기존의 다른 단백질 언어 모델보다 학습 및 배포 비용이 적게 드는 새로운 모델이다.</p>
 </section>
 <section id="다중-모드-단백질-언어-모델" class="level3">
@@ -2093,13 +2093,13 @@ a (h) = W _ {\mathrm {u p}} \cdot \sigma \left(W _ {\mathrm {d o w n}} \cdot h +
 <section id="비지도-단백질-클러스터링" class="level3">
 <h3 class="anchored" data-anchor-id="비지도-단백질-클러스터링">3. 비지도 단백질 클러스터링</h3>
 <section id="cath-구조적-계층-구조의-클러스터링" class="level4">
-<h4 class="anchored" data-anchor-id="cath-구조적-계층-구조의-클러스터링">3.. CATH 구조적 계층 구조의 클러스터링</h4>
+<h4 class="anchored" data-anchor-id="cath-구조적-계층-구조의-클러스터링">3. CATH 구조적 계층 구조의 클러스터링</h4>
 <p>CATH 는 단백질의 구조적 및 기능적 특징을 기반으로 단백질 구조를 분류하는 계층적 분류 시스템이다. 우리는 서열 잠재 공간에 구조 정보를 통합하는 능력을 결정함으로써 S-PLM의 성능을 평가했다. 단백질의 구조적 측면을 강조하기 위해 CATH 슈퍼패밀리당 하나의 대표 서열을 의도적으로 선택했으며 최대 서열 정체성이 40%인 CATHS 데이터셋을 사용했다. 분석은 서열 유사성 기반의 상동 슈퍼패밀리를 제외하고 CATH 계층 구조의 클래스, 아키텍처 및 토폴로지 수준에 중점을 두었다.</p>
 <p>S-PLM 및 S-PLM2에 의해 생성된 서열 표현을 서열 정보에만 의존하는 모델인 ESM (ESM2_t33_650M_UR50D)S-PLM의 기반이 되는 사전 학습된 PLM과 서열로부터 3D 구조 또는 3D 구조 토큰을 예측하여 사전 학습된 두 가지 다른 구조 인지 모델인 PromptProtein 및 ProstT 와 비교했다. 그림 4a는 클래스, 아키텍처 및 토폴로지를 포함한 다양한 CATH 계층 수준에서 이러한 모델에 의해 생성된 단백질 임베딩의 t-SNE 시각화를 보여준다. 결과에 따르면 S-PLM1과 S-PLM2는 다른 모델에 의해 생성된 임베딩에 비해 CATH 구조적 계층 구조를 더 명확하고 뚜렷하게 분리함을 나타낸다. 이는 S-PLM이 서열 잠재 공간에 구조 정보를 더 효과적으로 통합함을 시사한다.</p>
 <p>Calinski-Harabasz 인덱스(CHI) 는 군집 간 분산과 군집 내 분산 사이의 비율을 측정하여 군집 유효성에 대한 지표 역할을 한다. 다양한 모델에 의해 생성된 서열 임베딩이 CATH 구조적 계층 구조를 구별하는 능력을 정량적으로 평가하기 위해 CHI를 사용했다. 이 평가에서 CATH 카테고리는 지상 검증(ground-truth) 군집으로 사용되었다. 그림 4b에 설명된 것처럼 S-PLM1의 CHI 점수는 클래스, 아키텍처 및 토폴로지 수준에서 ProsT5보다 약 30% 높고 ESM2보다 약 300% 높다. 그러나 S-PLM2는 훨씬 더 뚜렷한 이득을 보여주었으며 CHI 점수는 CATH 클래스에서 ProsT5보다 약 140% 높고 CATH 아키텍처 및 토폴로지 모두에서 약 50% 높았다. CHI 점수를 기준으로 하면, S-PLM2는 분명히 S-PLM1을 능가하며 이는 S-PLM2가 3D 좌표 특징과 잔기 수준 대조 학습을 직접 사용하기 때문에 CATH 구조적 계층 구조를 클러스터링하는 데 더 효과적임을 시사한다. 이러한 CATH 카테고리가 단백질 구조에 기반한다는 점을 고려할 때, 이 분석은 S-PLM1과 S-PLM 모두에서 생성된 서열 임베딩이 단백질 구조 정보에 대한 상당한 인식을 보여주며 S-PLM2가 더 정제된 표현을 제공한다는 것을 강력하게 뒷받침한다.</p>
 </section>
 <section id="효소-클러스터링" class="level4">
-<h4 class="anchored" data-anchor-id="효소-클러스터링">3.. 효소 클러스터링</h4>
+<h4 class="anchored" data-anchor-id="효소-클러스터링">3. 효소 클러스터링</h4>
 <p>데아미나제(deaminase) 패밀리 클러스터링에서 S-PLM 및 S-PLM 모델의 효과를 평가하기 위해, 이들의 서열 임베딩을 ESM, PromptProtein 및 ProstT5라는 세 가지 다른 단백질 언어 모델(PLM)에 의해 생성된 임베딩과 비교했다. 서열 데이터는 아미노산 서열 분석만으로는 감지할 수 없는 새로운 패밀리와 데아미나제 기능을 식별하기 위해 구조 기반 클러스터링을 사용한 Huang 등의 연구에서 가져왔다 . S-PLM 및 S-PLM2를 사용하여 각 단백질에 대해 128차원 임베딩을 생성한 다음 t-SNE를 적용하여 이러한 임베딩을 2D 표현으로 축소하고 K-평균 클러스터링을 사용했다. 조정 랜드 인덱스(ARI)는 K-평균 클러스터를 알려진 데아미나제 패밀리 어노테이션과 비교하여 계산되었다. 그림 5a, b에서 볼 수 있듯이 S-PLM1은 ARI 0., S-PLM2는 ARI 0.86을 달성하여 ESM (0.63), Prompt-Protein (0.46) 및 ProstT (0.80)를 능가했다.</p>
 <p>또한 인산기를 단백질로 전달하여 인산화를 촉진하는 키나제(kinases) 그룹의 클러스터링 성능도 조사했다. GPS.0에서 9개의 키나제 그룹으로 구성된 336개의 키나제를 각각의 키나제 도메인 서열과 함께 추출했다. 이러한 도메인 서열을 사용하여 각 키나제에 대해 서열 임베딩을 생성했다. 비교를 위해 ESM, PromptProtein 및 ProstT5를 사용하여 임베딩도 생성했다. t-SNE 플롯(그림 5c) 및 ARI 비교(그림 5d)에 설명된 것처럼 S-PLM1은 키나제 그룹에 대해 ARI 0.72로 강력한 클러스터링 성능을 달성했으며 S-PLM2는 ARI 0.78로 훨씬 더 나은 성능을 보여주었다. 이는 ESM (0.28), PromptProtein (0.28) 및 ProstT (0.61)보다 상당히 높은 수치이다. 이러한 우수한 성능은 S-PLM1과 S-PLM 모두 키나제 그룹을 특성화하는 데 필수적인 구조 정보를 통합했기 때문일 수 있다. 요약하자면, S-PLM은 효소 클러스터링을 위한 효과적인 서열 표현을 제공한다.</p>
 </section>
@@ -2394,19 +2394,19 @@ EC 번호
 <section id="모델-최적화" class="level3">
 <h3 class="anchored" data-anchor-id="모델-최적화">3. 모델 최적화</h3>
 <section id="lora-소개" class="level4">
-<h4 class="anchored" data-anchor-id="lora-소개">3.. LoRA 소개</h4>
+<h4 class="anchored" data-anchor-id="lora-소개">3. LoRA 소개</h4>
 <p>저차원 적응(LoRA) 은 신경망을 위한 파라미터 효율적인 미세 조정 기술이다. 사전 학습된 모델의 가중치에 저차원 분해를 적용하여 미세 조정 중에 훈련해야 하는 파라미터 수를 크게 줄여 특히 다운스트림 작업에서 훈련 효율성을 높이다.</p>
 <p>LoRA는 신경망의 가중치 업데이트 행렬 ΔW를 두 개의 작은 행렬의 곱으로 분해하여 작동한다. <span class="math inline">\(\Delta { \cal W } = { \cal A } \times { \cal B }\)</span>이며 여기서 <span class="math inline">\(A \in R ^ { d \times \ r }\)</span>이고 <span class="math inline">\(\boldsymbol { B } \in \boldsymbol { R } ^ { r \times \textit { k } }\)</span>인다. <span class="math inline">\(r\)</span>은 저차원 차원(일반적으로 <span class="math inline">\(d\)</span> 및 <span class="math inline">\(k\)</span>보다 훨씬 작음)인다. 미세 조정 중에 원래 가중치 행렬 W는 고정되고 저차원 행렬 <span class="math inline">\(A\)</span>와 <span class="math inline">\(B\)</span>만 훈련된다. 이는 훈련 가능한 파라미터 수를 <span class="math inline">\(d \times k\)</span>에서 <span class="math inline">\(( d \times \boldsymbol { r } ) + ( \boldsymbol { r } \times \boldsymbol { k } )\)</span>로 줄여 미세 조정을 더욱 효율적으로 만든다. 최종 적응된 가중치는 <span class="math inline">\(W + \Delta W = W + A \times B\)</span>가 되어 모델이 더 적은 파라미터로 새로운 작업에 적응하면서 사전 학습된 지식을 유지할 수 있게 해준다.</p>
 </section>
 <section id="minlora-라이브러리-설치하기" class="level4">
-<h4 class="anchored" data-anchor-id="minlora-라이브러리-설치하기">3.. minLoRA 라이브러리 설치하기</h4>
+<h4 class="anchored" data-anchor-id="minlora-라이브러리-설치하기">3. minLoRA 라이브러리 설치하기</h4>
 <p>minLoRA(https://github.com/cccntu/minlora)는 LoRA를 재구현하기 위한 작지만 완벽한 기능을 갖춘 PyTorch 라이브러리이다. 모델 정의를 수정하지 않고도 <code>torch.nn.Module</code>을 상속하는 모든 모델에 LoRA를 직접 적용할 수 있다. 이 라이브러리는 파라미터화를 위해 PyTorch의 <code>torch.nn.utils.parametrize</code>를 활용하므로 확장이 용이하며 사용자가 맞춤형 LoRA 파라미터화 방법을 추가할 수 있도록 지원한다. 약 100줄 내외의 코드만으로도 minLoRA는 다양한 LoRA 모델의 학습과 추론을 지원하며 LoRA 통합을 위한 단순하면서도 강력한 솔루션을 제공한다. minLoRA 라이브러리를 설치하려면 다음 단계를 따르라.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/cccntu/minLoRA.git</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> minLoRA</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-e</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="protflash에서-lora-적용하기" class="level4">
-<h4 class="anchored" data-anchor-id="protflash에서-lora-적용하기">3.. ProtFlash에서 LoRA 적용하기</h4>
+<h4 class="anchored" data-anchor-id="protflash에서-lora-적용하기">3. ProtFlash에서 LoRA 적용하기</h4>
 <p>이 코드 조각은 LoRA 모듈을 ProtFlash 모델에 통합하고 LoRA 파라미터를 최적화하는 방법을 보여준다. 구체적인 단계는 다음과 같다.</p>
 <ol type="1">
 <li>LoRA 구성 정의: <code>LoRAParametrization.from_linear</code> 함수를 사용하여 <code>torch.nn.Linear</code> 레이어에 대한 LoRA 가중치 파라미터화를 정의한다. 여기서 <code>rank = 3</code>은 저차원 근사(low-rank approximation)의 랭크가 3임을 나타낸다.</li>
@@ -2544,7 +2544,7 @@ EC 번호
 <section id="deeprank-gnn-esm-계산-실행" class="level3">
 <h3 class="anchored" data-anchor-id="deeprank-gnn-esm-계산-실행">3. DeepRank-GNN-esm 계산 실행</h3>
 <section id="명령줄-인터페이스-도구를-사용한-계산-실행" class="level4">
-<h4 class="anchored" data-anchor-id="명령줄-인터페이스-도구를-사용한-계산-실행">3.. 명령줄 인터페이스 도구를 사용한 계산 실행</h4>
+<h4 class="anchored" data-anchor-id="명령줄-인터페이스-도구를-사용한-계산-실행">3. 명령줄 인터페이스 도구를 사용한 계산 실행</h4>
 <p>하나의 입력 예시를 통해 도구의 사용법을 보여준다.</p>
 <ol type="1">
 <li>먼저 이 예시를 실행할 별도의 ‘tutorial’ 디렉토리를 생성한다.</li>
@@ -2575,7 +2575,7 @@ EC 번호
 <p>적은 수(<span class="math inline">\(&lt;100\)</span>)의 PDB 구조 순위를 매길 때는 명령줄 인터페이스 도구 사용을 권장한다. 이 도구는 모든 기능을 하나의 사용자 친화적인 명령으로 통합했다. 그러나 한 번에 하나의 입력 PDB만 처리하기 때문에 과정이 상대적으로 느릴 수 있으며 Python에서 직접 예측을 실행하는 것이 더 효율적일 수 있다(소제목 3.. 참조).</p>
 </section>
 <section id="딥러닝-아키텍처를-이용한-python에서의-계산" class="level4">
-<h4 class="anchored" data-anchor-id="딥러닝-아키텍처를-이용한-python에서의-계산">3.. 딥러닝 아키텍처를 이용한 Python에서의 계산</h4>
+<h4 class="anchored" data-anchor-id="딥러닝-아키텍처를-이용한-python에서의-계산">3. 딥러닝 아키텍처를 이용한 Python에서의 계산</h4>
 <p>DeepRank-GNN-esm은 Python 딥러닝 아키텍처로도 사용할 수 있다. 예시(PDBID: 1ATN)를 통해 그 과정을 설명한다. 데이터 로딩을 위해 여러 CPU를 활용하여 병렬 예측을 실행함으로써 명령줄 도구 버전보다 프로세스 속도를 높일 수 있다.</p>
 <p>다음은 DeepRank-GNN-esm 아키텍처를 사용하여 예시 PDB 파일(PDB 파일 명명 요구 사항은 참고 5 참조)을 입력으로 <span class="math inline">\(f_{nat}\)</span> 예측을 수행하는 단계이다. 독자의 편의를 위해 모든 단계에 대한 Jupyter 노트북 버전도 제공한다(참고 6 참조).</p>
 <ol type="1">
@@ -2649,7 +2649,7 @@ EC 번호
 <section id="결과-분석" class="level3">
 <h3 class="anchored" data-anchor-id="결과-분석">3. 결과 분석</h3>
 <section id="명령줄-인터페이스-도구-출력-분석" class="level4">
-<h4 class="anchored" data-anchor-id="명령줄-인터페이스-도구-출력-분석">3.. 명령줄 인터페이스 도구 출력 분석</h4>
+<h4 class="anchored" data-anchor-id="명령줄-인터페이스-도구-출력-분석">3. 명령줄 인터페이스 도구 출력 분석</h4>
 <p>명령줄 도구는 현재 작업 디렉토리 내에 결과 폴더를 생성한다. 폴더의 구조는 다음과 같다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>1B6C-gnn_esm_pred_A_B</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>├── 1B6C.pdb</span>
@@ -2674,7 +2674,7 @@ EC 번호
 <span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(distance)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="python-deeprank-gnn-esm-네트워크-아키텍처-출력-분석" class="level4">
-<h4 class="anchored" data-anchor-id="python-deeprank-gnn-esm-네트워크-아키텍처-출력-분석">3.. Python DeepRank-GNN-esm 네트워크 아키텍처 출력 분석</h4>
+<h4 class="anchored" data-anchor-id="python-deeprank-gnn-esm-네트워크-아키텍처-출력-분석">3. Python DeepRank-GNN-esm 네트워크 아키텍처 출력 분석</h4>
 <p>위에서 제공한 코드 조각은 “GNN_esm_prediction.hdf5”라는 이름의 출력 HDF 파일을 생성한다. 명령줄 도구의 출력과 마찬가지로 Python 코드를 통해 예측된 <span class="math inline">\(f_{nat}\)</span>에 액세스할 수 있다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> h5py</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> h5py.File(<span class="st">"GNN_ism_prediction.hdf5"</span>,<span class="st">"r+"</span>)</span>
@@ -2772,7 +2772,7 @@ EC 번호
 <p>다양한 최상위 머신러닝 방법(CAFA 데이터셋 기준, 참고 1)의 성능을 여러 지표를 사용해 모델 생물에서 추정했다(참고 2, 3). ProtTrans(ProtT5) 모델이 가장 우수한 성능을 보여 프로테옴 주해를 확장하는 데 선택되었다(소제목 3. 참조).</p>
 <p>FANTASIA는 goPredSim 방식을 대규모로 구현한 것으로, 높은 RAM 요구량 때문에 워크스테이션이나 HPC 시설이 필요하다(참고 4). FANTASIA(그림 1)는 (1) FASTA 펩타이드 파일을 입력으로 받아(그림 1a), (2) 데이터를 전처리하고(참고 5, 그림 1d), (3) GOPredSIM(ProtT 모델 활용)을 실행하여 GO 주해를 수행하며(참고 6, 그림 1b, e), (4) topGO 농축 분석 도구 의 입력값으로 바로 사용할 수 있는 출력 파일을 생성한다(그림 1c, f). 모든 이소폼(isoform)을 입력으로 사용할 경우(그림 1e), 각 유전자 이소폼의 GO 용어를 통합하여(그림 1f) 유전자당 GO 용어 목록을 만든다. 상세한 다운로드 지침은 여기(https://github.com/MetazoaPhylogenomicsLab/FANTASIA)에서 확인할 수 있다.</p>
 <section id="singularity-이미지를-이용한-설치-cpu-전용" class="level4">
-<h4 class="anchored" data-anchor-id="singularity-이미지를-이용한-설치-cpu-전용">3.. Singularity 이미지를 이용한 설치 (CPU 전용)</h4>
+<h4 class="anchored" data-anchor-id="singularity-이미지를-이용한-설치-cpu-전용">3. Singularity 이미지를 이용한 설치 (CPU 전용)</h4>
 <p>현재 Singularity 이미지로 구현된 FANTASIA를 실행하려면 기본적인 커맨드라인 기술이 필요하다.</p>
 <ol type="1">
 <li>Singularity 이미지를 다운로드한다(https://cloud.sylabs.io/library/gemma.martinezredondo/fantasia/fantasia 에서 이용 가능).</li>
@@ -2783,7 +2783,7 @@ EC 번호
 </ol>
 </section>
 <section id="fantasia-로컬-설치-gpu-지원" class="level4">
-<h4 class="anchored" data-anchor-id="fantasia-로컬-설치-gpu-지원">3.. FANTASIA 로컬 설치 (GPU 지원)</h4>
+<h4 class="anchored" data-anchor-id="fantasia-로컬-설치-gpu-지원">3. FANTASIA 로컬 설치 (GPU 지원)</h4>
 <p>Singularity를 사용할 수 없는 환경을 위해 소스 코드를 제공하며 숙련된 사용자가 직접 설치할 수 있다.</p>
 <ol type="1">
 <li>http://gofile.me/5wDJy/CI8zCiijR 에서 스크립트와 파일을 다운로드한다.</li>
@@ -3285,13 +3285,13 @@ SVM
 <h3 class="anchored" data-anchor-id="signalp-6.-사용법">3. SignalP 6. 사용법</h3>
 <p>웹 서버에서는 시퀀스를 붙여넣거나 업로드한 후 ‘Submit’을 클릭하면 된다(그림 1 참조). 명령줄에서는 ‘signalp -ff input.fasta -od output-directory’ 명령어를 실행한다.</p>
 <section id="옵션" class="level4">
-<h4 class="anchored" data-anchor-id="옵션">3.. 옵션</h4>
+<h4 class="anchored" data-anchor-id="옵션">3. 옵션</h4>
 <p>유기체(Organism): 소제목 1.1에서 설명했듯이, SignalP 6.0은 유기체 그룹 라벨과 무관하게 작동한다. 그룹 라벨을 무작위로 섞었을 때도 성능 저하가 관찰되지 않았기 때문이다. 그럼에도 불구하고 ‘Eukarya’(진핵생물)와 ‘Other’(기타) 중 하나를 선택하도록 한 것은, 진핵생물에서 Sec/SPI 유형이 아닌 신호 펩타이드(SP)에 대한 잘못된 예측을 억제하기 위함이다(참고 4 확인). 시퀀스의 출처를 모른다면 ‘Other’를 선택하라. 명령줄 인터페이스에서는 ‘-org eukarya’ 또는 ‘-org other’로 그룹을 지정한다.</p>
 <p>출력 형식(Output Format): ‘Long’ 출력 형식은 각 시퀀스에 대해 시퀀스 내 각 위치별 영역 확률을 보여주는 플롯을 제공한다(아래 참조). 대량의 시퀀스를 제출할 때는 그림이 포함되지 않는 ‘Short’ 형식을 사용하라. 명령줄 인터페이스에서 출력 형식은 ‘-fmt’ 옵션으로 지정하며 ‘txt’, ‘png’, ‘eps’, ‘all’, ‘none’ 값을 가질 수 있다. 마지막 두 값은 각각 ‘Long’과 ‘Short’ 형식에 해당하며 앞의 세 값은 텍스트 출력만 하거나 특정 유형의 플롯을 추가로 생성하는 중간 단계의 옵션이다.</p>
 <p>모델 모드(Model Mode): ‘Fast’와 ‘Slow’ 모드가 있다. SignalP 6.0은 3중 중첩 교차 검증(Three-fold nested cross-validation)으로 학습되었다. 즉, 데이터셋을 3개의 파티션으로 나누고(어떤 시퀀스도 다른 파티션의 시퀀스와 30% 이상의 정체성을 갖지 않도록 함), 각 파티션을 테스트 세트로 사용하는 동안 나머지 두 파티션을 다양한 조합의 학습 및 검증용으로 사용했다. 이를 통해 총 6개의 네트워크가 학습되었다. 미세 조정(fine-tuning)을 거쳤으므로 이 6개의 ProtBERT 모델은 서로 동일하지 않는다. ‘Slow’ 모드는 이 6개 모델을 순차적으로 실행하여 출력 확률의 평균을 낸다. ‘Fast’ 모드는 ‘모델 증류(model distillation)’ 기법을 기반으로 하며 하나의 네트워크가 ‘Slow’ 모드의 출력을 모방하도록 학습되었다(SignalP 6. 논문의 보충 참고 사항 1 참조). 따라서 ‘Fast’ 모드는 ‘Slow’ 모드에 비해 시간 소모가 6분의 1에 불과한다. 비신호 펩타이드(non-SP)와 5가지 SP 유형 사이의 식별 성능은 원래 모델과 매우 흡사하지만(SignalP 6. 논문의 보충 표 12 참조), 절단 부위(cleavage site) 예측 성능은 다소 떨어질 수 있다. 정확한 절단 부위와 영역 경계가 중요하다면 ‘Slow’ 모드를 사용하라.</p>
 </section>
 <section id="출력" class="level4">
-<h4 class="anchored" data-anchor-id="출력">3.. 출력</h4>
+<h4 class="anchored" data-anchor-id="출력">3. 출력</h4>
 <p>‘Long’ 출력 형식을 사용하면 입력된 각 시퀀스에 대해 표와 플롯이 생성된다. 표는 5가지 SP 유형과 ‘Other’(비신호 펩타이드)에 대한 시퀀스별 확률을 보여준다. SP로 예측된 경우 절단 부위도 표시된다. 플롯(그림 2, 3, 4, 5, 6 참조)은 영역 확률을 나타낸다.</p>
 <p><img src="images/408cd99cf2052ae1aefc58afa0d7d252091da6958f9c8cc6a5d1fec82ffcf0d.jpg" class="img-fluid"> SignalP 6. 예측: Sp_P94691_CYC3B_DESAF 염기성 사이토크롬 c Desulfocurvibacter africanus 그림 2 n-, h- 영역을 포함하는 Sec/SPI 신호 펩타이드 예측 결과를 보여주는 SignalP 6. 플롯 예시</p>
 <p><img src="images/270bb0593f8407336d9c63aed683a72be32693324b2b23eb38412318601b8da.jpg" class="img-fluid"> SignalP 6. 예측: sp_POA912_PAL_ECOLI 펩티도글리칸 결합 지질단백질(Peptidoglycan-associated lipoprotein) 대장균 그림 3 n- 영역을 포함하는 Sec/SPII 신호 펩타이드 예측 결과를 보여주는 SignalP 6. 플롯 예시</p>
@@ -3314,12 +3314,12 @@ SVM
 </ol>
 <p>웹 서버에서는 시퀀스를 붙여넣거나 업로드한 후 ‘Submit’을 클릭한다. 명령줄에서는 ‘deeploc -f input.fasta -o output-directory’를 실행한다.</p>
 <section id="옵션-1" class="level4">
-<h4 class="anchored" data-anchor-id="옵션-1">3.. 옵션</h4>
+<h4 class="anchored" data-anchor-id="옵션-1">3. 옵션</h4>
 <p>모델(Model): ‘High-quality (Slow)’ 또는 ‘High-throughput (Fast)’ 중 하나를 선택할 수 있다. 이 옵션은 각각 ProtT5(매개변수 30억 개) 또는 ESM1b(매개변수 6억 5천만 개) 사전 학습 모델을 선택한다. ‘Slow’ 모델은 ‘Fast’ 모델보다 약 2~4배 정도 더 오래 걸린다(DeepLoc 2. 및 2. 논문의 보충 표 1 참조 ). 명령줄 인터페이스에서 모델은 ‘-m Accurate’ 또는 ‘-m Fast’로 선택한다.</p>
 <p>출력 형식(Output Format): ‘Long’ 출력 형식은 각 시퀀스에 대해 로고 형태의 어텐션 플롯(attention plot)을 제공한다(아래 참조). 대량의 시퀀스를 제출할 때는 그림이 제외된 ‘Short’ 형식을 사용하라. 명령줄 인터페이스에서는 ‘-p’ 옵션을 통해 플롯 생성을 요청할 수 있다.</p>
 </section>
 <section id="출력-1" class="level4">
-<h4 class="anchored" data-anchor-id="출력-1">3.. 출력</h4>
+<h4 class="anchored" data-anchor-id="출력-1">3. 출력</h4>
 <p>‘Long’ 출력을 선택하면 각 시퀀스에 대해 헤더, 두 개의 표, 그리고 그림이 생성된다. 헤더에는 예측된 위치(localization), 막 결합(membrane association), 그리고 선별 신호(sorting signal)가 표시된다. DeepLoc 2.1은 멀티 라벨(multi-label) 방식이므로 각 카테고리에서 두 개 이상의 라벨이 예측될 수 있다. ‘위치’와 ‘막 결합’에는 항상 하나 이상의 라벨이 표시되지만 ‘신호’는 비어 있을 수 있다.</p>
 <p>그림 7은 쥐의 Thy-1 항원에 대한 헤더와 표를 보여준다. 이 단백질은 지질 고정 단백질(lipid-anchored protein)로서 세포막에 위치하는 것으로 정확히 예측되었다. 하지만 SP와 GPI 앵커가 예측되었어야 함에도 신호가 하나도 예측되지 않아 완벽한 예측은 아니다. ‘위치’ 및 ‘막 결합’ 카테고리에서 선택된 라벨은 초록색 배경으로 표시된다. 초록색의 진하기는 확률 점수와 관련 임계값 사이의 차이를 반영한다. 확률 차이가 클수록 초록색이 더 진해진다. 출력 페이지 상단의 ‘Probability thresholds’ 버튼을 누르면 임계값을 확인할 수 있다.</p>
 <p>‘위치’나 ‘막 결합’의 어떤 라벨도 임계값을 넘지 못할 경우, 임계값에 가장 가까운 라벨이 예측값으로 선택된다. 이 경우 초록색 배경이 표시되지 않으며 예측에 대한 신뢰도는 낮다.</p>
@@ -3450,7 +3450,7 @@ SVM
 <h3 class="anchored" data-anchor-id="deeplocpro-1.-사용법">3. DeepLocPro 1. 사용법</h3>
 <p>웹 서버에서는 시퀀스를 붙여넣거나 업로드한 후 ‘Submit’을 클릭한다. 명령줄에서는 ‘deeplocpro -f input.fasta -o output-directory’를 실행한다.</p>
 <section id="옵션-2" class="level4">
-<h4 class="anchored" data-anchor-id="옵션-2">3.. 옵션</h4>
+<h4 class="anchored" data-anchor-id="옵션-2">3. 옵션</h4>
 <p>유기체 그룹(Organism Group): 옵션으로 ‘Any’(기본값), ‘Archaea’(고균), ‘Gram negative’(그람 음성), ‘Gram positive’(그람 양성)가 있다(참고 9 확인). 모델 자체는 유기체 그룹에 구애받지 않는다. 이 옵션은 단순히 고균이나 그람 양성균 데이터에서 생물학적으로 불가능한 ‘외막(outer membrane)’이나 ‘주변질(periplasmic)’ 예측이 나오는 것을 억제하기 위한 장치이다. 이러한 예측은 ‘세포외(extracellular)’로 재할당된다. 명령줄 인터페이스에서 그룹은 ‘-g’ 옵션과 ‘any’, ‘archaea’, ‘positive’, ‘negative’ 인자로 지정한다.</p>
 <p>출력 형식(Output Format): ‘Long’ 출력 형식은 각 시퀀스에 대해 로고 형태의 어텐션 플롯을 제공한다(아래 참조). 대량의 시퀀스를 제출할 때는 그림이 제외된 ‘Short’ 형식을 사용하라. 명령줄 인터페이스에서는 ‘-p’ 옵션을 통해 플롯을 요청할 수 있다.</p>
 <p>sp_P0ADC1_LPTE_ECOLI 예측된 위치: 외막(Outer Membrane)</p>
@@ -3506,7 +3506,7 @@ SVM
 <p>그림 10 UniProt 시퀀스에 대한 결과를 보여주는 DeepLocPro 1.0의 로고 형태 어텐션 플롯 예시</p>
 </section>
 <section id="출력-2" class="level4">
-<h4 class="anchored" data-anchor-id="출력-2">3.. 출력</h4>
+<h4 class="anchored" data-anchor-id="출력-2">3. 출력</h4>
 <p>DeepLocPro 1.0의 출력 결과는 DeepLoc 2.1과 매우 유사하지만 여러 면에서 더 단순하다. 선별 신호나 막 유형 예측이 없으며 임계값 표도 제공되지 않는다. DeepLocPro 1.0은 단일 라벨(single-label) 방식이므로 단순히 가장 높은 점수를 받은 카테고리를 예측값으로 선택하기 때문이다.</p>
 <p>각 시퀀스별로 표와 어텐션 플롯이 제공된다. 위 예시에서 대장균의 LPS 조립 지질단백질인 LptE는 외막에 위치하는 것으로 정확히 예측되었다. 표(그림 9)에서 배경색은 초록색이며 진하기는 각 위치의 확률에 비례한다. 두 군데 이상 초록색 배경이 뚜렷하게 보인다면 이는 여러 위치에 존재한다는 뜻이 아니라, DeepLocPro 1.0이 정확한 위치에 대해 확신하지 못하는 낮은 신뢰도의 예측임을 의미한다.</p>
 <p>어텐션 플롯(그림 10)을 보면 DeepLocPro 1.0이 신호 펩타이드(Sec/SPII 유형이며 1~18번 위치에 해당)의 리포박스(lipobox)를 강조하고 있는 것으로 보이다.</p>
@@ -6394,7 +6394,7 @@ IVEGQDAEVGLSPWQVMLFR
 <p>LLM/pLM은 대규모 데이터셋에서 자기 지도 학습 방식으로 사전 훈련되어 특정 작업에 얽매이지 않으므로 종종 “파운데이션(foundation)” 모델이라고 불린다 . PTM 부위 예측에서 파운데이션 모델은 특징 추출기(즉, 특징 기반 접근 방식)로 사용되거나 특정 작업에 적응하도록 미세 조정된다. 이 섹션에서는 이 두 가지 접근 방식을 자세히 설명한다.</p>
 <p><img src="images/c3c9506da34362bd56091c38bcd49445d5d2183a06933981a98465d24c39f50d.jpg" class="img-fluid"> 그림 1 본 장에서 논의된 트렌드의 개략도</p>
 <section id="특징-기반-접근-방식llmplm을-특징-추출기로-사용" class="level4">
-<h4 class="anchored" data-anchor-id="특징-기반-접근-방식llmplm을-특징-추출기로-사용">3.. 특징 기반 접근 방식(LLM/pLM을 특징 추출기로 사용)</h4>
+<h4 class="anchored" data-anchor-id="특징-기반-접근-방식llmplm을-특징-추출기로-사용">3. 특징 기반 접근 방식(LLM/pLM을 특징 추출기로 사용)</h4>
 <p>사전 훈련된 임베딩은 파운데이션 모델(우리의 경우 pLM)의 마지막 은닉층에서 얻은 텐서이다. 이러한 임베딩은 종종 “마지막 은닉 상태(last hidden states)”라고 불린다. 임베딩의 차원은 추출된 은닉층의 크기에 의해 결정된다. 예를 들어 GPT2-small의 마지막 은닉층은 768차원이므로 각 토큰은 <span class="math inline">\(768 \times 1\)</span> 크기의 텐서로 표현된다. 이러한 임베딩은 파운데이션 모델의 파라미터를 동결한 상태에서 작업 특화 헤드를 추가함으로써 모든 다운스트림 단백질 작업에 대해 미세 조정될 수 있다. 따라서 이 접근 방식은 특징 기반 미세 조정(Feature-based finetuning)이라고도 불린다 .</p>
 <p>작업에 따라 최적의 표현을 제공하도록 이러한 예측 헤드에 대한 입력을 조정해야 한다. 단백질 수준의 작업(예: DNA 결합 단백질 예측)에서는 일반적으로 풀링(pooling), 주의 집중 기반 풀링 또는 [CLS] 토큰 사용이라는 세 가지 표현 기술 중 하나를 채용한다 . 풀링에서는 서열 전반의 모든 잔기 임베딩을 평균하는 평균 풀링을 적용하거나, 각 임베딩 차원의 최댓값만 사용하는 최대 풀링을 적용한다. 또는 주의 집중 메커니즘을 통해 임베딩의 가중 평균을 계산하는 주의 집중 기반 풀링을 사용하기도 한다 .</p>
 <p>PTM 부위 예측은 잔기 수준 작업이므로, 부위 특화 표현을 얻기 위해 특정 잔기 또는 관심 부위의 국소 환경을 통합해야 한다. pLM의 출현 이후 연구자들은 부위 특화 표현을 도출하기 위해 여러 전략을 채택해 왔다 . 특히 Pratyush 등의 연구 는 이러한 전략을 네 가지 주요 유형으로 분류했다. 윈도우 서열 기반 잔기별 임베딩(WSPE), 윈도우 서열 기반 윈도우 임베딩(WSWE), 전체 서열 기반 잔기별 임베딩(FSPE), 그리고 전체 서열 기반 윈도우 임베딩(FSWE)인다. WSPE와 FSPE에서는 임베딩이 관심 부위에 대해서만 도출되지만 pLM에 제공되는 입력에서 차이가 있다. WSPE는 해당 부위 주변의 잔기 윈도우를 입력으로 사용하는 반면, FSPE는 전체 서열을 사용한다. 한편 WSWE와 FSWE는 관심 부위를 둘러싼 윈도우 내 모든 잔기의 임베딩을 고려한다. WSWE는 윈도우를 pLM의 입력으로 사용하고 FSWE는 전체 서열을 채택한다. 입력으로 윈도우를 사용하느냐 전체 서열을 사용하느냐에 따라 얻은 임베딩이 전역 문맥을 포착하는지 여부가 결정된다. 또한 잔기별 임베딩을 사용하느냐 윈도우 수준 임베딩을 사용하느냐가 인접한 임베딩 간의 관계가 포착되는지에 영향을 미친다. 표 2는</p>
@@ -6616,7 +6616,7 @@ IVEGQDAEVGLSPWQVMLFR
 </table>
 </section>
 <section id="파운데이션-모델의-미세-조정" class="level4">
-<h4 class="anchored" data-anchor-id="파운데이션-모델의-미세-조정">3.. 파운데이션 모델의 미세 조정</h4>
+<h4 class="anchored" data-anchor-id="파운데이션-모델의-미세-조정">3. 파운데이션 모델의 미세 조정</h4>
 <p>특징 기반 접근 방식의 대안은 레이블이 지정된 데이터셋을 사용하여 사전 훈련된 파운데이션 모델(즉, LLM 또는 pLM)을 다운스트림 작업에 적응시키는 것이다. 이 과정은 작업 특화 레이블을 사용하여 학습을 유도하면서 모델의 가중치를 미세 조정하는 과정을 포함한다. pLM의 미세 조정은 다음의 세 단계로 간소화될 수 있다.</p>
 <p>1단계. 사전 훈련: 모델은 먼저 대규모 단백질 서열 말뭉치에서 사전 훈련되며 일반적으로 마스크 언어 모델링(MLM) 목적을 사용하여 자기 지도 학습을 통해 서열의 일반적인 특징을 학습한다. 2단계. 레이블이 지정된 데이터셋 구축: 그 다음 레이블이 지정된 데이터셋을 생성한다. 이는 <code>&lt;입력, 출력&gt;</code> 쌍으로 표현되며 여기서 입력은 사전 훈련 중에 사용된 것과 같은 단백질 서열을 의미하고 출력은 작업 특화 레이블을 나타낸다. 3단계. 미세 조정: 마지막 단계로 오차 역전파를 통해 작업 특화 레이블을 사용하여 사전 훈련된 모델의 가중치를 업데이트한다.</p>
 <p>모든 미세 조정 접근 방식이 이 세 단계를 반드시 따라야 하는 것은 아니다. 사전 훈련된 모델을 도메인 특화 작업에 적응시키기 위해 미세 조정을 수행하는 방법은 더 다양하다. Raschka 는 이러한 접근 방식을 여섯 가지 범주로 분류하는데, 그 중 하나가 이미 이전 섹션에서 논의한 특징 기반 접근 방식이다. “미세 조정 I (출력 레이어만 업데이트)”, “미세 조정 II 또는 전체 미세 조정 (모든 레이어 업데이트)”, “파라미터 효율적 미세 조정(PEFT)”, “인컨텍스트 학습, 인덱싱 및 프롬프트 튜닝”, “인간 피드백 기반 강화 학습(RLHF)” 소제목 하에서 나머지 다섯 가지 범주를 간략하게 설명하여 독자들에게 기초 지식을 제공할 것이나, 포괄적인 설명은 Raschka의 훌륭한 저서 를 참고하시길 권장한다. 이후 “PTM 부위 예측 문맥에서의 미세 조정” 소제목에서는 PTM 부위 예측 문맥에 특화된 미세 조정 접근 방식에 초점을 맞출 것이다.</p>
@@ -6664,22 +6664,22 @@ IVEGQDAEVGLSPWQVMLFR
 <section id="다중-plm-통합-및-다중-모달다면적-접근-방식" class="level3">
 <h3 class="anchored" data-anchor-id="다중-plm-통합-및-다중-모달다면적-접근-방식">3. 다중 pLM 통합 및 다중 모달/다면적 접근 방식</h3>
 <section id="여러-plm의-임베딩-통합" class="level4">
-<h4 class="anchored" data-anchor-id="여러-plm의-임베딩-통합">3.. 여러 pLM의 임베딩 통합</h4>
+<h4 class="anchored" data-anchor-id="여러-plm의-임베딩-통합">3. 여러 pLM의 임베딩 통합</h4>
 <p>서열 인지 pLM은 다양한 다운스트림 작업에서 인상적인 성능을 입증해 왔지만 단일 pLM이나 단일 모달 임베딩에만 의존할 경우 예측 능력이 제한될 수 있다. 이러한 한계를 해결하기 위해 여러 pLM, 다른 모드에서의 임베딩 또는 기존의 표현 방식까지 통합하는 접근 방식이 개발되었다.</p>
 <p>각 pLM은 아키텍처, 사전 훈련 데이터셋 및 훈련 목적과 같은 측면에서 다른다. 이러한 차이 덕분에 pLM은 동일한 서열에 대해 고유한 특성을 포착할 수 있다. 서로 다른 pLM의 임베딩을 결합하면 각 모델의 상호 보완적인 강점을 살려 더 풍부한 서열 표현을 포착할 수 있다. 여러 pLM의 임베딩 통합은 LM-OGlcNAc-Site 에서 처음 탐색되었는데, 여기서는 O-GlcNAc 변형 부위를 예측하기 위해 Ankh , ESM-2 , ProtT 등 세 가지 pLM의 임베딩을 결정 수준에서 결합했다. 마찬가지로 Stack-OglyPred-PLM 은 O-연결 당화 예측을 위해 스택형 일반화를 사용하여 Ankh와 ProtT5의 임베딩을 결합한다. 또한 HOTGpred 는 동일한 작업을 위해 ESM-1 , ProtT , Seq2Vec 의 임베딩을 통합하는 조기 융합 전략을 채택한다. 마찬가지로 PTM-Mamba 는 인산화 및 아세틸화를 포함한 다중 PTM 부위 예측을 가능하게 하기 위해 게이트 융합 메커니즘을 통해 ESM-2의 임베딩을 맘바 아키텍처를 사용하여 생성된 자체 PTM 특화 임베딩과 통합한다.</p>
 </section>
 <section id="코돈-인지-임베딩-통합" class="level4">
-<h4 class="anchored" data-anchor-id="코돈-인지-임베딩-통합">3.. 코돈 인지 임베딩 통합</h4>
+<h4 class="anchored" data-anchor-id="코돈-인지-임베딩-통합">3. 코돈 인지 임베딩 통합</h4>
 <p>유전 암호의 축퇴성(degeneracy)으로 인해 각 아미노산은 최대 6개의 서로 다른 코돈으로 인코딩될 수 있다 . 이는 코돈 서열(코딩 DNA)이 아미노산 서열만으로는 알 수 없는 추가 정보를 포함할 수 있음을 시사한다. 코돈 사용량은 단백질 합성 속도와 공동 번역 단백질 접힘(co-translational protein folding)에 영향을 미치는 것으로 알려져 있다 . 이는 코돈 사용량이 PTM 발생에 영향을 미칠 수 있음을 나타낸다. 최근 개발된 사전 훈련 pLM인 CaLM 은 코돈 알파벳(코딩 DNA)에서 훈련되었으며 여러 단백질 수준 작업에서 ProtTrans 및 ESM 제품군과 같은 아미노산 기반 pLM보다 우수한 성능을 보였다.</p>
 <p>최근 개발된 인산화 부위 예측 도구인 CaLM-PhosKAN 은 PTM 부위 예측 도메인 및 일반적인 잔기 수준 작업에서 코돈 인지 임베딩을 활용한 최초의 연구이다. 흥미롭게도 CaLM 임베딩 단독으로는 이 특정 작업에서 ProtTrans 임베딩보다 뛰어난 성능을 보이지 못했지만 CaLM 임베딩(코돈 인지)을 ProtTrans 임베딩(아미노산 인지)과 통합했을 때 최상의 결과를 얻었다. 이는 CaLM이 개별적으로는 아미노산 기반 pLM을 능가하지 못할 수도 있지만 결합되었을 때 성능을 향상시키는 보완적인 표현을 제공함을 나타낸다.</p>
 <p>서열을 가장 신뢰할 수 있는 코딩 서열로 번역하는 방식(흔히 “역번역”이라고 함)이 중요한 역할을 한다는 점에 유의해야 한다. 한 가지 접근 방식은 LinearDesign 과 같은 모델을 사용하여 코돈을 예측하는 것이다. 또 다른 방법은 단백질 서열을 실제 코딩 DNA에 매핑하는 것이다 . 예를 들어 CaLMPhosKAN은 UniProt 식별자를 비중복 RefSeq 뉴클레오타이드 서열에 매핑하여 단백질 서열을 실제 코딩 DNA로 번역하는 프로세스를 채택했다 . 구체적으로 CaLMPhosKAN은 NCBI 뉴클레오타이드 데이터베이스 에서 코딩 서열을 검색하고 Needleman-Wunsch(NW) 알고리즘을 통한 쌍별 정렬을 사용하여 UniProt 단백질과의 서열 일치성을 확인했다. 서열 일치도가 100%인 서열만 데이터셋에 포함되어 크기는 줄었지만 매우 신뢰할 수 있는 데이터셋이 구축되었다.</p>
 </section>
 <section id="d-구조-인지-임베딩-또는-3d-구조-통합" class="level4">
-<h4 class="anchored" data-anchor-id="d-구조-인지-임베딩-또는-3d-구조-통합">3.. 3D 구조 인지 임베딩 또는 3D 구조 통합</h4>
+<h4 class="anchored" data-anchor-id="d-구조-인지-임베딩-또는-3d-구조-통합">3. 3D 구조 인지 임베딩 또는 3D 구조 통합</h4>
 <p>단백질의 기능과 상호 작용은 본질적으로 그들의 3차원(3D) 공간 형태와 연결되어 있다. 서열 기반의 사전 훈련된 pLM은 선형 아미노산 서열을 포착하지만 접힌 단백질 구조에서만 명확하게 나타나는 중요한 공간 관계와 구조적 모티프를 간과할 수 있다 . 이러한 한계를 해결하기 위해 3D 구조나 구조 인지 모델에서 유도된 임베딩을 통합하면 추가적인 문맥을 제공할 수 있다. 알파폴드 모델의 등장은 높은 신뢰도의 예측된 3D 구조를 제공함으로써 단백질 생물 정보학 분야에 주목할 만한 발전을 가능하게 했다 . 이는 PTM 부위 예측을 위해 구조 정보를 활용하는 도구들의 개발을 촉진했다. 본 장에서는 PTM 부위 예측을 위해 3D 구조를 활용하는 네 가지 도구를 논의한다. 26가지 유형의 PTM을 예측하는 MIND-S , N-연결 당화 예측을 위한 EMNGLy 와 CoNglyPred , 그리고 숙시닐화, S-니트로실화 및 크로토닐화 예측을 위한 PTM-CMGMS 인다. MIND-S와 PTM-CMGMS는 각각 그래프 어텐션 레이어와 대조 학습을 통해 잠재 표현을 학습하여 3D 구조를 활용하는 반면, EMNGLy는 마스크 역폴딩(MIF) 모델 에서 얻은 구조 인지 임베딩을 사용한다. 이 세 가지 방법 모두에서 3D 구조 정보는 3D 구조에만 의존하기보다는 서열 기반 특징에 대한 보완적인 표현으로 작용한다.</p>
 </section>
 <section id="기존-표현-방식과의-통합" class="level4">
-<h4 class="anchored" data-anchor-id="기존-표현-방식과의-통합">3.. 기존 표현 방식과의 통합</h4>
+<h4 class="anchored" data-anchor-id="기존-표현-방식과의-통합">3. 기존 표현 방식과의 통합</h4>
 <p>물리화학적 특성 및 진화 정보와 같은 기존 특징을 통합하는 것은 pLM 임베딩을 보완할 수 있다. 또한 국소 윈도우 서열에서 학습된 기존 NLP 인코더를 통합할 수도 있다. 주목할 만한 사례는 윈도우 서열에서 학습된 지도 학습형 임베딩 레이어(SEL)의 인코딩을 pLM 임베딩과 결합하여 부위에 대한 전역 및 국소 뷰를 모두 제공하는 방식이다 . pLMSNOSite , LMSuccSite , LMPhosSite 와 같은 도구들은 두 모델의 스택형 일반화를 활용한다. 하나는 FSPE 기반(전체 서열 잔기별 임베딩) pLM 임베딩으로 훈련된 모델이고 다른 하나는 윈도우 서열의 SEL 특징으로 훈련된 모델이다. 마찬가지로 LMCrot 는 FSWE 기반(전체 서열 윈도우 임베딩) pLM 임베딩의 잠재 표현을 SEL 및 물리화학적 특성에서 얻은 표현과 통합한다. 이와 같이 pLM 임베딩을 기존 표현 방식과 결합하는 다른 도구들은 표 5에 제시되어 있다.</p>
 <p>다른 모달리티와 서열 모달리티의 통합(또는 융합)은 네 가지 주요 접근 방식을 통해 달성될 수 있다는 점에 주목할 가치가 있다 . 첫째는 조기 융합(early fusion)으로, 서열 및 모달리티 특화 특징이 모델에 입력되기 전에 입력 수준에서 결합되는 방식이다. 둘째는 중간 융합(intermediate fusion)으로, 각 입력 유형이 먼저 독립적으로 처리되어 고수준 특징을 추출한 다음 모델 내의 은닉층에서 결합되는 방식이다. 셋째는 후기 융합(late fusion)으로, 서열 및 모달리티 특화 데이터가 별도의 모델이나 네트워크 브랜치를 통해 독립적으로 처리된 후 그 출력(확률 또는 추론)이 결정 수준에서 결합되는 방식이다. 마지막으로 주의 집중 기반 융합(예: 크로스 어텐션, 공동 주의 집중)은 한 모달리티의 정보를 기반으로 다른 모달리티의 관련 부분에 모델이 집중할 수 있도록 하여 서열과 모달리티 특화 특징 간의 상호 작용을 동적으로 모델링하는 주의 집중 메커니즘을 활용한다. PTM 부위 예측에서는 이 네 가지 융합 방법이 가장 널리 쓰이지만 다른 전략(예: 게이팅 메커니즘을 통한 융합)도 존재한다. 표 5에서는 다중 pLM 및 다중 모달 전략을 사용하는 도구들과 함께 사용된 구체적인 융합 방법을 제시한다.</p>
 </section>

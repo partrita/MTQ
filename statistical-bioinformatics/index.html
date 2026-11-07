@@ -82,9 +82,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-01bb7a1379e84c45a3df81b310903cc3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-e0867d476a41e64c95a9ebfbd4f23aeb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-01bb7a1379e84c45a3df81b310903cc3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d078e9b02c756bd711679fd458506033.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-2cf76d743275b7001fb2943810b00824.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d078e9b02c756bd711679fd458506033.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -2587,9 +2587,9 @@ window.Quarto = {
 <p>이 튜토리얼에서는 TOAST에 구현된 예제 데이터셋을 사용한다. 이 예제 데이터셋은 450K DNA 메틸화 데이터이다. GSE42861에서 제공된 원시 데이터를 기반으로 이 데이터셋을 획득하고 처리하였다. 이는 류마티스 관절염(RA) 환자와 대조군에 대한 DNA 메틸화 450K 데이터이다. 원래 데이터셋에는 485,577개 특징과 689개 샘플이 있다. 무작위로 선택된 50명의 RA 환자와 50명의 대조군에 대해 3,000개 CpG로 데이터셋을 축소하였다. 매칭된 3, CpG에 대한 혈액 참조 행렬은 R/Bioconductor 패키지 FlowSorted.Blood.450k에서 획득하였다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(TOAST)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"RA_100samples"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Y_raw <span class="ot">&lt;-</span> RA_100samples<span class="sc">$</span>Y_raw   <span class="do">## 혼합 조직의 원시 관찰값</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>Pheno <span class="ot">&lt;-</span> RA_100samples<span class="sc">$</span>Pheno  <span class="do">## 대상의 표면형</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Blood_ref <span class="ot">&lt;-</span> RA_100samples<span class="sc">$</span>Blood_ref</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Y_raw <span class="ot">&lt;-</span> RA_100samples\<span class="sc">$</span>Y_raw   <span class="do">## 혼합 조직의 원시 관찰값</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>Pheno <span class="ot">&lt;-</span> RA_100samples\<span class="sc">$</span>Pheno  <span class="do">## 대상의 표면형</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Blood_ref <span class="ot">&lt;-</span> RA_100samples\<span class="sc">$</span>Blood_ref</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>단계 3: 특징 선택</strong></p>
 <p>EpiDISH를 사용한 기반 참조 역신호 처리를 준비하기 위해, 유용한 CpG 위치를 식별하기 위해 특징 선택을 수행한다. <code>findRefinx()</code> 함수로 가장 변이가 큰 상위 1000개 특징을 선택한다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>refinx <span class="ot">&lt;-</span> <span class="fu">findRefinx</span>(Y_raw, <span class="at">nmarker =</span> <span class="dv">1000</span>)</span>
@@ -2598,10 +2598,10 @@ window.Quarto = {
 <p><strong>단계 4: EpiDISH로 세포 비율 추정</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(EpiDISH)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>outT <span class="ot">&lt;-</span> <span class="fu">epidish</span>(<span class="at">beta.m =</span> Y, <span class="at">ref.m =</span> Ref, <span class="at">method =</span> <span class="st">"RPC"</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>estProp_RB <span class="ot">&lt;-</span> outT<span class="sc">$</span>estF</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>estProp_RB <span class="ot">&lt;-</span> outT\<span class="sc">$</span>estF</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>단계 5: 설계 매트릭스 작성</strong></p>
 <p>질병(환자 vs 대조군) 효과를 비교하기 위해 세포 유형별 차별 신호를 탐지할 수 있다. 모든 이진(예: disease = 0, 1) 또는 범주형 변수(예: gender = 1, 2)는 팩터 클래스로 변환되어야 한다.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>design <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">disease =</span> <span class="fu">as.factor</span>(Pheno<span class="sc">$</span>disease))</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>design <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">disease =</span> <span class="fu">as.factor</span>(Pheno\<span class="sc">$</span>disease))</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Prop <span class="ot">&lt;-</span> estProp_RB</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(Prop) <span class="ot">&lt;-</span> <span class="fu">colnames</span>(Ref)</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>Design_out <span class="ot">&lt;-</span> <span class="fu">makeDesign</span>(design, Prop)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
