@@ -1827,9 +1827,9 @@ BiocManager::install("EpiDISH")
 ```r
 library(TOAST)
 data("RA_100samples")
-Y_raw <- RA_100samples$Y_raw   ## 혼합 조직의 원시 관찰값
-Pheno <- RA_100samples$Pheno  ## 대상의 표면형
-Blood_ref <- RA_100samples$Blood_ref
+Y_raw <- RA_100samples\$Y_raw   ## 혼합 조직의 원시 관찰값
+Pheno <- RA_100samples\$Pheno  ## 대상의 표면형
+Blood_ref <- RA_100samples\$Blood_ref
 ```
 
 **단계 3: 특징 선택**
@@ -1847,7 +1847,7 @@ Ref <- as.matrix(Blood_ref[refinx,])
 ```r
 library(EpiDISH)
 outT <- epidish(beta.m = Y, ref.m = Ref, method = "RPC")
-estProp_RB <- outT$estF
+estProp_RB <- outT\$estF
 ```
 
 **단계 5: 설계 매트릭스 작성**
@@ -1855,7 +1855,7 @@ estProp_RB <- outT$estF
 질병(환자 vs 대조군) 효과를 비교하기 위해 세포 유형별 차별 신호를 탐지할 수 있다. 모든 이진(예: disease = 0, 1) 또는 범주형 변수(예: gender = 1, 2)는 팩터 클래스로 변환되어야 한다.
 
 ```r
-design <- data.frame(disease = as.factor(Pheno$disease))
+design <- data.frame(disease = as.factor(Pheno\$disease))
 Prop <- estProp_RB
 colnames(Prop) <- colnames(Ref)
 Design_out <- makeDesign(design, Prop)
