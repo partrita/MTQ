@@ -20,7 +20,12 @@ jobs:
           cache: true
           activate-environment: default
 
-      - name: Render and Publish
+      - name: Render book
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          path: mybook
+
+      - name: Publish to GitHub Pages
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
