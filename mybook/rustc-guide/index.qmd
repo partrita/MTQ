@@ -1,8 +1,8 @@
 ---
 title: "Rust 컴파일러 개발 가이드"
 author: "The Rust Project Developers"
+lang: ko
 ---
-
 # 시작하기 {#getting-started}
 
 Rust 프로젝트에 기여하는 데 관심을 가져주셔서 감사한다!
@@ -38,6 +38,7 @@ Rust 프로젝트에 기여할 수 있는 방법은 다양하며 여러분의 �
 
 **팁**: 영어가 익숙하지 않으시더라도 번역 도구를 활용해 편하게 작성해 보라. 다만 길고 복잡한 단어를 생성하는 LLM 도구는 가급적 피하는 것이 좋다. 일상적인 팀 협업에서는 **명확하고 쉬운 단어**를 사용하는 것이 의사소통에 가장 효과적이다. 사소한 오타나 문법적 실수가 있더라도 오히려 친근한 인간적인 인상을 주며 사람들은 사람 냄새 나는 커뮤니케이션에 훨씬 더 잘 공감한다.
 
+## **팁**: 영어가 익숙하지 않으시더라도 번역 도구를 활용해 편하게 작성
 ### 전문가 찾기
 
 `rustc`는 규모가 매우 큰 프로젝트이므로 `t-compiler` 팀원이라고 해서 컴파일러의 모든 부분을 전부 잘 아는 것은 아니다. 컴파일러의 특정 부문에 대한 전문가를 찾고 싶다면 [`triagebot` 할당 그룹 목록][map]을 확인해 보라. `triagebot.toml` 파일에서 `[assign*`으로 시작하는 섹션을 참고하시면 된다. 적절한 멘션을 찾기 어렵더라도 주저하지 말고 자유롭게 질문해 주시기 바란다.
@@ -46,6 +47,7 @@ Rust 프로젝트에 기여할 수 있는 방법은 다양하며 여러분의 �
 
 [map]: https://github.com/rust-lang/rust/blob/HEAD/triagebot.toml
 
+## [map]: https://github.com/rust-lang/rust
 ### 에티켓
 
 질문하실 때는 가능한 한 유용한 맥락 정보를 함께 포함해 주시기를 부탁드린다. 다만 Rust 기여가 처음이신 분들에게는 어떤 정보를 포함해야 할지 판단하기 어려울 수 있음을 잘 알고 있다.
@@ -56,6 +58,7 @@ Rust 프로젝트에 기여할 수 있는 방법은 다양하며 여러분의 �
 
 Rust 프로젝트는 규모가 매우 커서 어느 부분에 손길이 필요한지, 초보자가 시작하기에 좋은 과제는 무엇인지 파악하기 어려울 수 있다. 아래에 추천하는 시작점들을 정리해 두었다.
 
+## Rust 프로젝트는 규모가 매우 커서 어느 부분에 손길이 필요한지, 초보
 ### 쉬운 문제 및 멘토링 이슈
 
 어디서부터 시작할지 고민된다면 [이슈 검색 목록][help-wanted-search]을 확인해 보라. 라벨에 대한 자세한 설명은 [이슈 트리아지(Triage)] 섹션을 참고하시기 바란다. 관심 있는 영역으로 검색 조건을 필터링할 수도 있다.
@@ -70,6 +73,7 @@ Rust 프로젝트는 규모가 매우 커서 어느 부분에 손길이 필요�
 [help-wanted-search]: https://github.com/rust-lang/rust/issues?q=is%3Aopen%20is%3Aissue%20org%3Arust-lang%20no%3Aassignee%20label%3AE-easy%2CE-medium%2CE-help-wanted%2CE-mentor%20-label%3AS-blocked%20-linked%3Apr
 [Triage]: #issue-triage
 
+## [help-wanted-search]: https://github.com
 ### 정기/연속 작업
 
 혼자서 진행하기에는 규모가 너무 큰 작업도 있다. 이런 경우에는 기여자 간의 작업을 조율하기 위해 "추적 이슈(Tracking issue)"를 활용하는 것이 일반적이다. 대대적인 시간 투입 없이도 비교적 쉽게 시작해 볼 수 있는 대표적인 연속 작업 예시는 다음과 같다.
@@ -78,6 +82,7 @@ Rust 프로젝트는 규모가 매우 커서 어느 부분에 손길이 필요�
 
 새로운 정기 작업을 발견하시면 이곳에 자유롭게 추가해 주라!
 
+## 새로운 정기 작업을 발견하시면 이곳에 자유롭게 추가해 주라!
 ### Clippy 이슈
 
 [Clippy] 프로젝트는 신규 기여자가 프로젝트에 쉽게 적응할 수 있도록 기여 프로세스를 매우 친절하게 다듬어 왔다. 프로세스 및 컴파일러 내부 구조에 익숙해지기 위한 첫 단계로 Clippy 작업을 먼저 경험해 보시는 것을 추천한다.
@@ -87,12 +92,14 @@ Rust 프로젝트는 규모가 매우 커서 어느 부분에 손길이 필요�
 [Clippy]: https://doc.rust-lang.org/clippy/
 [clippy-contributing]: https://github.com/rust-lang/rust-clippy/blob/master/CONTRIBUTING.md
 
+## [Clippy]: https://doc.rust-lang.org/clip
 ### 진단 이슈
 
 진단 메시지 개선 이슈는 대부분 독자적(self-contained)이며 컴파일러 내부에 대한 깊은 배경지식을 요구하지 않는 경우가 많다. 진단 관련 이슈 목록은 [여기][diagnostic-issues]에서 확인하실 수 있다.
 
 [diagnostic-issues]: https://github.com/rust-lang/rust/issues?q=is%3Aissue+is%3Aopen+label%3AA-diagnostics+no%3Aassignee
 
+## [diagnostic-issues]: https://github.com/
 ### 중단된 Pull Request 이어받기
 
 간혹 기여자가 PR을 제출한 후 시간이 부족해지거나 더 이상 흥미를 느끼지 못해 작업이 중단되는 경우가 있다. 이러한 PR은 보통 닫히면서 `S-inactive` 라벨이 부여된다. 이러한 PR들을 검토하여 작업을 이어받아 보실 수 있다. 중단된 PR 목록은 [여기][abandoned-prs]에서 확인할 수 있다.
@@ -101,22 +108,26 @@ Rust 프로젝트는 규모가 매우 커서 어느 부분에 손길이 필요�
 
 [abandoned-prs]: https://github.com/rust-lang/rust/pulls?q=is%3Apr+label%3AS-inactive+is%3Aclosed
 
+## [abandoned-prs]: https://github.com/rust
 ### 테스트 작성하기
 
 해결되었으나 회귀 테스트(regression test)가 누락된 이슈에는 `E-needs-test` 라벨이 붙는다. 단위 테스트 작성은 위험도가 낮고 우선순위가 상대적으로 낮은 작업이지만 신규 기여자가 테스트 인프라와 기여 워크플로를 자연스럽게 익힐 수 있는 훌륭한 기회가 된다. 테스트가 필요한 이슈 목록은 [여기][needs-test-issues]에서 확인하라.
 
 [needs-test-issues]: https://github.com/rust-lang/rust/issues?q=is%3Aissue%20is%3Aopen%20label%3AE-needs-test%20no%3Aassignee
 
+## [needs-test-issues]: https://github.com/
 ### 표준 라이브러리 기여하기
 
 [std-dev-guide](https://std-dev-guide.rust-lang.org/)를 참고하라.
 
+## [std-dev-guide](https://std-dev-guide.ru
 ### 기타 Rust 프로젝트 코드 기여
 
 `rust-lang/rust` 저장소 외에도 `cargo`, `miri`, `rustup` 등 기여할 수 있는 수많은 주변 프로젝트가 존재한다.
 
 해당 저장소들은 자체적인 기여 가이드라인과 절차를 가지고 있을 수 있다. 많은 프로젝트가 전담 작업 그룹(working group)에 의해 관리된다. 자세한 정보는 각 저장소의 README 문서를 참고하시기 바란다.
 
+## 해당 저장소들은 자체적인 기여 가이드라인과 절차를 가지고 있을 수 있다.
 ### 기타 기여 방법
 
 대규모 `rust-lang/rust` 코드베이스에 바로 뛰어드는 것이 부담스러우시다면, 다음과 같은 다양한 방법으로 프로젝트에 기여하실 수 있다.
@@ -152,7 +163,7 @@ Rust 프로젝트는 규모가 매우 커서 어느 부분에 손길이 필요�
 [more-links]: #other-places-to-find-information
 
 
-# 이 가이드에 대하여 {#about-this-guide}
+## 이 가이드에 대하여 {#about-this-guide}
 
 <!-- date-check: Jul 2026 -->
 
@@ -258,7 +269,7 @@ Rust 프로젝트는 규모가 매우 커서 어느 부분에 손길이 필요�
 [z]: https://rust-lang.zulipchat.com/#narrow/stream/131828-t-compiler
 
 
-# `rustc` 빌드 및 디버깅
+## `rustc` 빌드 및 디버깅
 
 ## 컴파일러 빌드 및 실행 방법 {#building-how-to-build-and-run}
 
@@ -284,11 +295,13 @@ Rust 프로젝트는 규모가 매우 커서 어느 부분에 손길이 필요�
 Rust 컴파일러는 `x.py`라는 자체 빌드 도구를 통해 빌드된다.
 실행하려면 시스템에 파이썬(Python)이 설치되어 있어야 한다.
 
+## Rust 컴파일러는 `x.py`라는 자체 빌드 도구를 통해 빌드된다.
 ### 빠른 시작
 
 컴파일러 실행에 대한 간략한 개요는 [빠른 시작](#building-quickstart) 섹션을 참고하라.
 
 
+## 컴파일러 실행에 대한 간략한 개요는 [빠른 시작](#building-qu
 ### 소스 코드 가져오기
 
 메인 저장소는 [`rust-lang/rust`][repo]인다.
@@ -340,6 +353,7 @@ cd rust
 > **참고**: 얕은 클론을 사용할 경우 일부 Git 명령어 사용이 제한된다.
 > 따라서 컴파일러를 지속적으로 개발하고 기여하고자 하신다면 [전체 클론](#get-the-source-code) 또는 [부분 클론](#partial-clone-the-repository) 방식을 권장한다.
 
+## > **참고**: 얕은 클론을 사용할 경우 일부 Git 명령어 사용이 제
 ### `x.py`란 무엇인가요?
 
 `x.py`는 `rust` 저장소의 통합 빌드 도구이다.
@@ -377,17 +391,17 @@ cd rust
 다른 대체 실행 방식은 다음과 같다:
 
 ```sh
-# 필요한 `python3` 명령이 없는 Unix 셸인 경우
+## 필요한 `python3` 명령이 없는 Unix 셸인 경우
 ./x <subcommand> [flags]
 
-# Windows PowerShell 환경인 경우 (PowerShell에서 스크립트 실행이 허용된 경우)
+## Windows PowerShell 환경인 경우 (PowerShell에서 스크립트 실행이 허용된 경우)
 ./x <subcommand> [flags]
 ./x.ps1 <subcommand> [flags]
 
-# Windows 명령 프롬프트 환경인 경우 (.py 파일이 Python 실행으로 연결되어 있는 경우)
+## Windows 명령 프롬프트 환경인 경우 (.py 파일이 Python 실행으로 연결되어 있는 경우)
 x.py <subcommand> [flags]
 
-# 다음과 같이 Python을 직접 실행할 수도 있습니다:
+## 다음과 같이 Python을 직접 실행할 수도 있습니다:
 python x.py <subcommand> [flags]
 ```
 
@@ -418,6 +432,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 참고로 이것은 [`x.py`란 무엇인가요?](#what-is-xpy) 섹션에서 설명한 유틸리티와 비슷하지만 시스템 전역에 설치되는 또 다른 바이너리 유틸리티로, 플랫폼 관련 스크립트를 실행하기 위해 셸을 호출하는 대신 `x.py`를 직접 실행하는 독립 프로세스로 동작한다.
 
+## 참고로 이것은 [`x.py`란 무엇인가요?](#what-is-xpy) 섹
 ### `bootstrap.toml` 파일 생성하기
 
 시작하려면 `./x setup`을 실행하고 `compiler` 기본 설정을 선택하라.
@@ -431,6 +446,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 이미 `rustc`를 빌드한 상태에서 LLVM 관련 설정을 변경했다면, 변경된 설정 내용을 적용하기 위해 `./x clean --all`을 실행해야 할 수 있다.
 `./x clean`만 실행하는 것은 LLVM 재빌드를 유발하지 않는다는 점에 유의하라.
 
+## 이미 `rustc`를 빌드한 상태에서 LLVM 관련 설정을 변경했다면,
 ### 자주 사용하는 `x` 명령어
 
 `rustc`, `std`, `rustdoc` 및 기타 도구를 개발할 때 가장 자주 사용되는 `x` 명령어의 기본 호출 방법은 다음과 같다.
@@ -505,6 +521,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 [tool-tests-link]: #tool-tests
 
+## [tool-tests-link]: #tool-tests
 ### rustup 툴체인 생성하기
 
 `rustc` 빌드에 성공하고 나면 `build` 디렉터리 내에 수많은 빌드 결과 파일이 생성된다.
@@ -541,6 +558,7 @@ LLVM version: 11.0
 ./x build proc-macro-srv-cli
 ```
 
+## ./x build proc-macro-srv-cli
 ### 크로스 컴파일 타겟 빌드하기
 
 다른 타겟 플랫폼으로 크로스 컴파일할 수 있는 컴파일러를 만들려면 `x build` 실행 시 `--target` 플래그를 필요한 만큼 전달하면 된다.
@@ -568,6 +586,7 @@ build.target = ["x86_64-unknown-linux-gnu", "wasm32-wasip1"]
 cargo +stage1 build --target wasm32-wasip1
 ```
 
+## cargo +stage1 build --target wasm32-wasi
 ### 기타 유용한 `x` 명령어
 
 실무에서 유용하게 쓰이는 몇 가지 추가 `x` 명령어이다. 상세 내용은 관련 장에서 깊이 다룬다.
@@ -591,6 +610,7 @@ cargo +stage1 build --target wasm32-wasip1
 
 `rm -rf build` 명령도 작동하지만 이 경우 fast PC에서도 오랜 시간이 걸리는 LLVM 전체 재빌드가 다시 일어난다.
 
+## `rm -rf build` 명령도 작동하지만 이 경우 fast PC에서도
 ### 디스크 공간 관련 참고 사항
 
 컴파일러 빌드(특히 stage 1을 넘어가는 빌드)에는 상당한 양의 여유 디스크 공간(최대 100GB 가량)이 요구될 수 있다.
@@ -603,6 +623,7 @@ rust-analyzer 전용 별도 빌드 디렉터리(예: `build-rust-analyzer`)를 �
 : issue[#1707](https://github.com/rust-lang/rustc-dev-guide/issues/1707)
 
 
+## : issue[#1707](https://github.com/rust-l
 ### 빠른 시작 {#building-quickstart}
 
 컴파일러 구동을 빠르게 시작해 볼 수 있는 요약 가이드이다. 각 단계별 상세 정보는 본 장의 다른 세부 페이지들을 참고하라.
@@ -662,6 +683,7 @@ rustc +stage1 testfile.rs
 VSCode, Vim, Emacs, Helix, Zed 에디터를 사용 중이라면 `./x setup` 실행 과정에서 에디터 자동 설정 여부를 묻는 안내가 나타난다. 자세한 정보는 [권장 워크플로](#building-suggested)를 참고하라.
 
 
+## VSCode, Vim, Emacs, Helix, Zed 에디터를 사용 중
 ### 사전 요구 사항 {#building-prerequisites}
 
 #### 의존성 패키지
@@ -689,6 +711,7 @@ VSCode, Vim, Emacs, Helix, Zed 에디터를 사용 중이라면 `./x setup` 실�
 [config]: #create-a-bootstraptoml
 
 
+## [config]: #create-a-bootstraptoml
 ### 권장 워크플로 {#building-suggested}
 
 전체 부트스트래핑 과정은 꽤 오랜 시간이 걸린다. 개발 편의를 위한 유용한 팁을 소개한다.
@@ -1058,10 +1081,12 @@ Rust는 회귀(regression) 버그를 방지하고 언어 발전에 대한 합리
 
 [코드 생성 백엔드 테스트 소개](#tests-codegen-backend-tests-intro) 장을 참고하라.
 
+## [코드 생성 백엔드 테스트 소개](#tests-codegen-backen
 ### 기타 정보
 
 테스트 관련 유용한 기타 정보는 [기타 정보 장](#tests-misc)에서 확인할 수 있다.
 
+## 테스트 관련 유용한 기타 정보는 [기타 정보 장](#tests-misc)
 ### 더 읽어보기
 
 다음 블로그 글도 함께 살펴보시면 도움이 된다.
@@ -1071,6 +1096,7 @@ Rust는 회귀(regression) 버그를 방지하고 언어 발전에 대한 합리
 [howtest]: https://brson.github.io/2017/07/10/how-rust-is-tested
 
 
+## [howtest]: https://brson.github.io/2017/
 ### 테스트 실행하기 {#tests-running}
 
 `x`를 통해 전체 테스트 수트를 구동할 수 있다.
@@ -1320,17 +1346,17 @@ export TEST_DEVICE_ADDR="1.2.3.4:12345"
 iOS/tvOS/watchOS/visionOS 시뮬레이터 구동 시에도 동일하게 "원격" 기기로 간주해 처리할 수 있다. 이 경우 시뮬레이터와 호스트 macOS 간 네트워크가 공유되므로 루프백 주소(`127...1`)를 바로 활용할 수 있다.
 
 ```sh
-# iOS 시뮬레이터용 테스트 서버 빌드:
+## iOS 시뮬레이터용 테스트 서버 빌드:
 ./x build src/tools/remote-test-server --target aarch64-apple-ios-sim
 
-# 실행 중인 시뮬레이터 UUID 확인:
+## 실행 중인 시뮬레이터 UUID 확인:
 xcrun simctl list devices booted
 UDID=01234567-89AB-CDEF-0123-456789ABCDEF
 
-# 시뮬레이터 12345 포트로 서버 러너 실행:
+## 시뮬레이터 12345 포트로 서버 러너 실행:
 xcrun simctl spawn $UDID ./build/host/stage2-tools/aarch64-apple-ios-sim/release/remote-test-server -v --bind 127.0.0.1:12345
 
-# 별도 터미널에서 러너를 지정하여 테스트 구동:
+## 별도 터미널에서 러너를 지정하여 테스트 구동:
 export TEST_DEVICE_ADDR="127.0.0.1:12345"
 ./x test --host='' --target aarch64-apple-ios-sim --skip tests/debuginfo
 ```
@@ -1367,7 +1393,7 @@ CI 작업을 로컬에서 가장 간편하게 재현하려면 보조 도구인 `
 
 ```bash
 cargo run --manifest-path src/ci/citool/Cargo.toml run-local <job-name>
-# 예시:
+## 예시:
 cargo run --manifest-path src/ci/citool/Cargo.toml run-local dist-x86_64-linux-alt
 ```
 
@@ -1778,6 +1804,7 @@ Rust CI 상태를 모니터링하려면 인프라 팀에서 유지 관리하는 
 [workflow runs]: https://github.com/rust-lang/rust/actions?query=branch%3Aautomation%2Fbors%2Fauto+is%3Asuccess
 
 
+## [workflow runs]: https://github.com/rust
 ### 신규 테스트 추가하기 {#tests-adding}
 
 **원칙적으로 rustc의 버그를 수정하는 모든 PR에는 버그 회귀를 방지하기 위한 테스트 코드가 함께 첨부되어야 한다.** 이 테스트는 `main` 브랜치에서는 실패하지만 PR 수정 사항 적용 후에는 성공해야 한다. 과거의 실수를 되풀이하지 않도록 방지하는 데 매우 유용하다.
@@ -1912,6 +1939,7 @@ For more information about this error, try `rustc --explain E0728`.
 이러한 설명 주석은 추후 테스트가 실패하거나 리팩터링이 필요할 때 작성자의 최초 의도를 정확히 파악할 수 있게 돕는 매우 유용한 자산이 된다.
 
 
+## 이러한 설명 주석은 추후 테스트가 실패하거나 리팩터링이 필요할 때 작성자
 ### 테스트 작성 모범 사례 {#tests-best-practices}
 
 본 장에서는 테스트 작성 및 수정에 관한 모범 사례(Best practices)를 설명한다. 수년이 지난 후 원작자나 Git 이력을 복잡하게 찾아보지 않고도 누구나 쉽게 이해하고 수정할 수 있는 테스트를 작성하는 것을 목표로 한다.
@@ -2052,6 +2080,7 @@ place.
 [crash tests]: #crash-tests
 
 
+## [crash tests]: #crash-tests
 ### Compiletest 프레임워크 {#tests-compiletest}
 
 #### 소개
@@ -2398,7 +2427,7 @@ Be careful not to add this `Cargo.toml` or its `Cargo.lock` to your actual PR!
 </div>
 
 ```toml
-# Convince cargo that this isn't part of an enclosing workspace.
+## Convince cargo that this isn't part of an enclosing workspace.
 [workspace]
 
 [package]
@@ -3627,6 +3656,7 @@ fn meow() {}
 [`minicore`]: https://github.com/rust-lang/rust/tree/HEAD/tests/auxiliary/minicore.rs
 
 
+## [`minicore`]: https://github.com/rust-la
 ### 생태계 테스트 {#tests-ecosystem}
 
 Rust는 언어의 발전 방향에 대해 정보에 입각한 의사 결정을 내리고 회귀(regression) 버그를 조기에 포착하기 위해 생태계의 실제 오픈소스 코드와의 연동 테스트를 수행한다.
@@ -3841,6 +3871,7 @@ Rust for Linux 빌드는 PR 머지 전 실행되는 bors 테스트 파이프라�
 [rfl-ping]: #notification-groups-rust-for-linux
 
 
+## [rfl-ping]: #notification-groups-rust-fo
 ### Codegen 백엔드 테스트 {#tests-codegen-backend-tests-intro}
 
 [코드 생성](#backend-codegen) 챕터도 함께 참조하라.
@@ -3954,6 +3985,7 @@ GCC codegen 백엔드를 사용하여 컴파일러 테스트 수트를 구동하
 이 명령어가 작동하려면 백엔드가 [빌드 대상으로 활성화](#choosing-which-codegen-backends-are-built)되어 있어야 한다.
 
 
+## 이 명령어가 작동하려면 백엔드가 [빌드 대상으로 활성화](#choosin
 ### Performance testing {#tests-perf}
 
 #### rustc-perf
@@ -3997,6 +4029,7 @@ PR의 성능 영향을 평가하려면 PR에 다음 댓글을 남기라:
 벤치마크 프로세스 자체에 대한 상세한 내용은 [perf collector 문서](https://github.com/rust-lang/rustc-perf/blob/master/collector/README.md)를 참조하라.
 
 
+## 벤치마크 프로세스 자체에 대한 상세한 내용은 [perf collector
 ### Autodiff CI 작업 {#tests-autodiff-ci-job}
 
 [`optional-x86_64-gnu-autodiff`] 작업은 실험적인 `autodiff` 기능 및 LLVM Enzyme 연동에 대해 지속적인 테스트 커버리지를 제공한다. 이 작업은 선택적 [auto 작업](#auto-builds)에 해당하므로 실패하더라도 PR 머지가 차단되지는 않는다.
@@ -4037,6 +4070,7 @@ CI 작업을 로컬에서 실행하는 법은 [Docker로 테스트하기](#tests
 [`optional-x86_64-gnu-autodiff`]: https://github.com/rust-lang/rust/blob/HEAD/src/ci/github-actions/jobs.yml
 
 
+## [`optional-x86_64-gnu-autodiff`]: https:
 ### CI에서의 차세대 트레이트 솔버 및 Polonius 알파 사전 안정화 테스트 {#tests-x86_64-gnu-next-trait-solver-polonius-ci-job}
 
 우리는 2026년에 차세대 트레이트 솔버(next solver)와 Polonius 알파를 안정화하는 것을 목표로 지속적인 테스트 커버리지를 향상시키고자 한다. 이를 위해 이 미확정(unstable) 기능들이 충분히 테스트되고 지속적으로 검증되어 회귀(regression) 버그가 발생하지 않도록 보장해야 한다.
@@ -4082,6 +4116,7 @@ CI 작업을 로컬에서 실행하는 법은 [Docker로 테스트하기](#tests
 [`x86_64-gnu-next-trait-solver-polonius`]: https://github.com/rust-lang/rust/pull/157322
 
 
+## [`x86_64-gnu-next-trait-solver-polonius`
 ### 기타 테스트 관련 정보 {#tests-misc}
 
 #### `RUSTC_BOOTSTRAP` 및 안정성 검사
@@ -4120,6 +4155,7 @@ fn main() {
 
 이 챕터에는 컴파일러를 디버깅하기 위한 핵심 팁이 포함되어 있다. 어떤 컴파일러 영역을 작업하든 유용하게 활용할 수 있다. 특정 컴파일러 영역에 대한 세부 가이드는 [쿼리 디버깅 및 테스트 챕터](./incrcomp-debugging.html)나 [LLVM 디버깅 챕터](#backend-debugging)를 참조하라.
 
+## 이 챕터에는 컴파일러를 디버깅하기 위한 핵심 팁이 포함되어 있다. 어떤
 ### 컴파일러 디버그 설정하기
 
 기본적으로 rustc는 디버그 정보 없이 빌드된다. 디버그 정보를 활성화하려면 `bootstrap.toml` 파일에 `rust.debug = true`를 설정하라.
@@ -4146,11 +4182,13 @@ rust.new-symbol-mangling = false
 
 구성 옵션을 변경한 후에는 컴파일러를 재빌드해야 한다.
 
+## 구성 옵션을 변경한 후에는 컴파일러를 재빌드해야 한다.
 ### ICE 파일 생성 억제하기
 
 기본적으로 rustc에서 내부 컴파일러 오류(ICE, Internal Compiler Error)가 발생하면 현재 작업 디렉터리에 `rustc-ice-<timestamp>-<pid>.txt` 형태의 ICE 파일 내용을 덤프한다.
 이 파일 생성을 원치 않는 경우 `RUSTC_ICE=0` 환경 변수를 설정하여 ICE 파일이 생성되는 것을 방지할 수 있다.
 
+## 기본적으로 rustc에서 내부 컴파일러 오류(ICE, Internal C
 ### 백트레이스 구하기
 [getting-a-backtrace]: #getting-a-backtrace
 
@@ -4197,6 +4235,7 @@ stack backtrace:
              at /home/user/rust/compiler/rustc_driver/src/lib.rs:253
 ```
 
+## at /home/user/rust/compiler
 ### `-Z` 플래그
 
 컴파일러는 다수의 `-Z *` 플래그를 지원한다.
@@ -4318,6 +4357,7 @@ For more information about this error, try `rustc --explain E0277`.
 - 디버그 심볼로 빌드된 컴파일러가 아니어도 구동 가능하다.
 - 장대한 스택 백트레이스를 일일이 분석할 필요가 없다.
 
+## - 디버그 심볼로 빌드된 컴파일러가 아니어도 구동 가능하다.
 ### 로깅 출력 얻기
 
 컴파일러는 로깅을 위해 [`tracing`] 크레이트를 사용한다.
@@ -4326,6 +4366,7 @@ For more information about this error, try `rustc --explain E0277`.
 
 자세한 내용은 [tracing 관련 챕터](#tracing)를 참조하라.
 
+## 자세한 내용은 [tracing 관련 챕터](#tracing)를 참조하라.
 ### 회귀 버그 이분 탐색하기
 
 [cargo-bisect-rustc][bisect] 도구를 사용하면 `rustc` 동작 변화를 일으킨 정확한 PR 커밋을 신속하고 손쉽게 찾아낼 수 있다.
@@ -4335,6 +4376,7 @@ For more information about this error, try `rustc --explain E0277`.
 [bisect]: https://github.com/rust-lang/cargo-bisect-rustc
 [bisect-tutorial]: https://rust-lang.github.io/cargo-bisect-rustc/tutorial.html
 
+## [bisect]: https://github.com/rust-lang/c
 ### Rust CI에서 아티팩트 다운로드하기
 
 kennytm의 [rustup-toolchain-install-master][rtim] 도구를 사용하면 특정 커밋 SHA1(PR이 최종 머지된 지점)에 대해 Rust CI가 생성한 아티팩트를 다운로드하여 로컬 툴체인 환경으로 설정할 수 있다.
@@ -4342,6 +4384,7 @@ kennytm의 [rustup-toolchain-install-master][rtim] 도구를 사용하면 특정
 
 [rtim]: https://github.com/kennytm/rustup-toolchain-install-master
 
+## [rtim]: https://github.com/kennytm/rustu
 ### `#[rustc_*]` TEST 속성
 
 컴파일러는 내부 정보를 덤프하여 디버깅을 돕는 다수의 내부(영구 비확정) 속성들을 정의한다. 이 속성들은 `rustc_` 접두사를 가지며 내부 기능 게이트 `rustc_attrs`(예: `#![feature(rustc_attrs)]`로 활성화)로 제어된다.
@@ -4450,6 +4493,7 @@ error: aborting due to previous error
 [`Layout`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_public/abi/struct.Layout.html
 
 
+## [`Layout`]: https://doc.rust-lang.org/ni
 ### `rustc` 디버깅을 위한 CodeLLDB 설정하기
 
 VSCode를 사용 중이고 관심 대상 코드 영역을 위해 `bootstrap.toml`에서 디버깅 레벨 1 또는 2를 지정했다면 VSCode의 [CodeLLDB] 확장 프로그램을 활용해 디버깅할 수 있다.
@@ -4481,6 +4525,7 @@ VSCode를 사용 중이고 관심 대상 코드 영역을 위해 `bootstrap.toml
 [CodeLLDB]: https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb
 
 
+## [CodeLLDB]: https://marketplace.visualst
 ### 컴파일러 디버깅에 tracing 활용하기 {#tracing}
 
 컴파일러 코드 곳곳에는 로깅 정보를 출력하는 다수의 [`debug!`](또는 `trace!`) 매크로 호출이 작성되어 있다.
@@ -4592,33 +4637,33 @@ Miri를 개발 중이라면 `MIRI_LOG`를 사용하라.
 So, to put it together:
 
 ```bash
-# This puts the output of all debug calls in `rustc_middle/src/traits` into
-# standard error, which might fill your console backscroll.
+## This puts the output of all debug calls in `rustc_middle/src/traits` into
+## standard error, which might fill your console backscroll.
 $ RUSTC_LOG=rustc_middle::traits=debug rustc +stage1 my-file.rs
 
-# This puts the output of all debug calls in `rustc_middle/src/traits` in
-# `traits-log` 파일로 저장하여 텍스트 에디터로 확인하는 예시.
+## This puts the output of all debug calls in `rustc_middle/src/traits` in
+## `traits-log` 파일로 저장하여 텍스트 에디터로 확인하는 예시.
 $ RUSTC_LOG=rustc_middle::traits=debug rustc +stage1 my-file.rs 2>traits-log
 
-# 비권장! Rust 컴파일러의 모든 `debug!` 출력을 표시하므로
-# 양이 엄청나게 많아 원하는 내용을 찾기 매우 어렵습니다.
+## 비권장! Rust 컴파일러의 모든 `debug!` 출력을 표시하므로
+## 양이 엄청나게 많아 원하는 내용을 찾기 매우 어렵습니다.
 $ RUSTC_LOG=debug rustc +stage1 my-file.rs 2>all-log
 
-# `rustc_codegen_ssa` 모듈의 모든 `info!` 호출 출력.
+## `rustc_codegen_ssa` 모듈의 모든 `info!` 호출 출력.
 #
-# `codegen_instance` 함수 내부에는 codegen 대상이 되는 모든 함수를
-# 출력하는 `info!` 구문이 있습니다. 어떤 함수가 LLVM 어서션을 발생시키는지
-# 파악할 때 유용하며 `debug!`가 아닌 `info!` 로그이므로 공식 배포판
-# 컴파일러에서도 정상 작동합니다.
+## `codegen_instance` 함수 내부에는 codegen 대상이 되는 모든 함수를
+## 출력하는 `info!` 구문이 있습니다. 어떤 함수가 LLVM 어서션을 발생시키는지
+## 파악할 때 유용하며 `debug!`가 아닌 `info!` 로그이므로 공식 배포판
+## 컴파일러에서도 정상 작동합니다.
 $ RUSTC_LOG=rustc_codegen_ssa=info rustc +stage1 my-file.rs
 
-# `rustc_codegen_ssa` 및 `rustc_resolve` 내의 모든 로그 출력.
+## `rustc_codegen_ssa` 및 `rustc_resolve` 내의 모든 로그 출력.
 $ RUSTC_LOG=rustc_codegen_ssa,rustc_resolve rustc +stage1 my-file.rs
 
-# rustdoc 및 rustdoc이 호출하는 모든 rustc 라이브러리의 `info!` 로그 출력.
+## rustdoc 및 rustdoc이 호출하는 모든 rustc 라이브러리의 `info!` 로그 출력.
 $ RUSTDOC_LOG=info rustdoc +stage1 my-file.rs
 
-# `rustc*` 크레이트를 제외하고 rustdoc이 직접 발출하는 `debug!` 로그만 출력.
+## `rustc*` 크레이트를 제외하고 rustdoc이 직접 발출하는 `debug!` 로그만 출력.
 $ RUSTDOC_LOG=rustdoc=debug rustdoc +stage1 my-file.rs
 ```
 
@@ -4633,7 +4678,7 @@ $ RUSTDOC_LOG=rustdoc=debug rustdoc +stage1 my-file.rs
 따라서 `less`로 파이프 연결할 때 색상을 켠 채로 보려면 다음과 같은 명령어를 실행하라:
 
 ```bash
-# `-R` 옵션은 less가 ANSI 색상 코드를 이스케이프하지 않고 색상 그대로 렌더링하게 합니다.
+## `-R` 옵션은 less가 ANSI 색상 코드를 이스케이프하지 않고 색상 그대로 렌더링하게 합니다.
 $ RUSTC_LOG=debug RUSTC_LOG_COLOR=always rustc +stage1 ... | less -R
 ```
 
@@ -4691,6 +4736,7 @@ debug!(x = ?random_operation(tcx));
 - 메모리 사용량을 프로파일링하려는 경우, 사용하는 운영체제에 따라 다양한 도구를 선택할 수 있다.
  - Windows 환경인 경우 [WPA 가이드](#profiling-wpa-profiling)를 참조하라.
 
+## - 메모리 사용량을 프로파일링하려는 경우, 사용하는 운영체제에 따라 다양
 ### `cargo-llvm-lines`를 이용한 rustc 부트스트랩 시간 최적화
 
 [cargo-llvm-lines](https://github.com/dtolnay/cargo-llvm-lines)를 사용하면 제네릭 함수의 모든 인스턴스화 전체에 걸친 LLVM IR 코드 라인 수를 측정할 수 있다.
@@ -4704,20 +4750,20 @@ The option preserves temporary work products created during compilation.
 사용 예시:
 ```
 cargo install cargo-llvm-lines
-# 일반 크레이트에서는 `cargo llvm-lines`를 구동하지만 `x` 도구는 특별한 방식으로 구동합니다.
+## 일반 크레이트에서는 `cargo llvm-lines`를 구동하지만 `x` 도구는 특별한 방식으로 구동합니다.
 
-# 이전 빌드 결과와 섞이지 않도록 구동 전 clean을 수행합니다.
+## 이전 빌드 결과와 섞이지 않도록 구동 전 clean을 수행합니다.
 ./x clean
 env RUSTFLAGS=-Csave-temps ./x build --stage 0 compiler/rustc
 
-# 단일 크레이트(예: rustc_middle) 분석 (쉘의 글로브 지원 기능 활용)
-# 미최적화 LLVM 비트코드를 cargo-llvm-lines가 수용할 수 있는 사람이 읽기 쉬운 LLVM 어셈블리로 변환합니다.
+## 단일 크레이트(예: rustc_middle) 분석 (쉘의 글로브 지원 기능 활용)
+## 미최적화 LLVM 비트코드를 cargo-llvm-lines가 수용할 수 있는 사람이 읽기 쉬운 LLVM 어셈블리로 변환합니다.
 for f in build/x86_64-unknown-linux-gnu/stage0-rustc/x86_64-unknown-linux-gnu/release/deps/rustc_middle-*.no-opt.bc; do
   ./build/x86_64-unknown-linux-gnu/llvm/bin/llvm-dis "$f"
 done
 cargo llvm-lines --files ./build/x86_64-unknown-linux-gnu/stage0-rustc/x86_64-unknown-linux-gnu/release/deps/rustc_middle-*.ll > llvm-lines-middle.txt
 
-# 컴파일러의 모든 크레이트 지정 분석.
+## 컴파일러의 모든 크레이트 지정 분석.
 for f in build/x86_64-unknown-linux-gnu/stage0-rustc/x86_64-unknown-linux-gnu/release/deps/*.no-opt.bc; do
   ./build/x86_64-unknown-linux-gnu/llvm/bin/llvm-dis "$f"
 done
@@ -4751,16 +4797,16 @@ cargo llvm-lines --files ./build/x86_64-unknown-linux-gnu/stage0-rustc/x86_64-un
 이 작업은 증분 컴파일이나 `./x check`와 함께 작동하지 않으므로 rustc를 _자주_ 재컴파일하게 된다.
 작업 시간을 단축하기 위해 `bootstrap.toml`의 몇 가지 설정을 변경하는 것을 권장한다:
 ```
-# 디버그 빌드는 컴파일 시간을 1/3로 줄여주지만
-# stage0 rustc 이상을 컴파일할 때는 지나치게 느려질 수 있습니다.
+## 디버그 빌드는 컴파일 시간을 1/3로 줄여주지만
+## stage0 rustc 이상을 컴파일할 때는 지나치게 느려질 수 있습니다.
 rust.optimize = false
 
-# 어차피 증분 빌드를 사용할 수 없으므로 속도 향상을 위해 비활성화합니다.
+## 어차피 증분 빌드를 사용할 수 없으므로 속도 향상을 위해 비활성화합니다.
 rust.incremental = false
-# 직접 실행하지 않을 것이므로 디버그 검사를 컴파일할 이유가 없습니다.
+## 직접 실행하지 않을 것이므로 디버그 검사를 컴파일할 이유가 없습니다.
 rust.debug = false
 
-# 단일 codegen 단위를 사용하면 출력이 적어지지만 컴파일이 더 느려집니다.
+## 단일 codegen 단위를 사용하면 출력이 적어지지만 컴파일이 더 느려집니다.
 rust.codegen-units = 0  # num_cpus
 ```
 
@@ -4769,6 +4815,7 @@ llvm-lines의 출력 용량은 여러 옵션에 영향을 받는다. `rust.optim
 MIR 최적화의 영향은 미비한다. 기본값 `RUSTFLAGS="-Z mir-opt-level=1"` 대비 레벨 0은 0.3GB를 추가하고 레벨 2는 0.2GB를 줄여준다. 2022년 7월 기준 인라이닝은 LLVM 및 GCC codegen 백엔드에서 수행되며 Cranelift 백엔드에서만 아직 지원되지 않는다.
 
 
+## MIR 최적화의 영향은 미비한다. 기본값 `RUSTFLAGS="-Z mi
 ### perf를 이용한 프로파일링 {#profiling-with-perf}
 
 [perf](https://perf.wiki.kernel.org/index.php/Main_Page)를 사용해 rustc를 프로파일링하는 가이드이다.
@@ -4852,7 +4899,7 @@ cd collector/compile-benchmarks/clap-3.1.6
 의존성 빌드를 위해 기초 구동 명령을 먼저 실행한다:
 
 ```bash
-# 준비: 기존 결과를 깨끗이 지우고 의존성을 미리 빌드합니다:
+## 준비: 기존 결과를 깨끗이 지우고 의존성을 미리 빌드합니다:
 cargo +<toolchain> clean
 CARGO_INCREMENTAL=0 cargo +<toolchain> check
 ```
@@ -5025,6 +5072,7 @@ Tree
 아까 전에는 20%로 표시되었는데, 이는 `do_mir_borrowck` 자체가 전체 프로그램 실행 시간의 43%에 해당하기 때문이다 (`0. * 0. = 0.20`).
 
 
+## 아까 전에는 20%로 표시되었는데, 이는 `do_mir_borrowck`
 ### Profiling on Windows {#profiling-wpa-profiling}
 
 #### WPR 및 WPA 소개
@@ -5119,6 +5167,7 @@ WPA가 rustc 심볼 로딩을 완료하면 rustc.exe 노드를 확장하고 가�
  - rustc가 메모리를 할당하는 지점을 보여주도록 사전 구성된 차트 포함.
 
 
+## - rustc가 메모리를 할당하는 지점을 보여주도록 사전 구성된 차트
 ### rustc-perf를 이용한 프로파일링 {#profiling-with-rustc-perf}
 
 [Rust 벤치마크 수트][rustc-perf]는 Rust 컴파일러를 프로파일링하고 벤치마킹할 수 있는 포괄적인 수단을 제공한다.
@@ -5182,6 +5231,7 @@ Rust 컴파일러는 `crates.io`의 일부 외부 의존성을 포함하여 빌�
 
 Rust Forge에는 [새로운 의존성을 검증하기 위한 공식 정책]이 마련되어 있다.
 
+## Rust Forge에는 [새로운 의존성을 검증하기 위한 공식 정책]이 마
 ### 허용된 의존성
 
 `tidy` 도구는 [허용된 크레이트 목록]을 보유하고 있다.
@@ -5191,10 +5241,11 @@ Rust Forge에는 [새로운 의존성을 검증하기 위한 공식 정책]이 �
 [새로운 의존성을 검증하기 위한 공식 정책]: https://forge.rust-lang.org/compiler/third-party-out-of-tree#third-party-crates
 
 
-# Rust 프로젝트에 기여하기
+## Rust 프로젝트에 기여하기
 
 ## 기여 절차 {#contributing}
 
+## ## 기여 절차 {#contributing}
 ### 버그 리포트 작성
 
 버그는 아쉽지만 소프트웨어 개발에서 피할 수 없는 현실이다.
@@ -5214,6 +5265,7 @@ Rust Forge에는 [새로운 의존성을 검증하기 위한 공식 정책]이 �
 
 [이슈 생성 링크][create an issue]를 클릭하고 구비된 템플릿 항목을 작성하면 쉽게 이슈를 등록할 수 있다.
 
+## [이슈 생성 링크][create an issue]를 클릭하고 구비된 템플
 ### 버그 수정 또는 일반적인 코드 변경
 
 대부분의 PR에는 특별한 절차가 요구되지 않는다.
@@ -5227,6 +5279,7 @@ Rust Forge에는 [새로운 의존성을 검증하기 위한 공식 정책]이 �
 [PR을 작성]: #pull-requests
 [Draft PR]: https://github.blog/2019-02-14-introducing-draft-pull-requests/
 
+## [PR을 작성]: #pull-requests
 ### 신규 기능 추가
 
 Rust는 강력한 하위 호환성을 보증한다.
@@ -5275,6 +5328,7 @@ MCP 제출이 요구될 수 있는 변경 예시에는 대규모 리팩터링, �
 [perf]: https://perf.rust-lang.org
 [Rust Performance Book]: https://nnethercote.github.io/perf-book/
 
+## [perf]: https://perf.rust-lang.org
 ### 풀 리퀘스트
 
 풀 리퀘스트(PR)는 Rust 코드를 변경하는 핵심 메커니즘이다.
@@ -5463,10 +5517,12 @@ MIR 최적화의 경우 [#132356][#132356] 예시처럼 `-Zunsound-mir-opt` 옵�
 [#128271]: https://github.com/rust-lang/rust/pull/128271
 [#132356]: https://github.com/rust-lang/rust/pull/132356
 
+## [#128271]: https://github.com/rust-lang/
 ### 외부 의존성
 
 이 섹션은 ["외부 저장소 활용하기"](#external-repos)로 이동되었다.
 
+## 이 섹션은 ["외부 저장소 활용하기"](#external-repos)로
 ### 문서 작성하기
 
 문서 개선 기여는 언제나 환영한다.
@@ -5544,6 +5600,7 @@ MIR 최적화의 경우 [#132356][#132356] 예시처럼 `-Zunsound-mir-opt` 옵�
 
 rustc-dev-guide 기여 위치 및 그 이점에 대한 자세한 내용은 [rustc-dev-guide 팀 문서][the rustc-dev-guide team documentation]를 참조하라.
 
+## rustc-dev-guide 기여 위치 및 그 이점에 대한 자세한 내용은
 ### 이슈 트라이아지
 
 <https://forge.rust-lang.org/release/issue-triaging.html> 문서를 참조하라.
@@ -5590,6 +5647,7 @@ rustc-dev-guide 기여 위치 및 그 이점에 대한 자세한 내용은 [rust
 [rfcbot]: https://github.com/anp/rfcbot-rs/
 [RFC]: https://github.com/rust-lang/rfcs
 
+## [rfcbot]: https://github.com/anp/rfcbot-
 ### 유용한 링크 및 정보
 
 이 섹션은 ["가이드 소개"] 챕터로 이동되었다.
@@ -5620,6 +5678,7 @@ Rust 컴파일러 팀 멤버는 rustc 발전 및 설계에 실질적이고 유�
 [Forge 페이지]: https://forge.rust-lang.org/compiler
 [team]: https://www.rust-lang.org/governance/teams/compiler
 
+## [Forge 페이지]: https://forge.rust-lang.org
 ### 토론 채널
 
 현재 컴파일러 팀은 Zulip에서 대화를 나눈다:
@@ -5627,12 +5686,14 @@ Rust 컴파일러 팀 멤버는 rustc 발전 및 설계에 실질적이고 유�
 - 팀 대화는 Zulip 인스턴스의 [`t-compiler`][zulip-t-compiler] 스트림에서 진행된다.
 - rustc 개발 관련 질문과 도움을 요청할 수 있는 [`t-compiler/help`][zulip-help], 주간 트라이아지 및 스티어링 미팅이 열리는 [`t-compiler/meetings`][zulip-meetings] 등 관련 Zulip 채널들이 다양하게 운영된다.
 
+## - 팀 대화는 Zulip 인스턴스의 [`t-compiler`][zulip
 ### 리뷰어 지도
 
 컴파일러의 특정 영역에 대해 질문에 답해줄 수 있는 담당자를 찾거나 누가 어떤 영역을 다루는지 확인하고 싶다면 [triagebot.toml의 assign 섹션][map]을 확인하라.
 컴파일러의 구성 요소별 리뷰어 담당자 목록이 자세히 정리되어 있다.
 
 
+## 컴파일러의 구성 요소별 리뷰어 담당자 목록이 자세히 정리되어 있다.
 ### Rust 컴파일러 미팅
 
 컴파일러 팀은 신규 버그 및 회귀 현상을 조기에 파악하고 주요 사안을 논의하기 위해 주간 미팅을 갖는다.
@@ -5653,6 +5714,7 @@ Rust 컴파일러 팀 멤버는 rustc 발전 및 설계에 실질적이고 유�
 [zulip-help]: https://rust-lang.zulipchat.com/#narrow/stream/182449-t-compiler.2Fhelp
 [zulip-meetings]: https://rust-lang.zulipchat.com/#narrow/stream/238009-t-compiler.2Fmeetings
 
+## [zulip-help]: https://rust-lang.zulipcha
 ### 팀 멤버십
 
 Rust 팀 멤버십은 컴파일러 개발에 얼마간 유의미한 기여를 꾸준히 수행한 경우 부여된다.
@@ -5718,6 +5780,7 @@ GitHub에서도 초보자를 위한 [기본 문서][documentation] 및 [가이�
 [기본 문서]: https://docs.github.com/en/get-started/quickstart/set-up-git
 [가이드]: https://guides.github.com/introduction/git-handbook/
 
+## [기본 문서]: https://docs.github.com/en/get-
 ### 사전 준비사항
 
 Git이 설치되어 있고 [rust-lang/rust] 저장소를 포크(fork)한 뒤 포크된 저장소를 로컬 PC로 클론(clone)했다고 가정한다.
@@ -5743,6 +5806,7 @@ git remote add upstream git@github.com:rust-lang/rust.git
 **참고:** 이 페이지는 `rust-lang/rust` 워크플로에 맞춰져 있으나 Rust 프로젝트의 다른 저장소에 기여할 때도 동일하게 유용하다.
 
 
+## **참고:** 이 페이지는 `rust-lang/rust` 워크플로에 맞춰
 ### 표준 기여 절차
 
 소규모 코드 변경 및 일반 PR 제출 시 구동하게 되는 표준 워크플로이다:
@@ -5777,6 +5841,7 @@ the same, with some steps skipped:
 
  [no-merge-policy]: #keeping-things-up-to-date
 
+## [no-merge-policy]: #keeping-things-up-t
 ### Git 관련 문제 해결하기
 
 저장소가 구형 상태가 되었다고 해서 `rust-lang/rust`를 처음부터 다시 클론할 필요는 없다!
@@ -5879,7 +5944,7 @@ If you don't care about the changes
 and just want to get a clean copy of the repository back, you can use `git reset`:
 
 ```console
-# WARNING: this throws out any local changes you've made! Consider resolving the conflicts instead.
+## WARNING: this throws out any local changes you've made! Consider resolving the conflicts instead.
 git reset --hard main
 ```
 
@@ -5945,6 +6010,7 @@ git submodule update
 일부 서브모듈은 실제 빌드에 요구되지 않는다. 예컨대 `download-ci-llvm`을 사용하는 경우 `src/llvm-project`를 체크아웃할 필요가 없다.
 서브모듈 커밋 이력을 매번 패치받지 않으려면 `git submodule deinit -f src/llvm-project`를 실행하여 커밋 포인터 변경 표시를 비활성화할 수 있다.
 
+## 일부 서브모듈은 실제 빌드에 요구되지 않는다. 예컨대 `download-
 ### 리베이스 및 충돌 해결하기
 
 로컬에서 코드를 수정할 때는 기능 브랜치를 생성하던 시점의 `rust-lang/rust` 버전을 기반으로 작업하게 된다.
@@ -6023,6 +6089,7 @@ git push --force-with-lease # (로컬 상태와 원격 origin을 동기화)
 
 또한 `main` 브랜치에서 `git push --force-with-lease`를 구동하여 기능 브랜치가 GitHub 상의 상태와 올바르게 동기화되어 있는지 이중 확인해 보라.
 
+## 또한 `main` 브랜치에서 `git push --force-with-l
 ### 고급 리베이스
 
 #### 커밋 스쿼시하기
@@ -6048,10 +6115,10 @@ git push --force-with-lease # (로컬 상태와 원격 origin을 동기화)
 또는 다음과 같이 커밋 이력을 정돈하는 방식을 취할 수도 있다:
 
 ```console
-# 모든 변경을 단일 커밋으로 스쿼시하여 충돌을 한 번만 처리함
+## 모든 변경을 단일 커밋으로 스쿼시하여 충돌을 한 번만 처리함
 git rebase --interactive --keep-base main  # 과정 중 모든 변경사항을 스쿼시
 git rebase main
-# 모든 머지 충돌을 해결
+## 모든 머지 충돌을 해결
 git rebase --continue
 ```
 
@@ -6106,6 +6173,7 @@ git rebase --continue
 
 [range-diff-example-docs]: https://git-scm.com/docs/git-range-diff#_examples
 
+## [range-diff-example-docs]: https://git-s
 ### 병합 커밋 미사용 정책
 
 rust-lang/rust 저장소는 이른바 "리베이스 워크플로(rebase workflow)"를 채택하고 있다.
@@ -6118,6 +6186,7 @@ rust-lang/rust 저장소는 이른바 "리베이스 워크플로(rebase workflow
 가장 큰 장점은 전반적으로 깨끗한 선형(linear) 커밋 이력을 유지할 수 있다는 점이다.
 선형 이력은 이분 탐색(bisecting)을 대폭 단순화해주며 커밋 이력 및 로그를 추적하고 이해하기 훨씬 쉽게 만들어 준다.
 
+## 가장 큰 장점은 전반적으로 깨끗한 선형(linear) 커밋 이력을 유지할
 ### 코드 리뷰 팁
 
 **참고**: 이 섹션은 PR을 *작성*하는 입장이 아닌 *리뷰*하는 입장을 위한 팁이다.
@@ -6171,6 +6240,7 @@ git log -p ':!Cargo.lock'
 
 임의의 와일드카드 패턴도 지원된다 (예: `:!compiler/*`). 패턴 구문은 `.gitignore`와 동일하며 앞에 `:`을 부가하여 패턴임을 지정한다.
 
+## 임의의 와일드카드 패턴도 지원된다 (예: `:!compiler/*`).
 ### Git 서브모듈
 
 **참고**: 서브모듈 지식은 알아두면 유용하지만 `rustc` 기여의 필수 전제 조건은 *아니다*.
@@ -6263,6 +6333,7 @@ fatal: not a git repository: src/gcc/../../.git/modules/src/gcc
 
 이후 `./x fmt`와 같은 명령을 구동하면 부트스트랩이 서브모듈 체크아웃을 자동으로 재정리해 준다.
 
+## 이후 `./x fmt`와 같은 명령을 구동하면 부트스트랩이 서브모듈 체크
 ### `git blame` 시 특정 커밋 무시하기
 
 일부 커밋은 실제 기능 변경 없이 코드 전체의 대규모 포맷팅만 수정한 내역을 가진다.
@@ -6283,6 +6354,7 @@ fatal: not a git repository: src/gcc/../../.git/modules/src/gcc
 `@rustbot`(`triagebot`으로도 불림)은 본래 `rust-lang` GitHub 조직 멤버십 권한이 요구되는 여러 작업들을 일반 기여자들이 직접 수행할 수 있도록 돕는 도우미 로봇이다.
 `rustc` 기여자들에게 가장 유용한 기능은 이슈 담당자 지정(claiming)과 라벨 관리(relabeling)인다.
 
+## `@rustbot`(`triagebot`으로도 불림)은 본래 `rust-
 ### 이슈 담당자 지정
 
 `@rustbot`은 누구든 이슈 담당자로 본인을 지정할 수 있는 명령어를 제공한다.
@@ -6297,6 +6369,7 @@ GitHub 시스템 제약으로 인해 `@rustbot`이 일시적으로 보조 플레
 
  `@rustbot` release-assignment
 
+## `@rustbot` release-assignment
 ### Issue relabeling
 
 Changing labels for an issue or PR is also normally reserved for members of the organization.
@@ -6323,6 +6396,7 @@ you are comfortable with doing it yourself.
 
 [shortcuts]: https://forge.rust-lang.org/triagebot/shortcuts.html
 
+## [shortcuts]: https://forge.rust-lang.org
 ### 기타 봇 명령어
 
 `@rustbot`이 제공하는 전체 기능에 관심이 있다면 [공식 문서]를 참조하라. 봇 기능이 업데이트될 때마다 지속 관리되는 기술 레퍼런스 문서이다.
@@ -6342,6 +6416,7 @@ you are comfortable with doing it yourself.
 
 일반적으로 기여에 관심은 있지만 어디서부터 시작해야 할지 확신이 서지 않는다면 언제든지 편하게 질문해 주라!
 
+## 일반적으로 기여에 관심은 있지만 어디서부터 시작해야 할지 확신이 서지 않
 ### 개요
 
 이 챕터에서 다룰 예시 기능은 매크로의 클리니(Kleene) `?` 반복 연산자이다.
@@ -6397,6 +6472,7 @@ fn main() {
 [impl4]: https://github.com/rust-lang/rust/pull/51587
 [merge]: https://github.com/rust-lang/rust/issues/48075#issuecomment-433177613
 
+## [impl4]: https://github.com/rust-lang/ru
 ### Pre-RFC 및 RFC
 
 > **참고**: 일반적으로 _새로운_ 기능이나 Rust 생태계의 중대한 변경을 제안하는 것이 아니라면 RFC 절차를 거칠 필요가 없다.
@@ -6466,6 +6542,7 @@ RFC가 머지되면 해당 PR이 RFCs 저장소로 통합된다.
 
 [tracking]: https://github.com/rust-lang/rust/issues/48075
 
+## [tracking]: https://github.com/rust-lang
 ### 실험적 RFC
 
 eRFC는 고수준의 필요성은 명확하지만 사전에 세부 명세를 확정하기에는 설계 공간이 너무 넓은 복잡한 기능에 적용되는 RFC 변형 절차이다.
@@ -6478,6 +6555,7 @@ eRFC는 고수준의 필요성은 명확하지만 사전에 세부 명세를 확
 
 <a id="impl"></a>
 
+## <a id="impl"></a>
 ### 구현
 
 컴파일러 변경 작업을 진행하려면 [rust-lang/rust] 저장소를 대상으로 PR을 작성하라.
@@ -6534,6 +6612,7 @@ There are a couple of things that may happen for some PRs during the review proc
 신규 기능이 아닌 단순 버그 수정과 같은 작업이라면 이것으로 절차가 완료된다!
 기여에 감사드린다 :)
 
+## 신규 기능이 아닌 단순 버그 수정과 같은 작업이라면 이것으로 절차가 완료
 ### 구현 정제하기
 
 나이틀리 채널에서 사용자들이 신규 기능을 경험함에 따라 약간의 변경이 제안되고 미해결 질문들이 해결될 수 있다.
@@ -6547,6 +6626,7 @@ There are a couple of things that may happen for some PRs during the review proc
 또한 모호성 해소 전략도 수정되었다: 다른 반복 연산자(`+` 또는 `*`)에 대한 구분자 토큰으로 `?`를 사용하는 기능을 제거하기로 결정했다. 다만 이는 이전 코드와의 하위 호환성을 파괴하는 변경(breaking change)에 해당하므로 에디션 경계(edition boundary)를 가로질러 적용하기로 결정했다.
 이에 따라 신규 기능은 2018 에디션 환경에서만 활성화된다. 원래 RFC 명세로부터의 이러한 이탈 과정은 [추가 FCP](https://github.com/rust-lang/rust/issues/51934) 진행을 필요로 했다.
 
+## 또한 모호성 해소 전략도 수정되었다: 다른 반복 연산자(`+` 또는 `*
 ### 안정화
 
 마침내 해당 기능이 나이틀리 채널에서 충분히 익혀지고 검증되었을 때, 언어 팀 멤버가 [안정화를 발의][stabilizefcp]했다.
@@ -6584,6 +6664,7 @@ There are a couple of things that may happen for some PRs during the review proc
 [별도 절차]: #stability
 [lang-propose]: https://lang-team.rust-lang.org/how_to/propose.html
 
+## [별도 절차]: #stability
 ### `@rfcbot` FCP 절차
 
 변경사항이 소규모이고, 논란의 여지가 없으며 하위 호환성을 파괴하지 않고, 사용자 노출 언어 명세에 영향을 주지 않으며 신규 미확정 기능을 부가하지 않는 경우 해당 코드 영역 담당자로부터 r+를 받는 일반 PR 제출만으로 구현이 진행된다.
@@ -6606,6 +6687,7 @@ FCP를 제안하기 위해 구현이 r+ 받을 수준으로 완전히 준비될 
 FCP가 제안되면 팀의 모든 멤버가 FCP에 서명(sign off)해야 한다.
 모두가 서명하면, 모든 사람이 의견을 개진할 수 있는 10일간의 "최종 의견 수렴 기간(final comment period)"이 진행되며 별도의 우려사항이 제기되지 않으면 해당 PR/이슈가 FCP 승인을 받게 된다.
 
+## FCP가 제안되면 팀의 모든 멤버가 FCP에 서명(sign off)해야
 ### 기능 구현의 구체적 절차
 
 기능을 올바르게 구현하기 위해 거쳐야 할 몇 가지 "실무적인" 단계들이 존재한다.
@@ -6657,6 +6739,7 @@ FCP가 제안되면 팀의 모든 멤버가 FCP에 서명(sign off)해야 한다
 
 [언어 실험]: https://lang-team.rust-lang.org/how_to/experiment.html
 
+## [언어 실험]: https://lang-team.rust-lang.org
 ### 코드에서의 안정성
 
 신규 미확정 기능을 구현할 때 다음 순서대로 단계를 진행해야 한다:
@@ -6738,6 +6821,7 @@ FCP가 제안되면 팀의 모든 멤버가 FCP에 서명(sign off)해야 한다
 [컴파일러 플래그 지침]: https://forge.rust-lang.org/compiler/proposals-and-stabilization.html?highlight=unstable%20flag#compiler-flags
 [`UnstableOptions`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_session/options/struct.UnstableOptions.html
 
+## [컴파일러 플래그 지침]: https://forge.rust-lang.o
 ### 미확정 컴파일러 플래그 부가하기
 
 컴파일러 내부 실험, 진단 출력, 디버깅 보조 기능 및 임시 구현 제어를 위해 언어 기능 게이트보다 `-Z` 플래그를 부가하는 것이 더 적절할 수 있다.
@@ -6766,6 +6850,7 @@ FCP가 제안되면 팀의 모든 멤버가 FCP에 서명(sign off)해야 한다
 
 PR을 개설하기 전 `./x test tidy` 명령 및 신규 플래그를 실행하는 관련 테스트 수트를 구동하라.
 
+## PR을 개설하기 전 `./x test tidy` 명령 및 신규 플래그를
 ### 테스트 참가 요청
 
 구현이 완성되면 해당 기능이 나이틀리 채널 사용자에게 공개되지만 아직 안정판 Rust의 일부는 아니다.
@@ -6784,6 +6869,7 @@ PR을 개설하기 전 `./x test tidy` 명령 및 신규 플래그를 실행하�
 
 언어 변경의 유의미성 규모에 따라 적절한 홍보 채널을 선택할 수 있으나, [*This Week in Rust*][twir] 소식지 코너는 메인 Rust 공식 블로그의 독립 포스팅보다는 노출도가 낮을 수 있다.
 
+## 언어 변경의 유의미성 규모에 따라 적절한 홍보 채널을 선택할 수 있으나,
 ### 완성도 다듬기
 
 사용자에게 정제된 경험을 제공한다는 것은 단순히 rustc 내부에 기능을 구현하는 것 이상을 의미한다.
@@ -6798,6 +6884,7 @@ PR을 개설하기 전 `./x test tidy` 명령 및 신규 플래그를 실행하�
  - [`rust-analyzer`] 지원이 이뤄지기 전에 단순 기능 존재만으로 사용자 경험이 저해되는 경우 언어 팀이 차단 이슈를 제기할 수 있다.
  - [`rust-analyzer`]가 파싱하지 못하는 신규 문법이나 타입 추론 변경으로 인한 잘못된 진단 출력이 발생하는 케이스가 이에 해당한다.
 
+## - [`rust-analyzer`] 지원이 이뤄지기 전에 단순 기능 존
 ### 안정화
 
 기능 라이프사이클의 최종 단계는 모든 Rust 사용자에게 해당 기능이 공식 개방되는 [안정화(stabilization)][stab] 단계이다.
@@ -6818,21 +6905,25 @@ PR을 개설하기 전 `./x test tidy` 명령 및 신규 플래그를 실행하�
 
 이 페이지는 우리의 안정성 보증에 대한 개요를 제공한다.
 
+## 이 페이지는 우리의 안정성 보증에 대한 개요를 제공한다.
 ### RFC 목록
 
 * [RFC 1105 API진화 (api evolution)](https://github.com/rust-lang/rfcs/blob/master/text/1105-api-evolution.md)
 * [RFC 1122 언어 semver (language semver)](https://github.com/rust-lang/rfcs/blob/master/text/1122-language-semver.md)
 
+## * [RFC 1105 API진화 (api evolution)](https
 ### 블로그 포스트
 
 * [성과물로서의 안정성 (Stability as a Deliverable)](https://blog.rust-lang.org/2014/10/30/Stability/)
 
+## * [성과물로서의 안정성 (Stability as a Deliverabl
 ### rustc-dev-guide 링크
 
 * [라이브러리 기능 안정화하기](#stability)
 * [언어 기능 안정화하기](#stabilization-guide)
 * [버그 수정의 요건은 무엇인가?](#what-qualifies-as-a-bug-fix)
 
+## * [언어 기능 안정화하기](#stabilization-guide)
 ### 예외 항목
 
 자체 인프라의 일부가 타인에 의해 사용될 수 있더라도 이는 여전히 내부 전용으로 간주되며 안정성 보증이 제공되지 않는다. 다음은 안정성이 보장되지 않는 컴포넌트의 비완전 목록이다:
@@ -6847,6 +6938,7 @@ PR을 개설하기 전 `./x test tidy` 명령 및 신규 플래그를 실행하�
 **참고**: 이 섹션은 언어 기능이 아닌 *라이브러리(library)* 기능을 대상으로 한다.
 언어 기능 안정화 지침은 [기능 안정화하기](#stabilization-guide)를 참조하라.
 
+## **참고**: 이 섹션은 언어 기능이 아닌 *라이브러리(library)*
 ### unstable
 
 `#[unstable(feature = "foo", issue = "1234", reason = "lorem ipsum")]` 속성은 해당 아이템을 미확정(unstable)으로 명시적으로 지정한다.
@@ -6878,10 +6970,12 @@ PR을 개설하기 전 `./x test tidy` 명령 및 신규 플래그를 실행하�
 [rustc 버그]: https://github.com/rust-lang/rust/issues/15702
 [실수로 안정화된 경로]: https://github.com/rust-lang/rust/issues/113387
 
+## [rustc 버그]: https://github.com/rust-lang
 ### stable
 `#[stable(feature = "foo", since = "..69")]` 속성은 해당 아이템이 정식 안정화(stabilized)되었음을 명시적으로 표시한다.
 stable 함수 내부 본문에서 unstable 항목들을 사용할 수 있다.
 
+## `#[stable(feature = "foo", since = "..69
 ### rustc_const_unstable
 
 `#[rustc_const_unstable(feature = "foo", issue = "1234", reason = "lorem ipsum")]` 속성은 `unstable` 속성과 동일한 인터페이스를 가진다.
@@ -6896,10 +6990,12 @@ const-안정성은 일반 안정성과 달리 *재귀적(recursive)* 특성을 �
 이는 unstable 컴파일러 구현 내용이 stable 코드로 예기치 않게 노출되거나 미완성 구현의 예기치 못한 동작에 묶이는 것을 방지하기 위함이다.
 이 검사를 미세 조율하는 방법은 아래의 rustc_const_stable_indirect 및 rustc_allow_const_fn_unstable 속성을 참조하라.
 
+## 이는 unstable 컴파일러 구현 내용이 stable 코드로 예기치 않
 ### rustc_const_stable
 
 `#[rustc_const_stable(feature = "foo", since = "..69")]` 속성은 `const fn`의 constness가 정식 `stable` 상태임을 명시적으로 표시한다.
 
+## `#[rustc_const_stable(feature = "foo", s
 ### rustc_const_stable_indirect
 
 `#[rustc_const_stable_indirect]` 속성을 `#[rustc_const_unstable(...)]` 함수에 부가하여 `#[rustc_const_stable(...)]` 함수에서 해당 함수를 호출할 수 있도록 허용한다.
@@ -6907,18 +7003,21 @@ const-안정성은 일반 안정성과 달리 *재귀적(recursive)* 특성을 �
 
 또한 컴파일러 내부에서 const 호출이 합성되어 일어나는 랑 아이템(lang item)에도 이 속성을 추가하여 해당 호출이 재귀적 const 안정성 규칙을 우회하지 못하도록 보장해야 한다.
 
+## 또한 컴파일러 내부에서 const 호출이 합성되어 일어나는 랑 아이템(l
 ### rustc_intrinsic_const_stable_indirect
 
 인트린직 함수에서 이 속성은 해당 인트린직이 "공개 stable 함수에서 사용될 준비가 되었음"을 표시한다.
 해당 인트린직에 `rustc_const_unstable` 속성이 지정되어 있다면 제거해야 한다.
 **인트린직에 이 속성을 부가하려면 t-lang 및 wg-const-eval 팀의 승인이 반드시 필요하다!**
 
+## 해당 인트린직에 `rustc_const_unstable` 속성이 지정되어
 ### rustc_default_body_unstable
 
 `#[rustc_default_body_unstable(feature = "foo", issue = "1234", reason = "lorem ipsum")]` 속성은 `unstable` 속성과 동일한 인터페이스를 갖는다.
 트레이트 내부 아이템의 기본 구현(default implementation)을 unstable 상태로 마킹하는 데 사용된다.
 default-body-unstable 아이템을 가진 트레이트는 해당 아이템에 명시적 본문을 구현함으로써 stable하게 구현하거나, 대응하는 `#![feature]`를 활성화하여 기본 본문을 사용할 수 있다.
 
+## 트레이트 내부 아이템의 기본 구현(default implementatio
 ### 라이브러리 기능 안정화하기
 
 기능을 안정화하려면 다음 단계를 진행하라:
@@ -6934,6 +7033,7 @@ default-body-unstable 아이템을 가진 트레이트는 해당 아이템에 �
 You can see an example of stabilizing a feature with
 [FCP가 진행된 트래킹 이슈 #81656](https://github.com/rust-lang/rust/issues/81656) 및 관련 [구현 PR #84642](https://github.com/rust-lang/rust/pull/84642)를 참조하라.
 
+## You can see an example of stabilizing a
 ### allow_internal_unstable
 
 매크로 및 컴파일러 디슈거링(desugaring)은 소스 본문을 호출 지점에 노출시킨다.
@@ -6942,6 +7042,7 @@ You can see an example of stabilizing a feature with
 참고로 매크로가 const 문맥에서 사용되고 `#[rustc_const_unstable(...)]` 함수 호출을 생성하는 경우, `allow_internal_unstable`이 적용되어 있더라도 *여전히 거부*된다.
 해당 매크로가 재귀적 const 안정성 검사를 예기치 않게 우회하지 못하도록 함수에 `#[rustc_const_stable_indirect]` 속성을 부가하라.
 
+## 참고로 매크로가 const 문맥에서 사용되고 `#[rustc_const_
 ### rustc_allow_const_fn_unstable
 
 앞서 설명한 바와 같이 stable `const fn` 내부에서는 간접적인 경우라도 unstable const 기능을 사용할 수 없다.
@@ -6954,10 +7055,12 @@ You can see an example of stabilizing a feature with
 
 **`const fn`에 `rustc_allow_const_fn_unstable` 속성을 새로 부가할 때 항상 `@rust-lang/wg-const-eval` 팀을 핑하라.**
 
+## **`const fn`에 `rustc_allow_const_fn_unst
 ### staged_api
 
 `stable` 또는 `unstable` 속성을 사용하는 모든 크레이트는 크레이트 루트에 `#![feature(staged_api)]` 속성을 반드시 선언해야 한다.
 
+## `stable` 또는 `unstable` 속성을 사용하는 모든 크레이트는
 ### deprecated
 
 표준 라이브러리의 기능 사용 중단(Deprecation) 선언은 일반 사용자 코드의 deprecation 처리 방식과 거의 동일하다.
@@ -6981,6 +7084,7 @@ You can see an example of stabilizing a feature with
 사용자 코드와의 또 다른 차이점은 `since` 필드가 실제 `rustc` 버전을 대상으로 검증된다는 점이다.
 `since` 버전이 미래 버전인 경우 기본 `allow` 상태인 `deprecated_in_future` 린트가 트리거되며 표준 라이브러리의 대부분은 `#![warn(deprecated_in_future)]` 선언으로 이를 경고 수준으로 상향한다.
 
+## 사용자 코드와의 또 다른 차이점은 `since` 필드가 실제 `rustc
 ### unstable_feature_bound
 `#[unstable_feature_bound(foo)]` 속성은 `#[unstable]` 속성과 함께 사용되어 stable 타입과 stable 트레이트의 `impl` 구현을 unstable 상태로 지정하는 데 사용된다.
 std/core 내부에서 `#[unstable_feature_bound(foo)]`로 마킹된 아이템은 동일하게 `#[unstable_feature_bound(foo)]`로 마킹된 다른 아이템에 의해서만 사용될 수 있다.
@@ -6992,6 +7096,7 @@ std/core 외부에서 `#[unstable_feature_bound(foo)]` 속성이 지정된 아�
 - 자유 함수 (free function)
 - 트레이트 (trait)
 
+## - 자유 함수 (free function)
 ### 이름 변경 및 제거된 기능
 unstable 기능은 이름이 변경되거나 제거될 수 있다.
 기능 이름을 변경하는 경우 `#[unstable]` 속성에 `old_name = "old_name"` 항목을 추가할 수 있다.
@@ -7012,12 +7117,14 @@ unstable 기능은 이름이 변경되거나 제거될 수 있다.
 미확정 기능이 우려사항 없이 충분히 검증되었다면 누구나 안정화를 추진할 수 있으나, 해당 기능을 개발한 멤버들과 함께 협력하는 것이 바람직한다.
 다음 단계를 이행하라:
 
+## 미확정 기능이 우려사항 없이 충분히 검증되었다면 누구나 안정화를 추진할
 ### 필요 시 RFC 작성하기
 
 해당 기능이 [언어 실험(lang experiment)]의 일부였던 경우, 언어 팀은 일반적으로 안정화 이전에 먼저 RFC를 승인하길 원할 것이다.
 
 [lang experiment]: https://lang-team.rust-lang.org/how_to/experiment.html
 
+## [lang experiment]: https://lang-team.rus
 ### 문서화 PR
 
 <a id="updating-documentation"></a>
@@ -7042,6 +7149,7 @@ unstable 기능은 이름이 변경되거나 제거될 수 있다.
 해당 저장소들의 메인테이너는 전체 안정화 프로세스가 완료될 때까지 이러한 PR들을 열린 상태로 유지할 것이다.
 그동안 우리는 다음 단계로 진행할 수 있다.
 
+## 해당 저장소들의 메인테이너는 전체 안정화 프로세스가 완료될 때까지 이러한
 ### Write a stabilization report
 
 [이 저장소에 있는 템플릿][srt]을 사용하여 안정화 리포트를 작성하라.
@@ -7058,6 +7166,7 @@ unstable 기능은 이름이 변경되거나 제거될 수 있다.
 
 안정화 리포트는 일반적으로 안정화 PR의 메인 주석 댓글로 게시된다 (다음 섹션 참조).
 
+## 안정화 리포트는 일반적으로 안정화 PR의 메인 주석 댓글로 게시된다 (다
 ### 안정화 PR
 
 모든 기능은 고유한 구성을 가지므로 일부 기능은 이 가이드에서 논의하는 항목 이상의 단계를 요구할 수 있다.
@@ -7142,6 +7251,7 @@ if something { /* XXX */ }
 [`Unstable Book`]: https://doc.rust-lang.org/unstable-book/index.html
 [`src/doc/unstable-book`]: https://github.com/rust-lang/rust/tree/HEAD/src/doc/unstable-book
 
+## [`Unstable Book`]: https://doc.rust-lang
 ### 팀 노미네이션
 
 안정화 PR을 개설할 때 lang 팀 및 조율자 그룹(`@rust-lang/lang`, `@rust-lang/lang-advisors`)과 함께 연관성이 있는 다른 담당 팀들을 CC로 지정하라:
@@ -7157,6 +7267,7 @@ if something { /* XXX */ }
 
 `rust-lang` 조직 멤버가 아닌 경우 지정된 담당 리뷰어에게 본인을 대신해 관련 팀들을 CC 처리해 줄 것을 요청할 수 있다.
 
+## `rust-lang` 조직 멤버가 아닌 경우 지정된 담당 리뷰어에게 본인
 ### PR 상에 FCP 제안하기
 
 lang 팀 및 기타 관련 팀들이 안정화 안건을 검토하고 제기된 질문에 대한 답변이 모두 완료된 후, 팀 멤버 중 한 명이 다음 댓글을 남겨 안정화 수용 FCP를 제안할 수 있다:
@@ -7168,6 +7279,7 @@ lang 팀 및 기타 관련 팀들이 안정화 안건을 검토하고 제기된 
 충분한 수의 팀 멤버가 검토를 완료하면 PR은 "최종 의견 수렴 기간(FCP)"으로 이동한다.
 새로운 우려사항이 제기되지 않으면 이 기간이 종료되고 일반적인 구현 검토 과정을 거쳐 PR이 머지될 수 있다.
 
+## 충분한 수의 팀 멤버가 검토를 완료하면 PR은 "최종 의견 수렴 기간(F
 ### 안정화 PR 검토 및 머지 지침
 
 안정화 PR에 `r+`를 부여하기 전, 다음 항목들을 반드시 확인해야 한다:
@@ -7183,6 +7295,7 @@ lang 팀 및 기타 관련 팀들이 안정화 안건을 검토하고 제기된 
 발견할 경우 관련 내용을 서술하고 해당 PR을 lang 팀 노미네이트 처리하라.
 
 
+## 발견할 경우 관련 내용을 서술하고 해당 PR을 lang 팀 노미네이트 처
 ### 안정화 리포트 템플릿 {#stabilization-report-template}
 
 #### 이 템플릿은 무엇인가요?
@@ -7193,6 +7306,7 @@ lang 팀 및 기타 관련 팀들이 안정화 안건을 검토하고 제기된 
 
 ***
 
+## ***
 ### 안정화 리포트
 
 #### 요약
@@ -7473,12 +7587,14 @@ Crater 리포트 분석:
 [feature-gate-check]: #feature-gate-check
 [libs-gate]: #stability
 
+## [feature-gate-check]: #feature-gate-chec
 ### 기능 게이트 추가하기
 
 "신규 기능 구현하기" 섹션의 ["코드에서의 안정성"][adding] 단원의 지침을 참조하라.
 
 [adding]: #stability-in-code
 
+## [adding]: #stability-in-code
 ### 기능 게이트 제거하기
 
 [removing]: #removing-a-feature-gate
@@ -7502,6 +7618,7 @@ Crater 리포트 분석:
    ```
 
 
+## ```
 ### 기능 게이트 이름 변경하기
 
 [renaming]: #renaming-a-feature-gate
@@ -7534,6 +7651,7 @@ Crater 리포트 분석:
    ```
 
 
+## ```
 ### 기능 안정화하기
 
 안내 지침은 "기능 안정화하기" 챕터의 ["기능 게이트 목록 갱신"] 단원을 참조하라.
@@ -7550,6 +7668,7 @@ Crater 리포트 분석:
 
 <a id="formatting"></a>
 
+## <a id="formatting"></a>
 ### 포맷팅 및 tidy 스크립트
 
 rustc는 [Rust 표준 코딩 스타일][fmt]을 지향하고 있다.
@@ -7635,6 +7754,7 @@ Python 코드를 수정할 때 다음 명령을 사용해 포맷팅하라:
 
 <a id="cc"></a>
 
+## <a id="cc"></a>
 ### 정합성을 위한 코딩
 
 포맷팅 외에도 준수할 가치가 있는 몇 가지 팁이다.
@@ -7673,12 +7793,14 @@ if foo {
 
 <a id="cio"></a>
 
+## <a id="cio"></a>
 ### crates.io 크레이트 활용
 
 [crates.io 의존성][crates] 섹션을 참조하라.
 
 <a id="er"></a>
 
+## <a id="er"></a>
 ### PR 구조화 지침
 
 PR의 커밋 내역을 구성하는 방식은 리뷰어의 검토 작업에 큰 차이를 가져온다. 몇 가지 유용한 팁이다.
@@ -7696,6 +7818,7 @@ PR의 커밋 내역을 구성하는 방식은 리뷰어의 검토 작업에 큰 
 **개별 커밋이 반드시 빌드될 필요는 없음 (단, 빌드되면 좋다).** 중간 커밋들이 전부 성공적으로 빌드되어야 한다는 엄격한 요구조건은 없다 - PR 단위에서의 이분 탐색(bisect)이 가능한 수준이면 충분하다.
 하지만 개별 커밋이 성공적으로 빌드되도록 작성할 수 있다면 항상 큰 도움이 된다.
 
+## **개별 커밋이 반드시 빌드될 필요는 없음 (단, 빌드되면 좋다).**
 ### 명명 규칙
 
 일반적인 Rust 스타일 및 명명 규칙 외에도 컴파일러에 특화된 몇 가지 규칙이 있다.
@@ -7726,6 +7849,7 @@ PR의 커밋 내역을 구성하는 방식은 리뷰어의 검토 작업에 큰 
 이 트래킹 이슈는 해당 변경의 파급 결과에 대한 피드백을 수집하는 공간 역할을 수행한다.
 간혹 변경이 예기치 않게 커다란 파급을 가져오거나 고려되지 않았던 다른 회피 방안이 발견될 수 있다. 이 경우 방향을 수정하여 변경을 되돌리거나 다른 대안을 모색할 수 있다 (경고 방식을 적용 중이었다면 전환 작업이 특히 쉽다).
 
+## 이 트래킹 이슈는 해당 변경의 파급 결과에 대한 피드백을 수집하는 공간
 ### 버그 수정의 요건은 무엇인가?
 
 이 RFC는 파괴적 변경이 허용되는 조건 자체를 정의하려 하지 않는다.
@@ -7755,6 +7879,7 @@ PR의 커밋 내역을 구성하는 방식은 리뷰어의 검토 작업에 큰 
 
 마지막으로 플러그인에 영향을 주는 `rustc_ast` 변경의 경우 이러한 변경들을 하나로 묶어 처리(batching)하는 것이 일반적 정책이다. 이에 대해서는 아래에서 자세히 다룬다.
 
+## 마지막으로 플러그인에 영향을 주는 `rustc_ast` 변경의 경우 이러
 ### 트래킹 이슈
 
 모든 파괴적 변경에는 해당 변경을 다루는 **전용 트래킹 이슈**가 부가되어야 한다. 이 이슈의 메인 설명문에는 사용자가 코드를 수정하기 위해 이행해야 할 조치 사항에 초점을 맞춰 진행 중인 변경을 설명해야 한다. 이슈 본문은 친절하고 실용적이어야 하며 세부사항 확인을 위해 RFC나 관련 이슈 링크로 사용자를 안내하는 것이 좋다. 또한 이 이슈는 사용자들이 질문이나 우려사항을 댓글로 게시하는 소통 공간 역할을 수행한다.
@@ -7957,6 +8082,7 @@ PR을 작성해 제출한다. =)
 - 컴파일러 내부에 직접 의존하며 파괴적 변경 시 동시 갱신이 필요한 도구에는 서브트리(subtree)를 채택
 - 컴파일러와 독립적으로 작동하는 도구에는 서브모듈(submodule)을 채택
 
+## - 컴파일러 내부에 직접 의존하며 파괴적 변경 시 동시 갱신이 필요한 도
 ### 외부 의존성 (서브트리 / subtrees)
 
 다음 외부 프로젝트들은 일종의 `subtree` 방식으로 관리된다:
@@ -8078,6 +8204,7 @@ git subtree add -P src/tools/clippy https://github.com/rust-lang/rust-clippy.git
 
 작업이 완료되면 `src/tools/clippy` 디렉터리는 마치 Clippy가 rustc 모노레포의 일부인 것처럼 투명하게 동작하므로, 동기화를 전담하는 담당자를 제외한 일반 개발자는 `git subtree` 명령을 신경 쓸 필요가 없다.
 
+## 작업이 완료되면 `src/tools/clippy` 디렉터리는 마치 Cli
 ### 외부 의존성 (서브모듈 / submodules)
 
 Rust 빌드 과정에서는 [git 서브모듈] 형태로 추적되는 외부 git 저장소들도 함께 활용된다.
@@ -8113,6 +8240,7 @@ Rust 빌드 과정에서는 [git 서브모듈] 형태로 추적되는 외부 git
 그러나 흔히 저지르는 몇 가지 실수로 인해 퍼징의 유용성이 저하되고 기여자의 부담을 가중시킬 수 있다.
 Rust 프로젝트에 기여하는 시너지 효과를 극대화하기 위해 퍼저(fuzzer)가 생성한 버그를 리포트하기 전 이 가이드를 반드시 읽어보시기 바란다!
 
+## 그러나 흔히 저지르는 몇 가지 실수로 인해 퍼징의 유용성이 저하되고 기여
 ### 가이드라인
 
 #### 요약
@@ -8161,6 +8289,7 @@ end of query stack
 [#109020]: https://github.com/rust-lang/rust/issues/109020
 [#109129]: https://github.com/rust-lang/rust/issues/109129
 
+## [#109020]: https://github.com/rust-lang/
 ### 코퍼스 구축하기
 
 퍼징 코퍼스를 구축할 때 이미 rustc를 충돌시키는 것으로 알려진 테스트 파일들을 수집에 포함시키지 않도록 주의해야 한다.
@@ -8174,6 +8303,7 @@ end of query stack
 
 [glacier]: https://github.com/rust-lang/glacier
 
+## [glacier]: https://github.com/rust-lang/
 ### 추가 가산점 기여
 
 ICE 이슈를 등록한 후 Rust 프로젝트에 기여할 수 있는 몇 가지 좋은 행동이다:
@@ -8195,6 +8325,7 @@ ICE 이슈를 등록한 후 Rust 프로젝트에 기여할 수 있는 몇 가지
 
 [크래시 테스트]: tests/compiletest.html#crash-tests
 
+## [크래시 테스트]: tests/compiletest.html#crash-
 ### 최소화
 
 퍼저가 생성한 입력 코드를 신중히 *최소화(minimize)*하는 것은 개발자들에게 큰 도움이 된다.
@@ -8210,6 +8341,7 @@ ICE 이슈를 등록한 후 Rust 프로젝트에 기여할 수 있는 몇 가지
 [picireny]: https://github.com/renatahodovan/picireny
 [treereduce]: https://github.com/langston-barrett/treereduce
 
+## [picireny]: https://github.com/renatahod
 ### 효과적인 퍼징 기법
 
 rustc를 퍼징할 때 기계어 코드 생성은 주로 LLVM이 담당하므로 머신 코드 생성을 건너뛰는 것이 좋을 수 있다.
@@ -8233,6 +8365,7 @@ rust.debug-assertions = true
 
 [`requires-debug-assertions`]: https://github.com/rust-lang/rust/labels/requires-debug-assertions
 
+## [`requires-debug-assertions`]: https://g
 ### 기존 프로젝트
 
 - [fuzz-rustc][fuzz-rustc]는 libfuzzer를 사용해 rustc를 퍼징하는 방식을 시연한다
@@ -8257,6 +8390,7 @@ rust.debug-assertions = true
 
 [이슈 담당을 신청]: https://forge.rust-lang.org/triagebot/issue-assignment.html
 
+## [이슈 담당을 신청]: https://forge.rust-lang.org
 ### 알림 그룹 목록
 
 알림 그룹 목록이다:
@@ -8273,6 +8407,7 @@ rust.debug-assertions = true
 - [Rust for Linux](#notification-groups-rust-for-linux)
 - [GPU target](#notification-groups-gpu-target)
 
+## - [Rust for Linux](#notification-groups-
 ### 어떤 이슈가 알림 그룹에 적합한가요?
 
 알림 그룹은 주로 **독립적이며(isolated)** **중간 정도의 우선순위(middle priority)**를 가진 버그들에 대해 핑을 받는다:
@@ -8283,6 +8418,7 @@ rust.debug-assertions = true
 
 <a id="join"></a>
 
+## <a id="join"></a>
 ### 알림 그룹 가입하기
 
 알림 그룹에 가입하려면 Rust 팀 저장소의 적절한 파일에 본인의 GitHub 사용자 이름을 추가하는 PR을 제출하기만 하면 된다.
@@ -8305,6 +8441,7 @@ PR 예시:
 * [WebAssembly 그룹에 자신을 추가하는 예시 PR](https://github.com/rust-lang/team/pull/1581)
 * [Windows 그룹에 자신을 추가하는 예시 PR](https://github.com/rust-lang/team/pull/348)
 
+## * [WebAssembly 그룹에 자신을 추가하는 예시 PR](https
 ### 알림 그룹 이슈 태깅하기
 
 이슈가 알림 그룹에 적합함을 표시하려면 [rustbot]에게 알림 그룹 이름을 인자로 하는 [`ping`] 명령을 전달한다.
@@ -8338,6 +8475,7 @@ PR 예시:
 [`triagebot.toml`]: https://github.com/rust-lang/rust/blob/HEAD/triagebot.toml
 
 
+## [`triagebot.toml`]: https://github.com/r
 ### Apple 알림 그룹 {#notification-groups-apple}
 
 **GitHub 라벨:** [O-macos], [O-ios], [O-tvos], [O-watchos] 및 [O-visionos] <br>
@@ -8381,6 +8519,7 @@ Apple에 의해 API가 공개 항목으로 간주되기 위한 일반 조건:
 - 해당 헤더 항목에 가용성 속성(`__API_AVAILABLE`, `API_AVAILABLE` 등)이 명시되어 있어야 함.
 
 
+## - 해당 헤더 항목에 가용성 속성(`__API_AVAILABLE`, `A
 ### ARM 알림 그룹 {#notification-groups-arm}
 
 **GitHub 라벨:** [O-ARM] <br>
@@ -8401,6 +8540,7 @@ Apple에 의해 API가 공개 항목으로 간주되기 위한 일반 조건:
 [eg]: https://github.com/rust-lang/team/pull/358
 
 
+## [eg]: https://github.com/rust-lang/team/
 ### Emscripten 알림 그룹 {#notification-groups-emscripten}
 
 **GitHub 라벨:** [O-emscripten] <br>
@@ -8419,6 +8559,7 @@ Apple에 의해 API가 공개 항목으로 간주되기 위한 일반 조건:
 [`#t-compiler/wasm`]: https://rust-lang.zulipchat.com/#narrow/stream/463513-t-compiler.2Fwasm
 
 
+## [`#t-compiler/wasm`]: https://rust-lang.
 ### Fuchsia 알림 그룹 {#notification-groups-fuchsia}
 
 **GitHub 라벨:** [O-fuchsia] <br>
@@ -8431,6 +8572,7 @@ Apple에 의해 API가 공개 항목으로 간주되기 위한 일반 조건:
 [fuchsia]: #tests-ecosystem-test-jobs-fuchsia
 
 
+## [fuchsia]: #tests-ecosystem-test-jobs-fu
 ### LoongArch 알림 그룹 {#notification-groups-loongarch}
 
 **GitHub 라벨:** [O-loongarch] <br>
@@ -8449,6 +8591,7 @@ Apple에 의해 API가 공개 항목으로 간주되기 위한 일반 조건:
 [`#t-compiler/loong-arch`]: https://rust-lang.zulipchat.com/#narrow/channel/551512-t-compiler.2Floong-arch
 
 
+## [`#t-compiler/loong-arch`]: https://rust
 ### RISC-V 알림 그룹 {#notification-groups-risc-v}
 
 **GitHub 라벨:** [O-riscv] <br>
@@ -8467,6 +8610,7 @@ Apple에 의해 API가 공개 항목으로 간주되기 위한 일반 조건:
 [`#t-compiler/risc-v`]: https://rust-lang.zulipchat.com/#narrow/stream/250483-t-compiler.2Frisc-v
 
 
+## [`#t-compiler/risc-v`]: https://rust-lan
 ### Rust for Linux 알림 그룹 {#notification-groups-rust-for-linux}
 
 **GitHub Label:** [A-rust-for-linux] <br>
@@ -8484,6 +8628,7 @@ Apple에 의해 API가 공개 항목으로 간주되기 위한 일반 조건:
 [`#rust-for-linux`]: https://rust-lang.zulipchat.com/#narrow/stream/425075-rust-for-linux
 
 
+## [`#rust-for-linux`]: https://rust-lang.z
 ### WASI 알림 그룹 {#notification-groups-wasi}
 
 **GitHub 라벨:** [O-wasi] <br>
@@ -8502,6 +8647,7 @@ Apple에 의해 API가 공개 항목으로 간주되기 위한 일반 조건:
 [this example]: https://github.com/rust-lang/team/pull/1580
 
 
+## [this example]: https://github.com/rust-
 ### WebAssembly 알림 그룹 {#notification-groups-wasm}
 
 **GitHub 라벨:** [O-wasm] <br>
@@ -8519,6 +8665,7 @@ Apple에 의해 API가 공개 항목으로 간주되기 위한 일반 조건:
 
 
 
+## 섹션 71
 ### Windows 알림 그룹 {#notification-groups-windows}
 
 **GitHub 라벨:** [O-Windows] <br>
@@ -8545,6 +8692,7 @@ Apple에 의해 API가 공개 항목으로 간주되기 위한 일반 조건:
 [#29520]: https://github.com/rust-lang/rust/pull/29520
 
 
+## [#29520]: https://github.com/rust-lang/r
 ### GPU 타겟 알림 그룹 {#notification-groups-gpu-target}
 
 **Github 라벨:** 없음 <br>
@@ -8567,6 +8715,7 @@ Apple에 의해 API가 공개 항목으로 간주되기 위한 일반 조건:
 
 상세한 라이선스 정보는 `rust-lang/rust` 저장소의 [COPYRIGHT 문서](https://github.com/rust-lang/rust/blob/HEAD/COPYRIGHT)에서 확인할 수 있다.
 
+## 상세한 라이선스 정보는 `rust-lang/rust` 저장소의 [COPY
 ### 가이드라인 for reviewers
 
 일반적으로 리뷰어는 기여 코드의 품질뿐만 아니라 적절한 라이선스가 부여되었는지도 함께 점검해야 한다.
@@ -8586,6 +8735,7 @@ Apple에 의해 API가 공개 항목으로 간주되기 위한 일반 조건:
 - GNU binutils와 같은 GPL 프로젝트의 C 코드를 포팅하는 것은 불허된다. 이는 Rust 자체를 GPL 라이선스로 전환시켜야 함을 요구하게 된다.
 - 알고리즘 교재의 코드를 복사하는 것은 허용될 수 있으나 일부 알고리즘은 특허로 보호될 수 있다.
 
+## - GNU binutils와 같은 GPL 프로젝트의 C 코드를 포팅하는
 ### 포팅
 
 rustc에 대한 기여(특히 플랫폼 및 컴파일러 인트린직 연관)는 타 프로젝트(주로 LLVM 및 GCC)의 작업을 포팅하는 과정을 자주 포함한다.
@@ -8608,6 +8758,7 @@ rustc에 대한 기여(특히 플랫폼 및 컴파일러 인트린직 연관)는
 
 [에디션 가이드]: https://doc.rust-lang.org/edition-guide/
 
+## [에디션 가이드]: https://doc.rust-lang.org/edi
 ### 에디션 정의
 
 `--edition` CLI 플래그는 크레이트에 적용할 에디션을 지정한다.
@@ -8667,6 +8818,7 @@ fn enable_precise_capture(tcx: TyCtxt<'_>, span: Span) -> bool {
 
 [feature gate]: #feature-gates
 
+## [feature gate]: #feature-gates
 ### 에디션 파싱
 
 대부분의 경우 렉서(lexer)는 에디션에 무관(edition-agnostic)한다.
@@ -8720,6 +8872,7 @@ Span에는 해당 Span이 유래한 크레이트의 에디션 정보가 마킹�
 
 [매크로 하이진(Macro hygiene)]: https://doc.rust-lang.org/nightly/edition-guide/editions/advanced-migrations.html#macro-hygiene
 
+## [매크로 하이진(Macro hygiene)]: https://doc.ru
 ### 린트
 
 린트는 에디션과 상호작용하는 몇 가지 옵션을 지원한다.
@@ -8847,6 +9000,7 @@ declare_lint! {
 
 전반적으로 이 방식은 기대만큼 효과를 내지 못한 것으로 평가되며 향후 이디엄 그룹을 다시 채택할 가능성은 희박한다.
 
+## 전반적으로 이 방식은 기대만큼 효과를 내지 못한 것으로 평가되며 향후 이
 ### 표준 라이브러리 변경사항
 
 #### 프렐류드
@@ -8898,6 +9052,7 @@ declare_lint! {
 [`backtrace-rs`]: https://github.com/rust-lang/backtrace-rs/
 [`stdarch`]: https://github.com/rust-lang/stdarch/
 
+## [`backtrace-rs`]: https://github.com/rus
 ### 에디션 안정화하기
 
 에디션 팀의 승인이 완료된 후 에디션을 안정화하는 절차는 대략 다음과 같다:
@@ -8918,7 +9073,7 @@ declare_lint! {
 [#133582]: https://github.com/rust-lang/rust/issues/133582
 
 
-# 부트스트래핑
+## 부트스트래핑
 
 ## 컴파일러 부트스트래핑하기 {#building-bootstrapping-intro}
 
@@ -8959,6 +9114,7 @@ Rust의 경우 초기 컴파일러는 [OCaml로 작성][ocaml-compiler]되었다
 
 [bootstrap-internals]: https://github.com/rust-lang/rust/blob/HEAD/src/bootstrap/README.md
 
+## [bootstrap-internals]: https://github.co
 ### 부트스트래핑의 단계들
 
 #### 개요
@@ -9053,6 +9209,7 @@ Stage 3 단계는 선택 사항이다.
 
 [`./x`]: https://github.com/rust-lang/rust/blob/HEAD/x
 
+## [`./x`]: https://github.com/rust-lang/ru
 ### 부트스트래핑의 복잡성
 
 빌드 시스템이 `stage1` 부트스트래핑 컴파일러를 빌드할 때 현재 베타 컴파일러를 사용하기 때문에, 해당 신규 기능이 베타 채널에 도달하기 전까지 컴파일러 소스 코드 내부에서 일부 신규 언어 기능을 사용할 수 없다 (그렇지 않으면 베타 컴파일러가 해당 구문을 해소하지 못하기 때문).
@@ -9073,6 +9230,7 @@ Stage 3 단계는 선택 사항이다.
 [intrinsics]: #intrinsic
 [ocaml-compiler]: https://github.com/rust-lang/rust/tree/ef75860a0a72f79f97216f8aaa5b388d98da6480/src/boot
 
+## [intrinsics]: #intrinsic
 ### 부트스트랩 단계들의 이해
 
 #### 개요
@@ -9234,6 +9392,7 @@ sysroot에 관한 추가 정보는 다음 링크들을 참조하라:
 
 [rustdoc PR]: https://github.com/rust-lang/rust/pull/76728
 
+## [rustdoc PR]: https://github.com/rust-la
 ### `bootstrap`이 구동하는 명령어에 플래그 전달하기
 
 유용하게도 `./x` 스크립트는 부트스트래핑 진행 중 `rustc` 및 `cargo`로 전달할 스테이지 전용 플래그를 지정할 수 있게 해준다.
@@ -9251,6 +9410,7 @@ sysroot에 관한 추가 정보는 다음 링크들을 참조하라:
 
 대부분의 테스트 러너들은 `--help` 옵션을 수용하므로, 해당 옵션으로 러너가 지원하는 상세 플래그 목록을 조회할 수 있다.
 
+## 대부분의 테스트 러너들은 `--help` 옵션을 수용하므로, 해당 옵션으
 ### 환경 변수
 
 부트스트래핑 진행 동안 일련의 컴파일러 내부 환경 변수들이 사용된다.
@@ -9269,6 +9429,7 @@ thread 'main' panicked at 'RUSTC_STAGE was not set: NotPresent', library/core/sr
 [cc-rs 크레이트]: https://github.com/rust-lang/cc-rs
 [env-vars]: https://docs.rs/cc/latest/cc/#external-configuration-via-environment-variables
 
+## [cc-rs 크레이트]: https://github.com/rust-la
 ### 빌드 명령 `stdout` 출력에 대한 명확한 해설
 
 이 파트에서는 실제 동작 중 나타나는 빌드 명령의 `stdout` 출력 내용을 탐구해 보겠다.
@@ -9311,6 +9472,7 @@ Building rustdoc for stage1 (x86_64-unknown-linux-gnu)
 [`Builder::ensure`]는 [`Step`]을 입력으로 받아서 해당 [`Step`]이 아직 구동되지 않은 경우에만 실행한다.
 [`Step`]의 구조를 더 자세히 살펴본다.
 
+## [`Builder::ensure`]는 [`Step`]을 입력으로 받아서
 ### [`Step`]에 대한 대강의 개요
 
 A [`Step`] represents a granular collection of actions involved in the process
@@ -9342,6 +9504,7 @@ pub trait Step: 'static + Clone + Debug + PartialEq + Eq + Hash {
 
 - `make_run`은 CLI를 통해 직접 요청된 항목들에 대해서만 호출되며 타 스텝의 의존성인 스텝에 대해서는 호출되지 않는다.
 
+## - `make_run`은 CLI를 통해 직접 요청된 항목들에 대해서만 호
 ### 진입점
 
 핵심 부트스트랩 코드에 도달하기 전 몇 가지 사전 예비 단계가 진행된다:
@@ -9390,6 +9553,7 @@ pub trait Step: 'static + Clone + Debug + PartialEq + Eq + Hash {
 부트스트랩을 디버깅(및 프로파일링)하는 주요 방법은 2가지이다.
 첫 번째는 println 로깅이고 두 번째는 `tracing` 기능이다.
 
+## 부트스트랩을 디버깅(및 프로파일링)하는 주요 방법은 2가지이다.
 ### `println` 로깅
 
 부트스트랩에는 광범위한 비구조화(unstructured) 로깅이 구비되어 있다.
@@ -9406,6 +9570,7 @@ running: RUSTC_BOOTSTRAP="1" "/home/jyn/src/rust2/build/x86_64-unknown-linux-gnu
 ...
 ```
 
+## ...
 ### 부트스트랩의 `tracing`
 
 부트스트랩은 다음 기능들을 제공하는 조건부 `tracing` 기능을 갖추고 있다:
@@ -9552,6 +9717,7 @@ Rust 컴파일러는 컴파일러 자신과 순환 의존성에 빠질 수 있�
 컴파일러는 빌드를 위해 갱신된 크레이트를 요구하지만 해당 크레이트는 빌드를 위해 갱신된 컴파일러를 필요로 하는 상황이다.
 이 페이지는 이 순환 고리를 끊기 위해 `#[cfg(bootstrap)]`을 활용하는 방식을 설명한다.
 
+## 컴파일러는 빌드를 위해 갱신된 크레이트를 요구하지만 해당 크레이트는 빌드
 ### `#[cfg]` 활성화하기
 
 보통 외부 크레이트 내부에서 `#[cfg(bootstrap)]`을 사용하면 다음과 같은 경고 메시지가 발생한다:
@@ -9582,6 +9748,7 @@ unexpected_cfgs = { level = "warn", check-cfg = ['cfg(bootstrap)'] }
 
 이제 컴파일러 내부에서 사용하는 것과 마찬가지로 크레이트 내에서 `#[cfg(bootstrap)]`을 채택할 수 있다: 부트스트랩 컴파일러가 구동될 때 `#[cfg(bootstrap)]`으로 주석이 달린 코드가 컴파일되며 그렇지 않은 경우 `#[cfg(not(bootstrap))]`으로 주석이 달린 코드가 컴파일된다.
 
+## 이제 컴파일러 내부에서 사용하는 것과 마찬가지로 크레이트 내에서 `#[c
 ### 갱신 프로세스 단계
 
 구체적인 예시로 `#[naked]` 속성이 unsafe 속성으로 변경되면서 `compiler-builtins` 크레이트와 순환 의존성을 유발했던 케이스를 살펴본다.
@@ -9604,7 +9771,7 @@ unexpected_cfgs = { level = "warn", check-cfg = ['cfg(bootstrap)'] }
 이 예시의 경우 컴파일러 내부에서 구형 동작을 완전히 제거했음을 의미한다.
 
 
-# 고수준 컴파일러 아키텍처
+## 고수준 컴파일러 아키텍처
 
 ## 고수준 컴파일러 아키텍처 {#part-2-intro}
 
@@ -9624,6 +9791,7 @@ unexpected_cfgs = { level = "warn", check-cfg = ['cfg(bootstrap)'] }
 Rust 컴파일러는 2가지 측면에서 특별한다: 다른 컴파일러들이 수행하지 않는 작업(예: 대여 검사 / borrow-checking)을 소스 코드에 가한다는 점과 독창적인 선택의 구현 방식(예: 쿼리)을 다수 갖추고 있다는 점이다.
 이 챕터에서 이 내용들을 차례로 설명할 것이며 가이드의 나머지 파트들에서 개별 구성요소들을 더 자세히 탐구하게 된다.
 
+## Rust 컴파일러는 2가지 측면에서 특별한다: 다른 컴파일러들이 수행하지
 ### 컴파일러가 소스 코드에 가하는 작업
 
 먼저 컴파일러가 작성된 소스 코드에 어떤 작업을 구동하는지 알아본다.
@@ -9749,6 +9917,7 @@ lexer는 작은 인터페이스를 가지며 `rustc` 내부의 진단 인프라�
 [문자열 인터닝]: https://en.wikipedia.org/wiki/String_interning
 [thir]: #thir
 
+## [문자열 인터닝]: https://en.wikipedia.org/wiki
 ### 작동 방식 개요
 
 컴파일러가 소스 코드에 가하는 작업들을 고수준에서 조망했으므로, 이제 이러한 작업들을 컴파일러가 *어떻게* 구동하는지에 대한 내부 작동 방식을 고수준에서 조망해 보겠다.
@@ -9959,6 +10128,7 @@ For more information about queries in the compiler, see [the queries chapter][qu
 
 [orgch]: #overview
 
+## [orgch]: #overview
 ### 워크스페이스 구조
 
 [`rust-lang/rust`] 저장소는 컴파일러, 표준 라이브러리들([`core`], [`alloc`], [`std`], [`proc_macro`] 등), 그리고 [`rustdoc`]을 비롯해 정식 Rust 배포판을 빌드하기 위한 빌드 시스템 및 일군의 도구/서브모듈들을 포함하는 단일 대형 cargo 워크스페이스로 구성된다.
@@ -9990,6 +10160,7 @@ For more information about queries in the compiler, see [the queries chapter][qu
 [`test`]: https://github.com/rust-lang/rust/tree/HEAD/library/test
 [`tests/`]: https://github.com/rust-lang/rust/tree/HEAD/tests
 
+## [`test`]: https://github.com/rust-lang/r
 ### 컴파일러
 
 컴파일러는 여러 [`compiler/`] 디렉터리 내의 크레이트들로 구현된다.
@@ -10045,6 +10216,7 @@ cargo tree --package rustc_driver
 [`rustc_lint`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_lint/index.html
 [query]: #query
 
+## [`rustc_lint`]: https://doc.rust-lang.or
 ### rustdoc
 
 [`rustdoc`]의 핵심 로직 대부분은 [`librustdoc`]에 위치한다. 그러나 [`rustdoc`] 바이너리 자체는 [`src/tools/rustdoc`] 경로에 거주하며 [`rustdoc::main`]을 호출하는 것 외에 별도 작업을 직접 수행하지는 않는다.
@@ -10061,6 +10233,7 @@ cargo tree --package rustc_driver
 [`src/rustdoc-json-types`]: https://github.com/rust-lang/rust/tree/HEAD/src/rustdoc-json-types
 [rustdoc-chapter]: #rustdoc
 
+## [`src/rustdoc-json-types`]: https://gith
 ### 테스트
 
 상기 언급된 모든 요소들에 대한 테스트 수트는 [`tests/`] 디렉터리에 위치한다. 테스트 수트에 대한 세부사항은 [이 챕터][testsch]를 참조하라.
@@ -10069,6 +10242,7 @@ cargo tree --package rustc_driver
 
 [testsch]: #tests-intro
 
+## [testsch]: #tests-intro
 ### 빌드 시스템
 
 저장소 내에는 전체 Rust 배포판을 빌드하고 테스트하는 작업과 더불어 컴파일러, 표준 라이브러리, [`rustdoc`] 등을 빌드하기 위한 수많은 도구들이 포함되어 있다.
@@ -10081,6 +10255,7 @@ cargo tree --package rustc_driver
 [`tidy/`]: https://github.com/rust-lang/rust/tree/HEAD/src/tools/tidy
 [bootstch]: #building-bootstrapping-intro
 
+## [`tidy/`]: https://github.com/rust-lang/
 ### 표준 라이브러리
 
 이 코드는 불안정([`nightly`]) 언어 기능을 사용할 수 있도록 특수한 방식으로 빌드되어야 한다는 점을 제외하고는 일반적인 Rust 크레이트들과 매우 유사하다. 표준 라이브러리는 간혹 [`libstd 또는 "표준 파사드(standard facade)"`]로 칭해진다.
@@ -10088,6 +10263,7 @@ cargo tree --package rustc_driver
 [`libstd 또는 "표준 파사드(standard facade)"`]: https://rust-lang.github.io/rfcs/0040-libstd-facade.html
 [`nightly`]: https://doc.rust-lang.org/nightly/nightly-rustc/
 
+## [`libstd 또는 "표준 파사드(standard facade)"`]:
 ### 기타
 
 `rust-lang/rust` 저장소에는 정식 Rust 배포판을 빌드하는 것과 관련된 기타 수많은 요소들이 포함되어 있다. 보통 개발 과정에서 이들에 대해 걱정하실 필요는 없다.
@@ -10129,6 +10305,7 @@ cargo tree --package rustc_driver
 
 [증분 컴파일 세부사항]: #queries-incremental-compilation-in-detail
 
+## [증분 컴파일 세부사항]: #queries-incremental-comp
 ### 쿼리 호출하기
 
 쿼리를 호출하는 방법은 매우 간단한다.
@@ -10140,6 +10317,7 @@ let ty = tcx.type_of(some_def_id);
 ```
 
 
+## ```
 ### 컴파일러의 쿼리 실행 방식
 
 그렇다면 쿼리 메서드를 호출할 때 컴파일러 내부에서 무슨 일이 벌어지는지 궁금하실 것이다.
@@ -10322,6 +10500,7 @@ pub fn provide(providers: &mut rustc_middle::util::Providers) {
 
 ***
 
+## ***
 ### 신규 쿼리 추가하기
 
 신규 쿼리는 어떻게 추가하는가?
@@ -10383,6 +10562,7 @@ query type_of(key: DefId) -> Ty<'tcx> { ... }
 
 : 상기 규칙들의 한 가지 예외는 MIR을 제자리에서 저렴하게 수정하는 데 채택되는 `ty::steal::Steal` 타입이다. 세부사항은 `Steal` 정의를 참조하라. `@rust-lang/compiler` 팀에 알리지 않고 `Steal`을 새로 채택해서는 **안 된다**.
 
+## : 상기 규칙들의 한 가지 예외는 MIR을 제자리에서 저렴하게 수정하는
 ### 외부 링크
 
 연관 설계 아이디어 및 트래킹 이슈:
@@ -10403,6 +10583,7 @@ query type_of(key: DefId) -> Ty<'tcx> { ... }
 [Incremental Compilation Announcement]: https://blog.rust-lang.org/2016/09/08/incremental.html
 
 
+## [Incremental Compilation Announcement]:
 ### 쿼리 평가 모델 상세 {#queries-query-evaluation-model-in-detail}
 
 이 챕터는 쿼리가 기반을 두고 있는 추상 모델에 대해 심층적으로 다룬다.
@@ -10541,6 +10722,7 @@ fn cyclic_query_provider(tcx, key) -> u32 {
 
 
 
+## 섹션 87
 ### 증분 컴파일 {#queries-incremental-compilation}
 
 증분 컴파일 체계는 본질적으로 전체 쿼리 시스템 위에 얹어진 놀라울 정도로 직관적인 확장 기능이다. 실제 체계의 약간 단순화된 변형인 -- "기본 알고리즘" -- 을 먼저 설명한 후, 몇 가지 개선 사항들을 다룬다.
@@ -10624,6 +10806,7 @@ fn main_query(tcx) {
 #### 참고자료
 최초 설계 문서는 [이곳][initial-design]에서 확인할 수 있으며 메모이제이션 세부사항과 고수준 개요 및 도입 동기들을 더한층 확장하여 설명하고 있다.
 
+## #### 참고자료
 ### 각주
 
 : 저는 오랫동안 이 알고리즘을 Salsa 알고리즘이라 개명하고 싶었으나 널리 퍼지지 못했다. -`@nikomatsakis`
@@ -10632,6 +10815,7 @@ fn main_query(tcx) {
 [initial-design]: https://github.com/nikomatsakis/rustc-on-demand-incremental-design-doc/blob/master/0000-rustc-on-demand-and-incremental.md
 
 
+## [initial-design]: https://github.com/nik
 ### 증분 컴파일 세부사항 {#queries-incremental-compilation-in-detail}
 
 증분 컴파일 체계는 본질적으로 전체 쿼리 시스템 위에 얹어진 놀라울 정도로 직관적인 확장 기능이다.
@@ -10921,6 +11105,7 @@ infrastructure is for.
 
 
 
+## 섹션 87
 ### 증분 컴파일과 컴파일러 백엔드 {#queries-incremental-compilation-and-the-compiler-backend}
 
 LLVM과 연관된 컴파일러 백엔드 파트는 쿼리 시스템을 활용하지만 쿼리 자체로 구현되어 있지는 않는다.
@@ -11023,6 +11208,7 @@ LLVM과 연관된 컴파일러 백엔드 파트는 쿼리 시스템을 활용하
 
 
 
+## 섹션 87
 ### 현 시스템의 단점
 
 여전히 개선되어야 할 수많은 요소들이 존재한다.
@@ -11044,6 +11230,7 @@ LLVM과 연관된 컴파일러 백엔드 파트는 쿼리 시스템을 활용하
 [try_mark_green]: https://doc.rust-lang.org/nightly/nightly-rustc/src/rustc_middle/dep_graph/graph.rs.html
 
 
+## [try_mark_green]: https://doc.rust-lang.
 ### 의존성 디버깅 및 테스트 {#incrcomp-debugging}
 
 #### 의존성 그래프 테스트
@@ -11139,6 +11326,7 @@ Collect(bar) -> TypeckTables(bar)
 첫 번째 엣지가 수상해 보이다. 따라서 `RUST_FORBID_DEP_GRAPH_EDGE`를 `Hir&foo -> Collect&bar`로 설정하고 재구동한 후 백트레이스를 확인한다. 짜잔, 버그 해결!
 
 
+## 첫 번째 엣지가 수상해 보이다. 따라서 `RUST_FORBID_DEP_G
 ### Salsa 동작 원리 {#queries-salsa}
 
 이 챕터는 Niko Matsakis가 [Salsa](https://github.com/salsa-rs/salsa) 프로젝트에 대해 설명한 [동영상](https://www.youtube.com/watch?v=_muY4HjSqVw)에 기초한다. 더 자세한 내용을 알아보려면 마찬가지로 Niko Matsakis가 진행한 [Salsa In More Depth](https://www.youtube.com/watch?v=i_IhACacPRY)를 시청하시길 권장한다.
@@ -11302,6 +11490,7 @@ fn main() {
 
 [인터닝]: https://en.wikipedia.org/wiki/String_interning
 
+## [인터닝]: https://en.wikipedia.org/wiki/Str
 ### 아레나와 인터닝
 
 컴파일 과정 동안 *막대한 양*의 데이터 구조들이 생성되므로, 성능상의 이유로 이들을 전역 메모리 풀로부터 할당한다.
@@ -11339,6 +11528,7 @@ fn main() {
 [`ty::TyKind`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/sty/type.TyKind.html
 [traits]: #traits-resolution
 
+## [`ty::TyKind`]: https://doc.rust-lang.or
 ### `tcx`와 수명 활용 방식 (The `tcx` and how it uses lifetimes)
 
 타입 컨텍스트(`tcx`)는 컴파일러 내부의 핵심 중앙 데이터 구조이다. 모든 형태의 쿼리를 수행할 때 사용하는 컨텍스트이다. [`TyCtxt`] 구조체는 이 공유 컨텍스트에 대한 참조를 정의한다:
@@ -11376,6 +11566,7 @@ rustc는 컴파일 도중 다양한 데이터를 [직렬화(serialize)]하고 �
 [증분 컴파일 결과 보존]: #the-real-world-how-persistence-makes-everything-complicated
 [직렬화(serialize)]: https://en.wikipedia.org/wiki/Serialization
 
+## [증분 컴파일 결과 보존]: #the-real-world-how-pers
 ### `Encodable` 및 `Decodable` 트레이트 (The `Encodable` and `Decodable` traits)
 
 [`rustc_serialize`] 크레이트는 직렬화 가능한 타입들을 위한 2가지 트레이트를 정의한다:
@@ -11426,6 +11617,7 @@ impl<D: Decoder> Decodable<D> for MyStruct {
 ```
 [`rustc_serialize`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_serialize/index.html
 
+## ```
 ### 아레나 할당 타입의 인코딩 및 디코딩
 
 rustc는 [아레나 할당 타입들]을 수없이 많이 포함한다.
@@ -11461,6 +11653,7 @@ impl<'tcx, D: TyDecoder<'tcx>> Decodable<D> for MyStruct<'tcx> {
 [디라이브(derives)]: #derive-macros
 [고아 규칙]: https://doc.rust-lang.org/reference/items/implementations.html#orphan-rules
 
+## [디라이브(derives)]: #derive-macros
 ### 디라이브 매크로
 
 [`rustc_macros`] 크레이트는 `Decodable` 및 `Encodable` 구현을 돕는 다양한 디라이브 매크로들을 정의한다.
@@ -11477,10 +11670,12 @@ impl<'tcx, D: TyDecoder<'tcx>> Decodable<D> for MyStruct<'tcx> {
 [`rustc_metadata::rmeta`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_metadata/rmeta/index.html
 [`rustc_metadata::rmeta::encoder::EncodeContext`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_metadata/rmeta/encoder/struct.EncodeContext.html
 
+## [`rustc_metadata::rmeta`]: https://doc.r
 ### 축약표현
 
 `Ty`는 심각한 재귀 구조를 띨 수 있어 각 `Ty`를 날것 그대로 직렬화하면 크레이트 메타데이터가 비정상적으로 팽창하게 된다. 이를 해결하기 위해 각 `TyEncoder`는 이미 직렬화했던 타입들의 파일 내 위치 캐시를 보관한다. 인코딩 대상 타입이 캐시 내에 존재하는 경우 타입을 원래대로 직렬화하는 대신 출력 파일 내의 바이트 오프셋을 대신 인코딩한다. `ty::Predicate`에 대해서도 유사한 기법을 적용한다.
 
+## `Ty`는 심각한 재귀 구조를 띨 수 있어 각 `Ty`를 날것 그대로 직
 ### `LazyValue<T>`
 
 크레이트 메타데이터는 최초 `TyCtxt<'tcx>`가 생성되기 전에 로드되므로, 일부 역직렬화 작업은 최초 메타데이터 로드 시점 이후로 지연(defer)되어야 한다.
@@ -11497,6 +11692,7 @@ impl<'tcx, D: TyDecoder<'tcx>> Decodable<D> for MyStruct<'tcx> {
 [`LazyTable<I, T>`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_metadata/rmeta/struct.LazyValue.html
 [`LazyValue<T>`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_metadata/rmeta/struct.LazyValue.html
 
+## [`LazyTable<I, T>`]: https://doc.rust-la
 ### 특수화
 
 `DefId`와 같은 소수의 타입들은 각기 다른 `Encoder`들에 대해 특수화된 별도 구현체를 가져야만 한다. 이는 현재 임시 특수화 방식으로 다루어지는데, 예를 들어: `DefId`는 `Encodable<E>`에 대해 기본(`default`) 구현체를 가지는 동시에 `Encodable<CacheEncoder>`를 위한 특수화 구현체를 별도 구비한다.
@@ -11528,6 +11724,7 @@ impl<'tcx, D: TyDecoder<'tcx>> Decodable<D> for MyStruct<'tcx> {
 
 [codegen]: #backend-codegen
 
+## [codegen]: #backend-codegen
 ### 코드 생성
 
 모노모피제이션(단일형화) 동안 컴파일러는 생성할 모든 코드를 _codegen units_라 불리는 더 작은 조각들로 분할한다.
@@ -11537,6 +11734,7 @@ impl<'tcx, D: TyDecoder<'tcx>> Decodable<D> for MyStruct<'tcx> {
 
 [`rustc_codegen_ssa::base`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_codegen_ssa/base/index.html
 
+## [`rustc_codegen_ssa::base`]: https://doc
 ### 데이터 구조
 
 병렬 컴파일러 내부에서 채택되는 근본적인 스레드 안전(thread-safe) 데이터 구조들은 [`rustc_data_structures::sync`] 모듈에서 찾아볼 수 있다.
@@ -11571,6 +11769,7 @@ impl<'tcx, D: TyDecoder<'tcx>> Decodable<D> for MyStruct<'tcx> {
 [`rustc_data_structures::sync::worker_local`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_data_structures/sync/worker_local/index.html
 [`WorkerLocal`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_data_structures/sync/worker_local/struct.WorkerLocal.html
 
+## [`rustc_data_structures::sync::worker_lo
 ### 병렬 이터레이터
 
 [`rayon`] 크레이트에서 제공하는 병렬 이터레이터는 병렬성을 구현하는 쉬운 방법이다.
@@ -11607,6 +11806,7 @@ impl<'tcx, D: TyDecoder<'tcx>> Decodable<D> for MyStruct<'tcx> {
 | rustc_typeck::check_crate | 잘 구성됨(Well-formedness) 검사 | Map::par_for_each_module |
 여전히 병렬 이터레이터를 활용할 가능성이 있는 많은 루프가 존재한다.
 
+## | rustc_typeck::check_crate | 잘 구성됨(Well
 ### 쿼리 시스템
 
 쿼리 모델은 큰 작업 없이도 다수의 쿼리를 병렬로 평가하는 것을 실제로 가능하게 하는 몇 가지 특성을 가지고 있다:
@@ -11625,10 +11825,12 @@ impl<'tcx, D: TyDecoder<'tcx>> Decodable<D> for MyStruct<'tcx> {
 병렬 쿼리 기능은 아직 구현해야 할 부분이 남아 있으며 대부분은 이전의 `데이터 구조(Data Structures)` 및 `병렬 이터레이터(Parallel Iterators)`와 관련이 있다.
 [이 열린 기능 트래킹 이슈][tracking]를 참조하라.
 
+## 병렬 쿼리 기능은 아직 구현해야 할 부분이 남아 있으며 대부분은 이전의
 ### Rustdoc
 
 <!-- date-check--> 2022년 11월 기준, `rustdoc` 렌더링을 병렬화하기 위해 완료해야 할 단계가 아직 몇 가지 남아 있다([병렬 `rustdoc`][parallel-rustdoc]에 대한 열린 논의 참조).
 
+## <!-- date-check--> 2022년 11월 기준, `rustdo
 ### 참고 자료
 
 다음은 더 많은 정보를 배우는 데 활용할 수 있는 몇 가지 참고 자료이다:
@@ -11652,6 +11854,7 @@ impl<'tcx, D: TyDecoder<'tcx>> Decodable<D> for MyStruct<'tcx> {
 `rustdoc`에 대한 개요는 ["Rustdoc 개요" 챕터](#rustdoc)를 참조하라.
 
 
+## `rustdoc`에 대한 개요는 ["Rustdoc 개요" 챕터](#rus
 ### 크레이트에서 clean 구조로
 
 [`core.rs`]에는 두 개의 핵심 아이템이 있다: [`rustdoc::core::DocContext`] `struct`와 [`rustdoc::core::run_global_ctxt`] 함수이다.
@@ -11766,6 +11969,7 @@ fn clean_lifetime<'tcx>(lifetime: &hir::Lifetime, cx: &mut DocContext<'tcx>) -> 
 [`librustdoc/passes`]: https://github.com/rust-lang/rust/tree/HEAD/src/librustdoc/passes
 [`stripper`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustdoc/passes/stripper/index.html
 
+## [`librustdoc/passes`]: https://github.co
 ### Clean 구조에서 HTML로
 
 여기에서 `rustdoc`의 "두 번째 단계"가 시작된다.
@@ -11831,6 +12035,7 @@ Markdown 파서를 실행하기 전에 각주 및 테이블과 같은 특정 기
 [예전에는 그렇지 않았으며]: https://github.com/rust-lang/rust/pull/80090
 [`SharedContext`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustdoc/html/render/context/struct.SharedContext.html
 
+## [예전에는 그렇지 않았으며]: https://github.com/rust
 ### 기타 기능들
 
 이 모든 과정은 Rust 크레이트에서 `HTML` 문서를 생성하는 프로세스를 설명하지만 `rustdoc`이 실행되는 몇 가지 다른 주요 모드가 있다.
@@ -11843,6 +12048,7 @@ Markdown 파서를 실행하기 전에 각주 및 테이블과 같은 특정 기
 
 `make_test`에 관한 추가 읽을거리는 [여기](https://quietmisdreavus.net/code/2018/02/23/how-the-doctests-get-made/)에서 확인할 수 있다.
 
+## `make_test`에 관한 추가 읽을거리는 [여기](https://qu
 ### 로컬에서 테스트하기
 
 생성된 `HTML` 문서의 일부 기능은 페이지 간에 로컬 저장소(local storage)를 사용해야 할 수 있으며 이는 `HTTP` 서버 없이는 잘 작동하지 않는다.
@@ -11850,13 +12056,14 @@ Markdown 파서를 실행하기 전에 각주 및 테이블과 같은 특정 기
 
 ```console
 $ ./x doc library
-# 문서는 `build/[YOUR ARCH]/doc`에 생성됩니다.
+## 문서는 `build/[YOUR ARCH]/doc`에 생성됩니다.
 $ python3 -m http.server -d build/[YOUR ARCH]/doc
 ```
 
 이제 인터넷에 호스팅된 것처럼 문서를 탐색할 수 있다.
 예를 들어 `std`의 URL은 `rust/std/`가 된다.
 
+## 이제 인터넷에 호스팅된 것처럼 문서를 탐색할 수 있다.
 ### 관련 항목
 
 - [`rustdoc` API 문서][`rustdoc` api docs]
@@ -11867,6 +12074,7 @@ $ python3 -m http.server -d build/[YOUR ARCH]/doc
 [The rustdoc user guide]: https://doc.rust-lang.org/nightly/rustdoc/
 
 
+## [The rustdoc user guide]: https://doc.ru
 ### Rustdoc 검색 {#rustdoc-internals-search}
 
 Rustdoc Search는 `search_index.rs`와 `search.js`라는 두 개의 프로그램이다.
@@ -12314,6 +12522,7 @@ const EXPECTED = [
 [`//@ revisions`]: #revisions
 
 
+## [`//@ revisions`]: #revisions
 ### `rustdoc-html` 테스트 스위트 {#rustdoc-internals-rustdoc-html-test-suite}
 
 이 페이지는 `rustdoc`의 HTML 출력을 테스트하는 데 사용되는 `rustdoc-html`이라는 테스트 스위트에 관한 것이다.
@@ -12482,6 +12691,7 @@ HtmlDocCk는 Python 표준 라이브러리의 XPath 구현을 사용한다.
 [compiletest directives]: #tests-directives
 
 
+## [compiletest directives]: #tests-directi
 ### `rustdoc-gui` 테스트 스위트 {#rustdoc-internals-rustdoc-gui-test-suite}
 
 > **FIXME**: 이 섹션은 스텁이다. 구체화할 수 있도록 도와주라!
@@ -12499,6 +12709,7 @@ rustdoc 전용 다른 테스트 스위트는 [Rustdoc 테스트 스위트](#rust
 [goml-script]: https://github.com/GuillaumeGomez/browser-UI-test/blob/main/goml-script.md
 
 
+## [goml-script]: https://github.com/Guilla
 ### `rustdoc-json` 테스트 스위트 {#rustdoc-internals-rustdoc-json-test-suite}
 
 이 페이지는 특히 rustdoc의 [json 출력]을 테스트하는 `rustdoc-json`이라는 테스트 스위트에 관한 것이다.
@@ -12587,6 +12798,7 @@ rustdoc 테스트에 사용되는 다른 테스트 스위트는 [Rustdoc 테스�
 구현은 LLVM의 "offload" 프로젝트에 기초하며 이는 이미 OpenMP에서 Fortran 또는 C++ 코드를 GPU에서 실행하는 데 사용되고 있다.
 프로젝트가 개발되는 동안 사용자는 컴파일 프로세스를 완료하기 위해 clang과 같은 다른 컴파일러를 호출해야 한다.
 
+## 구현은 LLVM의 "offload" 프로젝트에 기초하며 이는 이미 Ope
 ### 고수준 컴파일 설계:
 
 우리는 단일 소스, 2-패스(two-pass) 컴파일 접근 방식을 사용한다.
@@ -12613,6 +12825,7 @@ rustdoc 테스트에 사용되는 다른 테스트 스위트는 [Rustdoc 테스�
 우리는 여전히 전체 컴파일 파이프라인을 제어하고 호스트 및 디바이스 코드를 모두 사용할 수 있으므로 두 접근 방식 간에 런타임 성능 차이가 없어야 한다.
 
 
+## 우리는 여전히 전체 컴파일 파이프라인을 제어하고 호스트 및 디바이스 코드
 ### 설치 {#offload-installation}
 
 `std::offload`는 사용자를 위해 나이틀리 빌드에서 부분적으로 제공된다.
@@ -12668,6 +12881,7 @@ cargo run --manifest-path src/ci/citool/Cargo.toml run-local dist-x86_64-linux
 이 시점에서 서브모듈도 체크아웃되어 있어야 한다.
 
 
+## 이 시점에서 서브모듈도 체크아웃되어 있어야 한다.
 ### 사용법 {#offload-usage}
 
 이 기능은 진행 중인 작업이며 아직 사용할 준비가 되지 않았다.
@@ -12777,6 +12991,7 @@ LIBOMPTARGET_INFO=-1  ./main
 : https://rocm.docs.amd.com/en/latest/reference/gpu-arch-specs.html 또 https://developer.nvidia.com/cuda/gpus 를 참조하라. 또는 `rustc --print target-cpus`를 확인하라.
 
 
+## : https://rocm.docs.amd.com/en/latest/re
 ### 기여하기 {#offload-contributing}
 
 기여는 언제나 환영한다.
@@ -12790,17 +13005,17 @@ IR 변경 사항에 만족한 경우에만 새롭게 원하는 출력을 생성�
 
 ```sh
 set -e
-# set -e to avoid continuing on errors, which would likely use stale artifacts
-# inputs:
-# lib.ll (host code) + host.out (device)
+## set -e to avoid continuing on errors, which would likely use stale artifacts
+## inputs:
+## lib.ll (host code) + host.out (device)
 
-# You only need to run the first three commands once to generate lib.ll and host.out from your rust code.
+## You only need to run the first three commands once to generate lib.ll and host.out from your rust code.
 
-# RUSTFLAGS="-Ctarget-cpu=gfx90a --emit=llvm-bc,llvm-ir -Zoffload=Device -Csave-temps -Zunstable-options" cargo +offload build -Zunstable-options -v --target amdgcn-amd-amdhsa -Zbuild-std=core -r
+## RUSTFLAGS="-Ctarget-cpu=gfx90a --emit=llvm-bc,llvm-ir -Zoffload=Device -Csave-temps -Zunstable-options" cargo +offload build -Zunstable-options -v --target amdgcn-amd-amdhsa -Zbuild-std=core -r
 #
-# RUSTFLAGS="--emit=llvm-bc,llvm-ir -Csave-temps -Zoffload=Host=/absolute/path/to/project/target/amdgcn-amd-amdhsa/release/deps/host.out -Zunstable-options" cargo +offload build -r
+## RUSTFLAGS="--emit=llvm-bc,llvm-ir -Csave-temps -Zoffload=Host=/absolute/path/to/project/target/amdgcn-amd-amdhsa/release/deps/host.out -Zunstable-options" cargo +offload build -r
 #
-# cp target/release/deps/<project_name>.ll lib.ll
+## cp target/release/deps/<project_name>.ll lib.ll
 
 opt lib.ll -o lib.bc
 
@@ -12864,6 +13079,7 @@ fn main() {
 [Enzyme]: https://dl.acm.org/doi/10.5555/3495724.
 
 
+## [Enzyme]: https://dl.acm.org/doi/10.5555
 ### 설치 {#autodiff-installation}
 
 다음 플랫폼 중 하나를 사용하는 경우 대부분의 사용자는 rustup으로 `enzyme` 컴포넌트를 설치하여 최신 nightly 툴체인에서 `std::autodiff`를 활성화할 수 있다:
@@ -13011,6 +13227,7 @@ ninja
 [toolchain file]: https://rust-lang.github.io/rustup/overrides.html#the-toolchain-file
 
 
+## [toolchain file]: https://rust-lang.gith
 ### 백엔드 크래시 리포트하기 {#autodiff-debugging}
 
 컴파일 실패 후 대량의 llvm-ir 코드가 표시된다면 enzyme 백엔드가 코드를 컴파일하지 못했을 가능성이 높다.
@@ -13162,6 +13379,7 @@ grep에 전달할 에러 메시지를 약간 실험해 보라.
 그렇게 되면 rust 컴파일러 내부의 enzyme 서브모듈이 업데이트되어 Rust 코드를 미분할 수 있게 될 것이다.
 rust-ad를 개선하는 데 도움을 주셔서 감사한다.
 
+## 그렇게 되면 rust 컴파일러 내부의 enzyme 서브모듈이 업데이트되어
 ### Rust 코드 최소화
 
 최소한의 llvm-ir 재현 코드를 갖는 것 외에도 의존성이 없는 최소한의 rust 재현 코드를 갖는 것도 도움이 된다.
@@ -13173,6 +13391,7 @@ rust 재현 코드를 최소화하는 데 도움이 되는 몇 가지 솔루션�
 그렇지 않으면 [`treereduce`](https://github.com/langston-barrett/treereduce), [`halfempty`](https://github.com/googleprojectzero/halfempty), 또는 [`picireny`](https://github.com/renatahodovan/picireny), 잠재적으로 [`creduce`](https://github.com/csmith-project/creduce)를 포함한 다양한 대안이 있다.
 
 
+## 그렇지 않으면 [`treereduce`](https://github.co
 ### 지원되는 `RUSTFLAGS` (Supported `RUSTFLAGS`) {#autodiff-flags}
 
 디버깅이나 프로파일링 시 도움을 주기 위해 rustc를 다시 컴파일하지 않고도 Enzyme의 동작을 변경할 수 있는 실험적인 `-Z autodiff` rustc 플래그(cargo에 `RUSTFLAGS`를 통해 전달할 수 있음)에 대한 지원을 추가했다. 현재 `autodiff`에 대해 다음 값들을 지원한다.
@@ -13220,6 +13439,7 @@ RUSTFLAGS="-Z autodiff=Enable,LooseTypes,PrintPerf" cargo +enzyme build
 3. 전체 모듈에서 선택한 컴파일 파이프라인을 다시 실행한다. 이번에는 벡터화나 루프 언롤링을 비활성화하지 않는다.
 
 
+## 3. 전체 모듈에서 선택한 컴파일 파이프라인을 다시 실행한다. 이번에는
 ### Autodiff를 위한 TypeTree {#autodiff-type-trees}
 
 #### TypeTree란 무엇인가요? (What are TypeTrees?)
@@ -13299,6 +13519,7 @@ define "enzyme_type"="{[-1]:Float@float}" float @distance(
 }
 ```
 
+## }
 ### TypeTrees - 오프셋과 -1 설명
 
 #### 타입 구조
@@ -13417,7 +13638,7 @@ TypeTree(vec![
 - -1을 사용하면 100개의 별도 오프셋을 나열하는 것을 피할 수 있다.
 - 생성: `{[-1]:Pointer, [-1,-1]:Float@float}`
 
-# 소스 코드 표현
+## 소스 코드 표현
 
 ## 소스 코드 표현 {#part-3-intro}
 
@@ -13447,6 +13668,7 @@ TypeTree(vec![
 [validation]: #ast-validation
 
 
+## [validation]: #ast-validation
 ### 어휘 분석 및 구문 분석 {#the-parser}
 
 컴파일러가 가장 먼저 하는 일은 프로그램(UTF-8 유니코드 텍스트)을 받아 컴파일러가 문자열보다 더 편리하게 작업할 수 있는 데이터 포맷으로 변환하는 것이다.
@@ -13499,6 +13721,7 @@ AST의 모든 노드는 구조체와 같은 최상위 아이템뿐만 아니라 
 [visit module]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_ast/visit/index.html
 
 
+## [visit module]: https://doc.rust-lang.or
 ### 매크로 확장 {#macro-expansion}
 
 Rust는 매우 강력한 매크로 시스템을 가지고 있다.
@@ -13984,6 +14207,7 @@ Rust ABI는 현재 불안정하므로 이 변환에는 C ABI를 사용한다.
 <!-- TODO(rylev): more? [#1160](https://github.com/rust-lang/rustc-dev-guide/issues/1160) -->
 
 
+## <!-- TODO(rylev): more? [#1160](https://
 ### 이름 분해 {#name-resolution}
 
 이전 장들에서 우리는 모든 매크로가 확장된 상태에서 [*추상 구문 트리* (`AST`)][ast]가 어떻게 구축되는지 보았다.
@@ -14135,6 +14359,7 @@ fn do_something<T: Default>(val: T) { // <- 타입과 값 모두에서 새로운
 * 전반적인 전략 설명이 약간 모호함.
 * `Rib`라는 이름은 어디서 유래했는가?
 * 이것이 자체적인 테스트를 가지고 있는가, 아니면 일부 e2e 테스트의 일환으로만 테스트되는가?
+## * 전반적인 전략 설명이 약간 모호함.
 ### 속성 {#attributes}
 
 속성에는 두 가지 유형이 있다: *비활성(inert)* (또는 *내장(built-in)*) 및 *활성(active)* (*비내장(non-builtin)*).
@@ -14215,6 +14440,7 @@ fn do_something<T: Default>(val: T) { // <- 타입과 값 모두에서 새로운
  매크로 구현은 속성 대상을 변경하지 않고 그대로 둘 수도 있고 대상을 수정하거나, 새로운 AST 노드를 생성하거나, 대상을 완전히 제거할 수도 있다.
 
 
+## 매크로 구현은 속성 대상을 변경하지 않고 그대로 둘 수도 있고 대상을
 ### `#[test]` 속성 {#test-implementation}
 
 많은 Rust 프로그래머는 `#[test]`라는 내장 속성에 의존한다. 다음과 같이 함수에 표시하고 몇 가지 단언문(assert)을 포함하기만 하면 된다:
@@ -14331,6 +14557,7 @@ $ rustc my_mod.rs -Z unpretty=hir
 [`test_main_static`]: https://doc.rust-lang.org/test/fn.test_main_static.html
 
 
+## [`test_main_static`]: https://doc.rust-l
 ### Rust에서의 패닉 {#panic-implementation}
 
 #### 1단계: `panic!` 매크로 호출
@@ -14437,6 +14664,7 @@ Rust는 두 가지 패닉 런타임인 `panic_abort`와 `panic_unwind`를 제공
 [`extract_ast`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_passes/lang_items/fn.extract_ast.html
 
 
+## [`extract_ast`]: https://doc.rust-lang.o
 ### AST 검증 {#ast-validation}
 
 _AST 검증_은 트리의 각 아이템을 방문하여 단순한 검사를 수행하는 별도의 AST 패스이다.
@@ -14462,6 +14690,7 @@ _AST 검증_은 트리의 각 아이템을 방문하여 단순한 검사를 수�
 * 기타 검증 항목들.
 
 
+## * 기타 검증 항목들.
 ### 기능 게이트 검사 {#feature-gate-check}
 
 기능 게이트를 추가, 제거, 이름 변경 또는 안정화하는 방법 절차는 [기능 게이트(Feature gates)][feature-gates]를 참조하라.
@@ -14581,6 +14810,7 @@ AST 검증이나 확장 이전에, `rustc`는 크레이트 수준의 `#![feature
 [feature-gates]: #feature-gates
 
 
+## [feature-gates]: #feature-gates
 ### Lang 아이템 {#lang-items}
 
 컴파일러에는 플러그 가능한 특정 연산들, 즉 언어 자체에 하드코딩되지 않고 라이브러리로 구현되며 컴파일러에게 해당 존재를 알리는 특별한 마커가 있는 기능들이 존재한다.
@@ -14656,6 +14886,7 @@ cargo rustc -- -Z unpretty=hir-tree
 cargo rustc -- -Z unpretty=hir
 ```
 
+## cargo rustc -- -Z unpretty=hir
 ### 아웃오브밴드 저장소와 `Crate` 타입 (Out-of-band storage and the `Crate` type)
 
 HIR의 최상위 데이터 구조는 현재 컴파일 중인 크레이트의 내용을 저장하는 [`Crate`]인다(우리는 항상 현재 크레이트에 대해서만 HIR을 구축한다).
@@ -14687,6 +14918,7 @@ HIR에서 모듈 `foo`의 표현([`Mod`] 구조체)은 `bar()`의 **`ItemId`** `
 
 <a id="hir-id"></a>
 
+## <a id="hir-id"></a>
 ### HIR의 식별자들
 
 HIR은 공존하며 서로 다른 목적을 수행하는 수많은 식별자를 사용한다.
@@ -14718,6 +14950,7 @@ HIR은 공존하며 서로 다른 목적을 수행하는 수많은 식별자를 
 [`Body`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_hir/hir/struct.Body.html
 [hir-bodies]: #hir-bodies
 
+## [`Body`]: https://doc.rust-lang.org/nigh
 ### HIR 연산
 
 HIR로 작업할 때는 대부분 `TyCtxt`를 통해 수행하게 된다.
@@ -14743,6 +14976,7 @@ HIR로 작업할 때는 대부분 `TyCtxt`를 통해 수행하게 된다.
 [parent_hir_node]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/struct.TyCtxt.html#method.parent_hir_node
 
 
+## [parent_hir_node]: https://doc.rust-lang
 ### HIR 본문
 
 [`rustc_hir::Body`]는 함수/클로저의 본문이나 상수의 정의와 같은 일종의 실행 가능한 코드를 나타낸다.
@@ -14753,6 +14987,7 @@ HIR로 작업할 때는 대부분 `TyCtxt`를 통해 수행하게 된다.
 [`hir_body_owner_def_id`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/struct.TyCtxt.html#method.hir_body_owner_def_id
 
 
+## [`hir_body_owner_def_id`]: https://doc.r
 ### AST 하향 변환 {#hir-lowering}
 
 AST 하향 변환 단계는 AST를 [HIR](#hir)로 변환한다.
@@ -14812,6 +15047,7 @@ AST 하향 변환의 구현은 [`rustc_ast_lowering`] 크레이트에 있다.
 `NodeId`를 보유하면 하향 변환 중에 이를 할 수 없이 처리하는 대신 `DefCollector`가 `DefId`를 생성할 수 있게 된다. `DefId` 생성을 한곳에 집중하면 리팩터링하고 추론하기가 더 쉬워진다.
 
 
+## `NodeId`를 보유하면 하향 변환 중에 이를 할 수 없이 처리하는 대
 ### 속성 구문 분석 {#hir-attribute-parsing}
 
 속성에는 두 가지 유형이 있다: *비활성(inert)* (또는 *내장(built-in)*) 및 *활성(active)* (*비내장(non-builtin)*).
@@ -14912,6 +15148,7 @@ HIR이 구축되기 전에 파싱된 표현을 사용해야 하는 경우 일반
 [parse_limited]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_attr_parsing/interface/struct.AttributeParser.html#method.parse_limited
 
 
+## [parse_limited]: https://doc.rust-lang.o
 ### HIR 디버깅 {#hir-debugging}
 
 `-Z unpretty=hir` 플래그를 사용하여 사람이 읽을 수 있는 HIR 표현을 생성한다.
@@ -14952,6 +15189,7 @@ fn func<T, const N: usize>(arg: T) {
 모호한 위치의 대부분의 타입/상수는 파싱 중에 타입 또는 상수로 명확히 해결(disambiguate)될 수 있다.
 이에 대한 유일한 예외는 경로(paths)와 추론된 제네릭 인자(inferred generic arguments)인다.
 
+## 모호한 위치의 대부분의 타입/상수는 파싱 중에 타입 또는 상수로 명확히
 ### 경로
 
 ```rust
@@ -14977,6 +15215,7 @@ fn foo<const N: usize>(_: Foo<N>) {}
 
 경로에 대한 모호성은 HIR로 전파되지 않는다; HIR 타입 하향 변환 중 `Ty` 또는 `Const`로 변환되는 `hir::GenericArg::Path` 같은 것은 존재하지 않는다(그렇게 할 수도 있겠지만).
 
+## 경로에 대한 모호성은 HIR로 전파되지 않는다; HIR 타입 하향 변환
 ### 추론 인자 (`_`, Inferred arguments)
 
 ```rust
@@ -15278,6 +15517,7 @@ MIR은 [RFC 1211]에서 도입되었다.
 MIR에 대한 매우 고수준의 소개와 이것이 의존하는 몇 가지 컴파일러 개념(제어 흐름 그래프 및 디슈가링 등)을 알고 싶다면 [MIR을 소개한 rust-lang 블로그 포스트][blog]를 읽어보는 것이 좋다.
 
 
+## MIR에 대한 매우 고수준의 소개와 이것이 의존하는 몇 가지 컴파일러 개
 ### MIR 소개
 
 MIR은 [`compiler/rustc_middle/src/mir/`][mir] 모듈에 정의되어 있지만 이를 조작하는 대부분의 코드는 [`compiler/rustc_mir_build`][mirmanip_build], [`compiler/rustc_mir_transform`][mirmanip_transform] 및 [`compiler/rustc_mir_dataflow`][mirmanip_dataflow]에서 찾을 수 있다.
@@ -15292,6 +15532,7 @@ MIR의 주요 특징은 다음과 같다:
 
 [cfg-bg]: #cfg
 
+## [cfg-bg]: #cfg
 ### 주요 MIR 용어
 
 이 섹션에서는 여기에 요약된 MIR의 핵심 개념을 소개한다:
@@ -15443,6 +15684,7 @@ x = TMP1 + c
 
 [play-abc]: https://play.rust-lang.org/?gist=1751196d63b2a71f8208119e59d8a5b6&version=stable
 
+## [play-abc]: https://play.rust-lang.org/?
 ### MIR 데이터 타입
 
 MIR 데이터 타입은 [`compiler/rustc_middle/src/mir/`][mir] 모듈에 정의되어 있다.
@@ -15470,6 +15712,7 @@ MIR 데이터 타입은 [`compiler/rustc_middle/src/mir/`][mir] 모듈에 정의
 - **R-값(Rvalues)** 은 [`Rvalue`] enum으로 표현된다.
 - **피연산자(Operands)** 는 [`Operand`] enum으로 표현된다.
 
+## - **R-값(Rvalues)** 은 [`Rvalue`] enum으로 표
 ### 상수의 표현
 
 코드가 MIR 단계에 도달하면 상수는 일반적으로 *MIR 상수*([`mir::Constant`])와 *타입 시스템 상수*([`ty::Const`])의 두 가지 형태로 제공될 수 있다.
@@ -15547,6 +15790,7 @@ const-eval 워킹 그룹의 [승격에 관한 문서](https://github.com/rust-la
 [`ty::Const`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/struct.Const.html
 
 
+## [`ty::Const`]: https://doc.rust-lang.org
 ### MIR 구축 {#mir-construction}
 
 [HIR](#hir)에서 [MIR](#mir-index)로의 하향 변환은 다음 아이템 목록(아마도 불완전함)에 대해 발생한다:
@@ -15659,6 +15903,7 @@ let v = match self.generate_more_mir(..) {
 [`mir_built`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_mir_transform/fn.mir_built.html
 
 
+## [`mir_built`]: https://doc.rust-lang.org
 ### MIR 비지터 {#mir-visitor}
 
 MIR 비지터는 MIR을 순회하며 어떤 항목을 찾거나 변경을 수행하기에 유용한 도구이다.
@@ -15701,6 +15946,7 @@ impl<'tcx> MutVisitor<'tcx> for MyVisitor {
 [traversal]: https://en.wikipedia.org/wiki/Tree_traversal
 
 
+## [traversal]: https://en.wikipedia.org/wi
 ### MIR 쿼리 및 패스 {#mir-passes}
 
 MIR을 얻고자 할 때:
@@ -15844,6 +16090,7 @@ flowchart BT
 
 ## 인라인 어셈블리 {#asm}
 
+## ## 인라인 어셈블리 {#asm}
 ### 개요
 
 rustc의 인라인 어셈블리는 대부분 `asm!` 매크로 호출을 취하여 LLVM 코드 생성에 이르기까지 모든 컴파일러 레이어로 배관(plumbing)하는 작업을 중심으로 이루어진다.
@@ -15893,6 +16140,7 @@ rustc의 인라인 어셈블리는 대부분 `asm!` 매크로 호출을 취하�
   }
   ```
 
+## }
 ### AST
 
 `InlineAsm`은 AST에서 [`ast::InlineAsm` 타입][inline_asm_ast]의 표현식으로 표현된다.
@@ -15903,6 +16151,7 @@ rustc의 인라인 어셈블리는 대부분 `asm!` 매크로 호출을 취하�
 
 [inline_asm_ast]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_ast/ast/struct.InlineAsm.html
 
+## [inline_asm_ast]: https://doc.rust-lang.
 ### HIR
 
 `InlineAsm`은 HIR에서 [`hir::InlineAsm` 타입][inline_asm_hir]의 표현식으로 표현된다.
@@ -15913,6 +16162,7 @@ AST 하향 변환은 `InlineAsmRegOrRegClass`가 `Symbol`에서 실제 레지스
 
 [inline_asm_hir]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_hir/hir/struct.InlineAsm.html
 
+## [inline_asm_hir]: https://doc.rust-lang.
 ### 타입 검사
 
 각 레지스터 클래스에는 함께 사용할 수 있는 타입의 허용 목록이 있다.
@@ -15920,6 +16170,7 @@ AST 하향 변환은 `InlineAsmRegOrRegClass`가 `Symbol`에서 실제 레지스
 또한 분할 `inout` 피연산자가 호환되는 타입을 가졌는지, `const` 피연산자가 정수 또는 부동 소수점인지 검사한다.
 전달된 타입을 기반으로 피연산자에 템플릿 수정자를 사용해야 하는 경우 제안 사항이 발출된다.
 
+## 또한 분할 `inout` 피연산자가 호환되는 타입을 가졌는지, `cons
 ### THIR
 
 `InlineAsm`은 THIR에서 [`InlineAsmExpr` 타입][inline_asm_thir]의 표현식으로 표현된다.
@@ -15928,6 +16179,7 @@ HIR과 비교한 유일한 유의미한 변화는 `Sym`이 `expr`이 `fn`의 `Li
 
 [inline_asm_thir]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/thir/struct.InlineAsmExpr.html
 
+## [inline_asm_thir]: https://doc.rust-lang
 ### MIR
 
 `InlineAsm`은 MIR에서 [`TerminatorKind::InlineAsm` 배리언트][inline_asm_mir]를 가진 `Terminator`로 표현된다.
@@ -15938,6 +16190,7 @@ THIR 하향 변환의 일환으로 `InOut` 및 `SplitInOut` 피연산자는 별�
 
 [inline_asm_mir]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/mir/enum.TerminatorKind.html#variant.InlineAsm
 
+## [inline_asm_mir]: https://doc.rust-lang.
 ### 코드 생성
 
 피연산자는 LLVM 코드 생성으로 전달되기 전에 한 번 더 하향 변환된다.
@@ -15967,6 +16220,7 @@ LLVM은 특정 제약 조건 코드에 대해 수용하는 타입에 대해 다�
 
 [inline_asm_codegen]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_codegen_ssa/traits/enum.InlineAsmOperandRef.html
 
+## [inline_asm_codegen]: https://doc.rust-l
 ### 새로운 아키텍처에 대한 지원 추가하기
 
 아키텍처에 인라인 어셈블리 지원을 추가하는 것은 주로 해당 아키텍처에 대한 레지스터 및 레지스터 클래스를 정의하는 작업이다.
@@ -15980,6 +16234,7 @@ LLVM은 특정 제약 조건 코드에 대해 수용하는 타입에 대해 다�
 - LLVM은 내부 용도로 특정 레지스터를 예약해 두어 인라인 어셈블리 블록 주변에서 해당 레지스터가 제대로 저장/복원되지 않도록 만든다. 이러한 레지스터는 `lib/Target/${ARCH}/${ARCH}RegisterInfo.cpp` 내 `getReservedRegs` 함수에 나열되어 있다.
  프레임/베이스 포인터와 같은 모든 "조건부" 예약 레지스터는 함수에 프레임/베이스 포인터가 필요한지 여부를 사전에 알 수 없으므로 Rust 목적으로 항상 예약된 것으로 처리해야 한다.
 
+## - LLVM은 내부 용도로 특정 레지스터를 예약해 두어 인라인 어셈블리
 ### 테스트
 
 인라인 어셈블리에 대한 다양한 테스트를 사용할 수 있다:
@@ -15991,7 +16246,7 @@ LLVM은 특정 제약 조건 코드에 대해 수용하는 타입에 대해 다�
 인라인 어셈블리가 지원하는 모든 아키텍처는 레지스터 클래스와 타입의 모든 조합을 테스트하는 엄격한 테스트를 `tests/assembly-llvm/asm`에 포함해야 한다.
 
 
-# 지원 인프라
+## 지원 인프라
 
 ## 커맨드라인 인자 {#cli}
 
@@ -15999,6 +16254,7 @@ LLVM은 특정 제약 조건 코드에 대해 수용하는 타입에 대해 다�
 
 새로운 커맨드라인 인자를 추가하는 *절차*에 대한 세부사항은 [새 옵션을 위한 forge 가이드][forge guide for new options]를 참조하라.
 
+## 새로운 커맨드라인 인자를 추가하는 *절차*에 대한 세부사항은 [새 옵션을
 ### 지침
 
 - 플래그는 서로 직교적(orthogonal)이어야 한다. 예를 들어 여러 작업 `foo` 및 `bar`에 대해 JSON을 출력하는 배리언트가 필요한 경우, `--foo-json` 및 `--bar-json`을 추가하는 것보다 추가 `--json` 플래그를 두는 것이 좋다.
@@ -16016,6 +16272,7 @@ LLVM은 특정 제약 조건 코드에 대해 수용하는 타입에 대해 다�
 
 ## `rustc_driver` 및 `rustc_interface` {#rustc-driver-intro}
 
+## ## `rustc_driver` 및 `rustc_interface` {#
 ### `rustc_driver`
 
 [`rustc_driver`]는 본질적으로 `rustc`의 `main` 함수이다.
@@ -16024,6 +16281,7 @@ LLVM은 특정 제약 조건 코드에 대해 수용하는 타입에 대해 다�
 [`rustc_driver`]의 주요 진입점은 [`rustc_driver::run_compiler`][rd_rc]인다.
 이 빌더는 rustc와 동일한 커맨드라인 인자 및 [`Callbacks`] 구현체와 몇 가지 기타 선택적 옵션을 받는다. [`Callbacks`]는 커스텀 컴파일러 설정을 허용할 뿐만 아니라 컴파일의 여러 단계 이후에 커스텀 코드가 실행될 수 있도록 하는 `trait`인다.
 
+## [`rustc_driver`]의 주요 진입점은 [`rustc_driver
 ### `rustc_interface`
 
 [`rustc_interface`] 크레이트는 외부 사용자에게 컴파일 프로세스를 수동으로 이끌 수 있는 저수준 API를 제공하여 서드파티가 크레이트를 분석하기 위한 라이브러리로 `rustc` 내부를 효과적으로 사용하거나 [`rustc_driver`]가 충분히 유연하지 않은 경우(예: `rustdoc`이 코드를 컴파일하고 출력을 제공하는 경우) 컴파일러를 임시로 에뮬레이트할 수 있도록 해준다.
@@ -16043,6 +16301,7 @@ LLVM은 특정 제약 조건 코드에 대해 수용하는 타입에 대해 다�
 [rdi_rc]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_driver_impl/fn.run_compiler.html
 
 
+## [rdi_rc]: https://doc.rust-lang.org/nigh
 ### 외부 `rustc_driver`들 {#rustc-driver-external-rustc-drivers}
 
 #### `rustc_private`
@@ -16154,6 +16413,7 @@ rustc +nightly-2025-11-08 --version --verbose
 [GitHub Issue #137421]: https://github.com/rust-lang/rust/issues/137421
 
 
+## [GitHub Issue #137421]: https://github.c
 ### 예시: `rustc_driver`를 통한 타입 검사 {#rustc-driver-interacting-with-the-ast}
 
 [`rustc_driver`]를 통해 컴파일의 다양한 단계에서 Rust 코드와 상호작용할 수 있다.
@@ -16168,6 +16428,7 @@ rustc +nightly-2025-11-08 --version --verbose
 [`after_analysis`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_driver/trait.Callbacks.html#method.after_analysis
 
 
+## [`after_analysis`]: https://doc.rust-lan
 ### 예시: `rustc_interface`를 통해 진단 메시지 얻기 {#rustc-driver-getting-diagnostics}
 
 [`rustc_interface`]를 사용하면 그렇지 않았다면 stderr로 출력되었을 진단 메시지를 가로챌 수 있다.
@@ -16188,6 +16449,7 @@ rustc +nightly-2025-11-08 --version --verbose
 `rustc`가 훌륭한 오류 메시지를 가질 수 있도록 많은 노력이 주어졌다.
 이 장에서는 컴파일러에서 컴파일 오류 및 린트를 발출하는 방법에 대한 설명이다.
 
+## `rustc`가 훌륭한 오류 메시지를 가질 수 있도록 많은 노력이 주어졌
 ### 진단 구조
 
 진단 오류의 주요 부분은 다음과 같다:
@@ -16297,6 +16559,7 @@ CLI 플래그와 관련된 경고 등 일부 경우에는 하드코딩된 경고
 
 [future-incompatible lints]: #future-incompatible-lints
 
+## [future-incompatible lints]: #future-inc
 ### 진단 출력 스타일 가이드
 
 - 평이하고 간단한 영어로 작성하라.
@@ -16412,6 +16675,7 @@ CLI 플래그와 관련된 경고 등 일부 경우에는 하드코딩된 경고
 [reference-diagnostics]: https://doc.rust-lang.org/nightly/reference/attributes/diagnostics.html#lint-check-attributes
 [rustc-lint-levels]: https://doc.rust-lang.org/nightly/rustc/lints/levels.html
 
+## [reference-diagnostics]: https://doc.rus
 ### 유용한 팁 및 옵션
 
 #### 에러 소스 위치 찾기
@@ -16435,6 +16699,7 @@ CLI 플래그와 관련된 경고 등 일부 경우에는 하드코딩된 경고
 
 일반적인 개발 모범 사례가 적용된다: 일어나는 일의 순서를 파악하기 위해 `debug!()` 문을 적절히 활용하고 디버거를 사용해 중단점(breakpoint)을 설정하라.
 
+## 일반적인 개발 모범 사례가 적용된다: 일어나는 일의 순서를 파악하기 위해
 ### `Span`
 
 [`Span`][span]은 컴파일 중인 코드의 위치를 나타내기 위해 `rustc`에서 사용하는 기본 데이터 구조이다.
@@ -16446,6 +16711,7 @@ CLI 플래그와 관련된 경고 등 일부 경우에는 하드코딩된 경고
 [sourcemap]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_span/source_map/struct.SourceMap.html
 [sptosnip]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_span/source_map/struct.SourceMap.html#method.span_to_snippet
 
+## [sourcemap]: https://doc.rust-lang.org/n
 ### 에러 메시지
 
 [`rustc_errors`][errors] 크레이트는 에러 보고에 사용되는 대부분의 유틸리티를 정의한다.
@@ -16506,6 +16772,7 @@ example-example-error = oh no! this is an error!
   .qux-suggestion = you could use a qux here instead
 ```
 
+## .qux-suggestion = you could use a qux
 ### 제안
 
 사용자에게 코드가 왜 틀렸는지 정확히 알려주는 것 외에도, 해결 방법을 알려줄 수 있는 경우가 많다.
@@ -16608,6 +16875,7 @@ For more information about this error, try `rustc --explain E0999`.
 - 메시지에는 "xyz를 수행하려면 ...을 사용하세요" 또는 "xyz를 수행하려면 abc를 사용하세요"와 같은 추가 지시가 포함될 수 있다.
 - 메시지에 함수, 변수 또는 타입의 이름이 포함될 수 있지만 전체 표현식은 피하라.
 
+## - 메시지에는 "xyz를 수행하려면 ...을 사용하세요" 또는 "xyz를
 ### 린트
 
 컴파일러의 린트 인프라는 [`rustc_middle::lint`][rlint] 모듈에 정의되어 있다.
@@ -16889,6 +17157,7 @@ add_lint_group!(sess,
 이를 해결하기 위해 `rustc_ast`는 `ParseSess::buffer_lint`가 사용하는 자체 버퍼링 린트 타입을 정의한다.
 매크로 확장 후 이러한 버퍼링된 린트는 컴파일러의 나머지 부분에서 사용하는 `Session::buffered_lints`로 덤프된다.
 
+## 이를 해결하기 위해 `rustc_ast`는 `ParseSess::buff
 ### JSON 진단 출력
 
 컴파일러는 진단을 JSON 객체로 출력하는 `--error-format json` 플래그를 제공한다(`cargo fix`와 같은 도구를 위해).
@@ -16912,6 +17181,7 @@ $ rustc json_error_demo.rs --error-format json
 JSON 출력기는 JSON 직렬화를 위해 [자체 `Diagnostic` 구조체](https://doc.rust-lang.org/nightly/nightly-rustc/rustc_errors/json/struct.Diagnostic.html)(및 하위 구조체)를 정의한다.
 이를 [`errors::Diag`](https://doc.rust-lang.org/nightly/nightly-rustc/rustc_errors/struct.Diag.html)와 혼동하지 마라!
 
+## JSON 출력기는 JSON 직렬화를 위해 [자체 `Diagnostic`
 ### `#[rustc_on_unimplemented]`
 
 이 속성을 사용하면 트레이트 정의 시 구현체가 기대되었으나 발견되지 않았을 때의 에러 메시지를 수정할 수 있다.
@@ -17103,6 +17373,7 @@ fn main() {
 [diag]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_errors/struct.Diag.html
 
 
+## [diag]: https://doc.rust-lang.org/nightl
 ### 진단 및 하위 진단 구조체 {#diagnostics-diagnostic-structs}
 rustc에는 진단을 만드는 데 사용할 수 있는 두 가지 진단 트레이트가 있다: `Diagnostic` 및 `Subdiagnostic`.
 
@@ -17411,6 +17682,7 @@ impl<'tcx> Subdiagnostic for ExpectedReturnTypeLabel<'tcx> {
 [subdiag_use_2]: https://github.com/rust-lang/rust/blob/f1112099eba41abadb6f921df7edba70affe92c5/compiler/rustc_hir_analysis/src/check/fn_ctxt/suggestions.rs#L704-L
 
 
+## [subdiag_use_2]: https://github.com/rust
 ### 번역 {#diagnostics-translation}
 
 <div class="warning">
@@ -17530,6 +17802,7 @@ rustc 타입은 문자열이나 숫자로의 변환을 제공하는 `IntoDiagArg
 [`rustc_error_messages::DiagMessage`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_error_messages/enum.DiagMessage.html
 
 
+## [`rustc_error_messages::DiagMessage`]: h
 ### 린트 {#diagnostics-lintstore}
 
 이 페이지는 린트 등록과 컴파일러에서 린트를 실행하는 방식에 관한 메커니즘을 설명한다.
@@ -17622,6 +17895,7 @@ rustc 타입은 문자열이나 숫자로의 변환을 제공하는 `IntoDiagArg
 [`rustc_lint::internal`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_lint/internal/index.html
 
 
+## [`rustc_lint::internal`]: https://doc.ru
 ### 에러 코드 {#diagnostics-error-codes}
 
 우리는 일반적으로 각 에러 메시지에 `E0123`과 같은 고유 코드를 할당하려고 노력한다.
@@ -17699,6 +17973,7 @@ struct_span_code_err!(...)
 ```
 
 
+## ```
 ### 진단 항목 {#diagnostics-diagnostic-items}
 
 린트를 작성할 때 특정 타입, 트레이트, 함수를 검사하는 일이 흔히 발생한다.
@@ -17833,6 +18108,7 @@ Clippy에서 진단 항목을 사용할 때 해당 문서도 참조하라.
 [rust-clippy#5393]: https://github.com/rust-lang/rust-clippy/issues/5393
 
 
+## [rust-clippy#5393]: https://github.com/r
 ### `ErrorGuaranteed` {#diagnostics-error-guaranteed}
 이전 섹션들은 컴파일러 사용자가 보게 되는 에러 메시지에 대한 내용이었다.
 하지만 에러를 출력하는 것은 컴파일러 소스 코드 내부에서 중요한 두 번째 부작용(side effect)을 가질 수 있다: 바로 [`ErrorGuaranteed`][errorguar]를 생성하는 것이다.
@@ -17858,7 +18134,7 @@ Clippy에서 진단 항목을 사용할 때 해당 문서도 참조하라.
 [emit]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_errors/diagnostic/struct.Diag.html#method.emit
 
 
-# 분석
+## 분석
 
 ## 분석 {#part-4-intro}
 
@@ -17907,6 +18183,7 @@ trait Trait<T> {
 [ch_binders]: #ty-module-binders
 
 
+## [ch_binders]: #ty-module-binders
 ### `EarlyBinder` 및 매개변수 인스턴스화 {#ty-module-early-binder}
 
 제네릭 매개변수 `T`를 도입하는 항목이 주어졌을 때, `foo` 외부에서 `foo` 내부의 타입(즉, 반환 타입 또는 인수 타입)을 참조할 때마다 `foo`에 정의된 제네릭 매개변수를 처리하도록 주의해야 한다.
@@ -18065,6 +18342,7 @@ Binder(
 [`BoundTyKind`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/type.BoundTyKind.html
 
 
+## [`BoundTyKind`]: https://doc.rust-lang.o
 ### `Binder` 인스턴스화하기 {#ty-module-instantiating-binders}
 
 [`EarlyBinder`]와 마찬가지로 [`Binder`] 내부 내용에 접근할 때는 먼저 바운드 변수를 다른 값으로 교체하여 바인더를 해제해야 한다.
@@ -18246,6 +18524,7 @@ ReLateParam(
 [Intermingled parameter lists]: https://smallcultfollowing.com/babysteps/blog/2013/10/29/intermingled-parameter-lists/
 [Intermingled parameter lists, take 2]: https://smallcultfollowing.com/babysteps/blog/2013/11/04/intermingled-parameter-lists/
 
+## [Intermingled parameter lists]: https://
 ### "조기" 바인딩 또는 "지연" 바인딩이 된다는 것은 무엇을 의미하는가
 
 모든 함수 정의에는 [함수 항목 타입(function item type)][function_item_type]으로 알려진 `Fn*` 트레이트를 구현하는 상응하는 ZST가 존재한다.
@@ -18335,6 +18614,7 @@ my_func(&String::new());
 
 [function_item_type]: https://doc.rust-lang.org/reference/types/function-item.html
 
+## [function_item_type]: https://doc.rust-l
 ### 조기 바인딩 매개변수와 지연 바인딩 매개변수의 차이점
 
 #### 고차 함수 포인터 및 트레이트 바운드
@@ -18375,8 +18655,8 @@ f(&String::new());
 위에 정의된 `bar` 함수를 사용하여 이를 입증하는 다음 예시를 참조하라:
 
 ```rust
-# fn foo<'a: 'a>(b: &'a String) -> &'a String { b }
-# fn bar<'a>(b: &'a String) -> &'a String { b }
+## fn foo<'a: 'a>(b: &'a String) -> &'a String { b }
+## fn bar<'a>(b: &'a String) -> &'a String { b }
 #
 // 조기 바인딩 매개변수는 여기서 인스턴스화되지만 `'a`는
 // 지연 바인딩이므로 여기 제공되지 않습니다.
@@ -18476,24 +18756,24 @@ impl Foo {
 ```rust
 #![deny(late_bound_lifetime_arguments)]
 
-# fn free_function<'a: 'a, 'b>(_: &'a (), _: &'b ()) {}
+## fn free_function<'a: 'a, 'b>(_: &'a (), _: &'b ()) {}
 #
-# struct Foo;
+## struct Foo;
 #
-# trait Trait: Sized {
-#     fn trait_method<'a: 'a, 'b>(self, _: &'a (), _: &'b ());
-#     fn trait_function<'a: 'a, 'b>(_: &'a (), _: &'b ());
-# }
+## trait Trait: Sized {
+##     fn trait_method<'a: 'a, 'b>(self, _: &'a (), _: &'b ());
+##     fn trait_function<'a: 'a, 'b>(_: &'a (), _: &'b ());
+## }
 #
-# impl Trait for Foo {
-#     fn trait_method<'a: 'a, 'b>(self, _: &'a (), _: &'b ()) {}
-#     fn trait_function<'a: 'a, 'b>(_: &'a (), _: &'b ()) {}
-# }
+## impl Trait for Foo {
+##     fn trait_method<'a: 'a, 'b>(self, _: &'a (), _: &'b ()) {}
+##     fn trait_function<'a: 'a, 'b>(_: &'a (), _: &'b ()) {}
+## }
 #
-# impl Foo {
-#     fn inherent_method<'a: 'a, 'b>(self, _: &'a (), _: &'b ()) {}
-#     fn inherent_function<'a: 'a, 'b>(_: &'a (), _: &'b ()) {}
-# }
+## impl Foo {
+##     fn inherent_method<'a: 'a, 'b>(self, _: &'a (), _: &'b ()) {}
+##     fn inherent_function<'a: 'a, 'b>(_: &'a (), _: &'b ()) {}
+## }
 #
 // 조기 바인딩 매개변수의 개수만큼 인수를 지정하는 것은
 // 항상 하위 호환성 경고(FCW)입니다
@@ -18507,24 +18787,24 @@ free_function::<'static>(&(), &());
 
 두 번째 사례의 경우 (조기든 지연이든) 존재 라이프타임 매개변수보다 더 많은 라이프타임 인수로 각 함수를 호출하고 하드 에러를 유발하는 자유/연관 함수와 달리 메서드 호출은 FCW 결과를 낸다는 점에 유의하라:
 ```rust
-# fn free_function<'a: 'a, 'b>(_: &'a (), _: &'b ()) {}
+## fn free_function<'a: 'a, 'b>(_: &'a (), _: &'b ()) {}
 #
-# struct Foo;
+## struct Foo;
 #
-# trait Trait: Sized {
-#     fn trait_method<'a: 'a, 'b>(self, _: &'a (), _: &'b ());
-#     fn trait_function<'a: 'a, 'b>(_: &'a (), _: &'b ());
-# }
+## trait Trait: Sized {
+##     fn trait_method<'a: 'a, 'b>(self, _: &'a (), _: &'b ());
+##     fn trait_function<'a: 'a, 'b>(_: &'a (), _: &'b ());
+## }
 #
-# impl Trait for Foo {
-#     fn trait_method<'a: 'a, 'b>(self, _: &'a (), _: &'b ()) {}
-#     fn trait_function<'a: 'a, 'b>(_: &'a (), _: &'b ()) {}
-# }
+## impl Trait for Foo {
+##     fn trait_method<'a: 'a, 'b>(self, _: &'a (), _: &'b ()) {}
+##     fn trait_function<'a: 'a, 'b>(_: &'a (), _: &'b ()) {}
+## }
 #
-# impl Foo {
-#     fn inherent_method<'a: 'a, 'b>(self, _: &'a (), _: &'b ()) {}
-#     fn inherent_function<'a: 'a, 'b>(_: &'a (), _: &'b ()) {}
-# }
+## impl Foo {
+##     fn inherent_method<'a: 'a, 'b>(self, _: &'a (), _: &'b ()) {}
+##     fn inherent_function<'a: 'a, 'b>(_: &'a (), _: &'b ()) {}
+## }
 #
 // 메서드 호출 구문을 사용할 때 조기 바인딩 매개변수보다
 // 더 많은 인수를 지정하는 것은 하위 호환성 경고입니다.
@@ -18591,6 +18871,7 @@ fn bar<'b>() {
 }
 ```
 
+## }
 ### 매개변수가 지연 바인딩되기 위한 요구사항
 
 #### 라이프타임 매개변수여야 함
@@ -18603,7 +18884,7 @@ fn bar<'b>() {
 현재 제네릭 매개변수가 where 절에서 사용되는 경우 해당 매개변수는 조기 바인딩되어야 한다.
 예를 들어:
 ```rust
-# trait Trait<'a> {}
+## trait Trait<'a> {}
 fn foo<'a, T: Trait<'a>>(_: &'a String, _: T) {}
 ```
 
@@ -18699,6 +18980,7 @@ impl<'a> Fn<()> for FooFnItem<'a> {
 `ty` 모듈은 Rust 컴파일러가 내부적으로 타입을 표현하는 방법을 정의한다.
 또한 컴파일러의 핵심 데이터 구조인 *타이핑 컨텍스트(typing context)* (`tcx` 또는 `TyCtxt`)를 정의한다.
 
+## `ty` 모듈은 Rust 컴파일러가 내부적으로 타입을 표현하는 방법을 정
 ### `ty::Ty`
 
 rustc가 타입을 표현하는 방법에 대해 대화할 때, 우리는 보통 `Ty`라는 타입을 지칭한다.
@@ -18711,6 +18993,7 @@ rustc가 타입을 표현하는 방법에 대해 대화할 때, 우리는 보통
 [ty_ty]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/struct.Ty.html
 [hir_ty]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_hir/hir/struct.Ty.html
 
+## [ty_ty]: https://doc.rust-lang.org/night
 ### `rustc_hir::Ty` 대 `ty::Ty`
 
 rustc의 HIR은 고수준 중간 표현(high-level intermediate representation)으로 생각할 수 있다.
@@ -18797,6 +19080,7 @@ mod b {
 `rustc_hir::Ty`를 살펴보면 두 경우 모두 `X`가 별칭(alias)이라는 답을 얻게 된다(이름 확인을 통해 별개의 별칭으로 매핑되기는 함).
 그러나 `ty::Ty` 시그니처를 살펴보면 (타입 별칭이 완전히 확장되어) `fn(u32) -> u32` 또는 `fn(i32) -> i32` 중 하나가 된다.
 
+## `rustc_hir::Ty`를 살펴보면 두 경우 모두 `X`가 별칭(al
 ### `ty::Ty` 구현
 
 [`rustc_middle::ty::Ty`][ty_ty]는 실제로는 [`Interned<WithCachedTypeInfo<TyKind>>`][tykind]의 래퍼이다.
@@ -18810,6 +19094,7 @@ mod b {
 
 [tykind]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_type_ir/ty_kind/enum.TyKind.html
 
+## [tykind]: https://doc.rust-lang.org/nigh
 ### 타입 할당 및 작업
 
 새로운 타입을 할당하려면 [`Ty`](https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/struct.Ty.html)에 정의된 다양한 `new_*` 메서드를 사용할 수 있다.
@@ -18828,6 +19113,7 @@ let array_ty = Ty::new_array_with_const_len(tcx, ty, count);
 
 [`CommonTypes`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/context/struct.CommonTypes.html
 
+## [`CommonTypes`]: https://doc.rust-lang.o
 ### 타입 비교하기
 
 타입이 인턴 처리되어 있기 때문에 `==`를 사용하여 효율적으로 동등성을 비교할 수 있다
@@ -18866,6 +19152,7 @@ Rust에서는 특히 추론이 개입되면 동일한 타입을 표현하는 방
 [type-inference]: #creating-an-inference-context
 [`fresh_args_for_item`]: https://doc.rust-lang.org/beta/nightly-rustc/rustc_infer/infer/struct.InferCtxt.html#method.fresh_substs_for_item
 
+## [type-inference]: #creating-an-inference
 ### `ty::TyKind` 배리언트
 
 참고: `TyKind`는 함수형 프로그래밍에서의 *Kind(종)* 개념이 **아니다**.
@@ -18923,6 +19210,7 @@ fn foo(x: Ty<'tcx>) {
 [kinderr]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_type_ir/ty_kind/enum.TyKind.html#variant.Error
 [kindvars]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_type_ir/ty_kind/enum.TyKind.html#variants
 
+## [kinderr]: https://doc.rust-lang.org/nig
 ### 임포트 관례
 
 딱 정해진 엄격한 규칙은 없지만 `ty` 모듈은 보통 다음과 같이 사용된다:
@@ -18934,6 +19222,7 @@ use ty::{self, Ty, TyCtxt};
 특히 `Ty` 및 `TyCtxt` 타입은 매우 자주 사용되므로 직접 임포트한다.
 다른 타입들은 보통 `ty::` 접두사(예: `ty::TraitRef<'tcx>`)를 명시하여 참조한다. 하지만 일부 모듈에서는 더 많거나 적은 이름들을 명시적으로 임포트하기도 한다.
 
+## 특히 `Ty` 및 `TyCtxt` 타입은 매우 자주 사용되므로 직접 임포
 ### 타입 에러
 
 사용자가 타입 에러를 발생시켰을 때 생성되는 `TyKind::Error`가 존재한다.
@@ -18962,6 +19251,7 @@ use ty::{self, Ty, TyCtxt};
 [terrmsg]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/struct.Ty.html#method.new_error_with_message
 
 
+## [terrmsg]: https://doc.rust-lang.org/nig
 ### `TyKind` 변리언트 약식 구문
 
 `Ty`의 디버그 출력을 보거나 컴파일러 내부의 다양한 타입에 대해 이야기할 때, 정식 Rust 구문은 아니지만 타입에 대한 내부 정보를 간결하게 표현하기 위한 약식 구문을 접할 수 있다.
@@ -18975,6 +19265,7 @@ use ty::{self, Ty, TyCtxt};
 이 내용들은 후속 장에서 더 자세히 다룬다.
 
 
+## 이 내용들은 후속 장에서 더 자세히 다룬다.
 ### ADT와 제네릭 인수 {#ty-module-generic-arguments}
 
 `ADT`라는 용어는 "대수적 데이터 타입(Algebraic data type)"을 의미하며 Rust에서는 구조체(struct), 열거형(enum), 유니온(union)을 가리킨다.
@@ -19128,6 +19419,7 @@ fn main() {
 [late-bound generics]: #early-late-parameters
 
 
+## [late-bound generics]: #early-late-param
 ### 매개변수 `Ty`/`Const`/`Region` {#ty-module-param-ty-const-regions}
 
 제네릭 항목 내부에서는 스코프 내의 제네릭 매개변수를 사용하는 타입을 작성할 수 있다(예: `fn foo<'a, T>(_: &'a Vec<T>)`).
@@ -19321,6 +19613,7 @@ impl TypeFoldable for MyFoldable {
 
 ## 별칭과 정규화 {#normalization}
 
+## ## 별칭과 정규화 {#normalization}
 ### 별칭
 
 Rust에는 일부 "기저(underlying)" 타입과 동일하다고 간주되는 여러 타입들이 존재한다.
@@ -19470,6 +19763,7 @@ fn bar() {
 이는 상수 제네릭 기능이 개선됨에 따라 변경될 가능성이 높다.
 예를 들어 `feature(associated_const_equality)` 및 `feature(min_generic_const_args)`는 모두 상수 별칭을 (모든 const 인수를 감싸는 익명 상수 없이) 타입과 유사하게 처리해야 한다.
 
+## 이는 상수 제네릭 기능이 개선됨에 따라 변경될 가능성이 높다.
 ### 정규화란 무엇인가
 
 #### 구조적 정규화 vs 심층 정규화
@@ -19520,6 +19814,7 @@ fn foo() {
 - `<?x as Iterator>::Item`을 정규화하면 `<?x as Iterator>::Item`이 모호한 별칭이므로 새로운 추론 변수 `?y`가 된다.
 - 최종 결과는 `Foo<?x>`를 정규화하면 `?y`가 된다.
 
+## - `<?x as Iterator>::Item`을 정규화하면 `<?x a
 ### 정규화 방법
 
 타입 시스템과 인터페이스할 때 타입 정규화를 요청해야 하는 경우가 자주 발생한다.
@@ -19601,6 +19896,7 @@ HIR Typeck 내부에는 관련 정규화 메서드인 [`fcx.structurally_resolve
 [`traits::normalize_with_depth(_to)`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_trait_selection/traits/normalize/fn.normalize_with_depth.html
 [`EvalCtxt::structurally_normalize`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_next_trait_solver/solve/struct.EvalCtxt.html#method.structurally_normalize_term
 
+## [`traits::normalize_with_depth(_to)`]: h
 ### 정규화 시점 및 위치 (구형 vs 신형 솔버)
 
 구형 솔버와 신형 솔버 사이의 큰 차이점 중 하나는 별칭이 정규화될 것으로 기대하는 시점에 대한 우리의 접근 방식이다.
@@ -19654,6 +19950,7 @@ HIR Typeck 내부에는 관련 정규화 메서드인 [`fcx.structurally_resolve
 [universe]: #what-is-a-universee]
 [deeply_normalize]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_trait_selection/traits/normalize/trait.NormalizeExt.html#tymethod.deeply_normalize
 
+## [universe]: #what-is-a-universee]
 ### 발산하는 별칭의 사용 처리
 
 발산하는 별칭은 모호한 별칭과 마찬가지로 추론 변수로 정규화된다.
@@ -19703,6 +20000,7 @@ struct Bar<T: ?Sized = <u8 as Trait>::Diverges<u8>>(Box<T>);
 
 ## 타이핑/매개변수 환경 {#typing-parameter-envs}
 
+## ## 타이핑/매개변수 환경 {#typing-parameter-envs}
 ### 타이핑 환경
 
 타입 시스템과 상호작용할 때 트레이트 풀이 결과에 영향을 미칠 수 있는 몇 가지 변수를 고려해야 한다.
@@ -19715,6 +20013,7 @@ struct Bar<T: ?Sized = <u8 as Trait>::Diverges<u8>>(Box<T>);
 [ocx]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_trait_selection/traits/struct.ObligationCtxt.html
 [fnctxt]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_hir_typeck/fn_ctxt/struct.FnCtxt.html
 
+## [ocx]: https://doc.rust-lang.org/nightly
 ### 매개변수 환경
 
 #### `ParamEnv`란 무엇인가
@@ -19911,6 +20210,7 @@ fn requires_impl<U: Trait<u32>>(_: U) {}
 
 [pe]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/struct.ParamEnv.html
 
+## [pe]: https://doc.rust-lang.org/nightly/
 ### 타이핑 모드
 
 타입 시스템 연산을 수행하는 컨텍스트에 따라 서로 다른 동작이 필요할 수 있다.
@@ -19941,6 +20241,7 @@ fn main() {
 
 타입 추론은 표준 Hindley-Milner (HM) 타입 추론 알고리즘을 기반으로 하지만 서브타이핑(subtyping), 영역 추론(region inference), 고차 타입(higher-ranked types)을 수용하기 위해 다양한 방식으로 확장되었다.
 
+## 타입 추론은 표준 Hindley-Milner (HM) 타입 추론 알고리즘
 ### 용어에 대한 참고 사항
 
 우리는 추론 변수(존재 변수, existential variables라고도 함)를 참조하기 위해 `?T` 표기법을 사용한다.
@@ -19949,6 +20250,7 @@ fn main() {
 
 "바인딩된 영역(bound region)"이라는 용어는 `for<'a> fn(&'a u32)`에서의 `'a`처럼 함수 시그니처 내에 바인딩된 영역을 말한다. 영역이 바인딩되지 않은 경우 "자유(free)" 영역이라고 부른다.
 
+## "바인딩된 영역(bound region)"이라는 용어는 `for<'a>
 ### 추론 컨텍스트 생성
 
 다음과 같이 수행하여 추론 컨텍스트(inference context)를 생성한다:
@@ -19964,6 +20266,7 @@ let infcx = tcx.infer_ctxt().build();
 
 <a id="vars"></a>
 
+## <a id="vars"></a>
 ### 추론 변수
 
 추론 컨텍스트의 주요 목적은 수많은 **추론 변수(inference variables)**를 보관하는 것이다. 이 변수들은 정밀한 값을 아직 알 수 없지만 타입 검사를 수행함에 따라 명확해질 타입이나 영역을 나타낸다.
@@ -19984,6 +20287,7 @@ H-M 타입 시스템의 단일화(unification) 개념이나 Prolog와 같은 논
 
 영역 변수는 조금 다르게 작동하며 아래 별도의 섹션에서 설명한다.
 
+## 영역 변수는 조금 다르게 작동하며 아래 별도의 섹션에서 설명한다.
 ### 동등성 / 서브타이핑 강제
 
 타입 추론기에서 수행할 수 있는 가장 기본적인 연산은 두 타입 `T`와 `U`가 동일하도록 강제하는 **동등성(equality)**인다. 동등성 제약을 추가하는 권장 방법은 다음과 같이 `at` 메서드를 사용하는 것이다:
@@ -20003,12 +20307,14 @@ infcx.at(...).eq(t, u);
 
 유사하게 `infcx.at(..).sub(..)`를 통해 서브타이핑을 강제할 수 있다. 위와 동일한 기본 개념이 적용된다.
 
+## 유사하게 `infcx.at(..).sub(..)`를 통해 서브타이핑을 강
 ### 동등성 "시도"
 
 때로는 에러 없이 두 타입을 동등 비교하는 것이 *가능한지* 알고 싶을 때가 있다. `infcx.can_eq`(또는 서브타이핑의 경우 `infcx.can_sub`)를 사용하여 이를 테스트할 수 있다. 이것이 `Ok`를 반환하면 동등 비교가 가능한 것이다. 단, 모든 경우에 모든 부작용은 원상태로 되돌려진다(reversed).
 
 그러나 이러한 메서드의 성공 또는 실패는 항상 **영역을 모듈로 함(modulo regions)**에 유의해야 한다. 즉, 두 타입 `&'a u32`와 `&'b u32`는 `'a != 'b`라 하더라도 `can_eq`에 대해 `Ok`를 반환한다. 이는 우리가 영역 제약을 해결하는 방식의 "2단계" 특성에서 비롯된다.
 
+## 그러나 이러한 메서드의 성공 또는 실패는 항상 **영역을 모듈로 함(mo
 ### 스냅샷
 
 `can_eq`에 관한 이전 섹션에서 설명했듯이, 일련의 연산을 수행한 후 그 부작용을 롤백할 수 있는 기능은 유용할 때가 많다. 이는 여러 가지 이유로 수행된다. 그중 하나는 어떤 경로를 취할지 결정하기 전에 여러 가능성을 시도해보며 되돌아가기(backtrack)를 하기 위함이다. 다른 하나는 일련의 작은 변경 사항들이 원자적으로 발생하거나 아예 발생하지 않도록 보장하기 위함이다.
@@ -20017,6 +20323,7 @@ infcx.at(...).eq(t, u);
 
 스냅샷을 직접 사용하는 것보다 고수준 패턴을 캡슐화하는 `commit_if_ok`나 `probe` 같은 메서드를 사용하는 것이 도움이 되는 경우가 많다.
 
+## 스냅샷을 직접 사용하는 것보다 고수준 패턴을 캡슐화하는 `commit_i
 ### 서브타이핑 의무
 
 논의할 만한 가치가 있는 한 가지는 서브타이핑 의무이다. `?T <: i32`처럼 두 타입을 서브타입 관계로 강제할 때, 우리는 이를 동등성 제약으로 자주 변환할 수 있다. 이는 Rust의 다소 제한적인 서브타이핑 개념에서 비롯된다. 따라서 위의 경우 `?T <: i32`는 `?T = i32`와 동일하다.
@@ -20031,6 +20338,7 @@ infcx.at(...).eq(t, u);
 
 마지막 흥미로운 케이스는 `?T <: ?U`와 같이 바인딩되지 않은 두 타입 변수를 관련짓는 것이다. 이 경우 진행을 할 수 없으므로 `Subtype(?T, ?U)` 의무를 큐에 넣고 `InferOk` 메커니즘을 통해 반환한다. `?T` 또는 `?U`에 대한 더 자세한 정보가 밝혀지면 다시 시도해야 한다.
 
+## 마지막 흥미로운 케이스는 `?T <: ?U`와 같이 바인딩되지 않은 두
 ### 영역 제약
 
 영역은 타입과 다소 다르게 추론된다. 즉각적으로 단일화를 진행하기보다는 진행하면서 제약을 수집하기만 하고 영역을 풀려고 시도하는 작업은 (almost) 하지 않는다. 이러한 제약은 "outlives" 제약 형태를 띤다:
@@ -20058,6 +20366,7 @@ infcx.at(...).eq(t, u);
 [`region_constraints`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_infer/infer/region_constraints/index.html
 [`opportunistic_resolve_var`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_infer/infer/region_constraints/struct.RegionConstraintCollector.html#method.opportunistic_resolve_var
 
+## [`region_constraints`]: https://doc.rust
 ### 영역 제약 풀기
 
 영역 제약은 타입 검사의 맨 마지막 단계, 즉 다른 모든 제약 조건이 알려지고 다른 모든 의무가 증명된 후에야 풀어낸다. 현재 영역 제약을 푸는 방법에는 어휘적(lexical) 방법과 비어휘적(non-lexical) 방법 두 가지가 있다. 결국에는 한 가지만 남게 될 것이다.
@@ -20073,6 +20382,7 @@ NLL 솔버(실제로는 MIR 타입 검사기)는 작업을 약간 다르게 처�
 [`take_and_reset_region_constraints`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_infer/infer/struct.InferCtxt.html#method.take_and_reset_region_constraints
 [`get_region_var_infos`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_infer/infer/struct.InferCtxt.html#method.get_region_var_infos
 
+## [`take_and_reset_region_constraints`]: h
 ### 어휘적 영역 해동
 
 어휘적 영역 해동은 초기에 각 영역 변수를 빈 값으로 할당하여 수행된다. 그런 다음 고정점(fixed-point)에 도달할 때까지 각 outlives 제약을 반복적으로 처리하면서 영역 변수를 확장한다. 영역 격자(region lattice) 상의 최소 상한(least-upper-bound) 관계를 사용하여 매우 직관적인 방식으로 영역 변수를 확장할 수 있다.
@@ -20084,6 +20394,7 @@ NLL 솔버(실제로는 MIR 타입 검사기)는 작업을 약간 다르게 처�
 
 **참고:** 이 장(및 하위 장)은 트레이트 솔버가 **현재** 작동하는 방식을 설명한다. 그러나 우리는 새로운 트레이트 솔버를 설계하는 과정에 있다. *해당* 내용에 대해 읽고 싶다면 [이 하위 장](./chalk.html)을 참조하라.
 
+## **참고:** 이 장(및 하위 장)은 트레이트 솔버가 **현재** 작동하
 ### 주요 개념
 
 트레이트 해동은 트레이트에 대한 각 참조를 impl과 짝짓는 과정이다. 따라서 예를 들어 다음과 같은 제네릭 함수가 있고:
@@ -20117,6 +20428,7 @@ fn clone_slice<T:Clone>(x: &[T]) -> Vec<T> {
 
 타입 검사 동안에는 트레이트 선택(trait selection) 결과를 저장하지 않는다. 단지 트레이트 선택이 성공할 것임을 검증하고 싶을 뿐이다. 그런 다음 나중에 코드 생성 시점에 구체적인 타입을 모두 사용할 수 있게 되면, 트레이트 선택을 반복하여 실제 구현을 선택하고 이를 출력 바이너리에 생성한다.
 
+## 타입 검사 동안에는 트레이트 선택(trait selection) 결과를
 ### 개요
 
 트레이트 해동은 세 가지 주요 부분으로 구성된다:
@@ -20127,6 +20439,7 @@ fn clone_slice<T:Clone>(x: &[T]) -> Vec<T> {
 
 - **평가(Evaluation)**: 추론 변수를 제약하지 않고 의무가 성립하는지 검사한다. 선택(Selection) 과정에서 사용된다.
 
+## - **평가(Evaluation)**: 추론 변수를 제약하지 않고 의무가
 ### 선택
 
 선택은 의무를 해동할 수 있는지 여부와, 그렇다면 어떻게 해동할지(impl, where 절 등을 통해)를 결정하는 과정이다. 주요 인터페이스는 의무를 받아 `SelectionResult`를 반환하는 `select()` 함수이다. 세 가지 가능한 결과가 있다:
@@ -20233,6 +20546,7 @@ let y: char = x.convert(); // 참고: 이제 `y: char`임!
 한 가지 흥미로운 점은 중첩된 의무와 관련이 있다. 일반적으로 코드 생성 시에는 어떤 후보가 적용되는지만 파악하면 되며 중첩된 의무는 이미 참이라고 가정하므로 신경 쓰지 않는다. 그럼에도 불구하고 우리는 현재 이들을 모두 *이행(fulfill)*한다. 이는 때때로 타입 추론 결과에 정보를 제공할 수 있기 때문이다. 즉, impl의 타입 변수에 대한 완벽한 치환을 바로 사용할 수 없으므로, 모든 것을 파악하기 위해 트레이트 선택을 실행해야 한다.
 
 
+## 한 가지 흥미로운 점은 중첩된 의무와 관련이 있다. 일반적으로 코드 생성
 ### 고차 트레이트 바운드 {#traits-hrtb}
 
 트레이트 해동에서 더 미묘한 개념 중 하나는 *고차 트레이트 바운드(higher-ranked trait bounds)*인다. 이러한 바운드의 예로는 `for<'a> MyTrait<&'a isize>`가 있다. 고차 트레이트 참조에 대한 선택이 어떻게 작동하는지 차근차근 살펴본다.
@@ -20315,6 +20629,7 @@ impl<X,F> Foo<X> for F
 우리가 하는 일은 `'0`의 오염 세트에서 `'0`이 유래된 원래 바인딩된 영역(여기서는 `'a`)으로의 역매핑(inverse mapping)을 생성하는 것이다. (이는 `higher_ranked::plug_leaks`에서 수행됨). 우리는 누출 검사가 통과했음을 알고 있으므로 이 오염 세트는 플레이스홀더 영역 자체와 다양한 중간 영역 변수로만 구성된다. 그런 다음 트레이트 참조를 순회하여 해당 오염 세트의 모든 영역을 만기 바인딩(late-bound) 영역으로 다시 변환하므로, 이 경우 `Baz: for<'a> Bar<&'a isize>`로 마무리된다.
 
 
+## 우리가 하는 일은 `'0`의 오염 세트에서 `'0`이 유래된 원래 바인딩
 ### 캐싱 및 이에 따른 미묘한 고려 사항 {#traits-caching}
 
 일반적으로 우리는 트레이트 선택 결과를 캐싱하려고 시도한다. 이는 다소 복잡한 과정이다. 그 이유 중 일부는 트레이트 참조의 모든 타입을 완벽히 알지 못할 때도 결과를 캐싱할 수 있기를 원하기 때문이다. 그런 경우 트레이트 선택 프로세스가 타입 변수에도 영향을 미칠 수 있으므로, 선택 프로세스의 *결과*를 캐싱할 수 있을 뿐만 아니라 타입 변수에 미치는 영향을 *재생(replay)*할 수도 있어야 한다.
@@ -20350,6 +20665,7 @@ impl Foo<isize> for usize { ... } // Impl #22
 [#22019]: https://github.com/rust-lang/rust/issues/22019
 
 
+## [#22019]: https://github.com/rust-lang/r
 ### 함의된 바운드 {#traits-implied-bounds}
 
 우리는 현재 명시적인 어노테이션을 피하기 위해 함의된 영역 바운드(implied region bounds)를 추가한다. 예: `fn foo<'a, T>(x: &'a T)`는 명시하지 않고도 `T: 'a`가 성립함을 자유롭게 가정할 수 있다.
@@ -20411,6 +20727,7 @@ impl을 인스턴스화할 때 `WellFormed` 서술자를 발출할 수 없는데
 [#100051]: https://github.com/rust-lang/rust/issues/100051
 
 
+## [#100051]: https://github.com/rust-lang/
 ### 특수화 {#traits-specialization}
 
 **TODO**: Chalk는 어디에 적합한가요? 여기서 언급/논의해야 하는가?
@@ -20435,6 +20752,7 @@ impl을 인스턴스화할 때 `WellFormed` 서술자를 발출할 수 없는데
 [talk]: https://www.youtube.com/watch?v=rZqS4bLPL
 
 
+## [talk]: https://www.youtube.com/watch?v=
 ### Chalk 기반 트레이트 솔빙 {#traits-chalk}
 
 [Chalk][chalk]는 [Types 팀]에 의해 (<!-- date-check --> 2022년 5월 기준) 개발 중인 실험적인 Rust 트레이트 솔버이다.
@@ -21143,6 +21461,7 @@ for<T, L> {
 
 
 
+## 섹션 156
 ### 트레이트 솔빙 (신형) {#solve-trait-solving}
 
 이 장에서는 [`rustc_trait_selection/solve`][solve]에 위치한 개발 중인(WIP) 신형 솔버로 트레이트 풀이가 작동하는 방식을 설명한다. [현재 솔버](#traits-resolution) 및 [chalk 솔버](#traits-chalk) 문서를 자유롭게 참조하셔도 된다.
@@ -22579,6 +22898,7 @@ rust-analyzer는 안정적인 툴체인으로 빌드되므로, 나이틀리 전�
 [rustc coerce]: https://github.com/rust-lang/rust/blob/63b1db05801271e400954e41b8600a3cf1482363/compiler/rustc_hir_typeck/src/coercion.rs
 [r-a coerce]: https://github.com/rust-lang/rust-analyzer/blob/34f47d9298c478c12c6c4c0348771d1b05706e09/crates/hir-ty/src/infer/coerce.rs
 
+## [rustc coerce]: https://github.com/rust-
 ### [`CoerceUnsized`] {#traits-unsize}
 
 `CoerceUnsized`는 주로 데이터 컨테이너에 관련된 트레이트이다. 구조체(일반적으로 스마트 포인터)가 `CoerceUnsized`를 구현한다는 것은 해당 구조체가 가리키는 데이터의 크기 결정이 해제(unsized)되고 있음을 의미한다.
@@ -22591,6 +22911,7 @@ rust-analyzer는 안정적인 툴체인으로 빌드되므로, 나이틀리 전�
 
 이 트레이트는 (궁극적으로) 사용자가 작성한 스마트 포인터에 의해 구현되도록 의도되었으며 해당 트레이트의 문서에는 타입이 `CoerceUnsized`를 구현하도록 허용되는 시기에 대한 규칙이 설명되어 있다.
 
+## 이 트레이트는 (궁극적으로) 사용자가 작성한 스마트 포인터에 의해 구현되
 ### [`Unsize`]
 
 대조적으로 `Unsize` 트레이트는 크기 결정 해제가 허용되는 실제 타입에 관련된다.
@@ -22642,6 +22963,7 @@ rust-analyzer는 안정적인 툴체인으로 빌드되므로, 나이틀리 전�
 : 이전에는 "객체 안전(object safe)"으로 알려졌다.
 
 
+## : 이전에는 "객체 안전(object safe)"으로 알려졌다.
 ### 분리된 `Trait` 및 `Projection` 바운드 가지기 {#traits-separate-projection-bounds}
 
 `T: Foo<AssocA = u, AssocB = i32>` where-바운드가 주어지면, 현재 우리는 이를 `Trait(Foo<T>)` 및 분리된 `Projection(<T as Foo>::AssocA, u32)`과 `Projection(<T as Foo>::AssocB, i32)` 바운드로 낮춘다(lower).
@@ -22692,12 +23014,14 @@ trait Trait<'a>: Super<'a, A = i32> {}
 
 ## 잘 구성됨 {#analysis-well-formed}
 
+## ## 잘 구성됨 {#analysis-well-formed}
 ### 잘 구성됨이란 무엇인가?
 
 "잘 구성됨(Well-formed)"은 "올바르게 지어짐"을 의미한다.
 무언가의 구조가 규칙을 따를 때 그것은 _잘 구성_되었다고 한다.
 Rust 컴파일러에서 이 용어를 사용할 때 우리는 일종의 _내부적 일관성_을 확립하는 데 관심을 둔다.
 
+## 무언가의 구조가 규칙을 따를 때 그것은 _잘 구성_되었다고 한다.
 ### Rust에서의 잘 구성됨
 
 무언가가 잘 구성되었는지 검사하는 것은 "잘 구성됨 검사(Well-formedness check)"를 수행하는 것이다.
@@ -22714,6 +23038,7 @@ Rust 컴파일러에는 잘 구성됨 검사의 두 가지 다른 형태가 있�
 
 참고: [잘 구성됨이 아닌 것](#what-well-formedness-isnt).
 
+## 참고: [잘 구성됨이 아닌 것](#what-well-formedness-
 ### 타입 레벨 항의 잘 구성됨
 
 항 잘 구성됨 검사는 항이 잘 구성되기 위해 참이어야 하는 항목 목록을 작성하는 것부터 시작한다.
@@ -22794,6 +23119,7 @@ const 6: usize
 호출 위치는 잘 구성됨 검사 동안 `6: usize` 의무를 제공한다.
 트레이트 풀이기는 이름이 암시하는 것보다 더 많은 책임을 가지므로 이 의무는 일반적인 트레이트 스타일 의무와 마찬가지로 트레이트 풀이기로 전달된다.
 
+## 호출 위치는 잘 구성됨 검사 동안 `6: usize` 의무를 제공한다.
 ### 아이템의 잘 구성됨
 
 아이템은 일반적으로 "정의되는 항목"인다.
@@ -22860,6 +23186,7 @@ String: Copy // Trivial bound again, but this one is false!
 
 아이템이 잘 구성되었는지 검사할 때 자명하게 거짓인 전역 바운드가 없는지 검사한다.
 
+## 아이템이 잘 구성되었는지 검사할 때 자명하게 거짓인 전역 바운드가 없는지
 ### 잘 구성됨 검사를 완전히 수행하지 않는 경우
 
 잘 구성됨 검사는 타입 검사의 일관된 "단계"가 아니다.
@@ -22984,16 +23311,19 @@ type Alias = Consty<42>;
 
 <!-- TODO: Link to something explaining the underlying "why" of the difference between const and trait well-formedness checking in FTAs, or eliminate that difference. Whatever comes first. -->
 
+## <!-- TODO: Link to something explaining
 ### "well-formed" 인가 "wellformed" 인가?
 
 논리학 문헌과의 일관성을 위해 "wellformed"보다 "well-formed"를 선호하라.
 이는 개발 가이드 / 문서의 다른 부분에서 WF로 줄여 쓰이기도 한다.
 
+## 논리학 문헌과의 일관성을 위해 "wellformed"보다 "well-fo
 ### 비공식적 사용
 
 대화 중 기여자가 무언가를 "잘 구성된(well-formed)" 것으로 언급할 수 있으며 "잘 구성됨"이 정식 구조의 올바름과 관련된 일반적인 표현이므로 반드시 여기서 다루는 내용을 의미하지 않을 수도 있다.
 이것이 반드시 오류는 아니지만 주의해서 살펴보아야 한다.
 
+## 대화 중 기여자가 무언가를 "잘 구성된(well-formed)" 것으로
 ### 잘 구성됨이 아닌 것
 
 잘 구성됨 검사는 "매개변수 개수"나 "매개변수 타입" 검사가 아니다.
@@ -23052,6 +23382,7 @@ Rust에서 우리의 원래 용법은 원본 [프로젝션 및 잘 구성됨 RFC
 > - `*`는 _쌍변성(bivariance)_인다.
 > - `o`는 _불변성(invariance)_인다.
 
+## > - `*`는 _쌍변성(bivariance)_인다.
 ### 알고리즘
 
 기본적인 아이디어는 매우 명확하다.
@@ -23102,6 +23433,7 @@ Term := + | - | * | o | V(X) | Term x Term
 
 > 타입 표현식 `E`에서 타입 변수 `X`의 변성이 `V2`이고 클래스 `C`에 해당하는 타입 매개변수의 정의 위치 변성이 `V1`이면, 타입 표현식 `C<E>`에서 `X`의 변성은 `V = V.xform(V2)`이다.
 
+## > 타입 표현식 `E`에서 타입 변수 `X`의 변성이 `V2`이고 클래스
 ### 제약 조건
 
 where 절이 있는 구조체나 열거형이 있는 경우:
@@ -23135,6 +23467,7 @@ struct Foo<T: Bar> { ... }
 
 <a id="addendum"></a>
 
+## <a id="addendum"></a>
 ### 부적: 트레이트에 대한 변성
 
 위에서 언급했듯이 우리는 과거에 트레이트에 대한 변성을 허용하곤 했다.
@@ -23282,6 +23615,7 @@ if 'static : 'a             -- Subtyping rules for relations
 이는 하위 호환성을 유지하면서 상위 크레이트에 추가될 수 있는 impl 및 하위 크레이트의 impl에 영향을 미친다.
 이를 고아 검사(Orphan check)라고 부른다.
 
+## 이는 하위 호환성을 유지하면서 상위 크레이트에 추가될 수 있는 impl
 ### 겹침 검사
 
 겹침 검사는 inherent impl과 트레이트 impl 모두에 대해 수행된다.
@@ -23365,6 +23699,7 @@ impl<E> From<E> for Box<dyn Error> where E: Error {} // in std
 [type inference]: #type-inference
 [trait solving]: #traits-resolution
 
+## [type inference]: #type-inference
 ### 타입 수집
 
 타입 "수집"은 HIR에 존재하는 타입(`hir::Ty`, 사용자가 작성한 구문적 표현)을 컴파일러가 사용하는 **내부 표현**(`Ty<'tcx>`)으로 변환하는 프로세스이다.
@@ -23393,6 +23728,7 @@ fn foo(x: Foo, y: self::Foo) { ... }
 **TODO**: 실제로 타입 검사에 대해 다루기... [#1161](https://github.com/rust-lang/rustc-dev-guide/issues/1161)
 
 
+## **TODO**: 실제로 타입 검사에 대해 다루기... [#1161](h
 ### 타입 강제 변환 {#hir-typeck-coercions}
 <!-- date-check: Dec 2025 -->
  
@@ -23685,6 +24021,7 @@ foo::<?x>(match my_bool {
 [never_to_any]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/adjustment/enum.Adjust.html#variant.NeverToAny
 
 
+## [never_to_any]: https://doc.rust-lang.or
 ### 메서드 탐색 {#hir-typeck-method-lookup}
 
 메서드 탐색은 self 타입, autoderef, 트레이트 탐색 등의 여러 요소들의 상호작용으로 인해 다소 복잡할 수 있다.
@@ -23755,6 +24092,7 @@ Is this still accurate?
 
 ## 상수 제네릭 {#const-generics}
 
+## ## 상수 제네릭 {#const-generics}
 ### 상수 인자의 종류
 
 존재하는 대부분의 `ty::Const` 종류는 존재하는 타입의 종류와 직접적으로 대응된다. 예를 들어 `ConstKind::Param`은 `TyKind::Param`과 동일하다.
@@ -23770,6 +24108,7 @@ Is this still accurate?
 상수 파라미터 역시 마찬가지로 단조로우며 거의 모든 곳에서 타입 파라미터의 사용과 동일하게 처리된다.
 그러나 파싱, 이름 확인(name resolution) 및 AST 하위 변환(lowering) 중에 처리되는 방식에는 몇 가지 흥미로운 미묘함이 있다: [ambig-unambig-ty-and-consts].
 
+## 상수 파라미터 역시 마찬가지로 단조로우며 거의 모든 곳에서 타입 파라미터
 ### 익명 상수
 
 익명 상수(Anon consts, anonymous const items의 약자)는 상수 제네릭에서 임의의 표현식을 표현하는 방법이다. 예를 들어 `1 + 1` 또는 `foo()` 또는 심지어 단순한 `0` 형태의 배열 길이 등이 있다.
@@ -23942,6 +24281,7 @@ fn foo<T: Sized>() {
 
 `min_generic_const_args`는 일부 표현식(예: 배열 생성)이 익명 상수 없이 표현될 수 있도록 하여 이러한 문제에 부딪히지 않게 해줄 것이다. 다만 이것으로 *충분한지*는 아직 지켜봐야 한다.
 
+## `min_generic_const_args`는 일부 표현식(예: 배열 생
 ### 상수 인자의 타입 검사
 
 상수 인자가 올바르게 형식을 갖추려면(well formed), 인자로 전달되는 상수 파라미터와 동일한 타입을 가져야 한다.
@@ -24050,6 +24390,7 @@ fn foo() -> Foo {
 }
 ```
 
+## }
 ### 정의적 사용 지점 (Defining use site)
 
 현재는 함수의 반환값만이 불투명 타입의 정의적 사용 지점이 될 수 있다 (해당 함수의 반환 타입에 불투명 타입이 포함되어 있는 경우에 한함).
@@ -24102,6 +24443,7 @@ impl Baz for Quux {
 ```
 
 
+## ```
 ### 불투명 타입 (`impl Trait`)의 추론 {#opaque-types-impl-trait-inference}
 
 이 페이지에서는 컴파일러가 [불투명 타입]의 [숨겨진 타입(hidden type)]을 추론하는 방법을 설명한다.
@@ -24367,6 +24709,7 @@ MIR 빌림 검사기는 `nll_relate`를 통해 항목들을 연결하며 영역(
  따라서 클로저는 추론 변수만 볼 수 있지만 1번 지점을 수정하면 이것이 문제가 될 것이다.
 
 
+## 따라서 클로저는 추론 변수만 볼 수 있지만 1번 지점을 수정하면 이것이
 ### 트레이트 내 반환 위치 impl Trait {#return-position-impl-trait-in-trait}
 
 트레이트 내 반환 위치 impl Trait(RPITIT)는 개념적으로(그리고 [#112988] 이후로는 문자 그대로) 사용자가 트레이트 쪽이나 impl 쪽에 GAT를 직접 정의할 필요 없이, 트레이트 메서드의 RPIT를 제네릭 연관 타입(GAT)으로 변환하는 슈가(sugar)인다.
@@ -24674,6 +25017,7 @@ fn test<'a, 'b>() -> bool {
 [#113704]: https://github.com/rust-lang/rust/pull/113704
 
 
+## [#113704]: https://github.com/rust-lang/
 ### 불투명 타입 영역 추론 제약 {#borrow-check-opaque-types-region-inference-restrictions}
 
 이 장에서는 불투명 타입의 숨겨진 타입
@@ -24907,6 +25251,7 @@ fn test<'a>() -> impl Future<Output = Opaque<'a>> {
 
 ## 이펙트, const 트레이트 및 const 조건 검사 {#effects}
 
+## ## 이펙트, const 트레이트 및 const 조건 검사 {#effec
 ### `HostEffect` 술어
 
 [`HostEffectPredicate`]는 `[const] Tr` 또는 `const Tr` 바운드로부터 온 일종의 술어(predicate)인다.
@@ -24920,6 +25265,7 @@ fn test<'a>() -> impl Future<Output = Opaque<'a>> {
 [`HostEffectPredicate`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_type_ir/predicate/struct.HostEffectPredicate.html
 [`const_conditions`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/struct.TyCtxt.html#method.const_conditions
 
+## [`HostEffectPredicate`]: https://doc.rus
 ### `const_conditions` 쿼리
 
 `predicates_of`는 항목을 사용하기 위해 증명되어야 하는 술어 세트를 나타낸다.
@@ -24939,6 +25285,7 @@ const fn foo<T>() where T: [const] Default {}
 
 그러면 `foo`는 `const_conditions` 쿼리에서 `HostEffect(T: Default, maybe)`를 얻게 되며 이는 const 컨텍스트에서 `foo`를 호출하기 위해서는 `T`가 `Default`의 const 구현을 가지고 있음을 증명해야 함을 암시한다.
 
+## 그러면 `foo`는 `const_conditions` 쿼리에서 `Host
 ### `const_conditions` 강제 실행
 
 `const_conditions`는 현재 여러 장소에서 검사된다.
@@ -24998,6 +25345,7 @@ MIR에서는 const 검사의 일환으로, 호출되는 항목들의 `const_cond
 [`wfcheck::check_impl`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_hir_analysis/check/wfcheck/fn.check_impl.html
 [`Checker::revalidate_conditional_constness`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_const_eval/check_consts/check/struct.Checker.html#method.revalidate_conditional_constness
 
+## [`wfcheck::check_impl`]: https://doc.rus
 ### 연관 타입 및 트레이트에서의 `explicit_implied_const_bounds`
 
 연관 타입, 불투명 타입 및 수퍼트레이트에 대한 다음과 같은 바운드는 그 바운드가 다르게 표현된다:
@@ -25023,6 +25371,7 @@ fn foo() -> impl [const] PartialEq {
 [`evaluate_host_effect_from_item_bounds`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_trait_selection/traits/effects/fn.evaluate_host_effect_from_item_bounds.html
 [`consider_additional_alias_assumptions`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_next_trait_solver/solve/assembly/trait.GoalKind.html#tymethod.consider_additional_alias_assumptions
 
+## [`evaluate_host_effect_from_item_bounds`
 ### `HostEffectPredicate` 증명하기
 
 `HostEffectPredicate`는 [이전 솔버] 및 [새 트레이트 솔버] 모두에 구현되어 있다.
@@ -25036,6 +25385,7 @@ fn foo() -> impl [const] PartialEq {
 [old solver]: https://doc.rust-lang.org/nightly/nightly-rustc/src/rustc_trait_selection/traits/effects.rs.html
 [new trait solver]: https://doc.rust-lang.org/nightly/nightly-rustc/src/rustc_next_trait_solver/solve/effect_goals.rs.html
 
+## [old solver]: https://doc.rust-lang.org/
 ### const 트레이트에 대한 추가 정보
 
 추후 확장될 예정이다.
@@ -25055,6 +25405,7 @@ fn foo() -> impl [const] PartialEq {
 Rust에서 패턴 매칭 및 바인딩은 매우 유용한 몇 가지 속성을 갖는다.
 컴파일러는 바인딩이 생성될 때 반박 불가능한지(irrefutable) 검사하고 match 분기들이 망라적인지(exhaustive) 검사한다.
 
+## Rust에서 패턴 매칭 및 바인딩은 매우 유용한 몇 가지 속성을 갖는다.
 ### 패턴 유용성
 
 유용성 검사가 답하는 핵심 질문은 다음과 같다:
@@ -25084,6 +25435,7 @@ match x {
 따라서 유용성은 두 가지 목적으로 사용된다: 도달 불가능한 코드 감지(사용자에게 유용함),
 그리고 match가 망라적임을 보장(match 표현식이 값을 반환할 수 있으므로 건전성에 중요함).
 
+## 따라서 유용성은 두 가지 목적으로 사용된다: 도달 불가능한 코드 감지(사
 ### 발생하는 위치
 
 이 검사는 패턴을 작성할 수 있는 모든 위치에서 수행된다: `match` 표현식, `if let`, `let else`,
@@ -25120,6 +25472,7 @@ fn foo(Foo { x, y }: Foo) {
 }
 ```
 
+## }
 ### 알고리즘
 
 망라성 검사는 MIR 생성 전 [`check_match`]에서 실행된다.
@@ -25127,6 +25480,7 @@ fn foo(Foo { x, y }: Foo) {
 알고리즘의 핵심은 [`usefulness`] 모듈에 있다.
 해당 파일에 알고리즘에 대한 자세한 설명이 포함되어 있다.
 
+## 알고리즘의 핵심은 [`usefulness`] 모듈에 있다.
 ### 중요한 개념
 
 #### 생성자 및 필드
@@ -25186,7 +25540,7 @@ match (0, false) {
 
 ```rust
 enum Direction { North, South, East, West }
-# let wind = (Direction::North, 0u8);
+## let wind = (Direction::North, 0u8);
 match wind {
     (Direction::North, 50..) => {}
     (_, _) => {}
@@ -25223,15 +25577,15 @@ unsafe {
 그러나 분기가 바인딩을 가지고 있다면:
 
 ```rust
-# #[derive(Copy, Clone)]
-# enum Void {}
-# let x: u8 = 0;
-# let ptr: *const Void = &x as *const u8 as *const Void;
-# unsafe {
+## #[derive(Copy, Clone)]
+## enum Void {}
+## let x: u8 = 0;
+## let ptr: *const Void = &x as *const u8 as *const Void;
+## unsafe {
 match *ptr {
     _a => println!("Unreachable!"),
 }
-# }
+## }
 ```
 
 여기서 바인딩은 `*ptr` 장소로부터 `Void` 타입의 값을 로드한다.
@@ -25267,6 +25621,7 @@ stable 채널에서 빈 타입은 대부분 비어있지 않은 것으로 처리
 Rust의 특정 표현식은 메모리 안전성을 위반할 수 있으므로 `unsafe` 블록이나 함수 내부에 있어야 한다.
 또한 컴파일러는 대응하는 unsafe 연산 없이 unsafe 블록이 사용되면 경고한다.
 
+## Rust의 특정 표현식은 메모리 안전성을 위반할 수 있으므로 `unsaf
 ### 개요
 
 비안전성 검사는 [`check_unsafety`] 모듈에 위치한다.
@@ -25290,6 +25645,7 @@ unsafe 유니온(Union) 필드 접근을 찾는 것은 다소 더 복잡하다. 
 
 [`check_unsafety`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_mir_build/check_unsafety/index.html
 
+## [`check_unsafety`]: https://doc.rust-lan
 ### unused_unsafe 린트
 
 unused_unsafe 린트는 제거될 수 있는 `unsafe` 블록을 보고한다.
@@ -25317,6 +25673,7 @@ unsafe {
 }
 ```
 
+## }
 ### `unsafe`와 관련된 기타 검사
 
 [Unsafe 트레이트]는 구현되기 위해 `unsafe impl`을 요구하며 이에 대한 검사는 [정합성(coherence)]의 일부로 수행된다.
@@ -25339,6 +25696,7 @@ MIR 작업을 하다 보면 다양한 형태의 [데이터플로우 분석]을 �
 시각/청각 학습을 선호하시는 분들을 위해 이전에는 괴테 대학교 프랑크푸르트의 유튜브 단기 강좌 시리즈를 추천했으나, 이후 삭제되었다.
 배경 문맥은 [이 PR][pr-1295]을, 대체 강좌는 [이 댓글][pr-1295-comment]을 참조하라.
 
+## 시각/청각 학습을 선호하시는 분들을 위해 이전에는 괴테 대학교 프랑크푸르
 ### 데이터플로우 분석 정의하기
 
 데이터플로우 분석은 [`Analysis`] 트레이트에 의해 정의된다.
@@ -25382,6 +25740,7 @@ MIR 작업을 하다 보면 다양한 형태의 [데이터플로우 분석]을 �
 : 바텀 값의 주요 목적은 초기 데이터플로우 상태로서의 역할이다.
  각 기본 블록의 진입 상태는 분석이 시작되기 전에 바텀으로 초기화된다.
 
+## : 바텀 값의 주요 목적은 초기 데이터플로우 상태로서의 역할이다.
 ### 간단한 예시
 
 이 섹션에서는 고수준에서의 간단한 데이터플로우 분석의 간단한 예시를 제공한다.
@@ -25394,7 +25753,7 @@ MIR 작업을 하다 보면 다양한 형태의 [데이터플로우 분석]을 �
 이 경우 때문에 AND가 아닌 OR을 사용한다:
 
 ```rust
-# unsafe fn example(some_cond: bool) {
+## unsafe fn example(some_cond: bool) {
 let x = if some_cond {
     std::mem::transmute::<i32, u32>(0_i32) // transmute가 호출됨!
 } else {
@@ -25404,9 +25763,10 @@ let x = if some_cond {
 // 이 지점까지 transmute가 호출되었나요? 보수적으로 그렇다고 근사하며
 // 이것이 우리가 OR 연산자를 사용하는 이유입니다.
 println!("x: {}", x);
-# }
+## }
 ```
 
+## ## }
 ### 데이터플로우 분석 결과 검사하기
 
 분석을 구성했으면 각 블록 진입 시의 고정점 데이터플로우 상태를 포함하는 `Results`를 반환하는 `iterate_to_fixpoint`를 호출해야 한다.
@@ -25485,6 +25845,7 @@ for (bb, block) in body.basic_blocks().iter_enumerated() {
 
 ## 드롭 엘라보레이션 {#mir-drop-elaboration}
 
+## ## 드롭 엘라보레이션 {#mir-drop-elaboration}
 ### 동적 드롭
 
 [Rust Reference][reference-drop]에 따르면:
@@ -25510,6 +25871,7 @@ let mut y = vec![];
 이러한 경우 변수가 초기화되어 있는지 여부를 _동적으로_ 추적해야 한다.
 규칙은 [RFC 320: Non-zeroing dynamic drops][RFC 320]에 자세히 설명되어 있다.
 
+## 이러한 경우 변수가 초기화되어 있는지 여부를 _동적으로_ 추적해야 한다.
 ### 드롭 의무
 
 RFC에서:
@@ -25546,6 +25908,7 @@ enum MaybeDrop {
 }
 ```
 
+## }
 ### 드롭 엘라보레이션
 
 이러한 규칙에 대한 한 가지 유효한 모델은 함수 내 임의의 지점에서 사용되는 모든 구조적 경로에 대해 불리언 플래그("드롭 플래그")를 유지하는 것이다.
@@ -25562,6 +25925,7 @@ MIR 문장이 변수를 초기화(또는 미초기화) 상태로 만들 때 드�
 이 작업이 완료되면 MIR의 `Drop` 종결자는 드롭되는 장소 타입의 "드롭 글루(drop glue)" 또는 "드롭 심(drop shim)" 호출에 대응하게 된다.
 타입의 드롭 글루는 해당 타입의 `Drop` impl을 호출한 다음(존재하는 경우), 재귀적으로 해당 타입의 모든 필드에 대한 드롭 글루를 호출한다.
 
+## 이 작업이 완료되면 MIR의 `Drop` 종결자는 드롭되는 장소 타입의
 ### `rustc`에서의 드롭 엘라보레이션
 
 위에서 설명한 접근 방식은 필요 이상으로 비용이 많이 든다.
@@ -25616,6 +25980,7 @@ enum의 `Open` 드롭을 처리하는 방식은 언급할 가치가 있다.
 
 TODO: 드롭 엘라보레이션과 언바인딩(unwinding)에 대해 논의하기.
 
+## TODO: 드롭 엘라보레이션과 언바인딩(unwinding)에 대해 논의하
 ### 여담: 드롭 엘라보레이션과 상수 평가
 
 Rust에서 컴파일 타임 평가 자격이 있는 함수는 `const` 키워드를 사용하여 명시적으로 표시되어야 한다.
@@ -25654,6 +26019,7 @@ Rust에서 컴파일 타임 평가 자격이 있는 함수는 `const` 키워드�
 : https://github.com/rust-lang/rust/issues/47366
 [nll]: https://rust-lang.github.io/rfcs/2094-nll.html
 
+## : https://github.com/rust-lang/rust/issu
 ### 빌림 검사기의 주요 단계
 
 빌림 검사기 소스는 [`rustc_borrowck` 크레이트][b_c]에서 찾을 수 있다. 주요 진입점은 [`mir_borrowck`] 쿼리이다.
@@ -25672,6 +26038,7 @@ Rust에서 컴파일 타임 평가 자격이 있는 함수는 `const` 키워드�
 [`replace_regions_in_mir`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_borrowck/nll/fn.replace_regions_in_mir.html
 
 
+## [`replace_regions_in_mir`]: https://doc.
 ### 이동 및 초기화 추적 {#borrow-check-moves-and-initialization}
 
 빌림 검사기 작업의 일부는 임의의 특정 시점에 어떤 변수가 "초기화"되었는지 추적하는 것이다 -- 이 역시 이동이 일어나는 위치를 알아내고 이를 추적하는 것을 필요로 한다.
@@ -25796,6 +26163,7 @@ MIR 빌림 검사에서 가장 먼저 하는 일 중 하나는 이동 경로 세
 [`find_in_move_path_or_its_descendants`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_mir_dataflow/move_paths/struct.MoveData.html#method.find_in_move_path_or_its_descendants
 
 
+## [`find_in_move_path_or_its_descendants`]
 ### MIR 타입 검사 {#borrow-check-type-check}
 
 빌림 검사의 핵심 구성 요소는 [MIR 타입 검사](https://doc.rust-lang.org/nightly/nightly-rustc/rustc_borrowck/type_check/index.html)인다.
@@ -25847,6 +26215,7 @@ MIR 타입 검사 후 모든 사용자 타입 주석은 더 이상 필요하지 
 [stmt]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/mir/enum.StatementKind.html#variant.AscribeUserType
 [inf]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/struct.CanonicalUserTypeAnnotation.html#structfield.inferred_ty
 
+## [stmt]: https://doc.rust-lang.org/nightl
 ### 드롭 검사 {#borrow-check-drop-check}
 
 일반적으로 로컬 변수가 사용될 때마다 해당 로컬의 타입이 잘 형성될(well-formed) 것을 요구한다. 여기에는 로컬의 where-바운드를 증명하는 것과 해당 타입에 의해 사용되는 모든 영역이 라이브(live) 상태일 것을 요구하는 것이 포함된다.
@@ -25952,6 +26321,7 @@ borrowck 전에 일정량의 드롭 엘라보레이션을 추가하여 이 예�
 : 이는 [#110288](https://github.com/rust-lang/rust/issues/110288) 및 [RFC 3417](https://github.com/rust-lang/rfcs/pull/3417)의 핵심 가정이다.
 
 
+## : 이는 [#110288](https://github.com/rust-l
 ### 영역 추론 {#borrow-check-region-inference}
 
 MIR 기반 영역 검사 코드는 [`rustc_mir::borrow_check` 모듈][nll]에 위치한다.
@@ -26794,6 +27164,7 @@ TODO: 정확히 어떻게 작동하는지 설명하기 :3
 TODO: 이러한 분석 결과로부터 오류를 생성하는 방법에 대해 논의해야 한다.
 
 
+## TODO: 이러한 분석 결과로부터 오류를 생성하는 방법에 대해 논의해야
 ### 2단계 대여 {#borrow-check-two-phase-borrows}
 
 2단계 대여는 `vec.push(vec.len())`과 같은 중첩된 메서드 호출을 허용하는 가변 대여의 보다 관대한 버전이다. 이러한 대여는 먼저 "예약(reservation)" 단계에서 공유 대여로 작동하며 나중에 완전한 가변 대여로 "활성화(activated)"될 수 있다.
@@ -26887,6 +27258,7 @@ std::ops::AddAssign::add_assign(temp7, temp8);
 
 몇 가지 예제로 시작하겠다:
 
+## 몇 가지 예제로 시작하겠다:
 ### 예제 1
 
 시작을 위해 다음 예제의 클로저가 어떻게 디슈가링되는지 살펴본다.
@@ -26970,6 +27342,7 @@ _6 = [closure@move.rs:7:13: 9:6] { x: move _1 }; // bb16[3]: scope 1 at move.rs:
 ```
 여기서 `x`는 클로저 내부로 직접 이동(move)되며 클로저 실행 이후에는 `x`에 대한 접근이 허용되지 않는다.
 
+## ```
 ### 컴파일러에서의 추론
 
 이제 rustc 코드로 뛰어들어 컴파일러가 이러한 모든 추론을 어떻게 수행하는지 살펴본다.
@@ -27042,6 +27415,7 @@ self.tables
 이 장은 매우 기술적이고 다소 "수직적(vertical)"인 장이다.
 이상적으로는 이를 분할하여 모든 관련 장에 나누어 배치하겠지만 비동기 클로저를 *전반적(holistically)*으로 이해하기 위한 목적으로 여기 한 장에 모아 정리했다.
 
+## 이 장은 매우 기술적이고 다소 "수직적(vertical)"인 장이다.
 ### 코루틴 클로저 -- 기술 심층 탐구
 
 코루틴 클로저는 비동기 클로저의 일반화로, 코루틴을 반환하는 클로저 표현식을 위한 특별한 구문이며 특히 클로저의 upvar로부터 캡처가 허용되는 특징을 가진다.
@@ -27377,7 +27751,7 @@ let c = async || {
 [RFC 3668]: https://rust-lang.github.io/rfcs/3668-async-closures.html
 
 
-# MIR에서 바이너리로
+## MIR에서 바이너리로
 
 ## MIR에서 바이너리로 {#part-5-intro}
 
@@ -27443,6 +27817,7 @@ MIR을 개선하기 위해 MIR 상에서 일련의 최적화 패스를 실행한
 [`defid`]: #def-id
 [steals]: #stealing
 
+## [`defid`]: #def-id
 ### 새 최적화 추가를 위한 빠른 시작
 
 1. `tests/mir-opt`에 최적화하려는 코드를 보여주는 Rust 소스 파일을 작성한다.
@@ -27483,6 +27858,7 @@ MIR을 개선하기 위해 MIR 상에서 일련의 최적화 패스를 실행한
 [`remove_storage_markers`]: https://github.com/rust-lang/rust/blob/HEAD/compiler/rustc_mir_transform/src/remove_storage_markers.rs
 [`run_optimization_passes()`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_mir_transform/fn.run_optimization_passes.html
 
+## [`remove_storage_markers`]: https://gith
 ### 최적화 패스 정의하기
 
 실행되는 패스 목록과 실행 순서는 [`run_optimization_passes`][rop] 함수에 의해 정의된다.
@@ -27505,6 +27881,7 @@ MIR을 개선하기 위해 MIR 상에서 일련의 최적화 패스를 실행한
 [impl]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_mir_transform/pass_manager/trait.MirPass.html#implementors
 [constprop]: https://en.wikipedia.org/wiki/Constant_folding#Constant_propagation
 
+## [impl]: https://doc.rust-lang.org/nightl
 ### MIR 최적화 레벨
 
 MIR 최적화는 다양한 준비 상태 레벨로 제공될 수 있다.
@@ -27640,6 +28017,7 @@ TODO: 추가할 사항이 있는가?
 [`EvalToValTreeResult`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/mir/interpret/error/type.EvalToValTreeResult.html
 
 
+## [`EvalToValTreeResult`]: https://doc.rus
 ### 인터프리터 {#const-eval-interpret}
 
 인터프리터는 기계 코드로 컴파일하지 않고 MIR을 실행하기 위한 가상 머신이다.
@@ -27812,6 +28190,7 @@ Rust는 다른 접근 방식을 취한다: 모든 제네릭 타입을 _단일화
 
 단일화는 Rust 컴파일러 백엔드의 첫 번째 단계이다.
 
+## 단일화는 Rust 컴파일러 백엔드의 첫 번째 단계이다.
 ### 수집
 
 먼저 프로그램의 모든 제네릭 항목에 필요한 구체적 타입이 무엇인지 파악해야 한다. 이를 _수집(collection)_이라 부르며 이 작업을 수행하는 코드를 _단일화 수집기(monomorphization collector)_라 부른다.
@@ -27836,6 +28215,7 @@ fn main() {
 단일화 수집기는 MIR 로어링 및 코드 생성 바로 직전에 실행된다.
 [`rustc_codegen_ssa::base::codegen_crate`][codegen1]는 [`collect_and_partition_mono_items`][mono] 쿼리를 호출하며 이 쿼리는 단일화 수집을 수행한 다음 이들을 [코드 생성 단위](#codegen-unit)로 분할(partition)한다.
 
+## 단일화 수집기는 MIR 로어링 및 코드 생성 바로 직전에 실행된다.
 ### 코드 생성 단위 분할
 
 더 나은 증분 빌드 시간을 위해 CGU 분할기는 각 소스 레벨 모듈에 대해 두 개의 CGU를 생성한다. 하나는 "안정적"인 즉 비제네릭 코드용이고 다른 하나는 더 가변적인 코드 즉 단일화/특수화된 인스턴스용이다.
@@ -27907,6 +28287,7 @@ fn main() {
 
 [debugging]: #backend-debugging
 
+## [debugging]: #backend-debugging
 ### LLVM이란 무엇인가요?
 
 [LLVM](https://llvm.org)은 "모듈식이고 재사용 가능한 컴파일러 및 툴체인 기술의 모음"인다. 특히 LLVM 프로젝트에는 `clang` C 컴파일러 및 우리가 사랑하는 `rustc`를 포함하여 많은 컴파일러 프로젝트에서 사용되는 플러그 가능한 컴파일러 백엔드(역시 "LLVM"이라 부름)가 포함되어 있다.
@@ -27922,6 +28303,7 @@ LLVM을 사용함으로써 얻는 몇 가지 이점이 있다:
 
 [spectre]: https://meltdownattack.com/
 
+## [spectre]: https://meltdownattack.com/
 ### LLVM 실행, 링크 및 메타데이터 생성
 
 모든 함수, static 등의 LLVM IR이 구축되면 LLVM과 해당 최적화 패스를 실행하기 시작할 시간이다. LLVM IR은 "모듈"로 그룹화된다. 멀티 코어 활용을 돕기 위해 여러 "모듈"이 동시에 코드 생성될 수 있다. 이러한 "모듈"이 바로 우리가 _코드 생성 단위(codegen units)_라고 부르는 것이다. 이 단위들은 과거 단일화 수집 단계에서 구성되었다.
@@ -27938,6 +28320,7 @@ LLVM이 이 모듈들로부터 객체를 생성하면, 이 객체들은 선택�
 [llvmback]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_codegen_llvm/back/index.html
 
 
+## [llvmback]: https://doc.rust-lang.org/ni
 ### LLVM 업데이트 {#backend-updating-llvm}
 
 Rust는 여러 LLVM 버전에 대해 빌드하는 것을 지원한다:
@@ -28235,10 +28618,10 @@ $ ./build/$TRIPLE/llvm/bin/llvm-extract     -func='_ZN11collections3str21_$LT$im
 LLVM 자체의 구현을 조사할 때는 [내부 디버그 인프라][llvm-debug]를 숙지해야 한다.
 이는 LLVM Debug 빌드에서 제공되며 bootstrap.toml에서 이 설정을 변경하여 rustc LLVM 빌드에 대해 활성화할 수 있다:
 ```
-# LLVM 단언 활성화 여부를 나타냄
+## LLVM 단언 활성화 여부를 나타냄
 llvm.assertions = true
 
-# LLVM 빌드가 Release 빌드인지 Debug 빌드인지 나타냄
+## LLVM 빌드가 Release 빌드인지 Debug 빌드인지 나타냄
 llvm.optimize = false
 ```
 빠른 요약:
@@ -28307,6 +28690,7 @@ Godbolt에 접속하라: [llvm.godbolt.org](https://llvm.godbolt.org).
 [rust-lang/llvm-project]: https://github.com/rust-lang/llvm-project/
 
 
+## [rust-lang/llvm-project]: https://github
 ### 백엔드 독립적 코드 생성 {#backend-backend-agnostic}
 
 [`rustc_codegen_ssa`]는 모든 백엔드(LLVM, [Cranelift], [GCC])가 구현할 수 있는 추상 인터페이스를 제공한다.
@@ -28460,6 +28844,7 @@ LLVM에는 매우 특수한 처리 방식이 존재하기 때문에 이것이 �
 리팩토링된 `rustc` 백엔드 버전은 테스트 수트나 성능 벤치마크에서 아무런 회귀(regression)를 유발하지 않았으며 이는 컴파일 타임 매개변수화만 사용하고(트레이트 객체 미사용) 진행한 리팩토링의 성격과 일치한다.
 
 
+## 리팩토링된 `rustc` 백엔드 버전은 테스트 수트나 성능 벤치마크에서
 ### 암시적 호출자 위치 {#backend-implicit-caller-location}
 
 [RFC 2091]에서 승인된 이 기능은 `Option::unwrap`, `Result::expect`, `Index::index`와 같은 함수에서 시작된 패닉 중에 호출자 위치를 정확하게 보고할 수 있도록 해준다. 이 기능은 함수용 [`#[track_caller]`][attr-reference] 속성, [`caller_location`][intrinsic] 내장(intrinsic), 그리고 안정화 친화적인 [`core::panic::Location::caller`][wrapper] 래퍼를 추가한다.
@@ -28757,6 +29142,7 @@ Rust는 현재 C++와 매우 유사한 디버그 정보를 출력하므로 Rust�
 
 > 중요: CDB는 Windows에서만 실행된다고 가정할 수 있다. GDB나 LLDB를 실행하는 OS에 대해서는 어떠한 가정도 할 수 없다.
 
+## > 중요: CDB는 Windows에서만 실행된다고 가정할 수 있다. GD
 ### 미지원 디버거
 
 아래는 향후 미칠 영향 때문에 특히 주목할 만한 미지원 디버거 몇 가지이다.
@@ -28769,6 +29155,7 @@ Rust는 현재 C++와 매우 유사한 디버그 정보를 출력하므로 Rust�
  이 프로젝트에는 링킹 단계 동안 새로운 디버그 정보 형식을 생성할 수 있는 링커도 포함되어 있다.
 
 
+## 이 프로젝트에는 링킹 단계 동안 새로운 디버그 정보 형식을 생성할 수
 ### Rust 코드 생성 {#debuginfo-rust-codegen}
 
 디버그 정보 생성의 첫 번째 단계는 Rust가 프로그램의 MIR을 검사하고 이를 LLVM에 전달하는 것이다.
@@ -28779,6 +29166,7 @@ Rust는 [rustc_llvm]에 있는 LLVM 내부 구현의 얇은 래퍼인 `DIBuilder
 [ssa_di]: https://github.com/rust-lang/rust/tree/main/compiler/rustc_codegen_ssa/src/debuginfo
 [rustc_llvm]: https://github.com/rust-lang/rust/tree/main/compiler/rustc_llvm
 
+## [ssa_di]: https://github.com/rust-lang/r
 ### 타입 정보
 
 타입 정보는 일반적으로 타입 이름, 크기, 정렬(alignment)뿐만 아니라 관련이 있는 경우 필드, 제네릭 매개변수, 저장소 수식자(storage modifiers)와 같은 항목으로 구성된다.
@@ -28926,11 +29314,13 @@ union enum2$<RUST_ENUM_NAME> {
 중요한 점은 LLDB의 한계로 인해 생성된 `DISCR_*` 값이 해당 값이 `#[repr(u64)]`가 아니더라도 항상 `u64`라는 것이다.
 `DISCR_*` 값과 `tag`는 타입에 상관없이 `uint64_t` 값으로 읽혀지므로 이는 LLDB에서 거의 문제가 되지 않는다.
 
+## 중요한 점은 LLDB의 한계로 인해 생성된 `DISCR_*` 값이 해당
 ### 소스 정보
 
 작성 예정 (TODO)
 
 
+## 작성 예정 (TODO)
 ### LLVM 코드 생성 {#debuginfo-llvm-codegen}
 
 Rust가 LLVM `DIBuilder` 함수를 호출할 때, LLVM은 지정된 정보를 형식 독립적인 ["디버그 레코드"][dbg_record]로 변환한다.
@@ -28944,6 +29334,7 @@ Rust가 LLVM `DIBuilder` 함수를 호출할 때, LLVM은 지정된 정보를 �
 [cv]:https://github.com/llvm/llvm-project/blob/main/llvm/lib/CodeGen/AsmPrinter/CodeViewDebug.cpp
 
 
+## [cv]:https://github.com/llvm/llvm-projec
 ### 디버거 내부 구조 {#debuginfo-debugger-internals}
 
 디버그 정보를 메모리 내 표현으로 변환하는 것은 디버거의 역할이다.
@@ -29139,6 +29530,7 @@ GDB의 Rust 지원은 `gdb/rust-lang.h` 및 `gdb/rust-lang.c`에 위치한다.
 표현식 구문 분석 지원은 `gdb/rust-exp.h` 및 `gdb/rust-parse.c`에서 찾을 수 있다.
 
 
+## 표현식 구문 분석 지원은 `gdb/rust-exp.h` 및 `gdb/ru
 ### 디버거 비주얼라이저 {#debuginfo-debugger-visualizers}
 
 이들은 일반적으로 디버거가 정보를 표시하기 전의 마지막 단계이지만 그 결과는 IDE의 디버거 API와 같은 디버그 어댑터를 통해 전달될 수 있다.
@@ -29843,6 +30235,7 @@ error: <user expression 0>:1:6: subscripted value is not an array or pointer
 Natvis의 공식 문서는 [여기](https://learn.microsoft.com/en-us/visualstudio/debugger/create-custom-views-of-native-objects) 및 [여기](https://code.visualstudio.com/docs/cpp/natvis)에서 찾을 수 있다.
 
 
+## Natvis의 공식 문서는 [여기](https://learn.micros
 ### 테스트 {#debuginfo-testing}
 
 디버그 정보 테스트 수트는 대대적인 재작성을 거치고 있다. 이 섹션은 재작성이 진행됨에 따라 채워질 예정이다.
@@ -29852,6 +30245,7 @@ Natvis의 공식 문서는 [여기](https://learn.microsoft.com/en-us/visualstud
 : https://github.com/rust-lang/rust/issues/148483
 
 
+## : https://github.com/rust-lang/rust/issu
 ### Rust 컴파일러의 디버깅 지원 {#debugging-support-in-rustc}
 
 이 문서는 Rust 컴파일러(rustc)의 디버깅 도구 지원 현황을 설명한다.
@@ -30172,6 +30566,7 @@ LLDB는 Clang을 사용하여 코드를 JIT로 컴파일하고 GDB는 GCC로 동
 컴파일러가 외부 크레이트에 대한 참조를 볼 때 해당 크레이트에 대한 일부 정보를 로드해야 한다.
 이 장에서는 그 프로세스의 개요와 크레이트 라이프러리에 대해 지원되는 파일 형식에 대해 다룬다.
 
+## 컴파일러가 외부 크레이트에 대한 참조를 볼 때 해당 크레이트에 대한 일부
 ### 라이브러리
 
 크레이트 의존성은 `rlib`, `dylib` 또는 `rmeta` 파일에서 로드될 수 있다.
@@ -30217,6 +30612,7 @@ LLDB는 Clang을 사용하여 코드를 JIT로 컴파일하고 GDB는 GCC로 동
 `rmeta` 파일은 컴파일된 오브젝트 파일을 포함하지 않으므로 링킹을 지원하지 않는다.
 
 
+## `rmeta` 파일은 컴파일된 오브젝트 파일을 포함하지 않으므로 링킹을
 ### 메타데이터
 
 메타데이터는 광범위하게 다양한 요소들을 포함한다.
@@ -30283,6 +30679,7 @@ Cargo는 패키지 버전, 소스, 타겟 종류(라이브러리와 테스트는
 [`StableCrateId::new`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_span/def_id/struct.StableCrateId.html#method.new
 [`-C metadata`]: https://doc.rust-lang.org/rustc/codegen-options/index.html#metadata
 
+## [`StableCrateId::new`]: https://doc.rust
 ### 크레이트 로딩
 
 크레이트 로딩에는 미묘하게 복잡한 부분이 꽤 있을 수 있다.
@@ -30309,6 +30706,7 @@ Cargo는 패키지 버전, 소스, 타겟 종류(라이브러리와 테스트는
 [`GlobalCtxt`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/struct.GlobalCtxt.html
 [sysroot]: #what-is-a-sysroot
 
+## [`GlobalCtxt`]: https://doc.rust-lang.or
 ### 파이프라이닝
 
 컴파일 시간을 개선하는 한 가지 요령은 의존성에 대한 메타데이터를 사용할 수 있게 되는 즉시 크레이트 빌드를 시작하는 것이다.
@@ -30332,6 +30730,7 @@ Cargo는 `rustc`에게 [`rlib`](#rlib)뿐만 아니라 각 의존성에 대해 [
 `rustc`는 프로필 기반 최적화(PGO) 수행을 지원한다.
 이 장에서는 PGO가 무엇인지, 그리고 `rustc`에서 이에 대한 지원이 어떻게 구현되어 있는지 설명한다.
 
+## `rustc`는 프로필 기반 최적화(PGO) 수행을 지원한다.
 ### 프로필 기반 최적화란 무엇인가요?
 
 PGO의 기본 개념은 프로그램의 전형적인 실행에 대한 데이터(예: 어떤 분기를 선택할 가능성이 높은지)를 수집한 다음 이 데이터를 사용하여 인라이닝, 기계어 코드 레이아웃, 레지스터 할당 등과 같은 최적화에 정보를 제공하는 것이다.
@@ -30340,6 +30739,7 @@ PGO의 기본 개념은 프로그램의 전형적인 실행에 대한 데이터(
 하나의 방법은 프로파일러(`perf` 등) 내부에서 프로그램을 실행하는 것이고 다른 하나는 데이터 수집 기능이 기본으로 구축된 바이너리인 계측된 바이너리(instrumented binary)를 생성하여 실행하는 것이다.
 후자가 보통 더 정확한 데이터를 제공한다.
 
+## 하나의 방법은 프로파일러(`perf` 등) 내부에서 프로그램을 실행하는
 ### PGO는 `rustc`에 어떻게 구현되어 있는가?
 
 `rustc` 현재 PGO 구현은 전적으로 LLVM에 의존한다.
@@ -30414,6 +30814,7 @@ LLVM의 경우 이러한 런타임 구성 요소는 [compiler-rt][compiler-rt-pr
 
 [compiler-rt-profile]: https://github.com/llvm/llvm-project/tree/main/compiler-rt/lib/profile
 
+## [compiler-rt-profile]: https://github.co
 ### PGO 테스트하기
 
 PGO 워크플로우가 여러 컴파일러 호출에 걸쳐 있으므로 대부분의 테스트는 [run-make 테스트][rmake-tests]에서 일어난다 (관련 테스트는 이름에 `pgo`가 포함되어 있음).
@@ -30422,6 +30823,7 @@ PGO 워크플로우가 여러 컴파일러 호출에 걸쳐 있으므로 대부�
 [rmake-tests]: https://github.com/rust-lang/rust/tree/HEAD/tests/run-make
 [codegen-test]: https://github.com/rust-lang/rust/blob/HEAD/tests/codegen-llvm/pgo-instrumentation.rs
 
+## [rmake-tests]: https://github.com/rust-l
 ### 추가 정보
 
 Clang 문서에는 [LLVM에서의 PGO][llvm-pgo]에 대한 좋은 개요가 포함되어 있다.
@@ -30449,6 +30851,7 @@ LLVM 커버리지 계측에는 소스 메타데이터를 인코딩하여 (시작
 [coverage map]: https://llvm.org/docs/CoverageMappingFormat.html
 [rustc-book-instrument-coverage]: https://doc.rust-lang.org/nightly/rustc/instrument-coverage.html
 
+## [coverage map]: https://llvm.org/docs/Co
 ### 권장 `bootstrap.toml` 설정
 
 커버리지 계측 코드를 작업할 때는 보통 `[build]`에서 `profiler = true`를 설정하여 **프로파일러 런타임을 활성화**하는 것이 필요하다.
@@ -30457,19 +30860,20 @@ LLVM 커버리지 계측에는 소스 메타데이터를 인코딩하여 (시작
 컴파일러와 LLVM에서 디버그 단언(debug assertions)을 활성화하는 것이 권장되지만 필수 사항은 아니다.
 
 ```toml
-# "compiler" 프로필과 유사하지만 LLVM에서 디버그 단언도 활성화합니다.
-# 이 단언들은 일부 경우 잘못 형성된 커버리지 매핑을 감지할 수 있습니다.
+## "compiler" 프로필과 유사하지만 LLVM에서 디버그 단언도 활성화합니다.
+## 이 단언들은 일부 경우 잘못 형성된 커버리지 매핑을 감지할 수 있습니다.
 profile = "codegen"
 
-# 중요: 이 설정은 빌드 시스템에 LLVM 프로파일러 런타임을 빌드하도록 알립니다.
-# 이 설정이 없으면 컴파일러가 커버리지 계측 바이너리를 생성할 수 없으며
-# 많은 커버리지 테스트가 생략됩니다.
+## 중요: 이 설정은 빌드 시스템에 LLVM 프로파일러 런타임을 빌드하도록 알립니다.
+## 이 설정이 없으면 컴파일러가 커버리지 계측 바이너리를 생성할 수 없으며
+## 많은 커버리지 테스트가 생략됩니다.
 build.profiler = true
 
-# 컴파일러에서 디버그 단언 활성화.
+## 컴파일러에서 디버그 단언 활성화.
 rust.debug-assertions = true
 ```
 
+## rust.debug-assertions = true
 ### Rust 심볼 맹글링
 
 `-C instrument-coverage`는 일관되고 되돌릴 수 있는 이름 맹글링을 보장하기 위해 자동으로 Rust 심볼 맹글링 `v0`을 활성화한다 (`rustc` 호출 시 사용자가 `-C symbol-mangling-version=v0` 옵션을 지정한 것처럼).
@@ -30478,6 +30882,7 @@ rust.debug-assertions = true
 1. LLVM 커버리지 도구는 소스 코드에 대한 일부 변경을 포함하여 여러 실행에 걸쳐 커버리지를 분석할 수 있다. 따라서 맹글링된 이름은 컴파일에 걸쳐 일관되어야 한다.
 2. LLVM 커버리지 리포트는 함수별 커버리지를 보고할 수 있으며 여러 타입 치환 변형으로 호출된 경우 제네릭 함수의 각 고유 인스턴스화에 대한 커버리지 수도 구분하여 보여준다.
 
+## 1. LLVM 커버리지 도구는 소스 코드에 대한 일부 변경을 포함하여 여
 ### LLVM 프로파일러 런타임
 
 커버리지 데이터는 실행 가능한 Rust 프로그램을 실행함으로써만 생성된다.
@@ -30490,6 +30895,7 @@ rust.debug-assertions = true
 
 [crate-loader-postprocess]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc_metadata/creader/struct.CStore.html#method.postprocess
 
+## [crate-loader-postprocess]: https://doc.
 ### 커버리지 계측 테스트하기
 
 [(또한 `tests/coverage` 테스트 수트에 대한 compiletest 문서 참조)](#coverage-tests)
@@ -30530,6 +30936,7 @@ rustc 컴파일러는 다음 새니타이저들에 대한 지원을 포함한다
 * [MemorySanitizer][clang-msan]: 초기화되지 않은 읽기 감지기.
 * [ThreadSanitizer][clang-tsan]: 빠른 데이터 경합(data race) 감지기.
 
+## * [MemorySanitizer][clang-msan]: 초기화되지 않
 ### 새니타이저는 어떻게 사용하는가?
 
 새니타이저를 활성화하려면 `-Z sanitizer=...` 옵션으로 컴파일하라. 여기서 값은 `address`, `cfi`, `hwaddress`, `kcfi`, `leak`, `memory` 또는 `thread` 중 하나이다.
@@ -30537,6 +30944,7 @@ rustc 컴파일러는 다음 새니타이저들에 대한 지원을 포함한다
 
 [The Unstable Book]: https://doc.rust-lang.org/unstable-book
 
+## [The Unstable Book]: https://doc.rust-la
 ### rustc에 새니타이저는 어떻게 구현되어 있는가?
 
 새니타이저 구현(CFI 제외)은 거의 전적으로 LLVM에 의존한다.
@@ -30575,6 +30983,7 @@ rustc는 LLVM 컴파일 타임 계측 패스 및 런타임 라이브러리를 �
 [sanitizer-pass]: https://github.com/rust-lang/rust/blob/1..0/compiler/rustc_codegen_llvm/src/back/write.rs#L660-L
 [sanitizer-link]: https://github.com/rust-lang/rust/blob/1..0/compiler/rustc_codegen_ssa/src/back/link.rs#L1053-L
 
+## [sanitizer-pass]: https://github.com/rus
 ### 새니타이저 테스트하기
 
 새니타이저는 [`tests/codegen-llvm/sanitize*.rs`][test-cg]의 코드 생성 테스트 및 [`tests/ui/sanitizer/`][test-ui] 디렉토리의 엔드투엔드 기능 테스트에 의해 검증된다.
@@ -30586,6 +30995,7 @@ rustc는 LLVM 컴파일 타임 계측 패스 및 런타임 라이브러리를 �
 [test-cg]: https://github.com/rust-lang/rust/tree/HEAD/tests/codegen-llvm
 [test-ui]: https://github.com/rust-lang/rust/tree/HEAD/tests/ui/sanitizer
 
+## [test-cg]: https://github.com/rust-lang/
 ### 새로운 타겟에서 새니타이저 활성화하기
 
 LLVM에서 이미 지원하는 새로운 타겟에서 새니타이저를 활성화하려면:
@@ -30604,6 +31014,7 @@ LLVM에서 이미 지원하는 새로운 타겟에서 새니타이저를 활성�
 [compiletest-definition]: https://github.com/rust-lang/rust/blob/1..0/src/tools/compiletest/src/util.rs#L87-L
 [ci-configuration]: https://github.com/rust-lang/rust/blob/1..0/src/ci/docker/host-x86_64/dist-x86_64-linux/Dockerfile#L
 
+## [compiletest-definition]: https://github
 ### 추가 정보
 
 * [새니타이저 프로젝트 페이지](https://github.com/google/sanitizers/wiki/)
@@ -30630,6 +31041,7 @@ LLVM에서 이미 지원하는 새로운 타겟에서 새니타이저를 활성�
 
 <a id="cfg"></a>
 
+## <a id="cfg"></a>
 ### 제어 흐름 그래프란 무엇인가요?
 
 제어 흐름 그래프(CFG)는 컴파일러 분야에서 흔히 쓰이는 용어이다. 순서도(flow-chart)를 사용해 본 적이 있다면 제어 흐름 그래프의 개념이 꽤 익숙할 것이다. 이는 근본적인 제어 흐름을 명확하게 드러내는 프로그램의 표현이다.
@@ -30712,6 +31124,7 @@ BB3: {
 
 <a id="dataflow"></a>
 
+## <a id="dataflow"></a>
 ### 데이터 흐름 분석이란 무엇인가요?
 
 Anders Møller와 Michael I. Schwartzbach가 쓴 [*Static Program Analysis*](https://cs.au.dk/~amoeller/spa/)는 정말 훌륭한 자료이다!
@@ -30769,6 +31182,7 @@ fn foo() {
 
 <a id="quantified"></a>
 
+## <a id="quantified"></a>
 ### "전칭 정량화"란 무엇인가요? "존재 정량화"는 어떤가요?
 
 수학에서 서술어(predicate)는 _전칭 정량화(universally quantified)_되거나 _존재 정량화(existentially quantified)_될 수 있다:
@@ -30811,6 +31225,7 @@ fn foo(_: dyn Debug)
 
 <a id="variance"></a>
 
+## <a id="variance"></a>
 ### 드 브루인 인덱스란 무엇인가요?
 
 [드 브루인 인덱스(De Bruijn indices)][wikideb]는 정수만을 사용하여 어떤 바인더(binder)에 어떤 변수가 바인딩되었는지 표현하는 방법이다. 이들은 원래 람다 계산법 평가에서 사용하기 위해 발명되었다(자세한 내용은 [이 위키백과 문서][wikideb] 참조). `rustc`에서는 [제네릭 타입을 표현하기 위해][sub] 드 브루인 인덱스를 사용한다.
@@ -30831,6 +31246,7 @@ fn foo(_: dyn Debug)
 }
 ```
 
+## }
 ### 공변성과 반변성이란 무엇인가요?
 
 [Rust Nomicon의 서브타이핑 장](https://doc.rust-lang.org/nomicon/subtyping.html)을 확인하라.
@@ -30839,6 +31255,7 @@ fn foo(_: dyn Debug)
 
 <a id="free-vs-bound"></a>
 
+## <a id="free-vs-bound"></a>
 ### "자유 영역" 또는 "자유 변수"란 무엇인가요? "구속 영역"은 어떤가요?
 
 우리가 가장 익숙한 프로그램 변수의 관점에서 자유(free) 대 구속(bound)의 개념을 설명해 보겠다.
@@ -30860,6 +31277,7 @@ fn foo(_: dyn Debug)
 >
 > 다른 제안이 있다면 편하게 이슈나 PR을 열어주라.
 
+## >
 ### 도서
 
 - [Types and Programming Languages](https://www.cis.upenn.edu/~bcpierce/tapl/)
@@ -30872,10 +31290,12 @@ fn foo(_: dyn Debug)
 - [Building an Optimizing Compiler](https://www.goodreads.com/book/show/2063103.Building_an_Optimizing_Compiler)
 - [Crafting Interpreters](http://www.craftinginterpreters.com/)
 
+## - [Building an Optimizing Compiler](http
 ### 강좌
 
 - [University of Oregon Programming Languages Summer School archive](https://www.cs.uoregon.edu/research/summerschool/archives.html)
 
+## - [University of Oregon Programming Lang
 ### 위키
 
 - [Wikipedia](https://en.wikipedia.org/wiki/List_of_programming_languages_by_type)
@@ -30883,6 +31303,7 @@ fn foo(_: dyn Debug)
 - [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/index.html)
 - [nLab](https://ncatlab.org/nlab/show/HomePage)
 
+## - [Stanford Encyclopedia of Philosophy](
 ### 기타 논문 및 블로그 포스트
 
 - [Programming in Martin-Löf's Type Theory](https://www.cse.chalmers.se/research/group/logic/book/)
@@ -31060,6 +31481,7 @@ rustc에는 많은 중요한 데이터 구조가 있다.
 
 다양한 전문가들이 컴파일러의 여러 부분에 대해 설명하는 비디오이다:
 
+## 다양한 전문가들이 컴파일러의 여러 부분에 대해 설명하는 비디오이다:
 ### 일반
 
 - [January 2019: Tom Tromey discusses debugging support in rustc](https://www.youtube.com/watch?v=elBxMRSNYr4)
@@ -31067,6 +31489,7 @@ rustc에는 많은 중요한 데이터 구조가 있다.
 - [June 2019: Things I Learned (TIL) - Nicholas Matsakis - PLISS 2019](https://www.youtube.com/watch?v=LIYkT3p5gTs)
 - [October 2022: Rustc Explore](https://www.youtube.com/playlist?list=PL85XCvVPmGQj3-MujOJ0jcoSqQ6Yi6Rkk)
 
+## - [June 2019: Things I Learned (TIL) - N
 ### Rust Analyzer
 
 - [January 2019: How Salsa Works](https://www.youtube.com/watch?v=_muY4HjSqVw)
@@ -31076,6 +31499,7 @@ rustc에는 많은 중요한 데이터 구조가 있다.
 - [March 2019: rust-analyzer type-checker overview by flodiebold](https://www.youtube.com/watch?v=Lmp3P9WNL8o)
 - [March 2019: RLS 2., Salsa, and Name Resolution](https://www.youtube.com/watch?v=Xr-rBqLr-G4)
 
+## - [March 2019: rust-analyzer type-checke
 ### 타입 시스템
 
 - [July 2015: Felix Klock - Rust: A type system you didn't know you wanted - Curry On](https://www.youtube.com/watch?v=Q7lQCgnNWU0)
@@ -31084,12 +31508,14 @@ rustc에는 많은 중요한 데이터 구조가 있다.
 - [April 2019: Representing types in rustc](https://www.youtube.com/watch?v=c01TsOsr3-c)
 - [March 2019: RFC #2229 Disjoint Field Capture plan](https://www.youtube.com/watch?v=UTXOptVMuIc)
 
+## - [April 2019: Representing types in rus
 ### 클로저
 
 - [October 2018: closures and upvar capture](https://www.youtube.com/watch?v=fMopdkn5-Xw)
 - [October 2018: blitzerr closure upvar tys](https://www.youtube.com/watch?v=pLmVhSB-z4s)
 - [January 2019: Convert Closure Upvar Representation to Tuples with blitzerr](https://www.youtube.com/watch?v=2QCuNtISoYc)
 
+## - [October 2018: blitzerr closure upvar
 ### Chalk
 
 - [July 2018: Coherence in Chalk by Sunjay Varma - Bay Area Rust Meetup](https://www.youtube.com/watch?v=rZqS4bLPL24)
@@ -31097,20 +31523,24 @@ rustc에는 많은 중요한 데이터 구조가 있다.
 - [April 2019: How the chalk-engine crate works](https://www.youtube.com/watch?v=Ny2928cGDoM)
 - [May 2019: How the chalk-engine crate works 2](https://www.youtube.com/watch?v=hmV66tB79LM)
 
+## - [April 2019: How the chalk-engine crat
 ### Polonius
 
 - [March 2019: Polonius-rustc walkthrough](https://www.youtube.com/watch?v=i5KdU0ieb_A)
 - [May 2019: Polonius WG: Initialization and move tracking](https://www.youtube.com/watch?v=ilv9V-328HI)
 
+## - [March 2019: Polonius-rustc walkthroug
 ### Miri
 
 - [March 2019: oli-obk on miri and constant evaluation](https://www.youtube.com/watch?v=5Pm2C1YXrvM)
 
+## - [March 2019: oli-obk on miri and const
 ### 비동기
 
 - [February 2019: async-await implementation plans](https://www.youtube.com/watch?v=xe2_whJWBC0)
 - [April 2019: async-await region inferencer](https://www.youtube.com/watch?v=hlOxfkUDLPQ)
 
+## - [February 2019: async-await implementa
 ### 코드 생성
 
 - [January 2019: Cranelift](https://www.youtube.com/watch?v=9OIA7DTFQWU)
@@ -31122,6 +31552,7 @@ rustc에는 많은 중요한 데이터 구조가 있다.
 Rust 관련 읽을거리 목록이다.
 Rust 설계에 직간접적으로 영향을 미친 연구와 Rust 관련 출판물이 포함된다.
 
+## Rust 관련 읽을거리 목록이다.
 ### 타입 시스템
 
 * [Alias burying](https://dl.acm.org/doi/10.1002/spe.370) - 유사한 시도를 했으나 포기했다.
@@ -31135,6 +31566,7 @@ Rust 설계에 직간접적으로 영향을 미친 연구와 Rust 관련 출판�
 * [Traits: composable units of behavior](http://scg.unibe.ch/archive/papers/Scha03aTraits.pdf)
 * [Uniqueness and Reference Immutability for Safe Parallelism](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/msr-tr-2012-79.pdf)
 
+## * [Traits: composable units of behavior]
 ### 동시성
 
 * [A Java fork/join calamity](https://web.archive.org/web/20190904045322/http://www.coopsoft.com/ar/CalamityArticle.html) - 비엄격 계산에 대한 워크 스틸링(work stealing) 적용을 중심으로 한 Java fork/join 라이브러리 비판
@@ -31154,12 +31586,14 @@ Rust 설계에 직간접적으로 영향을 미친 연구와 Rust 관련 출판�
 * [Three layer cake for shared-memory programming](https://dl.acm.org/doi/10.1145/1953611.1953616)
 * [Work-first and help-first scheduling policies for async-finish task parallelism](https://dl.acm.org/doi/10.1109/IPDPS..5161079) - 완전 엄격 워크 스틸링보다 더 일반적임
 
+## * [Three layer cake for shared-memory pr
 ### 기타
 
 * [Composing High-Performance Memory Allocators](https://people.cs.umass.edu/~emery/pubs/berger-pldi.pdf)
 * [Crash-only software](https://www.usenix.org/legacy/events/hotos03/tech/full_papers/candea/candea.pdf)
 * [Reconsidering Custom Memory Allocation](https://people.cs.umass.edu/~emery/pubs/berger-oopsla.pdf)
 
+## * [Crash-only software](https://www.usen
 ### Rust에 *관한* 논문들 (Papers *about* Rust)
 
 * [GPU Programming in Rust: Implementing High Level Abstractions in a Systems Level Language](https://ieeexplore.ieee.org/document/6650903). Eric Holk의 초기 GPU 작업.

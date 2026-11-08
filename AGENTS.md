@@ -16,6 +16,7 @@
 1. **Book Structure**: When adding new chapters or documents, update `mybook/_quarto.yml` under `chapters` or `sidebar`.
 2. **Content Files**: Place source content (`.qmd`, `.md`, `.ipynb`) inside `mybook/`.
 3. **Validation**: Run `pixi run test` (quarto render) to verify builds before finalizing document edits.
+3. 초대형 단일 페이지 `.qmd`로 생성 
 
 ## 에이전트가 자주 하는 실수 (반드시 방지)
 1. pip 사용 (WRONG)

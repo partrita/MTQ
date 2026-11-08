@@ -7,8 +7,8 @@ author:
 date: "2026-08-15"
 engine: markdown
 bibliography: citations.bib
+lang: ko
 ---
-
 ```{.r}
 #| label: setup-main
 #| include: false
@@ -134,7 +134,7 @@ options(
 
 library(ggplot2)
 
-# 기본 테마 설정
+## 기본 테마 설정
 theme_set(
   theme_minimal(
     base_size = getOption("book.base_size"),
@@ -204,7 +204,7 @@ cat(".\n")
 
 
 
-# 인과적 질문 던지기 {.unnumbered}
+## 인과적 질문 던지기 {.unnumbered}
 
 
 
@@ -212,13 +212,13 @@ cat(".\n")
  Section from: chapters/01-casual-to-causal.qmd
  ========================================= -->
 
-# 일상에서 인과로 {#sec-causal-question}
+## 일상에서 인과로 {#sec-causal-question}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("complete")
 ```
 
@@ -682,13 +682,13 @@ knitr::include_graphics("images/sentence-diagram-4.png")
  Section from: chapters/02-whole-game.qmd
  ========================================= -->
 
-# 전체 게임: 말라리아와 모기장 {#sec-whole-game}
+## 전체 게임: 말라리아와 모기장 {#sec-whole-game}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("complete")
 ```
 
@@ -1367,7 +1367,7 @@ ipw_results <- bootstrapped_net_data |>
 #| fig.cap: >
 #|   모기장 사용이 말라리아 위험에 미치는 효과에 대한 1,000개의 부트스트랩 추정치 히스토그램. 이 추정치들의 퍼짐 정도는 IPW 가중치 사용 시의 의존성과 불확실성을 고려합니다.
 
-# 모기장 효과 항 찾기
+## 모기장 효과 항 찾기
 sample_terms <- ipw_results$boot_fits[[1]]$term
 net_term <- sample_terms[grepl("net", sample_terms, ignore.case = TRUE) & sample_terms != "(Intercept)"]
 
@@ -1453,13 +1453,13 @@ if (requireNamespace("tipr", quietly = TRUE)) {
  Section from: chapters/03-po-counterfactuals.qmd
  ========================================= -->
 
-# 잠재적 결과와 반사실 {#sec-counterfactuals}
+## 잠재적 결과와 반사실 {#sec-counterfactuals}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("complete")
 library(gt)
 ```
@@ -1863,7 +1863,7 @@ plot_data <- data_observed |>
     id_assignment = FALSE
   )
 
-# 그룹 평균 계산 및 레이블 텍스트 추가
+## 그룹 평균 계산 및 레이블 텍스트 추가
 avg_labels <- compute_avg_labels(plot_data, c("potential_outcome", "exposure", "observed")) |>
   mutate(
     exposure_lbl = str_replace_all(exposure, "실제로 |를 먹음", ""),
@@ -1871,12 +1871,12 @@ avg_labels <- compute_avg_labels(plot_data, c("potential_outcome", "exposure", "
     label = glue("평균 {po_lbl}\n({exposure_lbl} 그룹, {observed})") |> str_wrap(19)
   )
 
-# ID 3에 대한 주석 준비
+## ID 3에 대한 주석 준비
 id_annotation <- plot_data |>
   filter(id == 3) |>
   mutate(label = glue("ID 3의 잠재적 결과\n({observed})") |> str_wrap(15))
 
-# 그룹 평균 간의 교환 가능성 주석
+## 그룹 평균 간의 교환 가능성 주석
 exchangeability_annotation <- tibble(
   x = 5.43,
   xend = 5.33,
@@ -2274,13 +2274,13 @@ avg_labels <- compute_avg_labels(plot_data, c("potential_outcome", "exposure", "
     label = glue("평균 {po_lbl}\n({exposure_lbl} 그룹, {observed})") |> str_wrap(19)
   )
 
-# 초콜릿 쪽에서 누락된 y(vanilla) 지점들
+## 초콜릿 쪽에서 누락된 y(vanilla) 지점들
 missing_points <- plot_data |>
   filter(is_missing_y_vanilla, exposure == "실제로 초콜릿을 먹음") |>
   select(happiness, y_id) |>
   drop_na()
 
-# 누락된 지점들에 대한 주석
+## 누락된 지점들에 대한 주석
 missing_annotation <- tibble(
   x = max(missing_points$happiness, na.rm = TRUE) + 1,
   y = max(missing_points$y_id, na.rm = TRUE) - 1,
@@ -2288,7 +2288,7 @@ missing_annotation <- tibble(
   potential_outcome = "y(chocolate)"
 )
 
-# 주석에서 누락된 지점들로 향하는 화살표
+## 주석에서 누락된 지점들로 향하는 화살표
 missing_arrows <- missing_points |>
   mutate(
     xend = happiness + 0.3,
@@ -2478,7 +2478,7 @@ plot_data <- data_observed_poorly_defined |>
 
 avg_labels <- compute_avg_labels(plot_data, c("potential_outcome", "exposure", "observed"))
 
-# 상한 초콜릿에 대한 주석
+## 상한 초콜릿에 대한 주석
 spoiled_annotation <- plot_data |>
   filter(is_spoiled, potential_outcome == "y(chocolate)") |>
   slice(1) |>
@@ -2783,7 +2783,7 @@ plot_data <- data_observed_interf |>
     observed | (potential_outcome != exposure)
   )
 
-# Select two observed points for different flavor matches (Chocolate panel)
+## Select two observed points for different flavor matches (Chocolate panel)
 flavor_annotation <- plot_data |>
   filter(observed, potential_outcome == "y(chocolate)", id %in% c(3, 5)) |>
   summarize(
@@ -2793,7 +2793,7 @@ flavor_annotation <- plot_data |>
     potential_outcome = "y(chocolate)"
   )
 
-# Generate arrows for the flavor difference annotation
+## Generate arrows for the flavor difference annotation
 flavor_arrows <- plot_data |>
   filter(observed, potential_outcome == "y(chocolate)", id %in% c(3, 5)) |>
   mutate(
@@ -2804,7 +2804,7 @@ flavor_arrows <- plot_data |>
     potential_outcome = "y(chocolate)"
   )
 
-# Select a single ID with two unobserved potential outcomes (Vanilla panel)
+## Select a single ID with two unobserved potential outcomes (Vanilla panel)
 unobserved_id <- 5
 
 unobserved_annotation <- plot_data |>
@@ -2816,7 +2816,7 @@ unobserved_annotation <- plot_data |>
     potential_outcome = "y(vanilla)"
   )
 
-# Generate arrows for the unobserved potential outcomes for the selected ID
+## Generate arrows for the unobserved potential outcomes for the selected ID
 unobserved_arrows <- plot_data |>
   filter(!observed, id == unobserved_id, potential_outcome == "y(vanilla)") |>
   mutate(
@@ -2827,7 +2827,7 @@ unobserved_arrows <- plot_data |>
     potential_outcome = "y(vanilla)"
   )
 
-# Select ID 6's unobserved chocolate potential outcome annotation (Chocolate panel)
+## Select ID 6's unobserved chocolate potential outcome annotation (Chocolate panel)
 chocolate_unobserved_annotation <- plot_data |>
   filter(id == 6, potential_outcome == "y(chocolate)", !observed) |>
   summarize(
@@ -2837,7 +2837,7 @@ chocolate_unobserved_annotation <- plot_data |>
     potential_outcome = "y(chocolate)"
   )
 
-# Generate arrow pointing to the unobserved chocolate potential outcome for ID 6
+## Generate arrow pointing to the unobserved chocolate potential outcome for ID 6
 chocolate_unobserved_arrow <- plot_data |>
   filter(id == 6, potential_outcome == "y(chocolate)", !observed) |>
   mutate(
@@ -2848,7 +2848,7 @@ chocolate_unobserved_arrow <- plot_data |>
     potential_outcome = "y(chocolate)"
   )
 
-# Create Plot 5
+## Create Plot 5
 ggplot(plot_data, aes(x = happiness, y = y_id)) +
   geom_point(
     data = plot_data |> filter(observed),
@@ -3149,13 +3149,13 @@ knitr::include_graphics("images/sentence-diagram-4.png")
  Section from: chapters/04-dags.qmd
  ========================================= -->
 
-# 인과적 질문을 DAG로 표현하기 {#sec-dags}
+## 인과적 질문을 DAG로 표현하기 {#sec-dags}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("complete")
 ```
 
@@ -3698,14 +3698,14 @@ theme_set(
 #| fig-width: 4
 #| fig-height: 4
 #| fig-align: center
-# 좌표를 지정하지 않음
+## 좌표를 지정하지 않음
 set.seed(123)
 pod_dag <- dagify(
   podcast ~ mood + humor + prepared,
   exam ~ mood + prepared
 )
 
-# 레이아웃 자동 결정
+## 레이아웃 자동 결정
 pod_dag |>
   ggdag(text_size = 2.8)
 ```
@@ -4873,13 +4873,13 @@ DAG에 언제가 정보를 포함해야 할까?
  Section from: chapters/05-not-just-a-stats-problem.qmd
  ========================================= -->
 
-# 인과 추론은 (단지) 통계적인 문제만은 아니다 {#sec-quartets}
+## 인과 추론은 (단지) 통계적인 문제만은 아니다 {#sec-quartets}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("complete")
 ```
 
@@ -4913,7 +4913,7 @@ anscombe_quartet |>
 ```{.r}
 library(datasauRus)
 
-# 각 데이터셋에서 거의 동일한 상관관계
+## 각 데이터셋에서 거의 동일한 상관관계
 datasaurus_dozen |>
   group_by(dataset) |>
   summarize(cor = round(cor(x, y), 2))
@@ -5514,13 +5514,13 @@ p_conf2
  Section from: chapters/06-stats-models-ci.qmd
  ========================================= -->
 
-# 질문에서 답변으로: 층화 및 결과 모델 {#sec-strat-outcome}
+## 질문에서 답변으로: 층화 및 결과 모델 {#sec-strat-outcome}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("complete")
 ```
 
@@ -6364,7 +6364,7 @@ plot_estimates(satisfaction_randomized)
 
 
 
-# 설계 단계 {.unnumbered}
+## 설계 단계 {.unnumbered}
 
 
 
@@ -6372,13 +6372,13 @@ plot_estimates(satisfaction_randomized)
  Section from: chapters/07-prep-data.qmd
  ========================================= -->
 
-# 인과적 질문에 답하기 위한 데이터 준비 {#sec-data-causal}
+## 인과적 질문에 답하기 위한 데이터 준비 {#sec-data-causal}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("polishing")
 ```
 
@@ -7135,13 +7135,13 @@ prop_exposed |>
  Section from: chapters/08-propensity-scores.qmd
  ========================================= -->
 
-# 성향 점수 {#sec-ps}
+## 성향 점수 {#sec-ps}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("polishing")
 ```
 
@@ -7865,13 +7865,13 @@ seven_dwarfs_9_with_wt |>
  Section from: chapters/09-evaluating-ps.qmd
  ========================================= -->
 
-# 성향 점수 모델 평가하기 {#sec-eval-ps-model}
+## 성향 점수 모델 평가하기 {#sec-eval-ps-model}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("polishing")
 ```
 
@@ -8274,7 +8274,7 @@ ggplot(
 
 
 
-# 인과 효과 추정하기 {.unnumbered}
+## 인과 효과 추정하기 {.unnumbered}
 
 
 
@@ -8282,13 +8282,13 @@ ggplot(
  Section from: chapters/10-estimands.qmd
  ========================================= -->
 
-# 인과 추정치 {#sec-estimands}
+## 인과 추정치 {#sec-estimands}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("complete")
 ```
 
@@ -9613,13 +9613,13 @@ min(implied_weights_int$weights)
  Section from: chapters/11-outcome-model.qmd
  ========================================= -->
 
-# 가중 결과 모델 적합시키기 {#sec-outcome-model}
+## 가중 결과 모델 적합시키기 {#sec-outcome-model}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("complete")
 ```
 
@@ -9769,7 +9769,7 @@ fit_ipw <- function(.split, ...) {
 library(rsample)
 library(tidyverse)
 
-# 부트스트랩 샘플에 대해 ipw 모델을 적합시킵니다
+## 부트스트랩 샘플에 대해 ipw 모델을 적합시킵니다
 bootstrapped_seven_dwarfs <- bootstraps(
   seven_dwarfs_9,
   times = 1000,
@@ -9802,7 +9802,7 @@ ipw_results |>
 3. 인과 효과를 추출한다.
 
 ```{.r}
-# t-기반 신뢰 구간 가져오기
+## t-기반 신뢰 구간 가져오기
 boot_estimate <- int_t(ipw_results, boot_fits) |>
   filter(term == "park_extra_magic_morning")
 boot_estimate
@@ -10112,7 +10112,7 @@ lm(outcome ~ exposure)
  Section from: chapters/12-other-exposures.qmd
  ========================================= -->
 
-# 연속형 및 범주형 노출
+## 연속형 및 범주형 노출
 
 ## 연속형 노출 {#sec-continuous-exposures}
 
@@ -10120,7 +10120,7 @@ lm(outcome ~ exposure)
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("wip")
 ```
 
@@ -10238,7 +10238,7 @@ lm(
 
 ```{.r}
 #| eval: false
-# 연속형 노출일 때
+## 연속형 노출일 때
 lm(
   exposure ~ 1,
   data = df
@@ -10248,7 +10248,7 @@ lm(
     numerator = dnorm(exposure, .fitted, mean(.sigma, na.rm = TRUE))
   )
 
-# 이진 노출일 때
+## 이진 노출일 때
 glm(
   exposure ~ 1,
   data = df,
@@ -10412,7 +10412,7 @@ wait_times_wts |>
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("wip")
 ```
 
@@ -10440,7 +10440,7 @@ library(broom)
 library(touringplans)
 library(dplyr)
 
-# 범주형 노출 예시: 티켓 시즌(peak, regular, value)이 대기 시간에 미치는 영향
+## 범주형 노출 예시: 티켓 시즌(peak, regular, value)이 대기 시간에 미치는 영향
 seven_dwarfs_9 <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 9) |>
   drop_na() |>
@@ -10458,13 +10458,13 @@ table(seven_dwarfs_9$park_ticket_season)
 
 ```{.r}
 #| message: false
-# 다항 로지스틱 회귀로 성향 점수 계산
-# nnet::multinom()을 사용
-# install.packages("nnet")
+## 다항 로지스틱 회귀로 성향 점수 계산
+## nnet::multinom()을 사용
+## install.packages("nnet")
 library(nnet)
 
-# 범주형 노출(티켓 시즌)에 대한 다항 로지스틱 회귀
-# 티켓 시즌을 예측하는 교란 요인: 공원 폐쇄 시간, 기온, 엑스트라 매직 아워
+## 범주형 노출(티켓 시즌)에 대한 다항 로지스틱 회귀
+## 티켓 시즌을 예측하는 교란 요인: 공원 폐쇄 시간, 기온, 엑스트라 매직 아워
 ps_model_multinom <- multinom(
   park_ticket_season ~
     park_close + park_temperature_high + park_extra_magic_morning,
@@ -10472,7 +10472,7 @@ ps_model_multinom <- multinom(
   trace = FALSE
 )
 
-# 각 범주에 대한 예측 확률 (성향 점수)
+## 각 범주에 대한 예측 확률 (성향 점수)
 ps_probs <- predict(ps_model_multinom, type = "probs") |>
   as.data.frame() |>
   setNames(paste0("ps_", c("value", "regular", "peak")))
@@ -10488,7 +10488,7 @@ $$w_i = \frac{1}{P(X_i = k_i \mid C_i)} = \frac{1}{\hat{e}_{k_i}(C_i)}
 
 $$
 ```{.r}
-# 각 개인의 실제 처치에 해당하는 확률 추출
+## 각 개인의 실제 처치에 해당하는 확률 추출
 seven_dwarfs_with_ps <- seven_dwarfs_9 |>
   bind_cols(ps_probs) |>
   mutate(
@@ -10527,7 +10527,7 @@ summary(seven_dwarfs_with_ps$w_ate_stable)
 
 library(ggplot2)
 
-# 각 처치 쌍의 균형 점검 (단순화된 버전)
+## 각 처치 쌍의 균형 점검 (단순화된 버전)
 seasons <- c("value", "regular", "peak")
 balance_results <- list()
 
@@ -10592,7 +10592,7 @@ ggplot(balance_df, aes(x = smd, y = comparison, color = timing, shape = timing))
 범주형 노출에서 결과 모델은 기준 범주와 비교한 각 범주의 효과를 추정한다.
 
 ```{.r}
-# 가중치를 사용한 결과 모델
+## 가중치를 사용한 결과 모델
 outcome_categorical <- lm(
   wait_minutes_posted_avg ~ park_ticket_season,
   data = seven_dwarfs_with_ps,
@@ -10620,13 +10620,13 @@ $K$개의 범주가 있을 때, 가능한 쌍별 비교의 수는 $\binom{K}{2} 
  Section from: chapters/13-g-comp.qmd
  ========================================= -->
 
-# G-추정 {#sec-g-comp}
+## G-추정 {#sec-g-comp}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("wip")
 ```
 
@@ -10744,14 +10744,14 @@ dagify(
 아직 노출(`park_extra_magic_morning`) 모델을 쓰지는 않겠지만 다음 섹션(@sec-dynamic)에서 보게 될 패턴의 중요한 부분이라가 단계를 넣었다.
 
 ```{.r}
-# 패키지 및 데이터 불러오기
+## 패키지 및 데이터 불러오기
 library(broom)
 library(touringplans)
 
 seven_dwarfs_9 <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 9)
 
-# park_extra_magic_morning에 대한 로지스틱 회귀
+## park_extra_magic_morning에 대한 로지스틱 회귀
 fit_extra_magic <- glm(
   park_extra_magic_morning ~
     park_ticket_season + park_close + park_temperature_high,
@@ -10759,7 +10759,7 @@ fit_extra_magic <- glm(
   family = "binomial"
 )
 
-# wait_minutes_posted_avg에 대한 선형 모델
+## wait_minutes_posted_avg에 대한 선형 모델
 fit_wait_minutes <- lm(
   wait_minutes_posted_avg ~
     park_extra_magic_morning +
@@ -10775,7 +10775,7 @@ fit_wait_minutes <- lm(
 현재 사례에서는 크기가 10,000인 데이터 프레임을 생성하기 위해 복원 추출(sampling with replacement)을 사용할 것이다.
 
 ```{.r}
-# 몬테카를로 실행에서 재현성을 위해 시드를 설정하는 것이 중요합니다
+## 몬테카를로 실행에서 재현성을 위해 시드를 설정하는 것이 중요합니다
 set.seed(8675309)
 
 df_sim_baseline <- seven_dwarfs_9 |>
@@ -10789,11 +10789,11 @@ df_sim_baseline <- seven_dwarfs_9 |>
 다른 시뮬레이션(이 경우 유일하게 남은 변수인 `wait_minutes_posted_avg`)은 예상대로 진행 된다.
 
 ```{.r}
-# 우리가 추정하고자 하는 인과적 대비를 위해 노출 그룹을 설정합니다
+## 우리가 추정하고자 하는 인과적 대비를 위해 노출 그룹을 설정합니다
 df_sim_time_1 <- df_sim_baseline |>
   mutate(park_extra_magic_morning = c(rep(1, 5000), rep(0, 5000)))
 
-# 2단계의 모수적 모델에 따라 결과를 시뮬레이션합니다
+## 2단계의 모수적 모델에 따라 결과를 시뮬레이션합니다
 df_outcome <- fit_wait_minutes |>
   augment(newdata = df_sim_time_1) |>
   rename(wait_minutes_posted_avg = .fitted)
@@ -10929,10 +10929,10 @@ fit_models <- function(.data) {
 다음으로, 3단계를 수행할 함수를 작성한다: 기준점 변수들의 무작위 표본으로부터, 우리가 정의한 모델에 따라 (개입 변수를 제외한) 모든 후속 변수의 값을 생성한다.
 
 ```{.r}
-# simulate_process의 인자들은 다음과 같습니다:
-# fit_obj는 fit_models 함수로부터 반환된 리스트입니다
-# contrast는 노출 그룹(기본값 60)과 대조 그룹(기본값 30) 설정을 제공합니다
-# n_sample은 .data의 기준점 재표본 크기입니다
+## simulate_process의 인자들은 다음과 같습니다:
+## fit_obj는 fit_models 함수로부터 반환된 리스트입니다
+## contrast는 노출 그룹(기본값 60)과 대조 그룹(기본값 30) 설정을 제공합니다
+## n_sample은 .data의 기준점 재표본 크기입니다
 simulate_process <- function(
   fit_obj,
   contrast = c(60, 30),
@@ -10980,7 +10980,7 @@ simulate_process <- function(
 마지막으로 4단계에서는, 시뮬레이션된 데이터를 사용하여 요약 통계량과 관심 있는 인과적 대비를 계산한다.
 
 ```{.r}
-# sim_obj는 simulate_process() 함수에 의해 생성된 리스트입니다
+## sim_obj는 simulate_process() 함수에 의해 생성된 리스트입니다
 compute_stats <- function(sim_obj) {
   exposure_val <- sim_obj |>
     pluck("contrast", 1)
@@ -11006,7 +11006,7 @@ compute_stats <- function(sim_obj) {
 그 과정을 확인한 후에는, 신뢰 구간을 얻기 위해 부트스트래핑을 수행할 것이다.
 
 ```{.r}
-# 우리가 던지는 인과적 질문을 반영하도록 데이터를 가공합니다
+## 우리가 던지는 인과적 질문을 반영하도록 데이터를 가공합니다
 eight <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 8) |>
   select(-wait_minutes_actual_avg)
@@ -11018,7 +11018,7 @@ nine <- seven_dwarfs_train_2018 |>
 wait_times <- eight |>
   left_join(nine, by = "park_date") |>
   drop_na(wait_minutes_actual_avg)
-# 모든 것이 계획대로 작동하는지 확인하기 위해 단일 점 추정치를 구합니다
+## 모든 것이 계획대로 작동하는지 확인하기 위해 단일 점 추정치를 구합니다
 wait_times |>
   fit_models() |>
   simulate_process() |>
@@ -11030,7 +11030,7 @@ wait_times |>
     cols = everything()
   )
 
-# 부트스트랩 신뢰 구간을 계산합니다
+## 부트스트랩 신뢰 구간을 계산합니다
 library(rsample)
 
 boots <- bootstraps(wait_times, times = 1000, apparent = TRUE) |>
@@ -11070,13 +11070,13 @@ results
  Section from: chapters/14-interaction.qmd
  ========================================= -->
 
-# 상호작용 {#sec-interaction}
+## 상호작용 {#sec-interaction}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("wip")
 ```
 
@@ -11109,19 +11109,19 @@ library(splines)
 seven_dwarfs_9 <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 9)
 
-# 선형 모델
+## 선형 모델
 fit_linear <- lm(
   wait_minutes_posted_avg ~ park_temperature_high,
   data = seven_dwarfs_9
 )
 
-# 비선형 모델 (3차 자연 스플라인)
+## 비선형 모델 (3차 자연 스플라인)
 fit_spline <- lm(
   wait_minutes_posted_avg ~ ns(park_temperature_high, df = 3),
   data = seven_dwarfs_9
 )
 
-# 두 모델 비교
+## 두 모델 비교
 tidy(fit_linear)
 tidy(fit_spline)
 ```
@@ -11140,7 +11140,7 @@ $$
 #| message: false
 #| warning: false
 
-# 티켓 시즌별 하위 집단에서의 효과 탐색
+## 티켓 시즌별 하위 집단에서의 효과 탐색
 library(dplyr)
 
 seven_dwarfs_9 |>
@@ -11204,7 +11204,7 @@ seven_dwarfs_9_with_wt <- propensity_model |>
   augment(type.predict = "response", data = seven_dwarfs_9) |>
   mutate(w_ate = wt_ate(.fitted, park_extra_magic_morning))
 
-# 티켓 시즌과의 상호작용 포함
+## 티켓 시즌과의 상호작용 포함
 fit_interaction <- lm(
   wait_minutes_posted_avg ~
     park_extra_magic_morning * park_ticket_season,
@@ -11245,7 +11245,7 @@ tidy(fit_interaction, conf.int = TRUE)
 
 library(ggplot2)
 
-# 각 조합의 예측값 계산
+## 각 조합의 예측값 계산
 pred_data <- expand.grid(
   park_extra_magic_morning = c(0, 1),
   park_ticket_season = unique(seven_dwarfs_9$park_ticket_season)
@@ -11284,13 +11284,13 @@ ggplot(pred_data, aes(
  Section from: chapters/15-missingness-and-measurement.qmd
  ========================================= -->
 
-# 결측치와 측정 {#sec-missingness}
+## 결측치와 측정 {#sec-missingness}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("wip")
 library(gt)
 library(broom)
@@ -11533,7 +11533,7 @@ u_actual -> actual_star
 n <- 1000
 x <- rnorm(n)
 y <- x + rnorm(n)
-# x의 잘못된 측정
+## x의 잘못된 측정
 u <- rnorm(n)
 x_measured <- .01 * x + u
 cor(x, x_measured)
@@ -11663,7 +11663,7 @@ outcome <- exposure + confounder + rnorm(n)
 
 true_model <- lm(outcome ~ exposure * confounder)
 
-# 교란 요인 오측정
+## 교란 요인 오측정
 confounder_star <- if_else(
   outcome > 0,
   confounder,
@@ -11902,7 +11902,7 @@ DAG 4는 `actual` 평균과 인과 효과를 계산할 수 있지만 `posted` �
 #| code-fold: true
 set.seed(123)
 posted <- rnorm(365, mean = 30, sd = 5)
-# 게시 시간이 한 시간 늘어날 때 실제 시간이 50분 늘어나는 효과 생성
+## 게시 시간이 한 시간 늘어날 때 실제 시간이 50분 늘어나는 효과 생성
 coef <- 50 / 60
 actual <- coef * posted + rnorm(365, mean = 0, sd = 2)
 
@@ -11913,7 +11913,7 @@ missing_dag_2 <- if_else(posted_60 > .50, rbinom(365, 1, .95), 0) |>
   as.logical()
 missing_dag_3 <- if_else(actual > 22, rbinom(365, 1, .99), 0) |>
   as.logical()
-# 동일한 구조이지만 결측이 발생하는 것은 `posted` 변수입니다
+## 동일한 구조이지만 결측이 발생하는 것은 `posted` 변수입니다
 missing_dag_4 <- missing_dag_2
 missing_dag_5 <- missing_dag_3
 
@@ -12180,10 +12180,10 @@ seven_dwarfs_to_impute_data <- seven_dwarfs_train_2018 |>
 
 predictor_matrix <- make.predictorMatrix(seven_dwarfs_to_impute_data)
 
-# 대치 모델에서 공원 날짜를 제외합니다
+## 대치 모델에서 공원 날짜를 제외합니다
 predictor_matrix[, 1] <- 0
 
-# 데이터 대치
+## 데이터 대치
 seven_dwarfs_mi <- mice(
   seven_dwarfs_to_impute_data,
   m = 10, # 10개의 대치 수행
@@ -12283,13 +12283,13 @@ DAG와 관련된 일반적인 제안처럼, 적절한 DAG를 확신할 수 없�
  Section from: chapters/16-sensitivity.qmd
  ========================================= -->
 
-# 민감도 분석 {#sec-sensitivity}
+## 민감도 분석 {#sec-sensitivity}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("wip")
 ```
 
@@ -12387,8 +12387,8 @@ emm_wait_dag_missing <- dagify(
   outcome = "wait_minutes_posted_avg"
 )
 
-# 생성된 조정 집합:
-# park_ticket_season, park_close + park_ticket_season, park_temperature_high + park_ticket_season, or park_close + park_temperature_high + park_ticket_season
+## 생성된 조정 집합:
+## park_ticket_season, park_close + park_ticket_season, park_temperature_high + park_ticket_season, or park_close + park_temperature_high + park_ticket_season
 adj_sets <- unclass(dagitty::adjustmentSets(emm_wait_dag_missing, type = "all")) |>
   map_chr(\(.x) glue::glue('{unlist(glue::glue_collapse(.x, sep = " + "))}')) |>
   glue::glue_collapse(sep = ", ", last = ", 또는 ")
@@ -12429,7 +12429,7 @@ emm_wait_dag_missing |>
 seven_dwarfs <- touringplans::seven_dwarfs_train_2018 |>
   filter(wait_hour == 9)
 
-# 나중에 `.data`와 `.trt`를 사용할 것입니다
+## 나중에 `.data`와 `.trt`를 사용할 것입니다
 fit_ipw_effect <- function(.fmla, .data = seven_dwarfs, .trt = "park_extra_magic_morning", .outcome_fmla = wait_minutes_posted_avg ~ park_extra_magic_morning) {
   .trt_var <- rlang::ensym(.trt)
 
@@ -12857,7 +12857,7 @@ emm_wait_dag2 |>
 
 ```{.r}
 library(dagitty)
-# 모든 동등한 DAG에 대해 유효한 집합 결정
+## 모든 동등한 DAG에 대해 유효한 집합 결정
 equivalenceClass(emm_wait_dag2) |>
   adjustmentSets(type = "all")
 ```
@@ -12867,7 +12867,7 @@ equivalenceClass(emm_wait_dag2) |>
 ```{.r}
 dags <- equivalentDAGs(emm_wait_dag2)
 
-# 겹치는 집합이 없음
+## 겹치는 집합이 없음
 dags[[1]] |> adjustmentSets(type = "all")
 dags[[2]] |> adjustmentSets(type = "all")
 ```
@@ -12929,7 +12929,7 @@ emm_wait_dag3 |>
 
 ```{.r}
 library(timeDate)
-# 2018년 휴일 목록 가져오기
+## 2018년 휴일 목록 가져오기
 holidays <- holidayNYSE(2018) |>
   as.Date()
 
@@ -13257,13 +13257,13 @@ tip_coef_with_continuous(
  Section from: chapters/17-mediation.qmd
  ========================================= -->
 
-# 인과 매개 분석 {#sec-mediation}
+## 인과 매개 분석 {#sec-mediation}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("wip")
 ```
 
@@ -13344,8 +13344,8 @@ library(dplyr)
 seven_dwarfs_9 <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 9)
 
-# 결과 모델: 노출, 가상의 매개변수(게시 대기 시간), 교란 요인 포함
-# 여기서는 설명 목적으로 오전 8시 게시 대기를 매개변수로 활용
+## 결과 모델: 노출, 가상의 매개변수(게시 대기 시간), 교란 요인 포함
+## 여기서는 설명 목적으로 오전 8시 게시 대기를 매개변수로 활용
 
 eight <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 8) |>
@@ -13356,14 +13356,14 @@ mediation_data <- seven_dwarfs_9 |>
   left_join(eight, by = "park_date") |>
   drop_na(wait_8am)
 
-# 매개변수 모델: 노출 -> 매개변수
+## 매개변수 모델: 노출 -> 매개변수
 mediator_model <- lm(
   wait_8am ~ park_extra_magic_morning +
     park_ticket_season + park_close + park_temperature_high,
   data = mediation_data
 )
 
-# 결과 모델: 노출 + 매개변수 -> 결과 (직접 효과 추정)
+## 결과 모델: 노출 + 매개변수 -> 결과 (직접 효과 추정)
 outcome_model_direct <- lm(
   wait_minutes_posted_avg ~
     park_extra_magic_morning + wait_8am +
@@ -13408,25 +13408,25 @@ $$
 여기서 $\hat{\alpha}_1$은 노출이 매개변수에 미치는 효과의 추정치이고 $\hat{\beta}_2$는 매개변수가 결과에 미치는 효과의 추정치이다.
 
 ```{.r}
-# 매개변수 모델에서 노출 계수
+## 매개변수 모델에서 노출 계수
 alpha_1 <- tidy(mediator_model) |>
   filter(term == "park_extra_magic_morning") |>
   pull(estimate)
 
-# 결과 모델에서 매개변수 계수
+## 결과 모델에서 매개변수 계수
 beta_2 <- tidy(outcome_model_direct) |>
   filter(term == "wait_8am") |>
   pull(estimate)
 
-# 직접 효과 (결과 모델의 노출 계수)
+## 직접 효과 (결과 모델의 노출 계수)
 direct_effect <- tidy(outcome_model_direct) |>
   filter(term == "park_extra_magic_morning") |>
   pull(estimate)
 
-# 간접 효과 = 곱의 방법
+## 간접 효과 = 곱의 방법
 indirect_effect <- alpha_1 * beta_2
 
-# 총 효과 = 직접 효과 + 간접 효과
+## 총 효과 = 직접 효과 + 간접 효과
 total_effect <- direct_effect + indirect_effect
 
 cat(
@@ -13499,7 +13499,7 @@ $$E[Y \mid X, M, C] = \beta_0 + \beta_1 X + \beta_2 M + \beta_3 (X \times M) + \
 
 $$
 ```{.r}
-# 노출-매개변수 상호작용을 포함한 결과 모델
+## 노출-매개변수 상호작용을 포함한 결과 모델
 outcome_with_interaction <- lm(
   wait_minutes_posted_avg ~
     park_extra_magic_morning * wait_8am +
@@ -13521,7 +13521,7 @@ R의 `{mediation}` 패키지는 상호작용이 있는 경우를 포함하여 �
 
 ```{.r}
 #| eval: false
-# install.packages("mediation")
+## install.packages("mediation")
 library(mediation)
 
 med_out <- mediate(
@@ -13542,13 +13542,13 @@ summary(med_out)
  Section from: chapters/18-longitudinal.qmd
  ========================================= -->
 
-# 시간에 따른 인과 추론 {#sec-longitudinal}
+## 시간에 따른 인과 추론 {#sec-longitudinal}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("wip")
 ```
 
@@ -13621,8 +13621,8 @@ library(dplyr)
 library(touringplans)
 library(broom)
 
-# 디즈니 월드 예시: 특정 시간대의 데이터 분석
-# 시뮬레이션: 더운 날에 게시 대기 시간이 긴 경우 데이터가 누락되는 상황
+## 디즈니 월드 예시: 특정 시간대의 데이터 분석
+## 시뮬레이션: 더운 날에 게시 대기 시간이 긴 경우 데이터가 누락되는 상황
 set.seed(2024)
 
 seven_dwarfs_complete <- seven_dwarfs_train_2018 |>
@@ -13647,7 +13647,7 @@ cat("완전 관측치:", sum(!seven_dwarfs_complete$censored), "\n")
 ```{.r}
 library(propensity)
 
-# 검열 모델: 어떤 관측치가 이탈하지 않는지(censored = 0) 예측
+## 검열 모델: 어떤 관측치가 이탈하지 않는지(censored = 0) 예측
 censoring_model <- glm(
   I(censored == 0) ~
     park_extra_magic_morning + park_temperature_high +
@@ -13656,7 +13656,7 @@ censoring_model <- glm(
   family = binomial()
 )
 
-# IPCW 계산: 이탈하지 않은 사람들에게 가중치 부여
+## IPCW 계산: 이탈하지 않은 사람들에게 가중치 부여
 seven_dwarfs_with_ipcw <- censoring_model |>
   augment(type.predict = "response", data = seven_dwarfs_complete) |>
   filter(censored == 0) |>
@@ -13669,13 +13669,13 @@ summary(seven_dwarfs_with_ipcw$ipcw)
 ```
 
 ```{.r}
-# 검열 보정 없이 추정
+## 검열 보정 없이 추정
 fit_naive <- lm(
   wait_observed ~ park_extra_magic_morning,
   data = filter(seven_dwarfs_complete, censored == 0)
 )
 
-# IPCW를 사용한 검열 보정 추정
+## IPCW를 사용한 검열 보정 추정
 fit_ipcw <- lm(
   wait_observed ~ park_extra_magic_morning,
   data = seven_dwarfs_with_ipcw,
@@ -13759,8 +13759,8 @@ $$
 
 ```{.r}
 #| message: false
-# 예시: 두 시점의 데이터를 사용한 시간 가변적 IPTW 계산
-# 디즈니 월드 예시: 오전 8시와 9시 시점의 데이터
+## 예시: 두 시점의 데이터를 사용한 시간 가변적 IPTW 계산
+## 디즈니 월드 예시: 오전 8시와 9시 시점의 데이터
 
 eight_for_longitudinal <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 8) |>
@@ -13794,7 +13794,7 @@ cat("종단 데이터 차원:", nrow(longitudinal_data), "x", ncol(longitudinal_
 ```
 
 ```{.r}
-# t=1 시점의 처치 확률 모델 (분모)
+## t=1 시점의 처치 확률 모델 (분모)
 ps_model_t1_denom <- glm(
   park_extra_magic_morning_t1 ~
     park_temperature_high_t1 + park_ticket_season_t1 + park_close_t1,
@@ -13802,14 +13802,14 @@ ps_model_t1_denom <- glm(
   family = binomial()
 )
 
-# t=1 시점의 처치 확률 모델 (분자: 안정화)
+## t=1 시점의 처치 확률 모델 (분자: 안정화)
 ps_model_t1_num <- glm(
   park_extra_magic_morning_t1 ~ 1,
   data = longitudinal_data,
   family = binomial()
 )
 
-# t=2 시점의 처치 확률 모델 (분모: 과거 처치 이력 + 시간 가변적 교란 포함)
+## t=2 시점의 처치 확률 모델 (분모: 과거 처치 이력 + 시간 가변적 교란 포함)
 ps_model_t2_denom <- glm(
   park_extra_magic_morning_t2 ~
     park_extra_magic_morning_t1 +
@@ -13819,7 +13819,7 @@ ps_model_t2_denom <- glm(
   family = binomial()
 )
 
-# t=2 시점의 처치 확률 모델 (분자)
+## t=2 시점의 처치 확률 모델 (분자)
 ps_model_t2_num <- glm(
   park_extra_magic_morning_t2 ~ park_extra_magic_morning_t1,
   data = longitudinal_data,
@@ -13830,7 +13830,7 @@ ps_model_t2_num <- glm(
 ```{.r}
 library(broom)
 
-# 각 시점의 가중치 계산
+## 각 시점의 가중치 계산
 longitudinal_with_weights <- longitudinal_data |>
   mutate(
     ps_t1_denom = predict(ps_model_t1_denom, type = "response"),
@@ -13853,7 +13853,7 @@ summary(longitudinal_with_weights$sw)
 ```
 
 ```{.r}
-# 한계 구조 모델 적합: MSM
+## 한계 구조 모델 적합: MSM
 msm_fit <- lm(
   wait_minutes_posted_avg_t2 ~
     park_extra_magic_morning_t1 + park_extra_magic_morning_t2,
@@ -13880,13 +13880,13 @@ MSM에 교란 요인을 다시 포함시키면 가중치 부여 효과가 상쇄
  Section from: chapters/19-time-to-event.qmd
  ========================================= -->
 
-# 인과 시간-사건 모델 {#sec-survival}
+## 인과 시간-사건 모델 {#sec-survival}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("wip")
 ```
 
@@ -13925,8 +13925,8 @@ library(dplyr)
 library(tidyr)
 library(broom)
 
-# 생존 분석 데이터를 시뮬레이션합니다
-# (실제 생존 데이터가 없어 touringplans 데이터를 기반으로 시뮬레이션)
+## 생존 분석 데이터를 시뮬레이션합니다
+## (실제 생존 데이터가 없어 touringplans 데이터를 기반으로 시뮬레이션)
 set.seed(2024)
 n <- 500
 
@@ -13973,8 +13973,8 @@ survival_sim |>
 풀링된 로지스틱 회귀를 위해 생존 데이터를 각 시간 구간마다 하나의 행이 있는 **장기형(long format)**으로 변환해야 한다.
 
 ```{.r}
-# 생존 데이터를 장기형으로 변환 (purrr::map + tidyr::unnest 방식)
-# make_long_rows: interval과 event_at_interval만 반환 (부모 df와 충돌 방지)
+## 생존 데이터를 장기형으로 변환 (purrr::map + tidyr::unnest 방식)
+## make_long_rows: interval과 event_at_interval만 반환 (부모 df와 충돌 방지)
 make_long_rows <- function(time_int, event) {
   max_t <- pmax(1L, as.integer(time_int))  # 최소 1구간 보장
   tibble(
@@ -14008,8 +14008,8 @@ cat("\n총 관측 행 수:", nrow(survival_long), "\n")
 #| message: false
 library(splines)
 
-# 풀링된 로지스틱 회귀 (처치, 시간, 공변량 포함)
-# 시간의 비선형적 영향을 포착하기 위해 자연 스플라인 사용
+## 풀링된 로지스틱 회귀 (처치, 시간, 공변량 포함)
+## 시간의 비선형적 영향을 포착하기 위해 자연 스플라인 사용
 pooled_logistic <- glm(
   event_at_interval ~
     treatment +
@@ -14032,10 +14032,10 @@ tidy(pooled_logistic, exponentiate = TRUE, conf.int = TRUE) |>
 이는 @sec-g-comp 에서 소개한 G-공식의 시간-사건 버전이다.
 
 ```{.r}
-# 한계 생존 곡선 계산
+## 한계 생존 곡선 계산
 max_time <- max(ceiling(survival_sim$time))
 
-# 각 처치 조건에서 모든 시간 구간에 대한 사건 확률 예측
+## 각 처치 조건에서 모든 시간 구간에 대한 사건 확률 예측
 predict_marginal_survival <- function(trt_val) {
   # 모든 개인을 동일한 처치값으로 설정
   pred_data <- survival_long |>
@@ -14061,7 +14061,7 @@ survival_curves <- bind_rows(
 ) |>
   mutate(treatment_label = ifelse(treatment == 1, "처치군", "대조군"))
 
-# 생존 곡선 시각화
+## 생존 곡선 시각화
 library(ggplot2)
 
 ggplot(survival_curves, aes(x = interval, y = survival,
@@ -14078,7 +14078,7 @@ ggplot(survival_curves, aes(x = interval, y = survival,
 ```
 
 ```{.r}
-# 특정 시점에서의 효과 추정: 6개월 및 12개월 생존율 차이
+## 특정 시점에서의 효과 추정: 6개월 및 12개월 생존율 차이
 time_points <- c(6, 12)
 
 survival_at_time <- survival_curves |>
@@ -14147,11 +14147,11 @@ compute_survival_effect <- function(.split) {
   )
 }
 
-# 부트스트랩 수행
+## 부트스트랩 수행
 boots_survival <- bootstraps(survival_sim, times = 200, apparent = TRUE) |>
   mutate(results = map(splits, compute_survival_effect))
 
-# 신뢰 구간 계산
+## 신뢰 구간 계산
 ci_result <- int_pctl(boots_survival, results)
 
 cat("12개월 생존율과 처치 효과의 95% 신뢰 구간:\n")
@@ -14178,13 +14178,13 @@ print(ci_result)
  Section from: chapters/20-doubly-robust.qmd
  ========================================= -->
 
-# 이중 로버스트 모델 {#sec-dr}
+## 이중 로버스트 모델 {#sec-dr}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("wip")
 ```
 
@@ -14228,7 +14228,7 @@ seven_dwarfs_9 <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 9) |>
   drop_na()
 
-# 1단계: 성향 점수 모델 적합
+## 1단계: 성향 점수 모델 적합
 ps_model <- glm(
   park_extra_magic_morning ~
     park_ticket_season + park_close + park_temperature_high,
@@ -14236,7 +14236,7 @@ ps_model <- glm(
   family = binomial()
 )
 
-# 2단계: 결과 모델 적합 (G-공식 스타일)
+## 2단계: 결과 모델 적합 (G-공식 스타일)
 outcome_model <- lm(
   wait_minutes_posted_avg ~
     park_extra_magic_morning *
@@ -14244,7 +14244,7 @@ outcome_model <- lm(
   data = seven_dwarfs_9
 )
 
-# 3단계: AIPW 추정량 계산
+## 3단계: AIPW 추정량 계산
 seven_dwarfs_aipw <- seven_dwarfs_9 |>
   mutate(
     # 성향 점수
@@ -14264,11 +14264,11 @@ seven_dwarfs_aipw <- seven_dwarfs_9 |>
       (1 - park_extra_magic_morning) * (wait_minutes_posted_avg - mu0) / (1 - ps)
   )
 
-# AIPW ATE 추정치
+## AIPW ATE 추정치
 aipw_ate <- mean(seven_dwarfs_aipw$aipw_component)
 cat("AIPW ATE 추정치:", round(aipw_ate, 3), "분\n")
 
-# 비교: 순수 IPTW
+## 비교: 순수 IPTW
 iptw_estimate <- seven_dwarfs_9 |>
   mutate(
     ps = predict(ps_model, type = "response"),
@@ -14279,7 +14279,7 @@ iptw_estimate <- seven_dwarfs_9 |>
   filter(term == "park_extra_magic_morning") |>
   pull(estimate)
 
-# 비교: 순수 G-공식
+## 비교: 순수 G-공식
 gcomp_estimate <- mean(
   predict(outcome_model,
           newdata = mutate(seven_dwarfs_9, park_extra_magic_morning = 1)) -
@@ -14312,7 +14312,7 @@ cat("  G-공식 (결과 모델만):", round(gcomp_estimate, 2), "분\n")
 
 ```{.r}
 #| eval: false
-# install.packages("AIPW")
+## install.packages("AIPW")
 library(AIPW)
 
 aipw_result <- AIPW$new(
@@ -14356,34 +14356,34 @@ TMLE는 세 단계로 이루어진다:
 ```{.r}
 #| message: false
 #| warning: false
-# TMLE 수동 구현 (개념 설명용)
-# 실제로는 tmle, tmle3, ltmle 패키지 사용 권장
+## TMLE 수동 구현 (개념 설명용)
+## 실제로는 tmle, tmle3, ltmle 패키지 사용 권장
 
-# 1단계: 초기 추정
-# 결과 모델 초기 예측
+## 1단계: 초기 추정
+## 결과 모델 초기 예측
 Q0_1 <- predict(outcome_model,
                 newdata = mutate(seven_dwarfs_9, park_extra_magic_morning = 1))
 Q0_0 <- predict(outcome_model,
                 newdata = mutate(seven_dwarfs_9, park_extra_magic_morning = 0))
 Q0   <- predict(outcome_model)
 
-# 성향 점수
+## 성향 점수
 g1 <- predict(ps_model, type = "response")
 g0 <- 1 - g1
 
-# 2단계: 영리한 공변량(clever covariate)으로 업데이트
-# 영리한 공변량: 처치군은 1/g(X=1), 비처치군은 -1/g(X=0)
+## 2단계: 영리한 공변량(clever covariate)으로 업데이트
+## 영리한 공변량: 처치군은 1/g(X=1), 비처치군은 -1/g(X=0)
 clever_cov <- seven_dwarfs_9$park_extra_magic_morning / g1 -
   (1 - seven_dwarfs_9$park_extra_magic_morning) / g0
 
-# 잔차를 대상으로 영리한 공변량을 활용해 로지스틱 회귀를 수행합니다 (fluctuation)
-# 선형 결과이므로 선형 회귀 사용
+## 잔차를 대상으로 영리한 공변량을 활용해 로지스틱 회귀를 수행합니다 (fluctuation)
+## 선형 결과이므로 선형 회귀 사용
 fluctuation <- lm(
   (seven_dwarfs_9$wait_minutes_posted_avg - Q0) ~ clever_cov - 1
 )
 epsilon <- coef(fluctuation)["clever_cov"]
 
-# 3단계: 업데이트한 예측값으로 ATE 계산
+## 3단계: 업데이트한 예측값으로 ATE 계산
 Q_star_1 <- Q0_1 + epsilon / g1
 Q_star_0 <- Q0_0 - epsilon / g0
 
@@ -14397,11 +14397,11 @@ cat("TMLE ATE 추정치:", round(tmle_ate, 3), "분\n")
 
 ```{.r}
 #| eval: false
-# install.packages("tmle")
+## install.packages("tmle")
 library(tmle)
 
-# TMLE에서는 머신러닝 알고리즘을 사용하는 Super Learner와 결합하여
-# 모델 오명시의 위험을 더욱 줄일 수 있습니다
+## TMLE에서는 머신러닝 알고리즘을 사용하는 Super Learner와 결합하여
+## 모델 오명시의 위험을 더욱 줄일 수 있습니다
 tmle_fit <- tmle(
   Y = seven_dwarfs_9$wait_minutes_posted_avg,
   A = seven_dwarfs_9$park_extra_magic_morning,
@@ -14426,7 +14426,7 @@ summary(tmle_fit)
 
 library(ggplot2)
 
-# 각 추정량의 특성 비교를 위한 시각화
+## 각 추정량의 특성 비교를 위한 시각화
 methods_comparison <- tibble(
   방법 = c("G-공식\n(결과 모델만)", "IPTW\n(성향 점수만)", "AIPW\n(이중 로버스트)", "TMLE\n(이중 로버스트)"),
   이중_로버스트 = c("아니요", "아니요", "예", "예"),
@@ -14467,13 +14467,13 @@ ggplot(methods_comparison, aes(x = reorder(방법, 방법_순서), y = ATE,
  Section from: chapters/21-machine-learning.qmd
  ========================================= -->
 
-# 머신러닝과 인과 추론 {#sec-causal-ml}
+## 머신러닝과 인과 추론 {#sec-causal-ml}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("wip")
 ```
 
@@ -14509,10 +14509,10 @@ seven_dwarfs_9 <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 9) |>
   drop_na()
 
-# 예측 정확도가 높은 복잡한 모델이 반드시 좋은 인과 추정치를 주지 않습니다
-# 예시: 교란 요인을 과적합하면 성향 점수가 불안정해짐
+## 예측 정확도가 높은 복잡한 모델이 반드시 좋은 인과 추정치를 주지 않습니다
+## 예시: 교란 요인을 과적합하면 성향 점수가 불안정해짐
 
-# 단순 성향 점수 모델
+## 단순 성향 점수 모델
 ps_simple <- glm(
   park_extra_magic_morning ~
     park_ticket_season + park_close + park_temperature_high,
@@ -14520,7 +14520,7 @@ ps_simple <- glm(
   family = binomial()
 )
 
-# 복잡한 모델 (많은 상호작용 포함)
+## 복잡한 모델 (많은 상호작용 포함)
 ps_complex <- glm(
   park_extra_magic_morning ~
     park_ticket_season * park_close * park_temperature_high,
@@ -14528,7 +14528,7 @@ ps_complex <- glm(
   family = binomial()
 )
 
-# 두 모델의 성향 점수 분포 비교
+## 두 모델의 성향 점수 분포 비교
 seven_dwarfs_9 |>
   mutate(
     ps_simple = predict(ps_simple, type = "response"),
@@ -14575,13 +14575,13 @@ Super Learner는 여러 머신러닝 알고리즘의 예측을 최적으로 결�
 ```{.r}
 #| message: false
 #| warning: false
-# Super Learner를 사용한 AIPW (개념 설명)
-# 실제 구현에서는 SuperLearner 또는 sl3 패키지 사용
+## Super Learner를 사용한 AIPW (개념 설명)
+## 실제 구현에서는 SuperLearner 또는 sl3 패키지 사용
 
 library(propensity)
 
-# 성향 점수 모델: 여러 방법으로 시도 후 비교
-# 방법 1: 로지스틱 회귀
+## 성향 점수 모델: 여러 방법으로 시도 후 비교
+## 방법 1: 로지스틱 회귀
 ps_logistic <- glm(
   park_extra_magic_morning ~
     park_ticket_season + park_close + park_temperature_high,
@@ -14589,17 +14589,17 @@ ps_logistic <- glm(
   family = binomial()
 )
 
-# 방법 2: 랜덤 포레스트 (ranger 패키지)
-# 실제 사용 시 아래 코드를 활성화
-# library(ranger)
-# ps_rf <- ranger(
-#   park_extra_magic_morning ~
-#     park_ticket_season + park_close + park_temperature_high,
-#   data = seven_dwarfs_9,
-#   probability = TRUE
-# )
+## 방법 2: 랜덤 포레스트 (ranger 패키지)
+## 실제 사용 시 아래 코드를 활성화
+## library(ranger)
+## ps_rf <- ranger(
+##   park_extra_magic_morning ~
+##     park_ticket_season + park_close + park_temperature_high,
+##   data = seven_dwarfs_9,
+##   probability = TRUE
+## )
 
-# 여기서는 로지스틱 회귀만 사용하여 AIPW 구현 보여줌
+## 여기서는 로지스틱 회귀만 사용하여 AIPW 구현 보여줌
 outcome_model <- lm(
   wait_minutes_posted_avg ~
     park_extra_magic_morning *
@@ -14607,7 +14607,7 @@ outcome_model <- lm(
   data = seven_dwarfs_9
 )
 
-# AIPW 추정
+## AIPW 추정
 ps_hat <- predict(ps_logistic, type = "response")
 mu1_hat <- predict(outcome_model,
                    newdata = mutate(seven_dwarfs_9, park_extra_magic_morning = 1))
@@ -14645,15 +14645,15 @@ TMLE + Super Learner 조합은 현대 인과 추론에서 표준적인 접근법
 ```{.r}
 #| message: false
 
-# 교차 적합 AIPW 구현
+## 교차 적합 AIPW 구현
 library(rsample)
 
-# K-겹 교차 적합
+## K-겹 교차 적합
 k_folds <- 5
 set.seed(2024)
 cv_splits <- vfold_cv(seven_dwarfs_9, v = k_folds)
 
-# 각 폴드에서 교차 적합 수행
+## 각 폴드에서 교차 적합 수행
 compute_aipw_fold <- function(split) {
   # 훈련 데이터와 검증 데이터 분리
   train_data <- training(split)
@@ -14691,10 +14691,10 @@ compute_aipw_fold <- function(split) {
   tibble(aipw_score = aipw_test, fold = split$id)
 }
 
-# 모든 폴드에서 AIPW 점수 계산
+## 모든 폴드에서 AIPW 점수 계산
 cv_aipw_scores <- map_dfr(cv_splits$splits, compute_aipw_fold)
 
-# 교차 적합 AIPW ATE
+## 교차 적합 AIPW ATE
 cf_ate <- mean(cv_aipw_scores$aipw_score)
 cf_se  <- sd(cv_aipw_scores$aipw_score) / sqrt(nrow(cv_aipw_scores))
 
@@ -14716,7 +14716,7 @@ DML의 핵심 아이디어는 **잔차화(residualization)**입니다:
 3. 잔차를 선형 회귀한다: $\tilde{Y} \sim \tilde{X}$
 
 ```{.r}
-# DML 부분 선형 모델 구현 (교차 적합 포함)
+## DML 부분 선형 모델 구현 (교차 적합 포함)
 compute_dml_fold <- function(split) {
   train_data <- training(split)
   test_data  <- testing(split)
@@ -14746,7 +14746,7 @@ compute_dml_fold <- function(split) {
 
 dml_residuals <- map_dfr(cv_splits$splits, compute_dml_fold)
 
-# 잔차에 대한 선형 회귀 = DML 추정치
+## 잔차에 대한 선형 회귀 = DML 추정치
 dml_fit <- lm(y_resid ~ x_resid - 1, data = dml_residuals)
 tidy(dml_fit, conf.int = TRUE)
 ```
@@ -14774,13 +14774,13 @@ tidy(dml_fit, conf.int = TRUE)
  Section from: chapters/22-iv-and-friends.qmd
  ========================================= -->
 
-# 도구 변수와 관련 방법들 {#sec-iv-friends}
+## 도구 변수와 관련 방법들 {#sec-iv-friends}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("wip")
 ```
 
@@ -14864,14 +14864,14 @@ $\beta_1$이 도구 변수 추정치가 된다.
 library(dplyr)
 library(broom)
 
-# 도구 변수 분석 시뮬레이션 예시
-# 의료 복지 프로그램 참여가 건강 결과에 미치는 효과
-# 도구 변수: 무작위 배정된 인센티브(추첨)
+## 도구 변수 분석 시뮬레이션 예시
+## 의료 복지 프로그램 참여가 건강 결과에 미치는 효과
+## 도구 변수: 무작위 배정된 인센티브(추첨)
 
 set.seed(2024)
 n <- 1000
 
-# 데이터 생성
+## 데이터 생성
 iv_data <- tibble(
   u = rnorm(n),                           # 측정되지 않은 교란 (예: 건강 의식)
   z = rbinom(n, 1, 0.5),                  # 도구 변수: 인센티브 배정 (무작위)
@@ -14886,19 +14886,19 @@ cat("프로그램 참여율 (z=1):", round(mean(iv_data$x[iv_data$z == 1]), 3), 
 ```
 
 ```{.r}
-# 편향된 OLS 추정치 (측정되지 않은 교란 무시)
+## 편향된 OLS 추정치 (측정되지 않은 교란 무시)
 ols_naive <- lm(y ~ x, data = iv_data)
 cat("\n단순 OLS 추정치 (편향됨):",
     round(tidy(ols_naive) |> filter(term == "x") |> pull(estimate), 3), "\n")
 
-# 2SLS: 1단계
+## 2SLS: 1단계
 first_stage <- lm(x ~ z, data = iv_data)
 iv_data$x_hat <- predict(first_stage)
 
 cat("1단계 F-통계량 (도구 변수 강도 확인):",
     round(summary(first_stage)$fstatistic[1], 1), "\n")
 
-# 2SLS: 2단계
+## 2SLS: 2단계
 second_stage <- lm(y ~ x_hat, data = iv_data)
 cat("\n2SLS IV 추정치 (올바른 추정):",
     round(tidy(second_stage) |> filter(term == "x_hat") |> pull(estimate), 3), "\n")
@@ -14908,8 +14908,8 @@ cat("(참 효과: 2.0)\n")
 ```{.r}
 #| message: false
 #| eval: false
-# ivreg 패키지를 사용한 2SLS (표준 오차 올바른 계산)
-# install.packages("ivreg")
+## ivreg 패키지를 사용한 2SLS (표준 오차 올바른 계산)
+## install.packages("ivreg")
 library(ivreg)
 
 iv_fit <- ivreg(y ~ x | z, data = iv_data)
@@ -14936,7 +14936,7 @@ LATE는 도구 변수로 인해 처치 상태가 변한 사람들("순응자, co
 
 library(ggplot2)
 
-# RDD 시뮬레이션: 입학 시험 점수를 기준으로 한 장학금 배정
+## RDD 시뮬레이션: 입학 시험 점수를 기준으로 한 장학금 배정
 set.seed(2024)
 n <- 500
 threshold <- 60  # 장학금 기준 점수
@@ -14968,17 +14968,17 @@ ggplot(rdd_data, aes(x = score, y = outcome, color = factor(treatment))) +
 ```
 
 ```{.r}
-# RDD 추정: 임계값 주변 좁은 대역(bandwidth) 사용
+## RDD 추정: 임계값 주변 좁은 대역(bandwidth) 사용
 bandwidth <- 10
 
 rdd_subset <- rdd_data |>
   filter(abs(score - threshold) <= bandwidth)
 
-# 임계값 기준으로 중심화된 점수 변수 생성
+## 임계값 기준으로 중심화된 점수 변수 생성
 rdd_subset <- rdd_subset |>
   mutate(score_centered = score - threshold)
 
-# RDD 추정치: 임계값에서의 불연속성
+## RDD 추정치: 임계값에서의 불연속성
 rdd_fit <- lm(
   outcome ~ score_centered * treatment,
   data = rdd_subset
@@ -14996,7 +14996,7 @@ R에서 RDD를 위한 최적 대역폭 선택과 강건한 신뢰 구간을 계�
 
 ```{.r}
 #| eval: false
-# install.packages("rdrobust")
+## install.packages("rdrobust")
 library(rdrobust)
 
 rdd_result <- rdrobust(
@@ -15020,7 +15020,7 @@ DiD의 핵심 가정은 **평행 추세(parallel trends) 가정**입니다:
 ```{.r}
 #| message: false
 
-# DiD 시뮬레이션: 최저임금 인상이 고용에 미치는 효과 (Card & Krueger 1994 스타일)
+## DiD 시뮬레이션: 최저임금 인상이 고용에 미치는 효과 (Card & Krueger 1994 스타일)
 set.seed(2024)
 n_units <- 100  # 각 그룹의 지역 수
 
@@ -15074,8 +15074,8 @@ ggplot(did_summary, aes(x = time_num, y = mean_employment,
 ```
 
 ```{.r}
-# DiD 회귀 모델
-# 패널 데이터에서 이중 차분법
+## DiD 회귀 모델
+## 패널 데이터에서 이중 차분법
 did_fit <- lm(
   employment ~ treatment_group + time_trend + treated,
   data = did_data
@@ -15102,13 +15102,13 @@ $$
  Section from: chapters/23-diff-in-diff.qmd
  ========================================= -->
 
-# 이중 차분법 {#sec-did}
+## 이중 차분법 {#sec-did}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("wip")
 ```
 
@@ -15135,8 +15135,8 @@ library(dplyr)
 library(broom)
 library(ggplot2)
 
-# 확장된 DiD 예시: 여러 시점의 데이터
-# 시나리오: 특정 지역에서 최저임금 인상 정책 도입
+## 확장된 DiD 예시: 여러 시점의 데이터
+## 시나리오: 특정 지역에서 최저임금 인상 정책 도입
 set.seed(42)
 n_regions <- 20
 n_time <- 6
@@ -15206,8 +15206,8 @@ $$
 - $\delta$: DiD 추정치
 
 ```{.r}
-# TWFE 모델 추정
-# 지역과 시간 고정 효과를 factor로 처리
+## TWFE 모델 추정
+## 지역과 시간 고정 효과를 factor로 처리
 did_twfe <- lm(
   outcome ~ treatment + region + factor(time),
   data = did_panel
@@ -15218,19 +15218,19 @@ tidy(did_twfe) |>
 ```
 
 ```{.r}
-# 또는 plm 패키지를 사용한 패널 데이터 분석
-# install.packages("plm")
-# library(plm)
-# plm_did <- plm(
-#   outcome ~ treatment,
-#   data = did_panel,
-#   index = c("region", "time"),
-#   model = "within",   # 고정 효과
-#   effect = "twoways"  # 이원 고정 효과
-# )
-# summary(plm_did)
+## 또는 plm 패키지를 사용한 패널 데이터 분석
+## install.packages("plm")
+## library(plm)
+## plm_did <- plm(
+##   outcome ~ treatment,
+##   data = did_panel,
+##   index = c("region", "time"),
+##   model = "within",   # 고정 효과
+##   effect = "twoways"  # 이원 고정 효과
+## )
+## summary(plm_did)
 
-# 이벤트 스터디(Event study): 각 시점별 효과 추정
+## 이벤트 스터디(Event study): 각 시점별 효과 추정
 event_study <- lm(
   outcome ~ treated_region * factor(time) + factor(time),
   data = did_panel
@@ -15278,7 +15278,7 @@ ggplot(event_study_results, aes(x = time, y = estimate)) +
 이종 처치 시점(staggered adoption) 설계의 TWFE 추정치는 음수 가중치가 부여된 처치 효과가 섞여 있어 해석하기 힘들다.
 
 ```{.r}
-# 이종 처치 시점 예시
+## 이종 처치 시점 예시
 set.seed(2024)
 
 staggered_data <- expand.grid(
@@ -15305,7 +15305,7 @@ staggered_data <- expand.grid(
     outcome = 5 + unit_fe + time_trend + te * treatment + rnorm(30 * 8, 0, 0.5)
   )
 
-# TWFE는 이 경우 편향될 수 있음
+## TWFE는 이 경우 편향될 수 있음
 twfe_staggered <- lm(
   outcome ~ treatment + factor(unit) + factor(time),
   data = staggered_data
@@ -15321,10 +15321,10 @@ cat("참 효과 (가중 평균):",
 
 ```{.r}
 #| eval: false
-# install.packages("did")
+## install.packages("did")
 library(did)
 
-# Callaway & Sant'Anna 이종 처치 시점 DiD
+## Callaway & Sant'Anna 이종 처치 시점 DiD
 cs_did <- att_gt(
   yname = "outcome",
   tname = "time",
@@ -15333,7 +15333,7 @@ cs_did <- att_gt(
   data = staggered_data |> mutate(treat_cohort = ifelse(is.infinite(treat_cohort), 0, treat_cohort))
 )
 
-# 집계된 처치 효과
+## 집계된 처치 효과
 aggte(cs_did, type = "simple")
 ```
 
@@ -15351,13 +15351,13 @@ aggte(cs_did, type = "simple")
 #|   점선은 대조군들의 가중 조합으로 구성된 합성 대조군의 추세입니다.
 #|   처치 후의 두 선 간의 차이가 처치 효과 추정치입니다.
 
-# 합성 대조군 시뮬레이션
+## 합성 대조군 시뮬레이션
 set.seed(2024)
 n_donors <- 10
 n_time <- 16
 treat_time <- 8
 
-# 대조군 단위들의 결과
+## 대조군 단위들의 결과
 donor_outcomes <- matrix(
   rnorm(n_donors * n_time, mean = 10, sd = 2),
   nrow = n_time, ncol = n_donors
@@ -15365,8 +15365,8 @@ donor_outcomes <- matrix(
   as.data.frame() |>
   setNames(paste0("donor_", 1:n_donors))
 
-# 처치를 받은 단위의 결과 (대조군들의 가중 조합 + 처치 효과)
-# 참 가중치: donor_1은 0.4, donor_2는 0.3, donor_3는 0.3
+## 처치를 받은 단위의 결과 (대조군들의 가중 조합 + 처치 효과)
+## 참 가중치: donor_1은 0.4, donor_2는 0.3, donor_3는 0.3
 true_weights <- c(0.4, 0.3, 0.3, rep(0, n_donors - 3))
 pre_treat_synthetic <- as.matrix(donor_outcomes[1:treat_time, ]) %*% true_weights
 
@@ -15375,17 +15375,17 @@ treated_unit <- c(
   pre_treat_synthetic[treat_time] + (1:8) * 0.5 + 3 + rnorm(8, 0, 0.5)  # 처치 후 (효과 발생)
 )
 
-# 최적 가중치 찾기 (처치 전 기간에서 처치 단위와 유사하도록)
+## 최적 가중치 찾기 (처치 전 기간에서 처치 단위와 유사하도록)
 pre_treat_matrix <- as.matrix(donor_outcomes[1:treat_time, ])
 pre_treat_treated <- treated_unit[1:treat_time]
 
-# 최소제곱법으로 가중치 추정 (비음수 제약 포함은 생략하고 단순화)
+## 최소제곱법으로 가중치 추정 (비음수 제약 포함은 생략하고 단순화)
 sc_weights_fit <- lm(pre_treat_treated ~ pre_treat_matrix - 1)
 sc_weights <- coef(sc_weights_fit)
 sc_weights[sc_weights < 0] <- 0
 sc_weights <- sc_weights / sum(sc_weights)
 
-# 합성 대조군 구성
+## 합성 대조군 구성
 synthetic_control <- as.matrix(donor_outcomes) %*% sc_weights
 
 synth_plot_data <- tibble(
@@ -15445,13 +15445,13 @@ ggplot(synth_plot_data, aes(x = time, y = outcome,
  Section from: chapters/24-evidence.qmd
  ========================================= -->
 
-# 근거 {#sec-evidence}
+## 근거 {#sec-evidence}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("wip")
 ```
 
@@ -15493,7 +15493,7 @@ seven_dwarfs_9 <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 9) |>
   drop_na()
 
-# 방법 1: IPTW (ATE)
+## 방법 1: IPTW (ATE)
 ps_model <- glm(
   park_extra_magic_morning ~
     park_ticket_season + park_close + park_temperature_high,
@@ -15514,7 +15514,7 @@ iptw_result <- lm(
   filter(term == "park_extra_magic_morning") |>
   mutate(method = "IPTW (ATE)")
 
-# 방법 2: IPTW (ATT)
+## 방법 2: IPTW (ATT)
 seven_dwarfs_with_att <- ps_model |>
   augment(type.predict = "response", data = seven_dwarfs_9) |>
   mutate(w_att = wt_att(.fitted, park_extra_magic_morning))
@@ -15528,7 +15528,7 @@ att_result <- lm(
   filter(term == "park_extra_magic_morning") |>
   mutate(method = "IPTW (ATT)")
 
-# 방법 3: G-공식 (결과 모델)
+## 방법 3: G-공식 (결과 모델)
 outcome_model <- lm(
   wait_minutes_posted_avg ~
     park_extra_magic_morning *
@@ -15551,7 +15551,7 @@ gcomp_result <- tibble(
   method = "G-공식"
 )
 
-# 방법 4: AIPW (이중 로버스트)
+## 방법 4: AIPW (이중 로버스트)
 ps_hat <- predict(ps_model, type = "response")
 mu1_hat <- predict(outcome_model,
                    newdata = mutate(seven_dwarfs_9, park_extra_magic_morning = 1))
@@ -15572,7 +15572,7 @@ aipw_result <- tibble(
   method = "AIPW (이중 로버스트)"
 )
 
-# 결과 통합 및 시각화
+## 결과 통합 및 시각화
 all_results <- bind_rows(iptw_result, att_result, gcomp_result, aipw_result) |>
   mutate(method = factor(method, levels = c("IPTW (ATE)", "IPTW (ATT)",
                                             "G-공식", "AIPW (이중 로버스트)")))
@@ -15692,32 +15692,32 @@ dagify(
 ```{.r}
 #| message: false
 
-# 시뮬레이션: 여름 시즌 데이터로 연구했지만 연간 효과를 추정하고 싶은 경우
-# 연구 표본: 여름(peak season) 데이터만 있음
+## 시뮬레이션: 여름 시즌 데이터로 연구했지만 연간 효과를 추정하고 싶은 경우
+## 연구 표본: 여름(peak season) 데이터만 있음
 study_sample <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 9, park_ticket_season == "peak") |>
   drop_na() |>
   mutate(in_study = 1)
 
-# 목표 모집단: 전체 연간 데이터
+## 목표 모집단: 전체 연간 데이터
 target_population <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 9) |>
   drop_na() |>
   mutate(in_study = 0)
 
-# 결합된 데이터
+## 결합된 데이터
 combined <- bind_rows(study_sample, target_population)
 
-# 표본 포함 확률 모델
+## 표본 포함 확률 모델
 sampling_model <- glm(
   in_study ~ park_close + park_temperature_high,
   data = combined,
   family = binomial()
 )
 
-# 연구 표본에서의 가중치 계산
-# sampling_model은 combined 데이터로 학습되었으므로
-# study_sample에 직접 augment() 불가 → predict()로 예측
+## 연구 표본에서의 가중치 계산
+## sampling_model은 combined 데이터로 학습되었으므로
+## study_sample에 직접 augment() 불가 → predict()로 예측
 study_sample_with_weights <- study_sample |>
   mutate(
     ps_sampling = predict(sampling_model, newdata = study_sample,
@@ -15731,7 +15731,7 @@ summary(study_sample_with_weights$transport_weight)
 ```
 
 ```{.r}
-# 연구 표본(peak season)에서의 효과
+## 연구 표본(peak season)에서의 효과
 ps_study <- glm(
   park_extra_magic_morning ~
     park_close + park_temperature_high,
@@ -15748,7 +15748,7 @@ study_result <- ps_study |>
   filter(term == "park_extra_magic_morning") |>
   pull(estimate)
 
-# 운송 가중치를 적용한 효과 (연간 효과로 운송)
+## 운송 가중치를 적용한 효과 (연간 효과로 운송)
 transported_result <- study_sample_with_weights |>
   mutate(
     ps_emm = predict(ps_study, newdata = study_sample_with_weights,
@@ -15785,7 +15785,7 @@ cat("운송 후(연간 평균) 효과:", round(transported_result, 2), "분\n")
 #|   다이아몬드는 메타 분석 통합 추정치를 나타냅니다.
 #| message: false
 
-# 가상의 여러 연구 결과
+## 가상의 여러 연구 결과
 meta_results <- tibble(
   study = c(
     "연구 1 (RCT, 작은 규모)",
@@ -15804,7 +15804,7 @@ meta_results <- tibble(
     weight = 1 / se^2
   )
 
-# 역분산 가중 메타 분석 추정치
+## 역분산 가중 메타 분석 추정치
 pooled_estimate <- sum(meta_results$weight * meta_results$estimate) /
   sum(meta_results$weight)
 pooled_se <- sqrt(1 / sum(meta_results$weight))
@@ -15904,7 +15904,7 @@ ggplot(evidence_types, aes(x = 유형, y = 점수, fill = 차원)) +
  Section from: chapters/99-references.qmd
  ========================================= -->
 
-# 참고문헌 {.unnumbered}
+## 참고문헌 {.unnumbered}
 
 
 
@@ -15913,7 +15913,7 @@ ggplot(evidence_types, aes(x = 유형, y = 점수, fill = 차원)) +
 
 
 
-# 부록 {.unnumbered}
+## 부록 {.unnumbered}
 
 
 
@@ -15921,13 +15921,13 @@ ggplot(evidence_types, aes(x = 유형, y = 점수, fill = 차원)) +
  Section from: appendices/A-bootstrap.qmd
  ========================================= -->
 
-# 부트스트랩 {#sec-appendix-bootstrap}
+## 부트스트랩 {#sec-appendix-bootstrap}
 
 
 
 ```{.r}
 #| echo: false
-# TODO: remove when first edition complete
+## TODO: remove when first edition complete
 status("polishing")
 ```
 

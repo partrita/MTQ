@@ -1,6 +1,9 @@
 ---
 title: "Biopython을 이용한 심화 생명정보학 분석"
+lang: ko
 ---
+ 이 글은 발췌본이다. 원본 분량에 비해 줄었다.
+
 
 ## 1. 서론: 파이썬과 생명정보학의 결합
 
@@ -34,7 +37,7 @@ Biopython에서는 번역할 때 유전 암호표(Genetic Code)를 따로 지정
 messenger_rna = Seq("AUGGCCAUUGUAAUGGGCCGCUGAAAGGGUGCCCGAUAG")
 # 표준 번역
 standard_protein = messenger_rna.translate()
-# 척추동물 미토콘드리아 암호표(Table 2) 사용
+## 척추동물 미토콘드리아 암호표(Table 2) 사용
 mito_protein = messenger_rna.translate(table=2)
 
 print(f"표준 번역 결과: {standard_protein}")
@@ -52,10 +55,10 @@ NCBI는 자동화된 요청 시 반드시 이메일 주소를 명시하도록 �
 ```python
 from Bio import Entrez, SeqIO
 
-# 자신의 이메일 입력
+## 자신의 이메일 입력
 Entrez.email = "your_email@example.com"
 
-# GenBank에서 특정 유전자(예: 인슐린) 검색
+## GenBank에서 특정 유전자(예: 인슐린) 검색
 handle = Entrez.esearch(db="nucleotide", term="Homo sapiens insulin[Gene] AND mRNA[Filter]", retmax=5)
 record = Entrez.read(handle)
 id_list = record["IdList"]
@@ -65,7 +68,7 @@ print(f"검색된 ID 목록: {id_list}")
 ### 3. 서열 정보 다운로드 및 확인
 
 ```python
-# 첫 번째 ID의 전체 정보 가져오기
+## 첫 번째 ID의 전체 정보 가져오기
 fetch_handle = Entrez.efetch(db="nucleotide", id=id_list[0], rettype="gb", retmode="text")
 seq_record = SeqIO.read(fetch_handle, "genbank")
 fetch_handle.close()
@@ -86,11 +89,11 @@ print(f"서열 길이: {len(seq_record.seq)}")
 ```python
 from Bio import AlignIO
 
-# 정렬 파일 읽기 (clustal 형식 가정)
-# alignment = AlignIO.read("my_alignment.aln", "clustal")
-# print(f"정렬 길이: {alignment.get_alignment_length()}")
-# for record in alignment:
-#     print(f"{record.id}: {record.seq}")
+## 정렬 파일 읽기 (clustal 형식 가정)
+## alignment = AlignIO.read("my_alignment.aln", "clustal")
+## print(f"정렬 길이: {alignment.get_alignment_length()}")
+## for record in alignment:
+##     print(f"{record.id}: {record.seq}")
 ```
 
 ### 4. Pairwise2를 이용한 전역 및 지역 정렬
@@ -104,8 +107,8 @@ from Bio.pairwise2 import format_alignment
 seq1 = Seq("GACAGTAGAC")
 seq2 = Seq("GCACTAGAC")
 
-# 전역 정렬(Global Alignment) 수행
-# 매치: 2점, 미스매치: -1점, 갭 생성: -2점, 갭 연장: -0.5점
+## 전역 정렬(Global Alignment) 수행
+## 매치: 2점, 미스매치: -1점, 갭 생성: -2점, 갭 연장: -0.5점
 alignments = pairwise2.align.globalms(seq1, seq2, 2, -1, -2, -0.5)
 
 for a in alignments:
@@ -119,16 +122,16 @@ for a in alignments:
 ```python
 from Bio.PDB import PDBParser
 
-# PDB 파일 파싱 (실제 파일 필요)
+## PDB 파일 파싱 (실제 파일 필요)
 parser = PDBParser()
-# structure = parser.get_structure("1FAT", "1fat.pdb")
+## structure = parser.get_structure("1FAT", "1fat.pdb")
 
-# 모델, 체인, 잔기(Residue), 원자(Atom) 계층 구조 탐색
-# for model in structure:
-#     for chain in model:
-#         for residue in chain:
-#             if "CA" in residue:  # Alpha carbon 확인
-#                 print(f"Residue: {residue.get_resname()}, Atom: {residue['CA'].get_vector()}")
+## 모델, 체인, 잔기(Residue), 원자(Atom) 계층 구조 탐색
+## for model in structure:
+##     for chain in model:
+##         for residue in chain:
+##             if "CA" in residue:  # Alpha carbon 확인
+##                 print(f"Residue: {residue.get_resname()}, Atom: {residue['CA'].get_vector()}")
 ```
 
 ## 6. 계통학 분석
@@ -139,9 +142,9 @@ parser = PDBParser()
 from Bio import Phylo
 import matplotlib.pyplot as plt
 
-# Newick 형식의 트리 읽기
-# tree = Phylo.read("example.nwk", "newick")
-# Phylo.draw(tree)
+## Newick 형식의 트리 읽기
+## tree = Phylo.read("example.nwk", "newick")
+## Phylo.draw(tree)
 ```
 
 ## 7. 유전체 데이터 시각화
@@ -154,7 +157,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
-# 서열의 슬라이딩 윈도우 GC 함량 계산 예시
+## 서열의 슬라이딩 윈도우 GC 함량 계산 예시
 def calculate_gc_window(seq, window_size=100):
     res = []
     for i in range(0, len(seq) - window_size + 1, window_size):
@@ -163,11 +166,11 @@ def calculate_gc_window(seq, window_size=100):
         res.append(gc)
     return res
 
-# 가상의 긴 서열 생성
+## 가상의 긴 서열 생성
 long_seq = Seq("ATGC" * 1000)
 gc_values = calculate_gc_window(long_seq)
 
-# 시각화
+## 시각화
 plt.figure(figsize=(10, 5))
 sns.lineplot(x=range(len(gc_values)), y=gc_values)
 plt.title("GC Content Across Sequence Window")

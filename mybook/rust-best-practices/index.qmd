@@ -6,8 +6,8 @@ toc: true
 toc-depth: 3
 number-sections: true
 code-copy: true
+lang: ko
 ---
-
 이 문서는 원본 [repo](https://github.com/apollographql/rust-best-practices) 전체를 하나의 Quarto 문서로 합친 합본으로 Rust 공식 API 가이드라인의 보완 자료이다:
 
 - [Rust Official API Guidelines](https://rust-lang.github.io/api-guidelines/about.html)
@@ -688,7 +688,7 @@ fn is_retryable(status: StatusCode) -> bool {
 
 > 🚨 의심스러우면 중복을 택하라. 중복된 한 줄은 나중에 고치기 쉽다. 잘못된 추상화는 인자와 조건문이 계속 불어나는데, 각 담당자가 되돌리는 대신 땜질만 이어 가기 때문이다.
 
-# Chapter 2 - Clippy와 린트 규율 {#sec-ch02}
+## Chapter 2 - Clippy와 린트 규율 {#sec-ch02}
 
 Rust 컴파일러와 함께 `cargo clippy`가 설치되어 있는지 확인하세요. Rust 프로젝트에서 터미널에 `cargo clippy -V`를 실행하면 `clippy 0.1.86 (05f9846f89 2025-03-31)`와 비슷한 결과가 나와야 합니다. 터미널에 Clippy 버전이 표시되지 않는다면 다음 명령을 실행하세요. `rustup update && rustup component add clippy`.
 
@@ -807,7 +807,7 @@ redundant_clone = { level = "deny", priority = 9 }
 manual_while_let_some = { level = "deny", priority = 4 }
 pedantic = { level = "warn", priority = 3 }
 ```
-# Chapter 3 - 성능 마인드셋 {#sec-ch03}
+## Chapter 3 - 성능 마인드셋 {#sec-ch03}
 
 성능 작업의 황금률은 다음과 같습니다.
 
@@ -832,33 +832,33 @@ Rust 코드는 대개 이미 충분히 빠릅니다. 근거 없이 "최적화"�
 Flamegraph는 CPU가 각 작업에 시간을 얼마나 썼는지 시각화해 줍니다.
 
 ```shell
-# Installing flamegraph
+## Installing flamegraph
 cargo install flamegraph
 
-# cargo support provided through the cargo-flamegraph binary!
-# defaults to profiling cargo run --release
+## cargo support provided through the cargo-flamegraph binary!
+## defaults to profiling cargo run --release
 cargo flamegraph
 
-# by default, `--release` profile is used,
-# but you can override this:
+## by default, `--release` profile is used,
+## but you can override this:
 cargo flamegraph --dev
 
-# if you'd like to profile a specific binary:
+## if you'd like to profile a specific binary:
 cargo flamegraph --bin=stress2
 
-# Profile unit tests.
-# Note that a separating `--` is necessary if `--unit-test` is the last flag.
+## Profile unit tests.
+## Note that a separating `--` is necessary if `--unit-test` is the last flag.
 cargo flamegraph --unit-test -- test::in::package::with::single::crate
 cargo flamegraph --unit-test crate_name -- test::in::package::with::multiple:crate
 
-# Profile integration tests.
+## Profile integration tests.
 cargo flamegraph --test test_name
 
-# Run criterion benchmark
-# Note that the last --bench is required for `criterion 0.3` to run in benchmark mode, instead of test mode.
+## Run criterion benchmark
+## Note that the last --bench is required for `criterion 0.3` to run in benchmark mode, instead of test mode.
 cargo flamegraph --bench some_benchmark --features some_features -- --bench
 
-# Run workspace example
+## Run workspace example
 cargo flamegraph --example some_example --features some_features
 ```
 
@@ -1028,7 +1028,7 @@ process(doubled);
 let doubled_iter = items.iter().map(|x| x * 2);
 process(doubled_iter);
 ```
-# Chapter 4 - 에러 처리 {#sec-ch04}
+## Chapter 4 - 에러 처리 {#sec-ch04}
 
 Rust는 엄격한 에러 처리를 강제하지만, 에러를 *어떻게* 다루느냐에 따라 코드가 인체공학적이고, 일관되고, 안전하게 느껴질 수도, 반대로 난해하고 고통스럽게 느껴질 수도 있습니다. 이번 장에서는 라이브러리와 바이너리 전반에서 실패 가능한 연산을 모델링하고 관리하는 모범 사례를 다룹니다.
 
@@ -1213,7 +1213,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
 
 > 라이브러리에서는 정말 필요하지 않다면 `Box<dyn std::error::Error>`를 피하세요
 
-# Chapter 5 - 자동화 테스팅 {#sec-ch05}
+## Chapter 5 - 자동화 테스팅 {#sec-ch05}
 
 > 테스트는 정확성을 확인하기 위한 수단만이 아닙니다. 다른 사람이 여러분의 코드가 어떻게 동작하는지 이해하기 위해 가장 먼저 찾아보는 곳이 바로 테스트입니다.
 
@@ -1612,7 +1612,7 @@ fn endpoint_get_user_data() {
 
 * 스냅샷을 git에 커밋하세요. 테스트 옆의 `snapshots/`에 저장됩니다.
 * 변경 사항은 수락하기 전에 주의 깊게 리뷰하세요.
-# Chapter 6 - 제네릭, 동적 디스패치와 정적 디스패치 {#sec-ch06}
+## Chapter 6 - 제네릭, 동적 디스패치와 정적 디스패치 {#sec-ch06}
 
 > 가능하면 정적으로, 반드시 필요할 때만 동적으로
 
@@ -1777,7 +1777,7 @@ struct Renderer {
     }
     ```
 
-# Chapter 7 - 타입 상태 패턴(Type State Pattern) {#sec-ch07}
+## Chapter 7 - 타입 상태 패턴(Type State Pattern) {#sec-ch07}
 
 컴파일 타임에 상태를 모델링해, 허용되지 않는 상태를 표현할 수 없게 만들어 버그를 예방합니다. Rust의 제네릭과 타입 시스템을 활용해 특정 조건을 만족해야만 도달할 수 있는 하위 타입을 만들며, 이를 통해 일부 연산을 컴파일 타임에 불법으로 만듭니다.
 
@@ -2002,7 +2002,7 @@ impl Client<Connected> {
 * PhantomData는 초보자에게 직관적이지 않고 다소 편법처럼 느껴질 수 있습니다.
 
 > 영리해 보이려고가 아니라, 버그를 줄이거나 안전성을 높이거나 로직을 단순화할 수 있을 때 이 패턴을 사용하세요.
-# Chapter 8 - 주석과 문서화 {#sec-ch08}
+## Chapter 8 - 주석과 문서화 {#sec-ch08}
 
 > 명확한 코드가 명확한 주석보다 낫습니다. 하지만 왜 그렇게 작성했는지가 명확하지 않다면, 평이하게 주석을 달거나 더 많은 맥락을 읽을 수 있는 곳으로 링크하세요.
 
@@ -2270,7 +2270,7 @@ pub fn add(a: i32, b: i32) -> i32 {
 * ✅ `cargo doc --open`으로 출력 결과를 자주 확인하세요.
 * ✅ 전체 문서 범위를 강제하고 싶다면 최상위 모듈에 `#![deny(missing_docs)]`와 관련 문서 린트를 추가하세요.
 
-# Chapter 9 - 포인터 이해하기 {#sec-ch09}
+## Chapter 9 - 포인터 이해하기 {#sec-ch09}
 
 많은 고수준 언어는 메모리 관리를 숨기며, 할당·힙·스택·소유권·라이프타임을 고민하지 않고 값 전달(데이터 복사)이나 참조 전달(공유 데이터에 대한 참조)로 처리한다. 이 모든 것은 가비지 컬렉터나 VM에 위임된다. 이 주제에 대한 몇 가지 언어 간 비교는 다음과 같다:
 
@@ -2530,7 +2530,7 @@ let _ = &*CONFIG;
 - [Mara Bos - Rust Atomics and Locks](https://marabos.nl/atomics/)
 - [Semicolon video on pointers](https://www.youtube.com/watch?v=Ag_6Q44PBNs)
 
-# 마무리 {#sec-final}
+## 마무리 {#sec-final}
 
 * Rust는 실수를 막아주지 않지만, 실수를 일찍 발견하기 쉽게 만들어준다.
 * 컴파일러는 적이 아니라 강력한 도구이다. 가장 친한 친구라고 생각하라.
@@ -2543,7 +2543,7 @@ let _ = &*CONFIG;
 
 * [mre/idiomatic-rust](https://github.com/mre/idiomatic-rust/tree/master)
 
-# 부록 A. 예제 코드 전문 {.unnumbered}
+## 부록 A. 예제 코드 전문 {.unnumbered}
 
 `examples/` 아래 3개 예제의 전체 소스를 이 책에 그대로 싣는다.
 `cargo test --workspace --all-features` 대상이며, 본문 Chapter 7 · Chapter 9에서 인용된다.
@@ -2553,7 +2553,7 @@ let _ = &*CONFIG;
 `File<FileNotOpened>` → `File<FileOpened>` 타입 상태 예제이다. 본문 [@sec-ch07]에서 인용한다.
 
 ```toml
-# examples/simple-type-state/Cargo.toml
+## examples/simple-type-state/Cargo.toml
 [package]
 name = "simple-type-state"
 version = "0.1.0"
@@ -2619,7 +2619,7 @@ fn main() {
 ```
 
 ```text
-# examples/simple-type-state/hello.txt
+## examples/simple-type-state/hello.txt
 hello world!
 ```
 
@@ -2628,7 +2628,7 @@ hello world!
 필수 필드(`name`, `age`)를 컴파일 타임에 강제하는 빌더 예제이다. 본문 [@sec-ch07]에서 인용한다.
 
 ```toml
-# examples/type-state-builder/Cargo.toml
+## examples/type-state-builder/Cargo.toml
 [package]
 name = "type-state-builder"
 version = "0.1.0"
@@ -2731,7 +2731,7 @@ fn main() {
 `OnceCell` + `Rc` 공유 설정 예제이다. 본문 [@sec-ch09]에서 인용한다.
 
 ```toml
-# examples/once_cell/Cargo.toml
+## examples/once_cell/Cargo.toml
 [package]
 name = "once_cell"
 version = "0.1.0"

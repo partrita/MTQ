@@ -3,8 +3,8 @@ title: "Rust-Python 바인딩"
 subtitle: "PyO & Maturin 실전 바인딩 기법"
 author: "Taeyoon Kim"
 date: "2026-08-16"
+lang: ko
 ---
-
 ## 개요
 
 이 문서는 `rust-python-binding` 저장소에 포함된 모든 예제 프로젝트의 코드와 구조를 설명한다.
@@ -75,7 +75,7 @@ requires-python = ">=3.8"
 [tool.maturin]
 features = ["pyo3/extension-module"]
 # 혼합 프로젝트인 경우 파이썬 소스 위치 지정 가능
-# python-source = "python"
+## python-source = "python"
 ```
 
 ***
@@ -195,13 +195,13 @@ def py_fib(n: int) -> int:
 
 N = 42
 
-# 파이썬 측정
+## 파이썬 측정
 start_python = time.time()
 python_result = py_fib(N)
 python_time = time.time() - start_python
 print(f"Python으로 계산한 결과 (N={N}): {python_result} (소요 시간: {python_time:.6f} 초)")
 
-# Rust 측정
+## Rust 측정
 start_rust = time.time()
 rust_result = rust_fib(N)
 rust_time = time.time() - start_rust
@@ -343,9 +343,9 @@ def double_list_py(lst, result, idx):
 result = [[], []]
 nums = [1, 2, 3]
 
-# t1: Python 함수 실행 스레드
+## t1: Python 함수 실행 스레드
 t1 = threading.Thread(target=double_list_py, args=(nums, result, 0))
-# t2: Rust 함수 실행 스레드 (내부에서 allow_threads 호출)
+## t2: Rust 함수 실행 스레드 (내부에서 allow_threads 호출)
 t2 = threading.Thread(target=double_list, args=(nums, result, 1))
 
 t1.start()

@@ -1,8 +1,8 @@
 ---
 title: "퍼스널 MBA"
 author: "조시 카우프만 (Josh Kaufman)"
+lang: ko
 ---
-
 # 서론
 
 ## 왜 이 책을 읽어야 하는가? {#why-read-this-book}
@@ -521,7 +521,7 @@ MBA 프로그램이 유능한 인재를 키워내지 못하는 이유는 명확�
 
 자, 이제 비즈니스의 진짜 세계로 첫발을 내딛어보자.
 
-# 제1장: 가치 창출 {#sec-01-value-creation}
+## 제1장: 가치 창출 {#sec-01-value-creation}
 
 > 사람들이 원하는 것을 만들어라... 이제 막 해결할 수 있게 된 미충족 욕구만큼 가치 있는 것은 없다. 수많은 사람을 위해 고쳐줄 수 있는 결함을 발견한다면, 당신은 금광을 찾은 것이다.
 >
@@ -1456,7 +1456,7 @@ ERG 이론은 인간 욕망의 일반적인 *우선순위(priority)*를 잘 설�
 
 참고 링크: [personalmba.com/field-testing/](http://personalmba.com/field-testing/)
 
-# 제2장: 마케팅 {#sec-02-marketing}
+## 제2장: 마케팅 {#sec-02-marketing}
 
 > 마케팅에서 저지를 수 있는 가장 치명적인 죄악은 지루함이다.
 >
@@ -1968,7 +1968,7 @@ TV와 라디오 광고의 초기 시절에는 중간 광고(commercial interrupt
 
 참고 링크(REFERENCE LINK): [personalmba.com/reputation/](http://personalmba.com/reputation/)
 
-# 제3장: 영업과 판매 {#sec-03-sales}
+## 제3장: 영업과 판매 {#sec-03-sales}
 
 > 사람들은 물건을 강매당하는 것은 싫어하지만 스스로 구매하는 것은 아주 좋아한다.
 >
@@ -2487,7 +2487,7 @@ DCF/NPV법은 지속적인 현금흐름을 창출하는 대상의 가치를 평�
 
 참조 링크: [personalmba.com/reactivation/](http://personalmba.com/reactivation/)
 
-# 제4장: 가치 전달 {#sec-04-value-delivery}
+## 제4장: 가치 전달 {#sec-04-value-delivery}
 
 > 만족한 고객이야말로 모든 비즈니스 전략 중 최고다.
 >
@@ -2911,7 +2911,7 @@ BMW, 포드, 포르쉐, 폭스바겐 등 유수의 자동차 제조사들은 기
 
 참고 링크: [personalmba.com/triage/](http://personalmba.com/triage/)
 
-# 제5장: 재무와 회계 {#sec-05-finance}
+## 제5장: 재무와 회계 {#sec-05-finance}
 
 > 그는 사람들이 돈을 경멸하듯 말하는 것을 들었다. 그는 그들이 돈 없이 살아보려고 한 적이 있는지 궁금했다.
 >
@@ -3797,7 +3797,7 @@ REFERENCE LINK: [personalmba.com/sunk-cost/](http://personalmba.com/sunk-cost/)
 
 REFERENCE LINK: [personalmba.com/internal-controls/](http://personalmba.com/internal-controls/)
 
-# 제6장: 인간의 마음 {#sec-06-human-mind}
+## 제6장: 인간의 마음 {#sec-06-human-mind}
 
 > 이 경기의 90퍼센트는 절반의 정신력에 달려 있다.
 >
@@ -4516,7 +4516,7 @@ REFERENCE LINK: [personalmba.com/internal-controls/](http://personalmba.com/inte
 
 참고 링크: [personalmba.com/novelty/](http://personalmba.com/novelty/)
 
-# 제7장: 자신과 함께 일하기 {#sec-07-working-with-yourself}
+## 제7장: 자신과 함께 일하기 {#sec-07-working-with-yourself}
 
 > 생각하는 것은 쉽다. 행동하는 것은 어렵다. 생각한 대로 행동하는 것은 가장 어렵다.
 >
@@ -5560,7 +5560,7 @@ R&D가 존재하는 이유는 실제로 효과가 있기 때문이다. 연구 �
 
 참고 링크: [personalmba.com/arrival-fallacy/](http://personalmba.com/arrival-fallacy/)
 
-# 제8장: 타인과 함께 일하기 {#sec-08-working-with-others}
+## 제8장: 타인과 함께 일하기 {#sec-08-working-with-others}
 
 > 내게서 사람들을 데려가고 공장만 남겨둔다면, 머지않아 공장 바닥에 풀이 자라날 것이다. 하지만 내게서 공장을 가져가고 사람들을 남겨둔다면, 머지않아 우리는 더 새롭고 더 훌륭한 공장을 갖게 될 것이다.
 >
@@ -6227,7 +6227,7 @@ CEO가 대단히 인내심 강한 사람이 아니라면, 아마 "문제가 터�
 
 참고 링크: [personalmba.com/performance-based-hiring/](http://personalmba.com/performance-based-hiring/)
 
-# 제9장: 시스템의 이해 {#sec-09-understanding-systems}
+## 제9장: 시스템의 이해 {#sec-09-understanding-systems}
 
 > 이해하지 못하는 것을 칭찬하는 것도 나쁘지만 비난하는 것은 더 나쁘다.
 >
@@ -6639,7 +6639,7 @@ CEO가 대단히 인내심 강한 사람이 아니라면, 아마 "문제가 터�
 
 참고 링크: [personalmba.com/normal-accidents/](http://personalmba.com/normal-accidents/)
 
-# 제10장: 시스템 분석 {#sec-10-analyzing-systems}
+## 제10장: 시스템 분석 {#sec-10-analyzing-systems}
 
 > 이해할 수 없다면, 바꿀 수도 없다.
 >
@@ -7060,7 +7060,7 @@ CEO가 대단히 인내심 강한 사람이 아니라면, 아마 "문제가 터�
 
 참고 링크: [personalmba.com/humanization/](http://personalmba.com/humanization/)
 
-# 제11장: 시스템 개선 {#sec-11-improving-systems}
+## 제11장: 시스템 개선 {#sec-11-improving-systems}
 
 > 이론상으로는 이론과 실천 사이에 아무런 차이가 없다. 그러나 실천에서는 차이가 존재한다.
 >
@@ -7623,7 +7623,7 @@ CEO가 대단히 인내심 강한 사람이 아니라면, 아마 "문제가 터�
 
 참고 링크: [personalmba.com/experimental-mindset/](http://personalmba.com/experimental-mindset/)
 
-# 결론: 끝이 아니다 {#sec-conclusion}
+## 결론: 끝이 아니다 {#sec-conclusion}
 
 > 진정으로 좋은 책은 읽는 것 이상의 것을 가르쳐준다. 책을 덮는 즉시, 그 책이 던져준 통찰을 바탕으로 삶을 살아가기 시작해야 한다. 읽기로 시작한 것을 행동으로 매듭지어야 한다.
 >
@@ -7705,7 +7705,7 @@ CEO가 대단히 인내심 강한 사람이 아니라면, 아마 "문제가 터�
 
 즐겁게 탐험하시길!
 
-# 부록 A: 비즈니스 공부를 계속해나가는 방법 {#sec-appendix-a}
+## 부록 A: 비즈니스 공부를 계속해나가는 방법 {#sec-appendix-a}
 
 이 책은 방대한 비즈니스 지식을 거시적 관점에서 조망한 개요서다. 비즈니스 공부는 여기서 끝나는 것이 아니라 이제 막 시작되었을 뿐이다. 이 책이 유익했다면, 가장 흥미롭고 와닿았던 분야의 전문 서적들을 이어서 읽어보기를 권한다.
 
@@ -7713,7 +7713,7 @@ CEO가 대단히 인내심 강한 사람이 아니라면, 아마 "문제가 터�
 
 도서 목록이 업데이트될 때 소식을 받고 싶다면 해당 웹페이지나 [**joshkaufman.net/newsletter**](http://joshkaufman.net/newsletter)에서 이메일 뉴스레터를 신청하면 된다.
 
-# 부록 B: 성과 개선을 위한 49가지 질문 {#sec-appendix-b}
+## 부록 B: 성과 개선을 위한 49가지 질문 {#sec-appendix-b}
 
 좋은 질문은 뇌가 세상을 다른 각도에서 바라보도록 이끈다. 하나의 질문을 가슴에 품고 답을 곰곰이 생각해보면, 지금 서 있는 곳에서 목표 지점으로 나아갈 수 있는 뜻밖의 길을 발견하게 된다.
 

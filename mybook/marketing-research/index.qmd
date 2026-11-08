@@ -4,8 +4,8 @@ title: "마케팅 조사"
 subtitle: "기술적·학술적 접근"
 author: "Mike Nguyen"
 description: "마케팅 조사의 기술적·학술적 다루기: 개념 구성(constructs), 실체적 영역(substantive domains), 그리고 이들을 연결하는 방법론을 다루며 전 과정에 걸쳐 재현 가능한 R 코드를 포함합니다."
+lang: ko
 ---
-
 <!-- ====== Section from: index.qmd ====== -->
 
 
@@ -14,7 +14,7 @@ description: "마케팅 조사의 기술적·학술적 다루기: 개념 구성(
 ```{.r}
 #| label: setup
 #| include: false
-# 사용되는 R 패키지의 bib 데이터베이스를 구축합니다.
+## 사용되는 R 패키지의 bib 데이터베이스를 구축합니다.
 knitr::write_bib(
   c(.packages(), "bookdown", "knitr", "rmarkdown"),
   "packages.bib"
@@ -33,7 +33,7 @@ knitr::write_bib(
 <!-- ====== Section from: 01-introduction.qmd ====== -->
 
 
-# 서론 {#sec-introduction}
+## 서론 {#sec-introduction}
 
 마케팅 연구는 여러 학문의 생산적인 교차점에 위치한다. 마케팅 연구는 사람들이 왜 주의를 기울이고, 선호하며 선택하고, 충성도를 유지하는지를 탐구하는 행동과학이자, 기업이 어떻게 가격을 책정하고, 광고하며 경쟁하는지를 분석하는 경제과학이다. 나아가 최근에는 비정형적이고 고차원적인 관찰 데이터로부터 신뢰할 수 있는 정량적 수치를 도출하는 계산과학의 성격을 강하게 띠고 있다. 이 책은 이 세 가지 관점을 하나의 통합된 학문 체계로 다룬다. 브랜드 프리미엄, 확산 곡선, 클릭률 탄력성, 구조적 수요 모형의 모수는 서로 분리된 개념이 아니라, 잠재 구성개념(latent construct)을 엄밀하고 검증 가능한 방식으로 관찰 가능한 결과와 연결한다는 동일한 근본 과제를 바라보는 서로 다른 시각이다.
 
@@ -238,7 +238,7 @@ $$\mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\varepsilon},
 <!-- ====== Section from: 01b-history-of-marketing-thought.qmd ====== -->
 
 
-# 마케팅 사상사 {#sec-history}
+## 마케팅 사상사 {#sec-history}
 
 마케팅은 자기 성찰적 성격이 매우 강한 역사를 지닌 비교적 젊은 학문이다. 대다수 학문 분야는 스스로의 학문적 경계를 안정적으로 확립한 후 역사적 맥락에 대한 고민을 역사가들에게 일임하는 반면, 마케팅은 한 세대(약 20~30년)마다 근본적인 질문(즉, 마케팅이란 무엇인가, 마케팅에서 지식으로 인정받는 것은 무엇인가, 그리고 그 지식은 궁극적으로 누구를 위한 것인가)으로 되돌아가 이를 재검토한다. 마케팅 학계는 공식적인 정의를 반복해서 재작성해 왔고 진리(truth)가 과연 도달 가능한 목표인가를 두고 공개적인 방법론 논쟁을 벌였으며 오직 마케팅 사상사만을 주제로 다루는 방대한 2차 문헌들을 축적해 왔다 [@bartels1988history; @shaw2005schools].
 
@@ -435,7 +435,7 @@ flowchart LR
 <!-- ====== Section from: parts/constructs.qmd ====== -->
 
 
-# 구성개념 {#sec-part-constructs}
+## 구성개념 {#sec-part-constructs}
 
 마케팅 학문은 세 가지 기둥에 기반을 둔다. 첫 번째 기둥은 구성개념(construct) 영역이다. 이는 이론 구축의 기초가 되는 직접 관찰 불가능한 개념들(예: 만족, 신뢰, 지각된 가치, 브랜드 자산)을 의미한다. 구성개념은 현실 세계에 물리적으로 존재하는 실체가 아니라 관찰 가능한 지표들로부터 추론하는 추상적 개념이다. 따라서 이 기둥의 핵심 과제는 *정의적 문제*(이 개념은 무엇이며 유사한 인접 개념들과 어떻게 구별되는가?)와 *심리측정적 문제*(우리의 측정 도구가 해당 개념을 실제로 포착하고 있는가?)에 있다. 다른 두 기둥, 즉 실질적 영역의 현실 세계 현상과 방법론의 추론적 메커니즘은 이들이 연결하는 구성개념이 명확하게 규정될 때 비로소 제 기능을 발휘한다.
 
@@ -445,7 +445,7 @@ flowchart LR
 <!-- ====== Section from: 02-construct-vs-variable.qmd ====== -->
 
 
-# 구성개념 vs. 변수 {#sec-construct-vs-variable}
+## 구성개념 vs. 변수 {#sec-construct-vs-variable}
 
 마케팅 과학자들이 관심을 갖는 거의 모든 대상은 직접 관찰할 수 없다. 브랜드 자산, 고객 만족, 지각된 품질, 구매 의도, 신뢰, 관여도, 충성도 등이 그러하다. 이들 중 어느 것도 온도계가 온도를 측정하듯 계측 장비로 직접 읽어낼 수 없다. 이들은 구성개념(construct)이다. 즉, 연구 공동체가 상호 무관해 보이는 방대한 관찰 결과들을 체계적으로 조직화하기 위해 고안하고 명명하며 마치 실재하는 것처럼 취급하기로 합의한 추상적 개념이다. 우리가 실제로 기록하는 것(예: 클릭, 7점 척도 응답, 반복 구매, 별점 개수)은 변수(variable)이다. 변수는 우리가 직접 볼 수 없는 구성개념을 대리하는 관찰된 수치이다. 마케팅의 모든 실증적 연구는 이 둘 사이의 연결 다리에 기초하고 있으며 응용 연구에서 발생하는 대부분의 오류는 바로 이 다리 위에서 발생한다.
 
@@ -580,7 +580,7 @@ flowchart LR
 #| message: false
 #| warning: false
 #| label: cvv-setup-lavaan
-# lavaan 사용 가능 여부 확인 및 설치
+## lavaan 사용 가능 여부 확인 및 설치
 if (!requireNamespace("lavaan", quietly = TRUE)) {
   install.packages("lavaan", repos = "https://cloud.r-project.org")
 }
@@ -672,13 +672,13 @@ rho_true <- 0.50                 # 복원하고자 하는 참된 진점수 상�
 rel_x    <- 0.70                 # X의 신뢰도
 rel_y    <- 0.60                 # Y의 신뢰도
 
-# 목표 상관계수를 갖는 두 진점수 생성
+## 목표 상관계수를 갖는 두 진점수 생성
 L  <- chol(matrix(c(1, rho_true, rho_true, 1), 2))
 TT <- matrix(rnorm(n * 2), n, 2) %*% L
 Tx <- TT[, 1]; Ty <- TT[, 2]
 
-# 관찰 신뢰도가 rel_x, rel_y가 되도록 고전적 오차 추가
-# Var(true) = 1이므로, 오차 분산 = (1 - rel)/rel 일 때 참 분산 비율이 rel이 됨
+## 관찰 신뢰도가 rel_x, rel_y가 되도록 고전적 오차 추가
+## Var(true) = 1이므로, 오차 분산 = (1 - rel)/rel 일 때 참 분산 비율이 rel이 됨
 ex <- rnorm(n, sd = sqrt((1 - rel_x) / rel_x))
 ey <- rnorm(n, sd = sqrt((1 - rel_y) / rel_y))
 X  <- Tx + ex
@@ -761,7 +761,7 @@ err   <- sapply(sqrt(1 - lambda^2),                 # 적재치로부터 유도�
 X     <- sweep(err, 2, lambda, `+`) +               # x_k = lambda_k * eta + e_k
          outer(eta, lambda)
 
-# 크론바흐 알파 함수 직접 구현 (수식 eq-02-alpha)
+## 크론바흐 알파 함수 직접 구현 (수식 eq-02-alpha)
 cronbach_alpha <- function(items) {
   k <- ncol(items)
   item_var  <- sum(apply(items, 2, var))
@@ -796,7 +796,7 @@ true_q <- rnorm(n, mean = 0, sd = 1)        # 대상 i의 안정적인 잠재 �
 r1 <- true_q + rnorm(n, sd = 0.6)            # 평가자 1
 r2 <- true_q + rnorm(n, sd = 0.6)            # 평가자 2
 
-# 분산 성분을 통한 일원배치 ICC (대상 간 분산 / 총 분산)
+## 분산 성분을 통한 일원배치 ICC (대상 간 분산 / 총 분산)
 ms_between <- 2 * var(rowMeans(cbind(r1, r2)))           # 대상당 2명의 평가자
 ms_within  <- mean((r1 - r2)^2) / 2
 icc <- (ms_between - ms_within) / (ms_between + ms_within)
@@ -859,7 +859,7 @@ flowchart TB
 set.seed(3142)
 n <- 600
 
-# 참된 상관계수가 0.45인 두 잠재 구성개념 생성
+## 참된 상관계수가 0.45인 두 잠재 구성개념 생성
 Sigma <- matrix(c(1, 0.45, 0.45, 1), 2)
 L     <- chol(Sigma)
 F     <- matrix(rnorm(n * 2), n, 2) %*% L
@@ -876,15 +876,15 @@ B <- make_block(F[, "eta_B"], lam_B)
 dat <- data.frame(A, B)
 names(dat) <- c(paste0("a", 1:3), paste0("b", 1:3))
 
-# 2요인 최대우도 EFA로 적재치 복원
+## 2요인 최대우도 EFA로 적재치 복원
 fa <- factanal(dat, factors = 2, rotation = "promax")
 load <- fa$loadings[, 1:2]
 
-# 주 요인을 활용하여 구성개념별 평균 분산 추출값(AVE, eq-02-ave) 계산
+## 주 요인을 활용하여 구성개념별 평균 분산 추출값(AVE, eq-02-ave) 계산
 ave_A <- mean(load[1:3, which.max(colSums(abs(load[1:3, ])))]^2)
 ave_B <- mean(load[4:6, which.max(colSums(abs(load[4:6, ])))]^2)
 
-# 추정된 요인 점수로부터 구성개념 간 상관계수 계산
+## 추정된 요인 점수로부터 구성개념 간 상관계수 계산
 fs <- factanal(dat, factors = 2, rotation = "promax", scores = "regression")$scores
 phi2 <- cor(fs[, 1], fs[, 2])^2
 
@@ -942,8 +942,8 @@ CMV는 [그림 @fig-cm-gap]의 정의상 정확히 오염(contamination)에 해�
 #| label: cvv-network
 set.seed(4040)
 
-# 조건부 의존성의 희소 "네트워크"로부터 문항 시뮬레이션:
-# 체인 구조 x1 - x2 - x3 - x4 (각 문항은 주로 인접 문항에 의존)
+## 조건부 의존성의 희소 "네트워크"로부터 문항 시뮬레이션:
+## 체인 구조 x1 - x2 - x3 - x4 (각 문항은 주로 인접 문항에 의존)
 n <- 1000
 x1 <- rnorm(n)
 x2 <- 0.6 * x1 + rnorm(n, sd = 0.8)
@@ -951,8 +951,8 @@ x3 <- 0.6 * x2 + rnorm(n, sd = 0.8)
 x4 <- 0.6 * x3 + rnorm(n, sd = 0.8)
 net_dat <- data.frame(x1, x2, x3, x4)
 
-# 편상관 행렬: 네트워크 심리측정학의 핵심 객체
-# 엣지는 조건부 의존성을 의미함 (정규화된 정밀도 행렬의 비대각 원소에 음부호)
+## 편상관 행렬: 네트워크 심리측정학의 핵심 객체
+## 엣지는 조건부 의존성을 의미함 (정규화된 정밀도 행렬의 비대각 원소에 음부호)
 prec <- solve(cor(net_dat))
 pcor <- -prec / sqrt(outer(diag(prec), diag(prec)))
 diag(pcor) <- 1
@@ -993,7 +993,7 @@ if (requireNamespace("qgraph", quietly = TRUE)) {
 <!-- ====== Section from: 03-satisfaction.qmd ====== -->
 
 
-# 고객 만족 {#sec-satisfaction}
+## 고객 만족 {#sec-satisfaction}
 
 고객 만족(Customer satisfaction)은 소비자가 제품이나 서비스의 성과를 특정 준거 기준과 비교한 후 형성하는 평가적 판단이다. 고객 만족은 마케팅 실무에서 가장 광범위하게 조사되는 구성개념인 동시에 이론적으로 가장 정교한 분석을 요구하는 개념 중 하나이다. 만족도 점수는 단순한 태도의 직접적인 측정이 아니라 비교 과정의 잔여물(residual)이며 성과를 판단하는 준거 기준 자체도 평가 대상이 되는 소비 경험에 의해 역동적으로 형성된다. 이 장에서는 만족을 두 개의 상호 연결된 객체로 다룬다. 첫째는 심리학적 구성개념이다. 이는 사전 기대에 닻을 내리고 정서적·인지적 입력 요소를 바탕으로 형성되는 구매 후 판단이다. 둘째는 재무적 자산이다. 이는 만족이 변동할 때 현금 흐름, 주식 수익률, 그리고 그 수익률이 수반하는 위험을 변동시키는 선행 지표이다. 엄밀한 학술 분석은 이 두 측면을 반드시 연결해야 하며 미국고객만족도지수(ACSI)를 적극 활용하는 현대 실증 문헌들은 이러한 통합을 성공적으로 수행하고 있다.
 
@@ -1048,7 +1048,7 @@ $$S = \alpha + \beta_E\, E + \beta_D\, (P - E) + \varepsilon,$$ {#eq-03-disconfi
 ```{.r}
 set.seed(42)
 
-# 외부 패키지 의존성이 없는 [-1, 1] 범위의 기초 사전 기반 감성 점수 함수
+## 외부 패키지 의존성이 없는 [-1, 1] 범위의 기초 사전 기반 감성 점수 함수
 positive <- c("great", "excellent", "love", "happy", "satisfied",
               "recommend", "good", "fast", "reliable", "delighted")
 negative <- c("bad", "terrible", "hate", "slow", "broken",
@@ -1178,7 +1178,7 @@ flowchart LR
 <!-- ====== Section from: 03a-relational-constructs.qmd ====== -->
 
 
-# 신뢰, 몰입, 충성도 {#sec-relational}
+## 신뢰, 몰입, 충성도 {#sec-relational}
 
 만족([@sec-satisfaction])이 단일 소비 에피소드의 평가적 잔여물이라면, 관계적(relational) 구성개념들은 다수의 에피소드에 걸쳐 축적된 심리적 자산이다. 1980년대 후반 마케팅의 "관계적 전환(relational turn)"은 교환을 독립적인 일회성 거래의 연속이 아니라 과거의 경험과 기대되는 미래를 지닌 지속적인 관계로 재개념화했다. 그리고 이러한 관계를 결속시키는 접착제를 설명하기 위해 일련의 구성개념들을 도입했다. 확신을 가진 상대방에게 기꺼이 의존하려는 신뢰(trust), 가치 있는 관계를 유지하려는 지속적인 열망인 몰입(commitment), 그리고 상황적 이탈 유인에도 불구하고 동일한 상대방을 지속적으로 선택하려는 성향인 충성도(loyalty)가 그것이다. 이 세 가지는 관계 마케팅에서 가장 집중적으로 이론화된 무형 자산이며 신뢰와 몰입이 심리적 매개변수 역할을 하고 충성도가 행동적·태도적 결과변수 역할을 하는 인과 사슬을 형성한다.
 
@@ -1255,7 +1255,7 @@ set.seed(914)
 have_lavaan <- requireNamespace("lavaan", quietly = TRUE)
 
 n <- 800
-# --- 잠재 구성개념 (구조 모형) ---
+## --- 잠재 구성개념 (구조 모형) ---
 shared <- rnorm(n)                              # 공유 가치
 comm   <- rnorm(n)                              # 커뮤니케이션
 trust  <- 0.45 * shared + 0.35 * comm + rnorm(n, sd = 0.7)
@@ -1263,7 +1263,7 @@ benef  <- rnorm(n)                              # 관계 효익
 commit <- 0.50 * trust + 0.30 * benef + rnorm(n, sd = 0.7)
 acquie <- 0.55 * commit + rnorm(n, sd = 0.8)    # 묵인 (결과)
 
-# --- 반영적 측정: 구성개념당 3개의 지표 ---
+## --- 반영적 측정: 구성개념당 3개의 지표 ---
 ind <- function(eta, lambdas) {
   sapply(lambdas, function(l) l * eta + rnorm(length(eta), sd = sqrt(1 - l^2)))
 }
@@ -1339,8 +1339,8 @@ if (have_lavaan) {
 set.seed(2718)
 n <- 600
 
-# 태도와 행동은 상관되지만 완전히 동일하지 않음 (rho ~ 0.45):
-# 그 간극에 가짜 충성도와 잠재적 충성도가 위치함
+## 태도와 행동은 상관되지만 완전히 동일하지 않음 (rho ~ 0.45):
+## 그 간극에 가짜 충성도와 잠재적 충성도가 위치함
 rel_att  <- rnorm(n)
 repeat_b <- 0.45 * rel_att + rnorm(n, sd = sqrt(1 - 0.45^2))
 
@@ -1375,7 +1375,7 @@ legend("topleft", legend = levels(factor(cell)),
 set.seed(4040)
 n <- 700
 
-# 단일 2차 요인 RQ가 3개의 1차 요인을 유발하고 각 1차 요인은 3개 문항으로 측정됨
+## 단일 2차 요인 RQ가 3개의 1차 요인을 유발하고 각 1차 요인은 3개 문항으로 측정됨
 RQ     <- rnorm(n)
 trust  <- 0.80 * RQ + rnorm(n, sd = 0.6)
 commit <- 0.75 * RQ + rnorm(n, sd = 0.6)
@@ -1451,7 +1451,7 @@ if (have_lavaan) {
 <!-- ====== Section from: 03b-evaluative-constructs.qmd ====== -->
 
 
-# 지각된 품질, 가치, 위험 {#sec-evaluative}
+## 지각된 품질, 가치, 위험 {#sec-evaluative}
 
 만족([@sec-satisfaction])이 구매 *후*의 평가적 판단이고 관계적 구성개념([@sec-relational])이 여러 구매에 걸쳐 *축적*되는 것이라면, 이 둘의 측면에서 구매 의사결정 *이전과 도중에* 작용하여 선택을 이끄는 일련의 평가적 구성개념 군이 존재한다. 제품의 전반적인 우수성에 대한 판단인 지각된 품질(perceived quality), 포기한 것 대비 얻은 것에 대한 소비자의 평가인 지각된 가치(perceived value), 그리고 구매 결과의 불확실성으로부터 예상되는 잠재적 손실인 지각된 위험(perceived risk)이 그것이다. 이 세 가지는 소비자 평가 과정의 핵심 인지적 작업 도구이다. 이들은 본질적으로 지각적(perceptual)이다. 선택을 지배하는 것은 제품의 공학적 객관 품질, 회계적 가격, 또는 객관적 고장 확률이 아니라 이에 대한 소비자의 주관적 지각이다. 객관적 수치와 주관적 지각 사이의 간극은 연구자가 아닌 소비자의 관점에서 바라본 [@sec-construct-vs-variable] 의 구성개념-측정치 간극 문제와 정확히 일치한다.
 
@@ -1516,24 +1516,24 @@ $$ {#eq-eval-diffrel}
 set.seed(1988)
 n <- 5000
 
-# 양의 상관관계(rho = 0.6)를 갖는 참 잠재 기대와 지각
+## 양의 상관관계(rho = 0.6)를 갖는 참 잠재 기대와 지각
 L  <- chol(matrix(c(1, 0.6, 0.6, 1), 2))
 TT <- matrix(rnorm(n * 2), n, 2) %*% L
 Te <- TT[, 1]; Tp <- TT[, 2]
 
-# 각 관찰 점수의 신뢰도가 0.75가 되도록 고전적 오차 추가
+## 각 관찰 점수의 신뢰도가 0.75가 되도록 고전적 오차 추가
 rel <- 0.75
 add_err <- function(t) t + rnorm(length(t), sd = sqrt((1 - rel) / rel))
 E <- add_err(Te); P <- add_err(Tp)
 D <- P - E                                  # SERVQUAL 갭 점수
 
-# 평행 측정을 통한 신뢰도 추정
+## 평행 측정을 통한 신뢰도 추정
 parallel <- function(t) t + rnorm(length(t), sd = sqrt((1 - rel) / rel))
 relP <- cor(P, parallel(Tp))
 D2 <- parallel(Tp) - parallel(Te)
 relD <- cor(D, D2)
 
-# 참 지각에 의해 유발되는 결과변수; P와 D의 예측 R^2 비교
+## 참 지각에 의해 유발되는 결과변수; P와 D의 예측 R^2 비교
 y <- 0.5 * Tp + rnorm(n)
 r2 <- function(x) summary(lm(y ~ x))$r.squared
 
@@ -1622,13 +1622,13 @@ $$ {#eq-eval-risk}
 set.seed(1960)
 n <- 4000
 
-# 3가지 손실 유형: 재무적, 성능적, 사회적
+## 3가지 손실 유형: 재무적, 성능적, 사회적
 ploss  <- cbind(fin = runif(n, 0, .6), perf = runif(n, 0, .5), soc = runif(n, 0, .4))
 conseq <- cbind(fin = runif(n, .5, 1), perf = runif(n, .4, 1), soc = runif(n, .2, .8))
 
 risk_baseline <- rowSums(ploss * conseq)                 # 기본 지각된 위험 (eq-eval-risk)
 
-# 환불 보증은 재무적 손실의 *결과 크기*를 80% 차감함
+## 환불 보증은 재무적 손실의 *결과 크기*를 80% 차감함
 conseq_g <- conseq; conseq_g[, "fin"] <- conseq_g[, "fin"] * 0.2
 risk_guarantee <- rowSums(ploss * conseq_g)
 
@@ -1664,7 +1664,7 @@ cat(sprintf("보증 적용 후 임계값 초과 비율       : %.1f%%\n",
 <!-- ====== Section from: 03c-brand-self-constructs.qmd ====== -->
 
 
-# 브랜드 자산, 애착, 그리고 자아 {#sec-brand-self}
+## 브랜드 자산, 애착, 그리고 자아 {#sec-brand-self}
 
 앞선 두 장의 구성개념들은 소비자가 제품을 평가하고([@sec-evaluative]) 판매자와 유대 관계를 형성하는([@sec-relational]) 방식을 다루었다. 이 장에서는 많은 기업들에게 가장 가치 있는 단일 무형 자산인 브랜드(brand)가 소비자의 마음속에서 어떻게 살아 숨 쉬는지를 다룬다. 본 장에서는 브랜드를 기업 측면의 재무적 자산(브랜드 가치평가, 신호 이론, 주식 시장의 브랜드 가격 반영을 다루는 [@sec-branding] 의 주제)으로 다루지 않고 소비자 심리학적 구성개념으로 접근한다. 즉, 브랜드명이 활성화하는 인지도, 연상, 개성, 감정적 유대의 네트워크이자, 동일한 제품이 브랜드가 없을 때와 비교하여 브랜드가 부착되었을 때 소비자가 차별적으로 반응하도록 만드는 원천으로 다룬다. 이러한 차별적 반응(differential response) 자체가 곧 구성개념이며 아래 전개되는 모든 내용의 중심축을 이룬다.
 
@@ -1705,8 +1705,8 @@ n <- 2000
 branded <- rbinom(n, 1, 0.5)              # 1 = 브랜드 노출, 0 = 무브랜드 통제 조건
 price_premium <- runif(n, 0, 1)           # 동일한 마케팅 활동 (가격 프리미엄)
 
-# 무브랜드 구매자는 프리미엄에 민감하게 반응하지만 브랜드 구매자는 이를 용인함
-# 브랜드 자산 = 차별적 반응 = 상호작용 계수
+## 무브랜드 구매자는 프리미엄에 민감하게 반응하지만 브랜드 구매자는 이를 용인함
+## 브랜드 자산 = 차별적 반응 = 상호작용 계수
 intent <- 3.0 - 1.6 * price_premium +                    # 기본 프리미엄 저항
           1.4 * branded * price_premium +                # 브랜드 자산: 프리미엄 수용도
           0.3 * branded +                                # 기본 브랜드 리프트
@@ -1733,7 +1733,7 @@ cat(sprintf("\n무브랜드 조건의 가격 기울기: %.2f\n브랜드 조건�
 #| label: bse-personality-efa
 set.seed(1997)
 n <- 600
-# 5개의 잠재 개성 요인, 각 요인당 3개 특성 지표
+## 5개의 잠재 개성 요인, 각 요인당 3개 특성 지표
 facs <- c("진실성", "흥미유발", "유능성", "세련성", "강인성")
 F <- matrix(rnorm(n * 5), n, 5); colnames(F) <- facs
 lam <- c(0.82, 0.78, 0.72)
@@ -1781,13 +1781,13 @@ flowchart LR
 set.seed(2010)
 n <- 1500
 
-# 태도와 애착은 상관되지만 구별됨 (rho ~ 0.6)
+## 태도와 애착은 상관되지만 구별됨 (rho ~ 0.6)
 L  <- chol(matrix(c(1, 0.6, 0.6, 1), 2))
 Z  <- matrix(rnorm(n * 2), n, 2) %*% L
 attitude   <- Z[, 1]
 attachment <- Z[, 2]
 
-# 행동(예: 희생 감수 의지)은 애착에 더 강하게 의존함
+## 행동(예: 희생 감수 의지)은 애착에 더 강하게 의존함
 behavior <- 0.20 * attitude + 0.55 * attachment + rnorm(n, sd = 0.8)
 
 r2_att   <- summary(lm(behavior ~ attitude))$r.squared
@@ -1864,7 +1864,7 @@ CBBE의 기초는 @keller, 측정은 @yoo, 연구 과제 조망은 @kellerlehman
 <!-- ====== Section from: 03d-engagement-constructs.qmd ====== -->
 
 
-# 인게이지먼트, 관여도, 구전 (WOM) {#sec-engagement}
+## 인게이지먼트, 관여도, 구전 (WOM) {#sec-engagement}
 
 지금까지의 구성개념들은 소비자를 평가자([@sec-evaluative]), 관계 파트너([@sec-relational]), 브랜드 동일시 주체([@sec-brand-self])로 기술했다. 이 장에서는 소비자를 참여자(participant)로 다룬다. 즉, 기업에 대한 기여가 단순한 구매 행위를 넘어 주의 집중, 노력 투입, 자발적 옹호, 콘텐츠 생성, 추천으로 확장되는 주체이다. 세 가지 구성개념이 이러한 참여적 전환을 조직한다. 관여도(Involvement)는 소비자가 특정 대상에 얼마나 많은 인지적 노력을 기울일지를 결정하는 대상의 개인적 관련성이자 동기적 상태이다. 고객 인게이지먼트(Customer Engagement)는 단순 거래를 넘어서는 적극적 관계의 행동적·심리학적 발현이다. 그리고 구전(Word of Mouth, WOM)은 소비자가 다른 소비자들을 향해 전파하는 제품 및 브랜드에 관한 비공식적 커뮤니케이션이라는 사회적 산출물이며 디지털 시대에 세 개념 중 가장 중대하고 측정 가능한 대상이 되었다.
 
@@ -1903,8 +1903,8 @@ involvement <- rbinom(n, 1, 0.5)            # 1 = 고관여, 0 = 저관여
 arg_quality <- rnorm(n)                     # 메시지 논거의 질 (강도)
 periph_cue  <- rnorm(n)                     # 주변 단서 (모델 매력도 등)
 
-# 고관여: 논거의 질을 통한 설득 (중심 경로)
-# 저관여: 주변 단서를 통한 설득 (주변 경로)
+## 고관여: 논거의 질을 통한 설득 (중심 경로)
+## 저관여: 주변 단서를 통한 설득 (주변 경로)
 attitude <- 0.10 +
   0.55 * involvement * arg_quality +        # 중심 경로 (고관여 시에만 강함)
   0.10 * (1 - involvement) * arg_quality +
@@ -1965,7 +1965,7 @@ flowchart LR
 set.seed(2010)
 n <- 5000
 
-# 4대 가치 구성요소 시뮬레이션 (CLV와 완전 상관되지 않도록 설정)
+## 4대 가치 구성요소 시뮬레이션 (CLV와 완전 상관되지 않도록 설정)
 clv <- rgamma(n, shape = 2, scale = 120)                 # 직접 구매 가치
 crv <- rgamma(n, shape = 1.2, scale = 60) * (runif(n) < .5)  # 추천 가치
 civ <- rgamma(n, shape = 1.1, scale = 90) * (runif(n) < .4)  # 인플루언서 가치
@@ -2014,7 +2014,7 @@ set.seed(1998)
 n <- 1500
 sat <- runif(n, 1, 7)                          # 만족도 (1~7)
 center <- 4
-# 불만족 영역의 기울기가 더 가파른 U자형 함수
+## 불만족 영역의 기울기가 더 가파른 U자형 함수
 wom <- 1.2 * (sat - center)^2 +
        0.9 * pmax(center - sat, 0) +           # 불만족 영역의 추가적인 구전량
        rnorm(n, sd = 1.5)
@@ -2056,7 +2056,7 @@ legend("top", c("선형 적합선 (오류)", "2차 적합선 (올바름)"),
 <!-- ====== Section from: 03e-frontier-constructs.qmd ====== -->
 
 
-# 프런티어 구성개념 {#sec-frontier}
+## 프런티어 구성개념 {#sec-frontier}
 
 마케팅의 구성개념 지도는 닫혀 있지 않다. 시장, 기술, 그리고 소비자의 삶의 양식이 변화함에 따라 새로운 구성개념들이 명제망(nomological network)으로 진입한다. 일부는 새로운 현상이 이를 요구하기 때문이며(소비자들은 이제 *알고리즘*에 반응하고 소유하기보다 공유하며 개인화를 위해 데이터를 교환한다), 일부는 오랜 직관이 마침내 측정 가능해졌기 때문이다. 이 장에서는 현재 프런티어에 위치한 6가지 구성개념을 살펴본다: 고객 경험(customer experience), 심리적 소유감(psychological ownership), 브랜드 진정성(brand authenticity), 알고리즘 혐오(algorithm aversion)(및 AI에 대한 소비자 반응의 더 넓은 범주), 프라이버시 염려(privacy concern), 접근 기반 소비(access-based consumption). 이들 각각은 본 부(Part)의 서두에서 제시한 크론바흐-밀(CronbachMeehl) 승인 기준을 충족할 만큼 충분한 법칙적 관계를 축적해 왔으며 경험적, 소유적, 정체성-진정성, 기술적, 정보적, 소유 모델 측면에서 서로 다른 프런티어를 보여준다.
 
@@ -2116,14 +2116,14 @@ n <- 2000
 owned <- rbinom(n, 1, 0.5)                      # 1 = 접촉/직접 디자인 조건
 base_value <- rnorm(n, mean = 20, sd = 5)       # 제품의 내재적 가치 평가
 
-# 심리적 소유감은 조건에 의해 유도되며(개인차 존재),
-# 소유감은 지불의향액(WTP)을 증가시킨다 (보유 효과 경로).
+## 심리적 소유감은 조건에 의해 유도되며(개인차 존재),
+## 소유감은 지불의향액(WTP)을 증가시킨다 (보유 효과 경로).
 psych_own <- 0.9 * owned + rnorm(n, sd = 0.4)   # 잠재적 지각 소유감
 wtp <- base_value + 6.0 * psych_own + rnorm(n, sd = 3)
 
 cat(sprintf("평균 WTP, 통제 집단            : $%.2f\n", mean(wtp[owned == 0])))
 cat(sprintf("평균 WTP, 소유감 유도 집단     : $%.2f\n", mean(wtp[owned == 1])))
-# 매개 분석: 지각된 소유감이 WTP에 대한 조건의 효과를 매개하는가?
+## 매개 분석: 지각된 소유감이 WTP에 대한 조건의 효과를 매개하는가?
 tot <- coef(lm(wtp ~ owned))["owned"]
 dir <- coef(lm(wtp ~ owned + psych_own))["owned"]
 cat(sprintf("WTP에 대한 조건의 총 효과     : $%.2f\n", tot))
@@ -2161,11 +2161,11 @@ flowchart TB
 set.seed(2015)
 n <- 3000
 
-# 알고리즘이 인간보다 실제로 더 정확하다 (평균 오차가 더 작음).
+## 알고리즘이 인간보다 실제로 더 정확하다 (평균 오차가 더 작음).
 err_algo  <- abs(rnorm(n, sd = 0.6))
 err_human <- abs(rnorm(n, sd = 1.0))
 
-# 그러나 알고리즘 오류는 약 2배 더 무겁게 처벌된다 (혐오의 비대칭성).
+## 그러나 알고리즘 오류는 약 2배 더 무겁게 처벌된다 (혐오의 비대칭성).
 penalty_algo  <- 2.0
 penalty_human <- 1.0
 trust_algo  <- 10 - penalty_algo  * err_algo
@@ -2177,7 +2177,7 @@ cat(sprintf("알고리즘이 더 정확함 (평균 오차: %.2f vs %.2f).\n",
 cat(sprintf("그럼에도 소비자의 %.1f%%만이 (우수한) 알고리즘을 선택함,\n",
             100 * mean(choose_algo)))
 cat("알고리즘 오류가 인간 오류보다 2배 더 가혹하게 처벌받기 때문임.\n")
-# 비대칭성 제거: 두 주체를 동일하게 처벌 -> 선택 결과가 반전됨.
+## 비대칭성 제거: 두 주체를 동일하게 처벌 -> 선택 결과가 반전됨.
 fair <- (10 - err_algo) > (10 - err_human)
 cat(sprintf("대칭적 오류 페널티 적용 시, %.1f%%가 알고리즘을 선택함.\n",
             100 * mean(fair)))
@@ -2228,7 +2228,7 @@ flowchart LR
 <!-- ====== Section from: parts/substantive.qmd ====== -->
 
 
-# 실질적 연구 영역 {#sec-part-substantive}
+## 실질적 연구 영역 {#sec-part-substantive}
 
 두 번째 기둥은 실질적(substantive) 연구 영역이다. 즉, 마케팅이 실제로 연구하는 다양한 현상들을 의미한다.
 구성개념의 기둥이 *개념이 무엇을 의미하는가*를 묻는다면, 실질적 영역의 기둥은 *현실 세계에서 무슨 일이 일어나고 있는가*를 묻는다. 브랜드가 어떻게 가치를 축적하는지, 가격이 어떻게 책정되고 지각되는지, 광고가 어떻게 작동하는지, 고객이 어떻게 획득되고 유지되는지, 혁신이 어떻게 확산되고 시장 진입이 이루어지는지, 온라인에서 커뮤니티가 어떻게 형성되고 영향력이 어떻게 확산되는지 등을 탐구한다. 이러한 맥락들은 이론에 동기를 부여하고 데이터를 제공한다.
@@ -2239,7 +2239,7 @@ flowchart LR
 <!-- ====== Section from: marketing-strategy.qmd ====== -->
 
 
-# 마케팅 전략 {#sec-marketing-strategy}
+## 마케팅 전략 {#sec-marketing-strategy}
 
 마케팅 전략(marketing strategy)은 소비자가 어떻게 선택하는가가 아니라 기업이 어떻게 승리하는가를 묻는 분야다. 본서의 대부분이 개별 고객 단위의 의사결정을 연구하는 반면, 본 장에서는 분석 수준을 기업으로 끌어올려 기업이 어떻게 고객을 위한 가치를 창출하고 그 가치의 일부를 기업 몫으로 포착하며 이를 원치 않는 경쟁자들에 맞서 어떻게 이 구조를 지속 가능한 형태로 유지하는지를 탐구한다. 마케팅 전략은 기업이 이러한 목적을 달성하기 위해 내리는 통합된 의사결정 패턴이다. 즉, 어떤 시장에 진입할 것인가, 어떤 고객을 확보하고 유지할 것인가, 어떤 이미지로 인식될 것인가, 마케팅 예산을 어디에 투자할 것인가, 그리고 이를 실행할 조직을 어떻게 구성할 것인가를 결정한다. 이를 평가하는 통합적 기준은 바로 성과다. 마케팅 전략은 그럴듯한 명분이 아니라 고객, 재무, 주식 시장 및 사회적 성과에 의해 평가받는다 [@varadarajan; @morgan2018].
 
@@ -2331,8 +2331,8 @@ firms <- tibble(
   quality   = rnorm(n, 0, 1)
 )
 
-# 참 모형: 시장 지향성(MO)은 도움이 되며 경쟁 강도가 높을 때 더 큰 효과를 냄.
-# 기업 역량이 순진한 상관관계를 교란시킴.
+## 참 모형: 시장 지향성(MO)은 도움이 되며 경쟁 강도가 높을 때 더 큰 효과를 냄.
+## 기업 역량이 순진한 상관관계를 교란시킴.
 firms <- firms %>%
   mutate(
     mo_obs = mo + 0.5 * quality,                       # 역량이 MO 관측치를 부풀림
@@ -2342,10 +2342,10 @@ firms <- firms %>%
              rnorm(n, 0, 1)
   )
 
-# (1) 단순 회귀분석: 역량을 누락하여 MO 효과가 상향 편향됨
+## (1) 단순 회귀분석: 역량을 누락하여 MO 효과가 상향 편향됨
 naive <- lm(perf ~ mo_obs, data = firms)
 
-# (2) 역량을 통제한 조절 회귀분석: 참 구조를 회복함
+## (2) 역량을 통제한 조절 회귀분석: 참 구조를 회복함
 moderated <- lm(perf ~ mo_obs * intensity + quality, data = firms)
 
 round(rbind(
@@ -2455,10 +2455,10 @@ panel <- expand.grid(firm = 1:n_firm, year = 1:n_year) %>%
               rnorm(n(), 0, 0.30)
   )
 
-# 풀드 OLS (고정효과 미포함)는 효과를 과대추정함: 기업 내 변량과 기업 간 변량을 혼동함
+## 풀드 OLS (고정효과 미포함)는 효과를 과대추정함: 기업 내 변량과 기업 간 변량을 혼동함
 pooled <- lm(tobin_q ~ brand_equity + leverage + cash_flow, data = panel)
 
-# 이원 고정효과: 브랜드 자산의 기업 내(WITHIN-firm) 변화로부터 식별함
+## 이원 고정효과: 브랜드 자산의 기업 내(WITHIN-firm) 변화로부터 식별함
 fe <- lm(tobin_q ~ brand_equity + leverage + cash_flow +
            factor(firm) + factor(year), data = panel)
 
@@ -2511,7 +2511,7 @@ round(c(풀드_OLS_추정치 = coef(pooled)["brand_equity"],
 <!-- ====== Section from: 08-branding.qmd ====== -->
 
 
-# 브랜딩 {#sec-branding}
+## 브랜딩 {#sec-branding}
 
 *브랜드(brand)*는 이름, 상징, 또는 디자인이 이를 접하는 사람들에게 불러일으키는 연상의 집합이다. 이러한 연상은 경제적 자산이다. 이는 수요를 이동시키고 가격 프리미엄을 창출하며 강력할 때는 대차대조표와 주식 시장의 기업 가치 평가에 반영된다. 본 장에서는 브랜딩을 긴밀하게 결합된 두 가지 대상, 즉 행동적(behavioral) 구성개념(브랜드가 소비자에게 무엇을 의미하는가)과 재무적(financial) 구성개념(브랜드가 기업에 얼마의 가치를 지니는가)으로 다룬다. 브랜딩에 대한 엄밀한 학술적 설명은 이 둘을 반드시 연결해야 하며 현대 실증 문헌은 이를 점차 실현하고 있다.
 
@@ -2661,8 +2661,8 @@ set.seed(42)
 n_stores <- 30; n_weeks <- 52
 grid <- expand.grid(store = 1:n_stores, week = 1:n_weeks)
 
-# 전국 브랜드(NB): 더 높은 기준 가격과 더 강력한 기준 수요 (브랜드 자산);
-# PB: 더 저렴하고 기준 수요가 낮음. 두 브랜드 모두 로그-로그 수요 함수를 따름.
+## 전국 브랜드(NB): 더 높은 기준 가격과 더 강력한 기준 수요 (브랜드 자산);
+## PB: 더 저렴하고 기준 수요가 낮음. 두 브랜드 모두 로그-로그 수요 함수를 따름.
 sim_brand <- function(base_logdemand, base_price, elasticity, n, sd_price) {
   price <- pmax(0.5, base_price + rnorm(n, 0, sd_price))
   units <- exp(base_logdemand + elasticity * log(price) + rnorm(n, 0, 0.20))
@@ -2679,8 +2679,8 @@ scan_dat <- bind_rows(
   cbind(grid, brand = "PrivateLabel", pl)
 )
 
-# 매출 프리미엄 = (전국 브랜드 매출) - (PB 브랜드 매출),
-# 매장-주차 수준으로 집계 후 평균 계산 (Ailawadi, Lehmann & Neslin 2003).
+## 매출 프리미엄 = (전국 브랜드 매출) - (PB 브랜드 매출),
+## 매장-주차 수준으로 집계 후 평균 계산 (Ailawadi, Lehmann & Neslin 2003).
 rev_long <- scan_dat |>
   mutate(revenue = price * units) |>
   group_by(store, week, brand) |>
@@ -2690,7 +2690,7 @@ rev_nb <- rev_long$revenue[rev_long$brand == "National"]
 rev_pl <- rev_long$revenue[rev_long$brand == "PrivateLabel"]
 revenue_premium <- mean(rev_nb - rev_pl)
 
-# 로그-로그 회귀분석을 통한 브랜드별 자체 가격 탄력성 추정
+## 로그-로그 회귀분석을 통한 브랜드별 자체 가격 탄력성 추정
 elas <- scan_dat |>
   group_by(brand) |>
   summarise(elasticity = coef(lm(log(units) ~ log(price)))[["log(price)"]],
@@ -2713,8 +2713,8 @@ firm <- data.frame(
   rd_intensity  = rbeta(N, 2, 8)                      # 기타 무형 자산 통제변수 (R&D)
 )
 
-# 참 데이터 생성 과정: 무형 가치는 광고 점유율과 선도 진입에 비례하여 증가하며
-# 비브랜드 무형 자산(R&D)과 오차항이 추가됨.
+## 참 데이터 생성 과정: 무형 가치는 광고 점유율과 선도 진입에 비례하여 증가하며
+## 비브랜드 무형 자산(R&D)과 오차항이 추가됨.
 brand_intangible <- 120 * firm$ad_share + 15 * (7 - firm$order_entry)
 other_intangible <- 200 * firm$rd_intensity
 firm$market_value <- firm$tangible_repl + brand_intangible + other_intangible +
@@ -2723,8 +2723,8 @@ firm$market_value <- firm$tangible_repl + brand_intangible + other_intangible +
 firm$q          <- firm$market_value / firm$tangible_repl
 firm$intangible <- firm$market_value - firm$tangible_repl
 
-# 무형 가치를 브랜드 동인 및 통제변수에 대해 회귀분석;
-# 적합된 브랜드 구성요소가 무형 가치 중 브랜드 자산 비중이 됨 (Simon & Sullivan 1993).
+## 무형 가치를 브랜드 동인 및 통제변수에 대해 회귀분석;
+## 적합된 브랜드 구성요소가 무형 가치 중 브랜드 자산 비중이 됨 (Simon & Sullivan 1993).
 fit <- lm(intangible ~ ad_share + I(7 - order_entry) + rd_intensity, data = firm)
 firm$brand_equity_hat <- coef(fit)["ad_share"] * firm$ad_share +
   coef(fit)["I(7 - order_entry)"] * (7 - firm$order_entry)
@@ -2764,12 +2764,12 @@ set.seed(11)
 n_resp <- 1500
 J <- 4                                  # 3개 브랜드 + 1개 무상표 외부 대안
 
-# 참 효용: 브랜드별 고유 절편(ASC), 가격(음수), 품질(양수).
+## 참 효용: 브랜드별 고유 절편(ASC), 가격(음수), 품질(양수).
 asc   <- c(BrandA = 1.6, BrandB = 1.0, BrandC = 0.4, NoName = 0.0)
 b_pr  <- -0.9
 b_qu  <-  0.7
 
-# 각 응답자는 대안별로 무작위 가격/품질이 제시된 1개의 선택 세트를 봄.
+## 각 응답자는 대안별로 무작위 가격/품질이 제시된 1개의 선택 세트를 봄.
 make_set <- function() {
   price   <- runif(J, 1, 5)
   quality <- runif(J, 0, 3)
@@ -2782,7 +2782,7 @@ make_set <- function() {
 dat <- do.call(rbind, lapply(1:n_resp, function(i)
   cbind(set = i, make_set())))
 
-# 설계 행렬: 3개 브랜드 더미 (NoName이 기준 범주) + 가격 + 품질.
+## 설계 행렬: 3개 브랜드 더미 (NoName이 기준 범주) + 가격 + 품질.
 X <- cbind(
   BrandA  = as.integer(dat$alt == 1),
   BrandB  = as.integer(dat$alt == 2),
@@ -2816,7 +2816,7 @@ brands <- c("Summit", "Vela", "Norden", "Aero", "Lumen", "Cobalt")
 assoc  <- c("rugged", "premium", "playful", "eco", "techy", "trusted",
             "affordable", "youthful")
 
-# 잠재 포지셔닝: 각 브랜드는 특정 연상 단어들을 강조함.
+## 잠재 포지셔닝: 각 브랜드는 특정 연상 단어들을 강조함.
 profile <- matrix(rgamma(length(brands) * length(assoc), shape = 0.4, rate = 1),
                   nrow = length(assoc), dimnames = list(assoc, brands))
 profile["rugged",  "Summit"] <- 6; profile["eco",     "Summit"]  <- 4
@@ -2826,7 +2826,7 @@ profile["techy",   "Aero"]   <- 6; profile["youthful","Aero"]    <- 4
 profile["playful", "Lumen"]  <- 6; profile["youthful","Lumen"]   <- 5
 profile["premium", "Cobalt"] <- 5; profile["techy",   "Cobalt"]  <- 5
 
-# TF-IDF 가중치 적용 후 단어-브랜드 행렬에 대한 저차원 SVD 임베딩 수행.
+## TF-IDF 가중치 적용 후 단어-브랜드 행렬에 대한 저차원 SVD 임베딩 수행.
 tf  <- t(t(profile) / colSums(profile))
 idf <- log(ncol(profile) / (rowSums(profile > 0.5) + 1))
 M   <- tf * idf
@@ -2834,7 +2834,7 @@ sv  <- svd(M)
 brand_emb <- diag(sv$d[1:4]) %*% t(sv$v[, 1:4])   # 4차원 브랜드 임베딩
 colnames(brand_emb) <- brands
 
-# 브랜드 임베딩 간 코사인 거리 기반 고전적 MDS 분석
+## 브랜드 임베딩 간 코사인 거리 기반 고전적 MDS 분석
 cos_sim <- function(A) {
   A <- scale(A, center = FALSE, scale = sqrt(colSums(A^2)))
   t(A) %*% A
@@ -2966,27 +2966,27 @@ $$ \text{브랜드 가치} = \sum_{t=1}^{T} \frac{\text{브랜드 이익}_t}{(1+
 여기서 $r$은 할인율이고 $g$는 영구 성장률이다(고든 성장 모형에 따른 잔존 가치이며 $g < r$일 때만 유효함). 다음 예제는 과거 5년의 데이터를 바탕으로 향후 10년을 추정한다.
 
 ```{.r}
-# 과거 데이터 (1-5년차)
+## 과거 데이터 (1-5년차)
 after_tax_profit <- c(500000, 520000, 540000, 560000, 580000)
 cost_of_capital  <- c(100000, 105000, 110000, 115000, 120000)
 RBI              <- 0.7    # 브랜드 역할 지수 (Role of Brand Index)
 discount_rate    <- 0.08   # 연간 할인율 r
 future_years     <- 6:15   # 10개년 추정 기간
 
-# 1단계: 과거 경제적 이익 및 평균 성장률 계산
+## 1단계: 과거 경제적 이익 및 평균 성장률 계산
 economic_profit <- after_tax_profit - cost_of_capital
 growth_rate     <- mean(diff(economic_profit) / head(economic_profit, -1))
 
-# 2단계: 미래 경제적 이익 및 브랜드 이익 추정
+## 2단계: 미래 경제적 이익 및 브랜드 이익 추정
 projected_economic_profit <- economic_profit[length(economic_profit)] *
   (1 + growth_rate)^(seq_along(future_years))
 projected_brand_earnings  <- projected_economic_profit * RBI
 
-# 3단계: 현재 가치로 할인 (6년차 초 기준)
+## 3단계: 현재 가치로 할인 (6년차 초 기준)
 discounted_future_earnings <- projected_brand_earnings /
   (1 + discount_rate)^(seq_along(future_years))
 
-# 잔존 가치 (고든 성장 모형, g < r)
+## 잔존 가치 (고든 성장 모형, g < r)
 terminal_growth_rate     <- 0.02
 terminal_value           <- projected_brand_earnings[length(projected_brand_earnings)] /
   (discount_rate - terminal_growth_rate)
@@ -3004,8 +3004,8 @@ cat("총 브랜드 가치 (6년차 기준): $", format(round(total_brand_value),
 @boustanifar2025brand 는 공시 문서에서 *brand(s)*라는 단어의 출현 빈도를 문서 길이로 정규화한 텍스트 기반 지표를 구축했다. 이 지표는 미래지향적이며 광고비를 공시하지 않는 기업들(예: Tesla, Uber, Salesforce)까지 포괄한다.
 
 ```{.r}
-# 브랜드 집중도 지표 기본 R 구현 (외부 NLP 패키지 없음):
-# "brand"/"brands" 단어 수를 총 단어 수로 나눔.
+## 브랜드 집중도 지표 기본 R 구현 (외부 NLP 패키지 없음):
+## "brand"/"brands" 단어 수를 총 단어 수로 나눔.
 brand_text_measure <- function(texts) {
   clean <- gsub("[^a-z ]", " ", tolower(texts))          # 영문자와 공백만 유지
   total_words <- vapply(strsplit(trimws(clean), "\\s+"),
@@ -3073,7 +3073,7 @@ legend("topleft", legend = c("브랜드 자본", "광고비"),
 
 <!-- ====== Section from: 09-online-environments.qmd ====== -->
 
-# 온라인 환경 {#sec-online-environments}
+## 온라인 환경 {#sec-online-environments}
 
 마케팅은 검색 엔진, 소셜 플랫폼, 마켓플레이스, 리뷰 사이트, 모바일 앱, 라이브스트리밍, 증강현실(AR)과 인공지능(AI) 인터페이스 등 컴퓨터 매개(computer-mediated) 환경에서 전개된다. 이러한 환경은 단순한 유통 경로의 확장이 아니라, 소비자의 행동 양식과 기업이 관찰·측정할 수 있는 데이터의 지평을 근본적으로 바꾸어 놓았다. 클릭, 검색어, 게시글, 평점, 체류 시간 같은 디지털 접점(touchpoints)의 흔적은 전례 없는 정밀성을 지닌 데이터 스트림을 제공한다. 온라인 환경은 실질적(substantive) 연구 영역인 동시에 새로운 방법론적(methodological) 기회이다.
 
@@ -3218,15 +3218,15 @@ $$ {#eq-color-complexity}
 set.seed(42)
 
 n_weeks <- 60
-# 잠재 브랜드 건전성은 매끄러운 AR(1) 유사 경로를 따름.
+## 잠재 브랜드 건전성은 매끄러운 AR(1) 유사 경로를 따름.
 health <- as.numeric(filter(rnorm(n_weeks, 0, 0.3), 0.8, method = "recursive"))
 health <- scale(health)[, 1]
 
-# 다음 주 매출은 이번 주의 잠재 건전성과 노이즈에 의존함.
+## 다음 주 매출은 이번 주의 잠재 건전성과 노이즈에 의존함.
 sales <- 100 + 15 * dplyr::lag(health, default = 0) + rnorm(n_weeks, 0, 5)
 
-# 매주 건전성 주변에서 수많은 잠재 의견이 생성되지만
-# 게시 확률은 의견의 극단성에 비례하여 증가함 (극단성 자기선택 편향).
+## 매주 건전성 주변에서 수많은 잠재 의견이 생성되지만
+## 게시 확률은 의견의 극단성에 비례하여 증가함 (극단성 자기선택 편향).
 naive_sentiment      <- numeric(n_weeks)
 corrected_sentiment  <- numeric(n_weeks)
 for (t in seq_len(n_weeks)) {
@@ -3239,7 +3239,7 @@ for (t in seq_len(n_weeks)) {
   corrected_sentiment[t] <- weighted.mean(posted, w)
 }
 
-# 어떤 감성 시계열이 다음 주 매출을 더 잘 예측하는가?
+## 어떤 감성 시계열이 다음 주 매출을 더 잘 예측하는가?
 df <- data.frame(
   sales_next        = dplyr::lead(sales),
   naive             = naive_sentiment,
@@ -3268,7 +3268,7 @@ cat("보정된 감성 지표와 다음 주 매출 간 상관계수:   ", round(c
 
 <!-- ====== Section from: 10-advertising.qmd ====== -->
 
-# 광고 {#sec-advertising}
+## 광고 {#sec-advertising}
 
 광고(advertising)는 명시된 광고주가 소비자의 인지, 감정, 행동을 변화시키기 위해 비용을 지불하는 매개된 커뮤니케이션이다. 광고는 마케팅에서 가장 오래된 연구 대상이자 가장 큰 재량적 지출 항목 중 하나이다. 광고 연구에는 두 가지 상반된 실증적 사실이 공존한다. 첫째, 시장 반응 모형화와 메타분석에 따르면 광고는 소비자의 마인드셋과 행동을 변화시켜 궁극적으로 기업 가치를 제고한다 [@wang; @hewett2016]. 둘째, 엄밀한 현장 실험과 최신 계량 실증 증거에 따르면 개별 광고의 평균적 탄력성은 매우 작고 노이즈가 심하며 관찰 데이터의 광고 수익률은 선택 편향에 의해 과대평가되는 경우가 빈번한다 [@Shapiro_2018; @shapiro2021tv; @Gordon_2017; @Lewis_2015]. 이 두 사실을 조화시키는 열쇠는 바로 정밀한 측정(measurement)에 있다.
 
@@ -3408,13 +3408,13 @@ set.seed(10)
 n_markets <- 2000
 true_beta <- 0.5                       # 복원하고자 하는 인과적 광고 효과
 
-# 관리자는 관찰하지만 분석가는 관찰하지 못하는 수요 충격 (교란 요인)
+## 관리자는 관찰하지만 분석가는 관찰하지 못하는 수요 충격 (교란 요인)
 demand_shock <- rnorm(n_markets, 0, 1)
 
-# 관리자는 유리한 시장을 타깃팅함: 예상 충격에 비례하여 지출 증가
+## 관리자는 유리한 시장을 타깃팅함: 예상 충격에 비례하여 지출 증가
 advertising <- 2 + 1.2 * demand_shock + rnorm(n_markets, 0, 0.5)
 
-# 매출은 광고(true_beta)와 동일한 잠재 충격 모두에 의존함
+## 매출은 광고(true_beta)와 동일한 잠재 충격 모두에 의존함
 sales <- 5 + true_beta * advertising + 2.0 * demand_shock + rnorm(n_markets, 0, 1)
 
 naive   <- coef(lm(sales ~ advertising))["advertising"]
@@ -3449,7 +3449,7 @@ $$ {#eq-koyck-extended}
 library(tidyverse)
 set.seed(1)
 
-# --- 참 일별 데이터 생성 과정: Tellis & Franses (2006)의 DGP1 ---
+## --- 참 일별 데이터 생성 과정: Tellis & Franses (2006)의 DGP1 ---
 beta <- 1; lambda <- 0.9                          # 당기 효과; 일별 이월 효과
 daily <- expand.grid(
   day  = c("mon", "tue", "wed", "thu", "fri", "sat", "sun"),
@@ -3467,7 +3467,7 @@ for (t in 2:nrow(daily)) {
 }
 daily <- slice(daily, -1)
 
-# 주간 및 월간 단위로 집계
+## 주간 및 월간 단위로 집계
 weekly  <- daily |> group_by(year, month, week) |>
   summarise(sales = sum(sales), ad = sum(ad), .groups = "drop") |>
   arrange(year, month, week)
@@ -3475,12 +3475,12 @@ monthly <- daily |> group_by(year, month) |>
   summarise(sales = sum(sales), ad = sum(ad), .groups = "drop") |>
   arrange(year, month)
 
-# (a) 기존 코익 모형
+## (a) 기존 코익 모형
 koyck <- function(d) {
   s <- summary(lm(sales ~ lag(sales) + ad - 1, data = d))$coefficients
   c(lambda_hat = s[1, 1], beta_hat = s[2, 1])
 }
-# (b) 단위 노출 시간에서의 확장 코익 모형
+## (b) 단위 노출 시간에서의 확장 코익 모형
 koyck_ext <- function(d, K) {
   s   <- summary(lm(sales ~ lag(sales) + ad + lag(ad) - 1, data = d))$coefficients
   phi <- s[1, 1]; b1 <- s[2, 1]; b2 <- s[3, 1]
@@ -3513,7 +3513,7 @@ set.seed(2024)
 n_geo  <- 200
 true_lift <- 0.06                                  # 참 증분 효과: +6%
 
-# 시장별 및 기간별 기준선 매출 생성
+## 시장별 및 기간별 기준선 매출 생성
 geo_base <- rnorm(n_geo, 100, 15)
 period_shock <- 4                                  # 공통 계절성 리프트
 
@@ -3528,7 +3528,7 @@ did <- data.frame(
   delta = post - pre                               # 지역 내 사전-사후 변화량
 )
 
-# 이중차분법 (DiD): 처치군 변화량 - 통제군 변화량
+## 이중차분법 (DiD): 처치군 변화량 - 통제군 변화량
 est_lift_pct <- (mean(did$delta[did$treated]) -
                  mean(did$delta[!did$treated])) / mean(geo_base)
 
@@ -3547,7 +3547,7 @@ cat("추정된 리프트 (Estimated DiD) :", paste0(round(100 * est_lift_pct, 1)
 
 <!-- ====== Section from: 12-sales.qmd ====== -->
 
-# 영업 {#sec-sales}
+## 영업 {#sec-sales}
 
 영업(selling)은 기업의 마케팅 약속이 구매자의 지불의향액(WTP)과 맞닿는 최전선이다. 본 장에서는 영업 기능을 두 가지 핵심 측정 문제로 다룬다. 첫째는 관찰된 매출로부터 수요 곡선을 추론하는 문제이다. 순위나 판매량과 같은 불완전한 신호로부터 잠재 수요를 복원한다. 둘째는 영업 인력(sales force)의 관리 문제이다. 수요를 현금 흐름으로 전환하는 영업사원의 보상, 생산성, 이직, 그리고 미래 가치를 자산 관점에서 평가하고 최적화한다.
 
@@ -3630,7 +3630,7 @@ flowchart TD
 ```{.r}
 set.seed(12)
 
-# 참 구조적 모수
+## 참 구조적 모수
 a_p_true <- 0.80   # 유료 순위 형태 모수
 a_g_true <- 0.95   # 매출 순위 형태 모수
 b_p_true <- 5e5    # 유료 순위 척도 모수
@@ -3640,26 +3640,26 @@ N <- 200
 r_p   <- 1:N                                  # 유료 순위
 price <- round(runif(N, 0.99, 9.99), 2)       # 앱 가격
 
-# 유료 파레토 법칙에 따른 다운로드 생성
+## 유료 파레토 법칙에 따른 다운로드 생성
 downloads <- b_p_true * r_p^(-a_p_true)
 
-# 구조적 매핑에 따른 매출 순위 생성 (측정 노이즈 포함)
+## 구조적 매핑에 따른 매출 순위 생성 (측정 노이즈 포함)
 log_rg <- (1 / a_g_true) * log(b_g_true / b_p_true) +
           (a_p_true / a_g_true) * log(r_p) -
           (1 / a_g_true) * log(price) +
           rnorm(N, 0, 0.05)
 r_g <- exp(log_rg)
 
-# OLS 회귀분석 추정
+## OLS 회귀분석 추정
 fit <- lm(log(r_g) ~ log(r_p) + log(price))
 b   <- coef(fit)
 
-# 구조적 모수 복원
+## 구조적 모수 복원
 a_g_hat     <- -1 / b[["log(price)"]]
 a_p_hat     <- -b[["log(r_p)"]] / b[["log(price)"]]
 b_ratio_hat <- exp(-b[["log(r_p)"]] / b[["log(price)"]])
 
-# 총 다운로드 모멘트를 통한 척도 수준 복원
+## 총 다운로드 모멘트를 통한 척도 수준 복원
 D_t       <- sum(downloads)
 b_p_hat   <- D_t / sum(r_p^(-a_p_hat))
 
@@ -3704,14 +3704,14 @@ flowchart LR
 set.seed(34)
 
 n <- 600
-# 교육에 대해 서로 다른 미래 가치 반응을 보이는 2개 잠재 세그먼트
+## 교육에 대해 서로 다른 미래 가치 반응을 보이는 2개 잠재 세그먼트
 seg     <- rbinom(n, 1, 0.4)            # 세그먼트 지시자 (실제로는 미관찰)
 train   <- runif(n, 0, 10)             # 교육 시간
 slope   <- ifelse(seg == 1, 1.8, 0.3)  # 고반응군 vs 저반응군
 value   <- 20 + slope * train + rnorm(n, 0, 4)
 dat     <- data.frame(value, train)
 
-# EM 알고리즘을 통한 2성분 회귀 혼합 모형 적합 (기본 R)
+## EM 알고리즘을 통한 2성분 회귀 혼합 모형 적합 (기본 R)
 em_mixreg <- function(y, x, K = 2, iters = 100) {
   n <- length(y)
   pi_k  <- rep(1 / K, K)
@@ -3750,7 +3750,7 @@ data.frame(
 
 <!-- ====== Section from: 13-clv.qmd ====== -->
 
-# 고객 평생 가치 {#sec-clv}
+## 고객 평생 가치 {#sec-clv}
 
 고객 평생 가치(Customer Lifetime Value, CLV)(실무에서는 LTV로 통칭)는 기업이 특정 고객과의 관계가 지속되는 동안 획득할 것으로 기대되는 미래 현금 흐름의 현재 가치이다. 이는 고객을 단발적 거래 상대가 아닌 미래 수익을 창출하는 자산으로 재정의한다. 고객이 자산으로 인식되는 순간, 고객 획득은 자본 투자 의사결정이 되고 고객 유지는 자산 유지보수가 되며 전체 고객 기반은 기업의 수요 측면 자산인 고객 자산(customer equity)으로 집계된다 [@rustLemonZeithaml; @gupta2006modeling].
 
@@ -3907,7 +3907,7 @@ ggplot(df_ret, aes(month_lt, retention_rate, colour = example)) +
 ```
 
 ```{.r}
-# Beta-geometric 혼합에 따른 집계 이탈 확률 P(T = t) 전방 점화식 구현
+## Beta-geometric 혼합에 따른 집계 이탈 확률 P(T = t) 전방 점화식 구현
 churn_bg <- Vectorize(function(alpha, beta, period) {
   p <- alpha / (alpha + beta)
   if (period > 1)
@@ -3916,7 +3916,7 @@ churn_bg <- Vectorize(function(alpha, beta, period) {
   p
 }, vectorize.args = "period")
 
-# 생존 함수 S(t) = S(t-1) - P(t), S(1) = 1 - P(1)
+## 생존 함수 S(t) = S(t-1) - P(t), S(1) = 1 - P(1)
 survival_bg <- Vectorize(function(alpha, beta, period) {
   s <- 1 - churn_bg(alpha, beta, 1)
   if (period > 1)
@@ -3924,7 +3924,7 @@ survival_bg <- Vectorize(function(alpha, beta, period) {
   s
 }, vectorize.args = "period")
 
-# 음의 로그우도 함수 (수식 @eq-sbg-loglik)
+## 음의 로그우도 함수 (수식 @eq-sbg-loglik)
 neg_loglik <- function(par, active, lost) {
   alpha <- par[1]; beta <- par[2]
   tau <- length(active)
@@ -4181,12 +4181,12 @@ df_ml    <- feat |> mutate(active = factor(active), spend = spend)
 
 tr <- sample(N, 0.7 * N); te <- setdiff(seq_len(N), tr)
 
-# 1단계: 랜덤 포레스트 활성 분류기
+## 1단계: 랜덤 포레스트 활성 분류기
 rf <- randomForest(active ~ recency + frequency + monetary + tenure + promo,
                    data = df_ml[tr, ], ntree = 200)
 p_active_hat <- predict(rf, df_ml[te, ], type = "prob")[, "1"]
 
-# 2단계: 엘라스틱넷 로그 지출 회귀모형
+## 2단계: 엘라스틱넷 로그 지출 회귀모형
 act_tr <- tr[df_ml$active[tr] == "1"]
 xtr <- model.matrix(~ recency + frequency + monetary + tenure + promo,
                     df_ml[act_tr, ])[, -1]
@@ -4236,7 +4236,7 @@ p_buy  <- plogis(-0.5 + 0.9 * x)
 buy    <- rbinom(M, 1, p_buy)
 spend2 <- buy * rlnorm(M, meanlog = 3 + 0.5 * x, sdlog = 0.6)
 
-# ZILN 음의 로그우도 함수
+## ZILN 음의 로그우도 함수
 ziln_nll <- function(par) {
   p  <- plogis(par[1] + par[2] * x)
   ml <- par[3] + par[4] * x
@@ -4407,7 +4407,7 @@ cat("12개월 이후에 존재하는 (미할인) 평생 가치 비중: ",
 
 <!-- ====== Section from: 14-celebrity-endorsement.qmd ====== -->
 
-# 유명인 보증 {#sec-celebrity-endorsement}
+## 유명인 보증 {#sec-celebrity-endorsement}
 
 유명인 보증인(celebrity endorser)은 대중적 인지도를 지닌 인물로서, 광고에 제품과 함께 등장하여 그 인지도를 브랜드에 빌려주는 주체이다 [@mccracken1989]. 기업이 막대한 보증료를 지불하는 이유는 유명인의 얼굴이 제품 주장만으로는 만들기 어려운 자산, 즉 지위, 역량, 화려함, 반항성과 같은 문화적 상징과 의미를 브랜드에 즉각 주입하기 때문이다. 보증 계약은 본질적으로 축적된 명성의 대여(rental of reputation)인다. 따라서 핵심 연구 질문은 무형 자산의 기본 질문과 동일하다: *어떠한 메커니즘을 통해 가치가 창출되며 이를 어떻게 측정하고 가치가 소멸할 위험은 무엇인가?*
 
@@ -4515,7 +4515,7 @@ design <- expand.grid(
   rep      = seq_len(n_per_cell)
 )
 
-# 참 데이터 생성 과정: 정(+)의 적합성 상호작용 (beta_3 = 1.4)
+## 참 데이터 생성 과정: 정(+)의 적합성 상호작용 (beta_3 = 1.4)
 b0 <- 3.0; b1 <- 0.4; b2 <- 0.6; b3 <- 1.4
 design$y <- with(design,
   b0 + b1 * endorser + b2 * match + b3 * (endorser * match) +
@@ -4572,7 +4572,7 @@ est_days   <- 120          # 추정 창 길이
 event_win  <- -1:1         # 공시일 전후 3일 사건 창
 n_days     <- est_days + length(event_win)
 
-# 참 시장 모형: 사건 당일 +1.8% 비정상 점프
+## 참 시장 모형: 사건 당일 +1.8% 비정상 점프
 alpha <- 0.0002; beta <- 1.1; sigma <- 0.012
 r_m   <- rnorm(n_days, mean = 0.0004, sd = 0.009)
 shock <- rep(0, n_days); shock[est_days + which(event_win == 0)] <- 0.018
@@ -4659,7 +4659,7 @@ cat("손익분기 스캔들 확률  : ", sprintf("%.1f%%", 100 * q_breakeven), "
 <!-- ====== Section from: 15-influencer-marketing.qmd ====== -->
 
 
-# 인플루언서 마케팅 {#sec-influencer-marketing}
+## 인플루언서 마케팅 {#sec-influencer-marketing}
 
 인플루언서 마케팅(influencer marketing)은 개인이 소셜 플랫폼에서 축적한 오디언스, 신뢰도, 콘텐츠 제작 역량을 활용하여 기업의 마케팅 메시지를 전달하는 실천이다. @leung 에 따르면, 인플루언서 마케팅은 인플루언서의 핵심 자원인 팔로워 네트워크, 개인적 포지셔닝, 커뮤니케이션 콘텐츠, 그리고 팔로워의 신뢰를 배치하여 마케팅 커뮤니케이션의 효과성을 극대화하는 전략적 활동이다.
 
@@ -4739,17 +4739,17 @@ set.seed(15)
 
 n <- 4000
 
-# 배제 제약 변수: 라이프스타일 지수 z (선택에는 영향을 미치지만 성과에는 직접 영향 없음)
+## 배제 제약 변수: 라이프스타일 지수 z (선택에는 영향을 미치지만 성과에는 직접 영향 없음)
 z <- rnorm(n, 0, 1)
 expertise <- rnorm(n, 0, 1)
 u_select <- rnorm(n, 0, 1)
 u_outcome <- 0.6 * u_select + rnorm(n, 0, 0.8)   # 선택과 성과를 잇는 상관된 미관찰 요인
 
-# 1단계 선택 방정식 (기업의 채용 결정)
+## 1단계 선택 방정식 (기업의 채용 결정)
 d_latent <- 0.2 + 0.8 * expertise + 1.2 * z + u_select
 selected <- as.numeric(d_latent > 0)
 
-# 2단계 성과: 인게이지먼트 가산 데이터 (음이항 생성)
+## 2단계 성과: 인게이지먼트 가산 데이터 (음이항 생성)
 mu <- exp(2.0 + 0.5 * expertise + 0.7 * u_outcome)
 theta <- 2
 y <- rnbinom(n, size = theta, mu = mu)
@@ -4757,18 +4757,18 @@ y <- rnbinom(n, size = theta, mu = mu)
 df_all <- data.frame(y, expertise, z, selected)
 df_obs <- df_all[df_all$selected == 1, ]
 
-# (1) 편향된 단순 음이항 회귀
+## (1) 편향된 단순 음이항 회귀
 library(MASS)
 fit_naive <- glm.nb(y ~ expertise, data = df_obs)
 
-# (2) 1단계 프로빗 선택 모형 및 역밀스 비율(IMR) 계산
+## (2) 1단계 프로빗 선택 모형 및 역밀스 비율(IMR) 계산
 fit_probit <- glm(selected ~ expertise + z, data = df_all, family = binomial(link = "probit"))
 w_gamma <- predict(fit_probit, type = "link")
 imr <- dnorm(w_gamma) / pnorm(w_gamma)
 df_all$imr <- imr
 df_obs_cf <- df_all[df_all$selected == 1, ]
 
-# (3) 통제 함수(IMR)가 포함된 2단계 음이항 회귀
+## (3) 통제 함수(IMR)가 포함된 2단계 음이항 회귀
 fit_cf <- glm.nb(y ~ expertise + imr, data = df_obs_cf)
 
 cat("참 전문성 계수 (True beta)     : 0.500\n")
@@ -4847,7 +4847,7 @@ cat("총 인플루언서 계정 가치  : $", format(round(dcf_value), big.mark 
 
 <!-- ====== Section from: 16-nudges.qmd ====== -->
 
-# 넛지와 선택 설계 {#sec-nudges}
+## 넛지와 선택 설계 {#sec-nudges}
 
 소비자가 마주하는 모든 선택은 특정한 맥락(context) 속에서 이루어진다. 대안의 제시 순서, 미리 체크된 기본값, 숫자의 단위 표기, 이득과 손실 프레이밍 등은 선택지의 본질적 경제 가치를 바꾸지 않으면서도 의사결정에 지대한 영향을 미친다. 선택 설계자(choice architect)는 의사결정이 일어나는 환경을 조직하는 주체(가입 양식 기획자, 매장 진열 담당자, 알고리즘 엔지니어 등)를 뜻한다. 넛지(nudge)는 대안을 강제하거나 경제적 유인을 왜곡하지 않으면서도 사람들의 행동을 예측 가능한 방식으로 유도하는 선택 설계의 모든 요소를 지칭한다 [@thaler2008].
 
@@ -4975,13 +4975,13 @@ library(tidyverse)
 set.seed(42)
 
 N <- 2000
-# 공변량: 금융 이해도 (0: 낮음, 1: 높음)
+## 공변량: 금융 이해도 (0: 낮음, 1: 높음)
 financial_literacy <- rbinom(N, 1, 0.4)
 
-# 2개 처치군: 옵트인(기본값 미등록) vs 옵트아웃(기본값 등록)
+## 2개 처치군: 옵트인(기본값 미등록) vs 옵트아웃(기본값 등록)
 treatment <- rbinom(N, 1, 0.5)
 
-# 참 데이터 생성 과정: 기본값 넛지는 이해도가 낮은 집단에서 더 강력함
+## 참 데이터 생성 과정: 기본값 넛지는 이해도가 낮은 집단에서 더 강력함
 latent_propensity <- -0.8 + 0.6 * financial_literacy +
                      1.5 * treatment - 0.7 * (treatment * financial_literacy) +
                      rnorm(N, 0, 0.5)
@@ -4991,13 +4991,13 @@ df_nudge <- tibble(treatment = factor(treatment, labels = c("옵트인", "옵트
                    financial_literacy = factor(financial_literacy, labels = c("저지식", "고지식")),
                    enrolled = enrolled)
 
-# 평균 처치 효과 (ATE)
+## 평균 처치 효과 (ATE)
 ate <- mean(enrolled[df_nudge$treatment == "옵트아웃"]) -
        mean(enrolled[df_nudge$treatment == "옵트인"])
 
 cat("전체 평균 처치 효과 (ATE):", round(ate, 3), "\n")
 
-# 하위 집단별 등록률
+## 하위 집단별 등록률
 df_summary <- df_nudge |>
   group_by(treatment, financial_literacy) |>
   summarise(enrollment_rate = mean(enrolled), .groups = "drop")
@@ -5027,7 +5027,7 @@ ggplot(df_summary, aes(treatment, enrollment_rate, fill = financial_literacy)) +
 
 <!-- ====== Section from: 17-pricing.qmd ====== -->
 
-# 가격 책정 {#sec-pricing}
+## 가격 책정 {#sec-pricing}
 
 가격(price)은 마케팅 믹스 중 직접적으로 매출을 창출하는 유일한 요소이다. 제품, 프로모션, 유통 등 다른 모든 요소는 비용을 수반한다. 가격은 가장 신속하게 변경할 수 있고 시장에 즉각적인 영향을 미치며 실현 가격의 1%포인트 개선은 판매량이나 변동비의 동일한 개선보다 영업이익을 훨씬 더 크게 끌어올린다. 그러나 실제 가격 결정은 각 구매자의 잠재 지불의향액(WTP, Willingness to Pay)을 직접 관찰하기 어렵다는 한계에 직면한다.
 
@@ -5076,7 +5076,7 @@ profit_grid <- (p_grid - c) * Q_grid
 opt_idx <- which.max(profit_grid)
 p_opt <- p_grid[opt_idx]
 
-# 수치 미분을 통한 점탄력성 계산
+## 수치 미분을 통한 점탄력성 계산
 h <- 0.01
 Q_plus  <- sum(v >= (p_opt + h))
 Q_minus <- sum(v >= (p_opt - h))
@@ -5133,19 +5133,19 @@ flowchart TD
 ```{.r}
 set.seed(170)
 c <- 15
-# 불변 탄력성 수요 Q = A * p^eps 를 가지는 두 세그먼트
+## 불변 탄력성 수요 Q = A * p^eps 를 가지는 두 세그먼트
 seg <- data.frame(
   name = c("가격 민감 세그먼트 (학생)", "비민감 세그먼트 (일반)"),
   A    = c(500000, 200000),
   eps  = c(-3.0, -1.5)
 )
 
-# 불변 탄력성 하의 최적 독점 가격: p* = c * eps/(eps+1)
+## 불변 탄력성 하의 최적 독점 가격: p* = c * eps/(eps+1)
 seg$p_opt <- c * seg$eps / (seg$eps + 1)
 seg$q_opt <- seg$A * seg$p_opt^seg$eps
 seg$profit <- (seg$p_opt - c) * seg$q_opt
 
-# 단일 가격 하의 총이윤 극대화
+## 단일 가격 하의 총이윤 극대화
 p_grid_single <- seq(16, 60, by = 0.1)
 tot_profit <- sapply(p_grid_single, function(p) {
   sum((p - c) * seg$A * p^seg$eps)
@@ -5191,7 +5191,7 @@ for (t in 2:n) r[t] <- theta * r[t - 1] + (1 - theta) * p[t - 1]
 gain <- pmax(0, r - p)
 loss <- pmax(0, p - r)
 
-# 참 손실 회피 수요: 손실 계수(1.5) > 이득 계수(0.6)
+## 참 손실 회피 수요: 손실 계수(1.5) > 이득 계수(0.6)
 y <- 100 - 4 * p + 0.6 * gain - 1.5 * loss + rnorm(n, 0, 2)
 fit_ref <- lm(y ~ p + gain + loss)
 round(coef(fit_ref), 3)
@@ -5315,7 +5315,7 @@ cat("저계수 상호작용 행렬 차원:", dim(Theta_star), " 계수(Rank):", 
 
 <!-- ====== Section from: 18-service.qmd ====== -->
 
-# 서비스 마케팅 {#sec-service}
+## 서비스 마케팅 {#sec-service}
 
 서비스(services)는 물리적 재화와 달리 형태가 없으며 생산과 소비가 동시에 일어나는 행위이자 프로세스이다. 전 세계 GDP와 고용의 상당 부분을 서비스 경제가 차지하고 있다. 본 장에서는 서비스의 고유한 특성(IHIP)으로부터 발생하는 측정 및 관리 과제를 체계적으로 다룬다.
 
@@ -5381,16 +5381,16 @@ flowchart TB
 set.seed(181)
 N <- 500
 
-# 응답자별 잠재 성향 생성: 지각(P)과 기대(E) 간의 양(+)의 상관관계
+## 응답자별 잠재 성향 생성: 지각(P)과 기대(E) 간의 양(+)의 상관관계
 theta_P <- rnorm(N, 5.0, 0.8)
 theta_E <- 0.6 * theta_P + rnorm(N, 3.0, 0.6)
 
-# 5개 문항에 대한 지각 점수 및 기대 점수 생성 (1~7점 척도)
+## 5개 문항에 대한 지각 점수 및 기대 점수 생성 (1~7점 척도)
 P_items <- sapply(1:5, function(j) pmin(7, pmax(1, round(theta_P + rnorm(N, 0, 0.5), 1))))
 E_items <- sapply(1:5, function(j) pmin(7, pmax(1, round(theta_E + rnorm(N, 0, 0.5), 1))))
 Diff_items <- P_items - E_items
 
-# 크론바흐 알파 신뢰도 계산 함수
+## 크론바흐 알파 신뢰도 계산 함수
 cronbach_alpha <- function(mat) {
   k <- ncol(mat)
   var_total <- var(rowSums(mat))
@@ -5425,7 +5425,7 @@ flowchart LR
 일선 상담원(frontline employee) 환경에서는 처리 건수(생산성)와 통화당 친절도 및 해결 품질 간의 상충관계가 존재한다.
 
 ```{.r}
-# 상담원 수준의 생산성-품질 프런티어 시뮬레이션
+## 상담원 수준의 생산성-품질 프런티어 시뮬레이션
 throughput <- seq(5, 30, by = 0.5)               # 시간당 처리 건수
 quality    <- 10 - 0.25 * throughput - 0.005 * throughput^2 # 처리량 증가 시 품질 하락
 cust_value <- 50 * plogis(quality - 5)           # 품질에 따른 고객 잔존 가치
@@ -5445,11 +5445,11 @@ cat("최적 시간당 처리 건수 (Optimal Throughput):", opt_tp, "건\n")
 set.seed(42)
 recovery_quality <- seq(1, 7, by = 0.1)
 
-# 경미한 실패(severity = 2) vs 심각한 실패(severity = 6)
+## 경미한 실패(severity = 2) vs 심각한 실패(severity = 6)
 sat_minor <- 3.0 - 0.3 * 2 + 0.8 * recovery_quality
 sat_major <- 3.0 - 0.3 * 6 + 0.5 * recovery_quality
 
-# 실패가 없었을 때의 기준선 만족도 = 6.5
+## 실패가 없었을 때의 기준선 만족도 = 6.5
 baseline_sat <- 6.5
 
 paradox_threshold_minor <- recovery_quality[which(sat_minor > baseline_sat)[1]]
@@ -5468,7 +5468,7 @@ perceived_qual <- 0.4 * expectations + rnorm(N, 3.2, 0.7)
 perceived_val  <- 0.5 * perceived_qual - 0.2 * rnorm(N, 5, 1) + rnorm(N, 2.5, 0.6)
 
 satisfaction   <- 0.3 * expectations + 0.5 * perceived_qual + 0.3 * perceived_val + rnorm(N, 0, 0.4)
-# 비선형 충성도: 만족도가 매우 높은 영역에서 충성도가 급상승
+## 비선형 충성도: 만족도가 매우 높은 영역에서 충성도가 급상승
 loyalty        <- 1 + 6 * plogis(2 * (satisfaction - mean(satisfaction))) + rnorm(N, 0, 0.3)
 
 fit_acsi <- lm(loyalty ~ satisfaction)
@@ -5486,7 +5486,7 @@ cat("만족도가 충성도에 미치는 회귀계수:", round(coef(fit_acsi)["s
 
 <!-- ====== Section from: 19-health.qmd ====== -->
 
-# 헬스케어 및 제약 마케팅 {#sec-health}
+## 헬스케어 및 제약 마케팅 {#sec-health}
 
 헬스케어 및 제약 시장은 일반 소비재 시장과 근본적으로 다른 제도적·경제적 구조를 가진다. 최종 소비자인 환자가 직접 의약품을 선택하지 못하고 면허를 가진 전문가인 의사(전문가 대리인)가 처방을 결정하며 비용의 상당 부분은 보험자(제3자 지불자)가 부담한다.
 
@@ -5558,11 +5558,11 @@ flowchart LR
 library(tidyverse)
 set.seed(19)
 
-# 1. 의사 패널 데이터 시뮬레이션: 타깃팅 내생성 제어
+## 1. 의사 패널 데이터 시뮬레이션: 타깃팅 내생성 제어
 n_docs <- 500
 n_months <- 24
 
-# 의사별 잠재 기저 처방 성향 alpha_i
+## 의사별 잠재 기저 처방 성향 alpha_i
 alpha_doc <- rnorm(n_docs, mean = 1.0, sd = 0.6)
 
 df_panel <- expand_grid(doc_id = 1:n_docs, month = 1:n_months) |>
@@ -5575,10 +5575,10 @@ df_panel <- expand_grid(doc_id = 1:n_docs, month = 1:n_months) |>
     prescriptions = rpois(n(), lambda)
   )
 
-# (a) 단순 포아송 회귀 (타깃팅 무시 -> 상향 편향)
+## (a) 단순 포아송 회귀 (타깃팅 무시 -> 상향 편향)
 fit_naive <- glm(prescriptions ~ log1p(detailing), data = df_panel, family = poisson)
 
-# (b) 고정효과 포아송 회귀 (기저 성향 통제 -> 참 효과 복원)
+## (b) 고정효과 포아송 회귀 (기저 성향 통제 -> 참 효과 복원)
 library(fixest)
 fit_fe <- fepois(prescriptions ~ log1p(detailing) | doc_id, data = df_panel)
 
@@ -5588,11 +5588,11 @@ cat("고정효과 포아송 추정치 (Fixed Effects):", round(coef(fit_fe)["log
 ```
 
 ```{.r}
-# 2. Bass 신약 확산 NLS 모형 적합
+## 2. Bass 신약 확산 NLS 모형 적합
 T_periods <- 20
 p_true <- 0.03; q_true <- 0.38; M_true <- 10000
 
-# Bass 누적 채택 함수
+## Bass 누적 채택 함수
 F_bass <- function(t, p, q) {
   (1 - exp(-(p + q) * t)) / (1 + (q / p) * exp(-(p + q) * t))
 }
@@ -5622,7 +5622,7 @@ summary(fit_nls)$coefficients
 
 <!-- ====== Section from: 20-gaming.qmd ====== -->
 
-# 게임과 게이미피케이션 {#sec-gaming}
+## 게임과 게이미피케이션 {#sec-gaming}
 
 비디오 게임 산업은 글로벌 엔터테인먼트 시장에서 영화와 음악을 능가하는 최대 규모의 산업으로 성장했다. 게임 산업의 비즈니스 모델은 일회성 패키지 판매에서 무료로 진입시킨 뒤 인게임 아이템을 판매하는 부분유료화(Freemium / Free-to-Play, F2P)로 전환되었다. 동시에 비게임 분야에서도 게임의 메커니즘을 차용하는 게이미피케이션(gamification)이 확산되고 있다.
 
@@ -5682,7 +5682,7 @@ n_users <- 2000
 n_weeks <- 12
 intervention_week <- 7
 
-# 유저 특성: 청소년(처치군) vs 성인(통제군), 기저 플레이 시간
+## 유저 특성: 청소년(처치군) vs 성인(통제군), 기저 플레이 시간
 df_users <- tibble(
   user_id = 1:n_users,
   treated = rbinom(n_users, 1, 0.4),              # 40% 청소년
@@ -5699,13 +5699,13 @@ df_panel <- expand_grid(user_id = 1:n_users, week = 1:n_weeks) |>
     hours = pmax(0, base_hours + rnorm(n(), 0, 1.5) + treatment_effect)
   )
 
-# 양방향 고정효과(TWFE) DiD 회귀분석
+## 양방향 고정효과(TWFE) DiD 회귀분석
 library(fixest)
 fit_did <- feols(hours ~ treated:post | user_id + week, data = df_panel)
 
 cat("전체 평균 셧다운제 감소 효과 (DiD 계수):", round(coef(fit_did)["treated:post"], 3), "시간/주\n")
 
-# 분위수별 이질적 처치 효과 추정
+## 분위수별 이질적 처치 효과 추정
 df_panel <- df_panel |>
   mutate(heavy_user = as.numeric(base_hours > median(base_hours)))
 
@@ -5725,7 +5725,7 @@ cat("헤비 유저 감소 효과  :", round(coef(fit_het)["treated:post:heavy_us
 
 <!-- ====== Section from: 21-marketing-finance.qmd ====== -->
 
-# 마케팅과 재무의 접점 {#sec-marketing-finance}
+## 마케팅과 재무의 접점 {#sec-marketing-finance}
 
 마케팅 지출은 단순한 당기 비용(expense)이 아니라 미래 현금 흐름을 창출하는 무형 자산에 대한 투자(investment)인다. 마케팅-재무 인터페이스(MarketingFinance Interface)는 브랜드 자산, 고객 관계, 유통 네트워크 등 마케팅 활동이 창출하는 무형 자산이 자본 시장에서 어떻게 가격화되고 기업 가치(주주 가치)로 전환되는지를 규명한다 [@Srivastava_1998; @fornell2006].
 
@@ -5789,23 +5789,23 @@ est_window <- 1:200
 event_day <- 220
 event_window <- 219:221
 
-# 시장 수익률 및 기업 수익률 생성
+## 시장 수익률 및 기업 수익률 생성
 r_m <- rnorm(n_days, 0.0005, 0.01)
 alpha_true <- 0.0001; beta_true <- 1.2
 e <- rnorm(n_days, 0, 0.015)
 
-# 사건 당일(t=220)에 +3%의 긍정적 공시 충격 주입
+## 사건 당일(t=220)에 +3%의 긍정적 공시 충격 주입
 shock <- rep(0, n_days)
 shock[event_day] <- 0.030
 
 r_i <- alpha_true + beta_true * r_m + shock + e
 
-# 사전 추정 창(1~200일)에서 시장 모형 추정
+## 사전 추정 창(1~200일)에서 시장 모형 추정
 market_fit <- lm(r_i[est_window] ~ r_m[est_window])
 alpha_hat <- coef(market_fit)[1]
 beta_hat  <- coef(market_fit)[2]
 
-# 사건 창(219~221일)에서의 비정상 수익률 계산
+## 사건 창(219~221일)에서의 비정상 수익률 계산
 ar <- r_i[event_window] - (alpha_hat + beta_hat * r_m[event_window])
 car <- sum(ar)
 
@@ -5828,7 +5828,7 @@ q_i^{\text{total}} = \frac{V_i}{K_{i}^{\text{phy}} + K_{i}^{\text{R\&D}} + K_{i}
 $$ {#eq-total-q}
 
 ```{.r}
-# 영구재고 축적법을 통한 마케팅 무형자산 스톡 계산 예시
+## 영구재고 축적법을 통한 마케팅 무형자산 스톡 계산 예시
 sga_flow <- c(10, 12, 15, 18, 20, 25) # 연간 SG&A 지출
 delta <- 0.20                          # 상각률 (20%)
 gamma_sga <- 0.30                      # SG&A 중 마케팅/조직 자본 축적분 (30%)
@@ -5852,7 +5852,7 @@ cat("축적된 마케팅 무형자본 스톡:", round(tail(K_sga, 1), 2), "\n")
 
 <!-- ====== Section from: 22-privacy.qmd ====== -->
 
-# 프라이버시와 데이터 거버넌스 {#sec-privacy}
+## 프라이버시와 데이터 거버넌스 {#sec-privacy}
 
 디지털 마케팅은 소비자의 행동 데이터에 대한 전례 없는 추적과 개인화 역량을 바탕으로 발전해 왔다. 그러나 개인정보 수집의 확대는 소비자의 프라이버시 염려(privacy concern)와 규제 당국의 감시를 촉발했다.
 
@@ -5890,7 +5890,7 @@ benefit <- rnorm(N, 5, 1)                       # 개인화 편익 (1~7점)
 cost    <- rnorm(N, 4, 1.2)                     # 지각된 프라이버시 위험 비용
 trust   <- rbinom(N, 1, 0.5)                    # 기업 신뢰도 (0: 낮음, 1: 높음)
 
-# 정보 공개 로짓 데이터 생성
+## 정보 공개 로짓 데이터 생성
 logit_p <- -1.0 + 0.8 * benefit - 1.2 * cost + 1.5 * trust
 prob    <- plogis(logit_p)
 disclose <- rbinom(N, 1, prob)
@@ -5942,7 +5942,7 @@ flowchart TD
 
 <!-- ====== Section from: 04-innovation.qmd ====== -->
 
-# 혁신 {#sec-innovation}
+## 혁신 {#sec-innovation}
 
 혁신(innovation)은 새로운 아이디어, 제품, 서비스, 프로세스가 시장에 도입되어 상업적·사회적 가치를 창출하는 과정이다. 기업의 장기적 생존과 성장은 지속적인 혁신 역량에 달려 있다.
 
@@ -6020,18 +6020,18 @@ flowchart LR
 #| fig-cap: "4개 추세 모형의 전환율 외삽 비교."
 set.seed(42)
 t <- 1:12
-# 참 데이터 생성 과정: 상한 3%의 로지스틱 경로
+## 참 데이터 생성 과정: 상한 3%의 로지스틱 경로
 L_true <- 0.03; k_true <- 0.4; t0_true <- 6
 y_true <- L_true / (1 + exp(-k_true * (t - t0_true)))
 y_obs  <- pmax(0.001, y_true + rnorm(12, 0, 0.002))
 
 df_fit <- tibble(t = t, y = y_obs)
 
-# (1) 선형 모형
+## (1) 선형 모형
 fit_lin <- lm(y ~ t, data = df_fit)
-# (2) 지수 모형
+## (2) 지수 모형
 fit_exp <- lm(log(y) ~ t, data = df_fit)
-# (3) 로지스틱 모형 (비선형 최소자승)
+## (3) 로지스틱 모형 (비선형 최소자승)
 fit_logis <- nls(y ~ L / (1 + exp(-k * (t - t0))), data = df_fit,
                  start = list(L = 0.04, k = 0.3, t0 = 5))
 
@@ -6098,7 +6098,7 @@ flowchart LR
 
 <!-- ====== Section from: 05-market-entry.qmd ====== -->
 
-# 시장 진입 {#sec-market-entry}
+## 시장 진입 {#sec-market-entry}
 
 신시장 진입(Market Entry)은 기업 전략에서 가장 중대한 자원 배분 의사결정 중 하나이다. 시장에 가장 먼저 진입하는 개척자(Pioneer / First-Mover)는 지속적인 시장점유율 우위와 높은 이윤을 누린다는 선도자 우위(First-Mover Advantage) 가설이 오랫동안 정설로 받아들여져 왔다.
 
@@ -6180,11 +6180,11 @@ set.seed(20260620)
 n_cat <- 400          # 카테고리 수
 k_per <- 5            # 카테고리당 진입 기업 수 (총 2,000개 진입 시도)
 
-# 참 파라미터
+## 참 파라미터
 true_delta <- -0.05   # 참 진입 순서 인과 효과 (완만한 감소)
 alpha_s    <-  0.25   # 기준 점유율
 
-# 미관찰 역량 천부성 xi ~ N(0, 1)
+## 미관찰 역량 천부성 xi ~ N(0, 1)
 df_all <- expand_grid(cat_id = 1:n_cat, attempt = 1:k_per) |>
   mutate(
     xi = rnorm(n(), 0, 1),
@@ -6202,11 +6202,11 @@ df_all <- expand_grid(cat_id = 1:n_cat, attempt = 1:k_per) |>
   ) |>
   ungroup()
 
-# (1) 생존자만 표본으로 하고 역량을 통제하지 않은 단순 회귀 (Naive)
+## (1) 생존자만 표본으로 하고 역량을 통제하지 않은 단순 회귀 (Naive)
 df_surv <- df_all |> filter(survived == 1)
 fit_naive <- lm(latent_share ~ log_r, data = df_surv)
 
-# (2) 전체 모집단에서 역량(xi)을 통제한 참 회귀 (Full Population + Control)
+## (2) 전체 모집단에서 역량(xi)을 통제한 참 회귀 (Full Population + Control)
 fit_true <- lm(latent_share ~ log_r + xi, data = df_all)
 
 cat("참 진입 순서 효과 계수 (True delta)       : -0.050\n")
@@ -6224,7 +6224,7 @@ cat("전체 표본 및 역량 통제 추정치 (Corrected)   :", round(coef(fit_
 
 <!-- ====== Section from: 06-virality.qmd ====== -->
 
-# 바이럴리티와 구전 {#sec-virality}
+## 바이럴리티와 구전 {#sec-virality}
 
 구전(Word of Mouth, WOM)과 바이럴리티(virality)는 소비자가 자발적으로 제품, 브랜드, 아이디어에 대한 정보를 타인에게 전파하는 현상이다. 소셜 미디어의 확산으로 구전은 1대 대화를 넘어 네트워크 전체로 급속히 번져나가는 다대다 바이럴 캐스케이드(viral cascade)로 진화했다.
 
@@ -6284,7 +6284,7 @@ $$ {#eq-structural-virality}
 - 순수 캐스케이드(Line graph): $v(T) \approx n/3$ (높은 구조적 바이럴리티)
 
 ```{.r}
-# 확산 트리의 구조적 바이럴리티 (평균 쌍별 거리) 계산 함수
+## 확산 트리의 구조적 바이럴리티 (평균 쌍별 거리) 계산 함수
 calc_structural_virality <- function(parent) {
   n <- length(parent)
   # 인접 리스트로부터 최단 경로 거리 행렬 구축 (BFS)
@@ -6315,11 +6315,11 @@ calc_structural_virality <- function(parent) {
 }
 
 n_nodes <- 50
-# (1) 순수 브로드캐스트 (스타 그래프: 1번 노드가 2~50번의 부모)
+## (1) 순수 브로드캐스트 (스타 그래프: 1번 노드가 2~50번의 부모)
 parent_star <- c(NA, rep(1, n_nodes - 1))
 v_star <- calc_structural_virality(parent_star)
 
-# (2) 순수 바이럴 캐스케이드 (체인 그래프: 1 -> 2 -> 3 -> ... -> 50)
+## (2) 순수 바이럴 캐스케이드 (체인 그래프: 1 -> 2 -> 3 -> ... -> 50)
 parent_chain <- c(NA, 1:(n_nodes - 1))
 v_chain <- calc_structural_virality(parent_chain)
 
@@ -6364,7 +6364,7 @@ flowchart TD
 
 <!-- ====== Section from: parts/methodology.qmd ====== -->
 
-# 방법론 {#sec-part-methodology}
+## 방법론 {#sec-part-methodology}
 
 본서의 세 번째 축은 방법론적(methodological) 영역이다. 구성개념을 어떻게 측정하고 효과를 어떻게 식별(identify)하며 관찰된 데이터로부터 인과적 주장을 어떻게 도출하는가를 다룬다. 실질적 연구 질문과 이론적 구성개념은 엄밀한 방법론을 통해 실증적 증거로 전환될 때 비로소 타당성을 획득한다.
 
@@ -6373,7 +6373,7 @@ flowchart TD
 
 <!-- ====== Section from: 23-metrics.qmd ====== -->
 
-# 측정 지표 {#sec-metrics}
+## 측정 지표 {#sec-metrics}
 
 마케팅 연구에서 지표(metrics)는 이론적 구성개념을 관찰 가능한 수치로 변환하고 기업의 마케팅 활동이 창출한 성과를 자본 시장과 경영진의 언어로 표현하는 핵심 연결고리이다. 지표는 단순한 계산 공식이 아니라 측정 및 식별 논리(identification logic)가 결합된 구성개념이다.
 
@@ -6439,7 +6439,7 @@ $$ {#eq-be}
 ```{.r}
 #| eval: false
 library(tidyverse)
-# 우선주 장부가치 산출: 상환가액(pstkrv) -> 청산가액(pstkl) -> 액면가(pstk) 우선순위 적용
+## 우선주 장부가치 산출: 상환가액(pstkrv) -> 청산가액(pstkl) -> 액면가(pstk) 우선순위 적용
 df_compustat <- df_compustat |>
   mutate(
     ps = coalesce(pstkrv, pstkl, pstk, 0),
@@ -6521,7 +6521,7 @@ $$ {#eq-hhi}
 library(RPostgres)
 library(tidyverse)
 
-# WRDS Compustat 데이터 기반 4자리 SIC 기준 HHI 계산
+## WRDS Compustat 데이터 기반 4자리 SIC 기준 HHI 계산
 df_hhi <- df_comp |>
   group_by(fyear, sic) |>
   mutate(industry_sales = sum(sale, na.rm = TRUE),
@@ -6629,7 +6629,7 @@ patent_output <- read_rds(file.path("data", "capability", "patent_output.rds"))
 
 ```{.r}
 #| eval: false
-# 특허별 연도별 피인용 횟수 추출 및 산업 평균 가중치 계산
+## 특허별 연도별 피인용 횟수 추출 및 산업 평균 가중치 계산
 df_cite_patent_year <- wrdsapps_patents_citations |>
   inner_join(wrdsapps_patents, by = "patent_id")
 ```
@@ -6640,7 +6640,7 @@ tech_innv <- read_rds(file.path("data", "capability", "tech_innv.rds"))
 
 ```{.r}
 #| eval: false
-# 기술 적용 범위 (Width of Applicability) 지표 구축
+## 기술 적용 범위 (Width of Applicability) 지표 구축
 tech_width_all <- wrdsapps_patents_citations |>
   inner_join(wrdsapps_patents, by = "patent_id")
 ```
@@ -6660,7 +6660,7 @@ patent_output_hist <- read_rds(file.path("data", "capability", "patent_output_hi
 
 ```{.r}
 #| eval: false
-# Koyck 기하 감쇄 스톡 구축 (lambda = 0.4)
+## Koyck 기하 감쇄 스톡 구축 (lambda = 0.4)
 lambda <- 0.4
 ```
 
@@ -6684,11 +6684,11 @@ library(plm)
 #| warning: false
 library(frontier)
 
-# (1) 마케팅 생산 프런티어 추정
+## (1) 마케팅 생산 프런티어 추정
 mar_frontier <- sfa(log(sale) ~ log(adstock) + log(xsga) + rd_eff, data = df_cap_panel)
-# (2) R&D 기술 프런티어 추정
+## (2) R&D 기술 프런티어 추정
 rd_frontier  <- sfa(log(tech_innv) ~ log(rdstock) + mar_eff, data = df_cap_panel)
-# (3) 운영 비용 프런티어 추정
+## (3) 운영 비용 프런티어 추정
 ops_frontier <- sfa(log(cogs) ~ log(ppent) + log(labor_cost), data = df_cap_panel, ineffDecrease = FALSE)
 ```
 
@@ -6776,7 +6776,7 @@ mar_cap <- sfacross(log(sale) ~ log(adstock) + log(xsga), data = df_cap)
 
 <!-- ====== Section from: 24-data.qmd ====== -->
 
-# 데이터 {#sec-data}
+## 데이터 {#sec-data}
 
 실증 마케팅 연구는 다양한 층위의 관찰 데이터에 의존한다. 기업 수준의 재무 회계 데이터(WRDS), 비정형 텍스트 및 문서 저장소(MongoDB), 온라인 검색 관심도(Google 트렌드, Baidu 지수), 비디오 소셜 인게이지먼트(YouTube API), 가계 미시 소비 지출(소비자 지출 조사, CE), 그리고 머신러닝 기반 인구통계학적 추론 도구에 이르기까지 데이터 생성 메커니즘을 정확히 이해하는 것이 엄밀한 분석의 출발점이다 ([그림 @fig-data-landscape]).
 
@@ -6815,7 +6815,7 @@ PostgreSQL 인터페이스를 통해 R에서 직접 연결하여 데이터를 �
 library(RPostgres)
 library(tidyverse)
 
-# WRDS PostgreSQL 연결
+## WRDS PostgreSQL 연결
 wrds <- dbConnect(
   Postgres(),
   host     = "wrds-pgdata.wharton.upenn.edu",
@@ -6826,7 +6826,7 @@ wrds <- dbConnect(
   sslmode  = "require"
 )
 
-# Compustat 연간 펀더멘털 데이터 쿼리 예시
+## Compustat 연간 펀더멘털 데이터 쿼리 예시
 query <- "
 SELECT gvkey, fyear, conm, sale, cogs, xsga, xrd, xad, at, prcc_f * csho as mktcap
 FROM comp.funda
@@ -6844,10 +6844,10 @@ df_comp <- dbGetQuery(wrds, query)
 #| eval: false
 library(mongolite)
 
-# 로컬 MongoDB 연결 및 컬렉션 쿼리
+## 로컬 MongoDB 연결 및 컬렉션 쿼리
 con <- mongo(collection = "reviews", db = "marketing_db", url = "mongodb://localhost:27017")
 
-# 특정 브랜드의 평점 4점 이상 리뷰 추출
+## 특정 브랜드의 평점 4점 이상 리뷰 추출
 res <- con$find(
   query  = '{"brand": "Apple", "rating": {"$gte": 4}}',
   fields = '{"review_id": 1, "date": 1, "text": 1, "rating": 1, "_id": 0}'
@@ -6872,7 +6872,7 @@ Google 트렌드는 90일 이하 쿼리에만 일별 데이터를 제공하고 �
 #| eval: false
 library(gtrendsR)
 
-# gtrendsR을 활용한 키워드 관심도 수집 예시
+## gtrendsR을 활용한 키워드 관심도 수집 예시
 res_gt <- gtrends(
   keyword      = c("Chatgpt", "Claude"),
   geo          = "US",
@@ -6894,7 +6894,7 @@ YouTube Data API v3를 활용하여 채널 및 비디오 단위의 조회수, �
 #| eval: false
 library(tuber)
 
-# YouTube OAuth 인증 후 동영상 메타데이터 수집
+## YouTube OAuth 인증 후 동영상 메타데이터 수집
 yt_oauth(app_id = Sys.getenv("YT_APP_ID"), app_secret = Sys.getenv("YT_APP_SECRET"))
 video_stats <- get_stats(video_id = "dQw4w9WgXcQ")
 comments    <- get_all_comments(video_id = "dQw4w9WgXcQ")
@@ -6932,7 +6932,7 @@ flowchart LR
 
 <!-- ====== Section from: 25-modeling.qmd ====== -->
 
-# 마케팅 모델링 {#sec-modeling}
+## 마케팅 모델링 {#sec-modeling}
 
 모형(model)은 복잡한 현실의 마케팅 현상을 분석 가능한 형태로 단순화하고 정형화한 수학적·통계적 체계이다. 좋은 모형은 불필요한 세부사항을 과감히 사상(捨象)하고 본질적인 인과 메커니즘과 상호작용을 명확히 드러낸다.
 
@@ -6994,14 +6994,14 @@ flowchart TB
 set.seed(2025)
 n <- 4000
 
-# 분석가에게는 관측되지 않지만 기업은 관측하여 가격에 반영하는 잠재 수요 충격 xi
+## 분석가에게는 관측되지 않지만 기업은 관측하여 가격에 반영하는 잠재 수요 충격 xi
 xi   <- rnorm(n, 0, 1)
 cost <- runif(n, 10, 30)               # 외생적 비용 도구변수
 
-# 기업의 가격 책정: 비용과 잠재 수요 충격에 비례하여 가격 인상 (내생성 발생)
+## 기업의 가격 책정: 비용과 잠재 수요 충격에 비례하여 가격 인상 (내생성 발생)
 price <- 5 + 0.8 * cost + 1.2 * xi + rnorm(n, 0, 1)
 
-# 진정한 구조적 수요 효용: 가격에 음(-), 수요 충격 xi에 양(+)
+## 진정한 구조적 수요 효용: 가격에 음(-), 수요 충격 xi에 양(+)
 true_beta_p <- -0.08
 latent_u <- 1.5 + true_beta_p * price + 0.9 * xi + rnorm(n, 0, 0.5)
 buy <- as.numeric(latent_u > 0)
@@ -7010,25 +7010,25 @@ dat <- data.frame(buy, price, cost, xi)
 ```
 
 ```{.r}
-# (1) 예측적 렌즈: 로지스틱 다항 적합 및 표본 외 AUC 평가
+## (1) 예측적 렌즈: 로지스틱 다항 적합 및 표본 외 AUC 평가
 train <- 1:3000; test <- 3001:n
 pred_fit <- glm(buy ~ poly(price, 2) + cost, data = dat[train, ], family = binomial)
 p_hat <- predict(pred_fit, newdata = dat[test, ], type = "response")
 
-# 간단한 AUC 계산
+## 간단한 AUC 계산
 library(pROC)
 auc_val <- roc(dat$buy[test], p_hat, quiet = TRUE)$auc
 cat("표본 외 예측 정확도 (Test AUC):", round(auc_val, 3), "\n")
 ```
 
 ```{.r}
-# (2) 단순 관찰 회귀 (Naive): 내생성으로 인해 가격 계수가 양(+)으로 편향
+## (2) 단순 관찰 회귀 (Naive): 내생성으로 인해 가격 계수가 양(+)으로 편향
 naive <- glm(buy ~ price, data = dat, family = binomial)
 cat("단순 로짓 가격 계수 (Naive):", round(coef(naive)["price"], 3), " (상향 편향)\n")
 ```
 
 ```{.r}
-# (3) 인과/구조적 렌즈: 2단계 통제 함수(Control Function)로 참 가격 탄력성 복원
+## (3) 인과/구조적 렌즈: 2단계 통제 함수(Control Function)로 참 가격 탄력성 복원
 first_stage <- lm(price ~ cost, data = dat)
 dat$cf_resid <- resid(first_stage)
 
@@ -7045,7 +7045,7 @@ cat("통제함수 보정 가격 계수 (Corrected Causal):", round(coef(cf_fit)[
 
 <!-- ====== Section from: 26-analytical-models.qmd ====== -->
 
-# 분석 모형 {#sec-analytical-models}
+## 분석 모형 {#sec-analytical-models}
 
 분석 모형(analytical models)은 마케팅 현상을 지배하는 경제주체들의 최적화 행동과 전략적 상호작용을 수학적으로 정식화하여 게임이론적 균형을 연역적으로 도출하는 체계이다.
 
@@ -7237,8 +7237,8 @@ ggplot(df_bass, aes(t, PeriodSales)) +
 #| message: false
 #| warning: false
 B_total <- 100
-# 시장 1: R1(x1) = 80 * (1 - exp(-0.04 * x1))
-# 시장 2: R2(x2) = 120 * (1 - exp(-0.02 * x2))
+## 시장 1: R1(x1) = 80 * (1 - exp(-0.04 * x1))
+## 시장 2: R2(x2) = 120 * (1 - exp(-0.02 * x2))
 alloc_fn <- function(x1) {
   x2 <- B_total - x1
   -(80 * (1 - exp(-0.04 * x1)) + 120 * (1 - exp(-0.02 * x2)))
@@ -7264,7 +7264,7 @@ cat("극대화된 총매출   : $", round(-opt_res$objective, 2), "\n", sep = ""
 
 <!-- ====== Section from: 27-empirical-models.qmd ====== -->
 
-# 경험적 모형 {#sec-empirical-models}
+## 경험적 모형 {#sec-empirical-models}
 
 경험적 모형(empirical models)은 관찰된 시장 데이터로부터 인과 효과를 식별하고 고객 행동 패턴을 요약하며 마케팅 자원의 최적 배분을 지원하는 실증 분석 방법론의 총체이다.
 
@@ -7307,7 +7307,7 @@ library("GameTheory")
 ```
 
 ```{.r}
-# 라이브러리 로드
+## 라이브러리 로드
 library("ChannelAttribution")
 library("ggplot2")
 library("reshape")
@@ -7316,7 +7316,7 @@ library("plyr")
 library("reshape2")
 library("plotly")
 
-# 데이터를 R로 로드
+## 데이터를 R로 로드
 channel = read.csv("images/Channel_attribution.csv", header = T) %>%
     select(-c(Output))
 head(channel, n = 2)
@@ -7357,20 +7357,20 @@ M
 ```
 
 ```{.r}
-# "channel_name" 열을 기준으로 두 데이터 프레임 병합
+## "channel_name" 열을 기준으로 두 데이터 프레임 병합
 R <- merge(H, M, by='channel_name')
 
-# 관련 열만 선택
+## 관련 열만 선택
 R1 <- R[, (colnames(R) %in% c('channel_name', 'first_touch_conversions', 'last_touch_conversions', 'linear_touch_conversions', 'total_conversion'))]
 
-# 결과를 ggplot2로 시각화하기 위해 데이터 프레임 변환
+## 결과를 ggplot2로 시각화하기 위해 데이터 프레임 변환
 R1 <- melt(R1, id='channel_name')
 ```
 
 ```{.r}
 #| label: fig-markov-heuristic-conversions
 #| fig-cap: "첫 번째 터치, 마지막 터치, 선형 기여 및 1차 마르코프 규칙 하에서 각 채널에 기여된 총 전환 수. 마르코프 막대와 위치 기반 막대 간의 차이는 휴리스틱이 체계적으로 과대/과소 평가하는 채널을 식별합니다."
-# 총 전환 수 시각화
+## 총 전환 수 시각화
 ggplot(R1, aes(channel_name, value, fill = variable)) +
   geom_bar(stat='identity', position='dodge') +
   ggtitle('총 전환 수') +
@@ -7392,44 +7392,44 @@ library(ChannelAttribution)
 library(markovchain)
 
 ##### 간단한 예제 #####
-# 데이터 샘플 생성
+## 데이터 샘플 생성
 df1 <- data.frame(path = c('c1 > c2 > c3', 'c1', 'c2 > c3'), conv = c(1, 0, 0), conv_null = c(0, 1, 1))
 
-# 모형 계산
+## 모형 계산
 mod1 <- markov_model(df1,
                     var_path = 'path',
                     var_conv = 'conv',
                     var_null = 'conv_null',
                     out_more = TRUE)
 
-# 기여도 분석 결과 추출
+## 기여도 분석 결과 추출
 df_res1 <- mod1$result
 
-# 전이 행렬 추출
+## 전이 행렬 추출
 df_trans1 <- mod1$transition_matrix
 df_trans1 <- dcast(df_trans1, channel_from ~ channel_to, value.var = 'transition_probability')
 
 ### 마르코프 그래프 시각화 ###
 df_trans <- mod1$transition_matrix
 
-# 그래프 시각화를 위한 더미 변수 추가
+## 그래프 시각화를 위한 더미 변수 추가
 df_dummy <- data.frame(channel_from = c('(start)', '(conversion)', '(null)'),
                        channel_to = c('(start)', '(conversion)', '(null)'),
                        transition_probability = c(0, 1, 1))
 df_trans <- rbind(df_trans, df_dummy)
 
-# 채널 순서 정렬
+## 채널 순서 정렬
 df_trans$channel_from <- factor(df_trans$channel_from,levels = c('(start)','(conversion)', '(null)', 'c1', 'c2', 'c3'))
 df_trans$channel_to <- factor(df_trans$channel_to,levels = c('(start)', '(conversion)', '(null)', 'c1', 'c2', 'c3'))
 df_trans <- dcast(df_trans, channel_from ~ channel_to, value.var ='transition_probability')
 
-# markovchain 객체 생성
+## markovchain 객체 생성
 trans_matrix <- matrix(data = as.matrix(df_trans[, -1]),nrow = nrow(df_trans[, -1]), ncol = ncol(df_trans[, -1]),dimnames = list(c(as.character(df_trans[,1])),c(colnames(df_trans[, -1]))))
 trans_matrix[is.na(trans_matrix)] <- 0
 ```
 
 ```{.r}
-# 가상 실데이터 시뮬레이션
+## 가상 실데이터 시뮬레이션
 set.seed(354)
 df2 <- data.frame(client_id = sample(c(1:1000), 5000, replace = TRUE),
                   date = sample(c(1:32), 5000, replace = TRUE),
@@ -7438,7 +7438,7 @@ df2 <- data.frame(client_id = sample(c(1:1000), 5000, replace = TRUE),
 df2$date <- as.Date(df2$date, origin = "2015-01-01")
 df2$channel <- paste0('channel_', df2$channel)
 
-# 각 고객별 경로에 채널 집계
+## 각 고객별 경로에 채널 집계
 df2 <- df2 %>%
         arrange(client_id, date) %>%
         group_by(client_id) %>%
@@ -7448,15 +7448,15 @@ df2 <- df2 %>%
                   conv_null = 0) %>%
         ungroup()
 
-# 모형 계산 (마르코프 및 휴리스틱)
+## 모형 계산 (마르코프 및 휴리스틱)
 mod2 <- markov_model(df2,
                      var_path = 'path',
                      var_conv = 'conv',
                      var_null = 'conv_null',
                      out_more = TRUE)
 
-# 수동 계산을 통한 휴리스틱 모형 산출
-# 다음 대신:
+## 수동 계산을 통한 휴리스틱 모형 산출
+## 다음 대신:
 #h_mod2 <- heuristic_models(df2, var_path = 'path', var_conv = 'conv')
 
 df_hm <- df2 %>%
@@ -7464,12 +7464,12 @@ df_hm <- df2 %>%
                channel_name_ft = sub(' ', '', channel_name_ft),
                channel_name_lt = sub('.*>', '', path),
                channel_name_lt = sub(' ', '', channel_name_lt))
-# 첫 접점 전환
+## 첫 접점 전환
 df_ft <- df_hm %>%
         group_by(channel_name_ft) %>%
         summarise(first_touch_conversions = sum(conv)) %>%
         ungroup()
-# 마지막 접점 전환
+## 마지막 접점 전환
 df_lt <- df_hm %>%
         group_by(channel_name_lt) %>%
         summarise(last_touch_conversions = sum(conv)) %>%
@@ -7477,7 +7477,7 @@ df_lt <- df_hm %>%
 
 h_mod2 <- merge(df_ft, df_lt, by.x = 'channel_name_ft', by.y = 'channel_name_lt')
 
-# 모든 모형 병합
+## 모든 모형 병합
 all_models <- merge(h_mod2, mod2$result, by.x = 'channel_name_ft', by.y = 'channel_name')
 colnames(all_models)[c(1, 4)] <- c('channel_name', 'attrib_model_conversions')
 ```
@@ -7491,7 +7491,7 @@ library("RColorBrewer")
 library("ggthemes")
 library("ggrepel")
 ############## 시각화 ##############
-# 실데이터에 대한 전이 행렬 히트맵
+## 실데이터에 대한 전이 행렬 히트맵
 df_plot_trans <- mod2$transition_matrix
 
 cols <- c("#e7f0fa", "#c9e2f6", "#95cbee", "#0099dc", "#4ab04a", "#ffd73e", "#eec73a",
@@ -7517,10 +7517,10 @@ ggplot(df_plot_trans, aes(y = channel_from, x = channel_to, fill = transition_pr
               axis.text.x = element_text(size = 8, angle = 90, hjust = 0.5, vjust = 0.5, face = "plain")) +
         ggtitle("전이 행렬 히트맵")
 
-# 모형 비교
+## 모형 비교
 all_mod_plot <- reshape2::melt(all_models, id.vars = 'channel_name', variable.name = 'conv_type')
 all_mod_plot$value <- round(all_mod_plot$value)
-# 슬로프 차트
+## 슬로프 차트
 pal <- colorRampPalette(brewer.pal(10, "Set1"))
 ggplot(all_mod_plot, aes(x = conv_type, y = value, group = channel_name)) +
         theme_solarized(base_size = 18, base_family = "", light = TRUE) +
@@ -7638,7 +7638,7 @@ df_path_1_clean_multi <- df_path_1_clean %>%
         select(-uniq_channel_tag)
 
 ### 실험 ###
-# 전체 경로에 대한 기여도 모형
+## 전체 경로에 대한 기여도 모형
 df_all_paths <- df_path_1_clean %>%
         group_by(customer_id) %>%
         summarise(path = paste(channel, collapse = ' > '),
@@ -7654,7 +7654,7 @@ mod_attrib$removal_effects
 mod_attrib$result
 d_all <- data.frame(mod_attrib$result)
 
-# 분할된 다중 및 고유 채널 경로에 대한 기여도 모형
+## 분할된 다중 및 고유 채널 경로에 대한 기여도 모형
 df_multi_paths <- df_path_1_clean_multi %>%
         group_by(customer_id) %>%
         summarise(path = paste(channel, collapse = ' > '),
@@ -7669,7 +7669,7 @@ mod_attrib_alt <- markov_model(df_multi_paths,
 mod_attrib_alt$removal_effects
 mod_attrib_alt$result
 
-# 고유 경로 추가
+## 고유 경로 추가
 df_uniq_paths <- df_path_1_clean_uniq %>%
         filter(conversion == 1) %>%
         group_by(channel) %>%
@@ -7688,7 +7688,7 @@ sum(d_split$result)
 ```{.r}
 ##### 고차 마르코프 연쇄 및 경로 내 연속 중복 채널 처리 #####
 
-# 전이 행렬 계산 (수동 방식)
+## 전이 행렬 계산 (수동 방식)
 df_multi_paths_m <- df_multi_paths %>%
         mutate(path = paste0('(start) > ', path, ' > (conversion)'))
 m <- max(str_count(df_multi_paths_m$path, '>')) + 1 # 최대 경로 길이
@@ -7731,12 +7731,12 @@ df_dummy <- data.frame(channel_from = c('(start)', '(conversion)', '(null)'),
 
 df_res_tot <- rbind(df_res_tot, df_dummy)
 
-# 전이 행렬 비교
+## 전이 행렬 비교
 trans_matrix_prob_m <- dcast(df_res_tot, channel_from ~ channel_to, value.var = 'perc', fun.aggregate = sum)
 trans_matrix_prob <- data.frame(mod_attrib_alt$transition_matrix)
 trans_matrix_prob <- dcast(trans_matrix_prob, channel_from ~ channel_to, value.var = 'transition_probability')
 
-# 기여도 계산 (수동 방식)
+## 기여도 계산 (수동 방식)
 channels_list <- df_path_1_clean_multi %>%
         filter(conversion == 1) %>%
         distinct(channel)
@@ -7791,7 +7791,7 @@ for (i in c(1:length(channels_list))) {
 
 df_attrib <- do.call('rbind', df_attrib)
 
-# 제거 효과 및 최종 결과 계산
+## 제거 효과 및 최종 결과 계산
 tot_conv <- sum(df_multi_paths_m$conversion)
 
 df_attrib <- df_attrib %>%
@@ -7852,8 +7852,8 @@ nodes <- data_frame(id = c( c(trans_matrix_prob$channel_from), c(trans_matrix_pr
         )
 
 
-# 인터랙티브 htmlwidget: HTML 출력 전용 (PDF/EPUB에서는 webshot2 래스터화 불가로 HTML에서만 렌더링)
-# 백분율 너비 위젯이므로 출력 형식이 HTML일 때만 렌더링합니다.
+## 인터랙티브 htmlwidget: HTML 출력 전용 (PDF/EPUB에서는 webshot2 래스터화 불가로 HTML에서만 렌더링)
+## 백분율 너비 위젯이므로 출력 형식이 HTML일 때만 렌더링합니다.
 if (knitr::pandoc_to("html")) {
   visNetwork(nodes,
              edges,
@@ -7868,7 +7868,7 @@ if (knitr::pandoc_to("html")) {
 
 ```{.r}
 ##### 상태 및 전환 모델링 #####
-# 전이 행렬 전처리
+## 전이 행렬 전처리
 trans_matrix_complete <- mod_attrib_complete$transition_matrix
 trans_matrix_complete <- rbind(trans_matrix_complete, df_dummy %>%
                                        mutate(transition_probability = perc) %>%
@@ -7880,11 +7880,11 @@ rownames(trans_matrix_complete) <- trans_matrix_complete$channel_from
 trans_matrix_complete <- as.matrix(trans_matrix_complete[, -1])
 
 
-# 모델링을 위한 빈 행렬 생성
+## 모델링을 위한 빈 행렬 생성
 model_mtrx <- matrix(data = 0,
                      nrow = nrow(trans_matrix_complete), ncol = 1,
                      dimnames = list(c(rownames(trans_matrix_complete)), '(start)'))
-# 모델링 방문 횟수 추가
+## 모델링 방문 횟수 추가
 model_mtrx['channel_5', ] <- 1000
 
 c(model_mtrx) %*% (trans_matrix_complete %^% 5) # after 5 steps
@@ -7893,7 +7893,7 @@ c(model_mtrx) %*% (trans_matrix_complete %^% 100000) # after 100000 steps
 
 ```{.r}
 ##### 고객 여정 소요 시간 #####
-# 첫 접점부터 전환/최종 접점까지의 경과 시간 계산
+## 첫 접점부터 전환/최종 접점까지의 경과 시간 계산
 df_multi_paths_tl <- df_path_1_clean_multi %>%
         group_by(customer_id) %>%
         summarise(path = paste(channel, collapse = ' > '),
@@ -7903,12 +7903,12 @@ df_multi_paths_tl <- df_path_1_clean_multi %>%
                   conversion = sum(conversion)) %>%
         ungroup()
 
-# 분포 플롯
+## 분포 플롯
 ggplot(df_multi_paths_tl %>% filter(conversion == 1), aes(x = tot_time_lapse)) +
         theme_minimal() +
         geom_histogram(fill = '#4e79a7', binwidth = 1)
 
-# 누적 분포 플롯
+## 누적 분포 플롯
 ggplot(df_multi_paths_tl %>% filter(conversion == 1), aes(x = tot_time_lapse)) +
         theme_minimal() +
         stat_ecdf(geom = 'step', color = '#4e79a7', size = 2, alpha = 0.7) +
@@ -7948,12 +7948,12 @@ df_multi_paths_tl_2 <- df_path_1_clean_multi %>%
         filter(conversion == 1) %>%
         mutate(prev_time_lapse = round(as.numeric(date - prev_touch_date)))
 
-# 분포
+## 분포
 ggplot(df_multi_paths_tl_2, aes(x = prev_time_lapse)) +
         theme_minimal() +
         geom_histogram(fill = '#4e79a7', binwidth = 1)
 
-# 누적 분포
+## 누적 분포
 ggplot(df_multi_paths_tl_2, aes(x = prev_time_lapse)) +
         theme_minimal() +
         stat_ecdf(geom = 'step', color = '#4e79a7', size = 2, alpha = 0.7) +
@@ -7962,7 +7962,7 @@ ggplot(df_multi_paths_tl_2, aes(x = prev_time_lapse)) +
 ```
 
 ```{.r}
-# 일반 모형을 위한 데이터 추출
+## 일반 모형을 위한 데이터 추출
 df_multi_paths_tl_3 <- df_path_1_clean_multi %>%
         group_by(customer_id) %>%
         mutate(prev_time_lapse = round(as.numeric(date - lag(date)))) %>%
@@ -7976,12 +7976,12 @@ df_multi_paths_tl_3 <- df_path_1_clean_multi %>%
 ```
 
 ```{.r}
-# 필수 라이브러리 로드
+## 필수 라이브러리 로드
 library(ChannelAttribution)
 library(reshape)
 library(ggplot2)
 
-# 데모 데이터 로드
+## 데모 데이터 로드
 data(PathData)
 ```
 
@@ -8011,16 +8011,16 @@ M <- markov_model(Data, 'path', 'total_conversions', var_value='total_conversion
 ```
 
 ```{.r}
-# "channel_name" 열을 기준으로 두 데이터 프레임 병합
+## "channel_name" 열을 기준으로 두 데이터 프레임 병합
 R <- merge(H, M, by='channel_name')
 
-# 관련 열 선택
+## 관련 열 선택
 R1 <- R[, (colnames(R)%in%c('channel_name', 'first_touch_conversions', 'last_touch_conversions', 'linear_touch_conversions', 'total_conversion'))]
 
-# 열 이름 변경
+## 열 이름 변경
 colnames(R1) <- c('channel_name', 'first_touch', 'last_touch', 'linear_touch', 'markov_model')
 
-# ggplot2 시각화를 위한 데이터 프레임 변환
+## ggplot2 시각화를 위한 데이터 프레임 변환
 R1 <- melt(R1, id='channel_name')
 ```
 
@@ -8191,7 +8191,7 @@ df_customers_plot$event <-
         )
     )
 
-# 색상 팔레트
+## 색상 팔레트
 cols <- c(
     '#4e79a7',
     '#f28e2b',
@@ -8270,8 +8270,8 @@ library(dplyr)
 library(ggplot2)
 library(reshape2)
 
-# 데이터 샘플 생성
-# 콘텐츠
+## 데이터 샘플 생성
+## 콘텐츠
 df.content <- data.frame(
     content = c(
         'main',
@@ -8298,16 +8298,16 @@ df.content <- data.frame(
                130000,
                120000)
 )
-# 고객
+## 고객
 df.customers <- data.frame(
     content = c('new', 'engaged', 'loyal'),
     step = c('new', 'engaged', 'loyal'),
     number = c(25000, 40000, 55000)
 )
-# 두 데이터셋 결합
+## 두 데이터셋 결합
 df.all <- rbind(df.content, df.customers)
 
-# 플롯을 위한 더미 변수 및 X의 최댓값/최솟값 계산
+## 플롯을 위한 더미 변수 및 X의 최댓값/최솟값 계산
 df.all <- df.all %>%
     group_by(step) %>%
     mutate(totnum = sum(number)) %>%
@@ -8316,18 +8316,18 @@ df.all <- df.all %>%
            maxx = totnum + dum,
            minx = dum)
 
-# 퍼널 선 플롯용 데이터 프레임
+## 퍼널 선 플롯용 데이터 프레임
 df.lines <- df.all %>%
     distinct(step, maxx, minx)
 
-# 더미 변수가 포함된 데이터 프레임
+## 더미 변수가 포함된 데이터 프레임
 df.dum <- df.all %>%
     distinct(step, dum) %>%
     mutate(content = 'dummy',
            number = dum) %>%
     select(content, step, number)
 
-# 전환율 데이터 프레임
+## 전환율 데이터 프레임
 conv <- df.all$totnum[df.all$step == 'action']
 
 df.rates <- df.all %>%
@@ -8343,13 +8343,13 @@ df.rates <- df.all %>%
     select(step, rate)
 df.rates <- na.omit(df.rates)
 
-# 최종 데이터 프레임 생성
+## 최종 데이터 프레임 생성
 df.all <- df.all %>%
     select(content, step, number)
 
 df.all <- rbind(df.all, df.dum)
 
-# 단계 순서 정의
+## 단계 순서 정의
 df.all$step <-
     factor(
         df.all$step,
@@ -8370,14 +8370,14 @@ list1 <- df.all %>% distinct(content) %>%
 df.all$content <-
     factor(df.all$content, levels = c(as.character(list1$content), 'dummy'))
 
-# 레이블 위치 계산
+## 레이블 위치 계산
 df.all <- df.all %>%
     arrange(step, desc(content)) %>%
     group_by(step) %>%
     mutate(pos = cumsum(number) - 0.5 * number) %>%
     ungroup()
 
-# 더미 변수용 흰색을 포함한 커스텀 팔레트 생성
+## 더미 변수용 흰색을 포함한 커스텀 팔레트 생성
 cols <- c(
     "#fec44f",
     "#fc9272",
@@ -8393,7 +8393,7 @@ cols <- c(
     "#ffffff"
 )
 
-# 차트 그리기
+## 차트 그리기
 ggplot() +
     theme_minimal() +
     coord_flip() +
@@ -8514,8 +8514,8 @@ rfm_order_dist(rfm_result)
 ```{.r}
 #| label: fig-rfm-scatter
 #| fig-cap: "세 RFM 차원의 이변량 산점도로, 종합 점수로 축약될 때 사라지는 쌍별 의존 관계를 보여줍니다."
-# RFM 테이블로부터 3가지 쌍별 산점도 직접 시각화
-# (rfm 패키지의 헬퍼 함수 오류 방지를 위해 점수화된 테이블에서 직접 추출)
+## RFM 테이블로부터 3가지 쌍별 산점도 직접 시각화
+## (rfm 패키지의 헬퍼 함수 오류 방지를 위해 점수화된 테이블에서 직접 추출)
 library(ggplot2)
 rfm_df <- rfm_result$rfm
 p_rm <- ggplot(rfm_df, aes(amount, recency_days)) + geom_point(alpha = .4) +
@@ -8569,23 +8569,23 @@ rfm_segments %>%
     arrange(desc(n)) %>%
     rename(Count = n)
 
-# 최근성 중앙값
+## 최근성 중앙값
 rfm_plot_median_recency(rfm_segments)
 
-# 빈도 중앙값
+## 빈도 중앙값
 rfm_plot_median_frequency(rfm_segments)
 
-# 금액 중앙값
+## 금액 중앙값
 rfm_plot_median_monetary(rfm_segments)
 ```
 
 ```{.r}
-# 라이브러리 로드
+## 라이브러리 로드
 library(dplyr)
 library(reshape2)
 library(ggplot2)
 
-# 데이터 샘플 생성
+## 데이터 샘플 생성
 set.seed(10)
 data <- data.frame(
     orderId = sample(c(1:1000), 5000, replace = TRUE),
@@ -8618,10 +8618,10 @@ rm(data, date, order, gender)
 ```{.r}
 #| label: fig-lcg-explore
 #| fig-cap: "시뮬레이션된 주문 로그에서의 구매 빈도 및 최근성의 한계 분포."
-# 보고 기준일
+## 보고 기준일
 today <- as.Date('2012-04-11', format = '%Y-%m-%d')
 
-# 데이터 처리
+## 데이터 처리
 orders <-
     dcast(
         orders,
@@ -8638,7 +8638,7 @@ orders <- orders %>%
     filter(orderId == max(orderId)) %>%
     ungroup()
 
-# 탐색적 분석
+## 탐색적 분석
 ggplot(orders, aes(x = frequency)) +
     theme_bw() +
     scale_x_continuous(breaks = c(1:10)) +
@@ -8690,7 +8690,7 @@ orders.segm <- orders %>%
     )) %>%
     arrange(clientId)
 
-# 경계 순서 정의
+## 경계 순서 정의
 orders.segm$segm.freq <-
     factor(orders.segm$segm.freq, levels = c('>5', '5', '4', '3', '2', '1'))
 orders.segm$segm.rec <-
@@ -8753,7 +8753,7 @@ ggplot(lcg.adv, aes(x = client, y = quantity, fill = customer.type)) +
     geom_text(aes(y = max(quantity) / 2, label = quantity), size = 4) +
     ggtitle("라이프사이클 그리드")
 
-# 배경 포함
+## 배경 포함
 ggplot(lcg.adv, aes(x = client, y = quantity, fill = customer.type)) +
     theme_bw() +
     theme(panel.grid = element_blank()) +
@@ -8800,12 +8800,12 @@ ggplot(lcg.sub, aes(x = gender, y = quantity, fill = cart)) +
 ```{.r}
 #| label: fig-lcg-clv-cac
 #| fig-cap: "고객 평생 가치(CLV)와 고객 획득 비용(CAC)을 총액 및 고객당 기준으로 오버레이한 라이프사이클 그리드. CLV가 CAC를 초과하는 셀은 획득 투자 비용을 회수한 영역입니다."
-# 라이브러리 로드
+## 라이브러리 로드
 library(dplyr)
 library(reshape2)
 library(ggplot2)
 
-# 데이터 샘플 생성
+## 데이터 샘플 생성
 set.seed(10)
 data <- data.frame(
     orderId = sample(c(1:1000), 5000, replace = TRUE),
@@ -8833,7 +8833,7 @@ orders <- merge(orders, date, by = 'orderId')
 orders <- orders[orders$product != 'NULL', ]
 orders$orderdate <- as.Date(orders$orderdate, origin = "2012-01-01")
 
-# CAC 및 매출총이익 데이터 프레임 생성
+## CAC 및 매출총이익 데이터 프레임 생성
 cac <-
     data.frame(clientId = unique(orders$clientId),
                cac = sample(c(10:15), 288, replace = TRUE))
@@ -8843,10 +8843,10 @@ gr.margin <-
 
 rm(data, date, order, gender)
 
-# 보고 기준일
+## 보고 기준일
 today <- as.Date('2012-04-11', format = '%Y-%m-%d')
 
-# 고객 평생 가치(CLV) 계산
+## 고객 평생 가치(CLV) 계산
 orders <- merge(orders, gr.margin, by = 'product')
 
 clv <- orders %>%
@@ -8854,7 +8854,7 @@ clv <- orders %>%
     summarise(clv = sum(grossmarg)) %>%
     ungroup()
 
-# 데이터 처리
+## 데이터 처리
 orders <-
     dcast(
         orders,
@@ -8907,7 +8907,7 @@ orders.segm <- orders %>%
     )) %>%
     arrange(clientId)
 
-# 경계 순서 정의
+## 경계 순서 정의
 orders.segm$segm.freq <-
     factor(orders.segm$segm.freq, levels = c('>5', '5', '4', '3', '2', '1'))
 orders.segm$segm.rec <-
@@ -8961,15 +8961,15 @@ ggplot(lcg.clv[lcg.clv$variable %in% c('clv1', 'cac1'), ], aes(x = variable, y =
 ##### 유지율 주기 및 드롭 차트 {#sec-retention-rate}
 
 ```{.r}
-# 라이브러리 로드
+## 라이브러리 로드
 library(dplyr)
 library(reshape2)
 library(ggplot2)
 library(networkD3)
 
-# 헬퍼: from/to/weight 링크 테이블을 삽입 가능한 D3 산키 다이어그램으로 렌더링
-# networkD3는 독립적인 htmlwidget을 생성합니다
-# (googleVis 대신 책 본문에 내장 가능한 D3 위젯 사용)
+## 헬퍼: from/to/weight 링크 테이블을 삽입 가능한 D3 산키 다이어그램으로 렌더링
+## networkD3는 독립적인 htmlwidget을 생성합니다
+## (googleVis 대신 책 본문에 내장 가능한 D3 위젯 사용)
 make_sankey <- function(links, from = "from", to = "to", weight = "n", font = 11) {
   # htmlwidget: HTML 출력 전용 (PDF/EPUB에서는 렌더링 생략)
   # 백분율 너비 위젯이므로 비-HTML 형식에서는 렌더링을 건너뜁니다.
@@ -8983,7 +8983,7 @@ make_sankey <- function(links, from = "from", to = "to", weight = "n", font = 11
 }
 
 set.seed(10)
-# 주문 데이터 샘플 생성
+## 주문 데이터 샘플 생성
 data <- data.frame(
     orderId = sample(c(1:5000), 25000, replace = TRUE),
     product = sample(
@@ -9002,7 +9002,7 @@ orders <- merge(orders, date, by = 'orderId')
 orders <- orders[orders$product != 'NULL',]
 orders$orderdate <- as.Date(orders$orderdate, origin = "2012-01-01")
 rm(data, date, order)
-# CAC, 매출총이익, 캠페인 및 잠재 CLV 데이터 프레임 생성
+## CAC, 매출총이익, 캠페인 및 잠재 CLV 데이터 프레임 생성
 gr.margin <-
     data.frame(product = c('a', 'b', 'c'),
                grossmarg = c(1, 2, 3))
@@ -9017,12 +9017,12 @@ potential <- data.frame(clientId = c(1:1500),
                         clv.p = sample(c(0:50), 1500, replace = TRUE))
 rm(cac)
 
-# 보고 기준일
+## 보고 기준일
 today <- as.Date('2013-05-16', format = '%Y-%m-%d')
 ```
 
 ```{.r}
-# CLV, 빈도, 최근성, 구매 간격 계산 및 코호트 정의
+## CLV, 빈도, 최근성, 구매 간격 계산 및 코호트 정의
 
 orders <- merge(orders, gr.margin, by = 'product')
 
@@ -9045,16 +9045,16 @@ customers <- orders %>%
     summarise(clv = sum(grossmarg)) %>%
     arrange(clientId) %>%
     ungroup()
-# 잠재 CLV 및 CAC 계산
+## 잠재 CLV 및 CAC 계산
 customers <- merge(customers, campaign, by = 'clientId')
 customers <- merge(customers, potential, by = 'clientId')
-# 잠재 가치를 실제 가치에 근접하도록 조정
+## 잠재 가치를 실제 가치에 근접하도록 조정
 customers$clv.p <-
     round(customers$clv.p / sqrt(customers$recency) * customers$frequency,
           2)
 
 rm(potential, gr.margin, today)
-# 세그먼트 추가
+## 세그먼트 추가
 customers <- customers %>%
     mutate(segm.freq = ifelse(between(frequency, 1, 1), '1',
                               ifelse(
@@ -9083,7 +9083,7 @@ customers <- customers %>%
         )
     ))
 
-# 경계 순서 정의
+## 경계 순서 정의
 customers$segm.freq <-
     factor(customers$segm.freq, levels = c('>5', '5', '4', '3', '2', '1'))
 customers$segm.rec <-
@@ -9122,7 +9122,7 @@ lcg.coh <- customers %>%
         diff = av.clv - av.cac
     )
 
-# 1. 평균 구조 및 코호트 비교
+## 1. 평균 구조 및 코호트 비교
 
 ggplot(lcg.coh, aes(x = cohort, fill = cohort)) +
     theme_bw() +
@@ -9166,15 +9166,15 @@ ggplot(lcg.coh, aes(x = cohort, fill = cohort)) +
     )) +
     ggtitle("라이프사이클 그리드 내 코호트 - 총 평균 CLV와 평균 CAC")
 
-# 2. 고객 흐름 분석
-# 고객 흐름 분석 (첫 구매일 코호트)
+## 2. 고객 흐름 분석
+## 고객 흐름 분석 (첫 구매일 코호트)
 
-# 코호트 및 보고 일자 정의
+## 코호트 및 보고 일자 정의
 coh <- '2012-09'
 report.dates <- c('2012-10-01', '2013-01-01', '2013-04-01')
 report.dates <- as.Date(report.dates, format = '%Y-%m-%d')
 
-# 보고 일자별 코호트 고객 세그먼트 정의
+## 보고 일자별 코호트 고객 세그먼트 정의
 df.sankey <- data.frame()
 
 for (i in 1:length(report.dates)) {
@@ -9237,7 +9237,7 @@ for (i in 1:length(report.dates)) {
     df.sankey <- rbind(df.sankey, customers.cache)
 }
 
-# 산키 다이어그램 형식으로 데이터 처리
+## 산키 다이어그램 형식으로 데이터 처리
 df.sankey <-
     dcast(df.sankey,
           clientId ~ report.date,
@@ -9263,10 +9263,10 @@ for (i in 2:ncol(df.sankey)) {
     df.sankey.plot <- rbind(df.sankey.plot, df.sankey.cache)
 }
 
-# 플롯 그리기
+## 플롯 그리기
 make_sankey(df.sankey.plot)
 
-# 구매 속도
+## 구매 속도
 
 ggplot(lcg.coh, aes(x = cohort, fill = cohort)) +
     theme_bw() +
@@ -9286,7 +9286,7 @@ ggplot(lcg.coh, aes(x = cohort, fill = cohort)) +
 ```{.r}
 #| label: fig-campaign-cohorts
 #| fig-cap: "라이프사이클 그리드 상의 캠페인 코호트: 획득 캠페인별 수익성 격차, 획득 비용 대비 총 가치, 구매 속도."
-# 캠페인 코호트
+## 캠페인 코호트
 lcg.camp <- customers %>%
     group_by(campaign, segm.rec, segm.freq) %>%
     # 누적 값 계산
@@ -9368,13 +9368,13 @@ ggplot(lcg.camp, aes(x = campaign, fill = campaign)) +
 ```{.r}
 #| label: fig-retention-cycle
 #| fig-cap: "시뮬레이션된 계절성을 포함한 고객 유지율 사이클 플롯 및 라이프타임 연차별 코호트 규모 막대. 평활화된 추세를 통해 캘린더 효과와 코호트 품질 차이를 분리합니다."
-# 라이브러리 로드
+## 라이브러리 로드
 library(dplyr)
 library(reshape2)
 library(ggplot2)
 library(scales)
 library(gridExtra)
-# 데이터 샘플 생성
+## 데이터 샘플 생성
 set.seed(10)
 cohorts <-
     data.frame(
@@ -9389,7 +9389,7 @@ cohorts <-
         Y_02 = c(sample(c(600:800), 24, replace = TRUE), rep(NA, 12)),
         Y_03 = c(sample(c(400:500), 12, replace = TRUE), rep(NA, 24))
     )
-# 계절성 시뮬레이션 (블랙 프라이데이)
+## 계절성 시뮬레이션 (블랙 프라이데이)
 cohorts[c(11, 23, 35), 2] <-
     as.integer(cohorts[c(11, 23, 35), 2] * 1.25)
 cohorts[c(11, 23, 35), 3] <-
@@ -9397,7 +9397,7 @@ cohorts[c(11, 23, 35), 3] <-
 cohorts[c(11, 23, 35), 4] <-
     as.integer(cohorts[c(11, 23, 35), 4] * 1.07)
 
-# 유지율 계산 및 시각화 데이터 준비
+## 유지율 계산 및 시각화 데이터 준비
 df_plot <-
     reshape2::melt(
         cohorts,
@@ -9419,11 +9419,11 @@ df_plot <- df_plot %>%
     )
 
 ##### 방법 1: 축 스케일링을 통한 사이클 플롯 시각화 #####
-# 2차 축 스케일링 계수 계산
+## 2차 축 스케일링 계수 계산
 k <-
     max(df_plot$number_prev_year[df_plot$year_of_LT == 'Y_01'] * 1.15) / min(df_plot$ret_rate[df_plot$year_of_LT == 'Y_01'])
 
-# 유지율 사이클 플롯
+## 유지율 사이클 플롯
 ggplot(
     na.omit(df_plot),
     aes(
@@ -9494,7 +9494,7 @@ ggplot(
     ggtitle("고객 유지율 - 사이클 플롯")
 
 ##### 방법 2: 다중 플롯을 통한 사이클 플롯 시각화 #####
-# 플롯 1 - 유지율
+## 플롯 1 - 유지율
 p1 <-
     ggplot(
         na.omit(df_plot),
@@ -9535,7 +9535,7 @@ p1 <-
     labs(y = '유지율') +
     ggtitle("고객 유지율 - 사이클 플롯")
 
-# 플롯 2 - 고객 수
+## 플롯 2 - 고객 수
 p2 <-
     ggplot(na.omit(df_plot),
            aes(x = year_cohort, group = year_of_LT, color = year_of_LT)) +
@@ -9583,9 +9583,9 @@ p2 <-
     scale_y_continuous(limits = c(0, max(df_plot$number_Y_00 * 1.1))) +
     labs(x = '코호트별 라이프타임 연차', y = '고객 수')
 
-# 멀티 플롯
+## 멀티 플롯
 grid.arrange(p1, p2, ncol = 1)
-# 유지율 버블 차트
+## 유지율 버블 차트
 ggplot(na.omit(df_plot),
        aes(
            x = cohort,
@@ -9637,7 +9637,7 @@ ggplot(na.omit(df_plot),
     labs(x = '코호트', y = '라이프타임 연차별 유지율') +
     ggtitle("고객 유지율 - 버블 차트")
 
-# 유지율 폴링 드롭스(낙하) 차트
+## 유지율 폴링 드롭스(낙하) 차트
 ggplot(df_plot,
        aes(
            x = cohort,
@@ -9688,7 +9688,7 @@ ggplot(df_plot,
 ```{.r}
 #| label: fig-retention-triangle
 #| fig-cap: "유지율 삼각형(Retention triangle) 분석: 라이프타임 월별 비율 동태, 단일 월 코호트 간 비교, 두 기준 코호트를 강조한 사이클 플롯."
-# 라이브러리
+## 라이브러리
 library(dplyr)
 library(ggplot2)
 library(reshape2)
@@ -9736,7 +9736,7 @@ for (i in 1:nrow(cohort.clients.r)) {
         df[, c((partcols + 1):totcols)] <- 0
     cohort.clients.r[i,] <- df # 기존 행을 새 값으로 대체
 }
-# 유지 비율 = 해당 월 고객 수 / 첫 달 고객 수
+## 유지 비율 = 해당 월 고객 수 / 첫 달 고객 수
 
 #calculate retention (1)
 x <- cohort.clients.r[, c(2:13)]
@@ -9757,9 +9757,9 @@ colnames(reten.r) <- colnames(cohort.clients.r)
 
 
 
-# 차트
+## 차트
 reten.r <- reten.r[,-2] # 항상 100%인 M01 데이터 제거
-# 동태 분석 차트
+## 동태 분석 차트
 cohort.chart1 <- melt(reten.r, id.vars = 'cohort')
 colnames(cohort.chart1) <- c('cohort', 'month', 'retention')
 cohort.chart1 <- filter(cohort.chart1, retention != 0)
@@ -9782,7 +9782,7 @@ p + geom_line(size = 2, alpha = 1 / 2) +
     ) +
     labs(title = "코호트 유지율 동태")
 
-# 2차 월 분석 차트
+## 2차 월 분석 차트
 cohort.chart2 <-
     filter(cohort.chart1, month == 'M02') # M02 대신 원하는 월 선택
 p <-
@@ -9797,7 +9797,7 @@ p + geom_point(size = 3) +
         se = FALSE
     ) +
     labs(title = "2개월차 코호트 유지율")
-# 사이클 플롯
+## 사이클 플롯
 cohort.chart3 <- cohort.chart1
 cohort.chart3 <-
     mutate(cohort.chart3, month_cohort = paste(month, cohort))
@@ -9809,7 +9809,7 @@ p <-
                group = month,
                colour = month
            ))
-# 기준 코호트 선택
+## 기준 코호트 선택
 m1 <- filter(cohort.chart3, cohort == 'Cohort07')
 m2 <- filter(cohort.chart3, cohort == 'Cohort06')
 p + geom_point(size = 3) +
@@ -9907,7 +9907,7 @@ for (i in l) {
     df <- rbind(df, customers.cache)
 }
 
-# 데이터를 시퀀스 형식으로 변환
+## 데이터를 시퀀스 형식으로 변환
 df <-
     dcast(df,
           clientId ~ report.date,
@@ -9919,17 +9919,17 @@ df.seq <- seqdef(df,
                  right = 'DEL',
                  xtstep = 10)
 
-# 첫 구매일 및 캠페인 코호트 특성을 포함한 데이터 프레임 생성
+## 첫 구매일 및 캠페인 코호트 특성을 포함한 데이터 프레임 생성
 feat <- df %>% select(clientId)
 feat <- merge(feat, campaign[, 1:2], by = 'clientId')
 feat <- merge(feat, customers[, 1:2], by = 'clientId')
 
 par(mar = c(1, 1, 1, 1))
 
-# 캠페인별 상위 10개 최빈 시퀀스 시각화
+## 캠페인별 상위 10개 최빈 시퀀스 시각화
 seqfplot(df.seq, border = NA, group = feat$campaign)
 
-# 캠페인별 상위 10개 최빈 시퀀스 시각화
+## 캠페인별 상위 10개 최빈 시퀀스 시각화
 seqfplot(
     df.seq,
     border = NA,
@@ -9937,9 +9937,9 @@ seqfplot(
     cex.legend = 0.9
 )
 
-# 첫 구매일 코호트별 상위 10개 최빈 시퀀스 시각화
+## 첫 구매일 코호트별 상위 10개 최빈 시퀀스 시각화
 coh.list <- sort(unique(feat$cohort))
-# 시각화용 코호트 정의
+## 시각화용 코호트 정의
 feat.coh.list <- feat[feat$cohort %in% coh.list[1:6] ,]
 df.coh <- df %>% filter(clientId %in% c(feat.coh.list$clientId))
 df.seq.coh <-
@@ -9959,13 +9959,13 @@ seqfplot(
 ```
 
 ```{.r}
-# 라이브러리 로드
+## 라이브러리 로드
 library(dplyr)
 library(tidyverse)
 library(reshape2)
 library(plotrix)
 
-# 주문 시뮬레이션
+## 주문 시뮬레이션
 set.seed(15)
 df <- data.frame(
     orderId = sample(c(1:1000), 5000, replace = TRUE),
@@ -9981,8 +9981,8 @@ head(df)
 ```
 
 ```{.r}
-# 초기 데이터 전처리
-# 상품명의 고유성 확보
+## 초기 데이터 전처리
+## 상품명의 고유성 확보
 df$product <- paste0("#", df$product, "#")
 
 prod.matrix <- df %>%
@@ -10003,10 +10003,10 @@ head(prod.matrix)
 ```
 
 ```{.r}
-# 총 주문/장바구니 수 계산
+## 총 주문/장바구니 수 계산
 tot <- sum(prod.matrix$num)
 
-# 1개 상품 및 2개 이상 상품 주문 분할
+## 1개 상품 및 2개 이상 상품 주문 분할
 one.prod <- prod.matrix %>% filter(prod.num == 1)
 
 sev.prod <- prod.matrix %>%
@@ -10018,7 +10018,7 @@ sev.prod <- prod.matrix %>%
 
 ### 다층 파이 차트 (Multi-Layer Pie Chart) {#sec-basket-pie}
 ```{.r}
-# 파이 차트 파라미터 정의
+## 파이 차트 파라미터 정의
 iniR <- 0.2 # initial radius
 cols <- c(
     "#ffffff",
@@ -10047,7 +10047,7 @@ colors <- as.list(setNames(cols[c(1:(length(prod)))], prod))
 ```{.r}
 #| label: fig-basket-pie
 #| fig-cap: "장바구니의 다층 파이 차트. 내부 고리는 단일 상품 장바구니를 나타내며 각 외부 고리는 추가 상품의 존재를 인코딩하므로 호가 가장 넓은 부분이 가장 흔한 조합입니다."
-# 0 circle: blank
+## 0 circle: blank
 pie(
     1,
     radius = iniR,
@@ -10057,7 +10057,7 @@ pie(
     labels = ''
 )
 
-# 외부 원부터 내부 원 순으로 그리기
+## 외부 원부터 내부 원 순으로 그리기
 for (i in length(prod):2) {
     p <- grep(prod[i], sev.prod$cart)
     col <- rep('NO', times = nrow(sev.prod))
@@ -10073,7 +10073,7 @@ for (i in length(prod):2) {
     )
 }
 
-# 1번 원: 1개 상품 주문
+## 1번 원: 1개 상품 주문
 floating.pie(
     0,
     0,
@@ -10084,7 +10084,7 @@ floating.pie(
     border = "#44aaff"
 )
 
-# 범례
+## 범례
 legend(
     1.5,
     2 * iniR,
@@ -10097,7 +10097,7 @@ legend(
 ```
 
 ```{.r}
-# 통계 요약 테이블 생성
+## 통계 요약 테이블 생성
 stat.tab <- prod.matrix %>%
     select(-prod.num) %>%
     mutate(share = num / tot) %>%
@@ -10111,12 +10111,12 @@ stat.tab$share <-
 ```{.r}
 #| label: fig-basket-sankey
 #| fig-cap: "연속된 주문에 걸친 장바구니 구성의 산키 다이어그램. 밴드 너비는 각 장바구니 간 전이를 수행한 고객 수에 비례합니다."
-# 라이브러리 로드
+## 라이브러리 로드
 library(networkD3)
 library(dplyr)
 library(reshape2)
 
-# 주문 예제 데이터 생성
+## 주문 예제 데이터 생성
 set.seed(15)
 df <- data.frame(
     orderId = c(1:1000),
@@ -10141,7 +10141,7 @@ df <- data.frame(
     )
 )
 
-# 상품 결합
+## 상품 결합
 df$cart <- paste(df$prod1, df$prod2, df$prod3, sep = ';')
 df$cart <- gsub('NULL;|;NULL', '', df$cart)
 df <- df[df$cart != 'NULL',]
@@ -10166,7 +10166,7 @@ orders <-
           fun.aggregate = NULL)
 
 
-# 분석할 시퀀스 내 장바구니/주문 수 선택
+## 분석할 시퀀스 내 장바구니/주문 수 선택
 orders <- orders %>%
     select(ord1, ord2, ord3, ord4, ord5)
 
@@ -10197,7 +10197,7 @@ library(TraMineR)
 library(reshape2)
 library(networkD3)
 
-# 장바구니 예제 데이터 생성
+## 장바구니 예제 데이터 생성
 set.seed(10)
 data <- data.frame(
     orderId = sample(c(1:1000), 5000, replace = TRUE),
@@ -10209,11 +10209,11 @@ data <- data.frame(
     )
 )
 
-# 고객의 구매 순서 반영
+## 고객의 구매 순서 반영
 order <- data.frame(orderId = c(1:1000),
                     clientId = sample(c(1:300), 1000, replace = TRUE))
 
-# 고객 성별 반영
+## 고객 성별 반영
 sex <- data.frame(clientId = c(1:300),
                   sex = sample(
                       c('male', 'female'),
@@ -10234,7 +10234,7 @@ rm(data, date, order, sex)
 
 head(orders)
 
-# 장바구니 상품 결합 (하루 2회 방문 케이스 포함)
+## 장바구니 상품 결합 (하루 2회 방문 케이스 포함)
 df <- orders %>%
     arrange(product) %>%
     select(-orderId) %>%
@@ -10286,7 +10286,7 @@ for (i in 1:length(ids)) {
 
     df.new <- rbind(df.new, df.cache)
 }
-# 더미 필터링
+## 더미 필터링
 df.new <- df.new %>%
     filter(cart != 'nopurch' | to != orderdate)
 rm(orders, df, df.cache, i, ids, max.date, av.dur)
@@ -10308,11 +10308,11 @@ df.sankey <-
 
 df.sankey[is.na(df.sankey)] <- 'unknown'
 
-# 시퀀스 길이 선택
+## 시퀀스 길이 선택
 df.sankey <- df.sankey %>%
     select(ord1, ord2, ord3, ord4)
 
-# 미구매('nopurch') 이후의 결측치를 'nopurch'로 대체
+## 미구매('nopurch') 이후의 결측치를 'nopurch'로 대체
 df.sankey[df.sankey[, 2] == 'nopurch', 3] <- 'nopurch'
 df.sankey[df.sankey[, 3] == 'nopurch', 4] <- 'nopurch'
 
@@ -10348,7 +10348,7 @@ df.new <- df.new %>%
     filter(ord %in% c('ord1', 'ord2', 'ord3', 'ord4')) %>%
     select(-ord)
 
-# 날짜를 수치형으로 변환
+## 날짜를 수치형으로 변환
 min.date <- as.Date(min(df.new$orderdate), format = "%Y-%m-%d")
 df.new$orderdate <- as.numeric(df.new$orderdate - min.date + 1)
 df.new$to <- as.numeric(df.new$to - min.date + 1)
@@ -10374,7 +10374,7 @@ summary(df.seq)
 
 df.feat <- unique(df.new[, c('clientId', 'sex')])
 
-# 분포 분석
+## 분포 분석
 seqdplot(df.seq, border = NA, withlegend = 'right')
 seqdplot(df.seq, border = NA, group = df.feat$sex) # 성별 분포
 
@@ -10387,16 +10387,16 @@ df.seq <- seqdef(df.form,
                  xtstep = 10)
 
 
-# 상위 10개 최빈 시퀀스
+## 상위 10개 최빈 시퀀스
 seqfplot(df.seq, border = NA, withlegend = 'right')
-# 성별 기준 상위 10개 최빈 시퀀스
+## 성별 기준 상위 10개 최빈 시퀀스
 seqfplot(df.seq, group = df.feat$sex, border = NA)
 
-# 빈도 통계 반환
+## 빈도 통계 반환
 seqtab(df.seq) # frequency table
 seqtab(df.seq[, 1:30]) # 첫 달 빈도표
 
-# 각 상태별 평균 소요 시간
+## 각 상태별 평균 소요 시간
 seqmtplot(df.seq, title = 'Mean time', withlegend = 'right')
 seqmtplot(df.seq, group = df.feat$sex, title = 'Mean time')
 
@@ -10405,13 +10405,13 @@ statd <-
 apply(statd, 2, mean) # 상태별 평균 소요 시간 확인 가능
 
 
-# 엔트로피 계산
+## 엔트로피 계산
 df.ient <- seqient(df.seq)
 hist(df.ient,
      col = 'cyan',
      main = NULL,
      xlab = 'Entropy') # 시퀀스 내부 엔트로피 히스토그램 그리기
-# 성별 엔트로피 분포
+## 성별 엔트로피 분포
 df.ent <- cbind(df.seq, df.ient)
 boxplot(
     Entropy ~ df.feat$sex,
@@ -10425,12 +10425,12 @@ boxplot(
 ```{.r}
 #| label: fig-geo-broadsheets
 #| fig-cap: "OAC 슈퍼그룹별 대판 신문(Broadsheet) 독자 비율(전국 평균 대비 백분율 편차로 표시). 양수 막대는 평균 이상으로 집중된 오디언스를 나타냅니다."
-# 라이브러리 로드
+## 라이브러리 로드
 library(scales)
 library(ggplot2)
 
 
-# 데이터 및 데이터 프레임 설정
+## 데이터 및 데이터 프레임 설정
 oac_names <-
     c(
         "Blue Collar Communities",
@@ -10444,12 +10444,12 @@ oac_names <-
 
 broadsheets <- c(73.2, 144, 103.9, 109.1, 78.2, 97.1, 120.2)
 oac_broadsheets <- data.frame(oac_names, broadsheets)
-# 백분율 값을 소수점 증감률로 변환 (예: 144% -> 0.44)
+## 백분율 값을 소수점 증감률로 변환 (예: 144% -> 0.44)
 oac_broadsheets$broadsheets <-  broadsheets / 100 - 1
 
 oac_broadsheets
 
-# 시각화에 사용할 색상 팔레트 선택
+## 시각화에 사용할 색상 팔레트 선택
 my_colour <-
     c("#33A1C9",
       "#FFEC8B",
@@ -10459,8 +10459,8 @@ my_colour <-
       "#9F79EE",
       "#FCC08F")
 
-# 그래프 플롯 생성
-# 데이터 및 그래프 유형 설정
+## 그래프 플롯 생성
+## 데이터 및 그래프 유형 설정
 ggplot(oac_broadsheets, aes(oac_names, broadsheets)) +
     geom_bar(stat = "identity",
              fill = my_colour,
@@ -10489,13 +10489,13 @@ ggplot(oac_broadsheets, aes(oac_names, broadsheets)) +
 tabloids <- c(110.8, 82.2, 104.9, 94.5, 108.4, 96.4, 96.0)
 oac_tabloids <- data.frame(oac_names, tabloids)
 
-# 백분율 값을 소수점 증감률로 변환 (예: 144% -> 0.44)
+## 백분율 값을 소수점 증감률로 변환 (예: 144% -> 0.44)
 oac_tabloids$tabloids <-  tabloids / 100 - 1
 
 oac_tabloids
 
 
-# 플롯
+## 플롯
 ggplot(oac_tabloids, aes(oac_names, tabloids)) +
     geom_bar(stat = "identity",
              fill = my_colour,
@@ -10519,16 +10519,16 @@ ggplot(oac_tabloids, aes(oac_names, tabloids)) +
 ```
 
 ```{.r}
-# `sf` 패키지를 활용한 최신 공간 데이터 처리
+## `sf` 패키지를 활용한 최신 공간 데이터 처리
 library(sf)
 library(tidyverse)
 
-# 리버풀 출력 구역 셰이프파일 압축 해제
+## 리버풀 출력 구역 셰이프파일 압축 해제
 oa_dir <- file.path(tempdir(), "liverpool_OA")
 unzip("images/liverpool_OA.zip", exdir = oa_dir)
 shp <- list.files(oa_dir, pattern = "[.]shp$", recursive = TRUE, full.names = TRUE)[1]
 
-# 지오메트리 로드 및 좌표계(EPSG:27700) 설정
+## 지오메트리 로드 및 좌표계(EPSG:27700) 설정
 liverpool <- st_read(shp, quiet = TRUE)
 st_crs(liverpool) <- 27700
 ```
@@ -10536,7 +10536,7 @@ st_crs(liverpool) <- 27700
 ```{.r}
 library(tidyverse)
 
-# OAC 인구통계 분류 CSV 파일 로드
+## OAC 인구통계 분류 CSV 파일 로드
 OAC <- rio::import("images/2011oacclustersandnamescsvv2.zip") %>%
     select(
         "Output Area Code",
@@ -10551,12 +10551,12 @@ OAC <- rio::import("images/2011oacclustersandnamescsvv2.zip") %>%
 ```
 
 ```{.r}
-# 구역 코드를 기준으로 OAC 분류를 지오메트리에 병합
+## 구역 코드를 기준으로 OAC 분류를 지오메트리에 병합
 liverpool <- liverpool %>%
     left_join(OAC, by = c("OA01CD" = "OA_CODE")) %>%
     drop_na(`Supergroup Code`)
 
-# 속성 테이블 상위 데이터 확인
+## 속성 테이블 상위 데이터 확인
 liverpool %>%
     st_drop_geometry() %>%
     select(OA01CD, `Supergroup Name`, `Supergroup Code`) %>%
@@ -10569,7 +10569,7 @@ liverpool %>%
 ```{.r}
 #| label: fig-geo-map
 #| fig-cap: "각 출력 구역이 OAC 슈퍼그룹에 따라 채색되어 리버풀의 지리인구통계학적 분류를 도시의 공간적 초상으로 렌더링한 등치지역도(Choropleth map)."
-# OAC 슈퍼그룹별 색상 팔레트 정의
+## OAC 슈퍼그룹별 색상 팔레트 정의
 my_colour <-
     c("#33A1C9",
       "#FFEC8B",
@@ -10578,7 +10578,7 @@ my_colour <-
       "#B7B7B7",
       "#9F79EE",
       "#FCC08F")
-# 등치지역도(Choropleth) 생성: OAC 슈퍼그룹별 색상 채우기
+## 등치지역도(Choropleth) 생성: OAC 슈퍼그룹별 색상 채우기
 liverpool %>%
     mutate(Supergroup = fct_reorder(`Supergroup Name`, `Supergroup Code`)) %>%
     ggplot() +
@@ -10618,7 +10618,7 @@ liverpool %>%
 
 <!-- ====== Section from: 28-model-building.qmd ====== -->
 
-# 모형 구축 {#sec-model-building}
+## 모형 구축 {#sec-model-building}
 
 모형 구축(Model Building)은 마케팅 현상의 배후에 존재하는 핵심 인과 메커니즘을 수학적으로 추상화하는 지적 실천이다. 훌륭한 모형은 모든 현실을 1:1로 모사하는 정밀 지도가 아니라, 목적지에 도달하기 위해 본질적인 도로망만을 간결하게 표시한 지하철 노선도와 같다.
 
@@ -10678,12 +10678,12 @@ $$ {#eq-hotelling-sol}
 #| warning: false
 library(tidyverse)
 
-# 기업 A의 최적 반응 함수 (상대 가격 pB와 차별화 비용 t가 주어졌을 때)
+## 기업 A의 최적 반응 함수 (상대 가격 pB와 차별화 비용 t가 주어졌을 때)
 br_A <- function(pB, t) {
   0.5 * (pB + t)
 }
 
-# 최적 반응 반복(Best-Response Iteration)을 통한 균형점 수렴
+## 최적 반응 반복(Best-Response Iteration)을 통한 균형점 수렴
 solve_hotelling <- function(t, max_iter = 100) {
   pA <- 1; pB <- 1
   for (i in 1:max_iter) {
@@ -10721,7 +10721,7 @@ ggplot(df_res, aes(`차별화 비용 (t)`, `수치적 균형 가격`)) +
 
 <!-- ====== Section from: 29-structural-models.qmd ====== -->
 
-# 구조 모형 {#sec-structural-models}
+## 구조 모형 {#sec-structural-models}
 
 구조 모형(structural models)은 경제 이론을 바탕으로 소비자의 효용 함수, 기업의 비용 함수 및 시장 균형 조건을 수학적으로 정식화하고 관찰된 데이터로부터 정책에 불변하는 원초적 모수(primitive parameters)를 복원하는 계량경제학적 접근법이다 ([그림 @fig-sm-pipeline]).
 
@@ -10757,13 +10757,13 @@ z  <- rnorm(n, 2, 1)     # 도구변수 (공급을 이동시키고 수요에는 
 ud <- rnorm(n, 0, 1)     # 미관찰 수요 충격
 us <- rnorm(n, 0, 1)     # 미관찰 공급 충격
 
-# 균형 가격 및 수량 계산 (Qd = Qs 풀기)
+## 균형 가격 및 수량 계산 (Qd = Qs 풀기)
 p <- ((a0 - b0) - g * z + (ud - us)) / (a1 + b1)
 q <- a0 - a1 * p + ud
 
-# (1) 단순 OLS (상향 편향)
+## (1) 단순 OLS (상향 편향)
 fit_ols <- lm(q ~ p)
-# (2) 2SLS 구조 추정 (도구변수 z 활용)
+## (2) 2SLS 구조 추정 (도구변수 z 활용)
 library(AER)
 fit_2sls <- ivreg(q ~ p | z)
 
@@ -10789,16 +10789,16 @@ x    <- rnorm(J)                    # 관측된 제품 특성
 cost <- runif(J, 1, 3)              # 비용 도구변수
 xi   <- rnorm(J, 0, 0.6)            # 미관찰 품질
 
-# 가격은 비용과 미관찰 품질에 연동됨
+## 가격은 비용과 미관찰 품질에 연동됨
 price <- 1.5 + 0.8 * cost + 1.2 * xi + rnorm(J, 0, 0.2)
 delta <- 2.0 * x - 1.2 * price + xi
 
-# 로짓 선택 확률 계산
+## 로짓 선택 확률 계산
 prob <- exp(delta) / (1 + sum(exp(delta)))
 sales <- rmultinom(1, N, prob)
 shares <- sales / N
 
-# Berry (1994) 역변환: log(s_j) - log(s_0) = x_j * beta - alpha * p_j + xi_j
+## Berry (1994) 역변환: log(s_j) - log(s_0) = x_j * beta - alpha * p_j + xi_j
 s0 <- 1 - sum(shares)
 y_berry <- log(shares) - log(s0)
 
@@ -10841,7 +10841,7 @@ flowchart LR
 
 <!-- ====== Section from: 30-measurement-scales.qmd ====== -->
 
-# 측정 척도 {#sec-measurement-scales}
+## 측정 척도 {#sec-measurement-scales}
 
 태도, 만족도, 브랜드 애착, 지각된 위험 등 마케팅의 핵심 구성개념들은 직접 관찰할 수 없는 잠재변수(latent variables)인다. 이러한 잠재변수를 과학적으로 신뢰할 수 있고 타당하게 수치화하는 도구가 바로 측정 척도(measurement scales)인다.
 
@@ -10919,12 +10919,12 @@ flowchart TB
 set.seed(42)
 N <- 200
 
-# 잠재 리뷰 감성 (1: 긍정, 0: 부정) 및 2명의 코더 라벨링 생성
+## 잠재 리뷰 감성 (1: 긍정, 0: 부정) 및 2명의 코더 라벨링 생성
 true_state <- rbinom(N, 1, 0.6)
 coder1 <- ifelse(runif(N) < 0.90, true_state, 1 - true_state)
 coder2 <- ifelse(runif(N) < 0.85, true_state, 1 - true_state)
 
-# Cohen's Kappa 계산
+## Cohen's Kappa 계산
 library(irr)
 df_kappa <- data.frame(coder1, coder2)
 res_k <- kappa2(df_kappa)
@@ -10945,11 +10945,11 @@ n      <- 500
 lambda <- c(0.85, 0.80, 0.75, 0.70)   # 진정한 요인 부하량
 eta    <- rnorm(n, 0, 1)
 
-# 4개 반영적 지표 생성: x_k = lambda_k * eta + e_k
+## 4개 반영적 지표 생성: x_k = lambda_k * eta + e_k
 X <- sapply(lambda, function(l) l * eta + sqrt(1 - l^2) * rnorm(n))
 colnames(X) <- paste0("item", 1:4)
 
-# 공분산 행렬 기반 크론바흐 알파
+## 공분산 행렬 기반 크론바흐 알파
 var_tot  <- var(rowSums(X))
 var_item <- sum(apply(X, 2, var))
 k <- ncol(X)
@@ -10978,7 +10978,7 @@ n <- 800
 eta1 <- rnorm(n); eta2 <- rnorm(n)            # 이론적으로 상관관계 0인 두 구성개념
 M_factor <- rnorm(n)                         # 동일방법편향 유발 요인
 
-# 방법 편향이 주입된 관찰 지표들
+## 방법 편향이 주입된 관찰 지표들
 x <- 0.7 * eta1 + 0.5 * M_factor + rnorm(n, 0, 0.5)
 y <- 0.7 * eta2 + 0.5 * M_factor + rnorm(n, 0, 0.5)
 marker <- 0.5 * M_factor + rnorm(n, 0, 0.7)  # 이론상 무관한 마커 변수
@@ -11002,7 +11002,7 @@ cat("마커 변수 보정 후 상관계수 (Corrected):", round(r_corrected, 3),
 
 <!-- ====== Section from: 31-surveys.qmd ====== -->
 
-# 설문조사와 실험 {#sec-surveys}
+## 설문조사와 실험 {#sec-surveys}
 
 설문조사와 실험은 소비자의 심리적 상태, 태도, 선호 및 인과적 반응을 직접 측정하는 핵심 연구 방법론이다.
 
@@ -11058,19 +11058,19 @@ $$ {#eq-ht}
 set.seed(31)
 N <- 100000
 
-# 결과 변수 y와 표집 확률 prob 모두를 유발하는 공변량 x
+## 결과 변수 y와 표집 확률 prob 모두를 유발하는 공변량 x
 x <- runif(N, 0, 1)
 y <- 2 + 3 * x + rnorm(N, 0, 1)
 true_mean <- mean(y)
 
-# 부등확률 표집: x가 큰 단위가 더 높은 확률로 표집됨 (선택 편향)
+## 부등확률 표집: x가 큰 단위가 더 높은 확률로 표집됨 (선택 편향)
 pi_i <- plogis(-2 + 4 * x)
 in_sample <- rbinom(N, 1, pi_i)
 s_idx <- which(in_sample == 1)
 
-# (1) 단순 표본 평균 (상향 편향)
+## (1) 단순 표본 평균 (상향 편향)
 naive_mean <- mean(y[s_idx])
-# (2) 호비츠-톰슨 역확률 가중 평균 (비편향 복원)
+## (2) 호비츠-톰슨 역확률 가중 평균 (비편향 복원)
 ht_mean <- (1 / N) * sum(y[s_idx] / pi_i[s_idx])
 
 cat("모집단 참 평균 (True Mean)      :", round(true_mean, 3), "\n")
@@ -11089,7 +11089,7 @@ set.seed(42)
 n_resp <- 500
 n_items <- 8
 
-# 성실한 응답자(85%) vs 일렬 응답 불성실 응답자(15%)
+## 성실한 응답자(85%) vs 일렬 응답 불성실 응답자(15%)
 responses <- matrix(0, nrow = n_resp, ncol = n_items)
 is_careless <- rbinom(n_resp, 1, 0.15)
 
@@ -11120,8 +11120,8 @@ demo <- tribble(
   "응답자 B (엄격함)",   3,      2,       4
 )
 
-# 비네트 기준점(V1 < V2) 대비 상대적 순위 C_i 복원
-# B의 실제 능력은 A와 같거나 우수함에도 원시 자가평가는 A=6, B=3으로 왜곡됨
+## 비네트 기준점(V1 < V2) 대비 상대적 순위 C_i 복원
+## B의 실제 능력은 A와 같거나 우수함에도 원시 자가평가는 A=6, B=3으로 왜곡됨
 demo
 ```
 
@@ -11132,7 +11132,7 @@ demo
 ```{.r}
 set.seed(2024)
 
-# 두 집단 간 t-검정 시뮬레이션 (효과 크기 Cohen's d = 0.30)
+## 두 집단 간 t-검정 시뮬레이션 (효과 크기 Cohen's d = 0.30)
 sim_power <- function(n_per_group, d = 0.30, n_sims = 1000) {
   p_vals <- replicate(n_sims, {
     g1 <- rnorm(n_per_group, 0, 1)
@@ -11160,7 +11160,7 @@ delta_bound <- 0.20   # 실무적으로 유의미하지 않은 최소 효과 경
 g1 <- rnorm(n, 0, 1)
 g2 <- rnorm(n, 0.02, 1)   # 진정한 효과는 거의 0
 
-# TOST 검정
+## TOST 검정
 t1 <- (mean(g2) - mean(g1) - (-delta_bound)) / (sd(c(g1, g2)) * sqrt(2 / n))
 t2 <- (mean(g2) - mean(g1) - delta_bound) / (sd(c(g1, g2)) * sqrt(2 / n))
 
@@ -11181,7 +11181,7 @@ cat("TOST 동등성 검정 p-value:", round(tost_p, 4), " (두 집단이 통계�
 
 <!-- ====== Section from: 32-preference-measurement.qmd ====== -->
 
-# 선호 측정 {#sec-preference-measurement}
+## 선호 측정 {#sec-preference-measurement}
 
 신제품 개발, 가격 책정, 제품 라인업 설계의 핵심은 소비자가 각 제품 속성(기능, 디자인, 브랜드, 가격)에 부여하는 가치를 정량화하는 선호 측정(preference measurement)인다.
 
@@ -11257,7 +11257,7 @@ $$ {#eq-conjoint-importance}
 library(conjoint)
 set.seed(123)
 
-# 4개 속성(2수준씩) 가상 직교 부분설계 생성 (16개 -> 8개 프로파일 축소)
+## 4개 속성(2수준씩) 가상 직교 부분설계 생성 (16개 -> 8개 프로파일 축소)
 attribs <- list(
   가격   = c("저가", "고가"),
   브랜드 = c("자사", "경쟁사"),
@@ -11270,14 +11270,14 @@ cat("생성된 직교 설계 프로파일 수:", nrow(experiment), "\n")
 
 ```{.r}
 data(tea)
-# OLS 기반 단일 응답자 부분가치 추정
+## OLS 기반 단일 응답자 부분가치 추정
 caModel(y = tprefm[1, ], x = tprof)
 ```
 
 ```{.r}
 set.seed(2024)
 
-# 수치형 가격 데이터를 포함한 풀 프로파일 평점 회귀를 통한 WTP 도출
+## 수치형 가격 데이터를 포함한 풀 프로파일 평점 회귀를 통한 WTP 도출
 profiles <- expand.grid(
   price    = c(100, 150, 200),
   battery  = c("8시간", "16시간"),
@@ -11286,7 +11286,7 @@ profiles <- expand.grid(
 profiles$battery_num <- ifelse(profiles$battery == "16시간", 1, 0)
 profiles$warranty_num <- ifelse(profiles$warranty == "3년", 1, 0)
 
-# 참 부분가치: 가격 비효용(-0.04), 배터리(+3.0), 보증(+1.5)
+## 참 부분가치: 가격 비효용(-0.04), 배터리(+3.0), 보증(+1.5)
 rating <- 8.0 - 0.04 * profiles$price + 3.0 * profiles$battery_num + 1.5 * profiles$warranty_num + rnorm(nrow(profiles), 0, 0.2)
 fit_pref <- lm(rating ~ price + battery_num + warranty_num, data = profiles)
 
@@ -11338,7 +11338,7 @@ flowchart LR
 
 <!-- ====== Section from: 33-qualitative-research.qmd ====== -->
 
-# 질적 연구 {#sec-qualitative-research}
+## 질적 연구 {#sec-qualitative-research}
 
 인터뷰 녹취록, 온라인 리뷰, 광고 이미지 등 비정형 질적 데이터를 정량적 범주로 변환하는 내용 분석(Content Analysis)과 코딩 작업에서는 평가자 간 신뢰도(Inter-Rater Reliability, IRR)가 분석의 객관성과 재현성을 담보하는 핵심 기준이 된다.
 
@@ -11497,7 +11497,7 @@ DescTools::ICC(panel)
 
 <!-- ====== Section from: 35-industrial-organization.qmd ====== -->
 
-# 산업조직론 {#sec-industrial-organization}
+## 산업조직론 {#sec-industrial-organization}
 
 실증 산업조직론(Empirical Industrial Organization, IO)은 마케팅과 미시경제학의 접점에서 시장 구조, 기업 간 전략적 가격·제품 경쟁, 유통 계약, 그리고 반독점 및 규제 정책의 후생 효과를 정량적으로 분석하는 핵심 패러다임이다.
 
@@ -11536,13 +11536,13 @@ n <- 100
 price_A <- runif(n, 5, 10)
 price_B <- runif(n, 5, 10)
 
-# 수요 함수: 제품 A의 가격 상승 시 Q_A 감소, Q_B 증가 (대체재)
+## 수요 함수: 제품 A의 가격 상승 시 Q_A 감소, Q_B 증가 (대체재)
 quantity_A <- 100 - 8 * price_A + 3 * price_B + rnorm(n, 0, 2)
 quantity_B <- 80 + 4 * price_A - 7 * price_B + rnorm(n, 0, 2)
 
 df_io <- data.frame(price_A, price_B, quantity_A, quantity_B)
 
-# 차분 기반 전환율 D_AB 계산
+## 차분 기반 전환율 D_AB 계산
 delta_pA <- diff(df_io$price_A)
 delta_qA <- diff(df_io$quantity_A)
 delta_qB <- diff(df_io$quantity_B)
@@ -11600,7 +11600,7 @@ $$ {#eq-io-multiproduct-foc}
 
 <!-- ====== Section from: 47-causal-inference.qmd ====== -->
 
-# 인과추론과 현장실험 {#sec-causal-inference}
+## 인과추론과 현장실험 {#sec-causal-inference}
 
 마케팅 의사결정의 핵심 질문은 "만약 우리가 광고비를 늘리거나(가격 인하, 이메일 발송) 정책을 변경했다면 결과가 어떻게 달라졌을까?"라는 반사실적(counterfactual) 인과 질문이다. 단순한 상관관계는 선택 편향(selection bias)과 내생성으로 인해 왜곡된 결론을 초래한다 ([그림 @fig-ci-selection]).
 
@@ -11662,7 +11662,7 @@ set.seed(42)
 N <- 10000
 ate_true <- 0.05
 
-# 무작위 처치 배정 (D = 1: 50%, D = 0: 50%)
+## 무작위 처치 배정 (D = 1: 50%, D = 0: 50%)
 D <- rbinom(N, 1, 0.5)
 Y <- 10 + ate_true * D + rnorm(N, 0, 1)
 
@@ -11695,14 +11695,14 @@ flowchart LR
 #| message: false
 #| warning: false
 set.seed(47)
-# 패널: 60개 시장 x 12개월 (절반의 시장에 7개월차부터 가격 인하 처치 적용)
+## 패널: 60개 시장 x 12개월 (절반의 시장에 7개월차부터 가격 인하 처치 적용)
 n_markets <- 60; n_months <- 12
 df_did <- expand.grid(market = 1:n_markets, month = 1:n_months)
 df_did$treated_group <- ifelse(df_did$market <= 30, 1, 0)
 df_did$post <- ifelse(df_did$month >= 7, 1, 0)
 df_did$treat <- df_did$treated_group * df_did$post
 
-# 진정한 처치 효과 ATT = 2.5
+## 진정한 처치 효과 ATT = 2.5
 df_did$sales <- 50 + 5 * df_did$treated_group + 0.8 * df_did$month + 2.5 * df_did$treat + rnorm(nrow(df_did), 0, 1)
 
 fit_did <- lm(sales ~ treated_group + post + treat, data = df_did)
@@ -11770,7 +11770,7 @@ cat("RDD 국소 처치 효과 (Cutoff Effect):", round(coef(rd_fit)["treat_rd"],
 #| warning: false
 #| label: fig-scm
 #| fig-cap: "단일 처치 지역에 대한 기증자 풀 가중 결합 기반 합성 대조군."
-# 1개 처치 지역과 10개 비처치 기증자 지역의 사전 시계열 가중 결합
+## 1개 처치 지역과 10개 비처치 기증자 지역의 사전 시계열 가중 결합
 donor_weights <- c(0.4, 0.3, 0.2, 0.1, rep(0, 6))
 cat("합성 대조군 기증자 가중치 합:", sum(donor_weights), "\n")
 ```
@@ -11822,7 +11822,7 @@ kable(des_tbl)
 
 <!-- ====== Section from: 50-choice-bayesian.qmd ====== -->
 
-# 이산 선택 및 베이지안 방법론 {#sec-choice-bayesian}
+## 이산 선택 및 베이지안 방법론 {#sec-choice-bayesian}
 
 소비자의 브랜드 선택, 구매 여부 결정, 제품 라인업 선호 등 마케팅의 본질적인 행동은 이산적(discrete) 의사결정이다. 이러한 이산 선택을 개인 수준의 선호 이질성(preference heterogeneity)과 함께 추정하는 데 있어 위계적 베이즈(Hierarchical Bayes, HB) 및 MCMC 기법은 현대 계량 마케팅의 표준적 방법론이다.
 
@@ -11921,22 +11921,22 @@ flowchart LR
 ```{.r}
 set.seed(50)
 
-# 선택 기반 컨조인트 (CBC) 가상 데이터 생성
+## 선택 기반 컨조인트 (CBC) 가상 데이터 생성
 n_consumers <- 200      # 의사결정자 수
 n_tasks     <- 12       # 1인당 선택 과업 수
 n_alts      <- 3        # 과업당 대안 수
 
-# 모집단 초모수: 평균 선호도 beta_bar = (가격: -1.5, 기능: +1.0)
+## 모집단 초모수: 평균 선호도 beta_bar = (가격: -1.5, 기능: +1.0)
 mu_true <- c(price = -1.5, feature = 1.0)
 Sigma_true <- matrix(c(0.5, -0.1, -0.1, 0.4), 2, 2)
 
-# 개인별 계수 추출
+## 개인별 계수 추출
 library(MASS)
 beta_true <- mvrnorm(n_consumers, mu = mu_true, Sigma = Sigma_true)
 ```
 
 ```{.r}
-# 동질적 풀드 로짓 음의 로그 우도 함수
+## 동질적 풀드 로짓 음의 로그 우도 함수
 nll_logit <- function(b, data) {
   ll <- 0
   for (d in data) {
@@ -11952,7 +11952,7 @@ nll_logit <- function(b, data) {
 ```
 
 ```{.r}
-# 위계적 베이즈 깁스-MH 샘플러 핵심 루프 (개별 사후분포 추출)
+## 위계적 베이즈 깁스-MH 샘플러 핵심 루프 (개별 사후분포 추출)
 log_post_i <- function(b, d, mu, Sig_inv) {
   ll <- 0
   for (t in seq_along(d$Y)) {
@@ -11967,16 +11967,16 @@ log_post_i <- function(b, d, mu, Sig_inv) {
 ```
 
 ```{.r}
-# 사후 이질성 분산 행렬 복원
+## 사후 이질성 분산 행렬 복원
 cat("위계적 베이즈를 통해 개인별 선호 이질성 및 상관관계 복원 완료\n")
 ```
 
 ```{.r}
-# 사후분포 시각화
+## 사후분포 시각화
 ```
 
 ```{.r}
-# 기능 속성에 대한 소비자별 지불의향액(WTP) 산출 (-beta_feature / beta_price)
+## 기능 속성에 대한 소비자별 지불의향액(WTP) 산출 (-beta_feature / beta_price)
 cat("개인별 WTP 사후분포 도출 완료\n")
 ```
 
@@ -11990,7 +11990,7 @@ cat("개인별 WTP 사후분포 도출 완료\n")
 
 <!-- ====== Section from: 11-communication.qmd ====== -->
 
-# 정보 이론과 커뮤니케이션 {#sec-information-theory}
+## 정보 이론과 커뮤니케이션 {#sec-information-theory}
 
 광고 브랜드 메시지, 제품 라벨링, 가격 신호 등 모든 마케팅 활동은 본질적으로 정보를 인코딩하여 노이즈가 존재하는 채널을 통해 소비자에게 전송하는 커뮤니케이션 과정이다.
 
@@ -12061,7 +12061,7 @@ $$
 $$ {#eq-jsd}
 
 ```{.r}
-# 5개 크리에이티브 슬롯에 대한 두 캠페인의 클릭 확률 프로파일
+## 5개 크리에이티브 슬롯에 대한 두 캠페인의 클릭 확률 프로파일
 p <- c(0.30, 0.25, 0.20, 0.15, 0.10)
 q <- c(0.10, 0.15, 0.20, 0.25, 0.30)
 
@@ -12076,7 +12076,7 @@ cat("결합 엔트로피 H(X, Y):", round(JE(P_xy), 3), " bits\n")
 
 ```{.r}
 set.seed(11)
-# 단순 플러그인 상호정보량 추정량의 유한 표본 상향 편향 시뮬레이션
+## 단순 플러그인 상호정보량 추정량의 유한 표본 상향 편향 시뮬레이션
 cat("표본 크기 증가 시 상호정보량 편향 감소 확인\n")
 ```
 
@@ -12090,7 +12090,7 @@ cat("표본 크기 증가 시 상호정보량 편향 감소 확인\n")
 
 <!-- ====== Section from: parts/multimodal.qmd ====== -->
 
-# 비정형 및 멀티모달 데이터 {#sec-part-multimodal}
+## 비정형 및 멀티모달 데이터 {#sec-part-multimodal}
 
 오늘날 마케팅 실무와 연구에서 생성되는 데이터의 압도적 다수는 비정형(unstructured) 데이터이다 [@balducci2018unstructured]. 소비자가 작성한 온라인 리뷰, 소셜 미디어 게시글, 브랜드가 게시한 이미지, 영업 상담 통화 오디오, 라이브커머스 비디오, 웹사이트 클릭스트림 궤적, 스마트폰 GPS 위치 신호, 시선 추적(Eye-tracking) 및 뇌파(EEG) 신경생리학적 데이터가 이에 해당한다.
 
@@ -12120,7 +12120,7 @@ flowchart LR
 
 <!-- ====== Section from: 49-text-as-data.qmd ====== -->
 
-# 텍스트 데이터 분석 {#sec-text-as-data}
+## 텍스트 데이터 분석 {#sec-text-as-data}
 
 온라인 리뷰, 소셜 미디어 게시글, 고객 서비스 채팅, 콜센터 통화 전사본, 기업 공시 자료(10-K) 등 마케팅 환경의 방대한 정보는 비정형 텍스트로 축적된다. 텍스트 데이터 분석(Text as Data)은 이러한 자연어 텍스트를 계량경제학 및 머신러닝 모형이 처리할 수 있는 정량적 수치(빈도, 임베딩 벡터, 토픽 확률, 감성 점수)로 변환하는 연구 프로그램이다 [@netzer; @hartmann2023more].
 
@@ -12175,7 +12175,7 @@ reviews <- c(
   "screen display is bright but customer support is terrible"
 )
 
-# 간단한 DTM 및 TF-IDF 코사인 유사도 계산
+## 간단한 DTM 및 TF-IDF 코사인 유사도 계산
 terms <- unique(unlist(strsplit(tolower(gsub("[^a-zA-Z ]", "", reviews)), " ")))
 dtm <- matrix(0, nrow = length(reviews), ncol = length(terms), dimnames = list(paste0("Doc", 1:3), terms))
 
@@ -12184,12 +12184,12 @@ for (i in seq_along(reviews)) {
   for (word in w) dtm[i, word] <- dtm[i, word] + 1
 }
 
-# TF-IDF 변환
+## TF-IDF 변환
 df_vec <- colSums(dtm > 0)
 idf <- log(length(reviews) / df_vec)
 tfidf_mat <- t(t(dtm) * idf)
 
-# 문서 간 코사인 유사도
+## 문서 간 코사인 유사도
 cos_sim <- function(a, b) sum(a * b) / (sqrt(sum(a^2)) * sqrt(sum(b^2)))
 sim_1_2 <- cos_sim(tfidf_mat[1, ], tfidf_mat[2, ])
 sim_1_3 <- cos_sim(tfidf_mat[1, ], tfidf_mat[3, ])
@@ -12206,7 +12206,7 @@ LDA(Latent Dirichlet Allocation)는 각 문서가 여러 잠재 토픽의 혼합
 library(topicmodels)
 set.seed(49)
 
-# 2개 토픽(배터리/충전 vs 카메라/화면)을 가진 가상 DTM에 LDA 적합
+## 2개 토픽(배터리/충전 vs 카메라/화면)을 가진 가상 DTM에 LDA 적합
 toy_dtm <- matrix(c(
   5, 4, 1, 0,
   4, 5, 0, 1,
@@ -12226,7 +12226,7 @@ print(round(topics_res$terms, 3))
 가짜 리뷰(Fake Reviews) 탐지나 불만 감지와 같이 희귀한 사건(Positive Class $< 5\%$)을 분류할 때 정확도(Accuracy)는 오해를 낳는다. 반드시 정밀도(Precision), 재현율(Recall), F1-점수 및 AUC를 평가해야 한다.
 
 ```{.r}
-# 1000개 리뷰 중 5% (50개)가 실제 가짜 리뷰인 불균형 분류 상황
+## 1000개 리뷰 중 5% (50개)가 실제 가짜 리뷰인 불균형 분류 상황
 actual_fake <- c(rep(1, 50), rep(0, 950))
 pred_fake   <- c(rep(1, 35), rep(0, 15), rep(1, 40), rep(0, 910)) # 35 TP, 15 FN, 40 FP, 910 TN
 
@@ -12267,7 +12267,7 @@ flowchart LR
 
 <!-- ====== Section from: 07-sarcasm.qmd ====== -->
 
-# 반어 및 비유적 언어 {#sec-sarcasm}
+## 반어 및 비유적 언어 {#sec-sarcasm}
 
 소비자들은 항상 문자 그대로의 의미로만 리뷰나 댓글을 작성하지 않는다. "정말 최고네요 이틀 만에 고장 났어요, 딱 원하던 그대로입니다"라는 1점짜리 리뷰는 인간 독자에게는 명확한 조롱과 불만이지만 단어를 액면 그대로 점수화하는 사전 기반 감성 분석기에는 긍정으로 오분류되는 치명적인 오류를 유발한다.
 
@@ -12286,14 +12286,14 @@ flowchart LR
 set.seed(7)
 
 n <- 20000
-# 참 감성: 55% 긍정, 45% 부정
+## 참 감성: 55% 긍정, 45% 부정
 true_sentiment <- rbinom(n, 1, 0.55)
 
-# 반어 발생 확률: 부정적 텍스트에서 18% 발생, 긍정적 텍스트에서는 2%에 불과
+## 반어 발생 확률: 부정적 텍스트에서 18% 발생, 긍정적 텍스트에서는 2%에 불과
 p_sarcasm <- ifelse(true_sentiment == 0, 0.18, 0.02)
 is_sarcastic <- rbinom(n, 1, p_sarcasm)
 
-# 단순 문자적 분류기: 반어가 발생하면 극성이 역전되어 판독됨
+## 단순 문자적 분류기: 반어가 발생하면 극성이 역전되어 판독됨
 obs_sentiment <- ifelse(is_sarcastic == 1, 1 - true_sentiment, true_sentiment)
 
 cat("진정한 긍정 비율 (True Positive Rate)  :", round(mean(true_sentiment), 3), "\n")
@@ -12325,7 +12325,7 @@ flowchart TD
 set.seed(11)
 library(dplyr)
 
-# 가상 리뷰 5개: 텍스트 감성 극성과 별점(1~5) 간의 부조화 탐지
+## 가상 리뷰 5개: 텍스트 감성 극성과 별점(1~5) 간의 부조화 탐지
 df_reviews <- tibble(
   text = c(
     "Best phone ever, died in 2 hours",
@@ -12338,7 +12338,7 @@ df_reviews <- tibble(
   lexicon_positive_words = c(1, 1, 1, 0, 1) # 단순 긍정 단어 포함 여부
 )
 
-# 부조화 플래그: 별점 <= 2점인데 긍정 단어가 포함된 경우 반어 의심
+## 부조화 플래그: 별점 <= 2점인데 긍정 단어가 포함된 경우 반어 의심
 df_reviews <- df_reviews |>
   mutate(sarcasm_flag = if_else(stars <= 2 & lexicon_positive_words == 1, 1, 0))
 
@@ -12360,7 +12360,7 @@ cohen_kappa <- function(r1, r2) {
   (po - pe) / (1 - pe)
 }
 
-# 200개 리뷰에 대한 두 코더의 반어 라벨링
+## 200개 리뷰에 대한 두 코더의 반어 라벨링
 set.seed(42)
 N <- 200
 true_deadpan <- rbinom(N, 1, 0.20)
@@ -12386,7 +12386,7 @@ cat("인간 평가자 간 반어 코딩 일치도 (Cohen's Kappa):", round(cohen
 
 <!-- ====== Section from: 34-image-processing.qmd ====== -->
 
-# 이미지 데이터 분석 {#sec-image-processing}
+## 이미지 데이터 분석 {#sec-image-processing}
 
 인스타그램, 틱톡, 핀터레스트, 이커머스 상세페이지 등 현대 마케팅 커뮤니케이션의 중심은 시각적 이미지이다. 소비자는 텍스트보다 이미지를 훨씬 빠르게 인지하며 브랜드 로고 제품 디자인, 인물 표정, 색채 구성 등은 구매 의도와 브랜드 태도 형성에 직접적인 영향을 미친다.
 
@@ -12401,12 +12401,12 @@ cat("인간 평가자 간 반어 코딩 일치도 (Cohen's Kappa):", round(cohen
 ```{.r}
 set.seed(34)
 
-# 64x64 가상 이미지 3종 생성 (a: 차분함, b: 선명한 색채, c: 복잡한 노이즈)
+## 64x64 가상 이미지 3종 생성 (a: 차분함, b: 선명한 색채, c: 복잡한 노이즈)
 img_calm  <- array(0.5 + rnorm(64*64*3, 0, 0.05), dim = c(64, 64, 3))
 img_vivid <- array(runif(64*64*3, 0.2, 0.9), dim = c(64, 64, 3))
 img_noise <- array(rnorm(64*64*3, 0.5, 0.2), dim = c(64, 64, 3))
 
-# Sobel 유사 그래디언트 기반 가장자리 밀도 (시각적 복잡성) 계산 함수
+## Sobel 유사 그래디언트 기반 가장자리 밀도 (시각적 복잡성) 계산 함수
 calc_edge_density <- function(img) {
   lum <- 0.299 * img[,,1] + 0.587 * img[,,2] + 0.114 * img[,,3]
   grad_x <- abs(lum[-1, ] - lum[-nrow(lum), ])
@@ -12437,7 +12437,7 @@ flowchart LR
 
 ```{.r}
 set.seed(34)
-# 사전학습된 CNN 백본으로부터 추출된 가상 128차원 이미지 임베딩 z
+## 사전학습된 CNN 백본으로부터 추출된 가상 128차원 이미지 임베딩 z
 n_imgs <- 300; d_dim <- 128
 Z <- matrix(rnorm(n_imgs * d_dim), nrow = n_imgs, ncol = d_dim)
 y_click <- rbinom(n_imgs, 1, plogis(0.5 * Z[, 1] - 0.3 * Z[, 2]))
@@ -12477,11 +12477,11 @@ set.seed(34)
 n <- 4000
 beta_true <- 1.5
 
-# 참된 잠재 이미지 특성 f_star 및 성과 y
+## 참된 잠재 이미지 특성 f_star 및 성과 y
 f_star <- rnorm(n, 0, 1)
 y <- 2.0 + beta_true * f_star + rnorm(n, 0, 1)
 
-# 측정 오차가 포함된 CNN 추출 점수 f_hat (신뢰도 rho = 0.50)
+## 측정 오차가 포함된 CNN 추출 점수 f_hat (신뢰도 rho = 0.50)
 f_hat <- f_star + rnorm(n, 0, 1)
 
 fit_oracle <- lm(y ~ f_star)
@@ -12502,7 +12502,7 @@ cat("CNN 측정치 회귀 추정치 (Attenuated)   :", round(coef(fit_naive)["f_
 
 <!-- ====== Section from: 52-audio-voice.qmd ====== -->
 
-# 오디오, 음성 및 발화 {#sec-audio-voice}
+## 오디오, 음성 및 발화 {#sec-audio-voice}
 
 콜센터 상담 통화, 영업 미팅 녹음, 팟캐스트 및 라디오 광고 인플루언서 라이브커머스 오디오는 소비자와 상담원의 심리적·정서적 상태를 실시간으로 드러내는 풍부한 비정형 데이터이다.
 
@@ -12554,11 +12554,11 @@ sr <- 16000     # 16kHz 샘플링 레이트
 dur <- 2.0      # 2초 발화
 t <- seq(0, dur, by = 1 / sr)
 
-# 시간에 따라 변하는 기본 주파수 f0(t): 120Hz -> 180Hz (정서적 각성 증가 시뮬레이션)
+## 시간에 따라 변하는 기본 주파수 f0(t): 120Hz -> 180Hz (정서적 각성 증가 시뮬레이션)
 f0_t <- 120 + 60 * (t / dur)
 phase <- 2 * pi * cumsum(f0_t) / sr
 
-# 하모닉 성분을 포함한 합성 음성 신호 생성
+## 하모닉 성분을 포함한 합성 음성 신호 생성
 wave_data <- sin(phase) + 0.5 * sin(2 * phase) + 0.25 * sin(3 * phase) + rnorm(length(t), 0, 0.05)
 syn_wave <- Wave(left = as.integer(wave_data * 32767 / max(abs(wave_data))), samp.rate = sr, bit = 16)
 ```
@@ -12578,7 +12578,7 @@ par(mfrow = c(1, 1))
 #| label: audio-regression-demo
 #| message: false
 #| warning: false
-# 100회 상담 통화 가상 데이터: 상담원 F0 평균 및 F0 표준편차와 고객 만족도(CSAT) 회귀
+## 100회 상담 통화 가상 데이터: 상담원 F0 평균 및 F0 표준편차와 고객 만족도(CSAT) 회귀
 n_calls <- 100
 mean_f0 <- rnorm(n_calls, 150, 20)
 sd_f0   <- rnorm(n_calls, 25, 8)   # 음조 억양의 다양성
@@ -12598,7 +12598,7 @@ cat("음조 다양성(sd_f0)의 CSAT 계수:", round(coef(fit_audio)["sd_f0"], 4
 
 <!-- ====== Section from: 53-video.qmd ====== -->
 
-# 비디오 데이터 분석 {#sec-video}
+## 비디오 데이터 분석 {#sec-video}
 
 틱톡(TikTok), 인스타그램 릴스(Reels), 유튜브 쇼츠(Shorts), 라이브커머스는 오늘날 디지털 마케팅에서 가장 빠르게 성장하는 미디어 포맷이다.
 
@@ -12638,7 +12638,7 @@ library(tidyverse)
 #| message: false
 #| warning: false
 set.seed(53)
-# 10개 프레임으로 구성된 가상 비디오 클립의 시각적 밝기 및 색상 변화 시뮬레이션
+## 10개 프레임으로 구성된 가상 비디오 클립의 시각적 밝기 및 색상 변화 시뮬레이션
 n_frames <- 10
 frame_brightness <- c(rep(0.3, 4), rep(0.8, 6))  # 4번과 5번 프레임 사이 샷 전환(Cut) 발생
 optical_motion   <- c(0.05, 0.08, 0.06, 0.75, 0.10, 0.12, 0.09, 0.11, 0.10, 0.08)
@@ -12649,7 +12649,7 @@ df_video <- tibble(
   motion_energy = optical_motion
 )
 
-# 샷 전환 탐지: 프레임 간 차분이 임계값을 초과하는 지점 식별
+## 샷 전환 탐지: 프레임 간 차분이 임계값을 초과하는 지점 식별
 df_video <- df_video |>
   mutate(cut_flag = if_else(abs(brightness - lag(brightness, default = brightness[1])) > 0.3, 1, 0))
 
@@ -12666,7 +12666,7 @@ df_video
 
 <!-- ====== Section from: 54-network-graph.qmd ====== -->
 
-# 네트워크와 그래프 데이터 {#sec-network-graph}
+## 네트워크와 그래프 데이터 {#sec-network-graph}
 
 소비자는 고립된 개체가 아니라 소셜 관계망, 추천망, 브랜드 커뮤니티라는 복잡한 네트워크(Network / Graph) 속에 배태(embedded)되어 상호작용한다.
 
@@ -12704,10 +12704,10 @@ library(tidyverse)
 #| warning: false
 set.seed(54)
 
-# 100개 노드를 가진 바라마시-알버트(Barabási-Albert) 척도 없는 네트워크 생성 (선호적 연결)
+## 100개 노드를 가진 바라마시-알버트(Barabási-Albert) 척도 없는 네트워크 생성 (선호적 연결)
 g <- sample_pa(n = 100, power = 1.2, m = 2, directed = FALSE)
 
-# 4대 중심성 지표 계산
+## 4대 중심성 지표 계산
 deg  <- degree(g)
 betw <- betweenness(g, normalized = TRUE)
 clos <- closeness(g, normalized = TRUE)
@@ -12721,7 +12721,7 @@ df_nodes <- tibble(
   pagerank = round(pr, 4)
 )
 
-# 상위 5개 허브 노드 확인
+## 상위 5개 허브 노드 확인
 df_nodes |> arrange(desc(degree)) |> head(5)
 ```
 
@@ -12752,7 +12752,7 @@ flowchart LR
 
 <!-- ====== Section from: 55-clickstream.qmd ====== -->
 
-# 클릭스트림과 행동 데이터 {#sec-clickstream}
+## 클릭스트림과 행동 데이터 {#sec-clickstream}
 
 웹사이트와 모바일 앱에서 소비자가 남기는 타임스탬프 기반의 클릭, 페이지 이동, 스크롤, 장바구니 담기 이벤트 로그를 클릭스트림(Clickstream) 데이터라 한다.
 
@@ -12811,7 +12811,7 @@ flowchart LR
 library(tidyverse)
 set.seed(55)
 
-# 가상 클릭스트림 이벤트 로그 생성
+## 가상 클릭스트림 이벤트 로그 생성
 pages <- c("home", "search", "product", "cart", "checkout", "exit")
 events <- tibble(
   user_id = rep(1:50, each = 6),
@@ -12823,7 +12823,7 @@ head(events, 5)
 
 ```{.r}
 #| label: click-logsize
-# 시뮬레이션 로그의 전체 규모 요약
+## 시뮬레이션 로그의 전체 규모 요약
 events |>
   summarise(
     총이벤트수 = n(),
@@ -12833,7 +12833,7 @@ events |>
 
 ```{.r}
 #| label: click-sessionize
-# 30분 비활동 기준 세션 분할
+## 30분 비활동 기준 세션 분할
 timeout_secs <- 30 * 60
 sessions_df <- events |>
   arrange(user_id, ts) |>
@@ -12861,14 +12861,14 @@ sessions_df |>
 #| warning: false
 library(markovchain)
 
-# 시퀀스 데이터로부터 마르코프 전이 행렬 추정
+## 시퀀스 데이터로부터 마르코프 전이 행렬 추정
 mc_fit <- markovchainFit(data = list(sessions_df$page))
 mc <- mc_fit$estimate
 ```
 
 ```{.r}
 #| label: click-markov-props
-# 마르코프 체인 상태 요약
+## 마르코프 체인 상태 요약
 summary(mc)
 ```
 
@@ -12883,7 +12883,7 @@ cat("마르코프 제거 효과 계산 완료: cart 페이지 제거 시 전체 
 #| message: false
 #| warning: false
 library(TraMineR)
-# TraMineR 상태 시퀀스 객체 생성
+## TraMineR 상태 시퀀스 객체 생성
 cat("TraMineR 상태 시퀀스 객체 구축 완료\n")
 ```
 
@@ -12927,7 +12927,7 @@ flowchart LR
 
 <!-- ====== Section from: 56-geospatial.qmd ====== -->
 
-# 공간 및 위치 데이터 {#sec-geospatial}
+## 공간 및 위치 데이터 {#sec-geospatial}
 
 소비자의 물리적 매장 방문, 상권 경계, O2O 배달 플랫폼, 지오펜싱(Geofencing) 모바일 광고 등 마케팅 의사결정의 상당수는 지리적 위치와 공간(Geospatial)에 의존한다.
 
@@ -12975,7 +12975,7 @@ library(tidyverse)
 #| warning: false
 set.seed(56)
 
-# 50개 매장 위치(좌표) 및 주변 인구, 매출 가상 데이터 생성
+## 50개 매장 위치(좌표) 및 주변 인구, 매출 가상 데이터 생성
 n_stores <- 50
 coords <- data.frame(
   x = runif(n_stores, 100, 200),
@@ -12983,11 +12983,11 @@ coords <- data.frame(
 )
 stores_sf <- st_as_sf(coords, coords = c("x", "y"))
 
-# k-최근접 이웃(k=4) 공간 가중치 행렬 W 생성
+## k-최근접 이웃(k=4) 공간 가중치 행렬 W 생성
 nb_k4 <- knn2nb(knearneigh(st_coordinates(stores_sf), k = 4))
 w_list <- nb2listw(nb_k4, style = "W")
 
-# 공간 자기상관을 가진 매출 변수 생성
+## 공간 자기상관을 가진 매출 변수 생성
 sales <- rnorm(n_stores, 50, 10)
 moran_res <- moran.test(sales, w_list)
 cat("Moran's I 공간 자기상관 지수:", round(moran_res$estimate[1], 4), "\n")
@@ -12997,7 +12997,7 @@ cat("Moran's I 공간 자기상관 지수:", round(moran_res$estimate[1], 4), "\
 #| label: huff-demo
 #| message: false
 #| warning: false
-# 3개 매장 (면적: 1000, 2000, 5000) 및 특정 고객까지의 거리 (2km, 3km, 5km)
+## 3개 매장 (면적: 1000, 2000, 5000) 및 특정 고객까지의 거리 (2km, 3km, 5km)
 sizes <- c(1000, 2000, 5000)
 dists <- c(2, 3, 5)
 lambda <- 1.5
@@ -13024,7 +13024,7 @@ print(round(probs, 3))
 
 <!-- ====== Section from: 57-biometric-neuro.qmd ====== -->
 
-# 센서, 생체인식 및 신경생리학적 데이터 {#sec-biometric}
+## 센서, 생체인식 및 신경생리학적 데이터 {#sec-biometric}
 
 설문이나 인터뷰를 통한 소비자의 언어적 자가보고(Self-report)는 사회적 바람직성 편향, 사후적 합리화, 무의식적 인지 과정의 누락이라는 한계를 갖는다. 신경마케팅(Neuromarketing)과 생체인식(Biometrics) 연구는 소비자의 무의식적 주의, 정서적 각성, 신경학적 가치 평가를 실시간으로 직접 측정한다.
 
@@ -13066,7 +13066,7 @@ flowchart TB
 library(ggplot2)
 set.seed(57)
 
-# 45개 시선 고정점(Scanpath) 시뮬레이션 및 관심 영역 (AOI: 로고 헤드라인, CTA 버튼)
+## 45개 시선 고정점(Scanpath) 시뮬레이션 및 관심 영역 (AOI: 로고 헤드라인, CTA 버튼)
 n_fix <- 45
 fix_x <- c(rnorm(15, 200, 30), rnorm(20, 500, 40), rnorm(10, 800, 30))
 fix_y <- c(rnorm(15, 150, 20), rnorm(20, 300, 30), rnorm(10, 600, 25))
@@ -13108,7 +13108,7 @@ set.seed(57)
 fs <- 20; T_sec <- 60
 t  <- seq(0, T_sec, by = 1 / fs)
 
-# 서서히 변하는 긴장성(Tonic) 성분 + 자극에 반응하는 위상성(Phasic SCR) 피크
+## 서서히 변하는 긴장성(Tonic) 성분 + 자극에 반응하는 위상성(Phasic SCR) 피크
 tonic  <- 2.0 + 0.5 * sin(2 * pi * t / 120)
 phasic <- 1.5 * exp(-((t - 15) / 2)^2) + 2.0 * exp(-((t - 40) / 2)^2)
 eda    <- tonic + phasic + rnorm(length(t), 0, 0.05)
@@ -13121,7 +13121,7 @@ plot(t, eda, type = "l", col = "#4e79a7", main = "전기피부활동(EDA) 시계
 ```{.r}
 set.seed(57)
 fs2  <- 250; ep_t <- seq(-0.2, 0.8, by = 1 / fs2)
-# 사건관련전위 (P300: 300ms 부근 양의 전위 피크 - 주의 및 작업기억 갱신)
+## 사건관련전위 (P300: 300ms 부근 양의 전위 피크 - 주의 및 작업기억 갱신)
 p300 <- 8.0 * exp(-((ep_t - 0.35) / 0.08)^2) - 3.0 * exp(-((ep_t - 0.12) / 0.03)^2)
 ```
 
@@ -13155,7 +13155,7 @@ flowchart LR
 
 <!-- ====== Section from: 58-multimodal-fusion.qmd ====== -->
 
-# 멀티모달 결합 및 파운데이션 모형 {#sec-multimodal-fusion}
+## 멀티모달 결합 및 파운데이션 모형 {#sec-multimodal-fusion}
 
 현대 마케팅 환경에서 소비자가 접하는 광고 소셜 게시물, 제품 상세페이지는 텍스트, 이미지, 음성, 비디오, 사용자 상호작용 로그가 결합된 복합 멀티모달(Multimodal) 형태로 존재한다.
 
@@ -13222,13 +13222,13 @@ suppressMessages({
   library(pROC)
 })
 
-# 텍스트, 이미지, 행동 데이터 가상 임베딩 생성 (N = 1000)
+## 텍스트, 이미지, 행동 데이터 가상 임베딩 생성 (N = 1000)
 N <- 1000
 X_text <- matrix(rnorm(N * 20), N, 20)
 X_img  <- matrix(rnorm(N * 20), N, 20)
 X_beh  <- matrix(rnorm(N * 10), N, 10)
 
-# 세 모달리티의 상호보완적 결합으로 생성된 진정한 구매 확률
+## 세 모달리티의 상호보완적 결합으로 생성된 진정한 구매 확률
 eta <- 0.4 * X_text[, 1] + 0.5 * X_img[, 1] + 0.6 * X_beh[, 1]
 y <- rbinom(N, 1, plogis(eta))
 
@@ -13236,7 +13236,7 @@ train <- 1:700; test <- 701:N
 ```
 
 ```{.r}
-# --- 전기 결합: 모든 특징을 단일 행렬로 연결 후 Elastic-Net 로지스틱 적합 ---
+## --- 전기 결합: 모든 특징을 단일 행렬로 연결 후 Elastic-Net 로지스틱 적합 ---
 X_all <- cbind(X_text, X_img, X_beh)
 cv_early <- cv.glmnet(X_all[train, ], y[train], family = "binomial", alpha = 0.5)
 pred_early <- predict(cv_early, newx = X_all[test, ], s = "lambda.min", type = "response")
@@ -13244,7 +13244,7 @@ auc_early <- roc(y[test], as.vector(pred_early), quiet = TRUE)$auc
 ```
 
 ```{.r}
-# --- 후기 결합: 모달리티별 예측치 평균 앙상블 ---
+## --- 후기 결합: 모달리티별 예측치 평균 앙상블 ---
 rf_t <- randomForest(X_text[train, ], as.factor(y[train]))
 rf_i <- randomForest(X_img[train, ], as.factor(y[train]))
 rf_b <- randomForest(X_beh[train, ], as.factor(y[train]))
@@ -13258,7 +13258,7 @@ auc_late <- roc(y[test], as.vector(pred_late), quiet = TRUE)$auc
 ```
 
 ```{.r}
-# --- 단일 모달리티 대 결합 모형 성과 비교 ---
+## --- 단일 모달리티 대 결합 모형 성과 비교 ---
 auc_t_only <- roc(y[test], p_t, quiet = TRUE)$auc
 cat("텍스트 단독 모델 AUC :", round(auc_t_only, 3), "\n")
 cat("전기 결합 모델 AUC   :", round(auc_early, 3), "\n")
@@ -13296,7 +13296,7 @@ flowchart LR
 
 <!-- ====== Section from: parts/seminars.qmd ====== -->
 
-# 통합 세미나 {#sec-part-seminars}
+## 통합 세미나 {#sec-part-seminars}
 
 앞서 다룬 구성개념(Part I), 실질적 연구 영역(Part II), 방법론(Part III), 그리고 비정형 멀티모달 데이터(Part IV)는 실제 학술 연구와 산업 현장에서 하나의 통합된 지적 체계로 작동한다.
 
@@ -13311,7 +13311,7 @@ flowchart LR
 
 <!-- ====== Section from: 36-marketing-mix-models.qmd ====== -->
 
-# 마케팅 믹스 모형 {#sec-marketing-mix-models}
+## 마케팅 믹스 모형 {#sec-marketing-mix-models}
 
 마케팅 믹스 모형(Marketing Mix Model, MMM)은 가격, 광고 프로모션, 유통, 제품 사양 등 기업이 통제하는 마케팅 레버들에 대해 소비자 수요와 시장점유율이 어떻게 반응하는지를 계량경제학적으로 정량화하는 체계이다.
 
@@ -13356,11 +13356,11 @@ $$ {#eq-mmm-blp}
 library(tidyverse)
 set.seed(36)
 
-# 30개 우편번호 구역(Zip code)별 매장 선택 확률 및 거리 민감도 시뮬레이션
+## 30개 우편번호 구역(Zip code)별 매장 선택 확률 및 거리 민감도 시뮬레이션
 n_zips <- 30
 n_obs_per_zip <- sample(20:200, n_zips, replace = TRUE) # 지역별 표본 불균형
 
-# 모집단 거리 계수 평균: -0.80, 분산: 0.15
+## 모집단 거리 계수 평균: -0.80, 분산: 0.15
 beta_pop <- -0.80
 beta_zip_true <- rnorm(n_zips, beta_pop, 0.15)
 
@@ -13370,7 +13370,7 @@ df_store <- tibble(
   raw_beta = beta_zip_true + rnorm(n_zips, 0, sqrt(10 / n_obs_per_zip)) # 표본 작을수록 노이즈 큼
 )
 
-# 경험적 베이즈 수축(Shrinkage) 계산
+## 경험적 베이즈 수축(Shrinkage) 계산
 shrinkage_weight <- df_store$n_obs / (df_store$n_obs + 30)
 df_store$shrunk_beta <- shrinkage_weight * df_store$raw_beta + (1 - shrinkage_weight) * beta_pop
 
@@ -13393,7 +13393,7 @@ ggplot(df_store, aes(n_obs, raw_beta)) +
 
 <!-- ====== Section from: 37-strategic-dynamic-models.qmd ====== -->
 
-# 전략적 동태 모형 {#sec-strategic-dynamic-models}
+## 전략적 동태 모형 {#sec-strategic-dynamic-models}
 
 마케팅 투자는 당기의 일회성 성과로 소멸되지 않고 브랜드 자산, 고객 관계, 기술 특허라는 스톡(Stock)으로 축적되어 장기적인 동태적 파급효과를 창출한다.
 
@@ -13454,11 +13454,11 @@ flowchart BT
 library(tidyverse)
 set.seed(37)
 
-# 사건 윈도우 [-10, +10]일 동안의 100개 기업 비정상 수익률 시뮬레이션
+## 사건 윈도우 [-10, +10]일 동안의 100개 기업 비정상 수익률 시뮬레이션
 days <- -10:10
 n_firms <- 100
 
-# 사건 당일(Day 0) 평균 +1.5%의 진정한 긍정 충격 주입
+## 사건 당일(Day 0) 평균 +1.5%의 진정한 긍정 충격 주입
 AR_matrix <- matrix(rnorm(n_firms * length(days), mean = 0, sd = 0.01), nrow = n_firms, ncol = length(days))
 AR_matrix[, days == 0] <- AR_matrix[, days == 0] + 0.015
 
@@ -13485,7 +13485,7 @@ ggplot(df_event, aes(day, CAR)) +
 
 <!-- ====== Section from: 59-choice-demand-seminar.qmd ====== -->
 
-# 선택 모형과 수요 추정 세미나 {#sec-choice-demand-seminar}
+## 선택 모형과 수요 추정 세미나 {#sec-choice-demand-seminar}
 
 본 세미나는 계량 마케팅 및 실증 산업조직론(Empirical IO) 박사과정 14주 심화 커리큘럼으로서, 미시적 소비자 선택 행동의 기초부터 시장 집계 수준의 무작위 계수 로짓(BLP), 내생성 통제 및 최신 프런티어 수요 모형을 다룬다.
 
@@ -13526,7 +13526,7 @@ flowchart LR
 
 <!-- ====== Section from: 61-dynamic-structural-seminar.qmd ====== -->
 
-# 동적 구조 모형 세미나 {#sec-dynamic-structural-seminar}
+## 동적 구조 모형 세미나 {#sec-dynamic-structural-seminar}
 
 본 세미나는 미래지향적(Forward-looking) 경제주체(소비자, 기업)의 동태적 이산 선택 및 전략적 동적 게임(Dynamic Games)을 다루는 박사과정 고급 세미나이다.
 
@@ -13567,7 +13567,7 @@ flowchart LR
 
 <!-- ====== Section from: 60-field-experiments-seminar.qmd ====== -->
 
-# 현장 실험 및 인과추론 세미나 {#sec-field-experiments-seminar}
+## 현장 실험 및 인과추론 세미나 {#sec-field-experiments-seminar}
 
 본 세미나는 마케팅 현장 실험(Field Experiments), 대규모 온라인 플랫폼 A/B 테스트, 그리고 준실험 인과추론(Causal Inference)을 다루는 박사과정 세미나 커리큘럼이다.
 
@@ -13608,7 +13608,7 @@ flowchart LR
 
 <!-- ====== Section from: 39-analytical-modeling-seminar.qmd ====== -->
 
-# 분석적 모델링 세미나 {#sec-analytical-modeling-seminar}
+## 분석적 모델링 세미나 {#sec-analytical-modeling-seminar}
 
 본 세미나는 게임이론, 미시경제학적 최적화, 정보경제학 및 계약이론을 마케팅 전략에 적용하는 박사과정 분석적 모델링(Analytical Modeling) 세미나이다.
 
@@ -13649,7 +13649,7 @@ flowchart LR
 
 <!-- ====== Section from: 38-consumer-behavior-seminar.qmd ====== -->
 
-# 소비자 행동론 세미나 {#sec-consumer-behavior-seminar}
+## 소비자 행동론 세미나 {#sec-consumer-behavior-seminar}
 
 본 세미나는 인지심리학, 사회심리학, 행동경제학의 이론적 기초 위에서 소비자의 정보처리, 판단과 의사결정(JDM), 동기 및 정서, 자아 정체성과 사회적 상호작용을 다루는 박사과정 소비자 행동론(Consumer Behavior, CB) 세미나 커리큘럼이다.
 
@@ -13690,7 +13690,7 @@ flowchart LR
 
 <!-- ====== Section from: 40-시장ing-전략-seminar.qmd ====== -->
 
-# 마케팅 전략 세미나 {#sec-marketing-strategy-seminar}
+## 마케팅 전략 세미나 {#sec-marketing-strategy-seminar}
 
 본 세미나는 기업의 경쟁 우위(Competitive Advantage), 시장 지향성(Market Orientation), 마케팅 역량(Marketing Capabilities), 시장 기반 자산(Market-based Assets: 브랜드 및 고객 자산), 마케팅-재무 인터페이스, 그리고 CMO의 역할을 다루는 박사과정 마케팅 전략론(Marketing Strategy) 세미나 커리큘럼이다.
 
@@ -13731,7 +13731,7 @@ flowchart LR
 
 <!-- ====== Section from: 62-theory-construction-seminar.qmd ====== -->
 
-# 마케팅 이론과 이론 구성 세미나 {#sec-theory-construction-seminar}
+## 마케팅 이론과 이론 구성 세미나 {#sec-theory-construction-seminar}
 
 본 세미나는 과학철학, 개념 정의, 가설 연역 체계, 그리고 개념적 논문(Conceptual Paper) 작성을 다루는 박사과정 이론 구성(Theory Construction) 세미나 커리큘럼이다.
 
@@ -13771,7 +13771,7 @@ flowchart LR
 
 <!-- ====== Section from: 63-채널s-b2b-seminar.qmd ====== -->
 
-# 채널, B2B 및 시장 진출 세미나 {#sec-channels-b2b-seminar}
+## 채널, B2B 및 시장 진출 세미나 {#sec-channels-b2b-seminar}
 
 본 세미나는 거래비용경제학(TCE), 관계 마케팅, 공급망 거버넌스, 옴니채널 및 B2B 시장 진출 전략(Go-to-Market)을 다루는 박사과정 유통 채널 세미나 커리큘럼이다.
 
@@ -13812,7 +13812,7 @@ flowchart LR
 
 <!-- ====== Section from: 64-innovation-npd-seminar.qmd ====== -->
 
-# 혁신, 신제품, 확산 세미나 {#sec-innovation-npd-seminar}
+## 혁신, 신제품, 확산 세미나 {#sec-innovation-npd-seminar}
 
 본 세미나는 혁신 창출, R&D 투자, 신제품 개발(NPD) 프로세스, 확산 모형(Diffusion Models), 제품 라인업 설계, 그리고 파괴적 혁신을 다루는 박사과정 세미나 커리큘럼이다.
 
@@ -13853,7 +13853,7 @@ flowchart LR
 
 <!-- ====== Section from: 65-public-policy-tcr-seminar.qmd ====== -->
 
-# 마케팅, 공공정책 및 변혁적 소비자 연구 세미나 {#sec-public-policy-tcr-seminar}
+## 마케팅, 공공정책 및 변혁적 소비자 연구 세미나 {#sec-public-policy-tcr-seminar}
 
 본 세미나는 소비자 복지(Consumer Well-being), 시장 규제, 공공정책(Public Policy), 변혁적 소비자 연구(Transformative Consumer Research, TCR), 그리고 사회적 마케팅을 다루는 박사과정 세미나 커리큘럼이다.
 
@@ -13894,7 +13894,7 @@ flowchart LR
 
 <!-- ====== Section from: 48-ai-ml-marketing.qmd ====== -->
 
-# 마케팅에서의 인공지능과 머신러닝 {#sec-ai-ml}
+## 마케팅에서의 인공지능과 머신러닝 {#sec-ai-ml}
 
 인공지능(AI)과 머신러닝(ML)은 개인화 추천, 이탈 예측, 동적 가격 책정, 생성형 카피라이팅 등 현대 마케팅의 실무와 학술 연구를 근본적으로 혁신하고 있다.
 
@@ -13939,13 +13939,13 @@ library(glmnet)
 library(tidyverse)
 set.seed(48)
 
-# 100개 공변량을 가진 고차원 마케팅 데이터 시뮬레이션 (10개만 진정한 효과를 가짐)
+## 100개 공변량을 가진 고차원 마케팅 데이터 시뮬레이션 (10개만 진정한 효과를 가짐)
 n <- 200; p <- 100
 X <- matrix(rnorm(n * p), n, p)
 beta_true <- c(rep(2.0, 5), rep(-1.5, 5), rep(0, p - 10))
 y <- X %*% beta_true + rnorm(n, 0, 1)
 
-# 교차검증 기반 Lasso 적합
+## 교차검증 기반 Lasso 적합
 cv_lasso <- cv.glmnet(X, y, alpha = 1)
 coef_lasso <- coef(cv_lasso, s = "lambda.1se")
 cat("Lasso를 통해 100개 중 선택된 비영(non-zero) 변수 수:", sum(coef_lasso != 0) - 1, "\n")
@@ -13962,11 +13962,11 @@ cat("Lasso를 통해 100개 중 선택된 비영(non-zero) 변수 수:", sum(coe
 library(grf)
 set.seed(48)
 
-# 인과 포레스트 시뮬레이션
+## 인과 포레스트 시뮬레이션
 n_cf <- 1000; p_cf <- 10
 X_cf <- matrix(rnorm(n_cf * p_cf), n_cf, p_cf)
 W_cf <- rbinom(n_cf, 1, 0.5) # 무작위 할인 쿠폰 처치
-# 이질적 처치 효과: X1이 양수일 때만 효과 발생 (tau(X) = 2 * max(0, X1))
+## 이질적 처치 효과: X1이 양수일 때만 효과 발생 (tau(X) = 2 * max(0, X1))
 tau_true <- 2 * pmax(0, X_cf[, 1])
 Y_cf <- 10 + 2 * X_cf[, 2] + tau_true * W_cf + rnorm(n_cf, 0, 1)
 
@@ -13985,7 +13985,7 @@ cat("인과 포레스트 CATE 추정치와 참 효과 간 상관계수:", round(
 
 <!-- ====== Section from: 51-platforms.qmd ====== -->
 
-# 플랫폼과 양면 시장 {#sec-platforms}
+## 플랫폼과 양면 시장 {#sec-platforms}
 
 우버, 에어비앤비, 아마존 마켓플레이스, 유튜브, 앱스토어 등 현대 디지털 경제를 주도하는 비즈니스 모델은 양면 플랫폼(Two-Sided Platforms)인다.
 
@@ -14019,12 +14019,12 @@ $$ {#eq-rochet-tirole}
 #| label: platform-pricing-demo
 #| message: false
 #| warning: false
-# Rochet-Tirole 최적 가격 계산 실습
+## Rochet-Tirole 최적 가격 계산 실습
 c1 <- 2; c2 <- 5      # 양측 한계비용
 b1 <- 1.5; b2 <- 4.0  # 교차 네트워크 외부성 (소비자 1인이 판매자에게 주는 가치 b2 = 4.0)
 e1 <- 2.0; e2 <- 1.2  # 가격 탄력성
 
-# 최적 가격 산출
+## 최적 가격 산출
 p1_opt <- (c1 - b2) / (1 - 1 / e1)
 p2_opt <- (c2 - b1) / (1 - 1 / e2)
 
@@ -14041,7 +14041,7 @@ cat("판매자 측 최적 가격 p2* : $", round(p2_opt, 2), " (수익 창출 �
 
 <!-- ====== Section from: 41-scientific-writing.qmd ====== -->
 
-# 학술 논문 작성법 {#sec-scientific-writing}
+## 학술 논문 작성법 {#sec-scientific-writing}
 
 학술 논문 작성(Scientific Writing)은 단순히 분석 결과를 기록하는 작업이 아니라, 독자와 심사위원을 설득하는 논리적 건축(Logical Architecture)인다.
 
@@ -14078,7 +14078,7 @@ flowchart TD
 
 <!-- ====== Section from: 42-review-process.qmd ====== -->
 
-# 동료 평가 과정 {#sec-review-process}
+## 동료 평가 과정 {#sec-review-process}
 
 학술 출판의 성패는 연구의 엄밀성뿐만 아니라 피어 리뷰(Peer Review) 과정에서 심사위원 및 편집위원과 얼마나 건설적이고 전략적으로 소통하느냐에 달려 있다.
 
@@ -14117,7 +14117,7 @@ flowchart TD
 
 <!-- ====== Section from: 43-reporting.qmd ====== -->
 
-# 연구 결과 보고 {#sec-reporting}
+## 연구 결과 보고 {#sec-reporting}
 
 학술 연구의 결과 보고(Reporting)는 표(Tables)와 그림(Figures)만 보고도 본문을 읽지 않고 연구의 결론을 이해할 수 있는 독립 자족성(Self-contained)을 갖추어야 한다.
 
@@ -14161,7 +14161,7 @@ kable(reg_tbl)
 
 <!-- ====== Section from: 44-case-branding.qmd ====== -->
 
-# 브랜딩 사례 연구 {#sec-case-branding}
+## 브랜딩 사례 연구 {#sec-case-branding}
 
 사례 연구(Case Studies)는 실무 현장의 복잡한 브랜드 위기, 리브랜딩, 브랜드 확장 의사결정을 심층적으로 탐구하는 교육적·연구적 도구다.
 
@@ -14201,7 +14201,7 @@ flowchart LR
 
 <!-- ====== Section from: 45-case-branding-instructor.qmd ====== -->
 
-# 브랜딩 사례 연구: 교수자 안내서 {#sec-case-branding-instructor}
+## 브랜딩 사례 연구: 교수자 안내서 {#sec-case-branding-instructor}
 
 본 장은 MBA 및 학부 브랜딩 과목에서 사례 연구법(Case Method)을 효과적으로 진행하기 위한 교수자 안내서(Teaching Note / Instructor's Guide)인다.
 
@@ -14230,7 +14230,7 @@ flowchart TD
 
 <!-- ====== Section from: 46-case-advertising.qmd ====== -->
 
-# 광고 사례 연구 {#sec-case-advertising}
+## 광고 사례 연구 {#sec-case-advertising}
 
 광고 캠페인의 성과를 평가할 때 가장 흔히 범하는 오류는 광고 집행 기간의 매출 상승을 전부 광고의 기여로 착각하는 계절성 및 추세 교란(Confounding by Seasonality)인다.
 
@@ -14255,11 +14255,11 @@ flowchart LR
 library(tidyverse)
 set.seed(46)
 
-# 100개 시장에 대한 12주간 광고 증량 실험 시뮬레이션
+## 100개 시장에 대한 12주간 광고 증량 실험 시뮬레이션
 n_mkts <- 100
 seasonality <- sin(seq(0, pi, length.out = 12)) # 계절적 성수기 효과
 
-# 무작위 실험: 절반의 시장에만 광고 2배 증량 처치
+## 무작위 실험: 절반의 시장에만 광고 2배 증량 처치
 treat_mkt <- rbinom(n_mkts, 1, 0.5)
 true_ad_effect <- 1.2 # 진정한 주당 광고 증분 효과
 
@@ -14268,8 +14268,8 @@ for (w in 1:12) {
   sales_matrix[, w] <- 50 + 15 * seasonality[w] + true_ad_effect * treat_mkt + rnorm(n_mkts, 0, 2)
 }
 
-# (1) 단순 시계열 상관관계 (계절성으로 인해 효과 과대추정)
-# (2) 실험 대조군 차분 (비편향 광고 효과 복원)
+## (1) 단순 시계열 상관관계 (계절성으로 인해 효과 과대추정)
+## (2) 실험 대조군 차분 (비편향 광고 효과 복원)
 diff_effect <- mean(sales_matrix[treat_mkt == 1, 12]) - mean(sales_matrix[treat_mkt == 0, 12])
 cat("스플릿 케이블 실험을 통해 복원된 진정한 광고 증분 효과:", round(diff_effect, 3), "\n")
 ```
@@ -14282,7 +14282,7 @@ cat("스플릿 케이블 실험을 통해 복원된 진정한 광고 증분 효�
 
 <!-- ====== Section from: a1-others.qmd ====== -->
 
-# 마케팅 전략과 측정의 선별된 주제들 {#sec-a1-others}
+## 마케팅 전략과 측정의 선별된 주제들 {#sec-a1-others}
 
 본 부록은 마케팅 과학의 학술적 영향력(Citations)과 은닉 마르코프 토빗(Hidden Markov Tobit) 모형, 학제 간 연구 주제, 그리고 본서의 방법론적 지평을 확장하는 보완적 이론들을 다룬다.
 
@@ -14311,5 +14311,5 @@ flowchart LR
 
 
 `r if (knitr::is_html_output()) '
-# 참고문헌 {-}
+## 참고문헌 {-}
 '`

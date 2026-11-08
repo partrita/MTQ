@@ -3,8 +3,8 @@ title: "파이썬 개발자를 위한 Swift"
 subtitle: "Swift 문법, 고급 기능 및 연습 문제"
 author: "Taeyoon Kim"
 date: "2026-02-21"
+lang: ko
 ---
-
 
 이 가이드는 Swift의 기초를 안내하며 파이썬과의 비교를 곁들여 설명하므로 기존 파이썬 지식을 그대로 활용할 수 있다.
 
@@ -136,8 +136,8 @@ if name == "Alice" { // 범위를 위한 중괄호
 
 **파이썬:**
 ```python
-# 파이썬에는 언어 키워드에 의한 엄격한 상수 개념이 없습니다
-# 관례적으로 대문자 이름은 상수를 의미합니다
+## 파이썬에는 언어 키워드에 의한 엄격한 상수 개념이 없습니다
+## 관례적으로 대문자 이름은 상수를 의미합니다
 MAX_CONNECTIONS = 10
 name = "Bob"
 name = "Charlie"
@@ -542,7 +542,7 @@ Swift의 `switch` 문은 파이썬에 직접적인 `switch`가 없는 것(파이
 
 **파이썬 (`if-elif-else` 또는 3.10+ `match-case` 사용):**
 ```python
-# if-elif-else 사용
+## if-elif-else 사용
 value = "a"
 if value == "a":
     print("A입니다")
@@ -551,14 +551,14 @@ elif value == "b":
 else:
     print("다른 것입니다")
 
-# 파이썬 3.10+ match-case
-# match value:
-#     case "a":
-#         print("A입니다")
-#     case "b":
-#         print("B입니다")
-#     case _:
-#         print("다른 것입니다")
+## 파이썬 3.10+ match-case
+## match value:
+##     case "a":
+##         print("A입니다")
+##     case "b":
+##         print("B입니다")
+##     case _:
+##         print("다른 것입니다")
 ```
 
 **Swift:**
@@ -671,13 +671,13 @@ while count < 5 {
 
 **파이썬 (`while True`와 `break`로 에뮬레이트):**
 ```python
-# 직접적인 repeat-while은 없으며 종종 에뮬레이트됩니다:
-# count = 0
-# while True:
-#     print(count)
-#     count += 1
-#     if not (count < 5):
-#         break
+## 직접적인 repeat-while은 없으며 종종 에뮬레이트됩니다:
+## count = 0
+## while True:
+##     print(count)
+##     count += 1
+##     if not (count < 5):
+##         break
 ```
 
 **Swift:**
@@ -1496,8 +1496,8 @@ class MyFileHandler:
             self.file.close()
             print("파일 닫힘.") # 객체가 가비지 컬렉션될 때 호출됨
 
-# handler = MyFileHandler("test.txt")
-# handler = None # __del__을 트리거할 수 있음
+## handler = MyFileHandler("test.txt")
+## handler = None # __del__을 트리거할 수 있음
 ```
 
 **Swift (`deinit`):**
@@ -1636,7 +1636,7 @@ class Circle(Drawable):
     def draw(self):
         print("원 그리기")
 
-# d = Drawable() # 오류: 추상 클래스를 인스턴스화할 수 없습니다
+## d = Drawable() # 오류: 추상 클래스를 인스턴스화할 수 없습니다
 c = Circle()
 c.draw()
 ```
@@ -1897,14 +1897,14 @@ func fetchData() -> Data? { // 데이터를 반환하거나 nil을 반환할 수
 
 **파이썬 (`finally` 사용):**
 ```python
-# file = None
-# try:
-#     file = open("myfile.txt", "r")
-#     # 파일 처리
-# finally:
-#     if file:
-#         file.close()
-#         print("finally에서 파일 닫힘.")
+## file = None
+## try:
+##     file = open("myfile.txt", "r")
+##     # 파일 처리
+## finally:
+##     if file:
+##         file.close()
+##         print("finally에서 파일 닫힘.")
 ```
 
 **Swift:**
@@ -2192,11 +2192,11 @@ import json
 
 json_string = '{"name": "Alice", "age": 30}'
 
-# JSON을 딕셔너리로 변환
+## JSON을 딕셔너리로 변환
 data = json.loads(json_string)
 print(data["name"])
 
-# 딕셔너리를 JSON으로 변환
+## 딕셔너리를 JSON으로 변환
 print(json.dumps(data))
 ```
 
@@ -2306,7 +2306,7 @@ def clamped_property(min_val, max_val):
         return cls
     return decorator
 
-# 또는 Python 프로퍼티의 setter
+## 또는 Python 프로퍼티의 setter
 class Rectangle:
     def __init__(self, size):
         self._size = size
@@ -2432,7 +2432,7 @@ printShapes(myShapes)
 
 **파이썬:**
 ```python
-# 파이썬에서 HTML 빌더 흉내내기
+## 파이썬에서 HTML 빌더 흉내내기
 html = Tag("html", [
     Tag("body", [
         Tag("h1", ["Hello, Python DSL"]),
@@ -2489,7 +2489,7 @@ print(document)
 
 **파이썬 의존성 관리:**
 ```bash
-# 새로운 패키지를 설치합니다 (가상 환경 사용 권장)
+## 새로운 패키지를 설치합니다 (가상 환경 사용 권장)
 pip install requests
 ```
 그리고 이 정보를 `requirements.txt` 또는 `pyproject.toml` 등에 남긴다.

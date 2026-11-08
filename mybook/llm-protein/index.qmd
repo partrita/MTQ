@@ -1,8 +1,8 @@
 ---
 title: "단백질 생명정보학의 LLM"
 author: "John M. Walker"
+lang: ko
 ---
-
 # 사전 학습된 단백질 언어 모델 조사
 
 Suresh Pokharel, Pawel Pratyush, Meenal Chaudhari, Michael Heinzinger, Doina Caragea, Hiroto Saigo, Dukka B. KC
@@ -223,7 +223,7 @@ PLM을 학습시킬 때 따르는 어려움, 특히 데이터 부족 문제를 �
 
 PLM에서도 프롬프트 기반 미세 조정이 적용되기 시작했다. PTMGPT2는 단백질 서열 기반의 GPT 모델인 ProtGPT 모델의 프롬프트 기반 미세 조정으로, PTM 분류 레이블 생성을 위해 ProtGPT2를 미세 조정한다.
 
-# 다양한 단백질 예측 작업을 위해 효율적인 미세 조정을 거친 구조 인식 단백질 언어 모델 강화
+## 다양한 단백질 예측 작업을 위해 효율적인 미세 조정을 거친 구조 인식 단백질 언어 모델 강화
 
 Yichuan Zhang, Yongfang Qin, Mahdi Pourmirzaei, Qing Shao, Duolin Wang, Dong Xu
 
@@ -498,7 +498,7 @@ Adapter S-PLM Finetune S-PLM Adapter S-PLM2-onehot
 
 정리하면, 사전 학습된 ESM 모델에 구조 인지 모듈을 통합함으로써 S-PLM은 ESM2의 서열 표현 능력을 유지하면서 구조 정보를 효과적으로 반영한다. S-PLM과 효율적인 미세 조정 전략은 단백질 분석 및 예측 작업에 강력하고 유연한 수단이 된다.
 
-# ProtFlash 탐구: 단백질 데이터 분석을 위한 효율적인 접근 방식
+## ProtFlash 탐구: 단백질 데이터 분석을 위한 효율적인 접근 방식
 
 Lei Wang, Zhidong Xue, Yan Wang
 
@@ -545,9 +545,9 @@ conda install pytorch torchvision torchaudio -c pytorch
 최신 릴리스 버전을 사용하여 이 한 줄의 명령으로 설치할 수 있다.
 
 ```txt
-# 최신 버전
+## 최신 버전
 pip install git+https://github.com/isyslab-hust/ProtFlash
-# 안정 버전
+## 안정 버전
 pip install ProtFlash
 ```
 
@@ -572,7 +572,7 @@ from ProtFlash.utilis import batchConverter
 ids, batch_token, lengths = batchConverter(data)
 model = load_protflash_base()
 with torch.no_grad(): token_embedding = model(batch_token, lengths)
-# 평균화를 통해 서열별 표현 생성
+## 평균화를 통해 서열별 표현 생성
 representations = []
 for i, (_, seq) in enumerate(data): representations.append(token_embedding[i, 0: len(seq) + 1].mean(0))
 ```
@@ -585,8 +585,8 @@ for i, (_, seq) in enumerate(data): representations.append(token_embedding[i, 0:
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
-# 'representations'에 이전 코드의 평균 임베딩이 포함되어 있다고 가정함
-# t-SNE를 위해 리스트를 NumPy 배열로 변환
+## 'representations'에 이전 코드의 평균 임베딩이 포함되어 있다고 가정함
+## t-SNE를 위해 리스트를 NumPy 배열로 변환
 embeddings_array = np.array(representations)
 ```
 
@@ -594,10 +594,10 @@ embeddings_array = np.array(representations)
 ```python
 tsne = TSNE(n_components=2, random_state=42)
 tsne_results = tsne.fit_transform(embeddings_array)
-# t-SNE 결과 플로팅
+## t-SNE 결과 플로팅
 plt.figure(figsize=(8,6))
 plt.scatter(tsne_results[:,0],tsne_results[:,1],marker='o')
-# 단백질 식별자로 점 주석 달기
+## 단백질 식별자로 점 주석 달기
 for i,(protein_id,_) in enumerate(data): plt.annotate(protein_id,(tsne_results[i,0],tsne_results[i,1]),fontsize=9)
 plt.title("t-SNE Visualization of Protein Sequence Representations")
 plt.xlabel("t-SNE Component 1")
@@ -678,26 +678,26 @@ pip install -e .
 from minlora import add_lora, get_lora_params, get_lora_state_dict, LoRAParametrization
 from functools import partial
 
-# LoRA 구성
+## LoRA 구성
 lora_config = {
     torch.nn.Linear: {
         "weight": partial(LoRAParametrization.from_linear, rank=3),
     },
 }
 
-# 원본 ProtFlash 모델 로드
+## 원본 ProtFlash 모델 로드
 model = load_protflash_base()
 
-# ProtFlash 모델에 LoRA 추가
+## ProtFlash 모델에 LoRA 추가
 add_lora(model, lora_config=lora_config)
 ```
 
 ```python
-# 모델을 적절한 장치로 이동
+## 모델을 적절한 장치로 이동
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 model = model.to(device)
 
-# 최적화를 위한 LoRA 파라미터 획득 예시
+## 최적화를 위한 LoRA 파라미터 획득 예시
 optimizer = torch.optim.Adam(get_lora_params(model), lr=3e-4)
 ```
 
@@ -707,7 +707,7 @@ optimizer = torch.optim.Adam(get_lora_params(model), lr=3e-4)
 
 요약하자면, 본 장은 ProtFlash 사용법을 자세히 안내하고 단백질 서열 분석에서의 효과적인 응용 사례를 보여주었다. 생물정보학 입문자든 전문가든, 이 가이드를 따르면 ProtFlash의 기능을 빠르게 익히고 충분히 활용할 수 있을 것이다.
 
-# 거대 언어 모델과 그래프 신경망을 이용한 단백질-단백질 모델 순위 결정
+## 거대 언어 모델과 그래프 신경망을 이용한 단백질-단백질 모델 순위 결정
 
 Xiaotong Xu 및 Alexandre M. J. J. Bonvin
 
@@ -957,13 +957,13 @@ model.test(hdf5 = "GNN_ism_prediction.hdf5")
 ```python
 import h5py
 f = h5py.File("1B6C-gnn-esm_pred_A_B/graph.hdf5")
-# 모든 노드 특징 보기
+## 모든 노드 특징 보기
 node_features = f["1B6C"]["node_data"].keys()
 print(node_features)
-# 노드 특징 임베딩 보기
+## 노드 특징 임베딩 보기
 embeddings = f["1B6C"]["node_data"]["embedding"][:]
 print(embeddings)
-# 엣지 특징 거리 보기
+## 엣지 특징 거리 보기
 distance = f["1B6C"]["edge_data"]["dist"][:]
 print(distance)
 ```
@@ -1035,7 +1035,7 @@ model.train(
 8. 각 입력 파라미터에 대한 자세한 설명은 ESMFold 저장소나 우리의 원본 DeepRank-GNN-esm 논문의 보충 자료를 참조하라.
 9. 학습 파라미터의 예로, GPU GeForce GTX 1080 Ti 카드(11G 메모리)의 경우 "batch_size" = 64 및 "lr" = 0.001을 사용한다.
 
-# 단백질 언어 모델을 활용한 프로테옴의 기능 주해: ProtTrans 모델의 대규모 처리 구현
+## 단백질 언어 모델을 활용한 프로테옴의 기능 주해: ProtTrans 모델의 대규모 처리 구현
 
 Ildefonso Cases, Gemma Martínez-Redondo, Rosa Fernández, Ana M. Rojas
 
@@ -1155,7 +1155,7 @@ x는 서열의 개수이다.
 2. -a/--allisoforms: (선택) 모든 이소폼을 사용해 유전자당 주해를 얻기 위한 유전자 및 이소폼 ID 대응 정보가 담긴 탭 구분 파일이다.
 -p/--prefix: (선택) 출력 폴더와 파일명에 추가할 접두사(예: 종 코드)인다. 지정하지 않으면 입력 파일 이름이 사용된다.
 
-# 언어 모델 기반의 단백질-핵산 결합 부위 예측의 진전
+## 언어 모델 기반의 단백질-핵산 결합 부위 예측의 진전
 
 Sumit Tarafder, Xinyu Wang, Rahmatullah Roche, Debswapna Bhattacharya
 
@@ -1249,7 +1249,7 @@ EquiPNAS의 예측 성능은 단백질-핵산 결합 부위 예측을 위한 다
 4. ESM-2는 800만 개에서 150억 개의 파라미터를 가진 다양한 사전 학습 단백질 언어 모델(pLM)을 제공한다. EquiPNAS는 기본적으로 150억 개의 파라미터를 가진 가장 큰 모델인 esm2_t48_15B_UR50D를 사용한다. 흥미롭게도 800만 개의 파라미터를 가진 가장 작은 모델인 esm2_t6_8M_UR50D를 사용했을 때 성능이 가장 낮았으며 파라미터 수가 증가함에 따라 성능이 지속적으로 개선되었다. 이는 150억 개 파라미터 모델이 단백질-DNA 및 단백질-RNA 결합 부위 예측 모두에서 최상의 결과를 낸다는 점을 확인시켜 주며 단백질 정보학에서 거대 언어 모델(LLM)의 중요성을 입증한다.
 5. EquiPNAS가 달성한 ROC-AUC는 높은 정확도를 보여주지만 PR-AUC 결과는 결합 부위 예측 측면에서 전반적으로 저조한 성능을 나타낸다. ROC-AUC는 높지만 PR-AUC가 낮은 모델은 양성 클래스와 음성 클래스를 구분하는 데는 효과적이지만 정밀도(precision) 확보에 어려움을 겪어 결합 잔기 예측에서 더 많은 거짓 양성(false positive)을 발생시킬 수 있음을 시사한다. 이러한 불일치는 더욱 신뢰할 수 있는 예측을 보장하기 위해 특히 불균형 데이터셋을 처리할 때 EquiPNAS의 정밀도를 정제하는 추가적인 최적화가 필요함을 시사한다.
 
-# 단백질 분류 예측에서 언어 모델의 실용적 응용: SignalP 6., DeepLoc 2., DeepLocPro 1.
+## 단백질 분류 예측에서 언어 모델의 실용적 응용: SignalP 6., DeepLoc 2., DeepLocPro 1.
 
 Henrik Nielsen
 
@@ -1543,7 +1543,7 @@ DeepLocPro 1.0의 출력 결과는 DeepLoc 2.1과 매우 유사하지만 여러 
 
 9. ‘그람 음성(Gram negative)’과 ‘그람 양성(Gram positive)’은 각각 이중막(diderm)과 단일막(monoderm)으로 해석해야 한다. 따라서 미코플라스마(Class Mollicutes)는 그람 음성으로 염색되더라도 ‘그람 양성’으로 간주해야 한다.
 
-# CNN-Meth: 진화 정보 기반 단백질 모델링을 이용해 리신 메틸화 부위를 정확히 예측하는 도구
+## CNN-Meth: 진화 정보 기반 단백질 모델링을 이용해 리신 메틸화 부위를 정확히 예측하는 도구
 
 Austin Spadaro, Alok Sharma, Iman Dehzangi
 
@@ -1667,7 +1667,7 @@ CNN-Meth의 구체적인 아키텍처는 각각 64개의 필터와 3의 윈도�
 7. 대상 리신은 전달된 PSSM 파일의 명명 규칙에 따라 지정되어야 한다. 업로드된 파일의 이름은 타깃 리신의 행 번호 뒤에 “.pssm”이 붙은 형태여야 한다. 예를 들어 타깃 리신이 단백질 시퀀스의 123번째 아미노산이라면 파일 이름은 123.pssm이어야 한다.
 8. CNN-Meth에는 PSSM 파일만 필요하다. 필요한 다른 특징들은 제공된 PSSM 파일을 참조하여 자동으로 생성된다.
 
-# Predicting the Pathogenicity of Human Protein Variants: Not Only a Matter of Residue Labeling
+## Predicting the Pathogenicity of Human Protein Variants: Not Only a Matter of Residue Labeling
 
 Matteo Manfredi, Gabriele Vazzana, Giulia Babbi, Elisa Bertolini, Castrense Savojardo, Pier Luigi Martelli, Rita Casadio
 
@@ -1775,7 +1775,7 @@ Reactome은 인간의 생물학적 과정을 설명하며 질환 관련 효소�
 
 우리는 단백질 임베딩과 얕은 학습 또는 딥러닝 방법을 기반으로 한 다양한 최신 예측 도구 모음을 구현했다. 이 도구 모음으로 선택된 단백질의 병원성 변이와 관련된 다양한 물리화학적 특성을 도출했으며 유전자형-표현형 관계를 더 잘 활용하기 위해 Reactome 경로의 맥락에서 단백질을 특성화하는 방법을 제시했다. 변이의 병원성 여부를 예측하는 E-SNPs&GO를 비롯한 예측 도구들은 모두 최첨단 기술을 기반으로 한다. 그러나 실험적 검증이 이루어지지 않는 한, 이러한 도구들이 모든 경우에 성공을 보장하는 것은 아니다.
 
-# 자연어 처리(NLP) 및 거대 언어 모델(LLM) 중심의 생물학적 기능 예측 방법에 관한 조사
+## 자연어 처리(NLP) 및 거대 언어 모델(LLM) 중심의 생물학적 기능 예측 방법에 관한 조사
 
 Dana Mary Varghese, T. Athulya, Vikash K. Mohani, and Shandar Ahmad
 
@@ -1896,7 +1896,7 @@ NLP 기반 모델은 문헌 마이닝을 통해 단백질이 특정 기능을 �
 
 서열, 구조 및 기타 맥락 정보로부터의 기능 예측은 생물정보학 연구에서 매우 활발한 분야로 남아 있다. 자연어 및 LLM 기반 방법은 출판 문헌의 빠른 마이닝을 가능하게 했을 뿐만 아니라, 아미노산 서열을 잠재된 저차원 공간으로 표현할 수 있는 길을 열어 기계 학습 모델에서의 활용을 가능하게 했다. 임베딩, 토큰화, 전이 학습 및 훈련 방법의 차이가 LLM 모델들을 구별하며 각 방향에서 개선이 이루어지고 있다. 미래에는 구조 예측의 성공 사례와 마찬가지로 서열 및 구조 기반 인코딩을 종합적으로 활용하여 대부분의 기능 예측이 서열로부터 직접 이루어질 것으로 기대된다.
 
-# PLMSearch 및 PLMAlign: 단백질 언어 모델(PLM) 기반의 상동 단백질 서열 검색 및 정렬
+## PLMSearch 및 PLMAlign: 단백질 언어 모델(PLM) 기반의 상동 단백질 서열 검색 및 정렬
 
 Wei Liu, Ziye Wang, Ronghui You, Chenghan Xie, Hong Wei, Yi Xiong, Jianyi Yang, Shanfeng Zhu
 
@@ -2088,7 +2088,7 @@ PLMSearch의 결과는 Code Ocean에 게시된 컨테이너(https://doi.org/10.2
 
 더 많은 검색(github.com/maovshao/PLMSearch) 및 정렬(github.com/maovshao/PLMAlign) 작업을 수행하려면 우리의 소스 코드를 직접 구현하여 사용하라.
 
-# 거대 컨텍스트, 깊은 통찰: 단백질-단백질 상호작용 분석의 발전을 위한 대규모 언어 모델 활용
+## 거대 컨텍스트, 깊은 통찰: 단백질-단백질 상호작용 분석의 발전을 위한 대규모 언어 모델 활용
 
 Kaicheng U, Sophia Meixuan Zhang, Suresh Pokharel, Pawel Pratyush, Farah Qaderi, Dongfang Liu, Junhan Zhao, Dukka B. KC, Siwei Chen
 
@@ -2282,7 +2282,7 @@ LLM 기반 방법이 PPI 부위 예측 분야를 크게 발전시켰음에도 �
 
 이러한 응용 사례들을 종합해 볼 때, LLM은 전통적인 PPI 부위 예측을 넘어 복잡한 생물학적 문제 해결에서 맡는 역할이 점차 확대되고 있음을 알 수 있다. 딥러닝의 힘과 방대한 단백질 서열 데이터를 결합함으로써 LLM은 텍스트와 서열 정보 모두에서 유의미한 생물학적 통찰을 끌어내는 새로운 길을 열어준다. 아직 충분히 연구되지 않은 이러한 영역에 대한 지속적인 탐구는 단백질 기능과 상호작용, 그리고 건강과 질병에서의 함의를 이해하는 데 커다란 진전을 가져올 것으로 기대된다.
 
-# PepBCL을 이용한 단백질-펩타이드 결합 부위 예측
+## PepBCL을 이용한 단백질-펩타이드 결합 부위 예측
 
 Ruheng Wang, Kenta Nakai, Leyi Wei
 
@@ -2418,10 +2418,10 @@ python train/protBert_main.py
 
 ```shell
 mkdir -p model_parameters
-# 데이터셋 1 파라미터 다운로드
+## 데이터셋 1 파라미터 다운로드
 wget https://drive.google.com/uc?id=FILE_ID_FOR_DATASET1 -O
 model_parameters/dataset1_parameters.pth
-# 데이터셋 2 파라미터 다운로드
+## 데이터셋 2 파라미터 다운로드
 wget https://drive.google.com/uc?id=FILE_ID_FOR_DATASET2 -O
 model_parameters/dataset2_parameters.pth
 ```
@@ -2496,9 +2496,9 @@ label = torch.tensor(label, dtype=torch.long)
 임계값을 설정하려는 사용자는 train/protBert_main.py 파일의 model_eval 함수를 수정할 수 있다. 예를 들어 임계값을 0.3으로 설정하려면 다음 코드를:
 
 ```ini
-# 양성 클래스 예측 확률 [batch_size, seq_len]
+## 양성 클래스 예측 확률 [batch_size, seq_len]
 pred_prob_sort = torch.max(pred_prob_all, 2)
-# 각 샘플에서 최대 예측 확률 [batch_size]
+## 각 샘플에서 최대 예측 확률 [batch_size]
 pred_class = pred_prob_sort[1]
 ```
 
@@ -2509,7 +2509,7 @@ threshold = 0.3
 pred_class = (pred_prob_positive > threshold).long()
 ```
 
-# 통합 모델 아키텍처 UniDL4BioPep을 이용한 펩타이드 생체 활성 예측
+## 통합 모델 아키텍처 UniDL4BioPep을 이용한 펩타이드 생체 활성 예측
 
 Zhenjiao Du, Nandan Kumar, Yonghui Li
 
@@ -2597,12 +2597,12 @@ def esm_embedding(esm2, esm2_Alphabet, peptide_sequence_list):
 그림 1
 
 ```python
-# 평균화를 통해 서열별 표현 생성
-# 참고: 토큰 0은 항상 서열 시작 토큰이므로 제외하고 토큰 1부터 시작함
+## 평균화를 통해 서열별 표현 생성
+## 참고: 토큰 0은 항상 서열 시작 토큰이므로 제외하고 토큰 1부터 시작함
 sequence_Representations = []
 for i, tokens_len in enumerate(batch_lens):
     sequence_Representations.append(token_Representations[i, 1 : tokens_len - 1].mean(0))
-# sequence_Representations는 리스트이며 각 요소는 텐서임
+## sequence_Representations는 리스트이며 각 요소는 텐서임
 embeddings_results = collections.defaultdict(list)
 for i in range(len(sequence_Representations)):
     # 텐서 형식은 sequence_Representations[0].numpy() 또는 sequence_Representations[0].tolist()를 통해 변환 가능
@@ -2616,7 +2616,7 @@ return embeddings_results
 ```
 
 ```python
-# esm2_t6_8M_UR50D 로드
+## esm2_t6_8M_UR50D 로드
 
 model, alphabet = esm.pretrained.esm2_t6_8M_UR50D()
 ```
@@ -2626,19 +2626,19 @@ model, alphabet = esm.pretrained.esm2_t6_8M_UR50D()
 단일 데이터셋
 ```python
 dataset = pd.read_excel('bitter_single_dataset_example.xlsx', header=0, index_col=None)
-# 두 개의 데이터셋
-# 학습 데이터셋 로딩
+## 두 개의 데이터셋
+## 학습 데이터셋 로딩
 dataset = pd.read_excel('bitter_train.xlsx', header=0, index_col=None)
-# 테스트 데이터셋 로딩
+## 테스트 데이터셋 로딩
 dataset = pd.read_excel('bitter_test.xlsx', header=0, index_col=None)
 ```
 
 ```python
-# 단일 데이터셋: 데이터셋을 두 번 분할하여 각각 학습, 검증, 테스트 세트를 얻음
+## 단일 데이터셋: 데이터셋을 두 번 분할하여 각각 학습, 검증, 테스트 세트를 얻음
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123, shuffle=True)
 X_train, X_valid, y_train, y_valid = train_test_split(X_train, y_train, test_size=0.2, random_state=234, shuffle=True)
-# 두 개의 데이터셋: 학습 및 검증 데이터셋만 분할하면 됨
-# random_state는 데이터셋 분할을 재현 가능하게 함
+## 두 개의 데이터셋: 학습 및 검증 데이터셋만 분할하면 됨
+## random_state는 데이터셋 분할을 재현 가능하게 함
 X_train, X_valid, y_train, y_valid = train_test_split(X_train, y_train, test_size=0.2, random_state=111, shuffle=True)
 ```
 
@@ -2647,9 +2647,9 @@ X_train, X_valid, y_train, y_valid = train_test_split(X_train, y_train, test_siz
 3단계 펩타이드 임베딩. 임베딩은 펩타이드 서열에 대해서만 계산된다. GPU 메모리 또는 RAM 소모를 줄이기 위해 데모에서는 임베딩 프로세스를 하나씩 수행한다. 펩타이드 서열을 로드하고 입력 서열의 형식이 ESM2의 입력 요구 사항을 충족하는지 확인한다. 마지막으로 향후 사용을 위해 임베딩 결과를 csv 파일로 저장한다(참고 3 참조).
 
 ```python
-# 훈련 데이터셋 로딩
+## 훈련 데이터셋 로딩
 dataset = pd.read_excel('bitter_single_dataset_example.xlsx', header=0, index_col = None)
-# 서열 임베딩 생성
+## 서열 임베딩 생성
 sequence_list = dataset['sequence']
 embeddings_results = pd.DataFrame()
 for seq in sequence_list:
@@ -2668,7 +2668,7 @@ for seq in sequence_list:
 단계 4: 정규화(선택 사항). 훈련 데이터셋을 사용하여 특징(feature)을 (0, 1) 범위로 스케일링하는 최소-최대 정규화(min-max normalization)를 수행한다. 여기서는 각 펩타이드를 320차원 벡터로 표현하며 정규화를 통해 각 차원이 $( 0 , 1 )$ 범위 내에 오도록 조정한다. 훈련 데이터셋에서 학습한 정규화 스케일러는 검증 및 테스트 데이터셋을 정규화하는 데에도 동일하게 적용된다.
 
 ```python
-# X 데이터 범위 정규화
+## X 데이터 범위 정규화
 from sklearn.preprocessing import MinMaxScaler
 scalar = MinMaxScaler()
 scalar.fit(X_train)
@@ -2699,11 +2699,11 @@ def ESM_CNN(X_train, y_train, X_test, y_test):
     x = Dense(2, activation='softmax', name='fc2')(x)
     model = Model(input = input, outputs = x, name='Predict')
     adam = Adam(learning_rate=0.001)
-# 모델 컴파일
+## 모델 컴파일
 model.compile(loss='sparse_categorical_crossentropy', optimizer=adam, metrics=['accuracy'])
-# 체크포인트 설정 및 최적 모델 저장
+## 체크포인트 설정 및 최적 모델 저장
 mc = ModelCheckpoint('best_model.keras', monitor='val_accuracy', mode='max', verbose=1, save_best_only=True, save_weights_only=False)
-# 콜백 리스트 요약
+## 콜백 리스트 요약
 callback_list = [mc]
 model_history = model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=100, callbacks=callback_list, batch_size=8, verbose=1)
 return model, model_history
@@ -2718,9 +2718,9 @@ model, model_history = ESM_CNN(X_train, y_train, X_valid, y_valid)
 단계 3: 저장된 모델을 불러와 테스트 데이터셋 성능 평가 수행
 
 ```python
-# 저장된 최적 모델을 불러와 테스트 데이터셋에서 성능 평가 수행
+## 저장된 최적 모델을 불러와 테스트 데이터셋에서 성능 평가 수행
 saved_model = load_model('best_model.keras')
-# 결과 수집 리스트
+## 결과 수집 리스트
 ACC_Collector = []
 BACC_Collector = []
 Sn_Collector = []
@@ -2730,7 +2730,7 @@ precision_Collector = []
 f1_Collector = []
 MCC_Collector = []
 AUC_Collector = []
-# 혼동 행렬
+## 혼동 행렬
 predicted_class = []
 predictedProbability = saved_model.predict(X_test, batch_size=1)
 for i in range(predictedProbability.shape[0]):
@@ -2740,7 +2740,7 @@ for i in range(predictedProbability.shape[0]):
     y_true = y_test
 from sklearn.metrics import confusion_matrix
 import math
-# np.ravel()은 평탄화된 1D 배열을 반환함
+## np.ravel()은 평탄화된 1D 배열을 반환함
 TN, FP, FN, TP = confusion_matrix(y_true, predicted_class).ravel() # 형태 [ [참-양성, 거짓-양성], [거짓-음성, 참-음성] ]
 ACC = (TP+TN)/(TP+TN+FP+FN)
 ACC_Collector.append(ACC)
@@ -2752,7 +2752,7 @@ f1_Collector.append(2*TP/(TP+FP)*TP/(TP+FN)/ (TP/(TP+FP)+TP/(TP+FN)))
 MCC = (TP*TN-FP*FN)/math.pow((TP+FP)*(TP+FN)*(TN+FP)*(TN+FN),0.5)
 MCC_Collector.append(MCC)
 BACC_Collector.append(0.5*TP/(TP+FN)+0.5*TN/(TN+FP))
-# 테스트 데이터셋의 성능 출력
+## 테스트 데이터셋의 성능 출력
 from sklearn.metrics import roc_auc_score
 AUC = roc_auc_score(y_test, predictedProbability[:,1])
 AUC_Collector.append(AUC)
@@ -2777,9 +2777,9 @@ print(AUC_Collector[0])
 
 ```python
 model, alphabet = esm.pretrained.esm2_t6_8M_UR50D()
-# 새로운 데이터셋 로딩
+## 새로운 데이터셋 로딩
 dataset = pd.read_excel('bitter_new_data.xlsx', header=0, index_col = None)
-# 서열 임베딩 생성
+## 서열 임베딩 생성
 sequence_list = dataset['sequence']
 embeddings_results = pd.DataFrame()
 for seq in sequence_list:
@@ -2798,16 +2798,16 @@ embeddings_results.to_csv('new_data_esm2_t6_8M_UR50D_unified_320_dimension.csv')
 단계 3(선택 사항): 학습 과정에서 데이터셋을 정규화했다면, 학습 데이터셋에서 얻은 스케일러를 사용하여 새로운 데이터셋에도 동일한 정규화를 적용한다.
 
 ```python
-# 펩타이드 임베딩 읽기
+## 펩타이드 임베딩 읽기
 X_data = pd.read_csv('whole_sample_dataset_esm2_t6_8M_UR50D_unified_320_dimension.csv', header=0, index_col=0, delimiter=',')
 X = np.array(X_data)
-# random_state에 대한 다음 숫자 값이 위 데이터 분할 섹션과 일치하는지 확인하세요.
+## random_state에 대한 다음 숫자 값이 위 데이터 분할 섹션과 일치하는지 확인하세요.
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123, shuffle=True, stratify=y)
 X_train, X_valid, y_train, y_valid = train_test_split(X_train, y_train, test_size=0.2, random_state=234, shuffle=True, stratify=y_train)
-# 펩타이드 임베딩 로딩
+## 펩타이드 임베딩 로딩
 X_new_embeddings = pd.read_csv('new_data_esm2_t6_8M_UR50D_unified_320_dimension.csv', header=0, index_col=0, delimiter=',')
-# X 데이터 범위 정규화
+## X 데이터 범위 정규화
 from sklearn.preprocessing import MinMaxScaler
 scalar = MinMaxScaler()
 scalar.fit(X_train)
@@ -2817,9 +2817,9 @@ X_new = scaler.transform(X_new) # X를 0-1 범위로 정규화
 
 단계 4: 저장된 모델을 불러와 예측을 수행하고 Microsoft Excel 형식의 출력 파일을 생성한다.
 ```python
-# 저장된 최적 모델을 불러와 테스트 데이터셋에서 성능 평가 수행
+## 저장된 최적 모델을 불러와 테스트 데이터셋에서 성능 평가 수행
 saved_model = load_model('best_model.keras')
-# 혼동 행렬
+## 혼동 행렬
 predicted_class = []
 predictedProbability = saved_model.predict(X_new, batch_size=1)
 for i in range(predictedProbability.shape[0]):
@@ -2837,7 +2837,7 @@ dataset.to_excel('new_data_prediction_result.xlsx')
 2. 이 프로토콜에서는 펩타이드 임베딩을 위해 ESM 언어 모델(esm2_t6_8M_UR50D)을 사용한다. 다양한 크기의 추가 ESM 모델 5종을 https://github.com/facebookresearch/esm 에서 확인할 수 있다. 이전 연구에 따르면 더 큰 ESM 모델이 일반적으로 펩타이드 표현력에서 더 나은 성능을 보였다 . 서열이 1,000개 이상인 데이터셋의 경우, esm2_t6_8M_UR50D 모델보다 약간의 성능 향상을 기대할 수 있는 더 큰 ESM 모델 사용을 권장한다. 다른 ESM 모델을 선택할 때는 모델 성능 최적화를 위해 하이퍼파라미터 조정이 필요할 수 있다. 다양한 ESM 모델의 하이퍼파라미터 튜닝에 관한 안내는 종합적인 튜닝을 수행한 pLM4Alg의 보충 자료(https://github.com/dzjxzyd/pLM4Alg)를 참조하시기 바란다 .
 3. 임베딩 결과를 먼저 저장한 뒤 이를 학습 시 불러오는 방식으로 임베딩과 학습 과정을 분리했다. 임베딩은 시간이 많이 소요되는 작업이므로 이러한 접근 방식은 학습 효율을 높여준다. 반면 학습은 각 펩타이드 서열이 반복적으로 사용되는 반복 과정이므로, 임베딩을 동시에 수행하면 동일한 서열에 대해 불필요한 임베딩 연산이 반복된다. 미리 계산된 임베딩을 학습에 직접 활용함으로써 동일한 펩타이드 서열을 여러 번 임베딩하는 데 드는 반복적인 시간 비용을 줄일 수 있다.
 
-# CLAPE: 단백질 언어 모델을 활용한 단백질-리간드 결합 부위 예측
+## CLAPE: 단백질 언어 모델을 활용한 단백질-리간드 결합 부위 예측
 
 Yufan Liu 및 Boxue Tian
 
@@ -2914,7 +2914,7 @@ $ wget https://github.com/YAndrewL/CLAPE/blob/main/example.fa
 ```
 
 ```txt
-# example.fa의 내용 (DNA 결합 단백질)
+## example.fa의 내용 (DNA 결합 단백질)
 
 >seq1
 
@@ -2966,13 +2966,13 @@ from clape import Clape, get_weights
 get_weights("your/model/path", "DNA")
 clape_model = Clape(model_path="your/model/path", ligand="DNA")
 results = clape_model.predict_from_pdb(pdb_file, chain)
-# 또는 이미 알고 있는 PDB 파일로 예측
+## 또는 이미 알고 있는 PDB 파일로 예측
 results = clape_model.predict_from_pdb(pdb_id, chain)
 ```
 
 predict_from_pdb 메서드에서는 PDB 파일로부터 직접 결합 부위를 예측하는 기능을 제공한다. 사용자는 분석할 단백질 체인(chain)의 ID를 지정해야 한다. 이 메서드는 먼저 PDB 파일에서 단백질 서열을 추출한 다음 모델을 사용하여 임베딩을 생성한다. 또한 네 글자로 된 PDB 항목(예: “1A0A”)을 제공하여 이 메서드를 호출할 수도 있는데, 이 경우 해당 PDB 파일이 PDB 웹사이트에서 자동으로 검색된다. 서열 기반 예측과 마찬가지로, keep_score 매개변수를 True로 설정하여 각 잔기가 결합 부위일 확률을 나타내는 예측 점수를 유지할 수 있다.
 
-# 단백질 번역 후 변형(PTM) 부위 예측의 거대 언어 모델(LLM) 기반 발전
+## 단백질 번역 후 변형(PTM) 부위 예측의 거대 언어 모델(LLM) 기반 발전
 
 Pawel Pratyush, Suresh Pokharel, Stefan Schulze, Lisa Bramer, Robert H. Newman, Dukka B. KC
 
