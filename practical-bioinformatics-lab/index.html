@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Sufang Wang, Michael Gribskov">
-<meta name="dcterms.date" content="2026-08-24">
 
 <title>생명정보학 실용 매뉴얼 – Machine translation</title>
 <style>
@@ -100,17 +99,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
   }
 }</script>
 
@@ -123,13 +122,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../py-biologists/index.html">생명정보학, 계산생물학 및 바이오 파이썬</a></li><li class="breadcrumb-item"><a href="../practical-bioinformatics-lab/index.html"><span class="chapter-title">생명정보학 실용 매뉴얼</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -146,7 +145,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="검색"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -160,7 +159,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">기초 컴퓨터 과학 및 시스템 도구</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -191,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">프로그래밍 언어 및 소프트웨어 엔지니어링</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -277,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">인공지능, LLM 및 머신러닝</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -318,7 +317,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">데이터 사이언스, 엔지니어링 및 시각화</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -369,7 +368,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">인과추론 및 통계 모델링</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -395,7 +394,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">생명정보학, 계산생물학 및 바이오 파이썬</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -471,7 +470,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">단백질 공학, 면역학 및 항체 치료제</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -542,7 +541,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">신약 개발, 약동학 및 바이오의약품 규제</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -598,7 +597,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">비즈니스, 경영 및 전략적 리더십</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -674,7 +673,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
  <span class="menu-text">커뮤니케이션, 설득 및 글쓰기 기술</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -740,7 +739,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
  <span class="menu-text">생산성, 시간 관리 및 습관 형성</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -831,7 +830,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
  <span class="menu-text">철학, 심리학 및 삶의 지혜</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -995,7 +994,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">목차</h2>
    
   <ul>
   <li><a href="#서문" id="toc-서문" class="nav-link active" data-scroll-target="#서문">서문</a></li>
@@ -1004,27 +1003,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#생명정보학란" id="toc-생명정보학란" class="nav-link" data-scroll-target="#생명정보학란">1. 생명정보학란?</a></li>
   <li><a href="#시퀀싱-기술" id="toc-시퀀싱-기술" class="nav-link" data-scroll-target="#시퀀싱-기술">1. 시퀀싱 기술</a></li>
   <li><a href="#생명정보학의-주제" id="toc-생명정보학의-주제" class="nav-link" data-scroll-target="#생명정보학의-주제">1. 생명정보학의 주제</a></li>
-  </ul></li>
-  <li><a href="#제2장-항생제-내성-입문" id="toc-제2장-항생제-내성-입문" class="nav-link" data-scroll-target="#제2장-항생제-내성-입문">제2장 항생제 내성 입문</a>
-  <ul class="collapse">
+  <li><a href="#제2장-항생제-내성-입문" id="toc-제2장-항생제-내성-입문" class="nav-link" data-scroll-target="#제2장-항생제-내성-입문">제2장 항생제 내성 입문</a></li>
   <li><a href="#학습목표" id="toc-학습목표" class="nav-link" data-scroll-target="#학습목표">2. 학습목표</a></li>
   <li><a href="#항생제-내성의-중요성" id="toc-항생제-내성의-중요성" class="nav-link" data-scroll-target="#항생제-내성의-중요성">2. 항생제 내성의 중요성</a></li>
   <li><a href="#내성의-원인" id="toc-내성의-원인" class="nav-link" data-scroll-target="#내성의-원인">2. 내성의 원인</a></li>
   <li><a href="#내성의-기전" id="toc-내성의-기전" class="nav-link" data-scroll-target="#내성의-기전">2. 내성의 기전</a></li>
   <li><a href="#질문" id="toc-질문" class="nav-link" data-scroll-target="#질문">2. 질문</a></li>
   <li><a href="#추가-읽을거리" id="toc-추가-읽을거리" class="nav-link" data-scroll-target="#추가-읽을거리">추가 읽을거리</a></li>
-  </ul></li>
-  <li><a href="#제3장-진화와-상동성-입문" id="toc-제3장-진화와-상동성-입문" class="nav-link" data-scroll-target="#제3장-진화와-상동성-입문">제3장 진화와 상동성 입문</a>
-  <ul class="collapse">
+  <li><a href="#제3장-진화와-상동성-입문" id="toc-제3장-진화와-상동성-입문" class="nav-link" data-scroll-target="#제3장-진화와-상동성-입문">제3장 진화와 상동성 입문</a></li>
   <li><a href="#학습목표-1" id="toc-학습목표-1" class="nav-link" data-scroll-target="#학습목표-1">3. 학습목표</a></li>
   <li><a href="#두-종류의-진화" id="toc-두-종류의-진화" class="nav-link" data-scroll-target="#두-종류의-진화">3. 두 종류의 진화</a></li>
   <li><a href="#상동유전자-돌연변이-분자시계" id="toc-상동유전자-돌연변이-분자시계" class="nav-link" data-scroll-target="#상동유전자-돌연변이-분자시계">3. 상동유전자, 돌연변이, 분자시계</a></li>
   <li><a href="#상동서열-판정" id="toc-상동서열-판정" class="nav-link" data-scroll-target="#상동서열-판정">3. 상동서열 판정</a></li>
   <li><a href="#질문-1" id="toc-질문-1" class="nav-link" data-scroll-target="#질문-1">3. 질문</a></li>
   <li><a href="#추가-읽을거리-1" id="toc-추가-읽을거리-1" class="nav-link" data-scroll-target="#추가-읽을거리-1">추가 읽을거리</a></li>
-  </ul></li>
-  <li><a href="#제4장-서열-준비하기" id="toc-제4장-서열-준비하기" class="nav-link" data-scroll-target="#제4장-서열-준비하기">제4장 서열 준비하기</a>
-  <ul class="collapse">
+  <li><a href="#제4장-서열-준비하기" id="toc-제4장-서열-준비하기" class="nav-link" data-scroll-target="#제4장-서열-준비하기">제4장 서열 준비하기</a></li>
   <li><a href="#학습목표-2" id="toc-학습목표-2" class="nav-link" data-scroll-target="#학습목표-2">4. 학습목표</a></li>
   <li><a href="#배경" id="toc-배경" class="nav-link" data-scroll-target="#배경">4. 배경</a></li>
   <li><a href="#사전-질문" id="toc-사전-질문" class="nav-link" data-scroll-target="#사전-질문">4. 사전 질문</a></li>
@@ -1036,9 +1029,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#실습-5-ncbi에서-서열-내려받기" id="toc-실습-5-ncbi에서-서열-내려받기" class="nav-link" data-scroll-target="#실습-5-ncbi에서-서열-내려받기">4. 실습 5: NCBI에서 서열 내려받기</a></li>
   <li><a href="#분석노트북" id="toc-분석노트북" class="nav-link" data-scroll-target="#분석노트북">4. 분석/노트북</a></li>
   <li><a href="#추가-읽을거리-2" id="toc-추가-읽을거리-2" class="nav-link" data-scroll-target="#추가-읽을거리-2">추가 읽을거리</a></li>
-  </ul></li>
-  <li><a href="#제5장-서열-비교-통계-탐구" id="toc-제5장-서열-비교-통계-탐구" class="nav-link" data-scroll-target="#제5장-서열-비교-통계-탐구">제5장 서열 비교 통계 탐구</a>
-  <ul class="collapse">
+  <li><a href="#제5장-서열-비교-통계-탐구" id="toc-제5장-서열-비교-통계-탐구" class="nav-link" data-scroll-target="#제5장-서열-비교-통계-탐구">제5장 서열 비교 통계 탐구</a></li>
   <li><a href="#학습목표-3" id="toc-학습목표-3" class="nav-link" data-scroll-target="#학습목표-3">5. 학습목표</a></li>
   <li><a href="#배경-1" id="toc-배경-1" class="nav-link" data-scroll-target="#배경-1">5. 배경</a></li>
   <li><a href="#재료" id="toc-재료" class="nav-link" data-scroll-target="#재료">5. 재료</a></li>
@@ -1047,9 +1038,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#실습-3-서열-조성의-효과를-보여주는-실제-dna-서열" id="toc-실습-3-서열-조성의-효과를-보여주는-실제-dna-서열" class="nav-link" data-scroll-target="#실습-3-서열-조성의-효과를-보여주는-실제-dna-서열">5. 실습 3: 서열 조성의 효과를 보여주는 실제 DNA 서열</a></li>
   <li><a href="#분석노트북-1" id="toc-분석노트북-1" class="nav-link" data-scroll-target="#분석노트북-1">5. 분석/노트북</a></li>
   <li><a href="#추가-읽을거리-3" id="toc-추가-읽을거리-3" class="nav-link" data-scroll-target="#추가-읽을거리-3">추가 읽을거리</a></li>
-  </ul></li>
-  <li><a href="#제6장-blast로-상동서열-찾기" id="toc-제6장-blast로-상동서열-찾기" class="nav-link" data-scroll-target="#제6장-blast로-상동서열-찾기">제6장 BLAST로 상동서열 찾기</a>
-  <ul class="collapse">
+  <li><a href="#제6장-blast로-상동서열-찾기" id="toc-제6장-blast로-상동서열-찾기" class="nav-link" data-scroll-target="#제6장-blast로-상동서열-찾기">제6장 BLAST로 상동서열 찾기</a></li>
   <li><a href="#학습목표-4" id="toc-학습목표-4" class="nav-link" data-scroll-target="#학습목표-4">6. 학습목표</a></li>
   <li><a href="#배경-2" id="toc-배경-2" class="nav-link" data-scroll-target="#배경-2">6. 배경</a></li>
   <li><a href="#사전-질문-1" id="toc-사전-질문-1" class="nav-link" data-scroll-target="#사전-질문-1">6. 사전 질문</a></li>
@@ -1060,9 +1049,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#실습-4-다양한-분류군에서-서열-수집" id="toc-실습-4-다양한-분류군에서-서열-수집" class="nav-link" data-scroll-target="#실습-4-다양한-분류군에서-서열-수집">6. 실습 4: 다양한 분류군에서 서열 수집</a></li>
   <li><a href="#분석노트북-2" id="toc-분석노트북-2" class="nav-link" data-scroll-target="#분석노트북-2">6. 분석/노트북</a></li>
   <li><a href="#추가-읽을거리-4" id="toc-추가-읽을거리-4" class="nav-link" data-scroll-target="#추가-읽을거리-4">추가 읽을거리</a></li>
-  </ul></li>
-  <li><a href="#제7장-uniprot로-상동서열-찾기" id="toc-제7장-uniprot로-상동서열-찾기" class="nav-link" data-scroll-target="#제7장-uniprot로-상동서열-찾기">제7장 UniProt로 상동서열 찾기</a>
-  <ul class="collapse">
+  <li><a href="#제7장-uniprot로-상동서열-찾기" id="toc-제7장-uniprot로-상동서열-찾기" class="nav-link" data-scroll-target="#제7장-uniprot로-상동서열-찾기">제7장 UniProt로 상동서열 찾기</a></li>
   <li><a href="#학습목표-5" id="toc-학습목표-5" class="nav-link" data-scroll-target="#학습목표-5">7. 학습목표</a></li>
   <li><a href="#배경-3" id="toc-배경-3" class="nav-link" data-scroll-target="#배경-3">7. 배경</a></li>
   <li><a href="#자료와-리소스-2" id="toc-자료와-리소스-2" class="nav-link" data-scroll-target="#자료와-리소스-2">7. 자료와 리소스</a></li>
@@ -1070,9 +1057,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#실습-2-uniprot에서-서열-선택" id="toc-실습-2-uniprot에서-서열-선택" class="nav-link" data-scroll-target="#실습-2-uniprot에서-서열-선택">7. 실습 2: UniProt에서 서열 선택</a></li>
   <li><a href="#분석노트북-3" id="toc-분석노트북-3" class="nav-link" data-scroll-target="#분석노트북-3">7. 분석/노트북</a></li>
   <li><a href="#추가-읽을거리-5" id="toc-추가-읽을거리-5" class="nav-link" data-scroll-target="#추가-읽을거리-5">추가 읽을거리</a></li>
-  </ul></li>
-  <li><a href="#제8장-다중서열정렬" id="toc-제8장-다중서열정렬" class="nav-link" data-scroll-target="#제8장-다중서열정렬">제8장 다중서열정렬</a>
-  <ul class="collapse">
+  <li><a href="#제8장-다중서열정렬" id="toc-제8장-다중서열정렬" class="nav-link" data-scroll-target="#제8장-다중서열정렬">제8장 다중서열정렬</a></li>
   <li><a href="#학습목표-6" id="toc-학습목표-6" class="nav-link" data-scroll-target="#학습목표-6">8. 학습목표</a></li>
   <li><a href="#배경-4" id="toc-배경-4" class="nav-link" data-scroll-target="#배경-4">8. 배경</a></li>
   <li><a href="#사전-질문-2" id="toc-사전-질문-2" class="nav-link" data-scroll-target="#사전-질문-2">8. 사전 질문</a></li>
@@ -1083,9 +1068,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#실습-4-weblogo-3-웹사이트로-서열-로고-만들기" id="toc-실습-4-weblogo-3-웹사이트로-서열-로고-만들기" class="nav-link" data-scroll-target="#실습-4-weblogo-3-웹사이트로-서열-로고-만들기">8. 실습 4: WebLogo 3 웹사이트로 서열 로고 만들기</a></li>
   <li><a href="#분석노트북-4" id="toc-분석노트북-4" class="nav-link" data-scroll-target="#분석노트북-4">8. 분석/노트북</a></li>
   <li><a href="#추가-읽을거리-6" id="toc-추가-읽을거리-6" class="nav-link" data-scroll-target="#추가-읽을거리-6">추가 읽을거리</a></li>
-  </ul></li>
-  <li><a href="#제9장-보존된-서열-모티프-식별" id="toc-제9장-보존된-서열-모티프-식별" class="nav-link" data-scroll-target="#제9장-보존된-서열-모티프-식별">제9장 보존된 서열 모티프 식별</a>
-  <ul class="collapse">
+  <li><a href="#제9장-보존된-서열-모티프-식별" id="toc-제9장-보존된-서열-모티프-식별" class="nav-link" data-scroll-target="#제9장-보존된-서열-모티프-식별">제9장 보존된 서열 모티프 식별</a></li>
   <li><a href="#학습목표-7" id="toc-학습목표-7" class="nav-link" data-scroll-target="#학습목표-7">9. 학습목표</a></li>
   <li><a href="#배경-5" id="toc-배경-5" class="nav-link" data-scroll-target="#배경-5">9. 배경</a></li>
   <li><a href="#사전-질문-3" id="toc-사전-질문-3" class="nav-link" data-scroll-target="#사전-질문-3">9. 사전 질문</a></li>
@@ -1096,9 +1079,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#실습-4-모티프를-3차-구조와-비교" id="toc-실습-4-모티프를-3차-구조와-비교" class="nav-link" data-scroll-target="#실습-4-모티프를-3차-구조와-비교">9. 실습 4: 모티프를 3차 구조와 비교</a></li>
   <li><a href="#분석노트북-5" id="toc-분석노트북-5" class="nav-link" data-scroll-target="#분석노트북-5">9. 분석/노트북</a></li>
   <li><a href="#추가-읽을거리-7" id="toc-추가-읽을거리-7" class="nav-link" data-scroll-target="#추가-읽을거리-7">추가 읽을거리</a></li>
-  </ul></li>
-  <li><a href="#제10장-계통수-작성" id="toc-제10장-계통수-작성" class="nav-link" data-scroll-target="#제10장-계통수-작성">제10장 계통수 작성</a>
-  <ul class="collapse">
+  <li><a href="#제10장-계통수-작성" id="toc-제10장-계통수-작성" class="nav-link" data-scroll-target="#제10장-계통수-작성">제10장 계통수 작성</a></li>
   <li><a href="#학습목표-8" id="toc-학습목표-8" class="nav-link" data-scroll-target="#학습목표-8">10. 학습목표</a></li>
   <li><a href="#배경-6" id="toc-배경-6" class="nav-link" data-scroll-target="#배경-6">10. 배경</a>
   <ul class="collapse">
@@ -1110,9 +1091,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#실습-1-계통수-작성" id="toc-실습-1-계통수-작성" class="nav-link" data-scroll-target="#실습-1-계통수-작성">10. 실습 1: 계통수 작성</a></li>
   <li><a href="#실습-2-계통수-시각화" id="toc-실습-2-계통수-시각화" class="nav-link" data-scroll-target="#실습-2-계통수-시각화">10. 실습 2: 계통수 시각화</a></li>
   <li><a href="#추가-읽을거리-8" id="toc-추가-읽을거리-8" class="nav-link" data-scroll-target="#추가-읽을거리-8">추가 읽을거리</a></li>
-  </ul></li>
-  <li><a href="#제11장-rna-seq-데이터를-이용한-유전자-발현-분석" id="toc-제11장-rna-seq-데이터를-이용한-유전자-발현-분석" class="nav-link" data-scroll-target="#제11장-rna-seq-데이터를-이용한-유전자-발현-분석">제11장 RNA-Seq 데이터를 이용한 유전자 발현 분석</a>
-  <ul class="collapse">
+  <li><a href="#제11장-rna-seq-데이터를-이용한-유전자-발현-분석" id="toc-제11장-rna-seq-데이터를-이용한-유전자-발현-분석" class="nav-link" data-scroll-target="#제11장-rna-seq-데이터를-이용한-유전자-발현-분석">제11장 RNA-Seq 데이터를 이용한 유전자 발현 분석</a></li>
   <li><a href="#학습목표-9" id="toc-학습목표-9" class="nav-link" data-scroll-target="#학습목표-9">11. 학습목표</a></li>
   <li><a href="#배경-7" id="toc-배경-7" class="nav-link" data-scroll-target="#배경-7">11. 배경</a></li>
   <li><a href="#사전-질문-5" id="toc-사전-질문-5" class="nav-link" data-scroll-target="#사전-질문-5">11. 사전 질문</a></li>
@@ -1122,9 +1101,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#실습-3-화산-그림-그리기" id="toc-실습-3-화산-그림-그리기" class="nav-link" data-scroll-target="#실습-3-화산-그림-그리기">11. 실습 3: 화산 그림 그리기</a></li>
   <li><a href="#분석노트북-6" id="toc-분석노트북-6" class="nav-link" data-scroll-target="#분석노트북-6">11. 분석/노트북</a></li>
   <li><a href="#추가-읽을거리-9" id="toc-추가-읽을거리-9" class="nav-link" data-scroll-target="#추가-읽을거리-9">추가 읽을거리</a></li>
-  </ul></li>
-  <li><a href="#제12장-rna-seq에서의-기계학습-방법" id="toc-제12장-rna-seq에서의-기계학습-방법" class="nav-link" data-scroll-target="#제12장-rna-seq에서의-기계학습-방법">제12장 RNA-Seq에서의 기계학습 방법</a>
-  <ul class="collapse">
+  <li><a href="#제12장-rna-seq에서의-기계학습-방법" id="toc-제12장-rna-seq에서의-기계학습-방법" class="nav-link" data-scroll-target="#제12장-rna-seq에서의-기계학습-방법">제12장 RNA-Seq에서의 기계학습 방법</a></li>
   <li><a href="#학습목표-10" id="toc-학습목표-10" class="nav-link" data-scroll-target="#학습목표-10">12. 학습목표</a></li>
   <li><a href="#배경-8" id="toc-배경-8" class="nav-link" data-scroll-target="#배경-8">12. 배경</a>
   <ul class="collapse">
@@ -1154,16 +1131,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">저자</div>
     <div class="quarto-title-meta-contents">
              <p>Sufang Wang, Michael Gribskov </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">공개</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 24, 2026</p>
+      <p class="date">2026년 8월 24일</p>
     </div>
   </div>
   
@@ -1236,10 +1213,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>앞서 말했듯이, 오늘날 생명정보학는 계산 분석, 예측, 모델링을 포함하는 거의 모든 생물 시스템 분석을 아우른다. 여기에는 유전자-환경 상호작용, 유전자-질병 상호작용, 의료영상, 분자 구조 분석, 진화 연구, 시스템생물학, 그리고 물론 계산 분석 도구와 데이터베이스의 개발까지 매우 광범위한 주제가 포함된다. 이렇게 넓은 범위를 한 권의 책에서 다루는 것은 불가능하다. 이 책에서는 주로 1차 서열(primary sequence) 정보에 기반한 분석으로 범위를 한정한다(다만 차등유전자발현 분석에서는 조금 더 나아간다). 이 매뉴얼의 대부분 분석은 생명과학 실험 수업의 일반적인 시간인 2~4시간 안에 수행할 수 있다. 모든 분석은 무료로 제공되는 소프트웨어로, 대부분의 경우 인터넷 접속 가능한 서버를 통해 수행할 수 있다. 이것이 모든 수준의 학생들이 이 자료를 널리 이용할 수 있게 해주기를 바란다.</p>
 <p>전반적으로 생명정보학는 21세기의 가장 근본적인 학문 중 하나로, 생물학, 컴퓨터과학, 수학, 통계학, 물리학, 화학의 지식을 통합한다. 이 책에서는 생명정보학의 기본 개념과 서열 데이터 분석 방법을 소개하며 이는 많은 생명과학 분야의 학생들에게 도움이 될 것이다. 다루는 주요 주제는 상동(homologous) 유전자/단백질을 식별함으로써 배울 수 있는 것들에 중심을 둔다. 여기에는 상동성(homology) 개념, 서열 데이터베이스 검색, 다중서열정렬, 계통수, 서열 모티프(motif) 기반 기능 주석이 포함된다. 또한 차등유전자발현과 RNA-seq 분석에 자주 쓰이는 기계학습 방법도 간략히 다룬다.</p>
 </section>
-</section>
-<section id="제2장-항생제-내성-입문" class="level1">
-<h1>제2장 항생제 내성 입문</h1>
+<section id="제2장-항생제-내성-입문" class="level2">
+<h2 class="anchored" data-anchor-id="제2장-항생제-내성-입문">제2장 항생제 내성 입문</h2>
 <p>항생제 내성(antibiotic resistance), 또는 항균제 내성(antimicrobial resistance, AMR)은 오늘날 세계가 직면한 가장 심각한 의료 문제 중 하나이다. 세균 감염으로 인한 사망이 비교적 드물었던 지난 1세기 이후, 이제 우리는 증조부 시대, 즉 사망의 50% 이상이 세균 감염으로 인할 수 있던 시절로 되돌아갈 가능성을 마주하고 있다. 생명정보학는 항생제 내성 연구에서 매우 큰 역할을 한다. 내성 유전자를 식별하고, 내성 유전자의 기원과 항생제 내성 기전을 규명하며 때로는 대체 치료법을 찾는 데 활용될 수 있다. 이 장은 항생제 내성의 개념과 기전을 소개하며 이것이 생명정보학 분석이 생물학적 질문 해결에 어떻게 활용되는지 보여주는 예제로 사용된다.</p>
+</section>
 <section id="학습목표" class="level2">
 <h2 class="anchored" data-anchor-id="학습목표">2. 학습목표</h2>
 <ul>
@@ -1507,10 +1484,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Overuse of Antibiotics on Farms. http://consumersunion.org/wp-content/uploads/2013/02/Overuse_of_Antibiotics_On_Farms.pdf</li>
 </ol>
 </section>
-</section>
-<section id="제3장-진화와-상동성-입문" class="level1">
-<h1>제3장 진화와 상동성 입문</h1>
+<section id="제3장-진화와-상동성-입문" class="level2">
+<h2 class="anchored" data-anchor-id="제3장-진화와-상동성-입문">제3장 진화와 상동성 입문</h2>
 <p>진화와, 핵산 및 단백질 서열에서 드러나는 거대분자들 간의 관계는 서열분석의 토대이다. 진화 과정이 어떻게 작동하는지 이해하는 것이 서열을 비교하고 진화적 관계에 있는 서열을 식별하는 방법을 이해하는 열쇠이다. 유전자와 그것이 인코딩하는 단백질이 공통 조상으로부터 물려받아 진화로 인한 제한된 변화만을 겪었다는 사실은, 그런 유전자/단백질(상동유전자, homolog)들이 유사한 구조와 기능을 가짐을 의미한다. 따라서 유전자/단백질 서열이 상동(homologous)인지 판단하는 것은 생명정보학의 핵심 과제이다. 다시 말해 서열들이 상동인지를 결정하는 일은 관찰된 서열 유사도가 우연히 나타날 수 있는 수준이 아니라는 우리의 확신에 달려 있다. 이 장에서는 진화와 상동성 개념과, 유전자/단백질이 상동인지 판정하는 방법을 논의한다.</p>
+</section>
 <section id="학습목표-1" class="level2">
 <h2 class="anchored" data-anchor-id="학습목표-1">3. 학습목표</h2>
 <ul>
@@ -1569,10 +1546,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Koonin EV, Galperin MY. Chapter 2Evolutionary concept in genetics and genomics. In: Sequenceevolutionfunction: computational approaches in comparative genomics. Kluwer Academic; 2003. https://www.ncbi.nlm.nih.gov/books/NBK20255/#A.</li>
 </ol>
 </section>
-</section>
-<section id="제4장-서열-준비하기" class="level1">
-<h1>제4장 서열 준비하기</h1>
+<section id="제4장-서열-준비하기" class="level2">
+<h2 class="anchored" data-anchor-id="제4장-서열-준비하기">제4장 서열 준비하기</h2>
 <p>과학 정보는 매우 방대하고 상세해졌다. 수천 종의 생물에서 전장게놈서열이 결정되었고 유전자·단백질 조절, 예측 및 실험적으로 결정된 단백질 구조, 단백질-단백질 상호작용, 유전자/단백질 기능, 질병과의 관계 등 관련 데이터도 어마어마하게 쌓여 있다(몇 가지만 예로 든 것이다). 특정 유전자/단백질이나 과정과 관련된 정보를 찾는 일은 길고 지루한 과정일 수 있다. 다행히 가장 중요한 저장소들 대부분은 서로 연결(crosslink)되어 있지만 정보량 자체가 워낙 많아 원하는 것을 찾기 어려울 수 있다. 이 장에서는 항생제 콜리스틴(colistin)을 예로 들어, 콜리스틴과 그 작용 기전, 내성 기전에 대한 정보를 찾을 수 있는 몇 가지 유용한 자원을 살펴본다. 학생들은 비슷한 접근법으로 자신이 선택한 항생제(aoi, antibiotic of interest)에 관한 정보를 찾을 수 있다.</p>
+</section>
 <section id="학습목표-2" class="level2">
 <h2 class="anchored" data-anchor-id="학습목표-2">4. 학습목표</h2>
 <ul>
@@ -1705,11 +1682,11 @@ aoi AND resistance
 <li>For details on building PubMed queries: https://pubmed.ncbi.nlm.nih.gov/help/</li>
 </ol>
 </section>
-</section>
-<section id="제5장-서열-비교-통계-탐구" class="level1">
-<h1>제5장 서열 비교 통계 탐구</h1>
+<section id="제5장-서열-비교-통계-탐구" class="level2">
+<h2 class="anchored" data-anchor-id="제5장-서열-비교-통계-탐구">제5장 서열 비교 통계 탐구</h2>
 <p>이전 장에서 학생들은 이미 aoi와 관련된 유전자 및 단백질 서열을 확보했다. 이들 유전자/단백질에 대해 진화적 관계 같은 더 많은 정보를 얻으려면 관련 유전자/단백질의 서열을 얻는 것이 유용하다. 상동체의 보존 영역이 분자의 구조와 기능과 밀접히 연관되어 있기 때문이다. 유전자들이 상동인지 판단하려면, 그 서열들이 우연히 기대되는 것보다 더 유사한지를 결정해야 한다.</p>
 <p>두 서열을 비교할 때 우리는 서열이 얼마나 유사/상이한지를 측정한다. 유전자/단백질이 상동인지에 대한 결론은 가설검정에 근거해 내린다. 이 서열들이 무작위라는 귀무가설과 서열들이 관련되어 있다는 대립가설을 제안한다. 따라서 서열 비교의 통계적 배경을 이해하는 것이 중요하다. 통계분석에서는 정규분포(normal distribution)가 자주 쓰이지만 서열 비교는 극값분포(extreme value distribution, EVD)를 따르며 이 실습에서 배우게 된다.</p>
+</section>
 <section id="학습목표-3" class="level2">
 <h2 class="anchored" data-anchor-id="학습목표-3">5. 학습목표</h2>
 <ul>
@@ -1789,10 +1766,10 @@ aoi AND resistance
 <li>Mitrophanov AY, Borodovsky M. Statistical significance in biological sequence analysis. Brief Bioinform. 2006;7(1):224. https://doi.org/10.1093/bib/bbk.</li>
 </ol>
 </section>
-</section>
-<section id="제6장-blast로-상동서열-찾기" class="level1">
-<h1>제6장 BLAST로 상동서열 찾기</h1>
+<section id="제6장-blast로-상동서열-찾기" class="level2">
+<h2 class="anchored" data-anchor-id="제6장-blast로-상동서열-찾기">제6장 BLAST로 상동서열 찾기</h2>
 <p>가장 흔한 생명정보학 분석 중 하나는 관심 서열(soi, sequence of interest)에 상동인 단백질을 식별하는 것이다. soi가 새 게놈에서 온 신규 단백질일 수도 있는데, 이 경우 기능을 예측하려고 상동체를 찾는다. 또는 특정 기능을 가진 단백질이 얼마나 광범위하게 존재하는지 알고 싶은 경우도 있다. 이 장에서는 최근까지 널리 퍼진 내성이 거의 없던 몇 안 되는 항생제 중 하나였던 콜리스틴(유감스럽게도 더 이상 사실이 아니다)에 내성을 일으키는 단백질들의 상동체를 검색한다. 학생들은 2, 3장에서 aoi를 선택했을 것이므로 같은 방식으로 자신의 aoi 상동체를 식별해야 한다. 우리는 기본 국소정렬검색도구(basic local alignment search tool, BLAST)를 사용해 aoi의 상동체를 찾는다.</p>
+</section>
 <section id="학습목표-4" class="level2">
 <h2 class="anchored" data-anchor-id="학습목표-4">6. 학습목표</h2>
 <ul>
@@ -1897,10 +1874,10 @@ tblastn  단백질 질의 → 뉴클레오티드 데이터베이스(여섯 독�
 <li>BLAST Glossary. https://www.ncbi.nlm.nih.gov/books/NBK62051/</li>
 </ol>
 </section>
-</section>
-<section id="제7장-uniprot로-상동서열-찾기" class="level1">
-<h1>제7장 UniProt로 상동서열 찾기</h1>
+<section id="제7장-uniprot로-상동서열-찾기" class="level2">
+<h2 class="anchored" data-anchor-id="제7장-uniprot로-상동서열-찾기">제7장 UniProt로 상동서열 찾기</h2>
 <p>이전 실습에서 학생들은 단백질 서열 질의가 DNA 서열 질의보다 상동체 식별에 더 유리함을 관찰했을 것이다. 유니버설 단백질 자원(Universal Protein Resource, UniProt)은 유럽생물정보학연구소(EMBL-EBI), 스위스생물정보학연구소(SIB), 단백질정보자원(PIR)의 협력체로, 세계 최고 수준의 고품질·포괄적·무료 단백질 서열 및 기능 정보 자원이다. UniProt에는 단백질 서열 외에 유전학, 구조, 기능 정보도 들어 있다. 우리는 텍스트 검색과 서열 비교 기능을 모두 사용해 aoi 관련 단백질을 식별한다. 서열 비교(BLAST)로 서열을 찾는 것 외에, 넓은 분류학적 분포를 가진 서열을 원하는 경우가 있다. 그런 예가 10장에서 계통수로 항생제 내성의 수평전이를 살펴볼 때이다. 이 장에서는 UniProt로 넓은 분류 범위의 서열을 선택하는 방법을 배운다. UniProt은 널리 분포된 서열 집합을 찾는 대안으로 UniRef 데이터베이스도 제공한다.</p>
+</section>
 <section id="학습목표-5" class="level2">
 <h2 class="anchored" data-anchor-id="학습목표-5">7. 학습목표</h2>
 <ul>
@@ -2188,10 +2165,10 @@ OS = Aeromonas salmonicida (strain A449).</code></pre>
 <li>Genome Taxonomy Database, Parks DH, Chuvochina M, Waite DW, Rinke C, Skarshewski A, Chaumeil PA, Hugenholtz P. A standardized bacterial taxonomy based on genome phylogeny substantially revises the tree of life. Nat Biotechnol. 2018;36(10):9961004. https://doi.org/10.1038/nbt..</li>
 </ol>
 </section>
-</section>
-<section id="제8장-다중서열정렬" class="level1">
-<h1>제8장 다중서열정렬</h1>
+<section id="제8장-다중서열정렬" class="level2">
+<h2 class="anchored" data-anchor-id="제8장-다중서열정렬">제8장 다중서열정렬</h2>
 <p>우리는 서열 정렬의 개념, 통계적 배경, 데이터베이스를 이미 소개했다. pairwise 서열 정렬 외에 다중서열정렬(multiple sequence alignment, MSA)은 뉴클레오티드 또는 단백질 서열 패밀리의 구조와 기능을 예측하는 데 쓸 수 있는 많은 정보를 제공한다. 단백질의 구조와 기능은 서열 진화를 제약한다. 단백질 구조·기능에 중요한 영역은 변화가 더 느리게 축적되는데, 선택이 비기능적 단백질을 가진 개체를 집단에서 제거하는 경향이 있기 때문이다(적합도에 영향을 주는 단백질이라고 가정). 따라서 MSA는 단백질의 중요한 기능 영역이 어디에 있는지에 대한 강력한 단서를 준다. 우리는 이미 Blast와 UniProt로 서열을 선택하는 방법을 배웠다(7장). 이 장에서는 선택된 서열들로 다중서열정렬을 만든다.</p>
+</section>
 <section id="학습목표-6" class="level2">
 <h2 class="anchored" data-anchor-id="학습목표-6">8. 학습목표</h2>
 <ul>
@@ -2287,10 +2264,10 @@ OS = Aeromonas salmonicida (strain A449).</code></pre>
 <li>Sievers F, Higgins DG. Clustal omega. Curr Protoc Bioinformatics. 2014;48:3….. https://doi.org/10.1002/0471250953.bi0313s.</li>
 </ol>
 </section>
-</section>
-<section id="제9장-보존된-서열-모티프-식별" class="level1">
-<h1>제9장 보존된 서열 모티프 식별</h1>
+<section id="제9장-보존된-서열-모티프-식별" class="level2">
+<h2 class="anchored" data-anchor-id="제9장-보존된-서열-모티프-식별">제9장 보존된 서열 모티프 식별</h2>
 <p>서열 모티프(motif)는 생물학적 서열의 핵심 구성요소로, 단백질 기능과 그 조절에 중요한 보존 패턴을 나타낸다. 모티프는 DNA에서도 발생하며 전사 프로모터와 종결자 같은 조절 요소와 흔히 연관된다. 이 장에서는 보존된 서열 모티프를 식별하고 단백질의 3차 구조와 보존 서열 모티프 사이의 관계를 살펴본다.</p>
+</section>
 <section id="학습목표-7" class="level2">
 <h2 class="anchored" data-anchor-id="학습목표-7">9. 학습목표</h2>
 <ul>
@@ -2422,10 +2399,10 @@ OS = Aeromonas salmonicida (strain A449).</code></pre>
 <li>Proteins: secondary structure and fibrous proteins. http://cbc.arizona.edu/classes/bioc462/462a/NOTES/Protein_Structure/secondary_structure.htm</li>
 </ol>
 </section>
-</section>
-<section id="제10장-계통수-작성" class="level1">
-<h1>제10장 계통수 작성</h1>
+<section id="제10장-계통수-작성" class="level2">
+<h2 class="anchored" data-anchor-id="제10장-계통수-작성">제10장 계통수 작성</h2>
 <p>이 장에서는 여러 종의 세균에서 온 당신의 aoi 유전자 패밀리 서열로 계통수(phylogenetic tree)를 만들고 이 서열 기반 트리를 세균의 알려진 분류와 비교한다. 실제 연구라면 유전자의 뉴클레오티드 서열을 쓰겠지만 단순화를 위해 이 실습에서는 단백질 서열을 사용한다. 단백질 서열은 모호함 없이 정렬하기 쉽고 GC 함량 차이 같은 함정(red herrings)을 걱정할 필요가 없다. 덕분에 트리 작성이 더 단순해진다. 거리기반(distance-based) 간단한 방법으로 트리를 만든다. 아주 먼 종들의 서열이 트리에서 본래보다 가깝게 나타나면 그것은 수평적 유전자 전이의 좋은 증거이다.</p>
+</section>
 <section id="학습목표-8" class="level2">
 <h2 class="anchored" data-anchor-id="학습목표-8">10. 학습목표</h2>
 <ul>
@@ -2520,10 +2497,10 @@ OS = Aeromonas salmonicida (strain A449).</code></pre>
 <li>http://evolution.berkeley.edu/evolibrary/article/evo_03 진화 분석과 계통수 기초에 대한 온라인 입문 자료.</li>
 </ol>
 </section>
-</section>
-<section id="제11장-rna-seq-데이터를-이용한-유전자-발현-분석" class="level1">
-<h1>제11장 RNA-Seq 데이터를 이용한 유전자 발현 분석</h1>
+<section id="제11장-rna-seq-데이터를-이용한-유전자-발현-분석" class="level2">
+<h2 class="anchored" data-anchor-id="제11장-rna-seq-데이터를-이용한-유전자-발현-분석">제11장 RNA-Seq 데이터를 이용한 유전자 발현 분석</h2>
 <p>유전자 발현(gene expression)은 DNA에서 메신저 RNA로의 전사와 그에 이은 단백질 번역으로 정의할 수 있다. 차세대 시퀀싱(next-generation sequencing, NGS) 기술의 발전으로 생물의 게놈과 전사체(transcriptome)의 완전한 서열을 빠르게 결정하는 것이 가능해졌다. RNA 시퀀싱(RNA-Seq)은 새로운 전사체 변이체와 스플라이스 부위를 발견하거나, 유전자 발현 분석을 위해 mRNA를 정량화할 수 있다. 암묵적으로, mRNA 전사물들이 생물의 단백질 전체 집합을 인코딩하므로 그 생물의 프로테옴도 얻을 수 있다. RNA-seq는 생물학 실험실에서 유전자 발현을 연구하는 강력한 도구가 되었다. 그러나 이런 고속처리 시퀀싱 데이터의 분석에는 일정 수준의 프로그래밍 능력과 통계 지식이 필요하다. 이 장에서는 RNA-seq 분석의 기본 단계, 다중검정 문제(multiple testing problem), R 소프트웨어로 차등발현유전자(differentially expressed genes)를 분석하는 방법을 소개한다.</p>
+</section>
 <section id="학습목표-9" class="level2">
 <h2 class="anchored" data-anchor-id="학습목표-9">11. 학습목표</h2>
 <ul>
@@ -2572,66 +2549,66 @@ OS = Aeromonas salmonicida (strain A449).</code></pre>
 <section id="실습-1-데이터-읽기" class="level2">
 <h2 class="anchored" data-anchor-id="실습-1-데이터-읽기">11. 실습 1: 데이터 읽기</h2>
 <p>R 콘솔을 열고 아래 명령을 입력하라</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read dataset</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Pay attention to the slash direction in the file path. The default slash in windows computer is</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># toward right, you need to change as shown below. "PathToData" means the directory where you save</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># "raw.genes.matrix". Please make sure you put the actual path in below command to read the data.</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># read the data in an object called data1</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># The count data will be read in and stored in the matrix mycountData.</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Read dataset</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Pay attention to the slash direction in the file path. The default slash in windows computer is</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="do">## toward right, you need to change as shown below. "PathToData" means the directory where you save</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="do">## "raw.genes.matrix". Please make sure you put the actual path in below command to read the data.</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="do">## read the data in an object called data1</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="do">## The count data will be read in and stored in the matrix mycountData.</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>data1 <span class="ot">&lt;-</span><span class="fu">read.delim</span>(<span class="st">"/PathToData/raw.genes.matrix"</span>, <span class="at">stringsAsFactors=</span>F, <span class="at">row.names=</span><span class="dv">1</span>)</span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data1)</span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(data1)</span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>mycountData <span class="ot">&lt;-</span><span class="fu">round</span>(data1, <span class="at">digits=</span><span class="dv">0</span>)</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mycountData)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mycountData)</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="실습-2-deseq2로-단일인자-설계-deg-식별" class="level2">
 <h2 class="anchored" data-anchor-id="실습-2-deseq2로-단일인자-설계-deg-식별">11. 실습 2: DESeq2로 단일인자 설계 DEG 식별</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># DESeq2</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Please follow the instructions from the link above to install the DESeq2 package</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># after installation, load the package</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## DESeq2</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="do">## http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Please follow the instructions from the link above to install the DESeq2 package</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="do">## after installation, load the package</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DESeq2)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># give the conditions for each column, in our example data, the first three are control groups,</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># then three experimental groups</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="do">## give the conditions for each column, in our example data, the first three are control groups,</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="do">## then three experimental groups</span></span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>mycolData <span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">row.names =</span> <span class="fu">colnames</span>( mycountData ),</span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>                       <span class="at">condition =</span> <span class="fu">c</span>( <span class="st">"control"</span>,<span class="st">"control"</span>,<span class="st">"control"</span>,<span class="st">"exp"</span>,<span class="st">"exp"</span>,<span class="st">"exp"</span> ))</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># generate the data object with the experimental design</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="do">## generate the data object with the experimental design</span></span>
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>mydds <span class="ot">&lt;-</span><span class="fu">DESeqDataSetFromMatrix</span>(<span class="at">countData =</span> mycountData,</span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>                               <span class="at">colData =</span> mycolData,</span>
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>                               <span class="at">design =</span> <span class="sc">~</span>condition)</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co"># pre-filtering, filter the genes that have too few reads</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="do">## pre-filtering, filter the genes that have too few reads</span></span>
 <span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>sumcontrol<span class="ot">&lt;-</span><span class="fu">rowSums</span>(mycountData[,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>])</span>
 <span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>sumexp <span class="ot">&lt;-</span><span class="fu">rowSums</span>(mycountData[,<span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>])</span>
 <span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">log10</span>(sumcontrol),<span class="fu">log10</span>(sumexp))</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co"># from the plot, you can see there are some genes that have the reads only in one condition,</span></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co"># since we used log10 as the base, in our case, the pre-filtering threshold is set as 100</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="do">## from the plot, you can see there are some genes that have the reads only in one condition,</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="do">## since we used log10 as the base, in our case, the pre-filtering threshold is set as 100</span></span>
 <span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>mydds <span class="ot">&lt;-</span>mydds[ <span class="fu">rowSums</span>(<span class="fu">counts</span>(mydds)) <span class="sc">&gt;</span> <span class="dv">100</span>, ]</span>
 <span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>mydds<span class="sc">$</span>condition <span class="ot">&lt;-</span><span class="fu">factor</span>(mydds<span class="sc">$</span>condition, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">"control"</span>,<span class="st">"exp"</span>))</span>
 <span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>mydds <span class="ot">&lt;-</span><span class="fu">DESeq</span>(mydds)</span>
 <span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>myres <span class="ot">&lt;-</span><span class="fu">results</span>(mydds)</span>
 <span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(myres)</span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Determine threshold, which means how many differentially expressed genes (DEG) will be</span></span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co"># kept. We use a combination of adjusted P-value and Log2FC as the filtering conditions.</span></span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Sometimes, the number of DEG can be thousands, sometimes only 10 or 20, it depends on</span></span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="co"># the experimental design and sequencing results. There is no standard or fixed threshold</span></span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="co"># for DEG, therefore, we need to try different thresholds to see which one gives the</span></span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="co"># reasonable number of DEG.</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="do">## Determine threshold, which means how many differentially expressed genes (DEG) will be</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="do">## kept. We use a combination of adjusted P-value and Log2FC as the filtering conditions.</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="do">## Sometimes, the number of DEG can be thousands, sometimes only 10 or 20, it depends on</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="do">## the experimental design and sequencing results. There is no standard or fixed threshold</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="do">## for DEG, therefore, we need to try different thresholds to see which one gives the</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="do">## reasonable number of DEG.</span></span>
 <span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>resSig <span class="ot">&lt;-</span><span class="fu">subset</span>(myres, (padj <span class="sc">&lt;=</span> <span class="fl">0.05</span> <span class="sc">&amp;</span> <span class="fu">abs</span>(log2FoldChange) <span class="sc">&gt;=</span> <span class="dv">1</span>))</span>
 <span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(resSig)</span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a><span class="co"># it shows this</span></span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 472 6</span></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a><span class="do">## it shows this</span></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 472 6</span></span>
 <span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>resdata <span class="ot">&lt;-</span><span class="fu">merge</span>(<span class="fu">as.data.frame</span>(resSig),</span>
 <span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>                <span class="fu">as.data.frame</span>(<span class="fu">counts</span>(mydds, <span class="at">normalized=</span><span class="cn">FALSE</span>)),</span>
 <span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>                <span class="at">by=</span><span class="st">"row.names"</span>,<span class="at">sort=</span><span class="cn">FALSE</span>)</span>
 <span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(resdata)</span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a><span class="co"># save results in a file called DEG.csv</span></span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(resdata,<span class="at">file=</span><span class="st">"/PathToData/DEG.csv"</span>,<span class="at">sep=</span><span class="st">","</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a><span class="do">## save results in a file called DEG.csv</span></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(resdata,<span class="at">file=</span><span class="st">"/PathToData/DEG.csv"</span>,<span class="at">sep=</span><span class="st">","</span>)</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="실습-3-화산-그림-그리기" class="level2">
 <h2 class="anchored" data-anchor-id="실습-3-화산-그림-그리기">11. 실습 3: 화산 그림 그리기</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(myres<span class="sc">$</span>log2FoldChange ,<span class="sc">-</span><span class="fu">log10</span>(myres<span class="sc">$</span>padj))</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># x axis: log-fold change (biological significance)</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># y axis: -log10(adjusted p-value) (statistical significance)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="do">## x axis: log-fold change (biological significance)</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="do">## y axis: -log10(adjusted p-value) (statistical significance)</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="분석노트북-6" class="level2">
 <h2 class="anchored" data-anchor-id="분석노트북-6">11. 분석/노트북</h2>
@@ -2649,12 +2626,12 @@ OS = Aeromonas salmonicida (strain A449).</code></pre>
 <li>The Benjamini-Hochberg procedure (FDR) and P-value adjusted explained. https://www.r-bloggers.com/2023/07/the-benjamini-hochberg-procedure-fdr-and-p-value-adjusted-explained/</li>
 </ol>
 </section>
-</section>
-<section id="제12장-rna-seq에서의-기계학습-방법" class="level1">
-<h1>제12장 RNA-Seq에서의 기계학습 방법</h1>
+<section id="제12장-rna-seq에서의-기계학습-방법" class="level2">
+<h2 class="anchored" data-anchor-id="제12장-rna-seq에서의-기계학습-방법">제12장 RNA-Seq에서의 기계학습 방법</h2>
 <p>특정 유전자들이 왜 차등발현되는지 즉시 이해하기란 종종 어렵다. DEG를 식별한 후에는 유사하게 반응하는 유전자 그룹 또는 어떤 생물학적 네트워크가 영향을 받는지 파악하고 싶어진다. 우리는 더 분석하기 위해 기계학습(machine learning) 방법을 사용한다. 기계학습은 컴퓨터가 인간의 행동을 모방하거나 학습하여 지식이나 기술을 습득하고, 정보를 재구성하고, 구조화하는 연구 분야이다. 컴퓨터과학, 통계학, 확률론 등이 얽힌 학제간 분야이다. 빅데이터 시대에 데이터 분석 수요가 계속 늘어나면서 기계학습을 통해 효율적으로 지식을 획득하는 것이 연구와 산업의 주요 과제 중 하나가 되었다.</p>
 <p>기계학습 접근에는 지도학습(supervised learning)과 비지도학습(unsupervised learning) 두 가지가 있다. 지도학습 방법은 알려진 분류 데이터(라벨링된 데이터라고도 함), 예컨대 어떤 과정에 관여하는 것으로 알려진 유전자 그룹을 바탕으로 모델을 만든다. 비지도학습 방법은 모델 훈련에 쓸 금본위 기준 데이터(즉 라벨 없는 데이터)가 없을 때 적용된다. 기본적인 차등발현 분석은 비지도 절차이다. 두 조건(대조군과 처치군)에서의 발현 차이를 근거로 유전자들을 묶는다. 여러 처치군이나 시간경과(time course) 실험 같은 더 복잡한 실험은 해석이 더 어렵다. 차등발현 실험에서 관찰된 차이 뒤의 생물학적 의미를, 유사한 유전자들을 묶어 함께 살펴봄으로써 도출할 수 있기를 희망하는 것이다.</p>
 <p>11장에서 우리는 DEG를 식별했다. 이제 유사하게 반응하는 유전자 그룹 또는 영향받는 생물학적 네트워크를 파악하고 싶다. 이 장에서는 군집분석(cluster analysis)과 차원축소(dimensionality reduction)(주성분분석, principal component analysis)를 포함한 비지도 기계학습 방법에 초점을 맞춘다 (원문 절단)</p>
+</section>
 <section id="학습목표-10" class="level2">
 <h2 class="anchored" data-anchor-id="학습목표-10">12. 학습목표</h2>
 <ul>
@@ -2711,36 +2688,36 @@ OS = Aeromonas salmonicida (strain A449).</code></pre>
 <section id="실습-1-군집분석과-히트맵" class="level2">
 <h2 class="anchored" data-anchor-id="실습-1-군집분석과-히트맵">12. 실습 1: 군집분석과 히트맵</h2>
 <p>R 콘솔을 열고 아래 명령을 입력하라.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an example data matrix with six samples, each with three gene expression values</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the expression level of gene2 is 8 units higher that of gene1 with a small random amount</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># (0.0 - 1.0) added</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create an example data matrix with six samples, each with three gene expression values</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="do">## the expression level of gene2 is 8 units higher that of gene1 with a small random amount</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="do">## (0.0 - 1.0) added</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>sample1 <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>)</span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>sample2 <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">5</span>)</span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>sample3 <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">4</span>)</span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>sample4 <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">0</span>,<span class="dv">4</span>)</span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>sample5 <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">0</span>,<span class="dv">5</span>)</span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>sample6 <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">0</span>,<span class="dv">5</span>)</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co"># create a dataframe with six samples</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="do">## create a dataframe with six samples</span></span>
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span><span class="fu">data.frame</span>( sample1, sample2, sample3, sample4, sample5, sample6,</span>
 <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>                 <span class="at">row.names=</span><span class="fu">c</span>(<span class="st">'gene1'</span>, <span class="st">'gene2'</span>, <span class="st">'gene3'</span>))</span>
 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'gene2'</span>,] <span class="ot">&lt;-</span>df[<span class="st">'gene1'</span>,] <span class="sc">+</span> <span class="dv">8</span> <span class="sc">+</span> <span class="fu">runif</span>(<span class="at">n=</span><span class="dv">1</span>, <span class="at">min=</span><span class="dv">0</span>, <span class="at">max=</span><span class="dv">1</span>)</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co"># look at what df is</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="do">## look at what df is</span></span>
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>df</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the expression of each gene in a different color. First plot gene1, then add lines for gene</span></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 and gene3, and the legend</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="do">## plot the expression of each gene in a different color. First plot gene1, then add lines for gene</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 and gene3, and the legend</span></span>
 <span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, df[<span class="st">'gene1'</span>,], <span class="at">type=</span><span class="st">"l"</span>, <span class="at">col=</span><span class="st">"red"</span>,<span class="at">lwd=</span><span class="dv">3</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">20</span>),</span>
 <span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Samples"</span>, <span class="at">ylab=</span><span class="st">"Expression"</span>, <span class="at">main=</span><span class="st">"Gene Expression"</span>)</span>
 <span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>,df[<span class="st">'gene2'</span>,],<span class="at">col=</span><span class="st">"blue"</span>,<span class="at">lwd=</span><span class="dv">3</span>)</span>
 <span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>,df[<span class="st">'gene3'</span>,],<span class="at">col=</span><span class="st">"green"</span>,<span class="at">lwd=</span><span class="dv">3</span>)</span>
 <span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="at">col=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>,<span class="st">"green"</span>), <span class="fu">paste</span>(<span class="st">"gene"</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">sep=</span><span class="st">""</span>),</span>
 <span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">lty=</span><span class="dv">1</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">cex=</span><span class="fl">1.0</span>)</span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co"># plot heatmap with clustering in both dimensions.</span></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Options:</span></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="co"># scale = "row" or "column" -&gt; normalize the data across rows or column</span></span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="co"># clustering_distance_rows_"euclidean", "correlation", "manhattan" -&gt; distance between items</span></span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="co"># clustering_distance_columns_"euclidean", "correlation", "manhattan" -&gt; distance between</span></span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="co"># items</span></span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co"># clustering_method = "average", "ward.D2", "complete" -&gt; method for forming clusters</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="do">## plot heatmap with clustering in both dimensions.</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="do">## Options:</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="do">## scale = "row" or "column" -&gt; normalize the data across rows or column</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="do">## clustering_distance_rows_"euclidean", "correlation", "manhattan" -&gt; distance between items</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="do">## clustering_distance_columns_"euclidean", "correlation", "manhattan" -&gt; distance between</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="do">## items</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="do">## clustering_method = "average", "ward.D2", "complete" -&gt; method for forming clusters</span></span>
 <span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pheatmap)</span>
 <span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(<span class="fu">as.matrix</span>(df), <span class="at">scale=</span><span class="st">"none"</span>,</span>
 <span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>         <span class="at">clustering_distance_rows=</span><span class="st">"euclidean"</span>,</span>
@@ -2751,44 +2728,44 @@ OS = Aeromonas salmonicida (strain A449).</code></pre>
 <span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>         <span class="at">clustering_distance_rows=</span><span class="st">"correlation"</span>,</span>
 <span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>         <span class="at">clustering_distance_columns=</span><span class="st">"correlation"</span>,</span>
 <span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>         <span class="at">clustering_method=</span><span class="st">"ward.D2"</span>,</span>
-<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>         <span class="at">cellwidth=</span><span class="dv">80</span>, <span class="at">cellheight=</span><span class="dv">120</span>, <span class="at">main=</span><span class="st">"Correlation Distance"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>         <span class="at">cellwidth=</span><span class="dv">80</span>, <span class="at">cellheight=</span><span class="dv">120</span>, <span class="at">main=</span><span class="st">"Correlation Distance"</span>)</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="실습-2-전체-유전자를-사용한-주성분분석" class="level2">
 <h2 class="anchored" data-anchor-id="실습-2-전체-유전자를-사용한-주성분분석">12. 실습 2: 전체 유전자를 사용한 주성분분석</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># prcomp-based on singular value decomposition</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># type use ?prcomp for more information</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># read data</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## prcomp-based on singular value decomposition</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="do">## type use ?prcomp for more information</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="do">## read data</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>data1 <span class="ot">&lt;-</span><span class="fu">read.delim</span>(<span class="st">"/PathToData/raw.genes.matrix"</span>, <span class="at">stringsAsFactors=</span>F, <span class="at">row.names=</span><span class="dv">1</span>)</span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data1)</span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(data1)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># transpose data so that rows are samples, columns are features/genes. This will produce a</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># PCA plot of samples vs samples. Three different versions of the data are created:</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># dataT - original complete data</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co"># dataT2 - only the genes where the sum of the expression across all samples is &gt; 0.1</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co"># dataT3 - log-transformed version of dataT2</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="do">## transpose data so that rows are samples, columns are features/genes. This will produce a</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="do">## PCA plot of samples vs samples. Three different versions of the data are created:</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="do">## dataT - original complete data</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="do">## dataT2 - only the genes where the sum of the expression across all samples is &gt; 0.1</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="do">## dataT3 - log-transformed version of dataT2</span></span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>dataT <span class="ot">&lt;-</span><span class="fu">t</span>(data1)</span>
 <span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>dataT2 <span class="ot">&lt;-</span>dataT[, <span class="fu">colSums</span>(dataT <span class="sc">!=</span> <span class="dv">0</span>) <span class="sc">&gt;</span> <span class="fl">0.1</span>]</span>
 <span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>dataT3 <span class="ot">&lt;-</span><span class="fu">log10</span>(dataT2<span class="sc">+</span><span class="dv">1</span>)</span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co"># in the following section do the analysis with each of the three datasets dataT, dataT2 and</span></span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co"># dataT3</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="do">## in the following section do the analysis with each of the three datasets dataT, dataT2 and</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="do">## dataT3</span></span>
 <span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>pca <span class="ot">&lt;-</span><span class="fu">prcomp</span>(dataT3, <span class="at">scale.=</span><span class="cn">TRUE</span>)</span>
 <span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(pca)</span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="co"># scree plots are used to examine the amount of the variance represent by each principal</span></span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="co"># component (transformed axis)</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="do">## scree plots are used to examine the amount of the variance represent by each principal</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="do">## component (transformed axis)</span></span>
 <span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(pc<span class="sc">$</span>sdev<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="fu">sum</span>(pc<span class="sc">$</span>sdev<span class="sc">^</span><span class="dv">2</span>), <span class="at">xlab=</span><span class="st">"principal component"</span>, <span class="at">ylab=</span><span class="st">"% of variance"</span>)</span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="co"># cumulative variance</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="do">## cumulative variance</span></span>
 <span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">cumsum</span>(pc<span class="sc">$</span>sdev<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="fu">sum</span>(pc<span class="sc">$</span>sdev<span class="sc">^</span><span class="dv">2</span>)), <span class="at">xlab=</span><span class="st">"principal component"</span>,</span>
 <span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab=</span><span class="st">"cumulative % of variance"</span>)</span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="co"># PCA plot</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="do">## PCA plot</span></span>
 <span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>myColor <span class="ot">&lt;-</span><span class="fu">rep</span>(<span class="cn">NA</span>,<span class="fu">nrow</span>(dataT3))</span>
 <span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>myColor[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>] <span class="ot">&lt;-</span><span class="st">"red"</span></span>
 <span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>myColor[<span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>] <span class="ot">&lt;-</span><span class="st">"blue"</span></span>
 <span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pc<span class="sc">$</span>x[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],<span class="at">col=</span>myColor,<span class="at">pch=</span><span class="dv">16</span>,<span class="at">cex=</span><span class="dv">2</span>,<span class="at">main=</span><span class="st">"PCA"</span>,<span class="at">xlab=</span><span class="st">"PC1"</span>, <span class="at">ylab=</span><span class="st">"PC2"</span>)</span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topleft"</span>,<span class="at">pch=</span><span class="dv">16</span>,<span class="at">col=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>), <span class="fu">c</span>(<span class="st">"control"</span>,<span class="st">"exp"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topleft"</span>,<span class="at">pch=</span><span class="dv">16</span>,<span class="at">col=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>), <span class="fu">c</span>(<span class="st">"control"</span>,<span class="st">"exp"</span>))</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="실습-3-deg를-사용한-주성분분석" class="level2">
 <h2 class="anchored" data-anchor-id="실습-3-deg를-사용한-주성분분석">12. 실습 3: DEG를 사용한 주성분분석</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read data</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## read data</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>data2<span class="ot">&lt;-</span><span class="fu">read.delim</span>(<span class="st">"/PathToData/DEG.csv"</span> ,<span class="at">stringsAsFactors=</span>F,<span class="at">row.names=</span><span class="dv">1</span>,<span class="at">sep=</span><span class="st">","</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data2)</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(data2)</span>
@@ -2797,26 +2774,26 @@ OS = Aeromonas salmonicida (strain A449).</code></pre>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>dataT3 <span class="ot">&lt;-</span><span class="fu">log10</span>(dataT2<span class="sc">+</span><span class="dv">1</span>)</span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>pc2 <span class="ot">&lt;-</span><span class="fu">prcomp</span>(dataT3,<span class="at">scale.=</span><span class="cn">TRUE</span> )</span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(pc2)</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co"># scree plot</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="do">## scree plot</span></span>
 <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(pc2<span class="sc">$</span>sdev<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="fu">sum</span>(pc2<span class="sc">$</span>sdev<span class="sc">^</span><span class="dv">2</span>),<span class="at">xlab=</span><span class="st">"principal component"</span>,<span class="at">ylab=</span><span class="st">"% of variance"</span>)</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co"># cumulative variance</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="do">## cumulative variance</span></span>
 <span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">cumsum</span>(pc2<span class="sc">$</span>sdev<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="fu">sum</span>(pc2<span class="sc">$</span>sdev<span class="sc">^</span><span class="dv">2</span>)),<span class="at">xlab=</span><span class="st">"principal component"</span>,</span>
 <span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab=</span><span class="st">"cumulative % of variance"</span>)</span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co"># score plot</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="do">## score plot</span></span>
 <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>myColor <span class="ot">&lt;-</span><span class="fu">rep</span>(<span class="cn">NA</span> ,<span class="fu">nrow</span>(dataT3))</span>
 <span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>myColor[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>] <span class="ot">&lt;-</span><span class="st">"red"</span></span>
 <span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>myColor[<span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>] <span class="ot">&lt;-</span><span class="st">"blue"</span></span>
 <span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pc2<span class="sc">$</span>x[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],<span class="at">col=</span>myColor, <span class="at">pch=</span><span class="dv">16</span>,<span class="at">cex=</span><span class="dv">2</span>,<span class="at">main=</span><span class="st">"PCA"</span> ,<span class="at">xlab=</span><span class="st">"PC1"</span> ,</span>
 <span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">"PC2"</span> ,<span class="at">cex.lab=</span><span class="dv">1</span>)</span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topleft"</span>,<span class="at">pch=</span><span class="dv">16</span>,<span class="at">col=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>),<span class="at">legend=</span><span class="fu">c</span>(<span class="st">"control"</span>,<span class="st">"exp"</span>), <span class="at">cex=</span><span class="fl">0.9</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topleft"</span>,<span class="at">pch=</span><span class="dv">16</span>,<span class="at">col=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>),<span class="at">legend=</span><span class="fu">c</span>(<span class="st">"control"</span>,<span class="st">"exp"</span>), <span class="at">cex=</span><span class="fl">0.9</span>)</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>그림은 JPEG 형식 또는 TIFF 형식으로 저장할 수도 있다.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save figure in jpeg format</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">## save figure in jpeg format</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">jpeg</span>(<span class="at">filename=</span><span class="st">"/PathToFig/Fig_PCA.jpeg"</span> , <span class="at">width=</span><span class="dv">5400</span>, <span class="at">height=</span><span class="dv">5400</span>, <span class="at">res=</span><span class="dv">900</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">2</span>) <span class="sc">+</span> <span class="fl">0.2</span>)</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pc2<span class="sc">$</span>x[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],<span class="at">col=</span>myColor, <span class="at">pch=</span><span class="dv">16</span>,<span class="at">cex=</span><span class="dv">2</span>,<span class="at">main=</span><span class="st">"PCA"</span> ,<span class="at">xlab=</span><span class="st">"PC1"</span> ,</span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">"PC2"</span> ,<span class="at">cex.lab=</span><span class="dv">1</span>)</span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topleft"</span>,<span class="at">pch=</span><span class="dv">16</span>,<span class="at">col=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>), <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"control"</span>,<span class="st">"exp"</span>), <span class="at">cex=</span><span class="fl">0.9</span>)</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="분석노트북-7" class="level2">
 <h2 class="anchored" data-anchor-id="분석노트북-7">12. 분석/노트북</h2>
@@ -2860,12 +2837,12 @@ OS = Aeromonas salmonicida (strain A449).</code></pre>
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "복사완료!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "복사완료!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

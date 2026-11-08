@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Melissa Harris, Jenn Bane">
-<meta name="dcterms.date" content="2026-08-24">
 
 <title>누구나 편집자가 필요하다 – Machine translation</title>
 <style>
@@ -65,17 +64,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
   }
 }</script>
 
@@ -88,13 +87,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../talk-like-ted/index.html">커뮤니케이션, 설득 및 글쓰기 기술</a></li><li class="breadcrumb-item"><a href="../everybody-needs-an-editor/index.html"><span class="chapter-title">누구나 편집자가 필요하다</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -111,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="검색"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -125,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">기초 컴퓨터 과학 및 시스템 도구</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -156,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">프로그래밍 언어 및 소프트웨어 엔지니어링</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -242,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">인공지능, LLM 및 머신러닝</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -283,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">데이터 사이언스, 엔지니어링 및 시각화</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -334,7 +333,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">인과추론 및 통계 모델링</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -360,7 +359,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">생명정보학, 계산생물학 및 바이오 파이썬</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -436,7 +435,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">단백질 공학, 면역학 및 항체 치료제</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -507,7 +506,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">신약 개발, 약동학 및 바이오의약품 규제</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -563,7 +562,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">비즈니스, 경영 및 전략적 리더십</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -639,7 +638,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
  <span class="menu-text">커뮤니케이션, 설득 및 글쓰기 기술</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -705,7 +704,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
  <span class="menu-text">생산성, 시간 관리 및 습관 형성</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -796,7 +795,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
  <span class="menu-text">철학, 심리학 및 삶의 지혜</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -960,29 +959,53 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#일단-써-보자" id="toc-일단-써-보자" class="nav-link active" data-scroll-target="#일단-써-보자">일단 써 보자</a>
+  <li><a href="#누구나-편집자가-필요하다" id="toc-누구나-편집자가-필요하다" class="nav-link active" data-scroll-target="#누구나-편집자가-필요하다">누구나 편집자가 필요하다</a>
+  <ul class="collapse">
+  <li><a href="#일단-써-보자" id="toc-일단-써-보자" class="nav-link" data-scroll-target="#일단-써-보자">일단 써 보자</a></li>
+  <li><a href="#시작이-반이라고들-한다.-가장-큰-산을-넘었으니-이제-이-책의-네-부분" id="toc-시작이-반이라고들-한다.-가장-큰-산을-넘었으니-이제-이-책의-네-부분" class="nav-link" data-scroll-target="#시작이-반이라고들-한다.-가장-큰-산을-넘었으니-이제-이-책의-네-부분">시작이 반이라고들 한다. 가장 큰 산을 넘었으니, 이제 이 책의 네 부분</a>
   <ul class="collapse">
   <li><a href="#더-나은-비즈니스-커뮤니케이션-쓰기" id="toc-더-나은-비즈니스-커뮤니케이션-쓰기" class="nav-link" data-scroll-target="#더-나은-비즈니스-커뮤니케이션-쓰기">더 나은 비즈니스 커뮤니케이션 쓰기</a></li>
+  </ul></li>
+  <li><a href="#청중을-마주하기-전에-진정하라.-크게-숨을-몇-번-쉬라.-그리고-지금" id="toc-청중을-마주하기-전에-진정하라.-크게-숨을-몇-번-쉬라.-그리고-지금" class="nav-link" data-scroll-target="#청중을-마주하기-전에-진정하라.-크게-숨을-몇-번-쉬라.-그리고-지금">청중을 마주하기 전에, 진정하라. 크게 숨을 몇 번 쉬라. 그리고 지금</a>
+  <ul class="collapse">
   <li><a href="#효과적인-개인-커뮤니케이션-쓰기" id="toc-효과적인-개인-커뮤니케이션-쓰기" class="nav-link" data-scroll-target="#효과적인-개인-커뮤니케이션-쓰기">효과적인 개인 커뮤니케이션 쓰기</a></li>
+  </ul></li>
+  <li><a href="#그리고-남은-인생을-즐기라." id="toc-그리고-남은-인생을-즐기라." class="nav-link" data-scroll-target="#그리고-남은-인생을-즐기라.">그리고 남은 인생을 즐기라.</a>
+  <ul class="collapse">
   <li><a href="#어떤-글에도-통하는-추가-팁" id="toc-어떤-글에도-통하는-추가-팁" class="nav-link" data-scroll-target="#어떤-글에도-통하는-추가-팁">어떤 글에도 통하는 추가 팁</a></li>
+  </ul></li>
+  <li><a href="#에세이스트-폴-그레이엄의-말이-마음에-든다-읽기-쉬울수록-독자는-더" id="toc-에세이스트-폴-그레이엄의-말이-마음에-든다-읽기-쉬울수록-독자는-더" class="nav-link" data-scroll-target="#에세이스트-폴-그레이엄의-말이-마음에-든다-읽기-쉬울수록-독자는-더">에세이스트 폴 그레이엄의 말이 마음에 든다: “읽기 쉬울수록 독자는 더</a>
+  <ul class="collapse">
   <li><a href="#ai를-지능적으로-사용하기" id="toc-ai를-지능적으로-사용하기" class="nav-link" data-scroll-target="#ai를-지능적으로-사용하기">AI를 지능적으로 사용하기</a></li>
   </ul></li>
-  <li><a href="#머리를-붙여-보자" id="toc-머리를-붙여-보자" class="nav-link" data-scroll-target="#머리를-붙여-보자">머리를 붙여 보자</a>
+  <li><a href="#머리를-붙여-보자" id="toc-머리를-붙여-보자" class="nav-link" data-scroll-target="#머리를-붙여-보자">머리를 붙여 보자</a></li>
+  <li><a href="#이-섹션에서는-독자가-폰을-망치로-내려치는-대신-계속-읽고-싶게-만드는" id="toc-이-섹션에서는-독자가-폰을-망치로-내려치는-대신-계속-읽고-싶게-만드는" class="nav-link" data-scroll-target="#이-섹션에서는-독자가-폰을-망치로-내려치는-대신-계속-읽고-싶게-만드는">이 섹션에서는 독자가 폰을 망치로 내려치는 대신 계속 읽고 싶게 만드는</a>
   <ul class="collapse">
   <li><a href="#열리게-만들기" id="toc-열리게-만들기" class="nav-link" data-scroll-target="#열리게-만들기">열리게 만들기</a></li>
+  </ul></li>
+  <li><a href="#확실하지-않으면-격식체로.-격식은-존중의-표시이고-존중을-얻는" id="toc-확실하지-않으면-격식체로.-격식은-존중의-표시이고-존중을-얻는" class="nav-link" data-scroll-target="#확실하지-않으면-격식체로.-격식은-존중의-표시이고-존중을-얻는">* <strong>확실하지 않으면 격식체로.</strong> 격식은 존중의 표시이고 존중을 얻는</a>
+  <ul class="collapse">
   <li><a href="#눈에-띄기" id="toc-눈에-띄기" class="nav-link" data-scroll-target="#눈에-띄기">눈에 띄기</a></li>
   </ul></li>
-  <li><a href="#형식을-갖춰-보자" id="toc-형식을-갖춰-보자" class="nav-link" data-scroll-target="#형식을-갖춰-보자">형식을 갖춰 보자</a>
+  <li><a href="#형식을-갖춰-보자" id="toc-형식을-갖춰-보자" class="nav-link" data-scroll-target="#형식을-갖춰-보자">형식을 갖춰 보자</a></li>
+  <li><a href="#두-이미지-모두-똑같은-단어를-담고-있지만-두-번째-글이-훨씬-덜-부담스" id="toc-두-이미지-모두-똑같은-단어를-담고-있지만-두-번째-글이-훨씬-덜-부담스" class="nav-link" data-scroll-target="#두-이미지-모두-똑같은-단어를-담고-있지만-두-번째-글이-훨씬-덜-부담스">두 이미지 모두 똑같은 단어를 담고 있지만 두 번째 글이 훨씬 덜 부담스</a>
   <ul class="collapse">
   <li><a href="#읽기-어려운-예" id="toc-읽기-어려운-예" class="nav-link" data-scroll-target="#읽기-어려운-예">읽기 어려운 예</a></li>
   <li><a href="#훑어-읽기-쉬운-예" id="toc-훑어-읽기-쉬운-예" class="nav-link" data-scroll-target="#훑어-읽기-쉬운-예">훑어 읽기 쉬운 예</a></li>
+  </ul></li>
+  <li><a href="#보았는가-시선을-단번에-사로잡지-않는가.-형식이란-이토록-중요하다." id="toc-보았는가-시선을-단번에-사로잡지-않는가.-형식이란-이토록-중요하다." class="nav-link" data-scroll-target="#보았는가-시선을-단번에-사로잡지-않는가.-형식이란-이토록-중요하다.">보았는가? 시선을 단번에 사로잡지 않는가. 형식이란 이토록 중요하다.</a>
+  <ul class="collapse">
   <li><a href="#강조를-위한-구성" id="toc-강조를-위한-구성" class="nav-link" data-scroll-target="#강조를-위한-구성">강조를 위한 구성</a></li>
+  </ul></li>
+  <li><a href="#인물을-지목할-때-꼭-왼쪽에서-세-번째-식으로-수학-문제를-내" id="toc-인물을-지목할-때-꼭-왼쪽에서-세-번째-식으로-수학-문제를-내" class="nav-link" data-scroll-target="#인물을-지목할-때-꼭-왼쪽에서-세-번째-식으로-수학-문제를-내">* **인물을 지목할 때 꼭 “왼쪽에서 세 번째” 식으로 수학 문제를 내</a>
+  <ul class="collapse">
   <li><a href="#커뮤니케이션을-보기-좋고-느끼기-좋고-듣기-좋게-만들기" id="toc-커뮤니케이션을-보기-좋고-느끼기-좋고-듣기-좋게-만들기" class="nav-link" data-scroll-target="#커뮤니케이션을-보기-좋고-느끼기-좋고-듣기-좋게-만들기">커뮤니케이션을 보기 좋고, 느끼기 좋고, 듣기 좋게 만들기</a></li>
   </ul></li>
   <li><a href="#다듬어-보자" id="toc-다듬어-보자" class="nav-link" data-scroll-target="#다듬어-보자">다듬어 보자</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -999,16 +1022,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">저자</div>
     <div class="quarto-title-meta-contents">
              <p>Melissa Harris, Jenn Bane </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">공개</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 24, 2026</p>
+      <p class="date">2026년 8월 24일</p>
     </div>
   </div>
   
@@ -1020,6 +1043,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="누구나-편집자가-필요하다" class="level1">
+<h1>누구나 편집자가 필요하다</h1>
+<p>누구나 편집자가 필요하다</p>
 <blockquote class="blockquote">
 <p>읽기 쉬운 글이야말로 매우 어려운 글이다. - <em>너새니얼 호손(Nathaniel Hawthorne)</em></p>
 </blockquote>
@@ -1045,6 +1071,9 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>왜 지금 중요한가?</strong> 점점 더 많은 사람이 나쁜 커뮤니케이션의 해답을 ChatGPT에서 찾으려 하기 때문이다.</li>
 </ol>
 <p>시작이 반이라고들 한다. 가장 큰 산을 넘었으니, 이제 이 책의 네 부분, 즉 “일단 써 봅시다”, “머리를 붙여 봅시다”, “형식을 갖춰 봅시다”, “다듬어 봅시다”를 함께 여행해 보자. 통칭하여 WTFF이다.</p>
+</section>
+<section id="시작이-반이라고들-한다.-가장-큰-산을-넘었으니-이제-이-책의-네-부분" class="level2">
+<h2 class="anchored" data-anchor-id="시작이-반이라고들-한다.-가장-큰-산을-넘었으니-이제-이-책의-네-부분">시작이 반이라고들 한다. 가장 큰 산을 넘었으니, 이제 이 책의 네 부분</h2>
 <section id="더-나은-비즈니스-커뮤니케이션-쓰기" class="level3">
 <h3 class="anchored" data-anchor-id="더-나은-비즈니스-커뮤니케이션-쓰기">더 나은 비즈니스 커뮤니케이션 쓰기</h3>
 <p>명확하게 소통하는 능력은 당신의 직업적 평판의 열쇠이다. 글이 너무 격식 차리면 경직돼 보이고 너무 가벼우면 진지하게 받아들여지지 않으며 문법 오류투성이라면 멍청이로 보일 것이다.</p>
@@ -1407,6 +1436,9 @@ ul.task-list li input[type="checkbox"] {
 <p>청중을 마주하기 전에, 진정하라. 크게 숨을 몇 번 쉬라. 그리고 지금 당장 앉아서 쓰기 시작할 그 멋진 연설을 하러 가라.</p>
 </section>
 </section>
+</section>
+<section id="청중을-마주하기-전에-진정하라.-크게-숨을-몇-번-쉬라.-그리고-지금" class="level2">
+<h2 class="anchored" data-anchor-id="청중을-마주하기-전에-진정하라.-크게-숨을-몇-번-쉬라.-그리고-지금">청중을 마주하기 전에, 진정하라. 크게 숨을 몇 번 쉬라. 그리고 지금</h2>
 <section id="효과적인-개인-커뮤니케이션-쓰기" class="level3">
 <h3 class="anchored" data-anchor-id="효과적인-개인-커뮤니케이션-쓰기">효과적인 개인 커뮤니케이션 쓰기</h3>
 <p>개인적인 소통은 업무상 소통만큼 중요하다. 친구와 친척에게 쓴다고 기준을 늦춰도 되는 건 아니다. 사람들이 구직 면접에서만큼 가족 저녁 식사에서도 말을 조심한다면, 고함은 훨씬 줄어들 것이다.</p>
@@ -1626,6 +1658,9 @@ ul.task-list li input[type="checkbox"] {
 <p>그리고 남은 인생을 즐기라.</p>
 </section>
 </section>
+</section>
+<section id="그리고-남은-인생을-즐기라." class="level2">
+<h2 class="anchored" data-anchor-id="그리고-남은-인생을-즐기라.">그리고 남은 인생을 즐기라.</h2>
 <section id="어떤-글에도-통하는-추가-팁" class="level3">
 <h3 class="anchored" data-anchor-id="어떤-글에도-통하는-추가-팁">어떤 글에도 통하는 추가 팁</h3>
 <p>이웃의 짖는 개에 대한 항의 쪽지든 1천만 달러 계약을 따내는 제안서든, 글의 품질은 중요하다. 기억할 것 몇 가지를 더 소개한다.</p>
@@ -1774,6 +1809,9 @@ ul.task-list li input[type="checkbox"] {
 <p>에세이스트 폴 그레이엄의 말이 마음에 든다: “읽기 쉬울수록 독자는 더 깊이 몰입한다. 산문에 소모하는 에너지가 적을수록 아이디어에 쓸 에너지가 많아진다.”</p>
 </section>
 </section>
+</section>
+<section id="에세이스트-폴-그레이엄의-말이-마음에-든다-읽기-쉬울수록-독자는-더" class="level2">
+<h2 class="anchored" data-anchor-id="에세이스트-폴-그레이엄의-말이-마음에-든다-읽기-쉬울수록-독자는-더">에세이스트 폴 그레이엄의 말이 마음에 든다: “읽기 쉬울수록 독자는 더</h2>
 <section id="ai를-지능적으로-사용하기" class="level3">
 <h3 class="anchored" data-anchor-id="ai를-지능적으로-사용하기">AI를 지능적으로 사용하기</h3>
 <p>생성형 인공지능(AI) 섹션 없이 글쓰기 조언서를 낸다는 건 양심상 불가능했다.</p>
@@ -1973,6 +2011,9 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <p>우리는 이런 오프너를 “헛기침(throat clearer)”라고 부른다. 결코 좋은 첫인상을 주기 어렵다.</p>
 <p>이 섹션에서는 독자가 폰을 망치로 내려치는 대신 계속 읽고 싶게 만드는 법 - 글의 머리를 다듬는 방법을 알려준다.</p>
+</section>
+<section id="이-섹션에서는-독자가-폰을-망치로-내려치는-대신-계속-읽고-싶게-만드는" class="level2">
+<h2 class="anchored" data-anchor-id="이-섹션에서는-독자가-폰을-망치로-내려치는-대신-계속-읽고-싶게-만드는">이 섹션에서는 독자가 폰을 망치로 내려치는 대신 계속 읽고 싶게 만드는</h2>
 <section id="열리게-만들기" class="level3">
 <h3 class="anchored" data-anchor-id="열리게-만들기">열리게 만들기</h3>
 <section id="업무-이메일-첫-문장-완벽하게-잡기" class="level4">
@@ -2033,6 +2074,9 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
+</section>
+<section id="확실하지-않으면-격식체로.-격식은-존중의-표시이고-존중을-얻는" class="level2">
+<h2 class="anchored" data-anchor-id="확실하지-않으면-격식체로.-격식은-존중의-표시이고-존중을-얻는">* <strong>확실하지 않으면 격식체로.</strong> 격식은 존중의 표시이고 존중을 얻는</h2>
 <section id="눈에-띄기" class="level3">
 <h3 class="anchored" data-anchor-id="눈에-띄기">눈에 띄기</h3>
 <p>강한 글은 강한 헤드라인 없이는 읽히지 않는다. 헤드라인은 비단 신문에만 필요한 것이 아니다. 헤드라인은 온라인에서 배너, 제목, 소셜 미디어 게시물, 제목 줄로 살아간다.</p>
@@ -2186,6 +2230,9 @@ ul.task-list li input[type="checkbox"] {
 <p>2008년 연구에 따르면 사람들은 보통 길이의 웹 페이지에서 고작 20퍼센트 정도만 읽는다고 한다. (지금은 스마트폰 보급으로 그 수치가 더 떨어졌을 것이다.) 다음 페이지처럼 꽉 막힌 글을 읽게 만들고 싶다면, 그 비율이 얼마나 더 곤두박질칠지 한 번 상상해 보라.</p>
 <p>그다음 페이지에 있는 들여쓰기, 굵은 글씨, 부제목, 글머리표가 적용된 글과 비교해 볼까?</p>
 <p>두 이미지 모두 똑같은 단어를 담고 있지만 두 번째 글이 훨씬 덜 부담스럽다. 눈이 한결 편안하다.</p>
+</section>
+<section id="두-이미지-모두-똑같은-단어를-담고-있지만-두-번째-글이-훨씬-덜-부담스" class="level2">
+<h2 class="anchored" data-anchor-id="두-이미지-모두-똑같은-단어를-담고-있지만-두-번째-글이-훨씬-덜-부담스">두 이미지 모두 똑같은 단어를 담고 있지만 두 번째 글이 훨씬 덜 부담스</h2>
 <section id="읽기-어려운-예" class="level3">
 <h3 class="anchored" data-anchor-id="읽기-어려운-예">읽기 어려운 예</h3>
 </section>
@@ -2199,6 +2246,9 @@ ul.task-list li input[type="checkbox"] {
 <p>이 상자를 보라.</p>
 <p>보았는가? 시선을 단번에 사로잡지 않는가. 형식이란 이토록 중요하다.</p>
 </section>
+</section>
+<section id="보았는가-시선을-단번에-사로잡지-않는가.-형식이란-이토록-중요하다." class="level2">
+<h2 class="anchored" data-anchor-id="보았는가-시선을-단번에-사로잡지-않는가.-형식이란-이토록-중요하다.">보았는가? 시선을 단번에 사로잡지 않는가. 형식이란 이토록 중요하다.</h2>
 <section id="강조를-위한-구성" class="level3">
 <h3 class="anchored" data-anchor-id="강조를-위한-구성">강조를 위한 구성</h3>
 <p>매일 수백 개의 메시지가 우리의 주의력을 뺏으려 다투고 있다. 기사와 이메일, 소셜 미디어 피드와 문자, 광고들을 반쯤 넋 놓고 읽으며 사느라 우리의 집중력은 산산조각 났는다. “앗, 문자 왔네. 답장해야지. 잠깐만.”</p>
@@ -2275,6 +2325,9 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
+</section>
+<section id="인물을-지목할-때-꼭-왼쪽에서-세-번째-식으로-수학-문제를-내" class="level2">
+<h2 class="anchored" data-anchor-id="인물을-지목할-때-꼭-왼쪽에서-세-번째-식으로-수학-문제를-내">* **인물을 지목할 때 꼭 “왼쪽에서 세 번째” 식으로 수학 문제를 내</h2>
 <section id="커뮤니케이션을-보기-좋고-느끼기-좋고-듣기-좋게-만들기" class="level3">
 <h3 class="anchored" data-anchor-id="커뮤니케이션을-보기-좋고-느끼기-좋고-듣기-좋게-만들기">커뮤니케이션을 보기 좋고, 느끼기 좋고, 듣기 좋게 만들기</h3>
 <section id="유행을-타지-않는-스타일" class="level4">
@@ -2498,7 +2551,7 @@ ul.task-list li input[type="checkbox"] {
 <p>지금까지 우리는 겉보기 좋은 형식에 대해 떠들었고 글의 순서와 여백이 어떻게 독자의 멱살을 잡고 끝까지 끌고 가는지도 확인했다. 하지만 아무리 포장지가 번지르르해도 내용물이 썩었다면 답이 없다. 독자가 마주한 진짜 문제는 이것이다.</p>
 <p>당신의 이메일은 숨 막히게 긴다. 브리핑 문서는 전혀 브리프(Brief)하지 않고 초대장은 도무지 사람을 초대하는 느낌이 안 든다.</p>
 <p>쓸데없이 너무 많이 쓰고 있는데, 비극적이게도 아무도 그 긴 글을 안 읽는다. 정말 아무도 읽지 않는다. 베이스캠프(Basecamp)의 CEO 제이슨 프라이드가 명쾌한 일침을 남긴 바 있다. “짧은 문단은 꼼꼼히 읽히고 긴 문단은 대충 훑어지며 <strong>정말 무식하게 긴 문단은 아예 건너뛰어진다.</strong>”</p>
-<p>군더더기 없는 간결한 글만이 독자의 시선을 낚아채고 옭아맨다. 사람들이 당신의 진짜 의도를 꼭꼭 씹어 소화하게 만들 행동 지침과 실전 연습을 소개한다. ### 효과적인 커뮤니케이션을 위한 Do’s and Don’ts</p>
+<p>군더더기 없는 간결한 글만이 독자의 시선을 낚아채고 옭아맨다. 사람들이 당신의 진짜 의도를 꼭꼭 씹어 소화하게 만들 행동 지침과 실전 연습을 소개한다. ## 쓸데없이 너무 많이 쓰고 있는데, 비극적이게도 아무도 그 긴 글을 안 읽 ### 효과적인 커뮤니케이션을 위한 Do’s and Don’ts</p>
 <section id="같은-말-반복하거나-쓸데없는-살-붙이지-않기" class="level4">
 <h4 class="anchored" data-anchor-id="같은-말-반복하거나-쓸데없는-살-붙이지-않기">같은 말 반복하거나 쓸데없는 살 붙이지 않기</h4>
 <p>자, 기습 퀴즈 나간다! 다음 문장에서 쓸데없이 겹치는 말을 찾아보라.</p>
@@ -2586,6 +2639,7 @@ ul.task-list li input[type="checkbox"] {
 
 </section>
 </section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -2613,12 +2667,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "복사완료!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "복사완료!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

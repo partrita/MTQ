@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
@@ -8,7 +8,6 @@
 
 <meta name="author" content="Héctor García">
 <meta name="author" content="Francesc Miralles">
-<meta name="dcterms.date" content="2016-01-01">
 
 <title>이키가이 – Machine translation</title>
 <style>
@@ -66,17 +65,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
   }
 }</script>
 
@@ -89,13 +88,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../meditations-aurelius/index.html">철학, 심리학 및 삶의 지혜</a></li><li class="breadcrumb-item"><a href="../ikigai/index.html"><span class="chapter-title">이키가이</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -112,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="검색"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -126,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">기초 컴퓨터 과학 및 시스템 도구</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -157,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">프로그래밍 언어 및 소프트웨어 엔지니어링</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -243,7 +242,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">인공지능, LLM 및 머신러닝</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -284,7 +283,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">데이터 사이언스, 엔지니어링 및 시각화</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -335,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">인과추론 및 통계 모델링</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -361,7 +360,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">생명정보학, 계산생물학 및 바이오 파이썬</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -437,7 +436,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">단백질 공학, 면역학 및 항체 치료제</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -508,7 +507,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">신약 개발, 약동학 및 바이오의약품 규제</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -564,7 +563,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">비즈니스, 경영 및 전략적 리더십</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -640,7 +639,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
  <span class="menu-text">커뮤니케이션, 설득 및 글쓰기 기술</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -706,7 +705,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
  <span class="menu-text">생산성, 시간 관리 및 습관 형성</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -797,7 +796,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
  <span class="menu-text">철학, 심리학 및 삶의 지혜</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -961,133 +960,386 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">목차</h2>
    
   <ul>
   <li><a href="#이키가이-늙어가면서도-젊음을-유지하는-기술" id="toc-이키가이-늙어가면서도-젊음을-유지하는-기술" class="nav-link active" data-scroll-target="#이키가이-늙어가면서도-젊음을-유지하는-기술">이키가이: 늙어가면서도 젊음을 유지하는 기술</a>
   <ul class="collapse">
-  <li><a href="#당신이-존재하는-이유는-무엇인가" id="toc-당신이-존재하는-이유는-무엇인가" class="nav-link" data-scroll-target="#당신이-존재하는-이유는-무엇인가">당신이 존재하는 이유는 무엇인가?</a>
+  <li><a href="#당신이-존재하는-이유는-무엇인가" id="toc-당신이-존재하는-이유는-무엇인가" class="nav-link" data-scroll-target="#당신이-존재하는-이유는-무엇인가">당신이 존재하는 이유는 무엇인가?</a></li>
+  <li><a href="#우리의-이키가이는-저마다-마음-깊은-곳에-숨어-있으며-찾아내려면-인내" id="toc-우리의-이키가이는-저마다-마음-깊은-곳에-숨어-있으며-찾아내려면-인내" class="nav-link" data-scroll-target="#우리의-이키가이는-저마다-마음-깊은-곳에-숨어-있으며-찾아내려면-인내">우리의 <em>이키가이</em>는 저마다 마음 깊은 곳에 숨어 있으며 찾아내려면 인내</a>
   <ul class="collapse">
   <li><a href="#무슨-일이-있어도-은퇴하지-마라" id="toc-무슨-일이-있어도-은퇴하지-마라" class="nav-link" data-scroll-target="#무슨-일이-있어도-은퇴하지-마라">무슨 일이 있어도 은퇴하지 마라!</a></li>
+  </ul></li>
+  <li><a href="#실제로-일본어에는-영어의-retire직장을-영영-떠나다에-해당하는" id="toc-실제로-일본어에는-영어의-retire직장을-영영-떠나다에-해당하는" class="nav-link" data-scroll-target="#실제로-일본어에는-영어의-retire직장을-영영-떠나다에-해당하는">실제로 일본어에는 영어의 ’retire(직장을 영영 떠나다)’에 해당하는</a>
+  <ul class="collapse">
   <li><a href="#거의-영원한-젊음의-섬" id="toc-거의-영원한-젊음의-섬" class="nav-link" data-scroll-target="#거의-영원한-젊음의-섬">(거의) 영원한 젊음의 섬</a></li>
+  </ul></li>
+  <li><a href="#치매-발병률은-세계-평균보다-훨씬-낮다." id="toc-치매-발병률은-세계-평균보다-훨씬-낮다." class="nav-link" data-scroll-target="#치매-발병률은-세계-평균보다-훨씬-낮다.">치매 발병률은 세계 평균보다 훨씬 낮다.</a>
+  <ul class="collapse">
   <li><a href="#이키가이의-글자들" id="toc-이키가이의-글자들" class="nav-link" data-scroll-target="#이키가이의-글자들"><strong><em>이키가이</em>의 글자들</strong></a></li>
+  </ul></li>
+  <li><a href="#이런-발견들은-본문에서-차차-살펴보겠지만-연구-결과는-분명하다.-오키나와" id="toc-이런-발견들은-본문에서-차차-살펴보겠지만-연구-결과는-분명하다.-오키나와" class="nav-link" data-scroll-target="#이런-발견들은-본문에서-차차-살펴보겠지만-연구-결과는-분명하다.-오키나와">이런 발견들은 본문에서 차차 살펴보겠지만 연구 결과는 분명하다. 오키나와</a>
+  <ul class="collapse">
   <li><a href="#다섯-개의-블루존" id="toc-다섯-개의-블루존" class="nav-link" data-scroll-target="#다섯-개의-블루존">다섯 개의 블루존</a></li>
+  </ul></li>
+  <li><a href="#이-공동체의-사람들은-스트레스를-줄이기-위해-시간을-잘-관리하고-고기나" id="toc-이-공동체의-사람들은-스트레스를-줄이기-위해-시간을-잘-관리하고-고기나" class="nav-link" data-scroll-target="#이-공동체의-사람들은-스트레스를-줄이기-위해-시간을-잘-관리하고-고기나">이 공동체의 사람들은 스트레스를 줄이기 위해 시간을 잘 관리하고 고기나</a>
+  <ul class="collapse">
   <li><a href="#퍼센트의-비밀" id="toc-퍼센트의-비밀" class="nav-link" data-scroll-target="#퍼센트의-비밀">80퍼센트의 비밀</a></li>
+  </ul></li>
+  <li><a href="#오키나와-식단은-두부-고구마-생선주-삼-회-채소하루-약-11온" id="toc-오키나와-식단은-두부-고구마-생선주-삼-회-채소하루-약-11온" class="nav-link" data-scroll-target="#오키나와-식단은-두부-고구마-생선주-삼-회-채소하루-약-11온">오키나와 식단은 두부, 고구마, 생선(주 삼 회), 채소(하루 약 11온</a>
+  <ul class="collapse">
   <li><a href="#모아이-평생-이어지는-유대" id="toc-모아이-평생-이어지는-유대" class="nav-link" data-scroll-target="#모아이-평생-이어지는-유대"><em>모아이</em>: 평생 이어지는 유대</a></li>
   </ul></li>
-  <li><a href="#ii.-노화-방지의-비결" id="toc-ii.-노화-방지의-비결" class="nav-link" data-scroll-target="#ii.-노화-방지의-비결">II. 노화 방지의 비결</a>
+  <li><a href="#ii.-노화-방지의-비결" id="toc-ii.-노화-방지의-비결" class="nav-link" data-scroll-target="#ii.-노화-방지의-비결">II. 노화 방지의 비결</a></li>
+  <li><a href="#길고-행복한-삶으로-이어지는-사소한-것들" id="toc-길고-행복한-삶으로-이어지는-사소한-것들" class="nav-link" data-scroll-target="#길고-행복한-삶으로-이어지는-사소한-것들"><em>길고 행복한 삶으로 이어지는 사소한 것들</em></a>
   <ul class="collapse">
   <li><a href="#노화의-탈출-속도" id="toc-노화의-탈출-속도" class="nav-link" data-scroll-target="#노화의-탈출-속도">노화의 탈출 속도</a></li>
+  </ul></li>
+  <li><a href="#레이-커즈와일ray-kurzweil이나-오브리-디-그레이aubrey" id="toc-레이-커즈와일ray-kurzweil이나-오브리-디-그레이aubrey" class="nav-link" data-scroll-target="#레이-커즈와일ray-kurzweil이나-오브리-디-그레이aubrey">레이 커즈와일(Ray Kurzweil)이나 오브리 디 그레이(Aubrey</a>
+  <ul class="collapse">
   <li><a href="#활동적인-마음-젊은-몸" id="toc-활동적인-마음-젊은-몸" class="nav-link" data-scroll-target="#활동적인-마음-젊은-몸">활동적인 마음, 젊은 몸</a></li>
+  </ul></li>
+  <li><a href="#새로운-상황을-다루고-매일-무언가를-새로-배우고-게임을-하고-다른" id="toc-새로운-상황을-다루고-매일-무언가를-새로-배우고-게임을-하고-다른" class="nav-link" data-scroll-target="#새로운-상황을-다루고-매일-무언가를-새로-배우고-게임을-하고-다른">새로운 상황을 다루고, 매일 무언가를 새로 배우고, 게임을 하고, 다른</a>
+  <ul class="collapse">
   <li><a href="#스트레스-장수를-죽이는-혐의" id="toc-스트레스-장수를-죽이는-혐의" class="nav-link" data-scroll-target="#스트레스-장수를-죽이는-혐의">스트레스: 장수를 죽이는 혐의</a></li>
+  </ul></li>
+  <li><a href="#캘리포니아-대학교도-비슷한-연구를-했다.-자녀-중-한-명의-병으로-높은" id="toc-캘리포니아-대학교도-비슷한-연구를-했다.-자녀-중-한-명의-병으로-높은" class="nav-link" data-scroll-target="#캘리포니아-대학교도-비슷한-연구를-했다.-자녀-중-한-명의-병으로-높은">캘리포니아 대학교도 비슷한 연구를 했다. 자녀 중 한 명의 병으로 높은</a>
+  <ul class="collapse">
   <li><a href="#스트레스는-어떻게-작동하는가" id="toc-스트레스는-어떻게-작동하는가" class="nav-link" data-scroll-target="#스트레스는-어떻게-작동하는가">스트레스는 어떻게 작동하는가?</a></li>
+  </ul></li>
+  <li><a href="#따라서-도전이-마음과-몸을-활동적으로-유지하는-데-좋다-해도-몸의-조로" id="toc-따라서-도전이-마음과-몸을-활동적으로-유지하는-데-좋다-해도-몸의-조로" class="nav-link" data-scroll-target="#따라서-도전이-마음과-몸을-활동적으로-유지하는-데-좋다-해도-몸의-조로">따라서 도전이 마음과 몸을 활동적으로 유지하는 데 좋다 해도, 몸의 조로</a>
+  <ul class="collapse">
   <li><a href="#마음챙김으로-스트레스-줄이기" id="toc-마음챙김으로-스트레스-줄이기" class="nav-link" data-scroll-target="#마음챙김으로-스트레스-줄이기">마음챙김으로 스트레스 줄이기</a></li>
+  </ul></li>
+  <li><a href="#마음챙김에-이르는-것은-점진적인-훈련-과정이지만-조금만-연습해도-마음을" id="toc-마음챙김에-이르는-것은-점진적인-훈련-과정이지만-조금만-연습해도-마음을" class="nav-link" data-scroll-target="#마음챙김에-이르는-것은-점진적인-훈련-과정이지만-조금만-연습해도-마음을">마음챙김에 이르는 것은 점진적인 훈련 과정이지만 조금만 연습해도 마음을</a>
+  <ul class="collapse">
   <li><a href="#적은-스트레스는-몸에-좋다" id="toc-적은-스트레스는-몸에-좋다" class="nav-link" data-scroll-target="#적은-스트레스는-몸에-좋다">적은 스트레스는 몸에 좋다</a></li>
+  </ul></li>
+  <li><a href="#이런-맥락에서-보면-이-책에서-만나게-될-초장수자들110세-이상까지-사는" id="toc-이런-맥락에서-보면-이-책에서-만나게-될-초장수자들110세-이상까지-사는" class="nav-link" data-scroll-target="#이런-맥락에서-보면-이-책에서-만나게-될-초장수자들110세-이상까지-사는">이런 맥락에서 보면 이 책에서 만나게 될 초장수자들110세 이상까지 사는</a>
+  <ul class="collapse">
   <li><a href="#오래-앉아-있으면-늙는다" id="toc-오래-앉아-있으면-늙는다" class="nav-link" data-scroll-target="#오래-앉아-있으면-늙는다">오래 앉아 있으면 늙는다</a></li>
+  </ul></li>
+  <li><a href="#이런-작은-변화만으로도-몸과-마음의-재생을-시작하고-기대수명을-늘릴-수" id="toc-이런-작은-변화만으로도-몸과-마음의-재생을-시작하고-기대수명을-늘릴-수" class="nav-link" data-scroll-target="#이런-작은-변화만으로도-몸과-마음의-재생을-시작하고-기대수명을-늘릴-수">이런 작은 변화만으로도 몸과 마음의 재생을 시작하고 기대수명을 늘릴 수</a>
+  <ul class="collapse">
   <li><a href="#모델들의-최고-비밀" id="toc-모델들의-최고-비밀" class="nav-link" data-scroll-target="#모델들의-최고-비밀">모델들의 최고 비밀</a></li>
+  </ul></li>
+  <li><a href="#전문가들은-인공적으로-멜라토닌-생성을-촉진하는-것이-노화-과정을-늦추는" id="toc-전문가들은-인공적으로-멜라토닌-생성을-촉진하는-것이-노화-과정을-늦추는" class="nav-link" data-scroll-target="#전문가들은-인공적으로-멜라토닌-생성을-촉진하는-것이-노화-과정을-늦추는">전문가들은 인공적으로 멜라토닌 생성을 촉진하는 것이 노화 과정을 늦추는</a>
+  <ul class="collapse">
   <li><a href="#노화-방지적-태도" id="toc-노화-방지적-태도" class="nav-link" data-scroll-target="#노화-방지적-태도">노화 방지적 태도</a></li>
+  </ul></li>
+  <li><a href="#년-111세의-나이로-세계-최고령-남성이-된-알렉산더-이미치al" id="toc-년-111세의-나이로-세계-최고령-남성이-된-알렉산더-이미치al" class="nav-link" data-scroll-target="#년-111세의-나이로-세계-최고령-남성이-된-알렉산더-이미치al">2014년 111세의 나이로 세계 최고령 남성이 된 알렉산더 이미치(Al</a>
+  <ul class="collapse">
   <li><a href="#장수-찬가" id="toc-장수-찬가" class="nav-link" data-scroll-target="#장수-찬가">장수 찬가</a></li>
   </ul></li>
-  <li><a href="#iii.-로고테라피에서-이키가이까지" id="toc-iii.-로고테라피에서-이키가이까지" class="nav-link" data-scroll-target="#iii.-로고테라피에서-이키가이까지">III. 로고테라피에서 <em>이키가이</em>까지</a>
+  <li><a href="#iii.-로고테라피에서-이키가이까지" id="toc-iii.-로고테라피에서-이키가이까지" class="nav-link" data-scroll-target="#iii.-로고테라피에서-이키가이까지">III. 로고테라피에서 <em>이키가이</em>까지</a></li>
+  <li><a href="#목적을-찾음으로써-더-오래-더-잘-사는-법" id="toc-목적을-찾음으로써-더-오래-더-잘-사는-법" class="nav-link" data-scroll-target="#목적을-찾음으로써-더-오래-더-잘-사는-법"><em>목적을 찾음으로써 더 오래, 더 잘 사는 법</em></a>
   <ul class="collapse">
   <li><a href="#로고테라피란-무엇인가" id="toc-로고테라피란-무엇인가" class="nav-link" data-scroll-target="#로고테라피란-무엇인가">로고테라피란 무엇인가?</a></li>
+  </ul></li>
+  <li><a href="#프랭클이-자신의-빈-클리닉에서-진행한-연구에-따르면-환자든-직원이든-약" id="toc-프랭클이-자신의-빈-클리닉에서-진행한-연구에-따르면-환자든-직원이든-약" class="nav-link" data-scroll-target="#프랭클이-자신의-빈-클리닉에서-진행한-연구에-따르면-환자든-직원이든-약">프랭클이 자신의 빈 클리닉에서 진행한 연구에 따르면 환자든 직원이든 약</a>
+  <ul class="collapse">
   <li><a href="#의미를-찾아서" id="toc-의미를-찾아서" class="nav-link" data-scroll-target="#의미를-찾아서">의미를 찾아서</a></li>
+  </ul></li>
+  <li><a href="#정신분석-갈등을-조정하고-충동과-본능을-만족시키려-한다.-로" id="toc-정신분석-갈등을-조정하고-충동과-본능을-만족시키려-한다.-로" class="nav-link" data-scroll-target="#정신분석-갈등을-조정하고-충동과-본능을-만족시키려-한다.-로"><strong>정신분석</strong>: 갈등을 조정하고 충동과 본능을 만족시키려 한다. **로</a>
+  <ul class="collapse">
   <li><a href="#자신을-위해-싸워라" id="toc-자신을-위해-싸워라" class="nav-link" data-scroll-target="#자신을-위해-싸워라">자신을 위해 싸워라</a></li>
+  </ul></li>
+  <li><a href="#로고테라피에-따르면-삶의-목적을-발견하는-것이-그-실존적-공허를-채우는" id="toc-로고테라피에-따르면-삶의-목적을-발견하는-것이-그-실존적-공허를-채우는" class="nav-link" data-scroll-target="#로고테라피에-따르면-삶의-목적을-발견하는-것이-그-실존적-공허를-채우는">로고테라피에 따르면 삶의 목적을 발견하는 것이 그 실존적 공허를 채우는</a>
+  <ul class="collapse">
   <li><a href="#로고테라피를-통한-더-나은-삶-핵심-아이디어들" id="toc-로고테라피를-통한-더-나은-삶-핵심-아이디어들" class="nav-link" data-scroll-target="#로고테라피를-통한-더-나은-삶-핵심-아이디어들">로고테라피를 통한 더 나은 삶: 핵심 아이디어들</a></li>
+  </ul></li>
+  <li><a href="#이후-페이지에서-프랭클의-직접적인-사례-네-건으로-의미와-목적의-탐색을" id="toc-이후-페이지에서-프랭클의-직접적인-사례-네-건으로-의미와-목적의-탐색을" class="nav-link" data-scroll-target="#이후-페이지에서-프랭클의-직접적인-사례-네-건으로-의미와-목적의-탐색을">이후 페이지에서 프랭클의 직접적인 사례 네 건으로 의미와 목적의 탐색을</a>
+  <ul class="collapse">
   <li><a href="#사례-연구-빅터-프랭클" id="toc-사례-연구-빅터-프랭클" class="nav-link" data-scroll-target="#사례-연구-빅터-프랭클">사례 연구: 빅터 프랭클</a></li>
+  </ul></li>
+  <li><a href="#프랭클에게는-이루어야-할-목표가-있었고-그것이-그를-버티게-만들었다.-그" id="toc-프랭클에게는-이루어야-할-목표가-있었고-그것이-그를-버티게-만들었다.-그" class="nav-link" data-scroll-target="#프랭클에게는-이루어야-할-목표가-있었고-그것이-그를-버티게-만들었다.-그">프랭클에게는 이루어야 할 목표가 있었고 그것이 그를 버티게 만들었다. 그</a>
+  <ul class="collapse">
   <li><a href="#사례-연구-미국-외교관" id="toc-사례-연구-미국-외교관" class="nav-link" data-scroll-target="#사례-연구-미국-외교관">사례 연구: 미국 외교관</a></li>
+  </ul></li>
+  <li><a href="#프랭클의-견해로는-이-사람은-긴-세월의-정신분석이-필요-없었을-뿐-아니" id="toc-프랭클의-견해로는-이-사람은-긴-세월의-정신분석이-필요-없었을-뿐-아니" class="nav-link" data-scroll-target="#프랭클의-견해로는-이-사람은-긴-세월의-정신분석이-필요-없었을-뿐-아니">프랭클의 견해로는, 이 사람은 긴 세월의 정신분석이 필요 없었을 뿐 아니</a>
+  <ul class="collapse">
   <li><a href="#사례-연구-자살을-시도한-어머니" id="toc-사례-연구-자살을-시도한-어머니" class="nav-link" data-scroll-target="#사례-연구-자살을-시도한-어머니">사례 연구: 자살을 시도한 어머니</a></li>
+  </ul></li>
+  <li><a href="#이렇게-임종의-자리를-상상하고-과거를-돌아본-끝에-자살을-시도했던-어머" id="toc-이렇게-임종의-자리를-상상하고-과거를-돌아본-끝에-자살을-시도했던-어머" class="nav-link" data-scroll-target="#이렇게-임종의-자리를-상상하고-과거를-돌아본-끝에-자살을-시도했던-어머">이렇게 임종의 자리를 상상하고 과거를 돌아본 끝에, 자살을 시도했던 어머</a>
+  <ul class="collapse">
   <li><a href="#사례-연구-슬픔에-잠긴-의사" id="toc-사례-연구-슬픔에-잠긴-의사" class="nav-link" data-scroll-target="#사례-연구-슬픔에-잠긴-의사">사례 연구: 슬픔에 잠긴 의사</a></li>
+  </ul></li>
+  <li><a href="#의사는-더-이상-아무-말도-하지-않았다.-치료자의-손을-자기-손으로-감싼" id="toc-의사는-더-이상-아무-말도-하지-않았다.-치료자의-손을-자기-손으로-감싼" class="nav-link" data-scroll-target="#의사는-더-이상-아무-말도-하지-않았다.-치료자의-손을-자기-손으로-감싼">의사는 더 이상 아무 말도 하지 않았다. 치료자의 손을 자기 손으로 감싼</a>
+  <ul class="collapse">
   <li><a href="#모리타-요법" id="toc-모리타-요법" class="nav-link" data-scroll-target="#모리타-요법">모리타 요법</a></li>
+  </ul></li>
+  <li><a href="#모리타는-부정적-감정을-놓아준다는-개념을-다음과-같은-우화로-설명했다." id="toc-모리타는-부정적-감정을-놓아준다는-개념을-다음과-같은-우화로-설명했다." class="nav-link" data-scroll-target="#모리타는-부정적-감정을-놓아준다는-개념을-다음과-같은-우화로-설명했다.">모리타는 부정적 감정을 놓아준다는 개념을 다음과 같은 우화로 설명했다.</a>
+  <ul class="collapse">
   <li><a href="#모리타-요법의-기본-원칙" id="toc-모리타-요법의-기본-원칙" class="nav-link" data-scroll-target="#모리타-요법의-기본-원칙">모리타 요법의 기본 원칙</a></li>
+  </ul></li>
+  <li><a href="#자신의-삶의-목적을-발견하라.-우리는-감정을-통제할-수-없지만" id="toc-자신의-삶의-목적을-발견하라.-우리는-감정을-통제할-수-없지만" class="nav-link" data-scroll-target="#자신의-삶의-목적을-발견하라.-우리는-감정을-통제할-수-없지만">3. <em>자신의 삶의 목적을 발견하라</em>. 우리는 감정을 통제할 수 없지만</a>
+  <ul class="collapse">
   <li><a href="#모리타-요법의-네-단계" id="toc-모리타-요법의-네-단계" class="nav-link" data-scroll-target="#모리타-요법의-네-단계">모리타 요법의 네 단계</a></li>
+  </ul></li>
+  <li><a href="#사회생활과-진짜-세계로의-복귀.-환자는-병원을-떠나-사회생활" id="toc-사회생활과-진짜-세계로의-복귀.-환자는-병원을-떠나-사회생활" class="nav-link" data-scroll-target="#사회생활과-진짜-세계로의-복귀.-환자는-병원을-떠나-사회생활">4. <em>사회생활과 ‘진짜’ 세계로의 복귀</em>. 환자는 병원을 떠나 사회생활</a>
+  <ul class="collapse">
   <li><a href="#내관나이칸-명상" id="toc-내관나이칸-명상" class="nav-link" data-scroll-target="#내관나이칸-명상">내관(나이칸) 명상</a></li>
+  </ul></li>
+  <li><a href="#이런-성찰을-거치면-타인을-자신의-문제의-원인으로-지목하는-일을-멈추고" id="toc-이런-성찰을-거치면-타인을-자신의-문제의-원인으로-지목하는-일을-멈추고" class="nav-link" data-scroll-target="#이런-성찰을-거치면-타인을-자신의-문제의-원인으로-지목하는-일을-멈추고">이런 성찰을 거치면 타인을 자신의 문제의 원인으로 지목하는 일을 멈추고</a>
+  <ul class="collapse">
   <li><a href="#이제-이키가이" id="toc-이제-이키가이" class="nav-link" data-scroll-target="#이제-이키가이">이제, <em>이키가이</em></a></li>
   </ul></li>
-  <li><a href="#iv.-하는-모든-일에-몰입하기" id="toc-iv.-하는-모든-일에-몰입하기" class="nav-link" data-scroll-target="#iv.-하는-모든-일에-몰입하기">IV. 하는 모든 일에 몰입하기</a>
+  <li><a href="#iv.-하는-모든-일에-몰입하기" id="toc-iv.-하는-모든-일에-몰입하기" class="nav-link" data-scroll-target="#iv.-하는-모든-일에-몰입하기">IV. 하는 모든 일에 몰입하기</a></li>
+  <li><a href="#아리스토텔레스" id="toc-아리스토텔레스" class="nav-link" data-scroll-target="#아리스토텔레스">아리스토텔레스</a>
   <ul class="collapse">
   <li><a href="#물-흐르듯이" id="toc-물-흐르듯이" class="nav-link" data-scroll-target="#물-흐르듯이">물 흐르듯이</a></li>
+  </ul></li>
+  <li><a href="#이-질문들은-우리가-자신의-이키가이를-발견하는-데-도움을-줄-수-있다" id="toc-이-질문들은-우리가-자신의-이키가이를-발견하는-데-도움을-줄-수-있다" class="nav-link" data-scroll-target="#이-질문들은-우리가-자신의-이키가이를-발견하는-데-도움을-줄-수-있다">이 질문들은 우리가 자신의 <em>이키가이</em>를 발견하는 데 도움을 줄 수 있다</a>
+  <ul class="collapse">
   <li><a href="#몰입의-힘" id="toc-몰입의-힘" class="nav-link" data-scroll-target="#몰입의-힘">몰입의 힘</a></li>
+  </ul></li>
+  <li><a href="#산만함으로부터-자유롭기" id="toc-산만함으로부터-자유롭기" class="nav-link" data-scroll-target="#산만함으로부터-자유롭기">7. 산만함으로부터 자유롭기</a>
+  <ul class="collapse">
   <li><a href="#전략-1-어려운-과제를-선택하라-너무-어렵지-않게" id="toc-전략-1-어려운-과제를-선택하라-너무-어렵지-않게" class="nav-link" data-scroll-target="#전략-1-어려운-과제를-선택하라-너무-어렵지-않게">전략 1: 어려운 과제를 선택하라 (너무 어렵지 않게!)</a></li>
+  </ul></li>
+  <li><a href="#쉬움-도전적-능력을-초과함" id="toc-쉬움-도전적-능력을-초과함" class="nav-link" data-scroll-target="#쉬움-도전적-능력을-초과함"><strong>쉬움 / 도전적 / 능력을 초과함</strong></a>
+  <ul class="collapse">
   <li><a href="#전략-2-분명하고-구체적인-목표를-가져라" id="toc-전략-2-분명하고-구체적인-목표를-가져라" class="nav-link" data-scroll-target="#전략-2-분명하고-구체적인-목표를-가져라">전략 2: 분명하고 구체적인 목표를 가져라</a></li>
+  </ul></li>
+  <li><a href="#명확하게-정의된-목표와-과정에-대한-집중-몰입." id="toc-명확하게-정의된-목표와-과정에-대한-집중-몰입." class="nav-link" data-scroll-target="#명확하게-정의된-목표와-과정에-대한-집중-몰입."><strong>명확하게 정의된 목표와 과정에 대한 집중</strong> → 몰입.</a>
+  <ul class="collapse">
   <li><a href="#전략-3-한-번에-한-가지-일에-집중하라" id="toc-전략-3-한-번에-한-가지-일에-집중하라" class="nav-link" data-scroll-target="#전략-3-한-번에-한-가지-일에-집중하라">전략 3: 한 번에 한 가지 일에 집중하라</a></li>
+  </ul></li>
+  <li><a href="#자아가-흐려진다-우리가-하고-있는-활동이나-과제를-통제하는-존재가" id="toc-자아가-흐려진다-우리가-하고-있는-활동이나-과제를-통제하는-존재가" class="nav-link" data-scroll-target="#자아가-흐려진다-우리가-하고-있는-활동이나-과제를-통제하는-존재가">**자아가 흐려진다: 우리가 하고 있는 활동이나 과제를 통제하는 존재가</a>
+  <ul class="collapse">
   <li><a href="#일본의-몰입-다쿠미-엔지니어-천재-그리고-오타쿠" id="toc-일본의-몰입-다쿠미-엔지니어-천재-그리고-오타쿠" class="nav-link" data-scroll-target="#일본의-몰입-다쿠미-엔지니어-천재-그리고-오타쿠">일본의 몰입: <em>다쿠미</em>, 엔지니어, 천재, 그리고 <em>오타쿠</em></a></li>
+  </ul></li>
+  <li><a href="#나하-가나자와-교토에서-수공예품을-파는-가게-하나에-들어서면-또-다른" id="toc-나하-가나자와-교토에서-수공예품을-파는-가게-하나에-들어서면-또-다른" class="nav-link" data-scroll-target="#나하-가나자와-교토에서-수공예품을-파는-가게-하나에-들어서면-또-다른">나하, 가나자와, 교토에서 수공예품을 파는 가게 하나에 들어서면 또 다른</a>
+  <ul class="collapse">
   <li><a href="#다쿠미의-기술" id="toc-다쿠미의-기술" class="nav-link" data-scroll-target="#다쿠미의-기술"><em>다쿠미</em>의 기술</a></li>
+  </ul></li>
+  <li><a href="#사장은-이-다쿠미가-별동-건물에-숨겨져-있긴-해도-회사에서-가장-중요" id="toc-사장은-이-다쿠미가-별동-건물에-숨겨져-있긴-해도-회사에서-가장-중요" class="nav-link" data-scroll-target="#사장은-이-다쿠미가-별동-건물에-숨겨져-있긴-해도-회사에서-가장-중요">사장은 이 <em>다쿠미</em>가 별동 건물에 숨겨져 있긴 해도 회사에서 가장 중요</a>
+  <ul class="collapse">
   <li><a href="#일본-속의-스티브-잡스" id="toc-일본-속의-스티브-잡스" class="nav-link" data-scroll-target="#일본-속의-스티브-잡스">일본 속의 스티브 잡스</a></li>
+  </ul></li>
+  <li><a href="#첫-일본-여행-이후-잡스는-이-나라의-장인들과-엔지니어들특히-소니" id="toc-첫-일본-여행-이후-잡스는-이-나라의-장인들과-엔지니어들특히-소니" class="nav-link" data-scroll-target="#첫-일본-여행-이후-잡스는-이-나라의-장인들과-엔지니어들특히-소니">첫 일본 여행 이후 잡스는 이 나라의 장인들과, 엔지니어들(특히 소니),</a>
+  <ul class="collapse">
   <li><a href="#세련된-단순함" id="toc-세련된-단순함" class="nav-link" data-scroll-target="#세련된-단순함">세련된 단순함</a></li>
+  </ul></li>
+  <li><a href="#누군가예술가든-엔지니어든-셰프든무언가를-만들기-시작할-때-그의-책임은" id="toc-누군가예술가든-엔지니어든-셰프든무언가를-만들기-시작할-때-그의-책임은" class="nav-link" data-scroll-target="#누군가예술가든-엔지니어든-셰프든무언가를-만들기-시작할-때-그의-책임은">누군가예술가든 엔지니어든 셰프든무언가를 만들기 시작할 때, 그의 책임은</a>
+  <ul class="collapse">
   <li><a href="#지브리의-순수함" id="toc-지브리의-순수함" class="nav-link" data-scroll-target="#지브리의-순수함">지브리의 순수함</a></li>
+  </ul></li>
+  <li><a href="#자기가-하는-일에-열정이-있다면-정말로-은퇴할-수-있을까" id="toc-자기가-하는-일에-열정이-있다면-정말로-은퇴할-수-있을까" class="nav-link" data-scroll-target="#자기가-하는-일에-열정이-있다면-정말로-은퇴할-수-있을까">자기가 하는 일에 열정이 있다면 정말로 은퇴할 수 있을까?</a>
+  <ul class="collapse">
   <li><a href="#은둔자들" id="toc-은둔자들" class="nav-link" data-scroll-target="#은둔자들">은둔자들</a></li>
+  </ul></li>
+  <li><a href="#예술가들은-자신의-이키가이와-함께-흐르고-싶다면-자신의-공간을-지키고" id="toc-예술가들은-자신의-이키가이와-함께-흐르고-싶다면-자신의-공간을-지키고" class="nav-link" data-scroll-target="#예술가들은-자신의-이키가이와-함께-흐르고-싶다면-자신의-공간을-지키고">예술가들은 자신의 <em>이키가이</em>와 함께 흐르고 싶다면 자신의 공간을 지키고</a>
+  <ul class="collapse">
   <li><a href="#마이크로-몰입-일상적-과제-즐기기" id="toc-마이크로-몰입-일상적-과제-즐기기" class="nav-link" data-scroll-target="#마이크로-몰입-일상적-과제-즐기기">마이크로 몰입: 일상적 과제 즐기기</a></li>
+  </ul></li>
+  <li><a href="#몇-주-후-thinking-machines-사무실을-방문한-투자자-그룹이" id="toc-몇-주-후-thinking-machines-사무실을-방문한-투자자-그룹이" class="nav-link" data-scroll-target="#몇-주-후-thinking-machines-사무실을-방문한-투자자-그룹이">몇 주 후 Thinking Machines 사무실을 방문한 투자자 그룹이</a>
+  <ul class="collapse">
   <li><a href="#즉석-휴가-명상으로-도달하기" id="toc-즉석-휴가-명상으로-도달하기" class="nav-link" data-scroll-target="#즉석-휴가-명상으로-도달하기">즉석 휴가: 명상으로 도달하기</a></li>
+  </ul></li>
+  <li><a href="#우리는-어디를-가나-스파를-하나-지니고-다닌다.-들어가는-법만-알면-되는" id="toc-우리는-어디를-가나-스파를-하나-지니고-다닌다.-들어가는-법만-알면-되는" class="nav-link" data-scroll-target="#우리는-어디를-가나-스파를-하나-지니고-다닌다.-들어가는-법만-알면-되는">우리는 어디를 가나 스파를 하나 지니고 다닌다. 들어가는 법만 알면 되는</a>
+  <ul class="collapse">
   <li><a href="#의례적인-존재로서의-인간" id="toc-의례적인-존재로서의-인간" class="nav-link" data-scroll-target="#의례적인-존재로서의-인간">의례적인 존재로서의 인간</a></li>
+  </ul></li>
+  <li><a href="#가장-행복한-사람들은-가장-많이-이루어-낸-사람들이-아니다.-남들보다-몰" id="toc-가장-행복한-사람들은-가장-많이-이루어-낸-사람들이-아니다.-남들보다-몰" class="nav-link" data-scroll-target="#가장-행복한-사람들은-가장-많이-이루어-낸-사람들이-아니다.-남들보다-몰">가장 행복한 사람들은 가장 많이 이루어 낸 사람들이 아니다. 남들보다 몰</a>
+  <ul class="collapse">
   <li><a href="#몰입으로-당신의-이키가이-찾기" id="toc-몰입으로-당신의-이키가이-찾기" class="nav-link" data-scroll-target="#몰입으로-당신의-이키가이-찾기">몰입으로 당신의 <em>이키가이</em> 찾기</a></li>
   </ul></li>
-  <li><a href="#v.-장수의-달인들" id="toc-v.-장수의-달인들" class="nav-link" data-scroll-target="#v.-장수의-달인들">V. 장수의 달인들</a>
+  <li><a href="#v.-장수의-달인들" id="toc-v.-장수의-달인들" class="nav-link" data-scroll-target="#v.-장수의-달인들">V. 장수의 달인들</a></li>
+  <li><a href="#그중-몇-사람이-무어라-말하는지-들어-보자." id="toc-그중-몇-사람이-무어라-말하는지-들어-보자." class="nav-link" data-scroll-target="#그중-몇-사람이-무어라-말하는지-들어-보자.">그중 몇 사람이 무어라 말하는지 들어 보자.</a>
   <ul class="collapse">
   <li><a href="#오카와-미사오" id="toc-오카와-미사오" class="nav-link" data-scroll-target="#오카와-미사오">오카와 미사오</a></li>
+  </ul></li>
+  <li><a href="#일본이-계속해서-장수-공장임을-증명하는-일화-같은-해-7월-모모이-사" id="toc-일본이-계속해서-장수-공장임을-증명하는-일화-같은-해-7월-모모이-사" class="nav-link" data-scroll-target="#일본이-계속해서-장수-공장임을-증명하는-일화-같은-해-7월-모모이-사">일본이 계속해서 장수 공장임을 증명하는 일화: 같은 해 7월, 모모이 사</a>
+  <ul class="collapse">
   <li><a href="#마리아-카포비야" id="toc-마리아-카포비야" class="nav-link" data-scroll-target="#마리아-카포비야">마리아 카포비야</a></li>
+  </ul></li>
+  <li><a href="#장수의-비결을-묻자-그녀는-간단히-답했다.-장수의-비결이-뭔지-몰라요." id="toc-장수의-비결을-묻자-그녀는-간단히-답했다.-장수의-비결이-뭔지-몰라요." class="nav-link" data-scroll-target="#장수의-비결을-묻자-그녀는-간단히-답했다.-장수의-비결이-뭔지-몰라요.">장수의 비결을 묻자 그녀는 간단히 답했다. “장수의 비결이 뭔지 몰라요.</a>
+  <ul class="collapse">
   <li><a href="#잔-칼망" id="toc-잔-칼망" class="nav-link" data-scroll-target="#잔-칼망">잔 칼망</a></li>
+  </ul></li>
+  <li><a href="#비결-중-하나는-아마-그녀의-유머-감각이었을-것이다.-120번째-생일에" id="toc-비결-중-하나는-아마-그녀의-유머-감각이었을-것이다.-120번째-생일에" class="nav-link" data-scroll-target="#비결-중-하나는-아마-그녀의-유머-감각이었을-것이다.-120번째-생일에">비결 중 하나는 아마 그녀의 유머 감각이었을 것이다. 120번째 생일에</a>
+  <ul class="collapse">
   <li><a href="#월터-브루닝" id="toc-월터-브루닝" class="nav-link" data-scroll-target="#월터-브루닝">월터 브루닝</a></li>
+  </ul></li>
+  <li><a href="#년-세상을-떠나기-전-목사에게-이런-말을-했다고-전해진다.-하느님" id="toc-년-세상을-떠나기-전-목사에게-이런-말을-했다고-전해진다.-하느님" class="nav-link" data-scroll-target="#년-세상을-떠나기-전-목사에게-이런-말을-했다고-전해진다.-하느님">2011년 세상을 떠나기 전 목사에게 이런 말을 했다고 전해진다. 하느님</a>
+  <ul class="collapse">
   <li><a href="#알렉산더-이미치" id="toc-알렉산더-이미치" class="nav-link" data-scroll-target="#알렉산더-이미치">알렉산더 이미치</a></li>
+  </ul></li>
+  <li><a href="#이미치는-자신의-장수를-술을-한-번도-마시지-않은-것-등에-돌렸다.-노" id="toc-이미치는-자신의-장수를-술을-한-번도-마시지-않은-것-등에-돌렸다.-노" class="nav-link" data-scroll-target="#이미치는-자신의-장수를-술을-한-번도-마시지-않은-것-등에-돌렸다.-노">이미치는 자신의 장수를 술을 한 번도 마시지 않은 것 등에 돌렸다. “노</a>
+  <ul class="collapse">
   <li><a href="#이키가이의-예술가들" id="toc-이키가이의-예술가들" class="nav-link" data-scroll-target="#이키가이의-예술가들"><em>이키가이</em>의 예술가들</a></li>
+  </ul></li>
+  <li><a href="#백-살에-접어든-화가-카르멘-에레라carmen-herrera는-여든아" id="toc-백-살에-접어든-화가-카르멘-에레라carmen-herrera는-여든아" class="nav-link" data-scroll-target="#백-살에-접어든-화가-카르멘-에레라carmen-herrera는-여든아">백 살에 접어든 화가 카르멘 에레라(Carmen Herrera)는 여든아</a>
+  <ul class="collapse">
   <li><a href="#멈추지-않는-배움" id="toc-멈추지-않는-배움" class="nav-link" data-scroll-target="#멈추지-않는-배움">멈추지 않는 배움</a></li>
+  </ul></li>
+  <li><a href="#여든셋의-건축가-프랭크-게리frank-gehry는-일부-건물은-고용" id="toc-여든셋의-건축가-프랭크-게리frank-gehry는-일부-건물은-고용" class="nav-link" data-scroll-target="#여든셋의-건축가-프랭크-게리frank-gehry는-일부-건물은-고용">여든셋의 건축가 프랭크 게리(Frank Gehry)는 일부 건물은 “고용</a>
+  <ul class="collapse">
   <li><a href="#일본의-장수" id="toc-일본의-장수" class="nav-link" data-scroll-target="#일본의-장수">일본의 장수</a></li>
   </ul></li>
-  <li><a href="#vi.-일본-백세인들에게-배우다" id="toc-vi.-일본-백세인들에게-배우다" class="nav-link" data-scroll-target="#vi.-일본-백세인들에게-배우다">VI. 일본 백세인들에게 배우다</a>
+  <li><a href="#vi.-일본-백세인들에게-배우다" id="toc-vi.-일본-백세인들에게-배우다" class="nav-link" data-scroll-target="#vi.-일본-백세인들에게-배우다">VI. 일본 백세인들에게 배우다</a></li>
+  <li><a href="#곧바로-깨달았다.-시간이-그곳에서는-멎은-것-같다는-걸.-마을-전체가-끝" id="toc-곧바로-깨달았다.-시간이-그곳에서는-멎은-것-같다는-걸.-마을-전체가-끝" class="nav-link" data-scroll-target="#곧바로-깨달았다.-시간이-그곳에서는-멎은-것-같다는-걸.-마을-전체가-끝">곧바로 깨달았다. 시간이 그곳에서는 멎은 것 같다는 걸. 마을 전체가 끝</a>
   <ul class="collapse">
   <li><a href="#오기미-도착" id="toc-오기미-도착" class="nav-link" data-scroll-target="#오기미-도착">오기미 도착</a></li>
+  </ul></li>
+  <li><a href="#집-몇-채가-보이긴-하지만-바닷가-근처나-옆길로-들어설-수-있는-좁은-골" id="toc-집-몇-채가-보이긴-하지만-바닷가-근처나-옆길로-들어설-수-있는-좁은-골" class="nav-link" data-scroll-target="#집-몇-채가-보이긴-하지만-바닷가-근처나-옆길로-들어설-수-있는-좁은-골">집 몇 채가 보이긴 하지만 바닷가 근처나 옆길로 들어설 수 있는 좁은 골</a>
+  <ul class="collapse">
   <li><a href="#공동체의-삶" id="toc-공동체의-삶" class="nav-link" data-scroll-target="#공동체의-삶">공동체의 삶</a></li>
+  </ul></li>
+  <li><a href="#그들은-장난기-많고-재밌고-예측할-수-없다.-현지인들은-부나가야가-산" id="toc-그들은-장난기-많고-재밌고-예측할-수-없다.-현지인들은-부나가야가-산" class="nav-link" data-scroll-target="#그들은-장난기-많고-재밌고-예측할-수-없다.-현지인들은-부나가야가-산">그들은 장난기 많고, 재밌고, 예측할 수 없다. 현지인들은 부나가야가 산</a>
+  <ul class="collapse">
   <li><a href="#생일-파티" id="toc-생일-파티" class="nav-link" data-scroll-target="#생일-파티">생일 파티</a></li>
+  </ul></li>
+  <li><a href="#마을에서-보내는-일주일-동안-참석한-첫-파티이지만-마지막은-아니었다.-우" id="toc-마을에서-보내는-일주일-동안-참석한-첫-파티이지만-마지막은-아니었다.-우" class="nav-link" data-scroll-target="#마을에서-보내는-일주일-동안-참석한-첫-파티이지만-마지막은-아니었다.-우">마을에서 보내는 일주일 동안 참석한 첫 파티이지만 마지막은 아니었다. 우</a>
+  <ul class="collapse">
   <li><a href="#매일-함께-축하하기" id="toc-매일-함께-축하하기" class="nav-link" data-scroll-target="#매일-함께-축하하기">매일 함께 축하하기</a></li>
+  </ul></li>
+  <li><a href="#함께-놀고-축하하는-것-외에도-영성은-마을-주민들의-행복에-필수적이다." id="toc-함께-놀고-축하하는-것-외에도-영성은-마을-주민들의-행복에-필수적이다." class="nav-link" data-scroll-target="#함께-놀고-축하하는-것-외에도-영성은-마을-주민들의-행복에-필수적이다.">함께 놀고 축하하는 것 외에도, 영성은 마을 주민들의 행복에 필수적이다.</a>
+  <ul class="collapse">
   <li><a href="#오키나와의-신들" id="toc-오키나와의-신들" class="nav-link" data-scroll-target="#오키나와의-신들">오키나와의 신들</a></li>
+  </ul></li>
+  <li><a href="#마부이는-육체적-접촉으로-사람에서-사람에게-옮겨가기도-한다.-손녀에게-반" id="toc-마부이는-육체적-접촉으로-사람에서-사람에게-옮겨가기도-한다.-손녀에게-반" class="nav-link" data-scroll-target="#마부이는-육체적-접촉으로-사람에서-사람에게-옮겨가기도-한다.-손녀에게-반">마부이는 육체적 접촉으로 사람에서 사람에게 옮겨가기도 한다. 손녀에게 반</a>
+  <ul class="collapse">
   <li><a href="#늙을수록-강해진다" id="toc-늙을수록-강해진다" class="nav-link" data-scroll-target="#늙을수록-강해진다">늙을수록 강해진다</a></li>
+  </ul></li>
+  <li><a href="#오기미-노인-클럽-연합회" id="toc-오기미-노인-클럽-연합회" class="nav-link" data-scroll-target="#오기미-노인-클럽-연합회"><em>오기미 노인 클럽 연합회</em></a>
+  <ul class="collapse">
   <li><a href="#인터뷰" id="toc-인터뷰" class="nav-link" data-scroll-target="#인터뷰">인터뷰</a></li>
+  </ul></li>
+  <li><a href="#비결-같은-건-없어요.-요령은-그냥-사는-거예요." id="toc-비결-같은-건-없어요.-요령은-그냥-사는-거예요." class="nav-link" data-scroll-target="#비결-같은-건-없어요.-요령은-그냥-사는-거예요.">“비결 같은 건 없어요. 요령은 그냥 사는 거예요.”</a>
+  <ul class="collapse">
   <li><a href="#오기미-라이프스타일의-열쇠들" id="toc-오기미-라이프스타일의-열쇠들" class="nav-link" data-scroll-target="#오기미-라이프스타일의-열쇠들">오기미 라이프스타일의 열쇠들</a></li>
   </ul></li>
-  <li><a href="#vii.-이키가이-식단" id="toc-vii.-이키가이-식단" class="nav-link" data-scroll-target="#vii.-이키가이-식단">VII. 이키가이 식단</a>
+  <li><a href="#vii.-이키가이-식단" id="toc-vii.-이키가이-식단" class="nav-link" data-scroll-target="#vii.-이키가이-식단">VII. 이키가이 식단</a></li>
+  <li><a href="#전문가들은-우선-오키나와가-일본에서-유일하게-기차가-없는-지방이라고-짚는" id="toc-전문가들은-우선-오키나와가-일본에서-유일하게-기차가-없는-지방이라고-짚는" class="nav-link" data-scroll-target="#전문가들은-우선-오키나와가-일본에서-유일하게-기차가-없는-지방이라고-짚는">전문가들은 우선 오키나와가 일본에서 유일하게 기차가 없는 지방이라고 짚는</a>
   <ul class="collapse">
   <li><a href="#오키나와의-기적의-다이어트" id="toc-오키나와의-기적의-다이어트" class="nav-link" data-scroll-target="#오키나와의-기적의-다이어트">오키나와의 기적의 다이어트</a></li>
+  </ul></li>
+  <li><a href="#칼로리도-덜-섭취한다-하루-평균-1785kcal로-일본-본토의-2" id="toc-칼로리도-덜-섭취한다-하루-평균-1785kcal로-일본-본토의-2" class="nav-link" data-scroll-target="#칼로리도-덜-섭취한다-하루-평균-1785kcal로-일본-본토의-2">칼로리도 덜 섭취한다: 하루 평균 1,785kcal로, 일본 본토의 2,</a>
+  <ul class="collapse">
   <li><a href="#하라하치부" id="toc-하라하치부" class="nav-link" data-scroll-target="#하라하치부">하라하치부</a></li>
+  </ul></li>
+  <li><a href="#하라하치부는-오래된-수련이다.-12세기-선禪-불교-서적-자선용집기" id="toc-하라하치부는-오래된-수련이다.-12세기-선禪-불교-서적-자선용집기" class="nav-link" data-scroll-target="#하라하치부는-오래된-수련이다.-12세기-선禪-불교-서적-자선용집기">하라하치부는 오래된 수련이다. 12세기 선(禪) 불교 서적 『자선용집기(</a>
+  <ul class="collapse">
   <li><a href="#그래서-적게-먹으면-오래-산다는-말인가" id="toc-그래서-적게-먹으면-오래-산다는-말인가" class="nav-link" data-scroll-target="#그래서-적게-먹으면-오래-산다는-말인가">그래서, 적게 먹으면 오래 산다는 말인가?</a></li>
+  </ul></li>
+  <li><a href="#수많은-이점-가운데-단식은-소화계를-청소하고-쉬게-해-준다." id="toc-수많은-이점-가운데-단식은-소화계를-청소하고-쉬게-해-준다." class="nav-link" data-scroll-target="#수많은-이점-가운데-단식은-소화계를-청소하고-쉬게-해-준다.">수많은 이점 가운데 단식은 소화계를 청소하고 쉬게 해 준다.</a>
+  <ul class="collapse">
   <li><a href="#오키나와-식단-속-자연-항산화제-15가지" id="toc-오키나와-식단-속-자연-항산화제-15가지" class="nav-link" data-scroll-target="#오키나와-식단-속-자연-항산화제-15가지">오키나와 식단 속 자연 항산화제 15가지</a></li>
+  </ul></li>
+  <li><a href="#양파-콩나물-헤치마오이-같은-박-대두삶거나-날것으로" id="toc-양파-콩나물-헤치마오이-같은-박-대두삶거나-날것으로" class="nav-link" data-scroll-target="#양파-콩나물-헤치마오이-같은-박-대두삶거나-날것으로">양파 / 콩나물 / 헤치마(오이 같은 박) / 대두(삶거나 날것으로) /</a>
+  <ul class="collapse">
   <li><a href="#삔빤차-오키나와의-대표-차" id="toc-삔빤차-오키나와의-대표-차" class="nav-link" data-scroll-target="#삔빤차-오키나와의-대표-차">삔빤차: 오키나와의 대표 차</a></li>
+  </ul></li>
+  <li><a href="#서구에서-정확히-같은-배합을-찾기는-어렵겠지만-자스민-차나-좋은-품질의" id="toc-서구에서-정확히-같은-배합을-찾기는-어렵겠지만-자스민-차나-좋은-품질의" class="nav-link" data-scroll-target="#서구에서-정확히-같은-배합을-찾기는-어렵겠지만-자스민-차나-좋은-품질의">서구에서 정확히 같은 배합을 찾기는 어렵겠지만 자스민 차나 좋은 품질의</a>
+  <ul class="collapse">
   <li><a href="#녹차의-비밀" id="toc-녹차의-비밀" class="nav-link" data-scroll-target="#녹차의-비밀">녹차의 비밀</a></li>
+  </ul></li>
+  <li><a href="#요약하자면-녹차든-백차든-매일-마시면-체내-활성산소를-줄여-더-오래-젊" id="toc-요약하자면-녹차든-백차든-매일-마시면-체내-활성산소를-줄여-더-오래-젊" class="nav-link" data-scroll-target="#요약하자면-녹차든-백차든-매일-마시면-체내-활성산소를-줄여-더-오래-젊">요약하자면: 녹차든 백차든 매일 마시면 체내 활성산소를 줄여 더 오래 젊</a>
+  <ul class="collapse">
   <li><a href="#강력한-시쿠와사" id="toc-강력한-시쿠와사" class="nav-link" data-scroll-target="#강력한-시쿠와사">강력한 <em>시쿠와사</em></a></li>
   </ul></li>
-  <li><a href="#viii.-부드러운-움직임-더-긴-삶" id="toc-viii.-부드러운-움직임-더-긴-삶" class="nav-link" data-scroll-target="#viii.-부드러운-움직임-더-긴-삶">VIII. 부드러운 움직임, 더 긴 삶</a>
+  <li><a href="#viii.-부드러운-움직임-더-긴-삶" id="toc-viii.-부드러운-움직임-더-긴-삶" class="nav-link" data-scroll-target="#viii.-부드러운-움직임-더-긴-삶">VIII. 부드러운 움직임, 더 긴 삶</a></li>
+  <li><a href="#장수-마을-오기미를-방문했을-때-우리는-여든과-아흔이-넘은-사람들조차-여" id="toc-장수-마을-오기미를-방문했을-때-우리는-여든과-아흔이-넘은-사람들조차-여" class="nav-link" data-scroll-target="#장수-마을-오기미를-방문했을-때-우리는-여든과-아흔이-넘은-사람들조차-여">장수 마을 오기미를 방문했을 때 우리는 여든과 아흔이 넘은 사람들조차 여</a>
   <ul class="collapse">
   <li><a href="#의자에서-일어나는-것만큼-쉽다" id="toc-의자에서-일어나는-것만큼-쉽다" class="nav-link" data-scroll-target="#의자에서-일어나는-것만큼-쉽다">의자에서 일어나는 것만큼 쉽다</a></li>
+  </ul></li>
+  <li><a href="#이후-페이지에서-건강과-장수를-촉진하는-수련-몇-가지를-살펴보겠다.-다만" id="toc-이후-페이지에서-건강과-장수를-촉진하는-수련-몇-가지를-살펴보겠다.-다만" class="nav-link" data-scroll-target="#이후-페이지에서-건강과-장수를-촉진하는-수련-몇-가지를-살펴보겠다.-다만">이후 페이지에서 건강과 장수를 촉진하는 수련 몇 가지를 살펴보겠다. 다만</a>
+  <ul class="collapse">
   <li><a href="#라디오-타이소" id="toc-라디오-타이소" class="nav-link" data-scroll-target="#라디오-타이소">라디오 타이소</a></li>
+  </ul></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><img src="images/index-94_1.jpg" class="img-fluid"></a>
+  <ul class="collapse">
   <li><a href="#요가" id="toc-요가" class="nav-link" data-scroll-target="#요가">요가</a></li>
+  </ul></li>
+  <li><a href="#정신적육체적-정화" id="toc-정신적육체적-정화" class="nav-link" data-scroll-target="#정신적육체적-정화">- 정신적·육체적 정화</a>
+  <ul class="collapse">
   <li><a href="#요가의-유파" id="toc-요가의-유파" class="nav-link" data-scroll-target="#요가의-유파">요가의 유파</a></li>
+  </ul></li>
+  <li><a href="#하타-요가hatha-yoga-서구와-일본에서-가장-널리-퍼진-형" id="toc-하타-요가hatha-yoga-서구와-일본에서-가장-널리-퍼진-형" class="nav-link" data-scroll-target="#하타-요가hatha-yoga-서구와-일본에서-가장-널리-퍼진-형"><em>하타 요가(Hatha yoga)</em>: 서구와 일본에서 가장 널리 퍼진 형</a>
+  <ul class="collapse">
   <li><a href="#수리야-나마스카르태양-예배-하는-법" id="toc-수리야-나마스카르태양-예배-하는-법" class="nav-link" data-scroll-target="#수리야-나마스카르태양-예배-하는-법">수리야 나마스카르(태양 예배) 하는 법</a></li>
+  </ul></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"><img src="images/index-97_1.jpg" class="img-fluid"></a>
+  <ul class="collapse">
   <li><a href="#태극권" id="toc-태극권" class="nav-link" data-scroll-target="#태극권">태극권</a></li>
+  </ul></li>
+  <li><a href="#몸과-마음을-치유하는-수단으로-여겨지기도-했던-태극권은-점점-건강과-내적" id="toc-몸과-마음을-치유하는-수단으로-여겨지기도-했던-태극권은-점점-건강과-내적" class="nav-link" data-scroll-target="#몸과-마음을-치유하는-수단으로-여겨지기도-했던-태극권은-점점-건강과-내적">몸과 마음을 치유하는 수단으로 여겨지기도 했던 태극권은 점점 건강과 내적</a>
+  <ul class="collapse">
   <li><a href="#태극권의-유파" id="toc-태극권의-유파" class="nav-link" data-scroll-target="#태극권의-유파">태극권의 유파</a></li>
+  </ul></li>
+  <li><a href="#자신과-상대를-알기" id="toc-자신과-상대를-알기" class="nav-link" data-scroll-target="#자신과-상대를-알기">4. 자신과 상대를 알기</a>
+  <ul class="collapse">
   <li><a href="#태극권의-십대-원칙" id="toc-태극권의-십대-원칙" class="nav-link" data-scroll-target="#태극권의-십대-원칙">태극권의 십대 원칙</a></li>
+  </ul></li>
+  <li><a href="#움직임-속에서-고요함을-찾아라.-활동적인-몸은-고요한-마음으로-이" id="toc-움직임-속에서-고요함을-찾아라.-활동적인-몸은-고요한-마음으로-이" class="nav-link" data-scroll-target="#움직임-속에서-고요함을-찾아라.-활동적인-몸은-고요한-마음으로-이">10. 움직임 속에서 고요함을 찾아라. 활동적인 몸은 고요한 마음으로 이</a>
+  <ul class="collapse">
   <li><a href="#구름-본떠서" id="toc-구름-본떠서" class="nav-link" data-scroll-target="#구름-본떠서">구름 본떠서</a></li>
+  </ul></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"><img src="images/index-100_1.jpg" class="img-fluid"></a>
+  <ul class="collapse">
   <li><a href="#기공" id="toc-기공" class="nav-link" data-scroll-target="#기공">기공</a></li>
+  </ul></li>
+  <li><a href="#동작은-전형적으로-부드럽지만-수련은-강렬하다." id="toc-동작은-전형적으로-부드럽지만-수련은-강렬하다." class="nav-link" data-scroll-target="#동작은-전형적으로-부드럽지만-수련은-강렬하다.">동작은 전형적으로 부드럽지만 수련은 강렬하다.</a>
+  <ul class="collapse">
   <li><a href="#기공의-이점" id="toc-기공의-이점" class="nav-link" data-scroll-target="#기공의-이점">기공의 이점</a></li>
+  </ul></li>
+  <li><a href="#이런-예술들을-수련하면-몸매만-유지되는-게-아니라-수명까지-늘어난다." id="toc-이런-예술들을-수련하면-몸매만-유지되는-게-아니라-수명까지-늘어난다." class="nav-link" data-scroll-target="#이런-예술들을-수련하면-몸매만-유지되는-게-아니라-수명까지-늘어난다.">이런 예술들을 수련하면 몸매만 유지되는 게 아니라 수명까지 늘어난다.</a>
+  <ul class="collapse">
   <li><a href="#기공-수련법" id="toc-기공-수련법" class="nav-link" data-scroll-target="#기공-수련법">기공 수련법</a></li>
+  </ul></li>
+  <li><a href="#이렇게-하면-유기체-전체가-단일-목표를-향해-함께-작동할-준비를-갖춘다." id="toc-이렇게-하면-유기체-전체가-단일-목표를-향해-함께-작동할-준비를-갖춘다." class="nav-link" data-scroll-target="#이렇게-하면-유기체-전체가-단일-목표를-향해-함께-작동할-준비를-갖춘다.">이렇게 하면 유기체 전체가 단일 목표를 향해 함께 작동할 준비를 갖춘다.</a>
+  <ul class="collapse">
   <li><a href="#기공의-오행五行" id="toc-기공의-오행五行" class="nav-link" data-scroll-target="#기공의-오행五行">기공의 오행(五行)</a></li>
+  </ul></li>
+  <li><a href="#숨을-내쉬며-팔을-옆으로-내려-초기-우치-자세로-돌아간다." id="toc-숨을-내쉬며-팔을-옆으로-내려-초기-우치-자세로-돌아간다." class="nav-link" data-scroll-target="#숨을-내쉬며-팔을-옆으로-내려-초기-우치-자세로-돌아간다.">2. 숨을 내쉬며 팔을 옆으로 내려 초기 우치 자세로 돌아간다.</a>
+  <ul class="collapse">
   <li><a href="#시아츠" id="toc-시아츠" class="nav-link" data-scroll-target="#시아츠">시아츠</a></li>
+  </ul></li>
+  <li><a href="#갈홍ge-hong" id="toc-갈홍ge-hong" class="nav-link" data-scroll-target="#갈홍ge-hong">갈홍(Ge Hong)</a>
+  <ul class="collapse">
   <li><a href="#더-잘-숨쉬며-더-오래-살기" id="toc-더-잘-숨쉬며-더-오래-살기" class="nav-link" data-scroll-target="#더-잘-숨쉬며-더-오래-살기">더 잘 숨쉬며 더 오래 살기</a></li>
   </ul></li>
-  <li><a href="#ix.-회복탄력성과-와비사비" id="toc-ix.-회복탄력성과-와비사비" class="nav-link" data-scroll-target="#ix.-회복탄력성과-와비사비">IX. 회복탄력성과 <em>와비사비</em></a>
+  <li><a href="#ix.-회복탄력성과-와비사비" id="toc-ix.-회복탄력성과-와비사비" class="nav-link" data-scroll-target="#ix.-회복탄력성과-와비사비">IX. 회복탄력성과 <em>와비사비</em></a></li>
+  <li><a href="#스트레스와-걱정이-우리를-늙게-두지-않으면서-삶의-도전에-맞서는-법" id="toc-스트레스와-걱정이-우리를-늙게-두지-않으면서-삶의-도전에-맞서는-법" class="nav-link" data-scroll-target="#스트레스와-걱정이-우리를-늙게-두지-않으면서-삶의-도전에-맞서는-법"><em>스트레스와 걱정이 우리를 늙게 두지 않으면서 삶의 도전에 맞서는 법</em></a>
   <ul class="collapse">
   <li><a href="#회복탄력성이란" id="toc-회복탄력성이란" class="nav-link" data-scroll-target="#회복탄력성이란">회복탄력성이란?</a></li>
+  </ul></li>
+  <li><a href="#조만간-우리-모두는-어려운-순간과-마주해야-하며-그-마주하는-방식이-삶의" id="toc-조만간-우리-모두는-어려운-순간과-마주해야-하며-그-마주하는-방식이-삶의" class="nav-link" data-scroll-target="#조만간-우리-모두는-어려운-순간과-마주해야-하며-그-마주하는-방식이-삶의">조만간 우리 모두는 어려운 순간과 마주해야 하며 그 마주하는 방식이 삶의</a>
+  <ul class="collapse">
   <li><a href="#나나-코로비-야-오키-七転び八起き" id="toc-나나-코로비-야-오키-七転び八起き" class="nav-link" data-scroll-target="#나나-코로비-야-오키-七転び八起き">나나 코로비 야 오키 (七転び八起き)</a></li>
+  </ul></li>
+  <li><a href="#그리고-그-둘을" id="toc-그리고-그-둘을" class="nav-link" data-scroll-target="#그리고-그-둘을"><em>그리고 그 둘을</em></a>
+  <ul class="collapse">
   <li><a href="#불교와-스토아주의를-통한-정서적-회복탄력성" id="toc-불교와-스토아주의를-통한-정서적-회복탄력성" class="nav-link" data-scroll-target="#불교와-스토아주의를-통한-정서적-회복탄력성">불교와 스토아주의를 통한 정서적 회복탄력성</a></li>
+  </ul></li>
+  <li><a href="#스토아주의에-따르면-우리의-쾌락과-욕망-자체가-문제가-아니다.-그것이-우" id="toc-스토아주의에-따르면-우리의-쾌락과-욕망-자체가-문제가-아니다.-그것이-우" class="nav-link" data-scroll-target="#스토아주의에-따르면-우리의-쾌락과-욕망-자체가-문제가-아니다.-그것이-우">스토아주의에 따르면 우리의 쾌락과 욕망 자체가 문제가 아니다. 그것이 우</a>
+  <ul class="collapse">
   <li><a href="#일어날-수-있는-최악의-일은-무엇인가" id="toc-일어날-수-있는-최악의-일은-무엇인가" class="nav-link" data-scroll-target="#일어날-수-있는-최악의-일은-무엇인가">일어날 수 있는 최악의 일은 무엇인가?</a></li>
+  </ul></li>
+  <li><a href="#고대-로마에서-가장-부자-중-하나였던-세네카seneca는-호화로운-삶" id="toc-고대-로마에서-가장-부자-중-하나였던-세네카seneca는-호화로운-삶" class="nav-link" data-scroll-target="#고대-로마에서-가장-부자-중-하나였던-세네카seneca는-호화로운-삶">고대 로마에서 가장 부자 중 하나였던 세네카(Seneca)는 호화로운 삶</a>
+  <ul class="collapse">
   <li><a href="#더-건강한-감정을-위한-명상" id="toc-더-건강한-감정을-위한-명상" class="nav-link" data-scroll-target="#더-건강한-감정을-위한-명상">더 건강한 감정을 위한 명상</a></li>
+  </ul></li>
+  <li><a href="#불교에서-가장-널리-쓰이는-만트라-하나는-부정적-감정-통제에-초점을-맞춘" id="toc-불교에서-가장-널리-쓰이는-만트라-하나는-부정적-감정-통제에-초점을-맞춘" class="nav-link" data-scroll-target="#불교에서-가장-널리-쓰이는-만트라-하나는-부정적-감정-통제에-초점을-맞춘">불교에서 가장 널리 쓰이는 만트라 하나는 부정적 감정 통제에 초점을 맞춘</a>
+  <ul class="collapse">
   <li><a href="#지금-여기-그리고-만물의-무상함" id="toc-지금-여기-그리고-만물의-무상함" class="nav-link" data-scroll-target="#지금-여기-그리고-만물의-무상함">지금 여기, 그리고 만물의 무상함</a></li>
+  </ul></li>
+  <li><a href="#세계의-덧없고-순간적이고-영원하지-않은-본성은-모든-불교-수련의-중심" id="toc-세계의-덧없고-순간적이고-영원하지-않은-본성은-모든-불교-수련의-중심" class="nav-link" data-scroll-target="#세계의-덧없고-순간적이고-영원하지-않은-본성은-모든-불교-수련의-중심">세계의 덧없고, 순간적이고, 영원하지 않은 본성은 모든 불교 수련의 중심</a>
+  <ul class="collapse">
   <li><a href="#와비사비와-일기일회一期一会" id="toc-와비사비와-일기일회一期一会" class="nav-link" data-scroll-target="#와비사비와-일기일회一期一会"><em>와비사비</em>와 <em>일기일회(一期一会)</em></a></li>
+  </ul></li>
+  <li><a href="#와비사비는-불완전함의-아름다움을-성장의-기회로-감상하라고-가르친다." id="toc-와비사비는-불완전함의-아름다움을-성장의-기회로-감상하라고-가르친다." class="nav-link" data-scroll-target="#와비사비는-불완전함의-아름다움을-성장의-기회로-감상하라고-가르친다."><em>와비사비</em>는 불완전함의 아름다움을 성장의 기회로 감상하라고 가르친다.</a>
+  <ul class="collapse">
   <li><a href="#회복탄력성-너머-안티프래질리티" id="toc-회복탄력성-너머-안티프래질리티" class="nav-link" data-scroll-target="#회복탄력성-너머-안티프래질리티">회복탄력성 너머: 안티프래질리티</a></li>
+  </ul></li>
+  <li><a href="#이제-이-개념을-일상에-어떻게-적용할-수-있는지-살펴보자." id="toc-이제-이-개념을-일상에-어떻게-적용할-수-있는지-살펴보자." class="nav-link" data-scroll-target="#이제-이-개념을-일상에-어떻게-적용할-수-있는지-살펴보자.">이제 이 개념을 일상에 어떻게 적용할 수 있는지 살펴보자.</a>
+  <ul class="collapse">
   <li><a href="#어떻게-더-안티프래질해질-수-있는가" id="toc-어떻게-더-안티프래질해질-수-있는가" class="nav-link" data-scroll-target="#어떻게-더-안티프래질해질-수-있는가">어떻게 더 안티프래질해질 수 있는가?</a></li>
   </ul></li>
-  </ul></li>
   <li><a href="#에필로그" id="toc-에필로그" class="nav-link" data-scroll-target="#에필로그">에필로그</a></li>
-  <li><a href="#결론" id="toc-결론" class="nav-link" data-scroll-target="#결론">결론</a>
-  <ul class="collapse">
+  <li><a href="#결론" id="toc-결론" class="nav-link" data-scroll-target="#결론">결론</a></li>
   <li><a href="#이키가이-10계명" id="toc-이키가이-10계명" class="nav-link" data-scroll-target="#이키가이-10계명"><em>이키가이</em> 10계명</a></li>
   </ul></li>
   </ul>
@@ -1107,7 +1359,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-heading">저자</div>
     <div class="quarto-title-meta-contents">
              <p>Héctor García </p>
              <p>Francesc Miralles </p>
@@ -1115,9 +1367,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">공개</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 1, 2016</p>
+      <p class="date">2016년 1월 1일</p>
     </div>
   </div>
   
@@ -1136,12 +1388,18 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="당신이-존재하는-이유는-무엇인가">당신이 존재하는 이유는 무엇인가?</h2>
 <p>일본인들에 따르면 누구에게나 <em>이키가이</em>가 있다. 프랑스 철학자라면 ’존재의 이유(raison d’être)’라고 불렀을 만한 무언가다. 어떤 사람들은 자신의 <em>이키가이</em>를 이미 찾았고 어떤 사람들은 아직 찾는 중이다. 하지만 사실 그것은 이미 각자의 마음속에 품겨 있다.</p>
 <p>우리의 <em>이키가이</em>는 저마다 마음 깊은 곳에 숨어 있으며 찾아내려면 인내심 있는 탐색이 필요하다. 세계에서 백세인이 가장 많은 섬, 오키나와에서 태어난 사람들에 따르면 <em>이키가이</em>란 우리가 아침에 눈을 뜨는 이유다.</p>
+</section>
+<section id="우리의-이키가이는-저마다-마음-깊은-곳에-숨어-있으며-찾아내려면-인내" class="level2">
+<h2 class="anchored" data-anchor-id="우리의-이키가이는-저마다-마음-깊은-곳에-숨어-있으며-찾아내려면-인내">우리의 <em>이키가이</em>는 저마다 마음 깊은 곳에 숨어 있으며 찾아내려면 인내</h2>
 <section id="무슨-일이-있어도-은퇴하지-마라" class="level3">
 <h3 class="anchored" data-anchor-id="무슨-일이-있어도-은퇴하지-마라">무슨 일이 있어도 은퇴하지 마라!</h3>
 <p>분명한 <em>이키가이</em>를 갖는 것은 우리 삶에 만족과 행복, 의미를 가져다준다. 이 책의 목적은 당신의 <em>이키가이</em>를 찾도록 돕고 일본 철학에서 얻은 몸·마음·영혼의 지속 가능한 건강에 대한 통찰을 나누는 것이다.</p>
 <p>일본에 살다 보면 놀라운 광경 하나가 눈에 들어온다. 은퇴한 뒤에도 사람들이 얼마나 활발하게 움직이는가 하는 것이다. 실제로 많은 일본인은 진짜로 은퇴하지 않는다. 건강이 허락하는 한 좋아하는 일을 계속한다.</p>
 <p>실제로 일본어에는 영어의 ’retire(직장을 영영 떠나다)’에 해당하는 단어가 없다. 이 나라를 잘 아는 <em>내셔널 지오그래픽</em> 기자 던 부트너(Dan Buettner)에 따르면, 일본 문화에서 삶의 목적을 갖는 것이 너무나 중요해서 우리가 아는 은퇴라는 개념 자체가 존재하지 않는다고 한다.</p>
 </section>
+</section>
+<section id="실제로-일본어에는-영어의-retire직장을-영영-떠나다에-해당하는" class="level2">
+<h2 class="anchored" data-anchor-id="실제로-일본어에는-영어의-retire직장을-영영-떠나다에-해당하는">실제로 일본어에는 영어의 ’retire(직장을 영영 떠나다)’에 해당하는</h2>
 <section id="거의-영원한-젊음의-섬" class="level3">
 <h3 class="anchored" data-anchor-id="거의-영원한-젊음의-섬">(거의) 영원한 젊음의 섬</h3>
 <p>몇몇 장수 연구들은 강한 공동체 의식과 분명한 <em>이키가이</em>가 유명한 일본식 건강 식단만큼어쩌면 그보다 더중요하다고 시사한다. 오키나와와 이른바 블루존(Blue Zones)사람들이 가장 오래 사는 지역들의 백세인들에 대한 최근 의학 연구는 이 놀라운 사람들에 관한 흥미로운 사실 여럿을 밝혀 낸다.</p>
@@ -1151,12 +1409,18 @@ ul.task-list li input[type="checkbox"] {
 <p>여성은 폐경기 증상이 더 완만하며 남녀 모두 성호르몬 수치를 훨씬 늦은 나이까지 유지한다.</p>
 <p>치매 발병률은 세계 평균보다 훨씬 낮다.</p>
 </section>
+</section>
+<section id="치매-발병률은-세계-평균보다-훨씬-낮다." class="level2">
+<h2 class="anchored" data-anchor-id="치매-발병률은-세계-평균보다-훨씬-낮다.">치매 발병률은 세계 평균보다 훨씬 낮다.</h2>
 <section id="이키가이의-글자들" class="level3">
 <h3 class="anchored" data-anchor-id="이키가이의-글자들"><strong><em>이키가이</em>의 글자들</strong></h3>
 <p>일본어에서 <em>이키가이</em>는 生き甲斐로 표기한다. ’삶’을 뜻하는 生과 ’가치 있는 일’을 뜻하는 甲斐를 결합한 단어다.</p>
 <p>甲斐는 다시 두 글자로 나뉜다. ‘갑옷’, ‘첫째’, ‘선두에 서다’(전투에 임할 때 지도자로서 주도권을 잡다)를 의미하는 甲, 그리고 ‘아름답다’, ’우아하다’를 의미하는 斐다.</p>
 <p>이런 발견들은 본문에서 차차 살펴보겠지만 연구 결과는 분명하다. 오키나와 사람들의 <em>이키가이</em>에 대한 집중은 매일의 삶에 목적의식을 불어넣으며 그들의 건강과 장수에 중요한 역할을 한다.</p>
 </section>
+</section>
+<section id="이런-발견들은-본문에서-차차-살펴보겠지만-연구-결과는-분명하다.-오키나와" class="level2">
+<h2 class="anchored" data-anchor-id="이런-발견들은-본문에서-차차-살펴보겠지만-연구-결과는-분명하다.-오키나와">이런 발견들은 본문에서 차차 살펴보겠지만 연구 결과는 분명하다. 오키나와</h2>
 <section id="다섯-개의-블루존" class="level3">
 <h3 class="anchored" data-anchor-id="다섯-개의-블루존">다섯 개의 블루존</h3>
 <p>오키나와는 세계 블루존 가운데 1위다. 특히 오키나와 여성들은 세계 그 어느 곳보다 오래 살고 병도 적다. 던 부트너가 『블루존(The Blue Zones)』에서 식별하고 분석한 다섯 지역은 다음과 같다.</p>
@@ -1172,6 +1436,9 @@ ul.task-list li input[type="checkbox"] {
 <p>다섯 블루존을 연구한 과학자들에 따르면 장수의 열쇠는 식단과 운동, 삶의 목적(<em>이키가이</em>) 찾기, 그리고 강한 사회적 유대 형성즉 폭넓은 친우 관계와 원만한 가족 관계이다.</p>
 <p>이 공동체의 사람들은 스트레스를 줄이기 위해 시간을 잘 관리하고 고기나 가공식품을 조금만 먹으며 술은 적당히 마신다. 격렬한 운동은 하지 않지만 매일 몸을 움직인다. 산책을 하고 텃밭을 가꾼다. 블루존의 사람들은 운전보다 걷기를 택한다. 매일의 저강도 움직임을 수반하는 원예는 이들 거의 모두가 공유하는 실천이다.</p>
 </section>
+</section>
+<section id="이-공동체의-사람들은-스트레스를-줄이기-위해-시간을-잘-관리하고-고기나" class="level2">
+<h2 class="anchored" data-anchor-id="이-공동체의-사람들은-스트레스를-줄이기-위해-시간을-잘-관리하고-고기나">이 공동체의 사람들은 스트레스를 줄이기 위해 시간을 잘 관리하고 고기나</h2>
 <section id="퍼센트의-비밀" class="level3">
 <h3 class="anchored" data-anchor-id="퍼센트의-비밀">80퍼센트의 비밀</h3>
 <p>일본에서 가장 널리 쓰이는 말 가운데 하나가 “하라하치부(Hara hachi bu)”다. 식사 전후로 되뇌는 이 말은 ‘배를 80퍼센트만 채워라’ 정도의 뜻이다. 옛 지혜는 배가 부를 때까지 먹는 것을 경계한다. 그래서 오키나와 사람들은 위가 80퍼센트 찼다고 느껴지면 젓가락을 내려놓는다. 과식해서 소화에 긴 시간을 쏟아붓고 세포 산화를 가속시키는 몸을 만드는 대신 말이다.</p>
@@ -1180,6 +1447,9 @@ ul.task-list li input[type="checkbox"] {
 <p>영양학자들의 최근 연구에 따르면 오키나와 사람들은 하루 평균 1,800~1,900칼로리를 섭취한다. 미국인의 2,200~3,300칼로리와 비교되는 수치다. 체질량지수는 18에서 22 사이인 반면 미국인의 경우 26~27이다.</p>
 <p>오키나와 식단은 두부, 고구마, 생선(주 삼 회), 채소(하루 약 11온스)가 풍부하다. 영양을 다루는 장에서 이 80퍼센트에 포함되는 건강하고 항산화 성분이 풍부한 식품을 살펴보겠다.</p>
 </section>
+</section>
+<section id="오키나와-식단은-두부-고구마-생선주-삼-회-채소하루-약-11온" class="level2">
+<h2 class="anchored" data-anchor-id="오키나와-식단은-두부-고구마-생선주-삼-회-채소하루-약-11온">오키나와 식단은 두부, 고구마, 생선(주 삼 회), 채소(하루 약 11온</h2>
 <section id="모아이-평생-이어지는-유대" class="level3">
 <h3 class="anchored" data-anchor-id="모아이-평생-이어지는-유대"><em>모아이</em>: 평생 이어지는 유대</h3>
 <p>오키나와에서는 지역 공동체 안에서 깊은 유대를 맺는 것이 관습이다. <em>모아이(moai)</em>는 공통의 관심사를 가진 사람들이 서로를 살피고 보듬는 비공식적인 모임이다. 많은 사람들에게 공동체에 봉사하는 일은 그들의 <em>이키가이</em>의 일부가 된다.</p>
@@ -1193,6 +1463,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="ii.-노화-방지의-비결" class="level2">
 <h2 class="anchored" data-anchor-id="ii.-노화-방지의-비결">II. 노화 방지의 비결</h2>
 <p><em>길고 행복한 삶으로 이어지는 사소한 것들</em></p>
+</section>
+<section id="길고-행복한-삶으로-이어지는-사소한-것들" class="level2">
+<h2 class="anchored" data-anchor-id="길고-행복한-삶으로-이어지는-사소한-것들"><em>길고 행복한 삶으로 이어지는 사소한 것들</em></h2>
 <section id="노화의-탈출-속도" class="level3">
 <h3 class="anchored" data-anchor-id="노화의-탈출-속도">노화의 탈출 속도</h3>
 <p>한 세기 넘게 우리는 매년 평균 0.3년씩 기대수명을 늘려 왔다. 그런데 만약 매년 기대수명을 정확히 1년씩 늘리는 기술이 손에 쥐어진다면 어떻게 될까? 이론상 우리는 생물학적 불멸을 이룬다. 노화의 ’탈출 속도(escape velocity)’에 도달한 것이다.</p>
@@ -1206,6 +1479,9 @@ ul.task-list li input[type="checkbox"] {
 <p>레이 커즈와일(Ray Kurzweil)이나 오브리 디 그레이(Aubrey de Grey) 같은 미래를 내다보는 연구자들은 수십 년 안에 이 탈출 속도에 도달할 것이라 주장한다. 다른 과학자들은 덜 낙관적이다. 기술이 얼마나 발전하더라도 우리는 결국 한계선, 그 이상 못 넘는 최대 수명 앞에 다다를 거라고 예측한다. 예컨대 일부 생물학자들은 우리 세포가 약 120년쯤 지나면 재생을 멈춘다고 주장한다.</p>
 </section>
 </section>
+</section>
+<section id="레이-커즈와일ray-kurzweil이나-오브리-디-그레이aubrey" class="level2">
+<h2 class="anchored" data-anchor-id="레이-커즈와일ray-kurzweil이나-오브리-디-그레이aubrey">레이 커즈와일(Ray Kurzweil)이나 오브리 디 그레이(Aubrey</h2>
 <section id="활동적인-마음-젊은-몸" class="level3">
 <h3 class="anchored" data-anchor-id="활동적인-마음-젊은-몸">활동적인 마음, 젊은 몸</h3>
 <p>“건강한 신체에 건강한 정신이 깃든다(mens sana in corpore sano)”는 옛 격언에는 깊은 지혜가 담겨 있다. 마음과 몸이 모두 중요하며 한쪽의 건강이 다른 쪽의 건강과 연결되어 있음을 일깨워 준다. 활동적이고 융통성 있는 마음을 유지하는 것이 젊음을 유지하는 핵심 요소 가운데 하나라는 사실이 입증되어 있다.</p>
@@ -1222,12 +1498,18 @@ ul.task-list li input[type="checkbox"] {
 <p>우리의 뉴런은 스무 살 무렵부터 이미 늙기 시작한다. 다만 지적 활동, 호기심, 배우고자 하는 욕망이 이 과정을 늦춘다.</p>
 <p>새로운 상황을 다루고, 매일 무언가를 새로 배우고, 게임을 하고, 다른 사람들과 어울리는 것이 모두가 마음을 위한 필수적인 노화 방지 전략으로 보인다. 나아가 이런 일들에 좀 더 긍정적인 태도를 취할수록 정신적 이득은 커진다.</p>
 </section>
+</section>
+<section id="새로운-상황을-다루고-매일-무언가를-새로-배우고-게임을-하고-다른" class="level2">
+<h2 class="anchored" data-anchor-id="새로운-상황을-다루고-매일-무언가를-새로-배우고-게임을-하고-다른">새로운 상황을 다루고, 매일 무언가를 새로 배우고, 게임을 하고, 다른</h2>
 <section id="스트레스-장수를-죽이는-혐의" class="level3">
 <h3 class="anchored" data-anchor-id="스트레스-장수를-죽이는-혐의">스트레스: 장수를 죽이는 혐의</h3>
 <p>실제 나이보다 늙어 보이는 사람이 많다. 조로의 원인에 관한 연구는 스트레스가 크게 한몫한다는 사실을 보여 준다. 위기의 시기에 몸은 훨씬 빨리 닳아 없어지기 때문이다. 미국스트레스연구소(American Institute of Stress)가 이 퇴행 과정을 조사한 결과, <strong>대부분의 건강 문제는 스트레스에서 비롯된다</strong>는 결론을 내렸다.</p>
 <p>하이델베르크 대학병원 연구진은 한 실험을 진행했다. 젊은 의사를 면접에 세우고 여기에 삼십 분 동안 복잡한 수학 문제를 풀게 강요해 스트레스를 한층 가중시켰다. 그런 뒤 혈액 샘플을 채취했다. 밝혀진 것은 스트레스를 받자 그의 항체가 병원체에 반응하듯 반응했다는 사실이었다. 면역 반응을 촉발하는 단백질이 활성화된 것이다. 문제는 이 반응이 유해 인자를 무력화할 뿐 아니라 건강한 세포까지 손상시켜 조로를 부른다는 점이다.</p>
 <p>캘리포니아 대학교도 비슷한 연구를 했다. 자녀 중 한 명의 병으로 높은 스트레스에 시달리는 여성 서른아홉 명의 데이터와 샘플을 채취해, 건강한 자녀를 둔 저스트레스 여성들의 샘플과 비교한 것이다. 스트레스가 염색체 말단 구조인 텔로미어를 약화시켜 세포 노화를 촉진한다는 발견이었다. 텔로미어는 세포 재생과 세포의 노화 방식에 영향을 미친다. 연구가 드러냈듯, 스트레스가 클수록 세포에 미치는 퇴행적 효과도 컸다.</p>
 </section>
+</section>
+<section id="캘리포니아-대학교도-비슷한-연구를-했다.-자녀-중-한-명의-병으로-높은" class="level2">
+<h2 class="anchored" data-anchor-id="캘리포니아-대학교도-비슷한-연구를-했다.-자녀-중-한-명의-병으로-높은">캘리포니아 대학교도 비슷한 연구를 했다. 자녀 중 한 명의 병으로 높은</h2>
 <section id="스트레스는-어떻게-작동하는가" class="level3">
 <h3 class="anchored" data-anchor-id="스트레스는-어떻게-작동하는가">스트레스는 어떻게 작동하는가?</h3>
 <p>요즘 사람들은 미친 듯한 속도로 살며 거의 항상 경쟁 상태에 놓여 있다. 이런 열기 속에서 스트레스는 몸이 잠재적으로 위험하거나 문제가 되는 정보를 받아들일 때 일으키는 자연스러운 반응이다.</p>
@@ -1244,6 +1526,9 @@ ul.task-list li input[type="checkbox"] {
 <p>따라서 도전이 마음과 몸을 활동적으로 유지하는 데 좋다 해도, 몸의 조로를 막으려면 고스트레스 라이프스타일은 손볼 필요가 있다.</p>
 </section>
 </section>
+</section>
+<section id="따라서-도전이-마음과-몸을-활동적으로-유지하는-데-좋다-해도-몸의-조로" class="level2">
+<h2 class="anchored" data-anchor-id="따라서-도전이-마음과-몸을-활동적으로-유지하는-데-좋다-해도-몸의-조로">따라서 도전이 마음과 몸을 활동적으로 유지하는 데 좋다 해도, 몸의 조로</h2>
 <section id="마음챙김으로-스트레스-줄이기" class="level3">
 <h3 class="anchored" data-anchor-id="마음챙김으로-스트레스-줄이기">마음챙김으로 스트레스 줄이기</h3>
 <p>우리가 지각하는 위협이 진짜든 아니든, 스트레스는 쉽게 확인되는 상태다. 불안을 일으킬 뿐 아니라 고도의 심인성(psychosomatic) 질환으로서 소화기관부터 피부까지 온갖 곳에 영향을 미친다.</p>
@@ -1253,12 +1538,18 @@ ul.task-list li input[type="checkbox"] {
 <p>마음챙김 상태에 이르는 방법 가운데 하나가 명상이다. 명상은 바깥세상에서 우리에게 도달하는 정보를 걸러 주는 데 도움이 된다. 호흡 운동, 요가, 바디스캔으로도 이 상태에 도달할 수 있다.</p>
 <p>마음챙김에 이르는 것은 점진적인 훈련 과정이지만 조금만 연습해도 마음을 온전히 집중시키는 법을 배울 수 있다. 그러면 스트레스가 줄고 수명은 늘어난다.</p>
 </section>
+</section>
+<section id="마음챙김에-이르는-것은-점진적인-훈련-과정이지만-조금만-연습해도-마음을" class="level2">
+<h2 class="anchored" data-anchor-id="마음챙김에-이르는-것은-점진적인-훈련-과정이지만-조금만-연습해도-마음을">마음챙김에 이르는 것은 점진적인 훈련 과정이지만 조금만 연습해도 마음을</h2>
 <section id="적은-스트레스는-몸에-좋다" class="level3">
 <h3 class="anchored" data-anchor-id="적은-스트레스는-몸에-좋다">적은 스트레스는 몸에 좋다</h3>
 <p>강한 스트레스가 지속되면 장수와 정신·신체 건강의 적이 된다고 알려져 있는 것과 달리, 낮은 수준의 스트레스는 이롭다.</p>
 <p>캘리포니아 대학교 리버사이드 캠퍼스의 심리학 교수 하워드 S. 프리드먼(Howard S. Friedman) 박사는 실험 참가자 집단을 이십여 년 넘게 관찰한 끝에 이런 사실을 발견했다. 낮은 수준의 스트레스를 유지하면서 도전에 맞서고 성공하기 위해 온 심신을 일에 쏟아 부은 사람들이, 더 여유로운 삶을 택해 일찍 은퇴한 사람들보다 오래 살았다는 것이다. 여기서 그는 적은 용량의 스트레스가 긍정적이라는 결론을 내렸다. 낮은 수준의 스트레스와 함께 사는 사람들이 더 건강한 습관을 기르고 담배도 덜 피우고 술도 덜 마시는 경향이 있기 때문이다.</p>
 <p>이런 맥락에서 보면 이 책에서 만나게 될 초장수자들110세 이상까지 사는 사람들다수가 강렬하게 산 삶과 늙어서도 계속된 일을 말하는 것이 놀랍지 않다.</p>
 </section>
+</section>
+<section id="이런-맥락에서-보면-이-책에서-만나게-될-초장수자들110세-이상까지-사는" class="level2">
+<h2 class="anchored" data-anchor-id="이런-맥락에서-보면-이-책에서-만나게-될-초장수자들110세-이상까지-사는">이런 맥락에서 보면 이 책에서 만나게 될 초장수자들110세 이상까지 사는</h2>
 <section id="오래-앉아-있으면-늙는다" class="level3">
 <h3 class="anchored" data-anchor-id="오래-앉아-있으면-늙는다">오래 앉아 있으면 늙는다</h3>
 <p>특히 서구 세계에서 좌식 생활의 증가는 고혈압과 비만 등 수많은 질병을 낳았고 이것이 다시 장수에 악영향을 미친다.</p>
@@ -1274,6 +1565,9 @@ ul.task-list li input[type="checkbox"] {
 <p><em>자신의 하루 일과를 의식적으로 돌아보기</em> 해로운 습관을 발견하고 더 긍정적인 것으로 교체하기 위해서다.</p>
 <p>이런 작은 변화만으로도 몸과 마음의 재생을 시작하고 기대수명을 늘릴 수 있다.</p>
 </section>
+</section>
+<section id="이런-작은-변화만으로도-몸과-마음의-재생을-시작하고-기대수명을-늘릴-수" class="level2">
+<h2 class="anchored" data-anchor-id="이런-작은-변화만으로도-몸과-마음의-재생을-시작하고-기대수명을-늘릴-수">이런 작은 변화만으로도 몸과 마음의 재생을 시작하고 기대수명을 늘릴 수</h2>
 <section id="모델들의-최고-비밀" class="level3">
 <h3 class="anchored" data-anchor-id="모델들의-최고-비밀">모델들의 최고 비밀</h3>
 <p>우리는 겉으로도 속으로도, 육체적으로도 정신적으로도 늙어 간다. 그런데 사람의 나이를 가장 정확히 말해 주는 것 중 하나가 피부다. 표면 아래에서 진행되는 과정에 따라 피부는 저마다 다른 질감과 색을 띠게 된다. 모델로 생계를 꾸리는 사람들 대부분은 패션쇼 전날 밤 아홉 시간에서 열 시간을 잔다고 주장한다. 그 결과 탄탄하고 주름 없는 피부, 건강하게 빛나는 윤기가 만들어진다는 것이다.</p>
@@ -1295,6 +1589,9 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>전문가들은 인공적으로 멜라토닌 생성을 촉진하는 것이 노화 과정을 늦추는 데 도움이 될 수 있는지 연구 중이다. 그렇다면 우리가 이미 장수의 비밀을 몸 안에 품고 있다는 이론이 확증되는 셈이다.</p>
 </section>
+</section>
+<section id="전문가들은-인공적으로-멜라토닌-생성을-촉진하는-것이-노화-과정을-늦추는" class="level2">
+<h2 class="anchored" data-anchor-id="전문가들은-인공적으로-멜라토닌-생성을-촉진하는-것이-노화-과정을-늦추는">전문가들은 인공적으로 멜라토닌 생성을 촉진하는 것이 노화 과정을 늦추는</h2>
 <section id="노화-방지적-태도" class="level3">
 <h3 class="anchored" data-anchor-id="노화-방지적-태도">노화 방지적 태도</h3>
 <p>마음은 몸이 얼마나 빨리 늙는지에 막대한 영향을 끼친다. 대부분의 의사들도 동의한다. 몸을 젊게 유지하는 비결은 마음을 활동적으로 유지하는 것<em>이키가이</em>의 핵심 요소이며 인생에서 어려움과 마주쳤을 때 굴복하지 않는 것이라고 말이다.</p>
@@ -1303,6 +1600,9 @@ ul.task-list li input[type="checkbox"] {
 <p>많은 백세인과 초장수자들이 비슷한 프로필을 보인다. 때로는 고단했던 충만한 삶을 살았지만 그 도전들을 긍정적인 태도로 마주하고 부딪친 장애물에 압도되지 않는 법을 알았던 것이다.</p>
 <p>2014년 111세의 나이로 세계 최고령 남성이 된 알렉산더 이미치(Alexander Imich)는 자신이 좋은 유전자를 타고났음을 알았지만 다른 요인도 작용했음을 이해하고 있었다. “당신이 살아 온 삶 역시 장수만큼이나, 아니면 그보다 더 중요합니다.” 그는 2014년 『기네스 세계 기록』에 오른 뒤 로이터와의 인터뷰에서 이렇게 말했다.</p>
 </section>
+</section>
+<section id="년-111세의-나이로-세계-최고령-남성이-된-알렉산더-이미치al" class="level2">
+<h2 class="anchored" data-anchor-id="년-111세의-나이로-세계-최고령-남성이-된-알렉산더-이미치al">2014년 111세의 나이로 세계 최고령 남성이 된 알렉산더 이미치(Al</h2>
 <section id="장수-찬가" class="level3">
 <h3 class="anchored" data-anchor-id="장수-찬가">장수 찬가</h3>
 <p>장수 기네스 기록을 보유한 마을 오기미에 머무는 동안, 곧 백 살이 될 한 여성이 우리를 위해 일본어와 현지 방언이 섞인 노래를 불러 주었다:</p>
@@ -1313,6 +1613,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="iii.-로고테라피에서-이키가이까지" class="level2">
 <h2 class="anchored" data-anchor-id="iii.-로고테라피에서-이키가이까지">III. 로고테라피에서 <em>이키가이</em>까지</h2>
 <p><em>목적을 찾음으로써 더 오래, 더 잘 사는 법</em></p>
+</section>
+<section id="목적을-찾음으로써-더-오래-더-잘-사는-법" class="level2">
+<h2 class="anchored" data-anchor-id="목적을-찾음으로써-더-오래-더-잘-사는-법"><em>목적을 찾음으로써 더 오래, 더 잘 사는 법</em></h2>
 <section id="로고테라피란-무엇인가" class="level3">
 <h3 class="anchored" data-anchor-id="로고테라피란-무엇인가">로고테라피란 무엇인가?</h3>
 <p>동료 한 사람이 빅터 프랭클에게 자신의 심리학 학파를 한마디로 정의해 달라고 청한 적이 있다. 프랭클의 대답은 이렇다. “글쎄요, 로고테라피에서 환자는 허리를 펴고 앉아 때로는 듣기 거북한 이야기를 들어야 합니다.” 그런데 그 동료는 바로 직전에 정신분석을 이렇게 소개한 참이었다. “정신분석에서 환자는 소파에 드러누워 때로는 입에 담기 거북한 이야기를 하죠.”</p>
@@ -1324,6 +1627,9 @@ ul.task-list li input[type="checkbox"] {
 <p>프랭클이 자신의 빈 클리닉에서 진행한 연구에 따르면 환자든 직원이든 약 80퍼센트가 인간은 살아갈 이유가 필요하다고 믿었고 약 60퍼센트는 자신의 삶에 목숨을 걸 만한 누군가 혹은 무언가가 있다고 느꼈다.</p>
 </section>
 </section>
+</section>
+<section id="프랭클이-자신의-빈-클리닉에서-진행한-연구에-따르면-환자든-직원이든-약" class="level2">
+<h2 class="anchored" data-anchor-id="프랭클이-자신의-빈-클리닉에서-진행한-연구에-따르면-환자든-직원이든-약">프랭클이 자신의 빈 클리닉에서 진행한 연구에 따르면 환자든 직원이든 약</h2>
 <section id="의미를-찾아서" class="level3">
 <h3 class="anchored" data-anchor-id="의미를-찾아서">의미를 찾아서</h3>
 <p>목적을 향한 탐색은 프랭클이 자신의 목표를 달성하게 해 준 개인적 원동력이 되었다. 로고테라피의 과정은 다음 다섯 단계로 요약할 수 있다:</p>
@@ -1349,6 +1655,9 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>정신분석</strong>: 갈등을 조정하고 충동과 본능을 만족시키려 한다. <strong>로고테라피</strong>: 환자가 삶에서 의미를 발견하고 도덕적 원칙을 충족하도록 돕는다.</p>
 </section>
 </section>
+</section>
+<section id="정신분석-갈등을-조정하고-충동과-본능을-만족시키려-한다.-로" class="level2">
+<h2 class="anchored" data-anchor-id="정신분석-갈등을-조정하고-충동과-본능을-만족시키려-한다.-로"><strong>정신분석</strong>: 갈등을 조정하고 충동과 본능을 만족시키려 한다. **로</h2>
 <section id="자신을-위해-싸워라" class="level3">
 <h3 class="anchored" data-anchor-id="자신을-위해-싸워라">자신을 위해 싸워라</h3>
 <p>삶에 목적이 없거나, 그 목적이 삐뚤어졌을 때 실존적 좌절이 생겨난다. 그러나 프랭클의 견해로는 이 좌절을 이단이나 신경증의 증상으로 볼 필요가 없다. 오히려 그것은 긍정적인 것변화의 촉매가 될 수 있다.</p>
@@ -1363,6 +1672,9 @@ ul.task-list li input[type="checkbox"] {
 <p>로고테라피에 따르면 삶의 목적을 발견하는 것이 그 실존적 공허를 채우는 데 도움이 된다. 자신의 문제에 직면하고 목표를 행동으로 옮겼던 프랭클은 늙어가면서도 평온하게 자신의 삶을 돌아볼 수 있었다. 그는 아직 젊음을 누리는 사람들을 부러워할 필요가 없었다. 그가 <em>무언가를 위해</em> 살았음을 보여 주는 광범위한 경험을 이미 쌓아 두었기 때문이다.</p>
 </section>
 </section>
+</section>
+<section id="로고테라피에-따르면-삶의-목적을-발견하는-것이-그-실존적-공허를-채우는" class="level2">
+<h2 class="anchored" data-anchor-id="로고테라피에-따르면-삶의-목적을-발견하는-것이-그-실존적-공허를-채우는">로고테라피에 따르면 삶의 목적을 발견하는 것이 그 실존적 공허를 채우는</h2>
 <section id="로고테라피를-통한-더-나은-삶-핵심-아이디어들" class="level3">
 <h3 class="anchored" data-anchor-id="로고테라피를-통한-더-나은-삶-핵심-아이디어들">로고테라피를 통한 더 나은 삶: 핵심 아이디어들</h3>
 <p>우리는 사르트르가 주장했듯 삶의 의미를 <em>창조</em>하는 게 아니다. 우리는 그것을 <em>발견</em>한다.</p>
@@ -1372,17 +1684,26 @@ ul.task-list li input[type="checkbox"] {
 <p>우리 모두는 고귀한 일도 끔찍한 일도 할 수 있는 잠재력을 지녔다. 어느 쪽에 서게 되는가는 우리가 놓인 처지가 아니라 우리의 결정에 달려 있다.</p>
 <p>이후 페이지에서 프랭클의 직접적인 사례 네 건으로 의미와 목적의 탐색을 더 잘 이해해 보겠다.</p>
 </section>
+</section>
+<section id="이후-페이지에서-프랭클의-직접적인-사례-네-건으로-의미와-목적의-탐색을" class="level2">
+<h2 class="anchored" data-anchor-id="이후-페이지에서-프랭클의-직접적인-사례-네-건으로-의미와-목적의-탐색을">이후 페이지에서 프랭클의 직접적인 사례 네 건으로 의미와 목적의 탐색을</h2>
 <section id="사례-연구-빅터-프랭클" class="level3">
 <h3 class="anchored" data-anchor-id="사례-연구-빅터-프랭클">사례 연구: 빅터 프랭클</h3>
 <p>독일 강제수용소에서그리고 훗날 일본과 한국에 지어진 수용소에서도정신과 의사들은 한 가지를 확인했다. 살아남을 가능성이 가장 컸던 포로들은 수용소 밖에서 해내고 싶은 일을 가진 사람들, 산 채로 그곳을 빠져나가야겠다는 강렬한 필요를 느낀 사람들이었다는 것이다. 프랭클도 그러했다. 석방 후 로고테라피 학파를 성공적으로 발전시킨 그는, 자신이 자기 치료법의 첫 번째 환자였음을 깨달았다.</p>
 <p>프랭클에게는 이루어야 할 목표가 있었고 그것이 그를 버티게 만들었다. 그는 아우슈비츠에 도착할 때 자신의 커리어 전체에서 쌓은 이론과 연구를 모두 담은, 출간 준비가 끝난 원고를 들고 있었다. 원고가 압수되자 그는 모든 것을 다시 쓰고 말겠다는 충동을 느꼈다. 그 필요가 그를 몰아세웠고 강제수용소의 끊임없는 공포와 회의 한가운데서 그의 삶에 의미를 부여했다. 그래서 세월이 흐르는 동안특히 장티푸스로 쓰러졌을 때그는 손에 잡히는 종이 쪽지마다 잃어버린 저서의 파편과 핵심 단어들을 적어 내려갔다.</p>
 </section>
+</section>
+<section id="프랭클에게는-이루어야-할-목표가-있었고-그것이-그를-버티게-만들었다.-그" class="level2">
+<h2 class="anchored" data-anchor-id="프랭클에게는-이루어야-할-목표가-있었고-그것이-그를-버티게-만들었다.-그">프랭클에게는 이루어야 할 목표가 있었고 그것이 그를 버티게 만들었다. 그</h2>
 <section id="사례-연구-미국-외교관" class="level3">
 <h3 class="anchored" data-anchor-id="사례-연구-미국-외교관">사례 연구: 미국 외교관</h3>
 <p>미국의 저명한 외교관이 프랭클을 찾아왔다. 5년 전 미국에서 시작했던 치료를 이어가기 위해서였다. 프랭클이 애초에 왜 치료를 시작하게 되었느냐고 묻자 외교관은 자기 직업과 자기 나라의 국제 정책그가 따르고 집행해야만 했던이 싫다고 대답했다. 그가 수년간 만나 온 미국 정신분석가는 아버지와 화해하라고 강권했다. 정부와 직업, 둘 다 아버지 상징의 표상이니 화해하면 덜 불쾌하게 느껴질 거라는 논리였다. 그러나 프랭클은 단 몇 회기 만에 그에게 보여 주었다. 그의 좌절은 사실 다른 커리어를 추구하고 싶은데 그러지 못하는 데서 비롯된 것이라고. 외교관은 그 생각을 마음에 품은 채 치료를 끝냈다.</p>
 <p>5년 후 전직 외교관은 프랭클에게 알려 왔다. 그동안 다른 직업에서 일해 왔으며 행복하다고 말이다.</p>
 <p>프랭클의 견해로는, 이 사람은 긴 세월의 정신분석이 필요 없었을 뿐 아니라 애초에 치료가 필요한 ’환자’조차 아니었다. 그저 새로운 삶의 목적을 찾는 사람이었을 뿐이다. 목적을 찾자마자 그의 삶은 더 깊은 의미를 띠게 되었다.</p>
 </section>
+</section>
+<section id="프랭클의-견해로는-이-사람은-긴-세월의-정신분석이-필요-없었을-뿐-아니" class="level2">
+<h2 class="anchored" data-anchor-id="프랭클의-견해로는-이-사람은-긴-세월의-정신분석이-필요-없었을-뿐-아니">프랭클의 견해로는, 이 사람은 긴 세월의 정신분석이 필요 없었을 뿐 아니</h2>
 <section id="사례-연구-자살을-시도한-어머니" class="level3">
 <h3 class="anchored" data-anchor-id="사례-연구-자살을-시도한-어머니">사례 연구: 자살을 시도한 어머니</h3>
 <p>열한 살 난 아들을 잃은 어머니가 자신과 다른 아들의 목숨을 함께 끝내려다 실패해 프랭클의 클리닉에 입원했다. 계획 실행을 막은 장본인은 바로 그 다른 아들이었다. 태어날 때부터 몸이 불편한 그 아이였다. 그는 <em>자신</em>의 삶에 분명히 목적이 있으며 어머니가 둘을 죽인다면 자신의 목표를 이루지 못하게 될 것이라 믿었다.</p>
@@ -1390,11 +1711,17 @@ ul.task-list li input[type="checkbox"] {
 <p>자살을 시도했던 어머니에게 같은 과제가 주어졌다. 자신이 임종의 자리에 있다고 상상하라고. 그녀는 과거를 돌아보며 깨달았다. 자신은 두 아이를 위해둘 모두를 위해할 수 있는 모든 것을 다했다는 것을. 불편한 몸의 아들에게 좋은 삶을 주었고 그 아이는 다정하고 제법 행복한 사람으로 자랐다. 그리고 그녀는 울면서 덧붙였다. “저 자신에 대해서는 평온하게 제 인생을 돌아볼 수 있어요. 제 삶은 의미로 가득했다고 말할 수 있으니까요. 저는 그 삶을 충실히 살려고 애썼어요. 최선을 다했어요제 아들에게 최선을 다했어요. 제 삶은 실패가 아니었어요!”</p>
 <p>이렇게 임종의 자리를 상상하고 과거를 돌아본 끝에, 자살을 시도했던 어머니는 자신이 알지 못했던그러나 이미 존재하던삶의 의미를 발견했다.</p>
 </section>
+</section>
+<section id="이렇게-임종의-자리를-상상하고-과거를-돌아본-끝에-자살을-시도했던-어머" class="level2">
+<h2 class="anchored" data-anchor-id="이렇게-임종의-자리를-상상하고-과거를-돌아본-끝에-자살을-시도했던-어머">이렇게 임종의 자리를 상상하고 과거를 돌아본 끝에, 자살을 시도했던 어머</h2>
 <section id="사례-연구-슬픔에-잠긴-의사" class="level3">
 <h3 class="anchored" data-anchor-id="사례-연구-슬픔에-잠긴-의사">사례 연구: 슬픔에 잠긴 의사</h3>
 <p>노년의 의사 한 명이 프랭클을 찾아왔다. 2년 전 아내가 죽은 뒤 빠진 깊은 우울을 극복하지 못하고 있었던 것이다. 프랭클은 조언을 하거나 상태를 분석하는 대신, 만약 먼저 죽는 쪽이 당신이었다면 어땠을지 물었다. 의사는 경악하며 대답했다. 가련한 아내에게 끔찍한 일이었을 것이고 그녀는 엄청나게 괴로웠으리라고. 프랭클이 응수했다. “보셨습니까, 선생님? 선생님은 그녀가 그 모든 고통을 겪지 않게 해 주셨습니다. 그 대가로 선생님이 치러야 할 값은 살아남아 그녀를 애도하는 것입니다.”</p>
 <p>의사는 더 이상 아무 말도 하지 않았다. 치료자의 손을 자기 손으로 감싼 뒤 평온하게 진료실을 나섰다. 그는 사랑하는 아내를 대신해 그 고통을 견딜 수 있게 된 것이다. 그의 삶에는 목적이 생겨난 것이다.</p>
 </section>
+</section>
+<section id="의사는-더-이상-아무-말도-하지-않았다.-치료자의-손을-자기-손으로-감싼" class="level2">
+<h2 class="anchored" data-anchor-id="의사는-더-이상-아무-말도-하지-않았다.-치료자의-손을-자기-손으로-감싼">의사는 더 이상 아무 말도 하지 않았다. 치료자의 손을 자기 손으로 감싼</h2>
 <section id="모리타-요법" class="level3">
 <h3 class="anchored" data-anchor-id="모리타-요법">모리타 요법</h3>
 <p>로고테라피가 탄생한 바로 그 십 년대사실 몇 해는 더 일찍일본에서 모리타 쇼마(Shoma Morita)가 자신만의 목적 중심 요법을 만들어 냈다. 이 요법은 신경증, 강박장애, 외상후스트레스 치료에 효과적인 것으로 판명되었다.</p>
@@ -1404,6 +1731,9 @@ ul.task-list li input[type="checkbox"] {
 <p>모리타 요법은 증상을 없애려 하지 않는다. 대신 우리의 욕망, 불안, 두려움, 염려를 수용하고 놓아주는 법을 가르친다. 모리타가 저서 『모리타 요법과 불안장애의 본질(Morita Therapy and the True Nature of Anxiety-Based Disorders)』에서 쓰듯, “감정에 있어서는 부유하고 후한 것이 최선이다.”</p>
 <p>모리타는 부정적 감정을 놓아준다는 개념을 다음과 같은 우화로 설명했다. 말뚝에 밧줄로 묶인 나귀는 스스로를 풀어 보려고 말뚝 주위를 빙빙 걷다가, 결국 더 움직이지 못하고 말뚝에 더 깊이 매여 버린다는 것이다. 강박적으로 생각하는 사람들에게도 같은 일이 벌어진다. 두려움과 불편함에서 도망치려 할수록 자신의 고통 속에 더 깊이 갇히고 만다.</p>
 </section>
+</section>
+<section id="모리타는-부정적-감정을-놓아준다는-개념을-다음과-같은-우화로-설명했다." class="level2">
+<h2 class="anchored" data-anchor-id="모리타는-부정적-감정을-놓아준다는-개념을-다음과-같은-우화로-설명했다.">모리타는 부정적 감정을 놓아준다는 개념을 다음과 같은 우화로 설명했다.</h2>
 <section id="모리타-요법의-기본-원칙" class="level3">
 <h3 class="anchored" data-anchor-id="모리타-요법의-기본-원칙">모리타 요법의 기본 원칙</h3>
 <ol type="1">
@@ -1418,6 +1748,9 @@ ul.task-list li input[type="checkbox"] {
 <li><em>자신의 삶의 목적을 발견하라</em>. 우리는 감정을 통제할 수 없지만 매일의 행동은 쥘 수 있다. 그래서 우리는 자신의 목적을 분명히 알고 항상 모리타의 만트라를 마음에 새겨야 한다. “지금 우리는 무엇을 해야 하는가? 어떤 행동을 취해야 하는가?” 이것을 이루는 열쇠는 자신의 안을 들여다봐야겠다는 용기를 내고 자신의 <em>이키가이</em>를 찾는 것이다.</li>
 </ol>
 </section>
+</section>
+<section id="자신의-삶의-목적을-발견하라.-우리는-감정을-통제할-수-없지만" class="level2">
+<h2 class="anchored" data-anchor-id="자신의-삶의-목적을-발견하라.-우리는-감정을-통제할-수-없지만">3. <em>자신의 삶의 목적을 발견하라</em>. 우리는 감정을 통제할 수 없지만</h2>
 <section id="모리타-요법의-네-단계" class="level3">
 <h3 class="anchored" data-anchor-id="모리타-요법의-네-단계">모리타 요법의 네 단계</h3>
 <p>모리타의 원래 치료법은 15일에서 21일까지 걸리며 다음 단계들로 구성된다:</p>
@@ -1428,6 +1761,9 @@ ul.task-list li input[type="checkbox"] {
 <li><p><em>사회생활과 ‘진짜’ 세계로의 복귀</em>. 환자는 병원을 떠나 사회생활로 돌아가지만 치료 기간에 익힌 명상과 작업요법의 실천은 유지한다. 요점은 목적의식을 지닌 새로운 사람으로 사회에 복귀하되, 사회적·정서적 압력에 휘둘리지 않는 것이다.</p></li>
 </ol>
 </section>
+</section>
+<section id="사회생활과-진짜-세계로의-복귀.-환자는-병원을-떠나-사회생활" class="level2">
+<h2 class="anchored" data-anchor-id="사회생활과-진짜-세계로의-복귀.-환자는-병원을-떠나-사회생활">4. <em>사회생활과 ‘진짜’ 세계로의 복귀</em>. 환자는 병원을 떠나 사회생활</h2>
 <section id="내관나이칸-명상" class="level3">
 <h3 class="anchored" data-anchor-id="내관나이칸-명상">내관(나이칸) 명상</h3>
 <p>모리타는 내관(나이칸) 내성 명상의 위대한 선(禪) 스승이었다. 그의 요법 상당 부분이 이 학파에 대한 지식과 숙달에서 나온다. 내관 명상은 개인이 스스로에게 던져야 할 세 가지 질문을 중심으로 한다:</p>
@@ -1438,6 +1774,9 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>이런 성찰을 거치면 타인을 자신의 문제의 원인으로 지목하는 일을 멈추고 자기 책임감이 깊어진다. 모리타의 말이다. “화가 나서 싸우고 싶으면, 주먹이 날아가기 전 삼일 동안 생각해 보라. 삼일이 지나면 싸우고 싶은 격렬한 욕망은 저절로 가라앉는다.”</p>
 </section>
+</section>
+<section id="이런-성찰을-거치면-타인을-자신의-문제의-원인으로-지목하는-일을-멈추고" class="level2">
+<h2 class="anchored" data-anchor-id="이런-성찰을-거치면-타인을-자신의-문제의-원인으로-지목하는-일을-멈추고">이런 성찰을 거치면 타인을 자신의 문제의 원인으로 지목하는 일을 멈추고</h2>
 <section id="이제-이키가이" class="level3">
 <h3 class="anchored" data-anchor-id="이제-이키가이">이제, <em>이키가이</em></h3>
 <p>로고테라피와 모리타 요법은 둘 다 치료자도 영성 수련조차 없이 접근할 수 있는 개인적이고 고유한 경험에 뿌리를 둔다. 당신의 <em>이키가이</em>, 당신의 실존적 연료를 찾는 사명 말이다. 일단 찾아내면 남은 것은 용기를 내고 노력하며 옳은 길 위에 머무는 일뿐이다.</p>
@@ -1450,6 +1789,9 @@ ul.task-list li input[type="checkbox"] {
 <p><em>일과 여가 시간을 성장의 공간으로 만드는 법</em></p>
 <p><em>우리는 우리가 반복해서 하는 것이다.</em> <em>그러므로 탁월함은 행위가 아니라 습관이다.</em></p>
 <p>아리스토텔레스</p>
+</section>
+<section id="아리스토텔레스" class="level2">
+<h2 class="anchored" data-anchor-id="아리스토텔레스">아리스토텔레스</h2>
 <section id="물-흐르듯이" class="level3">
 <h3 class="anchored" data-anchor-id="물-흐르듯이">물 흐르듯이</h3>
 <p>즐겨 찾는 슬로프 하나를 내려가고 있다고 상상해 보라. 가루 같은 눈이 양옆으로 흰 모래처럼 흩날린다. 설상은 완벽하다.</p>
@@ -1461,6 +1803,9 @@ ul.task-list li input[type="checkbox"] {
 <p>무엇이 우리를 그토록 즐겁게 만들어서 그 일을 하는 동안 온갖 걱정을 잊게 하는 걸까? 우리가 가장 행복한 순간은 언제인가?</p>
 <p>이 질문들은 우리가 자신의 <em>이키가이</em>를 발견하는 데 도움을 줄 수 있다.</p>
 </section>
+</section>
+<section id="이-질문들은-우리가-자신의-이키가이를-발견하는-데-도움을-줄-수-있다" class="level2">
+<h2 class="anchored" data-anchor-id="이-질문들은-우리가-자신의-이키가이를-발견하는-데-도움을-줄-수-있다">이 질문들은 우리가 자신의 <em>이키가이</em>를 발견하는 데 도움을 줄 수 있다</h2>
 <section id="몰입의-힘" class="level3">
 <h3 class="anchored" data-anchor-id="몰입의-힘">몰입의 힘</h3>
 <p>이 질문들은 심리학자 미하이 칙센트미하이(Mihaly Csikszentmihalyi)의 연구우리가 하는 일에 완전히 잠기는 경험에 대한 연구의 핵심이기도 하다. 칙센트미하이는 이 상태를 ’몰입(flow)’이라 불렀고 삶에 완전히 잠겨 있을 때의 즐거움, 황홀함, 창의성, 그 과정으로 묘사했다.</p>
@@ -1486,6 +1831,9 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 </section>
+</section>
+<section id="산만함으로부터-자유롭기" class="level2">
+<h2 class="anchored" data-anchor-id="산만함으로부터-자유롭기">7. 산만함으로부터 자유롭기</h2>
 <section id="전략-1-어려운-과제를-선택하라-너무-어렵지-않게" class="level3">
 <h3 class="anchored" data-anchor-id="전략-1-어려운-과제를-선택하라-너무-어렵지-않게">전략 1: 어려운 과제를 선택하라 (너무 어렵지 않게!)</h3>
 <p>섀퍼의 모델은 완수할 가능성이 있으면서 편안한 영역 바깥쪽에 살짝 걸친 과제를 맡으라고 권한다.</p>
@@ -1499,6 +1847,9 @@ ul.task-list li input[type="checkbox"] {
 <p>그러나 책이 우리의 지식과 능력에 맞고 우리가 이미 아는 것 위에 쌓아 올린다면, 우리는 독서에 잠기고 시간은 흐른다. 이 쾌락과 만족감은 우리가 자신의 <em>이키가이</em>와 조화를 이루고 있다는 증거다.</p>
 <p><strong>쉬움 / 도전적 / 능력을 초과함</strong> <strong>지루함 / 몰입 / 불안</strong></p>
 </section>
+</section>
+<section id="쉬움-도전적-능력을-초과함" class="level2">
+<h2 class="anchored" data-anchor-id="쉬움-도전적-능력을-초과함"><strong>쉬움 / 도전적 / 능력을 초과함</strong></h2>
 <section id="전략-2-분명하고-구체적인-목표를-가져라" class="level3">
 <h3 class="anchored" data-anchor-id="전략-2-분명하고-구체적인-목표를-가져라">전략 2: 분명하고 구체적인 목표를 가져라</h3>
 <p>적당히 즐기는 비디오 게임, 보드게임, 스포츠는 몰입에 도달하는 훌륭한 방법이다. 목표가 매우 명확한 경향이 있기 때문이다. 명시적으로 정의된 규칙을 지키면서 상대나 자기 기록을 이기는 것 말이다.</p>
@@ -1518,6 +1869,9 @@ ul.task-list li input[type="checkbox"] {
 <p>첫 작은 발걸음을 떼는 순간 불안은 사라지고 하던 활동에서 유쾌한 몰입을 이루게 된다. 알베르트 아인슈타인의 말을 다시 빌리면, “행복한 사람은 현재에 너무 만족해서 미래를 곱씹을 겨를이 없다.”</p>
 <p><strong>모호한 목표</strong> → 혼란; 무의미한 과제에 시간과 에너지가 낭비된다. <strong>명확하게 정의된 목표와 과정에 대한 집중</strong> → 몰입. <strong>과정을 무시한 채 목표 달성에만 매달리는 강박적 열망</strong> → 목표에 고착되어 정작 일에 착수하지 못함; 마음의 막힘.</p>
 </section>
+</section>
+<section id="명확하게-정의된-목표와-과정에-대한-집중-몰입." class="level2">
+<h2 class="anchored" data-anchor-id="명확하게-정의된-목표와-과정에-대한-집중-몰입."><strong>명확하게 정의된 목표와 과정에 대한 집중</strong> → 몰입.</h2>
 <section id="전략-3-한-번에-한-가지-일에-집중하라" class="level3">
 <h3 class="anchored" data-anchor-id="전략-3-한-번에-한-가지-일에-집중하라">전략 3: 한 번에 한 가지 일에 집중하라</h3>
 <p>이것이 아마 오늘날 우리가 직면한 가장 큰 장애물일 것이다. 너무 많은 기술과 산만함이 널려 있으니 말이다. 유튜브 영상을 들으며 이메일을 쓰다가 갑자기 채팅 알림이 떠올라 답장을 하고 그러고 나면 주머니 속 스마트폰이 진동한다. 그 메시지에 답하자마자 컴퓨터로 돌아와 페이스북에 접속한다.</p>
@@ -1575,6 +1929,9 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>자아가 흐려진다: 우리가 하고 있는 활동이나 과제를 통제하는 존재가 아니라, 과제가 우리를 이끈다</strong> / <strong>끝없는 자기비판: 자아가 버티고 앉아 좌절감을 느낀다</strong></p>
 </section>
 </section>
+</section>
+<section id="자아가-흐려진다-우리가-하고-있는-활동이나-과제를-통제하는-존재가" class="level2">
+<h2 class="anchored" data-anchor-id="자아가-흐려진다-우리가-하고-있는-활동이나-과제를-통제하는-존재가">**자아가 흐려진다: 우리가 하고 있는 활동이나 과제를 통제하는 존재가</h2>
 <section id="일본의-몰입-다쿠미-엔지니어-천재-그리고-오타쿠" class="level3">
 <h3 class="anchored" data-anchor-id="일본의-몰입-다쿠미-엔지니어-천재-그리고-오타쿠">일본의 몰입: <em>다쿠미</em>, 엔지니어, 천재, 그리고 <em>오타쿠</em></h3>
 <p><em>다쿠미(takumi, 장인)</em>, 엔지니어, 발명가, 그리고 <em>오타쿠(애니메이션과 만화 팬)</em>에게 공통점이 있다면 무엇일까? 그들은 모두 언제나 자신의 <em>이키가이</em>와 함께 흘러가는 것의 중요성을 이해한다.</p>
@@ -1582,6 +1939,9 @@ ul.task-list li input[type="checkbox"] {
 <p>일본인들은 가장 기초적인 작업에조차 강박에 가까운 강도로 몰두하는 경우가 많다. 나가노 산속에서 논을 세밀하게 가꾸는 ’은퇴자들’부터 콘비니(konbini, 편의점)라 불리는 편의점에서 주말 근무를 하는 대학생들까지, 온갖 맥락에서 이 모습을 볼 수 있다. 일본에 가면 거의 모든 거래에서 이 세세함에 대한 주의를 직접 경험하게 될 것이다.</p>
 <p>나하, 가나자와, 교토에서 수공예품을 파는 가게 하나에 들어서면 또 다른 사실을 발견하게 된다. 일본은 전통 공예의 보고라는 것을. 일본 사람들은 장인 전통과 기술을 지켜 내면서 새로운 기술을 만들어 내는 독특한 재능을 지녔다.</p>
 </section>
+</section>
+<section id="나하-가나자와-교토에서-수공예품을-파는-가게-하나에-들어서면-또-다른" class="level2">
+<h2 class="anchored" data-anchor-id="나하-가나자와-교토에서-수공예품을-파는-가게-하나에-들어서면-또-다른">나하, 가나자와, 교토에서 수공예품을 파는 가게 하나에 들어서면 또 다른</h2>
 <section id="다쿠미의-기술" class="level3">
 <h3 class="anchored" data-anchor-id="다쿠미의-기술"><em>다쿠미</em>의 기술</h3>
 <p>토요타는 특정 종류의 나사를 손으로 만들어 낼 수 있는 ’장인’들을 고용한다. 이 <em>다쿠미</em>들특정 수공 기술의 전문가들은 토요타에게 극히 중요하고 대체하기 어렵다. 그중 누군가는 자신이 하는 바로 그 기술을 수행할 줄 아는 유일한 사람이며 새 세대가 그 바통을 이어 받을 것 같지도 않다.</p>
@@ -1594,6 +1954,9 @@ ul.task-list li input[type="checkbox"] {
 <p>그녀의 움직임을 담으려면 극도로 빠른 셔터 스피드가 필요했다. 그녀의 손은 그녀의 도구들과 분류하던 솔털들과 함께 춤추듯 <em>흘러갔다</em>.</p>
 <p>사장은 이 <em>다쿠미</em>가 별동 건물에 숨겨져 있긴 해도 회사에서 가장 중요한 인물 중 한 명이라고 말했다. 회사가 만드는 모든 브러시의 모든 솔털이 그녀의 손을 거친다고 했다.</p>
 </section>
+</section>
+<section id="사장은-이-다쿠미가-별동-건물에-숨겨져-있긴-해도-회사에서-가장-중요" class="level2">
+<h2 class="anchored" data-anchor-id="사장은-이-다쿠미가-별동-건물에-숨겨져-있긴-해도-회사에서-가장-중요">사장은 이 <em>다쿠미</em>가 별동 건물에 숨겨져 있긴 해도 회사에서 가장 중요</h2>
 <section id="일본-속의-스티브-잡스" class="level3">
 <h3 class="anchored" data-anchor-id="일본-속의-스티브-잡스">일본 속의 스티브 잡스</h3>
 <p>애플 공동창업자 스티브 잡스는 일본의 열렬한 팬이었다. 1980년대 소니 공장들을 방문해 애플을 설립할 때 그들의 많은 방식을 도입했을 뿐 아니라, 교토의 일본 도자기의 단순함과 질에 매료되어 있었다.</p>
@@ -1605,6 +1968,9 @@ ul.task-list li input[type="checkbox"] {
 <p>잡스가 세상을 떠난 뒤 인터뷰에서 샤쿠나가는 iPhone을 만든 사람에게 자신의 작품이 사랑받았다는 게 대단히 자랑스럽다고 말했다. 그리고 잡스가 그에게서 마지막으로 구매한 것이 열두 개 한 조의 찻잔이었다고 덧붙였다. 잡스는 무언가 특별한 것, ’새로운 스타일’을 요청했다. 이 요청을 들어주기 위해 샤쿠나가는 새 아이디어를 시험하는 과정에서 150개의 찻잔을 만들었다. 이중 가장 좋은 열두 개를 골라 잡스 가족에게 보냈다.</p>
 <p>첫 일본 여행 이후 잡스는 이 나라의 장인들과, 엔지니어들(특히 소니), 철학(특히 선), 요리(특히 스시)에 매료되어 영감을 얻었다.</p>
 </section>
+</section>
+<section id="첫-일본-여행-이후-잡스는-이-나라의-장인들과-엔지니어들특히-소니" class="level2">
+<h2 class="anchored" data-anchor-id="첫-일본-여행-이후-잡스는-이-나라의-장인들과-엔지니어들특히-소니">첫 일본 여행 이후 잡스는 이 나라의 장인들과, 엔지니어들(특히 소니),</h2>
 <section id="세련된-단순함" class="level3">
 <h3 class="anchored" data-anchor-id="세련된-단순함">세련된 단순함</h3>
 <p>일본의 장인정신, 엔지니어링, 선철학, 요리에는 무엇이 공통으로 깃들어 있을까? 단순함과 디테일에 대한 주의다. 게으른 단순함이 아니다. 새로운 경계를 찾아나서는 세련된 단순함이다. 자신의 <em>이키가이</em>에 따라 사물과 몸과 마음, 혹은 요리를 항상 다음 단계로 끌어올린다.</p>
@@ -1617,6 +1983,9 @@ ul.task-list li input[type="checkbox"] {
 <p>지로는 샤쿠나가 유키오처럼 ’근원’에서 일을 시작한다. 지로는 생선 시장으로 최고의 참치를 찾아가고 샤쿠나가는 산으로 최고의 도자기를 찾아간다. 일에 착수하면 둘 다 자신이 만들어 내는 대상과 하나가 된다. 몰입 상태에서 도달하는 이 대상과의 합일은 일본에서 특별한 의미를 지닌다. 신도(神道)에 따르면 숲과 나무와 사물 안에는 <em>카미</em>(정령 혹은 신)가 깃들어 있기 때문이다.</p>
 <p>누군가예술가든 엔지니어든 셰프든무언가를 만들기 시작할 때, 그의 책임은 자연을 존중하면서 자연을 빌려 그것에 ’생명’을 불어넣는 것이다. 이 과정에서 장인은 대상과 하나가 되고 그것과 함께 흘러간다. 쇠공예가는 금속에 저마다의 생명이 있다고 말할 것이고 도예가는 점토가 그렇다고 말할 것이다. 일본인들은 자연과 기술을 하나로 묶는 데 능하다: 인간 대 자연이 아니라, 둘의 결합인 것이다.</p>
 </section>
+</section>
+<section id="누군가예술가든-엔지니어든-셰프든무언가를-만들기-시작할-때-그의-책임은" class="level2">
+<h2 class="anchored" data-anchor-id="누군가예술가든-엔지니어든-셰프든무언가를-만들기-시작할-때-그의-책임은">누군가예술가든 엔지니어든 셰프든무언가를 만들기 시작할 때, 그의 책임은</h2>
 <section id="지브리의-순수함" class="level3">
 <h3 class="anchored" data-anchor-id="지브리의-순수함">지브리의 순수함</h3>
 <p>자연과 연결된다는 신도적 가치가 사라져 가고 있다고 말하는 사람들이 있다. 이 상실에 대해 가장 비판적이던 사람 중 하나가 역시 분명한 <em>이키가이</em>를 지닌 예술가, 지브리 스튜디오의 애니메이션 영화 감독 미야자키 하야오(Hayao Miyazaki)다.</p>
@@ -1628,6 +1997,9 @@ ul.task-list li input[type="checkbox"] {
 <p>미야자키는 그림을 멈출 수 없다. ‘은퇴’ 다음 날, 휴가를 떠나거나 집에 있는 대신 지브리 스튜디오로 가 앉아 그림을 그리기 시작했다. 동료들은 뭐라 해야 할지 몰라 최선을 다해 무표정을 지었다. 1년 후 그는 장편영화는 더 이상 만들지 않겠지만 죽는 날까지 그림을 계속 그리겠다고 발표했다.</p>
 <p>자기가 하는 일에 열정이 있다면 정말로 은퇴할 수 있을까?</p>
 </section>
+</section>
+<section id="자기가-하는-일에-열정이-있다면-정말로-은퇴할-수-있을까" class="level2">
+<h2 class="anchored" data-anchor-id="자기가-하는-일에-열정이-있다면-정말로-은퇴할-수-있을까">자기가 하는 일에 열정이 있다면 정말로 은퇴할 수 있을까?</h2>
 <section id="은둔자들" class="level3">
 <h3 class="anchored" data-anchor-id="은둔자들">은둔자들</h3>
 <p>이런 능력을 지닌 것은 일본인만이 아니다. 세계 곳곳에 강렬하고 분명한 <em>이키가이</em>를 지닌 예술가들과 과학자들이 있다. 그들은 죽는 날까지 자신이 사랑하는 일을 한다.</p>
@@ -1636,6 +2008,9 @@ ul.task-list li input[type="checkbox"] {
 <p>이런 부류의 예술가의 또 다른 예가 소설가 무라카미 하루키(Haruki Murakami)다. 그는 가까운 친우들만 만나며 일본에서 공식 석상에 모습을 드러내는 것조차 몇 년에 한 번일 정도다.</p>
 <p>예술가들은 자신의 <em>이키가이</em>와 함께 흐르고 싶다면 자신의 공간을 지키고 환경을 통제하며 산만함으로부터 자유로워야 함을 안다.</p>
 </section>
+</section>
+<section id="예술가들은-자신의-이키가이와-함께-흐르고-싶다면-자신의-공간을-지키고" class="level2">
+<h2 class="anchored" data-anchor-id="예술가들은-자신의-이키가이와-함께-흐르고-싶다면-자신의-공간을-지키고">예술가들은 자신의 <em>이키가이</em>와 함께 흐르고 싶다면 자신의 공간을 지키고</h2>
 <section id="마이크로-몰입-일상적-과제-즐기기" class="level3">
 <h3 class="anchored" data-anchor-id="마이크로-몰입-일상적-과제-즐기기">마이크로 몰입: 일상적 과제 즐기기</h3>
 <p>하지만 세탁을 하거나, 잔디를 깎거나, 서류를 처리해야 한다면 어떨까? 이런 평범한 일들을 즐겁게 만들 방법이 있을까?</p>
@@ -1649,6 +2024,9 @@ ul.task-list li input[type="checkbox"] {
 <p>그래서 그들은 그를 근처 가게로 사무용품을 사러 보냈고 그는 활짝 웃으면서 심부름을 완수했다. 중요한 할 일이 없거나 머리를 쉬어야 할 때, 파인만은 마이크로 몰입에 몸을 맡겼다. 이를테면 사무실 벽을 칠하는 식으로.</p>
 <p>몇 주 후 Thinking Machines 사무실을 방문한 투자자 그룹이 선언했다. “저 안에 노벨상 수상자가 벽을 칠하고 회로를 납땜하고 있습니다.”</p>
 </section>
+</section>
+<section id="몇-주-후-thinking-machines-사무실을-방문한-투자자-그룹이" class="level2">
+<h2 class="anchored" data-anchor-id="몇-주-후-thinking-machines-사무실을-방문한-투자자-그룹이">몇 주 후 Thinking Machines 사무실을 방문한 투자자 그룹이</h2>
 <section id="즉석-휴가-명상으로-도달하기" class="level3">
 <h3 class="anchored" data-anchor-id="즉석-휴가-명상으로-도달하기">즉석 휴가: 명상으로 도달하기</h3>
 <p>마음을 훈련하면 더 빨리 몰입의 자리에 이를 수 있다. 명상은 우리의 정신 근육을 단련하는 방법 중 하나다.</p>
@@ -1666,6 +2044,9 @@ ul.task-list li input[type="checkbox"] {
 <p>우리는 어디를 가나 스파를 하나 지니고 다닌다. 들어가는 법만 알면 되는데, 조금만 연습하면 누구든 할 수 있는 일이다.</p>
 </section>
 </section>
+</section>
+<section id="우리는-어디를-가나-스파를-하나-지니고-다닌다.-들어가는-법만-알면-되는" class="level2">
+<h2 class="anchored" data-anchor-id="우리는-어디를-가나-스파를-하나-지니고-다닌다.-들어가는-법만-알면-되는">우리는 어디를 가나 스파를 하나 지니고 다닌다. 들어가는 법만 알면 되는</h2>
 <section id="의례적인-존재로서의-인간" class="level3">
 <h3 class="anchored" data-anchor-id="의례적인-존재로서의-인간">의례적인 존재로서의 인간</h3>
 <p>삶은 본질적으로 의례적이다. 인간은 자연스럽게 자신을 분주하게 유지하는 의례를 따른다고 주장할 수 있다. 몇몇 현대 문화권에서는 성공한 것으로 보이기 위해 목표에서 목표로 내달리며 우리의 의례적 삶에서 내쫓겼다. 하지만 역사 전체를 통틀어 인간은 항상 부지런했다. 우리는 사냥하고, 요리하고, 농사 짓고, 탐험하고, 가족을 일구었다하루하루를 분주하게 유지해 줄 의례로서 구조화된 활동들이었다.</p>
@@ -1675,6 +2056,9 @@ ul.task-list li input[type="checkbox"] {
 <p>매일의 의례를 즐기는 데 집중하고 그것을 몰입 상태로 들어가는 도구로 써라. 결과는 걱정하지 마라저절로 따라온다. 행복은 결과가 아니라 하는 데 있다. 경험칙 하나를 새겨 두자: “목표보다 의례.”</p>
 <p>가장 행복한 사람들은 가장 많이 이루어 낸 사람들이 아니다. 남들보다 몰입 상태에서 더 많은 시간을 보내는 사람들이다.</p>
 </section>
+</section>
+<section id="가장-행복한-사람들은-가장-많이-이루어-낸-사람들이-아니다.-남들보다-몰" class="level2">
+<h2 class="anchored" data-anchor-id="가장-행복한-사람들은-가장-많이-이루어-낸-사람들이-아니다.-남들보다-몰">가장 행복한 사람들은 가장 많이 이루어 낸 사람들이 아니다. 남들보다 몰</h2>
 <section id="몰입으로-당신의-이키가이-찾기" class="level3">
 <h3 class="anchored" data-anchor-id="몰입으로-당신의-이키가이-찾기">몰입으로 당신의 <em>이키가이</em> 찾기</h3>
 <p>이 장을 읽었다면 인생에서 당신을 몰입 상태로 이끄는 활동들이 무엇인지 좀 더 잘 감이 잡힐 것이다. 그 모든 활동을 종이에 적어 보고 스스로에게 물어보라. 당신을 몰입으로 이끄는 활동들의 공통점은 무엇인가? 왜 그런 활동들이 당신을 몰입으로 이끄는가? 예컨대 당신이 가장 좋아하는 활동들은 모두 혼자서 하는 것인가, 다른 사람과 함께 하는 것인가? 몸을 움직여야 하는 일에서 더 몰입하는가, 아니면 생각만 하면 되는 일에서?</p>
@@ -1692,6 +2076,9 @@ ul.task-list li input[type="checkbox"] {
 <p>오늘날 전 세계에 300~450명의 초장수자가 있는 것으로 추산되지만 연령이 확인된 것은 애석하게도 약 75명에 불과하다. 그들은 초인은 아니지만 평균 기대수명이 예측하는 것보다 훨씬 많은 시간을 이 행성에서 보냈다는 점에서 그렇게 볼 수도 있다.</p>
 <p>세계 각지에서 기대수명이 늘어나는 만큼 초장수자의 수도 늘어날지 모른다. 건강하고 목적 있는 삶은 우리를 그들의 대열에 합류시켜 줄 수 있다.</p>
 <p>그중 몇 사람이 무어라 말하는지 들어 보자.</p>
+</section>
+<section id="그중-몇-사람이-무어라-말하는지-들어-보자." class="level2">
+<h2 class="anchored" data-anchor-id="그중-몇-사람이-무어라-말하는지-들어-보자.">그중 몇 사람이 무어라 말하는지 들어 보자.</h2>
 <section id="오카와-미사오" class="level3">
 <h3 class="anchored" data-anchor-id="오카와-미사오">오카와 미사오</h3>
 <p>“먹고 자면 오래 삽니다. 쉬는 법을 배워야 해요.”</p>
@@ -1700,6 +2087,9 @@ ul.task-list li input[type="checkbox"] {
 <p>전문의들이 그녀의 자기관리 루틴에 대해 묻자 미사오는 간단히 답했다. “스시 먹고 자요.” 여기에 우리가 하나 추가해야겠다. 삶에 대한 대단한 갈망. 장수의 비결을 묻자 그녀는 웃으며 답했다. “저도 저한테 같은 걸 묻는 중이에요.”</p>
 <p>일본이 계속해서 장수 공장임을 증명하는 일화: 같은 해 7월, 모모이 사카리(Sakari Momoi)가 112세 150일로 세상을 떠났다. 그는 당시 세계 최고령 남성이었지만 여성 다섯십일곱 명보다는 어렸다.</p>
 </section>
+</section>
+<section id="일본이-계속해서-장수-공장임을-증명하는-일화-같은-해-7월-모모이-사" class="level2">
+<h2 class="anchored" data-anchor-id="일본이-계속해서-장수-공장임을-증명하는-일화-같은-해-7월-모모이-사">일본이 계속해서 장수 공장임을 증명하는 일화: 같은 해 7월, 모모이 사</h2>
 <section id="마리아-카포비야" class="level3">
 <h3 class="anchored" data-anchor-id="마리아-카포비야">마리아 카포비야</h3>
 <p>“평생 고기를 먹은 적이 없어요.”</p>
@@ -1713,6 +2103,9 @@ ul.task-list li input[type="checkbox"] {
 <p>과거를 회상하고 나서 그녀는 춤추기 시작했다그녀의 위대한 열정 중 하나수십 년은 어려 보이는 에너지로.</p>
 <p>장수의 비결을 묻자 그녀는 간단히 답했다. “장수의 비결이 뭔지 몰라요. 제가 하는 일은 딱 하나예요. 평생 고기를 먹지 않은 것. 그 덕분이라고 생각해요.”</p>
 </section>
+</section>
+<section id="장수의-비결을-묻자-그녀는-간단히-답했다.-장수의-비결이-뭔지-몰라요." class="level2">
+<h2 class="anchored" data-anchor-id="장수의-비결을-묻자-그녀는-간단히-답했다.-장수의-비결이-뭔지-몰라요.">장수의 비결을 묻자 그녀는 간단히 답했다. “장수의 비결이 뭔지 몰라요.</h2>
 <section id="잔-칼망" class="level3">
 <h3 class="anchored" data-anchor-id="잔-칼망">잔 칼망</h3>
 <p>“다 괜찮아.”</p>
@@ -1720,6 +2113,9 @@ ul.task-list li input[type="checkbox"] {
 <p>행복한 삶의 끝에서 자연사했다. 그 삶 동안 그녀는 거의 아무것도 스스로에게 허락하지 않는 법을 몰랐다. 백 살까지 자전거를 탔다. 110살까지 독립적으로 살다가 아파트에서 사고로 작은 불을 내고 나서야 요양원으로 이사하는 데 동의했다. 120살에 담배를 끊었다. 백내장이 담배를 입술로 가져가는 걸 어렵게 만들기 시작했기 때문이다.</p>
 <p>비결 중 하나는 아마 그녀의 유머 감각이었을 것이다. 120번째 생일에 그녀가 말했다. “눈은 잘 안 보이고, 귀는 잘 안 들리고, 몸은 안 좋지만 다 괜찮아.”</p>
 </section>
+</section>
+<section id="비결-중-하나는-아마-그녀의-유머-감각이었을-것이다.-120번째-생일에" class="level2">
+<h2 class="anchored" data-anchor-id="비결-중-하나는-아마-그녀의-유머-감각이었을-것이다.-120번째-생일에">비결 중 하나는 아마 그녀의 유머 감각이었을 것이다. 120번째 생일에</h2>
 <section id="월터-브루닝" class="level3">
 <h3 class="anchored" data-anchor-id="월터-브루닝">월터 브루닝</h3>
 <p>“몸과 마음을 바쁘게 쓰면 오래갑니다.”</p>
@@ -1728,12 +2124,18 @@ ul.task-list li input[type="checkbox"] {
 <p>브루닝의 다른 비결들: 타인을 돕는 습관, 그리고 죽음을 두려워하지 않는 마음. 2010년 AP와의 인터뷰에서 그는 선언했다. “우리 모두는 죽습니다. 죽는 게 무서운 사람도 있습니다. 결코 죽음을 두려워하지 마십시오. 우리는 죽기 위해 태어났으니까요.”</p>
 <p>2011년 세상을 떠나기 전 목사에게 이런 말을 했다고 전해진다. 하느님과 거래를 했다고. 나아지지 않을 거라면 이제 떠날 때라고.</p>
 </section>
+</section>
+<section id="년-세상을-떠나기-전-목사에게-이런-말을-했다고-전해진다.-하느님" class="level2">
+<h2 class="anchored" data-anchor-id="년-세상을-떠나기-전-목사에게-이런-말을-했다고-전해진다.-하느님">2011년 세상을 떠나기 전 목사에게 이런 말을 했다고 전해진다. 하느님</h2>
 <section id="알렉산더-이미치" class="level3">
 <h3 class="anchored" data-anchor-id="알렉산더-이미치">알렉산더 이미치</h3>
 <p>“아직 안 죽어서 그래요.”</p>
 <p>1903년 폴란드 출신인 알렉산더 이미치(Alexander Imich)는 미국에 거주하던 화학자이자 초심리학자로, 전임자가 2014년 세상을 뜨자 검증된 나이 기준 세계 최고령 남성이 되었다. 이미치 본인도 얼마 지나지 않아 그해 6월에 세상을 떠났다. 경험으로 가득 찬 긴 삶을 남기며.</p>
 <p>이미치는 자신의 장수를 술을 한 번도 마시지 않은 것 등에 돌렸다. “노벨상을 받은 것도 아닙니다.” 세계 최고령 남성으로 선언됐을 때 그는 말했다. “이렇게 늙을 줄은 생각도 못 했죠.” 그토록 오래 산 비결을 묻자 그의 답은 “모르겠어요. 아직 안 죽어서 그래요.”였다.</p>
 </section>
+</section>
+<section id="이미치는-자신의-장수를-술을-한-번도-마시지-않은-것-등에-돌렸다.-노" class="level2">
+<h2 class="anchored" data-anchor-id="이미치는-자신의-장수를-술을-한-번도-마시지-않은-것-등에-돌렸다.-노">이미치는 자신의 장수를 술을 한 번도 마시지 않은 것 등에 돌렸다. “노</h2>
 <section id="이키가이의-예술가들" class="level3">
 <h3 class="anchored" data-anchor-id="이키가이의-예술가들"><em>이키가이</em>의 예술가들</h3>
 <p>그러나 장수의 비밀을 쥔 것은 초장수자들만이 아니다. 『기네스 세계 기록』에는 오르지 못했지만 우리 삶에 활력과 의미를 불어넣을 영감과 아이디어를 건네는 고령의 사람들이 많다.</p>
@@ -1750,6 +2152,9 @@ ul.task-list li input[type="checkbox"] {
 <p>여든셋의 다큐멘터리 감독 프레더릭 와이즈먼(Frederick Wiseman)은 파리 산책 중 일하기가 좋아서 그렇게 강렬하게 한다고 선언했다. “다들 온몸이 쑤시고 아프다고 하소연하지만 제 친구들은 죽거나 아직 일하고 있거나 둘 중 하나입니다”라고 그는 말했다.</p>
 <p>백 살에 접어든 화가 카르멘 에레라(Carmen Herrera)는 여든아홉에 첫 캔버스를 팔았다. 오늘날 그녀의 작품은 테이트 모던과 현대미술관(MoMA)의 소장품이다. 미래를 어떻게 내다보냐는 질문에 그녀는 답했다. “저는 언제나 다음 작품을 끝내기를 기다리고 있어요. 우스꽝스럽다는 거 알아요. 하루하루를 살아가죠.”</p>
 </section>
+</section>
+<section id="백-살에-접어든-화가-카르멘-에레라carmen-herrera는-여든아" class="level2">
+<h2 class="anchored" data-anchor-id="백-살에-접어든-화가-카르멘-에레라carmen-herrera는-여든아">백 살에 접어든 화가 카르멘 에레라(Carmen Herrera)는 여든아</h2>
 <section id="멈추지-않는-배움" class="level3">
 <h3 class="anchored" data-anchor-id="멈추지-않는-배움">멈추지 않는 배움</h3>
 <blockquote class="blockquote">
@@ -1761,6 +2166,9 @@ ul.task-list li input[type="checkbox"] {
 <p>2015년 아흔두 살로 세상을 떠난 화가 엘스워스 켈리(Ellsworth Kelly)는 나이가 들면 능력을 잃는다는 생각은 부분적으로는 미신이라고 확신했다. 대신 우리는 더 큰 명료함과 관찰력을 갖추어 가기 때문이다. “늙어 가는 것의 좋은 점 중 하나는 더 많이 보인다는 겁니다 매일 새로운 것을 계속 보게 되죠. 그래서 새 그림이 나오는 겁니다.”</p>
 <p>여든셋의 건축가 프랭크 게리(Frank Gehry)는 일부 건물은 “고용된 순간부터 완성될 때까지” 칠 년이 걸릴 수 있음을 상기시켜 준다. 시간의 흐름에 인내심을 갖는 태도를 뒷받침하는 사실이다. 그러나 빌바오 구겐하임 미술관을 세운 그 사람은 지금 여기에 사는 법도 안다. “당신의 시대에 머무세요. 뒤로 가지 않습니다. 자신이 처한 시대와 연결되려면 눈과 귀를 열고 신문을 읽고 무슨 일이 벌어지는지 보고 모든 것에 호기심을 유지하세요. 그러면 저절로 당신의 시대에 있게 됩니다.”</p>
 </section>
+</section>
+<section id="여든셋의-건축가-프랭크-게리frank-gehry는-일부-건물은-고용" class="level2">
+<h2 class="anchored" data-anchor-id="여든셋의-건축가-프랭크-게리frank-gehry는-일부-건물은-고용">여든셋의 건축가 프랭크 게리(Frank Gehry)는 일부 건물은 “고용</h2>
 <section id="일본의-장수" class="level3">
 <h3 class="anchored" data-anchor-id="일본의-장수">일본의 장수</h3>
 <p>튼튼한 주민등록 시스템 덕분에 최고령으로 검증된 사람들 다수는 미국에서 발견되지만 다른 나라들의 외딴 마을에도 많은 백세인이 살고 있다. 한 세기를 지켜본 사람들에게 시골의 평화로운 삶이 꽤 흔한 것으로 보인다.</p>
@@ -1775,6 +2183,9 @@ ul.task-list li input[type="checkbox"] {
 <p>오기미에 도착하려면 도쿄에서 오키나와의 수도 나하까지 3시간 가까이 날아야 했다. 몇 달 전 우리는 ’장수 마을’로 알려진 곳의 마을 회에 연락해 이번 여행의 목적과 공동체의 최고령 구성원들을 인터뷰하고자 하는 뜻을 설명했다. 수차례의 대화 끝에 우리가 찾던 도움을 받았고 마을 바로 밖에 집 한 채를 빌릴 수 있었다.</p>
 <p>이 프로젝트를 시작한 지 1년 만에 우리는 세계에서 가장 오래 산 사람들 몇몇의 문 앞에 서 있었다.</p>
 <p>곧바로 깨달았다. 시간이 그곳에서는 멎은 것 같다는 걸. 마을 전체가 끝없는 지금 여기에 사는 것처럼.</p>
+</section>
+<section id="곧바로-깨달았다.-시간이-그곳에서는-멎은-것-같다는-걸.-마을-전체가-끝" class="level2">
+<h2 class="anchored" data-anchor-id="곧바로-깨달았다.-시간이-그곳에서는-멎은-것-같다는-걸.-마을-전체가-끝">곧바로 깨달았다. 시간이 그곳에서는 멎은 것 같다는 걸. 마을 전체가 끝</h2>
 <section id="오기미-도착" class="level3">
 <h3 class="anchored" data-anchor-id="오기미-도착">오기미 도착</h3>
 <p>나하에서 두 시간을 달리니 마침내 교통 체증 걱정을 내려놓을 수 있었다. 왼쪽에는 바다와 텅 빈 해변이 펼쳐지고 오른쪽에는 오키나와 얀바루 숲의 산악 정글이 있다.</p>
@@ -1787,6 +2198,9 @@ ul.task-list li input[type="checkbox"] {
 <p>오기미의 산 하나 꼭대기에서 마을 전체를 내려다볼 수 있다. 거의 모든 것이 얀바루 정글의 초록이다. 그래서 삼천이백에 가까운 주민들이 어디에 숨어 사는지 궁금해진다.</p>
 <p>집 몇 채가 보이긴 하지만 바닷가 근처나 옆길로 들어설 수 있는 좁은 골짜기마다 작은 무리를 이루어 흩어져 있다.</p>
 </section>
+</section>
+<section id="집-몇-채가-보이긴-하지만-바닷가-근처나-옆길로-들어설-수-있는-좁은-골" class="level2">
+<h2 class="anchored" data-anchor-id="집-몇-채가-보이긴-하지만-바닷가-근처나-옆길로-들어설-수-있는-좁은-골">집 몇 채가 보이긴 하지만 바닷가 근처나 옆길로 들어설 수 있는 좁은 골</h2>
 <section id="공동체의-삶" class="level3">
 <h3 class="anchored" data-anchor-id="공동체의-삶">공동체의 삶</h3>
 <p>오기미의 몇 안 되는 식당 중 하나에서 식사하자는 초대를 받았지만 도착하니 세 개뿐인 테이블이 이미 예약 상태였다.</p>
@@ -1806,6 +2220,9 @@ ul.task-list li input[type="checkbox"] {
 <p>그들은 장난기 많고, 재밌고, 예측할 수 없다. 현지인들은 부나가야가 산과 강, 바다, 나무, 흙, 바람, 동물을 사랑하며 그들과 친구가 되려면 자연에 대한 존중을 보여야 한다고 말한다.</p>
 </section>
 </section>
+</section>
+<section id="그들은-장난기-많고-재밌고-예측할-수-없다.-현지인들은-부나가야가-산" class="level2">
+<h2 class="anchored" data-anchor-id="그들은-장난기-많고-재밌고-예측할-수-없다.-현지인들은-부나가야가-산">그들은 장난기 많고, 재밌고, 예측할 수 없다. 현지인들은 부나가야가 산</h2>
 <section id="생일-파티" class="level3">
 <h3 class="anchored" data-anchor-id="생일-파티">생일 파티</h3>
 <p>동네 공동체 센터에 도착하자 스무 명쯤 되는 무리가 맞아 줬다. 자랑스레 외쳤다. “우리 중 막내가 여든셋입니다!”</p>
@@ -1813,6 +2230,9 @@ ul.task-list li input[type="checkbox"] {
 <p>마을에서 유행하는 노래 몇 곡을 부르고 영어로 ’Happy Birthday’를 부르며 마무리했다. 아흔아홉이 되는 여성이 촛불을 끄고 파티에 와 준 모두에게 감사 인사를 전했다. 우리는 수제 시쿠와사 케이크를 먹고 스무 살 생일 파티처럼 춤추며 축하했다.</p>
 <p>마을에서 보내는 일주일 동안 참석한 첫 파티이지만 마지막은 아니었다. 우리 노래보다 잘 부르는 어르신들과 노래방도 하고 산기슭에서 지역 밴드와 댄서들, 음식 노점이 함께하는 전통 축제에도 참석했다.</p>
 </section>
+</section>
+<section id="마을에서-보내는-일주일-동안-참석한-첫-파티이지만-마지막은-아니었다.-우" class="level2">
+<h2 class="anchored" data-anchor-id="마을에서-보내는-일주일-동안-참석한-첫-파티이지만-마지막은-아니었다.-우">마을에서 보내는 일주일 동안 참석한 첫 파티이지만 마지막은 아니었다. 우</h2>
 <section id="매일-함께-축하하기" class="level3">
 <h3 class="anchored" data-anchor-id="매일-함께-축하하기">매일 함께 축하하기</h3>
 <p>축하의 시간은 오기미 삶의 본질적인 부분인 듯하다.</p>
@@ -1820,6 +2240,9 @@ ul.task-list li input[type="checkbox"] {
 <p>우리는 주간 경기에 참가해 방금 백세가 된 여성에게 졌다. 모두 환호했고 우리의 패배한 얼굴은 폭소를 자아냈다.</p>
 <p>함께 놀고 축하하는 것 외에도, 영성은 마을 주민들의 행복에 필수적이다.</p>
 </section>
+</section>
+<section id="함께-놀고-축하하는-것-외에도-영성은-마을-주민들의-행복에-필수적이다." class="level2">
+<h2 class="anchored" data-anchor-id="함께-놀고-축하하는-것-외에도-영성은-마을-주민들의-행복에-필수적이다.">함께 놀고 축하하는 것 외에도, 영성은 마을 주민들의 행복에 필수적이다.</h2>
 <section id="오키나와의-신들" class="level3">
 <h3 class="anchored" data-anchor-id="오키나와의-신들">오키나와의 신들</h3>
 <p>오키나와의 주요 종교는 류큐신토(Ryukyu Shinto)로 알려져 있다. <em>류큐(Ryukyu)</em>는 오키나와 군도의 원래 이름이며 <em>신토(Shinto)</em>는 ’신들의 길’을 뜻한다. 류큐신토는 중국 도교와 유교, 불교, 신토의 요소에 샤머니즘적이고 애니미즘적인 요소를 결합한다.</p>
@@ -1834,6 +2257,9 @@ ul.task-list li input[type="checkbox"] {
 <p>마부이는 육체적 접촉으로 사람에서 사람에게 옮겨가기도 한다. 손녀에게 반지를 물려주는 할머니는 자신의 마부이 일부를 그녀에게 전한다. 사진 역시 사람들 사이에서 마부이가 오가는 매개가 될 수 있다.</p>
 </section>
 </section>
+</section>
+<section id="마부이는-육체적-접촉으로-사람에서-사람에게-옮겨가기도-한다.-손녀에게-반" class="level2">
+<h2 class="anchored" data-anchor-id="마부이는-육체적-접촉으로-사람에서-사람에게-옮겨가기도-한다.-손녀에게-반">마부이는 육체적 접촉으로 사람에서 사람에게 옮겨가기도 한다. 손녀에게 반</h2>
 <section id="늙을수록-강해진다" class="level3">
 <h3 class="anchored" data-anchor-id="늙을수록-강해진다">늙을수록 강해진다</h3>
 <p>돌아보면 오기미에서의 나날은 강렬하면서도 여유로웠다마치 현지인들의 삶 방식 같았다. 그들은 언제나 중요한 일들에 바빠 보이지만 자세히 보면 모든 것을 평온한 마음으로 해 낸다. 그들은 항상 자신의 <em>이키가이</em>를 추구하지만 결코 서두르지 않는다.</p>
@@ -1847,6 +2273,9 @@ ul.task-list li input[type="checkbox"] {
 <p><em>오기미 노인 클럽 연합회</em></p>
 </section>
 </section>
+</section>
+<section id="오기미-노인-클럽-연합회" class="level2">
+<h2 class="anchored" data-anchor-id="오기미-노인-클럽-연합회"><em>오기미 노인 클럽 연합회</em></h2>
 <section id="인터뷰" class="level3">
 <h3 class="anchored" data-anchor-id="인터뷰">인터뷰</h3>
 <p>일주일간 우리는 총 백 번의 인터뷰를 했다. 공동체의 최고령 구성원들에게 삶의 철학과 <em>이키가이</em>, 장수의 비결을 물으며. 두 대의 카메라로 이 대화들을 촬영해 짧은 다큐멘터리로 만들었고 특히 의미 있고 영감 주는 진술 몇 가지를 골라 책의 이 절에 담았다.</p>
@@ -1902,6 +2331,9 @@ ul.task-list li input[type="checkbox"] {
 <p>“비결 같은 건 없어요. 요령은 그냥 사는 거예요.”</p>
 </section>
 </section>
+</section>
+<section id="비결-같은-건-없어요.-요령은-그냥-사는-거예요." class="level2">
+<h2 class="anchored" data-anchor-id="비결-같은-건-없어요.-요령은-그냥-사는-거예요.">“비결 같은 건 없어요. 요령은 그냥 사는 거예요.”</h2>
 <section id="오기미-라이프스타일의-열쇠들" class="level3">
 <h3 class="anchored" data-anchor-id="오기미-라이프스타일의-열쇠들">오기미 라이프스타일의 열쇠들</h3>
 <p>인터뷰한 사람들의 백퍼센트가 텃밭을 가꾸며 대부분이 차, 망고, 시쿠와사 등의 밭도 두고 있다.</p>
@@ -1924,6 +2356,9 @@ ul.task-list li input[type="checkbox"] {
 <p>오키나와는 일본 내에서 제2차 세계대전의 피해가 가장 컸던 지역 중 하나다. 전장의 전투뿐 아니라 종전 후의 굶주림과 자원 부족 탓에 1940~50년대 평균 기대수명은 그리 높지 않았다. 그러나 오키나와 사람들이 폐허에서 회복되면서 이 나라에서 가장 오래 사는 시민들의 반열에 올랐다.</p>
 <p>일본인들은 어떤 장수의 비결을 쥐고 있을까? 오키나와를 기대수명의 정점으로 만드는 것은 무엇일까?</p>
 <p>전문가들은 우선 오키나와가 일본에서 유일하게 기차가 없는 지방이라고 짚는다. 주민들은 차를 타지 않을 때는 걷거나 자전거를 타야 한다. 또한 하루 소금 섭취량 10g 미만이라는 일본 정부 권고를 실제로 지켜 낸 유일한 지방이기도 하다.</p>
+</section>
+<section id="전문가들은-우선-오키나와가-일본에서-유일하게-기차가-없는-지방이라고-짚는" class="level2">
+<h2 class="anchored" data-anchor-id="전문가들은-우선-오키나와가-일본에서-유일하게-기차가-없는-지방이라고-짚는">전문가들은 우선 오키나와가 일본에서 유일하게 기차가 없는 지방이라고 짚는</h2>
 <section id="오키나와의-기적의-다이어트" class="level3">
 <h3 class="anchored" data-anchor-id="오키나와의-기적의-다이어트">오키나와의 기적의 다이어트</h3>
 <p>오키나와의 심혈관질환 사망률은 일본에서 가장 낮고 거의 틀림없이 식단이 크게 한몫한다. 세계 각지의 영양 포럼에서 ’오키나와 다이어트’가 그토록 자주 논의되는 건 결코 우연이 아니다.</p>
@@ -1939,6 +2374,9 @@ ul.task-list li input[type="checkbox"] {
 <p>소금 역시 일본 본토의 절반 수준: 하루 7g으로, 본토 평균 12g과 비교된다.</p>
 <p>칼로리도 덜 섭취한다: 하루 평균 1,785kcal로, 일본 본토의 2,068kcal과 비교된다. 실제로 저열량 섭취는 다섯 블루존 전역에서 공통적으로 나타난다.</p>
 </section>
+</section>
+<section id="칼로리도-덜-섭취한다-하루-평균-1785kcal로-일본-본토의-2" class="level2">
+<h2 class="anchored" data-anchor-id="칼로리도-덜-섭취한다-하루-평균-1785kcal로-일본-본토의-2">칼로리도 덜 섭취한다: 하루 평균 1,785kcal로, 일본 본토의 2,</h2>
 <section id="하라하치부" class="level3">
 <h3 class="anchored" data-anchor-id="하라하치부">하라하치부</h3>
 <p>첫 장에서 언급한 80퍼센트 법칙으로 돌아오자. 일본어로 <em>하라하치부(hara hachi bu)</em>로 알려진 개념이다. 실행은 쉽다. 배가 거의 찬데 <em>조금 더</em> 먹을 수 있겠다 싶으면 그냥 먹기를 멈추면 된다!</p>
@@ -1946,6 +2384,9 @@ ul.task-list li input[type="checkbox"] {
 <p>일본에서 1인분이 서구보다 훨씬 작은 경향이 있는 이유가 바로 이것이다. 음식은 전채, 메인 코스, 디저트 순으로 나오지 않는다. 대신 작은 접시에 나눠 한꺼번에 차려지는 게 훨씬 흔하다: 하나엔 밥, 또 하나엔 채소, 미소된장국 한 그릇, 그리고 곁들일 간식. 작은 접시 여러 개에 담아 내면 과식을 피하기 쉽고 이 장 앞부분에서 말한 다양한 식단도 실천하기 좋다.</p>
 <p>하라하치부는 오래된 수련이다. 12세기 선(禪) 불교 서적 『자선용집기(Zazen Youjinki)』는 먹고 싶은 만큼의 삼분의 이만큼 먹으라고 권한다. 원하는 만큼 덜 먹는 것은 동양 모든 불교 사찰의 관습이다. 어쩌면 불교는 구세기 전부터 이미 칼로리 섭취 제한의 이점을 알아차렸던지도 모른다.</p>
 </section>
+</section>
+<section id="하라하치부는-오래된-수련이다.-12세기-선禪-불교-서적-자선용집기" class="level2">
+<h2 class="anchored" data-anchor-id="하라하치부는-오래된-수련이다.-12세기-선禪-불교-서적-자선용집기">하라하치부는 오래된 수련이다. 12세기 선(禪) 불교 서적 『자선용집기(</h2>
 <section id="그래서-적게-먹으면-오래-산다는-말인가" class="level3">
 <h3 class="anchored" data-anchor-id="그래서-적게-먹으면-오래-산다는-말인가">그래서, 적게 먹으면 오래 산다는 말인가?</h3>
 <p>이 생각에 이의를 제기할 사람은 거의 없을 것이다. 물론 영양실조라는 극단까지 가는 게 아니라면, 몸이 요구하는 것보다 적은 칼로리를 먹는 것이 수명을 늘리는 듯하다. 적은 칼로리를 섭취하면서 건강을 유지하는 열쇠는 높은 영양가의 음식(특히 ‘슈퍼푸드’)을 먹고 칼로리만 높이 불리고 영양가는 거의 없는 음식을 피하는 것이다.</p>
@@ -1955,12 +2396,18 @@ ul.task-list li input[type="checkbox"] {
 <p>매일 80퍼센트 법칙을 지키는 대안으로 주 일이틀 단식하는 방법이 있다. 5:2(단식) 다이어트는 매주 이틀 단식(500kcal 미만 섭취)하고 나머지 닷새는 평소대로 먹기를 권한다.</p>
 <p>수많은 이점 가운데 단식은 소화계를 청소하고 쉬게 해 준다.</p>
 </section>
+</section>
+<section id="수많은-이점-가운데-단식은-소화계를-청소하고-쉬게-해-준다." class="level2">
+<h2 class="anchored" data-anchor-id="수많은-이점-가운데-단식은-소화계를-청소하고-쉬게-해-준다.">수많은 이점 가운데 단식은 소화계를 청소하고 쉬게 해 준다.</h2>
 <section id="오키나와-식단-속-자연-항산화제-15가지" class="level3">
 <h3 class="anchored" data-anchor-id="오키나와-식단-속-자연-항산화제-15가지">오키나와 식단 속 자연 항산화제 15가지</h3>
 <p>항산화제는 세포의 산화 과정을 늦추어 손상과 노화를 가속하는 활성산소를 무력화하는 분자다. 예컨대 녹차의 항산화 힘은 잘 알려져 있으며 뒤에서 더 길게 다룬다.</p>
 <p>항산화제가 풍부하고 이 지역에서 거의 매일 먹는다는 이유로, 다음 열다섯 가지 식품이 오키나와 활력의 열쇠로 꼽힌다:</p>
 <p>두부 / 미소 / 참치 / 당근 / 고야(여주) / 곰부(다시마) / 양배추 / 김(nori) / 양파 / 콩나물 / 헤치마(오이 같은 박) / 대두(삶거나 날것으로) / 고구마 / 피망 / 삔빤차(자스민 차)</p>
 </section>
+</section>
+<section id="양파-콩나물-헤치마오이-같은-박-대두삶거나-날것으로" class="level2">
+<h2 class="anchored" data-anchor-id="양파-콩나물-헤치마오이-같은-박-대두삶거나-날것으로">양파 / 콩나물 / 헤치마(오이 같은 박) / 대두(삶거나 날것으로) /</h2>
 <section id="삔빤차-오키나와의-대표-차" class="level3">
 <h3 class="anchored" data-anchor-id="삔빤차-오키나와의-대표-차">삔빤차: 오키나와의 대표 차</h3>
 <p>오키나와 사람들은 어떤 종류의 차보다 삔빤차(Sanpin-cha)녹차와 자스민 꽃의 혼합를 많이 마신다. 서구에서 가장 근사한 대응물은 보통 중국산으로 들어오는 자스민 차일 것이다. 오키나와 과학기술대학원대학교의 쇼 히로코(Hiroko Sho)가 1988년 수행한 연구는 자스민 차가 혈중 콜레스테롤 수치를 낮춘다는 사실을 보여 준다.</p>
@@ -1974,6 +2421,9 @@ ul.task-list li input[type="checkbox"] {
 <p>오키나와 사람들은 하루 평균 삔빤차 세 잔을 마신다.</p>
 <p>서구에서 정확히 같은 배합을 찾기는 어렵겠지만 자스민 차나 좋은 품질의 녹차로 대신할 수 있다.</p>
 </section>
+</section>
+<section id="서구에서-정확히-같은-배합을-찾기는-어렵겠지만-자스민-차나-좋은-품질의" class="level2">
+<h2 class="anchored" data-anchor-id="서구에서-정확히-같은-배합을-찾기는-어렵겠지만-자스민-차나-좋은-품질의">서구에서 정확히 같은 배합을 찾기는 어렵겠지만 자스민 차나 좋은 품질의</h2>
 <section id="녹차의-비밀" class="level3">
 <h3 class="anchored" data-anchor-id="녹차의-비밀">녹차의 비밀</h3>
 <p>녹차에는 수세기 동안 상당한 약효가 인정되어 왔다. 최근 연구들은 그 많은 이점을 확인했고 자주 마시는 사람들의 장수에서 이 오래된 식물이 하는 역할을 증명했다.</p>
@@ -1992,6 +2442,9 @@ ul.task-list li input[type="checkbox"] {
 <p>폴리페놀이 고농도로 함유된 백차는 노화 방지에 더 효과적일 수 있다. 실제로 세계에서 가장 강력한 항산화 힘을 지닌 천연물로 여겨진다. 한 잔의 백차가 오렌지주스 열두 잔 분량의 위력을 낼 수 있다는 계산까지 나온다.</p>
 <p>요약하자면: 녹차든 백차든 매일 마시면 체내 활성산소를 줄여 더 오래 젊음을 유지하는 데 도움이 된다.</p>
 </section>
+</section>
+<section id="요약하자면-녹차든-백차든-매일-마시면-체내-활성산소를-줄여-더-오래-젊" class="level2">
+<h2 class="anchored" data-anchor-id="요약하자면-녹차든-백차든-매일-마시면-체내-활성산소를-줄여-더-오래-젊">요약하자면: 녹차든 백차든 매일 마시면 체내 활성산소를 줄여 더 오래 젊</h2>
 <section id="강력한-시쿠와사" class="level3">
 <h3 class="anchored" data-anchor-id="강력한-시쿠와사">강력한 <em>시쿠와사</em></h3>
 <p><em>시쿠와사</em>는 오키나와의 대표적인 감귤류 과일이며 오기미는 일본 전체에서 가장 큰 생산지다.</p>
@@ -2022,6 +2475,9 @@ ul.task-list li input[type="checkbox"] {
 <p><em>건강과 장수를 촉진하는 동양의 운동</em></p>
 <p>블루존의 연구들이 시사하듯 가장 오래 사는 사람들은 가장 많은 운동을 하는 사람들이 아니라 가장 많이 <em>움직이는</em> 사람들이다.</p>
 <p>장수 마을 오기미를 방문했을 때 우리는 여든과 아흔이 넘은 사람들조차 여전히 매우 활동적이라는 걸 발견했다. 집에 앉아 창밖을 내다보거나 신문을 읽으며 시간을 보내지 않는다. 오기미 주민들은 많이 걷고, 이웃들과 노래방을 하고, 아침 일찍 일어나 아침을 먹자마자혹은 그 전에밖으로 나가 텃밭의 잡초를 뽑는다. 헬스장에 가거나 격렬한 운동을 하지는 않지만 일상의 흐름 속에서 거의 멈추지 않고 움직인다.</p>
+</section>
+<section id="장수-마을-오기미를-방문했을-때-우리는-여든과-아흔이-넘은-사람들조차-여" class="level2">
+<h2 class="anchored" data-anchor-id="장수-마을-오기미를-방문했을-때-우리는-여든과-아흔이-넘은-사람들조차-여">장수 마을 오기미를 방문했을 때 우리는 여든과 아흔이 넘은 사람들조차 여</h2>
 <section id="의자에서-일어나는-것만큼-쉽다" class="level3">
 <h3 class="anchored" data-anchor-id="의자에서-일어나는-것만큼-쉽다">의자에서 일어나는 것만큼 쉽다</h3>
 <p>“30분 앉아 있으면 신진대사가 90퍼센트 느려집니다. 나쁜 지방을 동맥에서 근육으로지방이 태워질 수 있는 곳으로옮기는 효소들이 느려지죠. 그리고 2시간이면 좋은 콜레스테롤이 20퍼센트 떨어집니다. 5분이라도 일어나면 다시 돌아갑니다. 이런 것들이 너무 단순해서 거의 어리석을 지경입니다.” 개빈 브래들리(Gavin Bradley)가 2015년 <em>워싱턴 포스트</em>와 브리지드 슐테(Brigid Schulte)의 인터뷰에서 한 말이다. 브래들리는 이 분야의 저명한 전문가 중 한 명으로, 계속 앉아 있는 게 우리 건강에 얼마나 해로운지 인식을 높이는 국제기구의 디렉터다.</p>
@@ -2033,6 +2489,9 @@ ul.task-list li input[type="checkbox"] {
 <p>매일 헬스장에서 한 시간씩 보내거나 마라톤을 뛸 필요는 없다. 일본 백세인들이 보여 주듯 필요한 것은 하루에 움직임을 더하는 것뿐이다. 동양 수련법 중 하나를 규칙적으로 하면 좋은 방법이 된다. 덤으로 이 수련법들은 모두 분명히 정의된 단계를 갖추고 있다. 4장에서 봤듯 규칙이 분명한 수련은 몰입에 좋다. 이중 마음에 드는 게 없다면 자신이 사랑하고 움직이게 만드는 수련을 자유롭게 선택하라.</p>
 <p>이후 페이지에서 건강과 장수를 촉진하는 수련 몇 가지를 살펴보겠다. 다만 먼저 작은 전채 하나: 하루를 시작하기 위한, 유독 일본적인 운동.</p>
 </section>
+</section>
+<section id="이후-페이지에서-건강과-장수를-촉진하는-수련-몇-가지를-살펴보겠다.-다만" class="level2">
+<h2 class="anchored" data-anchor-id="이후-페이지에서-건강과-장수를-촉진하는-수련-몇-가지를-살펴보겠다.-다만">이후 페이지에서 건강과 장수를 촉진하는 수련 몇 가지를 살펴보겠다. 다만</h2>
 <section id="라디오-타이소" class="level3">
 <h3 class="anchored" data-anchor-id="라디오-타이소">라디오 타이소</h3>
 <p>이 아침 준비 운동은 제2차 세계대전 이전부터 있었다. 이름의 ’라디오’는 각 운동의 지시가 라디오로 전송되던 때에서 온 것이지만 오늘날 사람들은 보통 TV 채널이나 인터넷 영상으로 동작을 확인하며 한다.</p>
@@ -2047,6 +2506,9 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/index-93_2.jpg" class="img-fluid"></p>
 <p><img src="images/index-94_1.jpg" class="img-fluid"></p>
 </section>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"><img src="images/index-94_1.jpg" class="img-fluid"></h2>
 <section id="요가" class="level3">
 <h3 class="anchored" data-anchor-id="요가">요가</h3>
 <p>일본과 서구 모두에서 인기 있는 요가는 거의 누구나 할 수 있다.</p>
@@ -2059,6 +2521,9 @@ ul.task-list li input[type="checkbox"] {
 <li>신성에 더 가까이 가는 것</li>
 </ul>
 </section>
+</section>
+<section id="정신적육체적-정화" class="level2">
+<h2 class="anchored" data-anchor-id="정신적육체적-정화">- 정신적·육체적 정화</h2>
 <section id="요가의-유파" class="level3">
 <h3 class="anchored" data-anchor-id="요가의-유파">요가의 유파</h3>
 <p>비슷한 목표를 향해 있지만 발전시킨 전통과 경전에 따라 다양한 유형의 요가가 있다. 그 차이는 스승들의 말대로 최선의 자아라는 정상까지 가는 길에 있다.</p>
@@ -2070,6 +2535,9 @@ ul.task-list li input[type="checkbox"] {
 <p><em>라자 요가(Raja yoga)</em>: 왕도(royal path)로도 알려짐; 자기 자신과 타인과의 합일을 지향하는 일련의 단계를 포괄</p>
 <p><em>하타 요가(Hatha yoga)</em>: 서구와 일본에서 가장 널리 퍼진 형태; 균형 추구를 위해 결합된 <em>아사나(asana)</em> 혹은 자세가 특징</p>
 </section>
+</section>
+<section id="하타-요가hatha-yoga-서구와-일본에서-가장-널리-퍼진-형" class="level2">
+<h2 class="anchored" data-anchor-id="하타-요가hatha-yoga-서구와-일본에서-가장-널리-퍼진-형"><em>하타 요가(Hatha yoga)</em>: 서구와 일본에서 가장 널리 퍼진 형</h2>
 <section id="수리야-나마스카르태양-예배-하는-법" class="level3">
 <h3 class="anchored" data-anchor-id="수리야-나마스카르태양-예배-하는-법">수리야 나마스카르(태양 예배) 하는 법</h3>
 <p>수리야 나마스카르(Sun Salutation)는 하타 요가에서 가장 상징적인 동작 중 하나다. 이 열두 기본 동작만 따르면 된다:</p>
@@ -2090,6 +2558,9 @@ ul.task-list li input[type="checkbox"] {
 <p>방금 태양에게 인사했다. 이제 멋진 하루를 보낼 준비가 됐다.</p>
 <p><img src="images/index-97_1.jpg" class="img-fluid"></p>
 </section>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"><img src="images/index-97_1.jpg" class="img-fluid"></h2>
 <section id="태극권" class="level3">
 <h3 class="anchored" data-anchor-id="태극권">태극권</h3>
 <p>태극권(tai chi)은 타이치추안(t’ai chi ch’uan, 타이지췐)이라고도 불리는 중국 무술로, 수백 년을 거슬러 불교와 유교까지 소급된다. 일본에서도 매우 인기 있다.</p>
@@ -2097,6 +2568,9 @@ ul.task-list li input[type="checkbox"] {
 <p>태극권은 원래 <em>네이자(neijia)</em>, 즉 내가(內家) 무술로 목표가 개인적 성장이었다. 호신에 초점을 맞춰 수련자에게 최소한의 힘으로 기민함에 의존해 적을 제압하는 법을 가르친다.</p>
 <p>몸과 마음을 치유하는 수단으로 여겨지기도 했던 태극권은 점점 건강과 내적 평화를 기르는 데 더 자주 쓰이게 되었다. 국민들이 더 활동적으로 지내도록 독려하고자 중국 정부가 운동으로 장려했고 원래의 무술과의 연결은 흐려져 대신 누구나 접근 가능한 건강과 웰빙의 원천이 되었다.</p>
 </section>
+</section>
+<section id="몸과-마음을-치유하는-수단으로-여겨지기도-했던-태극권은-점점-건강과-내적" class="level2">
+<h2 class="anchored" data-anchor-id="몸과-마음을-치유하는-수단으로-여겨지기도-했던-태극권은-점점-건강과-내적">몸과 마음을 치유하는 수단으로 여겨지기도 했던 태극권은 점점 건강과 내적</h2>
 <section id="태극권의-유파" class="level3">
 <h3 class="anchored" data-anchor-id="태극권의-유파">태극권의 유파</h3>
 <p>태극권에는 서로 다른 학파와 유파가 있다. 가장 잘 알려진 것들:</p>
@@ -2112,6 +2586,9 @@ ul.task-list li input[type="checkbox"] {
 <li><p>자신과 상대를 알기</p></li>
 </ol>
 </section>
+</section>
+<section id="자신과-상대를-알기" class="level2">
+<h2 class="anchored" data-anchor-id="자신과-상대를-알기">4. 자신과 상대를 알기</h2>
 <section id="태극권의-십대-원칙" class="level3">
 <h3 class="anchored" data-anchor-id="태극권의-십대-원칙">태극권의 십대 원칙</h3>
 <p>양청푸(Yang Chengfu) 사부에 따르면 올바른 태극권 수련은 열 가지 기본 원칙을 따른다:</p>
@@ -2128,6 +2605,9 @@ ul.task-list li input[type="checkbox"] {
 <li><p>움직임 속에서 고요함을 찾아라. 활동적인 몸은 고요한 마음으로 이끈다.</p></li>
 </ol>
 </section>
+</section>
+<section id="움직임-속에서-고요함을-찾아라.-활동적인-몸은-고요한-마음으로-이" class="level2">
+<h2 class="anchored" data-anchor-id="움직임-속에서-고요함을-찾아라.-활동적인-몸은-고요한-마음으로-이">10. 움직임 속에서 고요함을 찾아라. 활동적인 몸은 고요한 마음으로 이</h2>
 <section id="구름-본떠서" class="level3">
 <h3 class="anchored" data-anchor-id="구름-본떠서">구름 본떠서</h3>
 <p>태극권에서 가장 잘 알려진 동작 중 하나는 ’구름처럼 손 흔들기(Wave Hands Like Clouds)’라 불리는 구름의 형태를 따르는 운동이다. 단계:</p>
@@ -2147,12 +2627,18 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p><img src="images/index-100_1.jpg" class="img-fluid"></p>
 </section>
+</section>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2"><img src="images/index-100_1.jpg" class="img-fluid"></h2>
 <section id="기공" class="level3">
 <h3 class="anchored" data-anchor-id="기공">기공</h3>
 <p>기공(chi kung)으로도 알려진 이 수련의 이름은 <em>기(qi, 생명력 혹은 에너지)</em>와 <em>궁(gong, 일)</em>을 결합해 개인의 생명력으로 작업한다는 뜻을 담는다. 비교적 현대적특히 지금 이름 아래서는이지만 기공의 기술은 도인(導引, Tao yin), 즉 정신적·육체적 웰빙을 키우려 한 고대 예술에 기반한다.</p>
 <p>이 수련은 20세기 초 훈련과 무술에 관한 보고에 등장하기 시작했고 1930년대에는 병원에서 쓰였다. 중국 정부가 태극권에서 했듯 나중에 대중화시켰다. 기공은 서거나 앉거나 누운 자세로 호흡을 자극하는 정적·동적 신체 운동을 포함한다. 다양한 유파가 있지만 모두 <em>기</em>를 강화하고 재생하려 한다.</p>
 <p>동작은 전형적으로 부드럽지만 수련은 강렬하다.</p>
 </section>
+</section>
+<section id="동작은-전형적으로-부드럽지만-수련은-강렬하다." class="level2">
+<h2 class="anchored" data-anchor-id="동작은-전형적으로-부드럽지만-수련은-강렬하다.">동작은 전형적으로 부드럽지만 수련은 강렬하다.</h2>
 <section id="기공의-이점" class="level3">
 <h3 class="anchored" data-anchor-id="기공의-이점">기공의 이점</h3>
 <p>수많은 국제 과학 연구에 따르면 기공은 태극권과 요가처럼 상당한 건강상 이점을 제공한다. 샌프란시스코 기공연구소의 케네스 M. 샹시에(Kenneth M. Sancier) 박사가 논문 “기공의 의학적 응용(Medical Applications of Qigong)”에서 관찰한 가운데 과학 연구로 입증된 것들이 두드러진다:</p>
@@ -2171,6 +2657,9 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>이런 예술들을 수련하면 몸매만 유지되는 게 아니라 수명까지 늘어난다.</p>
 </section>
+</section>
+<section id="이런-예술들을-수련하면-몸매만-유지되는-게-아니라-수명까지-늘어난다." class="level2">
+<h2 class="anchored" data-anchor-id="이런-예술들을-수련하면-몸매만-유지되는-게-아니라-수명까지-늘어난다.">이런 예술들을 수련하면 몸매만 유지되는 게 아니라 수명까지 늘어난다.</h2>
 <section id="기공-수련법" class="level3">
 <h3 class="anchored" data-anchor-id="기공-수련법">기공 수련법</h3>
 <p>기공을 올바르게 하려면 우리의 생명 에너지가 온몸으로 흐른다는 점을 기억해야 한다. 그 여러 부분을 조율하는 법을 알아야 한다:</p>
@@ -2183,6 +2672,9 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>이렇게 하면 유기체 전체가 단일 목표를 향해 함께 작동할 준비를 갖춘다.</p>
 </section>
+</section>
+<section id="이렇게-하면-유기체-전체가-단일-목표를-향해-함께-작동할-준비를-갖춘다." class="level2">
+<h2 class="anchored" data-anchor-id="이렇게-하면-유기체-전체가-단일-목표를-향해-함께-작동할-준비를-갖춘다.">이렇게 하면 유기체 전체가 단일 목표를 향해 함께 작동할 준비를 갖춘다.</h2>
 <section id="기공의-오행五行" class="level3">
 <h3 class="anchored" data-anchor-id="기공의-오행五行">기공의 오행(五行)</h3>
 <p>기공에서 가장 잘 알려진 운동 중 하나는 오행토, 수, 목, 금, 화을 상징하는 동작 연속이다. 이 동작 연속은 다섯 기류의 에너지 균형을 잡아 뇌와 장기 기능을 개선하려 한다.</p>
@@ -2251,6 +2743,9 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 </section>
+</section>
+<section id="숨을-내쉬며-팔을-옆으로-내려-초기-우치-자세로-돌아간다." class="level2">
+<h2 class="anchored" data-anchor-id="숨을-내쉬며-팔을-옆으로-내려-초기-우치-자세로-돌아간다.">2. 숨을 내쉬며 팔을 옆으로 내려 초기 우치 자세로 돌아간다.</h2>
 <section id="시아츠" class="level3">
 <h3 class="anchored" data-anchor-id="시아츠">시아츠</h3>
 <p>20세기 초 일본에서 주로 관절염 치료를 위해 만들어진 시아츠는 엄지와 손바닥으로 압박을 가해 기의 흐름에도 작용한다. 스트레칭과 호흡 운동을 결합해 몸의 서로 다른 요소 사이 균형을 만들려 한다.</p>
@@ -2259,6 +2754,9 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <p>갈홍(Ge Hong)</p>
 </section>
+</section>
+<section id="갈홍ge-hong" class="level2">
+<h2 class="anchored" data-anchor-id="갈홍ge-hong">갈홍(Ge Hong)</h2>
 <section id="더-잘-숨쉬며-더-오래-살기" class="level3">
 <h3 class="anchored" data-anchor-id="더-잘-숨쉬며-더-오래-살기">더 잘 숨쉬며 더 오래 살기</h3>
 <p>서구에서 『수진십서(Xiuzhen shishu)』완성의 닦음에 관한 십서(Ten Books on the Cultivation of Perfection)로 알려진 이 책은 13세기로 거슬러 올라가며 마음과 몸을 닦는 데 관한 여러 출처의 자료를 모은 편찬이다.</p>
@@ -2278,6 +2776,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="ix.-회복탄력성과-와비사비" class="level2">
 <h2 class="anchored" data-anchor-id="ix.-회복탄력성과-와비사비">IX. 회복탄력성과 <em>와비사비</em></h2>
 <p><em>스트레스와 걱정이 우리를 늙게 두지 않으면서 삶의 도전에 맞서는 법</em></p>
+</section>
+<section id="스트레스와-걱정이-우리를-늙게-두지-않으면서-삶의-도전에-맞서는-법" class="level2">
+<h2 class="anchored" data-anchor-id="스트레스와-걱정이-우리를-늙게-두지-않으면서-삶의-도전에-맞서는-법"><em>스트레스와 걱정이 우리를 늙게 두지 않으면서 삶의 도전에 맞서는 법</em></h2>
 <section id="회복탄력성이란" class="level3">
 <h3 class="anchored" data-anchor-id="회복탄력성이란">회복탄력성이란?</h3>
 <p>분명한 <em>이키가이</em>를 지닌 사람들 모두에게 공통인 한 가지는 무슨 일이 있어도 자신의 열정을 추구한다는 것이다. 카드가 절망적으로 기울었거나 장애물이 연달아 나타나도 절대 포기하지 않는다.</p>
@@ -2286,6 +2787,9 @@ ul.task-list li input[type="checkbox"] {
 <p>이 장의 마지막 절에서는 회복탄력성을 넘어 <em>안티프래질리티(antifragility)</em>를 기르는 기법들을 탐구하겠다.</p>
 <p>조만간 우리 모두는 어려운 순간과 마주해야 하며 그 마주하는 방식이 삶의 질에 큰 차이를 만든다. 마음, 몸, 정서적 회복탄력성에 대한 올바른 훈련은 삶의 굽이굽이에 맞서는 데 필수적이다.</p>
 </section>
+</section>
+<section id="조만간-우리-모두는-어려운-순간과-마주해야-하며-그-마주하는-방식이-삶의" class="level2">
+<h2 class="anchored" data-anchor-id="조만간-우리-모두는-어려운-순간과-마주해야-하며-그-마주하는-방식이-삶의">조만간 우리 모두는 어려운 순간과 마주해야 하며 그 마주하는 방식이 삶의</h2>
 <section id="나나-코로비-야-오키-七転び八起き" class="level3">
 <h3 class="anchored" data-anchor-id="나나-코로비-야-오키-七転び八起き">나나 코로비 야 오키 (七転び八起き)</h3>
 <p><em>일곱 번 넘어져 여덟 번 일어난다.</em></p>
@@ -2295,6 +2799,9 @@ ul.task-list li input[type="checkbox"] {
 <p>라인홀드 니부어(Reinhold Niebuhr)의 유명한 ’고요함의 기도’를 빌리면:</p>
 <p><em>신이여, 바꿀 수 없는 것들을</em> <em>평온히 받아들일 은혜를,</em> <em>바꾸어야 할 것들을</em> <em>바꿀 용기를,</em> <em>그리고 그 둘을</em> <em>구분할 지혜를 주소서.</em></p>
 </section>
+</section>
+<section id="그리고-그-둘을" class="level2">
+<h2 class="anchored" data-anchor-id="그리고-그-둘을"><em>그리고 그 둘을</em></h2>
 <section id="불교와-스토아주의를-통한-정서적-회복탄력성" class="level3">
 <h3 class="anchored" data-anchor-id="불교와-스토아주의를-통한-정서적-회복탄력성">불교와 스토아주의를 통한 정서적 회복탄력성</h3>
 <p>싯다르타 고타마(부처)는 네팔 카필라바스투의 왕자로 태어나 부요에 둘러싸인 궁궐에서 자랐다. 열여섯에 결혼해 아이를 낳았다.</p>
@@ -2307,6 +2814,9 @@ ul.task-list li input[type="checkbox"] {
 <p>스토아주의와 불교는 둘 다 그 뿌리에서 웰빙을 수련하는 방법이다.</p>
 <p>스토아주의에 따르면 우리의 쾌락과 욕망 자체가 문제가 아니다. 그것이 우리를 지배하지 않는 한 즐겨도 된다. 스토아 철인들은 감정을 통제할 줄 아는 사람들을 덕 있는 사람으로 여겼다.</p>
 </section>
+</section>
+<section id="스토아주의에-따르면-우리의-쾌락과-욕망-자체가-문제가-아니다.-그것이-우" class="level2">
+<h2 class="anchored" data-anchor-id="스토아주의에-따르면-우리의-쾌락과-욕망-자체가-문제가-아니다.-그것이-우">스토아주의에 따르면 우리의 쾌락과 욕망 자체가 문제가 아니다. 그것이 우</h2>
 <section id="일어날-수-있는-최악의-일은-무엇인가" class="level3">
 <h3 class="anchored" data-anchor-id="일어날-수-있는-최악의-일은-무엇인가">일어날 수 있는 최악의 일은 무엇인가?</h3>
 <p>우리는 마침내 꿈에 그리던 직장을 얻지만 얼마 안 가 더 좋은 자리를 알아보기 시작한다. 복권에 당첨되어 좋은 차를 사고 나서는 돛단선 없이 못 살겠다고 결심한다. 오랫동안 그리워하던 남자 혹은 여자의 마음을 마침내 얻고 나서 문득 다른 사람에게 눈이 간다.</p>
@@ -2316,6 +2826,9 @@ ul.task-list li input[type="checkbox"] {
 <p>소극적 시각화를 하려면 부정적 사건들을 성찰하되 그것들에 대해 걱정하지 않아야 한다.</p>
 <p>고대 로마에서 가장 부자 중 하나였던 세네카(Seneca)는 호화로운 삶을 살면서도 활동적인 스토아 철인이었다. 그는 매일 밤 잠들기 전 소극적 시각화를 실천하라고 권했다. 사실 그는 이런 부정적 상황을 상상하는 데만 그치지 않고 직접 실행했다. 예컨대 하인 없이, 부자로서 익숙했던 먹고 마시던 것 없이 한 주를 보내는 식으로. 그 결과 그는 “일어날 수 있는 최악의 일은 무엇인가?”라는 질문에 답할 수 있었다.</p>
 </section>
+</section>
+<section id="고대-로마에서-가장-부자-중-하나였던-세네카seneca는-호화로운-삶" class="level2">
+<h2 class="anchored" data-anchor-id="고대-로마에서-가장-부자-중-하나였던-세네카seneca는-호화로운-삶">고대 로마에서 가장 부자 중 하나였던 세네카(Seneca)는 호화로운 삶</h2>
 <section id="더-건강한-감정을-위한-명상" class="level3">
 <h3 class="anchored" data-anchor-id="더-건강한-감정을-위한-명상">더 건강한 감정을 위한 명상</h3>
 <p>소극적 시각화와 부정적 감정에 굴복하지 않기 외에 스토아주의의 또 다른 핵심 교리는 ’무엇을 통제할 수 있는지 없는지 아는 것’이다. 고요함의 기도에서 보았듯.</p>
@@ -2324,6 +2837,9 @@ ul.task-list li input[type="checkbox"] {
 <p>선(禪) 불교에서 명상은 우리의 욕망과 감정을 자각하고 그로부터 스스로를 해방하는 길이다. 단순히 생각 없는 마음을 유지하는 게 아니라 생각과 감정이 떠오르는 대로 관찰하되 그것에 휩쓸리지 않는 것이다. 이렇게 하면 우리는 분노와 질투와 원한에 휩쓸리지 않도록 마음을 훈련한다.</p>
 <p>불교에서 가장 널리 쓰이는 만트라 하나는 부정적 감정 통제에 초점을 맞춘다: “옴 마니 파드메 훔(Oṃ maṇi padme hūṃ)”. <em>옴(oṃ)</em>은 자아를 정화하는 관대함, <em>마(ma)</em>는 질투를 정화하는 윤리, <em>니(ṇi)</em>는 열정과 욕망을 정화하는 인내, <em>파드(pad)</em>는 편견을 정화하는 정밀함, <em>메(me)</em>는 탐욕을 정화하는 귀의, <em>훔(hūṃ)</em>은 증오를 정화하는 지혜다.</p>
 </section>
+</section>
+<section id="불교에서-가장-널리-쓰이는-만트라-하나는-부정적-감정-통제에-초점을-맞춘" class="level2">
+<h2 class="anchored" data-anchor-id="불교에서-가장-널리-쓰이는-만트라-하나는-부정적-감정-통제에-초점을-맞춘">불교에서 가장 널리 쓰이는 만트라 하나는 부정적 감정 통제에 초점을 맞춘</h2>
 <section id="지금-여기-그리고-만물의-무상함" class="level3">
 <h3 class="anchored" data-anchor-id="지금-여기-그리고-만물의-무상함">지금 여기, 그리고 만물의 무상함</h3>
 <p>회복탄력성을 기르는 또 하나의 열쇠는 어느 시간 속에 살지 아는 것이다. 불교와 스토아주의 모두 현재만이 존재하며 통제할 수 있는 유일한 것임을 상기시킨다. 과거나 미래를 걱정하는 대신 사물을 지금, 이 순간 그대로 소중히 여겨야 한다. “진정으로 살아 있을 수 있는 유일한 순간은 지금 이 순간입니다.” 불교 승려 틱낫한(Thich Nhat Hanh)의 관찰이다.</p>
@@ -2333,6 +2849,9 @@ ul.task-list li input[type="checkbox"] {
 <p>“인간의 모든 것은 덧없고 잘 없어진다.” 세네카가 말한다.</p>
 <p>세계의 덧없고, 순간적이고, 영원하지 않은 본성은 모든 불교 수련의 중심이다. 이를 늘 마음에 두면 상실의 시기에 과도한 고통을 피하는 데 도움이 된다.</p>
 </section>
+</section>
+<section id="세계의-덧없고-순간적이고-영원하지-않은-본성은-모든-불교-수련의-중심" class="level2">
+<h2 class="anchored" data-anchor-id="세계의-덧없고-순간적이고-영원하지-않은-본성은-모든-불교-수련의-중심">세계의 덧없고, 순간적이고, 영원하지 않은 본성은 모든 불교 수련의 중심</h2>
 <section id="와비사비와-일기일회一期一会" class="level3">
 <h3 class="anchored" data-anchor-id="와비사비와-일기일회一期一会"><em>와비사비</em>와 <em>일기일회(一期一会)</em></h3>
 <p><em>와비사비(wabi-sabi)</em>는 주변 세계의 덧없고 변덕스럽고 불완전한 본성의 아름다움을 보여 주는 일본 개념이다. 완벽함 속에서 아름다움을 찾는 대신 흠이 있고 미완성인 것들 속에서 찾아야 한다.</p>
@@ -2346,6 +2865,9 @@ ul.task-list li input[type="checkbox"] {
 <p><em>일기일회</em>는 현재에 집중하고 삶이 건네주는 각 순간을 즐기라고 가르친다. 그래서 <em>이키가이</em>를 찾고 추구하는 게 그토록 중요한 것이다.</p>
 <p><em>와비사비</em>는 불완전함의 아름다움을 성장의 기회로 감상하라고 가르친다.</p>
 </section>
+</section>
+<section id="와비사비는-불완전함의-아름다움을-성장의-기회로-감상하라고-가르친다." class="level2">
+<h2 class="anchored" data-anchor-id="와비사비는-불완전함의-아름다움을-성장의-기회로-감상하라고-가르친다."><em>와비사비</em>는 불완전함의 아름다움을 성장의 기회로 감상하라고 가르친다.</h2>
 <section id="회복탄력성-너머-안티프래질리티" class="level3">
 <h3 class="anchored" data-anchor-id="회복탄력성-너머-안티프래질리티">회복탄력성 너머: 안티프래질리티</h3>
 <p>전설에 따르면 헤라클레스가 처음 히드라와 맞섰을 때, 머리 하나를 베면 그 자리에 둘이 다시 자라난다는 걸 알고 절망했다. 상처 입을 때마다 강해지는 짐승은 죽일 수 없으리라.</p>
@@ -2359,6 +2881,9 @@ ul.task-list li input[type="checkbox"] {
 <p>일본 금융 시장은 지진 몇 분 만에 문을 닫았다. 그 후폭풍 속에서 가장 잘 나간 사업은 어디였을까? 대형 건설회사들의 주식은 2011년 이후 꾸준히 상승세다. 도호쿠 해안 전체를 재건해야 할 필요성은 건설업에 큰 호재다. 이 경우 일본 건설회사들은 재해로 막대한 이익을 본 <em>안티프래질</em>이다.</p>
 <p>이제 이 개념을 일상에 어떻게 적용할 수 있는지 살펴보자.</p>
 </section>
+</section>
+<section id="이제-이-개념을-일상에-어떻게-적용할-수-있는지-살펴보자." class="level2">
+<h2 class="anchored" data-anchor-id="이제-이-개념을-일상에-어떻게-적용할-수-있는지-살펴보자.">이제 이 개념을 일상에 어떻게 적용할 수 있는지 살펴보자.</h2>
 <section id="어떻게-더-안티프래질해질-수-있는가" class="level3">
 <h3 class="anchored" data-anchor-id="어떻게-더-안티프래질해질-수-있는가">어떻게 더 안티프래질해질 수 있는가?</h3>
 <section id="단계-중복을-만들어라" class="level4">
@@ -2392,9 +2917,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-</section>
-<section id="에필로그" class="level1">
-<h1>에필로그</h1>
+<section id="에필로그" class="level2">
+<h2 class="anchored" data-anchor-id="에필로그">에필로그</h2>
 <p>아이다 미츠오는 20세기 가장 중요한 서예가이자 하이쿠 작가 중 한 사람이었다. 그는 극히 구체적인 <em>이키가이</em>에 일생을 바친 또 한 명의 일본인이다. 서도(書道) 붓으로 십칠 음절의 짧은 시를 써서 감정을 전하는 일, 그것이 그의 이키가이였다.</p>
 <p>아이다의 하이쿠 상당수는 지금 이 순간의 소중함과 흘러가는 시간에 대해 노래한다. 아래 실린 시는 “지금, 이곳에서, 내 삶 속에 있는 것은 오직 당신의 삶뿐이다”라고 옮길 수 있겠다.</p>
 <p>또 다른 시에서 아이다는 단순히 “여기, 지금”이라고만 적었다. <em>모노노 아와레</em>(mono no aware)덧없이 스러져 가는 것에 대한 애잔한 애상을 불러일으키려는 예술 작품이다.</p>
@@ -2402,13 +2926,14 @@ ul.task-list li input[type="checkbox"] {
 <p>이번에도 아이다의 작품인 마지막 시는 이런 뜻을 담고 있다. “계속 나아가라. 길을 바꾸지 말라.”</p>
 <p>일단 자신의 <em>이키가이</em>를 발견하고 나면 그것을 매일 추구하고 가꾸는 일이 삶에 의미를 가져다준다. 삶에 이 목적이 자리 잡는 순간, 하는 모든 일에서 행복한 몰입의 경지에 이른다. 화폭 앞에 앉은 서예가처럼, 반세기가 지나도록 손님들을 위해 사랑을 담아 스시를 준비하는 장인처럼.</p>
 </section>
-<section id="결론" class="level1">
-<h1>결론</h1>
+<section id="결론" class="level2">
+<h2 class="anchored" data-anchor-id="결론">결론</h2>
 <p>우리의 <em>이키가이</em>는 저마다 다르지만 한 가지 공통점이 있다. 우리는 모두 의미를 찾고 있다는 것이다. 자신에게 의미 있는 것과 연결되어 있다는 느낌 속에 나날을 보낼 때 우리는 더 충만하게 산다. 그 연결을 잃으면 절망을 느낀다.</p>
 <p>현대의 삶은 우리를 본래의 본성에서 점점 더 멀어지게 한다. 그래서 의미 없는 삶을 살기 아주 쉽다. 강력한 힘과 유혹(돈, 권력, 관심, 성공)이 날마다 우리를 산만하게 한다. 그것들이 당신의 삶을 집어삼키게 하지 말라.</p>
 <p>직관과 호기심은 <em>이키가이</em>와 연결되도록 돕는 매우 강력한 내면의 나침반이다. 즐거운 것들을 따르라. 싫어하는 것들에서는 멀어지거나 그것을 바꾸어라. 호기심이 이끄는 대로, 의미와 행복으로 가득 차게 하는 일들을 하며 부지런히 살아가라. 거창한 일일 필요는 없다. 좋은 부모가 되는 일에서, 이웃을 돕는 일에서 의미를 발견할 수도 있다.</p>
 <p><em>이키가이</em>와 연결되는 완벽한 전략 같은 것은 없다. 그러나 오키나와 사람들에게서 배운 것은 그것을 찾는 일에 너무 조바심을 내지 않아도 된다는 사실이다.</p>
 <p>삶은 풀어야 할 문제가 아니다. 기억할 것은 단 하나다. 당신이 사랑하는 일에 몰두하게 해 줄 무언가를 쥐고 당신을 사랑하는 사람들에 둘러싸여 산다는 것을.</p>
+</section>
 <section id="이키가이-10계명" class="level2">
 <h2 class="anchored" data-anchor-id="이키가이-10계명"><em>이키가이</em> 10계명</h2>
 <p>오기미 장수 주민들의 지혜에서 추려낸 열 가지 규칙으로 이 책을 마무리하려 한다.</p>
@@ -2455,12 +2980,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "복사완료!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "복사완료!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

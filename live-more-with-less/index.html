@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kate Luckins">
-<meta name="dcterms.date" content="2026-08-24">
 
 <title>더 살고 덜 쓰기 – Machine translation</title>
 <style>
@@ -65,17 +64,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
   }
 }</script>
 
@@ -117,13 +116,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../meditations-aurelius/index.html">철학, 심리학 및 삶의 지혜</a></li><li class="breadcrumb-item"><a href="../live-more-with-less/index.html"><span class="chapter-title">더 살고 덜 쓰기</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -140,7 +139,7 @@ window.Quarto = {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="검색"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -154,7 +153,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">기초 컴퓨터 과학 및 시스템 도구</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -185,7 +184,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">프로그래밍 언어 및 소프트웨어 엔지니어링</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -271,7 +270,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">인공지능, LLM 및 머신러닝</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -312,7 +311,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">데이터 사이언스, 엔지니어링 및 시각화</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -363,7 +362,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">인과추론 및 통계 모델링</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -389,7 +388,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">생명정보학, 계산생물학 및 바이오 파이썬</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -465,7 +464,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">단백질 공학, 면역학 및 항체 치료제</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -536,7 +535,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">신약 개발, 약동학 및 바이오의약품 규제</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -592,7 +591,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">비즈니스, 경영 및 전략적 리더십</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -668,7 +667,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
  <span class="menu-text">커뮤니케이션, 설득 및 글쓰기 기술</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -734,7 +733,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
  <span class="menu-text">생산성, 시간 관리 및 습관 형성</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -825,7 +824,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
  <span class="menu-text">철학, 심리학 및 삶의 지혜</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -989,7 +988,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">목차</h2>
    
   <ul>
   <li><a href="#서론" id="toc-서론" class="nav-link active" data-scroll-target="#서론">서론</a>
@@ -997,9 +996,7 @@ window.Quarto = {
   <li><a href="#왜-지금-행동해야-하는가" id="toc-왜-지금-행동해야-하는가" class="nav-link" data-scroll-target="#왜-지금-행동해야-하는가">왜 지금 행동해야 하는가</a></li>
   <li><a href="#라이프스타일-업그레이드-준비되셨나요" id="toc-라이프스타일-업그레이드-준비되셨나요" class="nav-link" data-scroll-target="#라이프스타일-업그레이드-준비되셨나요">라이프스타일 업그레이드 준비되셨나요?</a></li>
   <li><a href="#함께-불완전하게-해본다" id="toc-함께-불완전하게-해본다" class="nav-link" data-scroll-target="#함께-불완전하게-해본다">함께, 불완전하게 해본다</a></li>
-  </ul></li>
-  <li><a href="#부-시작하기" id="toc-부-시작하기" class="nav-link" data-scroll-target="#부-시작하기">1부: 시작하기</a>
-  <ul class="collapse">
+  <li><a href="#부-시작하기" id="toc-부-시작하기" class="nav-link" data-scroll-target="#부-시작하기">1부: 시작하기</a></li>
   <li><a href="#두려움에서-희망으로" id="toc-두려움에서-희망으로" class="nav-link" data-scroll-target="#두려움에서-희망으로">두려움에서 희망으로</a></li>
   <li><a href="#기후-변화-입문climate-change-101" id="toc-기후-변화-입문climate-change-101" class="nav-link" data-scroll-target="#기후-변화-입문climate-change-101">기후 변화 입문(Climate Change 101)</a></li>
   <li><a href="#이것이-우리에게-의미하는-것" id="toc-이것이-우리에게-의미하는-것" class="nav-link" data-scroll-target="#이것이-우리에게-의미하는-것">이것이 우리에게 의미하는 것</a></li>
@@ -1115,9 +1112,7 @@ window.Quarto = {
   <li><a href="#에코-승리를-축하하라" id="toc-에코-승리를-축하하라" class="nav-link" data-scroll-target="#에코-승리를-축하하라">에코 승리를 축하하라</a></li>
   <li><a href="#다음-단계는" id="toc-다음-단계는" class="nav-link" data-scroll-target="#다음-단계는">다음 단계는?</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#부-라이프스타일-에디트" id="toc-부-라이프스타일-에디트" class="nav-link" data-scroll-target="#부-라이프스타일-에디트">2부: 라이프스타일 에디트</a>
-  <ul class="collapse">
+  <li><a href="#부-라이프스타일-에디트" id="toc-부-라이프스타일-에디트" class="nav-link" data-scroll-target="#부-라이프스타일-에디트">2부: 라이프스타일 에디트</a></li>
   <li><a href="#서론-소비주의-억제하기" id="toc-서론-소비주의-억제하기" class="nav-link" data-scroll-target="#서론-소비주의-억제하기">서론: 소비주의 억제하기</a></li>
   <li><a href="#나만의-에디트-메뉴" id="toc-나만의-에디트-메뉴" class="nav-link" data-scroll-target="#나만의-에디트-메뉴">나만의 에디트 메뉴</a></li>
   <li><a href="#비우기-vs-에디트" id="toc-비우기-vs-에디트" class="nav-link" data-scroll-target="#비우기-vs-에디트">비우기 vs 에디트</a></li>
@@ -1231,8 +1226,8 @@ window.Quarto = {
   </ul></li>
   <li><a href="#크리스마스-에디트의-영향" id="toc-크리스마스-에디트의-영향" class="nav-link" data-scroll-target="#크리스마스-에디트의-영향">크리스마스 에디트의 영향</a></li>
   <li><a href="#그-어색한-선물-대화를-덜-어색하게" id="toc-그-어색한-선물-대화를-덜-어색하게" class="nav-link" data-scroll-target="#그-어색한-선물-대화를-덜-어색하게">그 어색한 선물 대화를 덜 어색하게</a></li>
-  </ul></li>
   <li><a href="#결론-우리가-원하는-미래를-위한-삶" id="toc-결론-우리가-원하는-미래를-위한-삶" class="nav-link" data-scroll-target="#결론-우리가-원하는-미래를-위한-삶">결론: 우리가 원하는 미래를 위한 삶</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -1249,16 +1244,16 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">저자</div>
     <div class="quarto-title-meta-contents">
              <p>Kate Luckins </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">공개</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 24, 2026</p>
+      <p class="date">2026년 8월 24일</p>
     </div>
   </div>
   
@@ -1307,9 +1302,9 @@ window.Quarto = {
 <p>앞으로 다가올 어느 해, 아들들 눈을 똑바로 보며 “네들을 위해 기후 변화와 싸울 수 있는 모든 걸 다했다”고 말하고 싶다. 여러분도 같은 마음일 거라 믿어요. 그럼, 함께 덜 쓰면서 더 살 준비 되셨나요?</p>
 <p>케이트</p>
 </section>
+<section id="부-시작하기" class="level2">
+<h2 class="anchored" data-anchor-id="부-시작하기">1부: 시작하기</h2>
 </section>
-<section id="부-시작하기" class="level1">
-<h1>1부: 시작하기</h1>
 <section id="두려움에서-희망으로" class="level2">
 <h2 class="anchored" data-anchor-id="두려움에서-희망으로">두려움에서 희망으로</h2>
 <p>아들들이 부두에서 바다로 풍덩 뛰어드는 걸 즐기는 걸 보며 이 짠내 나는 기쁨을 언젠가 손자손녀에게도 선물해줄 수 있을까 궁금한다. 아니면 그때엔 바다는 올라가고, 모래사장은 침식되고, 부두는 더 거친 파도에 쓸려간 뒤일까? 해변 나들이가 즐겁지도 안전하지도 않게 되면 아이스크림 트럭 가게는 망할까? 자외선 차단제 전쟁만이 아이들과 햇살의 즐거움 사이의 유일한 장벽이던 시절이 그립겠죠, 앞으로는 폭염 속 외출 자체가 위험하기 때문이다. 이 낯선 미래에선 되새김질하는 소가 지구를 데우기 때문에 햄버거가 금지될까요? 불확실하고 과밀한 미래에 몇 명까지 아이를 낳아도 되는지 규정이 생길까요?</p>
@@ -1947,9 +1942,9 @@ window.Quarto = {
 <p>우리가 함께 느끼는 일상의 만족감은 낭비적 소비주의에 맞서는 가장 강력한 무기입니다. 무분별한 소비주의는 지구를 위협하는 가장 큰 요인이었지만, 우리는 이를 바꿀 수 있습니다. 진정한 만족을 중심으로 라이프스타일을 다시 세우면 사람 사이의 연결과 인간성, 그리고 우리가 사랑하는 세상이 회복됩니다. 1부에서 기후행동을 향한 마음의 준비를 마쳤다면, 이제 2부에서는 손을 잡고 지구를 치유하며 삶을 한 단계 업그레이드하는 구체적인 실천의 여정으로 떠나봅시다!</p>
 </section>
 </section>
+<section id="부-라이프스타일-에디트" class="level2">
+<h2 class="anchored" data-anchor-id="부-라이프스타일-에디트">2부: 라이프스타일 에디트</h2>
 </section>
-<section id="부-라이프스타일-에디트" class="level1">
-<h1>2부: 라이프스타일 에디트</h1>
 <section id="서론-소비주의-억제하기" class="level2">
 <h2 class="anchored" data-anchor-id="서론-소비주의-억제하기">서론: 소비주의 억제하기</h2>
 <p>이 책의 1부는 길을 막던 과제들을 정복해 당신만의 방식으로 지속가능 라이프스타일을 추구하게 했다. 대부분의 사람에게 쇼핑 습관 개선은 가장 임팩트 있는 일 중 하나이며 결핍 속에 살라는 의미가 아니다. 오히려 삶이 더 축제처럼 느껴질 수 있다. 2부에는 낭비를 줄이고, 라이프스타일을 업그레이드하고, 지구도 지키는 단계별 처방인 매력적인 ‘에디트’ 다섯 개 메뉴가 있다. 이 에디트들은 낭비적 소비주의를 다루고 미디엄 그린 접근으로 덜 쓰면서 더 살게 도와준다.</p>
@@ -2101,7 +2096,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>💡 다시 어질러지는 것(Re-cluttering)을 방지하는 실천 팁
+<span class="screen-reader-only">힌트</span>💡 다시 어질러지는 것(Re-cluttering)을 방지하는 실천 팁
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -2129,7 +2124,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>🔍 패션에 관한 흔한 오해와 진실 (패션 신화 파괴)
+<span class="screen-reader-only">노트</span>🔍 패션에 관한 흔한 오해와 진실 (패션 신화 파괴)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2256,7 +2251,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>💡 냉장고 과부하와 음식 낭비를 막는 주간 실천 팁
+<span class="screen-reader-only">힌트</span>💡 냉장고 과부하와 음식 낭비를 막는 주간 실천 팁
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -2298,7 +2293,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>🔍 식품에 관한 흔한 오해와 진실 (식품 신화 파괴)
+<span class="screen-reader-only">노트</span>🔍 식품에 관한 흔한 오해와 진실 (식품 신화 파괴)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2425,7 +2420,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>💡 아이의 조르기 요구에 현명하게 대처하는 소통 팁
+<span class="screen-reader-only">힌트</span>💡 아이의 조르기 요구에 현명하게 대처하는 소통 팁
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -2444,7 +2439,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>🔍 놀이에 관한 흔한 오해와 진실 (놀이 신화 파괴)
+<span class="screen-reader-only">노트</span>🔍 놀이에 관한 흔한 오해와 진실 (놀이 신화 파괴)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2518,7 +2513,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>⚠️ 저자의 첫 뷰티 에디트 경험에서 얻은 교훈
+<span class="screen-reader-only">경고</span>⚠️ 저자의 첫 뷰티 에디트 경험에서 얻은 교훈
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -2583,7 +2578,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>💡 피부과 전문의와 테라피스트가 제안하는 미니멀 스킨케어 루틴
+<span class="screen-reader-only">힌트</span>💡 피부과 전문의와 테라피스트가 제안하는 미니멀 스킨케어 루틴
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -2608,7 +2603,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>🔍 뷰티에 관한 흔한 오해와 진실 (뷰티 신화 파괴)
+<span class="screen-reader-only">노트</span>🔍 뷰티에 관한 흔한 오해와 진실 (뷰티 신화 파괴)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2733,7 +2728,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>💡 가족·친척과의 어색한 선물 대화를 부드럽게 푸는 팁
+<span class="screen-reader-only">힌트</span>💡 가족·친척과의 어색한 선물 대화를 부드럽게 푸는 팁
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -2753,7 +2748,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>🔍 크리스마스에 관한 흔한 오해와 진실 (크리스마스 신화 파괴)
+<span class="screen-reader-only">노트</span>🔍 크리스마스에 관한 흔한 오해와 진실 (크리스마스 신화 파괴)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2768,9 +2763,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-</section>
-<section id="결론-우리가-원하는-미래를-위한-삶" class="level1">
-<h1>결론: 우리가 원하는 미래를 위한 삶</h1>
+<section id="결론-우리가-원하는-미래를-위한-삶" class="level2">
+<h2 class="anchored" data-anchor-id="결론-우리가-원하는-미래를-위한-삶">결론: 우리가 원하는 미래를 위한 삶</h2>
 <p>이 책이 마무리되며 승리를 축하할 때이다. 이 책을 집어 들고 끝까지 온 것만으로도 축하할 가치가 있다 (중간에 한두 장을 건너뛰었어도요!). 우리는 많은 것을 달성했다. 두려움을 능동적 희망으로 바꿔 모두가 차이를 만들 힘을 얻었다. 의무를 집과 커뮤니티의 변화 제조자가 될 기회로 바꿨죠. 게다가 미디엄 그린으로 사는 게 라이프스타일을 풍요롭게 하는 만족스럽고 검소한 방법일 수 있음을 발견했다. 덜 쓰면서 더 사는 법을 배웠고 더 의식 있는 삶이 우리를 연결시킨다는 것도, 혼자 싸우는 부담과 외로움을 느끼는 사람이 많은 사회에서 그토록 중요한 것 말이다.</p>
 <p>지속가능 삶을 완벽하게 하는 게 중요한 게 아니다. 더 많은 사람이 불완전하게 해서 필요한 방식으로 지구를 돕는 게 더 중요하다.</p>
 <p>이 책을 통해 지속가능 라이프스타일을 활성화하고 풍요롭게 하는 방법의 명확한 그림을 그렸다. 하지만 우리와 아이들이 미래에 무엇을 맞이할지 누가 아나요? 선도 연구자와 과학자들은 제한된 자원을 두고 경쟁하는 더 크고 늙어가는 인구, 해수면 상승으로 사라지는 도시, 새 기술(전기 무인차 같은)의 채택을 포함한 글로벌 과제를 예측한다. 무엇이 먼저 올지 모르지만 새 과제가 생길 때 희망과 용기가 필요하다는 건 안다.</p>
@@ -2779,6 +2773,7 @@ window.Quarto = {
 <p>나는 변화가 가능하다는 확고한 믿음으로 이 책을 썼다. 제 가족을 위해서요. 당신 가족을 위해서도. 그래서 밤에 잘 잔다. 그 과정에서 겪은 모든 헛디딤, 실수, 기후 고통을 솔직히 밝혔지만 에코 양심과 혼돈의 가족 생활이 함께 번성하는 길을 찾는 데 끊임없이 보상받고 있다. 우리가 함께 만들 변화에 엄청난 야망이 있다. 이 책을 위해 만난 창조적이고 활기찬 리더들과 평범한 에코 영웅들에게 영감받았다. 그리고 언젠가 아들들 눈을 보고 그들을 위해 기후 변화와 싸울 수 있는 모든 걸 다했다고 말할 수 있으리라는 게 힘이 된다.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -2807,12 +2802,12 @@ window.Quarto = {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "복사완료!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "복사완료!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

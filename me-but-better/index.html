@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="올가 카잔(Olga Khazan)">
-<meta name="dcterms.date" content="2025-03-11">
 
 <title>더 나아진 나 – Machine translation</title>
 <style>
@@ -65,17 +64,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
   }
 }</script>
 
@@ -88,13 +87,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../meditations-aurelius/index.html">철학, 심리학 및 삶의 지혜</a></li><li class="breadcrumb-item"><a href="../me-but-better/index.html"><span class="chapter-title">더 나아진 나</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -111,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="검색"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -125,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">기초 컴퓨터 과학 및 시스템 도구</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -156,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">프로그래밍 언어 및 소프트웨어 엔지니어링</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -242,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">인공지능, LLM 및 머신러닝</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -283,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">데이터 사이언스, 엔지니어링 및 시각화</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -334,7 +333,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">인과추론 및 통계 모델링</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -360,7 +359,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">생명정보학, 계산생물학 및 바이오 파이썬</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -436,7 +435,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">단백질 공학, 면역학 및 항체 치료제</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -507,7 +506,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">신약 개발, 약동학 및 바이오의약품 규제</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -563,7 +562,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">비즈니스, 경영 및 전략적 리더십</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -639,7 +638,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
  <span class="menu-text">커뮤니케이션, 설득 및 글쓰기 기술</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -705,7 +704,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
  <span class="menu-text">생산성, 시간 관리 및 습관 형성</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -796,7 +795,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
  <span class="menu-text">철학, 심리학 및 삶의 지혜</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -960,27 +959,21 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">목차</h2>
    
   <ul>
   <li><a href="#서론" id="toc-서론" class="nav-link active" data-scroll-target="#서론">서론</a>
   <ul class="collapse">
   <li><a href="#착각을-꿰뚫어-보기" id="toc-착각을-꿰뚫어-보기" class="nav-link" data-scroll-target="#착각을-꿰뚫어-보기">착각을 꿰뚫어 보기</a></li>
   <li><a href="#그런데-왜-굳이-성격을-바꾸려-하는가" id="toc-그런데-왜-굳이-성격을-바꾸려-하는가" class="nav-link" data-scroll-target="#그런데-왜-굳이-성격을-바꾸려-하는가">그런데 왜 굳이 성격을 바꾸려 하는가?</a></li>
-  </ul></li>
-  <li><a href="#장-ocean-속-성격-성격이란-무엇인가" id="toc-장-ocean-속-성격-성격이란-무엇인가" class="nav-link" data-scroll-target="#장-ocean-속-성격-성격이란-무엇인가">1장: OCEAN 속 성격 성격이란 무엇인가?</a>
-  <ul class="collapse">
+  <li><a href="#장-ocean-속-성격-성격이란-무엇인가" id="toc-장-ocean-속-성격-성격이란-무엇인가" class="nav-link" data-scroll-target="#장-ocean-속-성격-성격이란-무엇인가">1장: OCEAN 속 성격 성격이란 무엇인가?</a></li>
   <li><a href="#나는-기쁨을-발산한다" id="toc-나는-기쁨을-발산한다" class="nav-link" data-scroll-target="#나는-기쁨을-발산한다">“나는 기쁨을 발산한다”</a></li>
   <li><a href="#석고가-부드러워지다" id="toc-석고가-부드러워지다" class="nav-link" data-scroll-target="#석고가-부드러워지다">석고가 부드러워지다</a></li>
   <li><a href="#유전성과-가소성" id="toc-유전성과-가소성" class="nav-link" data-scroll-target="#유전성과-가소성">유전성과 가소성</a></li>
-  </ul></li>
-  <li><a href="#장-플라이휠-깨기-성격-변화의-방법" id="toc-장-플라이휠-깨기-성격-변화의-방법" class="nav-link" data-scroll-target="#장-플라이휠-깨기-성격-변화의-방법">2장: 플라이휠 깨기 성격 변화의 ‘방법’</a>
-  <ul class="collapse">
+  <li><a href="#장-플라이휠-깨기-성격-변화의-방법" id="toc-장-플라이휠-깨기-성격-변화의-방법" class="nav-link" data-scroll-target="#장-플라이휠-깨기-성격-변화의-방법">2장: 플라이휠 깨기 성격 변화의 ‘방법’</a></li>
   <li><a href="#될-때까지-그런-척하기" id="toc-될-때까지-그런-척하기" class="nav-link" data-scroll-target="#될-때까지-그런-척하기">될 때까지 그런 척하기</a></li>
   <li><a href="#새로운-사고방식" id="toc-새로운-사고방식" class="nav-link" data-scroll-target="#새로운-사고방식">새로운 사고방식</a></li>
-  </ul></li>
-  <li><a href="#장-모두가-보고-있는-것처럼-춤추기-외향성" id="toc-장-모두가-보고-있는-것처럼-춤추기-외향성" class="nav-link" data-scroll-target="#장-모두가-보고-있는-것처럼-춤추기-외향성">3장: 모두가 보고 있는 것처럼 춤추기 외향성</a>
-  <ul class="collapse">
+  <li><a href="#장-모두가-보고-있는-것처럼-춤추기-외향성" id="toc-장-모두가-보고-있는-것처럼-춤추기-외향성" class="nav-link" data-scroll-target="#장-모두가-보고-있는-것처럼-춤추기-외향성">3장: 모두가 보고 있는 것처럼 춤추기 외향성</a></li>
   <li><a href="#외향성의-이점" id="toc-외향성의-이점" class="nav-link" data-scroll-target="#외향성의-이점">외향성의 이점</a></li>
   <li><a href="#그저-선택하라" id="toc-그저-선택하라" class="nav-link" data-scroll-target="#그저-선택하라">그저 선택하라</a></li>
   <li><a href="#찾기-힘든-어른-친구-만들기" id="toc-찾기-힘든-어른-친구-만들기" class="nav-link" data-scroll-target="#찾기-힘든-어른-친구-만들기">찾기 힘든 ‘어른 친구’ 만들기</a></li>
@@ -988,58 +981,46 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#강한-바람-속의-약한-유대" id="toc-강한-바람-속의-약한-유대" class="nav-link" data-scroll-target="#강한-바람-속의-약한-유대">강한 바람 속의 약한 유대</a></li>
   <li><a href="#맞아-그리고" id="toc-맞아-그리고" class="nav-link" data-scroll-target="#맞아-그리고">“맞아, 그리고”</a></li>
   <li><a href="#집에서-겹쳐-살아가기" id="toc-집에서-겹쳐-살아가기" class="nav-link" data-scroll-target="#집에서-겹쳐-살아가기">집에서 겹쳐 살아가기</a></li>
-  </ul></li>
-  <li><a href="#장-압도감에서-옴으로-신경증" id="toc-장-압도감에서-옴으로-신경증" class="nav-link" data-scroll-target="#장-압도감에서-옴으로-신경증">4장: 압도감에서 옴으로 신경증</a>
-  <ul class="collapse">
+  <li><a href="#장-압도감에서-옴으로-신경증" id="toc-장-압도감에서-옴으로-신경증" class="nav-link" data-scroll-target="#장-압도감에서-옴으로-신경증">4장: 압도감에서 옴으로 신경증</a></li>
   <li><a href="#두려워하지-않는-법-배우기" id="toc-두려워하지-않는-법-배우기" class="nav-link" data-scroll-target="#두려워하지-않는-법-배우기">두려워하지 않는 법 배우기</a></li>
   <li><a href="#초보자를-위한-불교" id="toc-초보자를-위한-불교" class="nav-link" data-scroll-target="#초보자를-위한-불교">초보자를 위한 불교</a></li>
   <li><a href="#크게-풀어내기" id="toc-크게-풀어내기" class="nav-link" data-scroll-target="#크게-풀어내기">크게 풀어내기</a></li>
   <li><a href="#완전한-재앙-속에서-명상하기" id="toc-완전한-재앙-속에서-명상하기" class="nav-link" data-scroll-target="#완전한-재앙-속에서-명상하기">완전한 재앙 속에서 명상하기</a></li>
   <li><a href="#애쓰지-않으려고-애쓰기" id="toc-애쓰지-않으려고-애쓰기" class="nav-link" data-scroll-target="#애쓰지-않으려고-애쓰기">애쓰지 않으려고 애쓰기</a></li>
   <li><a href="#모든-것은-변한다" id="toc-모든-것은-변한다" class="nav-link" data-scroll-target="#모든-것은-변한다">모든 것은 변한다</a></li>
-  </ul></li>
-  <li><a href="#장-무엇이든-받아들이기-경험에-대한-개방성" id="toc-장-무엇이든-받아들이기-경험에-대한-개방성" class="nav-link" data-scroll-target="#장-무엇이든-받아들이기-경험에-대한-개방성">5장: 무엇이든 받아들이기 경험에 대한 개방성</a>
-  <ul class="collapse">
+  <li><a href="#장-무엇이든-받아들이기-경험에-대한-개방성" id="toc-장-무엇이든-받아들이기-경험에-대한-개방성" class="nav-link" data-scroll-target="#장-무엇이든-받아들이기-경험에-대한-개방성">5장: 무엇이든 받아들이기 경험에 대한 개방성</a></li>
   <li><a href="#도널드-다카야마와-나" id="toc-도널드-다카야마와-나" class="nav-link" data-scroll-target="#도널드-다카야마와-나">도널드 다카야마와 나</a></li>
   <li><a href="#스노-글로브-흔들기" id="toc-스노-글로브-흔들기" class="nav-link" data-scroll-target="#스노-글로브-흔들기">스노 글로브 흔들기</a></li>
   <li><a href="#댐-열기" id="toc-댐-열기" class="nav-link" data-scroll-target="#댐-열기">댐 열기</a></li>
   <li><a href="#모든-생명은-소중하다" id="toc-모든-생명은-소중하다" class="nav-link" data-scroll-target="#모든-생명은-소중하다">모든 생명은 소중하다</a></li>
   <li><a href="#사우다드와-정어리" id="toc-사우다드와-정어리" class="nav-link" data-scroll-target="#사우다드와-정어리">사우다드와 정어리</a></li>
-  </ul></li>
-  <li><a href="#장-다른-사람들과-잘-지내기-우호성" id="toc-장-다른-사람들과-잘-지내기-우호성" class="nav-link" data-scroll-target="#장-다른-사람들과-잘-지내기-우호성">6장: 다른 사람들과 잘 지내기 우호성</a>
-  <ul class="collapse">
+  <li><a href="#장-다른-사람들과-잘-지내기-우호성" id="toc-장-다른-사람들과-잘-지내기-우호성" class="nav-link" data-scroll-target="#장-다른-사람들과-잘-지내기-우호성">6장: 다른 사람들과 잘 지내기 우호성</a></li>
   <li><a href="#리라-연주하기" id="toc-리라-연주하기" class="nav-link" data-scroll-target="#리라-연주하기">리라 연주하기</a></li>
   <li><a href="#기대-바꾸기" id="toc-기대-바꾸기" class="nav-link" data-scroll-target="#기대-바꾸기">기대 바꾸기</a></li>
   <li><a href="#정오에-나누는-새벽-두-시의-대화" id="toc-정오에-나누는-새벽-두-시의-대화" class="nav-link" data-scroll-target="#정오에-나누는-새벽-두-시의-대화">정오에 나누는 새벽 두 시의 대화</a></li>
   <li><a href="#우리를-잇는-경계" id="toc-우리를-잇는-경계" class="nav-link" data-scroll-target="#우리를-잇는-경계">우리를 잇는 경계</a></li>
   <li><a href="#예수도-조롱받았다" id="toc-예수도-조롱받았다" class="nav-link" data-scroll-target="#예수도-조롱받았다">예수도 조롱받았다</a></li>
   <li><a href="#사람은-대체로-선하다" id="toc-사람은-대체로-선하다" class="nav-link" data-scroll-target="#사람은-대체로-선하다">“사람은 대체로 선하다”</a></li>
-  </ul></li>
-  <li><a href="#장-해내기-성실성" id="toc-장-해내기-성실성" class="nav-link" data-scroll-target="#장-해내기-성실성">7장: 해내기 성실성</a>
-  <ul class="collapse">
+  <li><a href="#장-해내기-성실성" id="toc-장-해내기-성실성" class="nav-link" data-scroll-target="#장-해내기-성실성">7장: 해내기 성실성</a></li>
   <li><a href="#성실성의-도전" id="toc-성실성의-도전" class="nav-link" data-scroll-target="#성실성의-도전">성실성의 도전</a></li>
   <li><a href="#최선의-경우와-최악의-경우-상상하기" id="toc-최선의-경우와-최악의-경우-상상하기" class="nav-link" data-scroll-target="#최선의-경우와-최악의-경우-상상하기">최선의 경우와 최악의 경우 상상하기</a></li>
   <li><a href="#성실성의-본보기-찾기" id="toc-성실성의-본보기-찾기" class="nav-link" data-scroll-target="#성실성의-본보기-찾기">성실성의 본보기 찾기</a></li>
   <li><a href="#제거-과정" id="toc-제거-과정" class="nav-link" data-scroll-target="#제거-과정">제거 과정</a></li>
   <li><a href="#덜-하면서-더-많이-하기" id="toc-덜-하면서-더-많이-하기" class="nav-link" data-scroll-target="#덜-하면서-더-많이-하기">덜 하면서 더 많이 하기</a></li>
   <li><a href="#효율성에-취하다" id="toc-효율성에-취하다" class="nav-link" data-scroll-target="#효율성에-취하다">효율성에 취하다</a></li>
-  </ul></li>
-  <li><a href="#장-견디기와-끝내기-그만둘-때를-아는-법" id="toc-장-견디기와-끝내기-그만둘-때를-아는-법" class="nav-link" data-scroll-target="#장-견디기와-끝내기-그만둘-때를-아는-법">8장: 견디기와 끝내기 그만둘 때를 아는 법</a>
-  <ul class="collapse">
+  <li><a href="#장-견디기와-끝내기-그만둘-때를-아는-법" id="toc-장-견디기와-끝내기-그만둘-때를-아는-법" class="nav-link" data-scroll-target="#장-견디기와-끝내기-그만둘-때를-아는-법">8장: 견디기와 끝내기 그만둘 때를 아는 법</a></li>
   <li><a href="#가치에-맞춰-행동하기" id="toc-가치에-맞춰-행동하기" class="nav-link" data-scroll-target="#가치에-맞춰-행동하기">가치에 맞춰 행동하기</a></li>
   <li><a href="#밧줄을-놓아라" id="toc-밧줄을-놓아라" class="nav-link" data-scroll-target="#밧줄을-놓아라">밧줄을 놓아라</a></li>
   <li><a href="#지나친-성장" id="toc-지나친-성장" class="nav-link" data-scroll-target="#지나친-성장">지나친 성장</a></li>
   <li><a href="#진짜-당신" id="toc-진짜-당신" class="nav-link" data-scroll-target="#진짜-당신">‘진짜’ 당신</a></li>
   <li><a href="#자유-특성-활용하기" id="toc-자유-특성-활용하기" class="nav-link" data-scroll-target="#자유-특성-활용하기">자유 특성 활용하기</a></li>
   <li><a href="#처방" id="toc-처방" class="nav-link" data-scroll-target="#처방">처방</a></li>
-  </ul></li>
-  <li><a href="#장-당신의-해변-찾기-계속-변화하는-법" id="toc-장-당신의-해변-찾기-계속-변화하는-법" class="nav-link" data-scroll-target="#장-당신의-해변-찾기-계속-변화하는-법">9장: 당신의 해변 찾기 계속 변화하는 법</a>
-  <ul class="collapse">
+  <li><a href="#장-당신의-해변-찾기-계속-변화하는-법" id="toc-장-당신의-해변-찾기-계속-변화하는-법" class="nav-link" data-scroll-target="#장-당신의-해변-찾기-계속-변화하는-법">9장: 당신의 해변 찾기 계속 변화하는 법</a></li>
   <li><a href="#아직도-계속되는-90일-휴가" id="toc-아직도-계속되는-90일-휴가" class="nav-link" data-scroll-target="#아직도-계속되는-90일-휴가">아직도 계속되는 90일 휴가</a></li>
   <li><a href="#부동산-숭배" id="toc-부동산-숭배" class="nav-link" data-scroll-target="#부동산-숭배">부동산 숭배</a></li>
   <li><a href="#게스트하우스에서의-삶" id="toc-게스트하우스에서의-삶" class="nav-link" data-scroll-target="#게스트하우스에서의-삶">게스트하우스에서의 삶</a></li>
-  </ul></li>
   <li><a href="#부록" id="toc-부록" class="nav-link" data-scroll-target="#부록">부록</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -1056,16 +1037,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">저자</div>
     <div class="quarto-title-meta-contents">
              <p>올가 카잔(Olga Khazan) </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">공개</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 11, 2025</p>
+      <p class="date">2025년 3월 11일</p>
     </div>
   </div>
   
@@ -1150,9 +1131,8 @@ ul.task-list li input[type="checkbox"] {
 <p>내가 성격 변화라는 개념에 매료된 이유가 바로 여기에 있다. 성격 변화는 우리로 하여금 자기 삶의 운전대를 스스로 쥐게 만들어준다. 내 명상 스승이 명쾌하고 단순하게 남긴 가르침처럼, “살다 보면 마음에 들지 않는 일들이 일어나기 마련이다.” 하지만 그럼에도 불구하고 우리는 여전히 우리가 <em>원하는</em> 방식으로 살아갈 수 있다. 과학적인 지식과 꾸준한 노력, 그리고 수많은 스마트폰 앱의 도움을 받아 다르게 행동할 수 있고결국에는 다르게 생각할 수 있다. 내 주변의 그 어떤 외부 환경이 바뀌지 않더라도, 우리는 얼마든지 우리 자신의 삶을 송두리째 바꿀 수 있다.</p>
 <p><span id="ch01.xhtml"></span></p>
 </section>
-</section>
-<section id="장-ocean-속-성격-성격이란-무엇인가" class="level1">
-<h1>1장: OCEAN 속 성격 성격이란 무엇인가?</h1>
+<section id="장-ocean-속-성격-성격이란-무엇인가" class="level2">
+<h2 class="anchored" data-anchor-id="장-ocean-속-성격-성격이란-무엇인가">1장: OCEAN 속 성격 성격이란 무엇인가?</h2>
 <p>솔직히 털어놓자면, 과학 전문 기자가 되기 전까지 나는 성격이 정확히 무엇인지 잘 알지 못했다. 고등학교 시절 나는 마이어스-브릭스(MBTI) 검사의 일종을 치렀는데, 판단형(Judging) 성향이 강하니 판사가 되어야 한다는 황당한 조언을 받았다. “INTJ”라는 네 글자가 내 성격의 전부였을까? 아니면 대학 심리학 개론 시간에 배웠던 프로이트 이론들은 또 어떨까? 껌을 씹고 손톱을 물어뜯는 버릇이 있는 걸 보면 나는 분명 ‘구강기 고착(oral fixation)’ 상태일 텐데, 그것도 내 성격의 일부일까?</p>
 <p>성격에 대한 일상적인 정의는 대개 “당신 내면의 진정한 본모습” 정도로 통하지만 사람들의 취향이나 호불호, 평소의 기분, 심지어 재미있는 에피소드를 얼마나 맛깔나게 풀어내는지 같은 매력을 통칭하는 축약어로 쓰이기도 한다. (나중에 밝혀지겠지만 이런 요소들은 모두 성격의 단면을 설명해 줄 뿐 성격의 전체 모습은 아니다.)</p>
 <p>나는 성격이 어느 정도 유전된다는 사실을 알고 있었는데, 이는 성격을 바꾸려는 내 목표에 썩 달가운 조건이 아니었다. 예컨대 내 아버지는 불안도가 너무 높은 나머지, 일본 히로시마 근처에서 생산된 자동차는 구매를 거부한 적이 있을 정도였다. 1945년에 투하된 원자폭탄의 잔류 방사선 입자 하나가 용케도 글러브 박스 틈새에 숨어 있다가, 텍사스의 도요타 매장에 도착했을 때 튀어나와 자신에게 치명적인 암을 유발할지도 모른다고 진심으로 두려워했던 것이다. 내 핏속에 이토록 어마어마한 유전적 신경증이 흐르고 있는데, 과연 내가 내 성격을 손볼 수나 있을까? 타고난 유전자를 대체 어떻게 바꾼단 말인가?</p>
@@ -1190,6 +1170,7 @@ ul.task-list li input[type="checkbox"] {
 <p>그렇다면 성격이란 진정 무엇인가? 그것은 매일 반복되는 습관이자, 본능적인 무의식적 반사작용이다. 일리노이대학교의 저명한 성격심리학자 브렌트 로버츠 교수는 이렇게 설명한다. “성격이란 당신이 별다른 의식적 고민 없이 습관적으로, 자동적으로 행하는 모든 것입니다. 세상을 어떻게 바라보고 해석하는지, 특정 상황에서 어떤 감정을 느끼는지, 그리고 특정한 행동을 어떻게 취하는지가 모두 성격입니다.”</p>
 <p>당신의 성격은 당신이 삶을 살아가는 방식 전반에 지대한 영향을 미친다. 일상의 작은 불편을 그저 웃어넘기는가, 아니면 나를 겨냥한 악의적인 공격으로 받아들이는가? 새로운 낯선 아이디어를 마주했을 때 본능적으로 뒷걸음질 치는가, 아니면 가슴 뛰는 호기심을 느끼는가? 성격은 단순한 취향과 기분을 넘어 타인과 관계를 맺는 방식, 나아가 당신이라는 영혼의 고유한 결을 결정짓는다.</p>
 <p>로버츠 교수는 성격을 정교한 ’태피스트리 직물’에 비유한다. 한 땀 한 땀의 바느질이 모두 모여 전체 작품을 이루지만 실 한 가닥을 잡아당긴다고 해서 직물 전체가 단숨에 올 풀리듯 무너지지는 않는 섬세한 구조물이다. 친구 관계, 직업, 결혼 생활, 자라온 고향, 그리고 타고난 유전자가 모두 합쳐져 당신의 성격을 빚어내지만 그 어느 요인 하나만으로 성격 전체가 결정되는 것은 아니다.</p>
+</section>
 <section id="나는-기쁨을-발산한다" class="level2">
 <h2 class="anchored" data-anchor-id="나는-기쁨을-발산한다">“나는 기쁨을 발산한다”</h2>
 <p>어느 7월 주말, 릭과 나는 짧은 해변 휴가를 보내러 메릴랜드주 오션시티에 갔다. 유일한 장점에서 이름을 따온 이 도시는 이동식 주택, 미니 골프장, 게와 맥주를 즐기며 해방감을 만끽하는 새빨갛게 탄 대학생들로 빽빽했다. 대부분의 놀거리는 한쪽에 해변이 있고 다른 쪽에 전성기를 지난 호텔들이 늘어선 단 하나의 고속도로를 따라 몰려 있었다. ‘괜찮은’ 식당은 하나뿐이었고 나머지 식당들은 보드카와 스프라이트, 오렌지 주스를 어린이용 빨대 컵에 섞어 내놓았다. 생트로페와는 거리가 멀었다.</p>
@@ -1238,9 +1219,8 @@ ul.task-list li input[type="checkbox"] {
 <p>‘석고처럼 굳는다’고 말했던 윌리엄 제임스도 <em>실제로</em> 변했다. 나도 변할 수 있기를 바랐다.</p>
 <p><span id="ch02.xhtml"></span></p>
 </section>
-</section>
-<section id="장-플라이휠-깨기-성격-변화의-방법" class="level1">
-<h1>2장: 플라이휠 깨기 성격 변화의 ‘방법’</h1>
+<section id="장-플라이휠-깨기-성격-변화의-방법" class="level2">
+<h2 class="anchored" data-anchor-id="장-플라이휠-깨기-성격-변화의-방법">2장: 플라이휠 깨기 성격 변화의 ‘방법’</h2>
 <p>그렇다면 정체성은 고정되어 있지 않다. 성격이라는 OCEAN은 출렁이며 때로 우리를 낯선 물속으로 내던진다. 시작한 곳이 항상 최종 도착지가 되는 것은 아니며 이는 안심이 되는 사실이다. 특히 나처럼 20대를 보드카가 감기를 치료할 수 있다고 믿으며 보낸 사람이라면 더더욱 그렇다.</p>
 <p>하지만 더욱 고무적인 생각은 이것이다. 우리는 이 배에 탄 무력한 승객이 아니다. 우리는 배의 키를 잡고 조종할 수 있다. 성격을 바꿀 수 있고 그렇게 함으로써 더 행복하고 의미 있는 삶을 살 수 있다. 자기계발을 이런 방식으로 설명하는 것이 낯설다는 건 알지만 우리를 괴롭히는 수많은 단점(어질러 놓는 습관, 조급함 등)은 <em>실제로</em> 성격의 한 요소다. 자신을 바꾸지 않고 삶을 바꿀 수는 없으며 성격도 예외는 아니다.</p>
 <p>성격이 정확히 어떻게 변하는지 알아보기 위해 어느 12월, 나는 댈러스로 가서 서던메소디스트대학교의 성격심리학자 네이선 허드슨을 만났다. 그는 사람들이 의도적으로 자신을 변화시키는 과정인 ‘의지적 성격 변화’를 연구해 왔다. 지난 몇 달 동안 이용해 온 그의 성격 검사 사이트 <a href="http://www.personalityassessor.com">PersonalityAssessor.com</a>의 실제 얼굴도 보고 싶었다.</p>
@@ -1259,6 +1239,7 @@ ul.task-list li input[type="checkbox"] {
 <p>내향성이 결함은 아니지만 연구에 따르면 외향적인 사람이 더 행복하다. 도전적이면서도 보람 있는 활동에 더 많은 시간을 보내기 때문이기도 하다. 행복을 가장 강력하게 예측하는 요인 중 하나는 사회적 연결이며 외향적인 사람은 파티에 가고 대중 연설을 하면서 결국 더 많은 친구를 사귀게 된다. 나 역시 내향적인 사람이지만 나를 잘 아는 친구들에게 둘러싸였던 드문 순간들에는 혼자 있을 때는 결코 느끼지 못했던 마음의 가벼움을 느꼈다는 사실을 인정할 수밖에 없었다. 정신분석가 D. W. 위니컷은 “숨겨져 있는 것은 기쁨이지만 발견되지 않는 것은 재앙”이라고 썼다.</p>
 <p>한편 신경증은 삶을 정말로 망쳐 놓을 수 있다. 변덕스러운 천재라는 고정관념과 달리, 신경증은 <em>더 나쁜</em> 인지 기능과 관련이 있다. 불안과 우울이 집중력과 주의력을 갉아먹기 때문이다. 신경증적인 아이와 청소년이 자라면 정서적으로 안정된 또래보다 직장에서 성과를 덜 내고 수입도 적다. 신경증적인 사람은 이혼할 가능성이 더 높고 결혼 생활을 유지하더라도 덜 행복할 가능성이 높다. 정서적 안정성이 높은 사람은 노화에도 더 잘 적응하며 중년을 위기로 여기거나 은퇴에 실망할 가능성도 낮다. 일부 연구에서는 신경증이 조금만 줄어들어도 연간 31만 4,000달러를 더 버는 것과 같은 심리적 효과가 있다고 추정한다. 이는 보험 적용이 되지 않는 비싼 심리치료비의 가치를 설명해 주는 대목이기도 하다.</p>
 <p>당신을 번영하게 만드는 것은 이런 특성을 타고나서 <em>이미 지닌 것</em>뿐만이 아니다. 후천적으로 이런 성격 특성을 발달시킨 사람들 역시 이후 소득과 건강, 교육 수준이 높아진다. 다시 말해 어떤 성격 특성에서 낮은 점수를 받았다고 해서 운명이 정해진 것은 아니다. 당신은 여전히 성장할 수 있고 변화에 따른 보상도 고스란히 누릴 수 있다. 사람들이 원하는 방향으로 성격을 성공적으로 바꾸면 그 후 더 행복해졌다고 보고한다. 과학과 역사는 그렇게 해낸 사람들의 수많은 사례를 보여 준다.</p>
+</section>
 <section id="될-때까지-그런-척하기" class="level2">
 <h2 class="anchored" data-anchor-id="될-때까지-그런-척하기">될 때까지 그런 척하기</h2>
 <p>1940년대 어느 날, 뉴욕주 북부 오번 교도소의 심리학자 레이먼드 코르시니를 한 수감자가 찾아왔다. 30대인 그 남자는 가석방으로 출소하게 되었고 떠나기 전에 코르시니에게 감사 인사를 전하고 싶었던 것이다.</p>
@@ -1295,9 +1276,8 @@ ul.task-list li input[type="checkbox"] {
 <p>“재미있을 거야!” 오션시티의 낡은 호텔 에어컨이 끽끽거리는 소리를 내는 가운데 나는 그날 밤 다짐했다. 이상적으로는 결국 행복하고 편안하며 사교적인 사람으로 거듭나고 싶었다. 화를 내는 취재원의 고함이나 남자친구가 아주 사소한 집안일조차 챙기지 않는 문제 앞에서도 태연하게 넘길 수 있는 사람이 되고 싶었다. 난임 전문의가 내 생물학적 나이를 깎아내리듯 말해도 눈물을 쏟지 않고 담담하고 싶었다. 상담사가 “그저 머릿속 생각을 판단하지 말고 한 발짝 떨어져 관찰하며 흘려보내세요”라고 말할 때 그게 대체 무슨 뜻인지 마침내 제대로 이해하고 싶었다. 집으로 돌아온 나는 성격 변화 도전 목록을 침대 옆 협탁에 당당히 붙여 놓았다. 나는 대단히 성실한 사람이니까.</p>
 <p><span id="ch03.xhtml"></span></p>
 </section>
-</section>
-<section id="장-모두가-보고-있는-것처럼-춤추기-외향성" class="level1">
-<h1>3장: 모두가 보고 있는 것처럼 춤추기 외향성</h1>
+<section id="장-모두가-보고-있는-것처럼-춤추기-외향성" class="level2">
+<h2 class="anchored" data-anchor-id="장-모두가-보고-있는-것처럼-춤추기-외향성">3장: 모두가 보고 있는 것처럼 춤추기 외향성</h2>
 <p>나의 외향성 도전은 어느 날 밤 혼자 넷플릭스에서 즉흥극 쇼 『미들디치 앤드 슈워츠』를 보면서 시작되었다. 방송은 유명 배우 토머스 미들디치와 벤 슈워츠가 무작위로 뽑은 관객(사진 인턴)에게서 스케치의 소재를 불편할 만큼 오래 끌어내는 장면으로 시작했다. 이어 텅 빈 무대에서 미들디치는 슈워츠를 사진작가 면접을 보는 사람처럼 대하며 “가젤을 구현해 보세요” 같은 터무니없는 질문과 요구를 즉석에서 만들어 냈다.</p>
 <p>관객은 열심히 웃었지만 그 장면은 무엇보다 내가 경비 보고서를 제출해야 한다는 사실을 떠올리게 했다. 나는 배우들이 걱정스러웠다. 언제든 관객이 등을 돌려 두 사람이 유령 같은 침묵 속에서 웃음을 더듬어 찾게 될 것 같았다. 왜 미리 더 나은 대본을 써 두지 않았을까 싶었다. 더 나쁜 점은 나도 곧 유명 코미디언이라는 이점도 없이 그들과 똑같은 처지에 놓일 예정이었다는 것이다.</p>
 <p>성격 변화 프로젝트를 위해 나는 다섯 특성에 각각 몇 달씩 집중하기로 했고 외향성부터 시작했다. 최근 몇 년 동안 내 삶은 그다지 좋아하지 않는 틀에 갇혀 있었고 외향성이 탈출구처럼 보였다. 대부분의 날 나는 일하고, 저녁을 만들고, TV를 보고, 다시 일했다. 릭과 나는 이사를 계획 중이었는데, 이 집에 이사 들어와 나갈 때까지 이웃을 단 한 명도 만나지 않을 수도 있겠다는 생각이 들었다. 자기계발서의 한 검사는 내게 ‘외로움 수치가 높다’고 일깨워 주었다.</p>
@@ -1316,6 +1296,7 @@ ul.task-list li input[type="checkbox"] {
 <p>누군가 순서를 틀리면예를 들어 상대의 “집”에 “집”이라고 답하면우리는 모두 멈추고 박수를 치며 “야호!”라고 외쳤다. 즉흥극에서는 실수해도 괜찮다는 생각을 강화하는 방식이었다. 실수하면 해고될 수도 있는 내 직장과는 분위기가 너무 달라서, 완벽주의자를 위한 재활 치료처럼 느껴졌다.</p>
 <p>그다음에는 서로에게 여러 보이지 않는 물건을 저글링하는 놀이로 넘어갔다. 보이지 않는 공은 반드시 “보이지 않는 공!”이라고 불러야 했다. 다른 사람들도 나만큼 긴장한 것 같았지만 이곳은 워싱턴 D.C.였고 모두의 진짜 감정은 애써 뛰어난 척하는 분위기에 묻혀 있었다. 사람은 다른 선택지가 없다고 느끼면 나를 포함해 우스꽝스럽게 행동한다. 나는 함께 공을 저글링한 사람들이 다음 날 직장에서 “다시 연락드리겠습니다”와 “후속으로 논의하겠습니다”라는 이메일을 쓰는 모습을 상상했다. 부르키나파소의 상황을 심각하게 논의하는 도시락 점심때 이 기묘한 순간을 떠올릴까? 비교하면 부르키나파소의 상황이 덜 혼란스러워 보일지도 모른다.</p>
 <p>곧 보이지 않는 매를 팔 위로 부를 차례가 되었다. 적어도 블라인드가 닫혀 있어 거리의 누구도 우리를 볼 수 없다는 사실에 감사했다.</p>
+</section>
 <section id="외향성의-이점" class="level2">
 <h2 class="anchored" data-anchor-id="외향성의-이점">외향성의 이점</h2>
 <p>내가 외향성을 먼저 선택한 데에는 또 다른 이유가 있었다. 안타깝게도 연구에 따르면 외향적인 사람이 더 행복하다. 지나치게 명랑한 일련의 연구는 사회적 연결이 웰빙을 예측하는 가장 강력한 요인 중 하나이며 외향적인 사람이 사회적으로 더 많이 연결되어 있음을 보여 줬다.</p>
@@ -1467,9 +1448,8 @@ ul.task-list li input[type="checkbox"] {
 <p>용기를 얻은 나는 이제 나의 가장 거대한 숙적인 신경증을 마주하기 위해 발걸음을 옮겼다.</p>
 <p><span id="ch04.xhtml"></span></p>
 </section>
-</section>
-<section id="장-압도감에서-옴으로-신경증" class="level1">
-<h1>4장: 압도감에서 옴으로 신경증</h1>
+<section id="장-압도감에서-옴으로-신경증" class="level2">
+<h2 class="anchored" data-anchor-id="장-압도감에서-옴으로-신경증">4장: 압도감에서 옴으로 신경증</h2>
 <p>불안과 우울로 점철된 나의 극심한 신경증을 가라앉히겠다고 결심한 해가 하필 2022년이었다는 사실은 참으로 얄궂다. 2022년은 내 인생에서 가장 스트레스가 극심했던 해 중 하나였고 중요하고도 돌이킬 수 없는 결정들을 신속하게 내려야 했던 시기였기 때문이다. 이는 신경증 환자가 결코 잘해낼 수 없는 영역이다.</p>
 <p>수년 동안 리치와 나는 아이를 가질 것인가 말 것인가의 본초자오선 위를 조심스럽게 걸어왔고 대체로는 ’낳지 않는 쪽’으로 기울어 있었다. 아이를 갖는다는 건 늘 경제적으로 감당하기 힘들어 보였고 저널리스트라는 직업상 불가능해 보였다. 밤 8시에 퇴근하는 날이면 출산이라는 생각만으로도 헛웃음이 나왔고 이내 몸서리가 쳐졌다.</p>
 <p>하지만 최근 들어 중간 근무평가 점수를 조금 더 잘 받겠다고 인생의 가장 큰 기쁨(과 고통! 나도 안다, 안다고) 중 하나를 포기하는 게 과연 가치 있는 일인가 하는 생각이 들기 시작했다. 기회의 창이 막 닫히려는 찰나, 우리는 마침내 가족을 꾸려보기로 결심했다. 그러나 내게는 이 과정이 순탄치 않으리라 짐작게 하는 건강상의 문제들이 있었고 덜 섬세했던 과거에는 임신할 때 ’노산(geriatric)’이라 불리던 내 나이는 말할 것도 없었다. 의사들은 내가 평생 가질 난자를 이미 다 가지고 태어났다는 말을 입버릇처럼 하기 시작했는데, 그 끔찍한 표현은 노른자로 불룩해진 아기의 배를 연상시켰다.</p>
@@ -1491,6 +1471,7 @@ ul.task-list li input[type="checkbox"] {
 <p>우리가 비행기를 기다리는 동안, 몇 마일 떨어진 마러라고 트럼프 저택을 FBI가 압수수색했다.</p>
 <p>“여기 남아서 취재할래?” 리치가 물었다.</p>
 <p>“여기서 나가고 싶어.” 내가 말했다. “가능한 한 빨리.”</p>
+</section>
 <section id="두려워하지-않는-법-배우기" class="level2">
 <h2 class="anchored" data-anchor-id="두려워하지-않는-법-배우기">두려워하지 않는 법 배우기</h2>
 <p>신경증은 분명 하나의 성격 ’특질’이지만 내게 그것은 시야를 가리고 서서히 숨을 옥죄는 무거운 장막이었다. 허드슨의 검사에 따르면 내 신경증 수치는 거의 모든 사람보다 높았다.</p>
@@ -1633,9 +1614,8 @@ ul.task-list li input[type="checkbox"] {
 <p>내 신경증은 다시 부풀어 오를 수도 있고 그러다 다시 흩어질 것이다. 루이즈는 “이 또한 지나가리라”라는 말이 위안이 되는 동시에 슬픈 말이라고 즐겨 말했다. 불운도 덧없지만 행운 역시 덧없다. 프로이트가 말했듯 기차에 탄 승객 앞을 스쳐 지나가는 풍경처럼 우리의 기분을 포함한 모든 것은 변한다. 그럴 수 있는 동안, 나는 그 풍경을 즐겨보기로 했다.</p>
 <p><span id="ch05.xhtml"></span></p>
 </section>
-</section>
-<section id="장-무엇이든-받아들이기-경험에-대한-개방성" class="level1">
-<h1>5장: 무엇이든 받아들이기 경험에 대한 개방성</h1>
+<section id="장-무엇이든-받아들이기-경험에-대한-개방성" class="level2">
+<h2 class="anchored" data-anchor-id="장-무엇이든-받아들이기-경험에-대한-개방성">5장: 무엇이든 받아들이기 경험에 대한 개방성</h2>
 <p>수년 전 로스앤젤레스의 한 파티에서 나는 사람들과 어울리다 잠시 숨을 돌리려 밖으로 나왔다. 거실에서 흘러나오는 엠지엠티(MGMT)의 희미한 신시사이저 소리를 배경으로 뒤편 데크에서는 사람들이 대마초를 피우고 있었다. 상쾌한 LA의 밤공기를 몇 모금 들이마셨다. 그러다 문득 눈에 띄는 것이 있었다. 이곳은 좋은 동네에 있는 크래프츠맨 양식의 단독주택이었고 룸메이트 여러 명이 나누어 낸다 해도 월세가 상당할 것 같았다. 파티의 호스트가 무슨 일을 하는 사람인지 알아내고야 마는 워싱턴 주민 특유의 충동을 억누를 수 없었다.</p>
 <p>나는 그녀에게 다가가 전형적인 워싱턴 DC식 질문을 던졌다. “요즘 무슨 작업 하세요?”</p>
 <p>비대칭 머리에 나이는 열일곱에서 서른일곱 사이 어디쯤으로 보이는 호스트는 어리둥절한 표정으로 나를 바라보았다.</p>
@@ -1649,6 +1629,7 @@ ul.task-list li input[type="checkbox"] {
 <p>개방성은 다른 특질들만큼 건강이나 부를 잘 예측하지 못한다는 점에서 독특하다. 언어적 지능과의 연관성에도 불구하고 학업 성취도와는 강한 상관관계를 보이지 않는다. 개방적인 사람들은 특정 유형의 창의적이거나 탐구적인 직업에서는 좋은 성과를 내는 경향이 있지만 모든 직업에서 그런 것은 아니다. 개방성에서 “매우 높음”을 기록한 나 역시 통신 판매 우편함 회사에서 잠시 비서로 일했을 때 지루해 미칠 뻔했다. (정말이다.) 우편함에 관심을 갖는 것이 물리적으로 불가능했기 때문에 자주 무단결근을 했고 하마터면 해고당할 뻔했다. 하지만 창의적이고 분석적인 저널리즘 직업에서 나는 가장 뛰어난 성과를 내는 직원 중 하나다. 취재와 보도는 내 개방성에 완벽하게 들어맞는다.</p>
 <p>개방성에는 이점이 있지만 그것은 미묘하다. 이 특질은 미시간주립대학교에서 개방성을 연구해 온 성격심리학자 테드 슈와바의 말에 따르면 “인문학적 번영(humanistic flourishing)”, 즉 자기 자신이 누구인지 아는 감각을 예측한다. 개방적인 사람들은 세상 속에서 생생하게 살아 숨 쉬며 발견에 들뜨고 다름을 포용한다. 성격 설문지의 개방성 항목은 주로 성찰성과 상상력을 조명하는 경향이 있다. 슈와바는 이런 자질들이 “본질적으로 가치 있지만 ’아, 내가 더 개방적으로 변해서 이제 연봉이 6,000달러 더 늘었어’라고 딱 꼬집어 말할 수 있는 것들은 아니다”라고 말한다.</p>
 <p>하지만 다른 방식으로 번영하고 있다면 6,000달러가 무슨 대수겠는가? 개방적인 사람이라면 그렇게 말할지도 모른다.</p>
+</section>
 <section id="도널드-다카야마와-나" class="level2">
 <h2 class="anchored" data-anchor-id="도널드-다카야마와-나">도널드 다카야마와 나</h2>
 <p>연구에 따르면 의도적으로 개방성을 높이기 위해서는 미술관이나 박물관 방문하기, 콘서트 가기, 여행하기, 신체 활동 참여하기 등 실제로 새로운 경험을 맛보는 방법이 효과적이다. 해외 유학을 다녀온 대학생들과 그렇지 않은 학생들을 비교한 한 연구에서는 여행을 다녀온 학생들이 경험에 더 개방적으로 변한다는 사실을 발견했다. 특히 외국을 방문하는 동안 친구를 사귀었을 때 더욱 그러했다. 연구진에 따르면 이 연구는 “길을 떠나는 것이 우리가 누구인지에 상당한 영향을 미친다는 것을 보여주었다. 그 차이는 길 위에서 만나는 외국인들에 의해 만들어진다.”</p>
@@ -1758,9 +1739,8 @@ ul.task-list li input[type="checkbox"] {
 <p>개방적이라는 것은 한 장소가 모두에게 사랑받는 동시에 숨겨진 보석일 수는 없다는 사실을 이해하는 것을 의미함을 깨달았다. 새로운 경험이 언제나 무조건 좋은 것만은 아니다. 복잡하거나 기대에 못 미칠 수도 있다. 때로는 평범한 것이 경이롭게 보일 수 있고 이국적인 것이 다소 실망스러울 수도 있다. 개방성이란 결국 그런 가능성들을 하나도 빠짐없이 받아들이는 것이다. 모호함을 명철하게 바라보는 눈이 필요하다.</p>
 <p><span id="ch06.xhtml"></span></p>
 </section>
-</section>
-<section id="장-다른-사람들과-잘-지내기-우호성" class="level1">
-<h1>6장: 다른 사람들과 잘 지내기 우호성</h1>
+<section id="장-다른-사람들과-잘-지내기-우호성" class="level2">
+<h2 class="anchored" data-anchor-id="장-다른-사람들과-잘-지내기-우호성">6장: 다른 사람들과 잘 지내기 우호성</h2>
 <p>오션시티의 낡고 퀴퀴한 호텔에서 치렀던 첫 성격 검사에서, 내 우호성 점수는 딱 평균 정도였다. 우호성의 표본은 ’사람 좋아하는 사람들’이타적이고 협조적이며 겸손하고 공감 능력이 뛰어나며 남을 잘 믿고 다정한 사람들이다. 우호성을 높여보려고 애쓰고는 있었지만 내심 그저 그런 점수를 납득하고 있기도 했다. 나는 그린피스 클립보드를 든 모금원 앞에서 걸음을 멈추지는 않지만 그렇다고 손가락 욕을 날리지도 않는 대다수의 평범한 무리에 속해 있었다. 내 삶의 모토는 ’호구도 되지 말고 개자식도 되지 말자’였고 나는 그 모토대로 살고 있었다.</p>
 <p>하지만 팬데믹이 길어지면서 나의 우호성 수치는 바닥을 쳤다. 혼자 보내는 시간이 너무 많아졌고 다른 사람들의 결점을 곱씹거나 그들이 나에게 잘못했다는 증거를 찾아 헤맸다. 평상시라면 사람들과 나누는 좋고 나쁜 상호작용이 균형을 이루어, 인류에 대한 내 전반적인 인상은 ’기본적으로 괜찮다’는 수준을 유지했을 것이다. 하지만 이제는 아무도 만나지 못하니, 뼈 있는 칭찬 뒤에 따라오는 농담을 들을 일도 없었고 힘든 하루를 보낸 후 술 한잔 기울이며 서로를 위로하는 시간도 누리지 못했다. 줌(Zoom)으로 랜선 술자리를 가진 뒤에는 홀로 앉아 그들이 던진 빈정거리는 말 한마디 한마디를 머릿속에서 굴려댔다. <em>그게 대체 무슨 뜻이었을까?</em> 이런 생각은 우호성을 기르는 데 전혀 도움이 되지 않았다.</p>
 <p>누군가 스트레스를 주거나, 무례하거나, 예의 없게 굴 때 내 비우호성은 치솟는다. 나는 상대방에게 화가 난다. 하지만 그와 동시에, 결정적으로, 나를 그런 상황으로 이끈 내 선택들에 대해서도 스스로에게 화가 난다. <em>100달러짜리 내 수영복을 건조기에 처넣는 남자랑 왜 아직도 같이 살고 있는 거지? 대학 때 왜 더 열심히 친구를 사귀지 않았을까? 왜 보험계리사가 되지 않았을까? 그랬다면 따뜻한 동네에 멋진 집을 마련하고 맨날 이렇게 스트레스받지 않았을 텐데.</em> 그러고는 어김없이 결론을 내린다. <em>내가 이런 빌어먹을 바보만 아니었어도 내 인생이 훨씬 나았을 텐데.</em> 예상할 수 있겠지만 이런 결론은 나를 한층 더 비우호적으로 만들 뿐이다.</p>
@@ -1779,6 +1759,7 @@ ul.task-list li input[type="checkbox"] {
 <p>이는 솔직히 우호성이 고된 노역처럼 느껴질 수 있기 때문일 것이다. 외향성과 달리, 우호성은 쉼 없는 파티가 아니다. 신경증을 줄이는 것과 달리, 요가나 명상 수련회, 스파 데이를 즐기는 것도 아니다. 사실 우호성에는 재미있는 구석이 하나도 없다. 그것은 적에게 공감하고 분노를 다스리며 타인을 우선시하는 고단한 행진이다. 대개는 자신의 희생을 감수하면서 종종 아무런 감사 인사도 받지 못한 채 남을 위해 무언가를 하는 것이다. (어떤 독자들은 이 묘사가 육아와 얼마나 똑같이 들리는지 알아챘을 것이다.)</p>
 <p>우호성의 큰 부분은 공감이며 우리가 좋아하는 사람들에게 공감하는 것은 그리 어렵지 않다. 하지만 반대에 부딪혔을 때, 공감하는 것은 마치 논쟁에서 지는 것처럼 느껴질 수 있다. 우호성은 굴복하는 것처럼 보일 수 있기에, 도전을 받으면 우리는 비우호적이 되는 한이 있더라도 물러서지 않고 버티는 쪽을 택하곤 한다. 미국인들이 정치적 성향에 따라 무리 짓는 경향이 있는 것도, 이념적 적수들에게 끊임없이 우호적이 되려고 애쓰는 것보다 그 편이 훨씬 편하기 때문이다. 성격 심리학자 돈 번(Donn Byrne)이 말했듯, “의견 불일치는 우리가 어느 정도 어리석거나, 무지하거나, 부도덕하거나, 미쳤을지도 모른다는 불쾌한 가능성을 제기한다.”</p>
 <p>따라서 우호성을 기르려는 시도는, 성격을 바꾸지 <em>않는</em> 편이 더 쉽고 편하게 느껴질 때 어떻게 반응할 것인가를 시험하는 무대다. 우호성은 변화가 버겁게 느껴지고 포기하고 싶을 때 무엇을 할 것인지 묻는다. 소리 지르고 싶은 마음이 굴뚝같을 때 나직하게 말해보라고 도전장을 던진다.</p>
+</section>
 <section id="리라-연주하기" class="level2">
 <h2 class="anchored" data-anchor-id="리라-연주하기">리라 연주하기</h2>
 <p>우호성을 기르기 위한 나의 첫 시도는 줌으로 진행되는 분노 조절 교실이었다. 비록 ’분노’는 엄밀히 말해 신경증의 한 측면이지만 낮은 우호성을 나타내는 가장 뚜렷한 징후 중 하나이기도 하다. 우호적인 사람은 애초에 화를 덜 내는 편이며 비우호적인 사람만큼 자신의 분노를 곱씹지 않는다. 쉑쉑버거 매장 위치를 두고 남자친구에게 욕을 퍼붓지도 않는다. 우호성은 분노가 치밀어 오를 때마다 그 격렬함을 누그러뜨리도록 돕는 듯하다.</p>
@@ -1971,9 +1952,8 @@ ul.task-list li input[type="checkbox"] {
 <p>평소 타인을 향한 나의 신뢰는 기자 특유의 회의론, 말을 아껴야 한다는 직업적 의무, 그리고 나중에 모든 단어를 팩트체크해야 한다는 강박에 가로막히곤 했다. 하지만 이 프로그램들에서 나는 사람들의 고백을 취재하고 있는 것이 아니었다. 나는 그들의 증인이 되어주고 있었다. 멀리 떨어진 채 동료 참가자들을 관찰하고 있던 것이 아니라, 그들 사이에 함께 있었다. 서평을 읽는 것만으로는 결코 그 책을 사랑할 수 없듯, 아무것도 털어놓지 않은 상대를 진정으로 신뢰할 수는 없는 법이다. <em>타인에게 친밀함을 보여줌으로써 친밀함을 얻어내는 것이다.</em> 우호성을 기르고자 했던 지난 몇 달 동안, 나는 인류가 두드리는 문을 열어주었고 무의식중에 그들이 평화의 손길을 내밀고 있음을 깨달았다.</p>
 <p><span id="ch07.xhtml"></span></p>
 </section>
-</section>
-<section id="장-해내기-성실성" class="level1">
-<h1>7장: 해내기 성실성</h1>
+<section id="장-해내기-성실성" class="level2">
+<h2 class="anchored" data-anchor-id="장-해내기-성실성">7장: 해내기 성실성</h2>
 <p>만약 당신이 성실한 사람이라면, 이미 치열하게 굴러가는 삶에 생산성 꿀팁을 더하기 위해 불안감 가득한 뜬구름 잡는 이야기들은 훌쩍 건너뛰고 곧장 이 장으로 달려왔을지도 모른다. 성실성이란 일을 똑 부러지게 해치우고 하체 운동 날을 절대 거르지 않으며 받은 편지함에 머리를 처박고 들어가 읽지 않은 메일이 0이 되거나 우주의 열적 죽음이 찾아올 때까지(둘 중 어느 쪽이든 먼저 오는 쪽) 밖으로 나오지 않는 것을 의미한다. 성격 검사에서는 주로 정리 정돈 기술, 효율성, 그리고 자신의 목표를 끝까지 밀고 나가는 끈기를 물어봄으로써 이 특성을 측정한다.</p>
 <p>물론 지나치게 성실해지는 것도 얼마든지 가능하다. 이 특성이 극도로 높아지면 완벽주의와 경직성이라는 선을 넘어서게 된다. 삶이 너무 규율에 얽매여 인생을 즐기는 법을 잊어버릴 수도 있다. 하지만 일반적으로 성실성은 대단히 선호되는 특성이다. 동기부여 및 끈기와의 밀접한 연관성 덕분에, 성실성은 직업적 성공을 가장 잘 예측하는 특성이자 고용주들이 가장 귀하게 여기는 특성이다. 또한 충동 조절의 거인들인 이들은 운동을 열심히 하고 건강하게 챙겨 먹는 것을 좋아하기 때문에 신체적으로도 더 건강한 경향이 있다. “간단히 말해, 성실성은 더 나은 건강, 재산, 대인 관계, 그리고 학업적 성공을 촉진하는 성격 특성이다”라고 심리학자 브렌트 로버츠(Brent Roberts)는 쓴다. 수많은 사람들이 더 성실해지기를 바라는 이유가 바로 여기에 있다.</p>
 <p>성실한 사람들은 아침형 인간인 경우가 많고 일하는 데 더 많은 시간을 쓴다. 일을 미루는 법도 거의 없다. 하지만 아이러니하게도 5대 성격 특성의 마지막인 성실성에 다다랐을 때, 나는 이에 관해 글을 쓰는 것을 계속 미루었다.</p>
@@ -1995,6 +1975,7 @@ ul.task-list li input[type="checkbox"] {
 <p>줄리아는 웹 디자인 사업의 방향을 소셜 미디어 마케팅과 콘텐츠 제작 쪽으로 틀었고 얼마 지나지 않아 첫 대형 고객이 그녀를 찾아왔다. 머지않아 그녀는 미용실에서 일할 때만큼의 수입을 올리게 되었다. 그리 큰돈은 아니었지만 “일을 되게 만들려고 아등바등하던 상태와 실제로 일이 돌아가는 상태 사이의 분기점을 넘어섰다는 느낌이 들었습니다.” 그녀가 내게 말했다. 그 이후로 그녀의 월 소득은 네 배로 뛰었다.</p>
 <p>다른 성격 특성들과 달리, 심리학자 네이선 허드슨의 연구에 따르면 성실성은주간 일정을 짜고 공부 시간을 채우는 등그저 성실한 행동의 시늉만 내더라도, 스스로 더 성실해지겠다고 결심했든 아니든 상관없이 실제로 높아진다는 사실이 밝혀졌다. (반면 신경증을 줄이려면 본인이 덜 신경증적이 되고 싶다는 ’의지’가 반드시 있어야 한다.) “성실한 행동을 하고 있다는 사실을 자각하든 못하든, 그 행동을 실천하기만 해도 당신은 더 성실해질 것입니다.” 허드슨이 내게 말했다. 줄리아의 경우가 바로 그랬다. 일정 관리나 기록하기 같은 성실성 전략 몇 가지를 쓰는 것만으로, 줄리아는 그 행동들을 자신의 것으로 체화했고 프리랜서로서의 운명을 180도 바꾸어 놓았다.</p>
 <p>우리가 대화를 나눌 당시 줄리아는 30대 초반이었고 여전히 성공적인 1인 기업가로 일하고 있었다. 요즘 그녀는 주도성을 발휘하지 않는 삶이란 상상조차 할 수 없다. 매일 종이 플래너와 디지털 캘린더, 그리고 ’투두이스트(Todoist)’라는 체크리스트 앱을 사용한다. 글을 쓸 때는 온라인 스톱워치를 켜두고 휴대폰을 치워버린다. 처음에는 도저히 닿을 수 없을 것만 같았던 성실성을, 마침내 그녀는 손에 넣었다.</p>
+</section>
 <section id="성실성의-도전" class="level2">
 <h2 class="anchored" data-anchor-id="성실성의-도전">성실성의 도전</h2>
 <p>성실성을 높이기 위해 허드슨의 ‘실행에 옮겨야 한다(You Have to Follow Through)’ 연구에서 제시된 제안들은 우리가 흔히 보는 꼼꼼하고 규칙적인 행동들의 집합이다. 미리미리 준비하기, 전날 밤에 입을 옷을 챙겨두기, 교정 보기, 목록 작성하기, 집안일 하기, 알림 설정하기, 설거짓거리를 물에 담가두고 방치하지 않기 등이 그것이다. 당신의 어머니가 들으신다면 아주 흡족해하실 만한 내용들이다. 하지만 당신이 이미 꽤 성실한 사람이 아니라면, 이 중 대부분을 실천하는 데 몹시 애를 먹을 것이다.</p>
@@ -2119,9 +2100,8 @@ ul.task-list li input[type="checkbox"] {
 <p>성격 실험의 결과를 평가하면서 나는 이것이 나를 가장 행복하고 평온하게 만들어준 변화 중 하나였음을 깨달았다. 술을 완전히 끊은 것은 아니며 여전히 과음하게 되는 벅찬 주간(그리고 축제의 주간)도 있다. 하지만 나는 대체로 일주일에 7잔 미만을 마신다. 어떤 때는 세 잔, 어떤 때는 네 잔이다. 어떤 때는 불확실성의 주름 하나가 나를 피노 누아 응급 처방을 찾아 부엌으로 내몰아 다섯 잔이 되기도 한다. 아마도 내가 이미 매우 성실한 사람이기 때문일 수도 있겠지만 음주를 과잉의 한 형태로 바라보는 것은 큰 도움이 되었다. 내 마음속에서 나는 삶에서 불필요한 술을 말끔히 비워냈고 그 외의 다른 모든 것들은 한층 더 질서정연해 보인다.</p>
 <p><span id="ch08.xhtml"></span></p>
 </section>
-</section>
-<section id="장-견디기와-끝내기-그만둘-때를-아는-법" class="level1">
-<h1>8장: 견디기와 끝내기 그만둘 때를 아는 법</h1>
+<section id="장-견디기와-끝내기-그만둘-때를-아는-법" class="level2">
+<h2 class="anchored" data-anchor-id="장-견디기와-끝내기-그만둘-때를-아는-법">8장: 견디기와 끝내기 그만둘 때를 아는 법</h2>
 <p>벌써부터 곳곳에서 항의의 웅성거림이 들리는 듯하다. 성실성을 기르기 위해 삶을 군더더기 없이 정돈하는 것이 목표라면, 이 모든 성격 변화 활동들을 도대체 언제 다 끼워 넣으란 말인가? 가령 두세 가지 특성을 바꾸고 싶다면, 이미 꽉 차서 터질 것 같은 일상에 십여 가지 새로운 습관을 억지로 우겨넣어야 한다는 뜻일 수도 있다. 그리고 어떤 새로운 활동이 지루하게 느껴진다면, 그것이 내가 다시 은둔 생활로 미끄러져 들어가고 있기 때문인지, 아니면 그냥 다른 활동을 시도해 봐야 하기 때문인지 어떻게 구별할 수 있을까? 언제까지 변화를 계속 시도해야 하는지, 혹은 이미 충분히 변했는지는 어떻게 알 수 있을까?</p>
 <p>첫 즉흥극 수업 시리즈를 듣던 어느 날 내 머릿속을 스친 것도 바로 이 마지막 질문이었다. 강사가 수업 막바지에 공개 ’쇼케이스’를 열겠다고 발표했을 때였다. 록크릭 공원 1번 파빌리온을 우연히 지나치던 조깅족들과 친구, 가족들을 위한 무료 공연이었다. 그 순간 내 손바닥은 얼음장처럼 차가워지고 땀으로 미끄러워졌다. <em>바로 이거야!</em> 나는 생각했다. <em>난 이미 충분히 변했어! 즉흥극은 지금 당장 그만둬야 해!</em></p>
 <p>나는 몇 주 동안 쇼케이스 생각을 머릿속에서 지워버렸다. 그 생각이 의식 속으로 기어들어 올 때마다 나는 헛된 희망을 품으며 버텼다. <em>쇼케이스 날이 오기 전에 또 다른 팬데믹이 터져서 공연이 통째로 취소될지도 몰라.</em> 이런 자기기만은 공연 전날 밤까지는 그럭저럭 통했다. 하지만 전날 밤이 되자 즉흥극을 주제로 한 지독한 악몽에 시달리며 자꾸만 잠에서 깼다. 나는 낮 동안 유튜브에서 예전 ‘업라이트 시티즌스 브리게이드(Upright Citizens Brigade)’ 공연 영상을 음울하게 지켜보며 즉흥극을 제대로 하려면 어떤 모습이어야 하는지 파악하려 애썼다. 리치가 아래층으로 내려오더니 구명환이라도 되는 양 소파 쿠션을 꽉 껴안고 있는 나를 보았다. “내가 다 긴장된다.” 그가 말했다.</p>
@@ -2135,6 +2115,7 @@ ul.task-list li input[type="checkbox"] {
 <p>나 역시 알지 못했다. 예전 남자친구들이 나더러 웃기지 않는다거나 자신감 없는 티가 너무 난다고 말했던 기억이 어렴풋이 났다. 하지만 왜 나는 그들의 말에 얽매여 살아왔을까? 왜 그들의 말이 옳다는 것을 증명하려 애써왔던 걸까? 나를 가장 행복하게 만들어주는 성격을 스스로 선택할 수도 있었는데, 지난 수년간 나는 다른 사람들이 규정한 내 성격에 억지로 맞추려 아등바등 살아왔던 것이다.</p>
 <p>쇼케이스가 끝난 뒤 리치, 아나스타샤, 나와 함께 멕시코 식당에서 저녁을 먹었다. 대학 시절 금요일마다 모든 학생들이 춤을 추러 가던 곳이었다. 나는 “금요일마다 다들 여기서 춤을 췄지”라고 무심하게 말했지만 사실 나는 너무 수줍음이 많아서 춤추러 가지 못했다. <em>다른 모든 사람들</em>이 춤을 추러 갔고 나는 기숙사 방에만 틀어박혀 있었다. 그 순간, 나는 과거로 돌아가 그때의 나에게 그렇게 주눅 들어 있지 않아도 될 이유가 전혀 없다고 말해줄 수 있다면 얼마나 좋을까 생각했다.</p>
 <p>그날 밤 집으로 돌아오는 길, 불 꺼진 교외의 밤하늘은 평소보다 훨씬 다정하게 느껴졌다. 차가운 동굴이 아니라 아늑한 누에고치 같았다. 내 마음은 엔칠라다와 안도감으로 가득 차올랐다. 즉흥극을 무사히 살아남고 나니 무엇이든 이겨낼 수 있을 것 같은 기분이 들었다. 레닌그라드 포위전을 버텨낸 내 모든 조상들이 듣는다면 참으로 철없는 소리라 혀를 찰지 모르겠지만 말이다.</p>
+</section>
 <section id="가치에-맞춰-행동하기" class="level2">
 <h2 class="anchored" data-anchor-id="가치에-맞춰-행동하기">가치에 맞춰 행동하기</h2>
 <p>즉흥극 쇼케이스가 내 성격 프로젝트에서 중요한 시험대가 되었던 까닭은, 바로 그 경험이 극도로 불편했기 때문이다. 성격을 바꾸는 과정은 수없이 많은 순간에서 너무 작은 타이츠에 몸을 구겨 넣거나 낯선 교착어를 배우는 것처럼 느껴질 것이다. 새로운 친구가 될지도 모르는 사람들과 어울리면서 주눅 들고 안절부절못하게 될 것이다. 명상을 하다가 너무 지루한 나머지 머릿속으로 업무 이메일 한 편을 통째로 작성하게 될 것이다. 나처럼 모임(Meetup) 중에 다른 사람의 옷에 콜라를 쏟고는, 좋든 싫든 그런 실수 때문에 다음 모임 출입을 금지당하지는 않는다는 사실을 배우게 될지도 모른다.</p>
@@ -2238,9 +2219,8 @@ ul.task-list li input[type="checkbox"] {
 <p>허드슨의 연구에 따르면 여러 성격 특성 중에서 특정 특성이 부족한 사람들은 대개 그 특성을 기르고 싶어 하는 경향이 있다. 내향적인 사람은 더 외향적이기를 원하고 신경증적인 사람은 마음의 여유를 갖기를 원한다. 어떤 특성들은 그 반대 특성을 치유하는 연고처럼 작용한다. 마찬가지로 실험의 끝자락에서 나는 내 성격 변화를 완치제라기보다는 일종의 처방전으로 보게 되었다. 그것은 최종적으로 도달하는 존재의 상태가 아니라 매일 실천해야 하는 일상적인 요법이었다. 많은 사람들이 급성 질환을 치료하기 위해서가 아니라 건강 상태를 유지하기 위해 매일 약을 복용한다. 내가 갑상선 기능을 정상으로 유지하기 위해 매일 신지로이드(Synthroid)를 챙겨 먹는 것처럼, 갑상선에 별 이상이 없다고 해서 약을 끊지는 않는다. 마찬가지로 나는 별문제가 없는 날에도 새로운 사람과 친구가 되거나 화를 다스리는 등 허드슨이 제안한 성격 변화 활동들을 실천한다. 이제 그것이 내 본성의 일부가 되었기 때문에 그렇게 하는 것이다.</p>
 <p>성격 변화가 한 번으로 끝나는 일이 아니라 계속 이어지는 과정임을 이해하게 되자, 언제나 벗어날 길이 존재한다는 사실을 깨달을 수 있었다. 원치 않는 모습에 영원히 갇혀 있을 필요는 없다. 심리학자 데이비드 맥클레랜드(David McClelland)는 “성격 변화는 그것이 매우 어렵다고 생각하는 사람들에게는 몹시 어렵게 느껴지지만… 해낼 수 있다고 믿는 사람들에게는 훨씬 쉬워 보인다”라고 썼다. 나는 해낼 수 있다고 믿으며 그렇기에 충분히 해낼 만한 일이라고 생각한다.</p>
 </section>
-</section>
-<section id="장-당신의-해변-찾기-계속-변화하는-법" class="level1">
-<h1>9장: 당신의 해변 찾기 계속 변화하는 법</h1>
+<section id="장-당신의-해변-찾기-계속-변화하는-법" class="level2">
+<h2 class="anchored" data-anchor-id="장-당신의-해변-찾기-계속-변화하는-법">9장: 당신의 해변 찾기 계속 변화하는 법</h2>
 <p>2023년 초, 우리는 새 보금자리를 찾겠다는 결의를 다지며 다시 한번 플로리다로 향했다. 집을 구하는 과정은 여느 때처럼 스트레스가 극에 달했지만 플로리다만의 독특한 반전들이 더해졌다. 예를 들어 우리 예산 범위에 들어온 한 주택의 질로우(Zillow) 매물 설명에는 이런 문구가 적혀 있었다. “여러 차례 침수된 적 있음!”</p>
 <p>내가 왜 그토록 이사에 집착했는지 의아해할 수도 있다. 사회인이 된 이후로 나는 줄곧 워싱턴 DC와 그 주변에서만 살았다. 그리고 그곳을 진심으로 싫어했는데, 특히 겨울이 끔찍했다. 명목상으로는 일 년 중 세 달에 불과하지만 내게는 아홉 달처럼 느껴졌다. 잿빛 하늘과 얼어붙을 듯 차가운 진눈깨비가 며칠이고 이어질 때면, 나는 차갑게 굳은 고기 젤리(aspic) 속을 허우적거리며 그 서늘한 뻑뻑함에 숨이 턱턱 막히는 듯한 기분에 휩싸였다. 겨울이 몇 주만 지나도 나는 다시는 따뜻해지거나 행복해질 수 없을 것이라는 절망에 빠지곤 했다.</p>
 <p>몇 년 전 어느 1월의 날, 나는 기분 전환을 위해 동네 식당에서 친구와 브런치를 먹기로 했다. 팬케이크를 절반쯤 먹었을 무렵, 아무 이유도 없이 걷잡을 수 없이 눈물이 쏟아지기 시작했다. 배경음악으로 신나는 “맘보 넘버 5(Mambo No.&nbsp;5)”가 요란하게 흘러나오고 있어 상황은 한층 더 기괴하고 민망했다.</p>
@@ -2252,6 +2232,7 @@ ul.task-list li input[type="checkbox"] {
 <p>이번 여행에서 재미있는 점은, 내가 겪었던 거대한 내적 붕괴로부터 딱 1년이 지난 시점이었다는 것이다. 작년 겨울에도 우리는 플로리다에 왔었고 그때 나는 사진 촬영 전 끔찍한 이발 참사를 겪으며 자잘한 수모를 연이어 맛보았다. 인생 최악의 날까지는 아니었지만 내 성격이 웬만한 날들을 죄다 ’최악의 날’로 둔갑시킬 수 있다는 사실을 깨달은 날이었다. 과거의 올가는 술과 고함, 불안으로 인한 마비로 문제를 해결하려 했다. 혼자 고립되어 소파로 기어들어가 더 이상 아무것도 하지 않으려 버텼다. 지금은 그때보다 판돈이 훨씬 커졌지만 과연 이번에는 내 성격이 나를 똑바로 서 있게 해줄 수 있을까? 내가 일궈낸 긍정적인 변화들을 계속 유지할 수 있을까, 아니면 옛날의 나로 되돌아가 버릴까?</p>
 <p>과학적으로 이것은 답하기 어려운 질문이다. 네이선 허드슨은 심리학자들도 의도적인 성격 변화가 얼마나 오래 지속되는지 아직 알지 못한다고 말했다. 지금까지의 연구들은 사람들이 변화를 겪은 후 몇 달 동안만 추적 관찰했을 뿐이다. 우리 모두 장기적인 연구를 원하지만 그러려면 과학 연구 기금을 배분하는 관료들의 문을 부숴야 할 것이다.</p>
 <p>허드슨은 성격 변화가 체중 감량과 다소 비슷하다고 추측한다. 살을 뺀 사람 중 많은 이들이 요요를 겪지만 그렇지 않은 사람들도 있다. 하지만 누군가가 다시 살이 쪘다고 해서 애초에 살을 뺀 적이 없다고 의심하지는 않는다. 신경증이나 까칠함과 마찬가지로, 몸무게 역시 유지하기가 몹시 어렵다는 사실을 인정할 뿐이다. 마찬가지로 어떤 사람들은 과거의 성격 특성을 완전히 떨쳐버린다. 하지만 또 어떤 이들은 익숙한 궤적으로 되돌아가 왜 늘 같은 자리에 도달하는지 의아해하곤 한다.</p>
+</section>
 <section id="아직도-계속되는-90일-휴가" class="level2">
 <h2 class="anchored" data-anchor-id="아직도-계속되는-90일-휴가">아직도 계속되는 90일 휴가</h2>
 <p>2021년, 나는 네브라스카주 오마하그의 표현을 빌리자면 “나 빼고는 아무도 그렇게 부르지 않는 중서부의 진주”에 사는 팀 커런(Tim Curran)이라는 청년과 연락이 닿았다. 그는 성격 변화에 관한 사연이 있다고 했는데, 당시에는 우리 둘 다 그의 변화가 얼마나 극적일지 짐작조차 하지 못했다.</p>
@@ -2336,9 +2317,8 @@ ul.task-list li input[type="checkbox"] {
 <p>발이 모래에 닿는 순간, 나는 걸음을 멈추고 신비로운 푸른 바다를 가만히 응시하곤 했다. 해변에서 나는 구원받고 새롭게 태어나는 기분을 느꼈다. 늘어선 상가들과 올리브 가든 식당들 사이에서 삶의 숨결을 목격했고 집을 찾겠다는 결의뿐만 아니라 외향성, 정서적 안정성, 우호성을 향한 다짐을 단단하게 다잡았다. 세상은 결국 그렇게 끔찍한 곳만은 아니었다.</p>
 <p>이것이 바로 내가 그 끔찍한 고속도로를 건넜던 이유였다. 해변에 닿기 위해 질주하는 차들을 피했고 새집을 찾기 위해 부동산의 스트레스를 견뎌냈다. 더 나은 삶을 살기 위해 나는 성격을 바꾸고 있었다. 마침내 길을 건너 해변에 발을 디뎠을 때, 나는 완전히 다른 사람이 된 것만 같았다.</p>
 </section>
-</section>
-<section id="부록" class="level1">
-<h1>부록</h1>
+<section id="부록" class="level2">
+<h2 class="anchored" data-anchor-id="부록">부록</h2>
 <p>(다음은 성격을 바꾸기 위해 내가 수행한 활동의 일부다. Nathan W. Hudson, Daniel A. Briley, William J. Chopik, Jaime Derringer의 연구 “끝까지 해내야 한다: 행동 변화 목표의 달성이 의지적 성격 변화를 예측한다”를 일부 참고했다.)</p>
 <p>(이 메모들은 아직도 내 침대 곁 협탁에 붙어 있다.)</p>
 <ul>
@@ -2363,6 +2343,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -2391,12 +2372,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "복사완료!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "복사완료!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
