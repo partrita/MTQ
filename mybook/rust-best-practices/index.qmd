@@ -2,9 +2,6 @@
 title: "Rust 프로그래밍 베스트 프랙티스"
 author: "Apollo GraphQL Rust Community"
 date: last-modified
-toc: true
-toc-depth: 3
-number-sections: true
 code-copy: true
 ---
 
@@ -15,7 +12,7 @@ code-copy: true
 
 # Chapter 1 - 코딩 스타일과 관용구 {#sec-ch01}
 
-## 1.1 복제보다 빌림 사용하기
+## 복제보다 빌림 사용하기
 
 Rust의 소유권 시스템은 복제(`T.clone()`)보다 빌림(`&T`)을 권장한다.
 
@@ -73,7 +70,7 @@ let user = String::from(“foo”);
 process(user.clone()); // Unnecessary clone
 ```
 
-## 1.2 언제 값으로 전달해야 할까? (Copy 트레이트)
+## 언제 값으로 전달해야 할까? (Copy 트레이트)
 
 모든 타입을 참조(`&T`)로 넘겨야 하는 것은 아니다. 타입이 작고 복사 비용이 저렴하다면, 값으로 전달하는 편이 나은 경우가 많다. Rust에서는 이를 `Copy` 트레이트로 명시적으로 표현한다.
 
@@ -166,7 +163,7 @@ enum Direction {
 }
 ```
 
-## 1.3 `Option<T>`와 `Result<T, E>` 다루기
+## `Option<T>`와 `Result<T, E>` 다루기
 Rust 1.65부터 `Option`과 `Result` 타입을 안전하게 꺼내는 더 좋은 방법이 생겼다. 기본 `return` 값이나 `continue`, `break`가 있는 경우 `let Some(x) = … else { … }` 또는 `let Ok(x) = … else { … }`를 쓰는 방식이다. 값이 없는 경우가 예외가 아니라 예상된 정상 흐름일 때 조기 반환하기에 좋다.
 
 ### ✅ `Option`과 `Result`에 패턴 매칭을 각각 써야 하는 경우
@@ -251,7 +248,7 @@ if let Some(values) = self.next() {
 let port = config.port.unwrap();
 ```
 
-## 1.4 이른 할당 방지하기
+## 이른 할당 방지하기
 
 `or`, `map_or`, `unwrap_or`, `ok_or` 같은 함수를 다룰 때는 주의가 필요하다. 새 문자열을 만들거나, 컬렉션을 생성하거나, 상태를 관리하는 함수를 호출하는 등 메모리 할당이 필요한 경우가 있기 때문이다. 이런 경우에는 `_else`가 붙은 대응 함수로 교체할 수 있다:
 
@@ -301,7 +298,7 @@ x
 .map_err(|err| GeneralError::from(("function_name", err)))?;
 ```
 
-## 1.5 이터레이터, `.iter` 대 `for`
+## 이터레이터, `.iter` 대 `for`
 
 먼저 두 방식의 기본 루프를 이해해야 한다. 0부터 10까지 수 중에서 짝수에 1을 더한 값을 모두 합하는 문제를 생각해 보자:
 
@@ -382,7 +379,7 @@ for value in vec.iter().enumerate()
 * 같은 타입에 `Copy`와 `Iterator`를 함께 구현(또는 derive)하지 마라. 이터레이터를 복사한 뒤 한쪽만 전진시키면 다른 쪽은 그대로 남아, 조용히 잘못된 결과가 나온다. 악명 높은 함정이다. 표준 라이브러리도 정확히 이 문제를 겪었다. 그래서 `Range`가 historically `Copy`가 될 수 없었고, Rust 1.96에서 안정화된 새 `core::range` 타입들은 `Iterator` 대신 `IntoIterator`를 구현해서 `Copy`가 가능해졌다. `Copy` 타입에 대한 이터레이터가 필요하다면 `IntoIterator`를 구현하고 별도의 이터레이터 구조체를 반환하라.
 * 숫자를 합할 때는 `.fold`보다 `.sum`을 선호하라. `.sum`은 합산에 특화되어 있어서 컴파일러가 최적화할 수 있음을 알지만, fold는 매 단계마다 불투명한 클로저를 적용해야 한다. 초깃값부터 합산해야 한다면 식에 그냥 더하라 `let my_sum = [1, 2, 3].sum() + 3`.
 
-## 1.6 주석: 맥락을 담되, 잡동사니는 버리기
+## 주석: 맥락을 담되, 잡동사니는 버리기
 
 > "주석은 왜(why)를 위한 것이지, 무엇(what)이나 어떻게(how)를 위한 게 아니다"
 
@@ -533,7 +530,7 @@ mod tests {
 
 > 문서 주석과 문서 테스트, `///`와 `//!`에 대해서는 [Chapter 8 - Comments vs Documentation](#sec-ch08)에서 다룬다
 
-## 1.7 Use 선언 - "임포트"
+## Use 선언 - "임포트"
 
 언어마다 임포트 정렬 방식이 다르다. Rust 생태계에서 [표준 방식](https://github.com/rust-lang/rustfmt/issues/4107)은 다음과 같다:
 
@@ -594,7 +591,7 @@ group_imports = "StdExternalCrate"
 
 > Rust 1.88 기준으로 코드를 올바르게 재정렬하려면 nightly에서 rustfmt를 실행해야 한다 `cargo +nightly fmt`.
 
-## 1.8 함수를 분리해야 할 때 (그리고 하지 말아야 할 때)
+## 함수를 분리해야 할 때 (그리고 하지 말아야 할 때)
 
 이 장([§1.6](#-breaking-up-long-functions-over-commenting-them))과 [Chapter 8](#sec-ch08)에서는 긴 함수를 나누고 서술형 주석을 네이밍된 헬퍼로 교체하라고 권한다. 이 조언은 네이밍과 명확성에 관한 것이지, 반복되는 줄을 모조리 찾아내라는 허락이 아니다. 분리에도 비용이 든다. 헬퍼가 하나 늘 때마다 간접 계층이 하나 늘고, 잘못 만든 추상화는 약간의 중복보다 제거하기 훨씬 어렵다.
 
@@ -694,7 +691,7 @@ Rust 컴파일러와 함께 `cargo clippy`가 설치되어 있는지 확인하�
 
 Clippy 문서는 [여기](https://doc.rust-lang.org/clippy/usage.html)에서 확인할 수 있습니다.
 
-## 2.1 왜 린트에 신경 써야 할까?
+## 왜 린트에 신경 써야 할까?
 
 Rust 컴파일러는 많은 실수를 잡아내는 강력한 도구입니다. 하지만 좀 더 깊이 있는 분석에는 별도의 도구가 필요합니다. 바로 `cargo clippy`가 필요한 지점입니다. Clippy는 다음을 검사합니다.
 
@@ -704,7 +701,7 @@ Rust 컴파일러는 많은 실수를 잡아내는 강력한 도구입니다. �
 * 잠재적 버그.
 * 관용적이지 않은 Rust 코드.
 
-## 2.2 항상 `cargo clippy`를 실행하세요
+## 항상 `cargo clippy`를 실행하세요
 
 일상적인 작업 흐름에 다음 명령을 추가하세요.
 
@@ -727,7 +724,7 @@ $ cargo clippy --all-targets --all-features --locked -- -D warnings
 >
 > `Router` 프로젝트에는 `cargo xtask lint`로 실행할 수 있는 린트용 `xtask`가 설정되어 있습니다.
 
-## 2.3 꼭 지켜야 할 주요 Clippy 린트
+## 꼭 지켜야 할 주요 Clippy 린트
 
 | Lint Name | Why | Link |
 | --------- | ----| -----|
@@ -740,7 +737,7 @@ $ cargo clippy --all-targets --all-features --locked -- -D warnings
 | `clone_on_copy` | `u32`나 `bool` 같은 `Copy` 타입에 실수로 `.clone()`을 호출한 경우를 잡아냅니다 | [link (complexity)](https://rust-lang.github.io/rust-clippy/master/#clone_on_copy) |
 | `needless_collect` | 할당 없이도 되는 상황에서 이터레이터를 `collect`해 메모리를 할당하는 것을 방지합니다 | [link (nursery)](https://rust-lang.github.io/rust-clippy/master/#needless_collect) |
 
-## 2.4 경고는 고치세요, 묻어두지 마세요!
+## 경고는 고치세요, 묻어두지 마세요!
 
 절대 그냥 `#[allow(clippy::lint_something)]`으로 덮지 마세요. 예외는 다음과 같습니다.
 
@@ -778,7 +775,7 @@ enum Message {
 2. `#[expect(clippy::lint_name)]`으로 해당 위치에만 국소적으로 린트를 끄고, 이유를 주석으로 남깁니다.
 3. 코어 크레이트 차원의 문제가 아니라면 전역으로 끄지 마세요. 좋은 예외 사례로 Bevy 엔진이 있는데, 기본으로 허용해야 할 린트 집합을 정해 두고 있습니다.
 
-## 2.5 워크스페이스/패키지 린트 설정하기
+## 워크스페이스/패키지 린트 설정하기
 
 `Cargo.toml` 파일에서 어떤 린트를 어떤 우선순위로 적용할지 정할 수 있습니다. 2개 이상의 린트가 충돌하면 우선순위가 높은 쪽이 선택됩니다. 패키지 설정 예시는 다음과 같습니다.
 
@@ -827,7 +824,7 @@ Rust 코드는 대개 이미 충분히 빠릅니다. 근거 없이 "최적화"�
 > - [How to build a Custom Benchmarking Harness in Rust](https://bencher.dev/learn/benchmarking/rust/custom-harness/)
 
 
-## 3.1 Flamegraph
+## Flamegraph
 
 Flamegraph는 CPU가 각 작업에 시간을 얼마나 썼는지 시각화해 줍니다.
 
@@ -878,7 +875,7 @@ cargo flamegraph --example some_example --features some_features
 * 두꺼운 스택: CPU 사용량이 많음
 * 얇은 스택: 부하가 낮음(저렴함)
 
-## 3.2 불필요한 클론 피하기
+## 불필요한 클론 피하기
 
 > 클론은 쌉니다... 문제가 생기기 전까지는요
 
@@ -985,7 +982,7 @@ hello_greet(Cow::Borrowed("Julia"));
 hello_greet(Cow::Owned("Naomi".to_string()));
 ```
 
-## 3.3 스택 vs 힙: 크기를 따져라!
+## 스택 vs 힙: 크기를 따져라!
 
 ### ✅ 좋은 습관
 
@@ -1007,7 +1004,7 @@ enum OctreeNode<T> {
 * 거대한 스택 할당은 피하고 박싱하세요. 예컨대 `let buffer: Box<[u8; 65536]> = Box::new(..)`는 먼저 `[u8; 65536]`을 스택에 할당하고 나서 박싱하므로, 상수가 아닌 경우의 해결책은 `let buffer: Box<[u8]> = vec![0; 65536].into_boxed_slice()`입니다.
 * 큰 `const` 배열은 [crate smallvec](https://docs.rs/smallvec/latest/smallvec/) 사용을 고려해 보세요. 배열처럼 동작하면서도, 큰 배열은 힙에 할당할 만큼 똑똑합니다.
 
-## 3.4 이터레이터와 제로 코스트 추상화
+## 이터레이터와 제로 코스트 추상화
 
 Rust 이터레이터는 지연(lazy) 실행되지만, 결국 소비될 때 매우 효율적인 촘촘한 루프로 컴파일되어 사라집니다. `.filter()`, `.map()`, `.rev()`, `.skip()`, `.take()`, `.collect()`를 엮어 써도 대개 추가 비용이 들지 않으며, 컴파일러가 최적화 방법을 충분히 잘 추론합니다.
 
@@ -1034,7 +1031,7 @@ Rust는 엄격한 에러 처리를 강제하지만, 에러를 *어떻게* 다루
 
 > `unwrap`이나 `expect`로 애플리케이션을 크래시시키기로 결정하더라도, Rust는 그 의도를 명시적으로 드러내도록 강제합니다.
 
-## 4.1 `Result`를 선호하고, 패닉은 피하세요 🫨
+## `Result`를 선호하고, 패닉은 피하세요 🫨
 
 Rust에는 실패 가능한 데이터를 감싸는 강력한 타입인 [`Result`](https://doc.rust-lang.org/std/result/)가 있습니다. 이를 활용하면 에러 케이스를 필요에 맞게 처리하고, 그에 따라 애플리케이션 상태를 관리할 수 있습니다.
 
@@ -1055,7 +1052,7 @@ fn divide(x: f64, y: f64) -> Result<f64, DivisionError> {
     * `unreachable!`. 코드 블록을 검토한 결과 조건 `xyz`가 일어날 수 없다고 확신하며, 혹시라도 일어나면 알림을 받고 싶을 때 사용합니다.
     * `unimplemented!`. 아직 구현되지 않은 블록임을 사유와 함께 알릴 때 특히 유용합니다.
 
-## 4.2 프로덕션에서는 `unwrap`/`expect`를 피하세요
+## 프로덕션에서는 `unwrap`/`expect`를 피하세요
 
 `expect`는 문맥을 담을 수 있어 `unwrap`보다 낫지만, 더 똑똑한 대안이 있으므로 프로덕션 코드에서는 피해야 합니다. 그래도 다음 상황에서는 사용할 수 있습니다.
 
@@ -1084,7 +1081,7 @@ if let Ok(json) = serde_json::from_str(&input) else {
 * `Option::None` 값을 처리해야 하는 함수는 `Result<T, E>` 반환을 권장합니다. 여기서 `E`는 위 예시들처럼 크레이트나 모듈 수준의 에러입니다.
 * 마지막으로 `unwrap_or`, `unwrap_or_else`, `unwrap_or_default`가 있습니다. 초기화되지 않은 값을 처리하는 별도 탈출구를 만들어 unwrap을 대신할 수 있습니다.
 
-## 4.3 크레이트 수준 에러에는 `thiserror`를 쓰세요
+## 크레이트 수준 에러에는 `thiserror`를 쓰세요
 
 Error를 손으로 직접 derive하는 건 장황하고 실수하기 쉽습니다. Rust 생태계에는 이를 돕는 훌륭한 크레이트인 `thiserror`가 있습니다. `From` 트레이트를 쉽게 구현하는 에러 타입은 물론, 쉬운 에러 메시지(`Display`)도 만들 수 있어 개발 경험이 좋아집니다. `?`와도 자연스럽게 어울리고 `std::error::Error`와도 잘 통합됩니다.
 
@@ -1123,7 +1120,7 @@ pub enum ServiceError {
 }
 ```
 
-## 4.4 `anyhow`는 바이너리용으로 남겨두세요
+## `anyhow`는 바이너리용으로 남겨두세요
 
 `anyhow`는 훌륭한 크레이트로, 이제 막 시작해서 속도를 내야 하는 프로젝트에 아주 유용합니다. 하지만 코드 전반에 고통스러울 정도로 퍼져 나가는 변곡점이 옵니다. 그래서 `anyhow`는 바이너리에만 권장합니다. 인체공학적인 에러 처리가 필요하고, 정밀한 에러 타입이 필요 없는 곳입니다.
 
@@ -1144,7 +1141,7 @@ fn main() -> Result<Config> {
 * `anyhow::Result`는 호출자가 필요로 할 수 있는 문맥을 지워버리므로, 라이브러리에서는 사용하지 마세요.
 * 테스트 헬퍼 함수에서는 별 문제 없이 `anyhow`를 써도 됩니다.
 
-## 4.5 `?`로 에러를 전파하세요
+## `?`로 에러를 전파하세요
 
 장황한 `match` 체인 대신 `?` 사용을 선호하세요.
 ```rust
@@ -1160,7 +1157,7 @@ fn handle_request(req: &Request) -> Result<ValidatedRequest, RequestValidationEr
 
 > 에러 복구가 필요하다면 `or_else`, `map_err`, `if let Ok(..) else`를 사용하세요. 에러를 확인하거나 로그를 남기기 위해서는 `inspect_err`을 사용하세요.
 
-## 4.6 단위 테스트는 에러를 검증해야 합니다
+## 단위 테스트는 에러를 검증해야 합니다
 
 많은 에러가 PartialEq와 Eq를 구현하지 않아 직접 assertion으로 비교하기 어렵지만, `format!`이나 `to_string()`으로 에러 메시지를 확인할 수 있습니다. 이를 통해 에러를 의미 있게 만들고 테스트로 검증할 수 있습니다.
 
@@ -1184,7 +1181,7 @@ fn error_implements_partial_eq() {
 }
 ```
 
-## 4.7 주요 주제
+## 주요 주제
 
 ### 커스텀 에러 구조체
 
@@ -1220,7 +1217,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
 * Rust에서 테스트는 어트리뷰트 매크로 `#[test]`로 선언합니다. 대부분의 코드 에디터에서는 이 매크로가 붙은 함수를 개별적으로 또는 묶음으로 컴파일하고 실행할 수 있습니다.
 * 테스트에는 `#[cfg(test)]`로 특별한 컴파일 플래그를 지정할 수 있습니다. `#[test]`를 포함하고 있다면 코드 에디터에서도 실행할 수 있으며, 복잡한 함수를 모킹하거나 트레이트를 오버라이드하기에 좋은 방법입니다.
 
-## 5.1 살아 있는 문서로서의 테스트
+## 살아 있는 문서로서의 테스트
 
 Rust에서는 다른 많은 언어에서와 마찬가지로, 테스트가 함수의 의도된 사용법을 보여주는 경우가 많습니다. 테스트가 명확하고 목적이 분명하다면, 다른 테스트들과 함께 함수 본문을 읽는 것보다 훨씬 도움이 되는 살아 있는 문서 역할을 합니다.
 
@@ -1393,7 +1390,7 @@ fn the_function_accepts_all_strings_with_a(#[case] input: &str) {
 
 > ❗ 테스트 자체가 아니라 설정(setup)을 공유하세요. 반복되더라도 각 테스트의 동작과 단언은 인라인으로 유지하세요. 테스트는 프로덕션 코드보다 중복에 관대합니다 — [Chapter 1, §1.8](#sec-ch01) 참고.
 
-## 5.2 문서에 테스트 예제 추가하기
+## 문서에 테스트 예제 추가하기
 
 문서에 대해서는 뒤에서 자세히 다룰 예정이므로, 여기서는 문서에 테스트를 추가하는 방법을 간단히 살펴보겠습니다. Rustdoc은 `///`를 이용해 예제를 실행 가능한 테스트로 바꿀 수 있으며, 다음과 같은 장점이 있습니다.
 
@@ -1431,7 +1428,7 @@ generic_add(5.2, 4) // => 9.2
 generic_add(2, 2.0) // => 4
 ```
 
-## 5.3 단위 테스트 vs 통합 테스트 vs 문서 테스트
+## 단위 테스트 vs 통합 테스트 vs 문서 테스트
 
 *테스트 피라미드 명명법*에 깊이 들어가지 않고 일반론으로 말하면, Rust에는 3가지 테스트 집합이 있습니다.
 
@@ -1493,7 +1490,7 @@ mod unit_of_work_tests {
 * `no_run`: 컴파일만 하고 실행하지 않으며, `cargo check`와 비슷합니다. 문서화 시 사이드 이펙트를 다룰 때 매우 유용합니다.
 * `compile_fail`: 이 블록이 컴파일 실패를 일으켜야 함을 rustdoc에 테스트합니다. 잘못된 사용 사례를 보여주고 싶을 때 중요합니다.
 
-## 5.4 `assert!` 사용법
+## `assert!` 사용법
 
 Rust는 단언을 위한 매크로 2개를 기본 제공합니다.
 
@@ -1520,7 +1517,7 @@ assert_matches!(error, MyError::BadInput(_));
     * [`rstest`](https://crates.io/crates/rstest): 절차적 매크로 기반의 픽스처형 테스트 프레임워크입니다.
     * [`pretty_assertions`](https://crates.io/crates/pretty_assertions): `assert_eq`와 `assert_ne`를 오버라이드하여두 값 사이의 컬러 diff를 만들어 줍니다.
 
-## 5.5 `cargo insta`로 스냅샷 테스팅하기
+## `cargo insta`로 스냅샷 테스팅하기
 
 > 정확성이 시각적이거나 구조적일 때는 단언보다 스냅샷이 이야기를 더 잘 전달합니다.
 
@@ -1566,7 +1563,7 @@ fn test_split_words() {
 * 마스킹 처리하지 않은, 무작위 생성 출력 등 불안정한 테스트.
 * 외부 리소스의 스냅샷. 목과 스텁을 사용하세요.
 
-## 5.6 ✅ 스냅샷 모범 사례
+## ✅ 스냅샷 모범 사례
 
 * 이름 있는 스냅샷을 사용하세요. 의미 있는 스냅샷 파일 이름을 만들 수 있습니다. 예: `snapshots/this_is_a_named_snapshot.snap`
 ```rust
@@ -1623,7 +1620,7 @@ Rust에서는 다형성 코드를 두 가지 방식으로 다룰 수 있습니�
 
 두 방식의 트레이드오프를 이해하면 더 빠르고, 더 작고, 더 유연한 코드를 작성할 수 있습니다.
 
-## 6.1 [제네릭](https://doc.rust-lang.org/book/ch10-00-generics.html)
+## [제네릭](https://doc.rust-lang.org/book/ch10-00-generics.html)
 
 모든 프로그래밍 언어에는 개념의 중복을 효과적으로 다루기 위한 도구가 있습니다. Rust에서 그런 도구 중 하나가 제네릭입니다. 제네릭은 구체적인 타입이나 다른 속성을 대신하는 추상적인 대리자입니다. 컴파일하고 실행할 때 그 자리에 무엇이 들어갈지 모르더라도, 제네릭의 동작이나 다른 제네릭과의 관계를 표현할 수 있습니다.
 
@@ -1635,7 +1632,7 @@ Rust에서는 다형성 코드를 두 가지 방식으로 다룰 수 있습니�
 
 제네릭 타입 매개변수를 사용할 때 런타임 비용이 드는지 궁금할 수 있습니다. 좋은 소식은 제네릭 타입을 사용해도 구체 타입을 사용할 때보다 프로그램이 느려지지 않는다는 점입니다. Rust는 컴파일 타임에 제네릭을 사용한 코드를 단형화(monomorphization)함으로써 이를 달성합니다. 단형화란 컴파일 시점에 사용된 구체 타입을 채워 넣어 제네릭 코드를 특정 코드로 변환하는 과정입니다. 컴파일러는 제네릭 매개변수의 모든 사용처를 확인하고, 제네릭 코드가 호출된 구체 타입별로 코드를 생성합니다.
 
-## 6.2 정적 디스패치: `impl Trait` 또는 `<T: Trait>`
+## 정적 디스패치: `impl Trait` 또는 `<T: Trait>`
 
 정적 디스패치는 기본적으로 제네릭을 트레이트 바운드로 제약한 버전으로, 컴파일 타임에 제네릭이 선언된 트레이트를 만족하는지 검사할 수 있습니다.
 
@@ -1660,7 +1657,7 @@ fn specialized_sum<U: Sum + RandomMapping>(iter: impl Iterator<Item = U>) -> U {
 
 이는 각 사용처별로 특화된 머신 코드로 컴파일되며, 빠르고 인라인화됩니다.
 
-## 6.3 동적 디스패치: `dyn Trait`
+## 동적 디스패치: `dyn Trait`
 
 동적 디스패치는 보통 `Box<dyn Trait>`, `Arc<dyn Trait>`, `&dyn trait` 같은 포인터나 참조와 함께 사용합니다.
 
@@ -1701,7 +1698,7 @@ fn all_animals_greeting(animals: Vec<Box<dyn Animal>>) {
 }
 ```
 
-## 6.4 트레이드오프 요약
+## 트레이드오프 요약
 
 |                   	| Static Dispatch (impl Trait) 	|    Dynamic Dispatch (dyn Trait)   	|
 |-------------------	|------------------------------	|---------------------------------- 	|
@@ -1718,7 +1715,7 @@ fn all_animals_greeting(animals: Vec<Box<dyn Animal>>) {
 
 > 트레이트을 포인터 뒤에 두어야 할 때가 오기 전까지는 정적 디스패치를 우선하세요.
 
-## 6.5 동적 디스패치 모범 사례
+## 동적 디스패치 모범 사례
 
 동적 디스패치 `Ptr<dyn Trait>`는 강력한 도구이지만 성능상 트레이드오프도 큽니다. 타입 소거(type erasure)나 런타임 다형성이 필수적일 때만 사용해야 합니다. 트레이트 객체가 언제 필요한지 아는 것이 중요합니다.
 
@@ -1742,7 +1739,7 @@ fn all_animals_greeting(animals: Vec<Box<dyn Animal>>) {
 * 성능이 중요한 경로의 코드를 작성할 때.
 * 단순함을 유지하면서 같은 로직을 다른 방식(예: 제네릭)으로 표현할 수 있을 때.
 
-## 6.6 🚨 트레이트 객체 사용성
+## 🚨 트레이트 객체 사용성
 
 * 소유권이 필요 없다면 `Box<dyn Trait>`보다 `&dyn Trait`를 선호하세요.
 * 스레드 간 공유 접근에는 `Arc<dyn Trait + Send + Sync>`를 사용하세요.
@@ -1783,13 +1780,13 @@ struct Renderer {
 
 > 최근에는 Rust 프로그래밍의 표준 디자인 패턴으로 자리 잡았습니다. 다만 Rust에만 국한된 것은 아니며, 다른 언어에서도 구현할 수 있고 영감을 주었습니다. [swift](https://swiftology.io/articles/typestate/)와 [typescript](https://catchts.com/type-state) 사례를 참고하세요.
 
-## 7.1 타입 상태 패턴이란?
+## 타입 상태 패턴이란?
 
 타입 상태(Type State) 패턴은 시스템의 서로 다른 상태를 런타임 플래그나 enum이 아니라 타입으로 인코딩하는 디자인 패턴입니다. 이를 통해 컴파일러가 상태 전이를 강제하고, 컴파일 타임에 잘못된 동작을 막을 수 있습니다. 타입의 상태에 따라 호출할 수 있는 함수가 달라지므로 개발자 경험도 좋아집니다.
 
 > 잘못된 상태는 런타임 버그 대신 컴파일 에러가 됩니다.
 
-## 7.2 왜 사용하는가?
+## 왜 사용하는가?
 
 * 상태 유효성에 대한 런타임 검사를 피할 수 있습니다. 특정 상태에 도달했다면, 보유한 데이터에 대해 일정한 가정을 할 수 있습니다.
 * 상태 전이를 타입 전이로 모델링합니다. 상태 머신과 비슷하지만 컴파일 타임에 동작합니다.
@@ -1797,7 +1794,7 @@ struct Renderer {
 * API 안전성과 정확성을 높입니다.
 * 팬텀 데이터(PhantomData) 필드는 컴파일 후 제거되므로 추가 메모리를 할당하지 않습니다.
 
-## 7.3 간단한 예제: 파일 상태
+## 간단한 예제: 파일 상태
 
 [Github 예제](https://github.com/apollographql/rust-best-practices/tree/main/examples/simple-type-state)
 ```rust
@@ -1855,7 +1852,7 @@ impl File<FileOpened> {
 }
 ```
 
-## 7.4 실전 예제
+## 실전 예제
 
 ### 컴파일 타임 보장을 제공하는 빌더 패턴
 
@@ -1976,7 +1973,7 @@ impl Client<Connected> {
 }
 ```
 
-## 7.5 장단점
+## 장단점
 
 ### ✅ 타입 상태 패턴을 사용하면 좋은 경우:
 
@@ -2006,7 +2003,7 @@ impl Client<Connected> {
 
 > 명확한 코드가 명확한 주석보다 낫습니다. 하지만 왜 그렇게 작성했는지가 명확하지 않다면, 평이하게 주석을 달거나 더 많은 맥락을 읽을 수 있는 곳으로 링크하세요.
 
-## 8.1 주석과 문서화: 차이점 알기
+## 주석과 문서화: 차이점 알기
 
 | 목적      	| `// comment` 사용                          	| `/// doc` 또는 `//! crate doc` 사용                                  |
 |--------------	|-------------------------------------------	|----------------------------------------------------------------	|
@@ -2015,7 +2012,7 @@ impl Client<Connected> {
 | 유지보수성 	| 🚨 금방 낡아지고 추론하기 어려워짐 	| ✅ 코드와 연결되어 생성된 문서에 나타나며 테스트 케이스를 실행할 수 있음 	|
 | 가시성   	| 로컬 개발용으로만 보임                    	| 사용자와 `cargo doc` 같은 도구에 노출됨                   	|
 
-## 8.2 주석을 사용하면 좋은 경우
+## 주석을 사용하면 좋은 경우
 
 코드만으로 명확히 표현할 수 없는 내용을 다룰 때는 `//` 주석(이중 슬래시)을 사용하세요. 예를 들면 다음과 같습니다:
 
@@ -2039,7 +2036,7 @@ unsafe { std::ptr::copy_nonoverlapping(src, dst, len); }
 // [ADR-12](link/to/adr-12): TLS Performance on MacOS
 ```
 
-## 8.3 주석이 방해가 될 때
+## 주석이 방해가 될 때
 
 다음과 같은 주석은 피하세요:
 
@@ -2061,7 +2058,7 @@ fn compute(counter: &mut usize) {
 // Originally written in 2028 for some now-defunct platform
 ```
 
-## 8.4 살아있는 문서로서 주석을 작성하지 마세요(리빙 코멘트)
+## 살아있는 문서로서 주석을 작성하지 마세요(리빙 코멘트)
 
 "살아있는 문서"로서의 주석은 위험한 통념입니다. 주석은 공짜가 아니기 때문입니다:
 
@@ -2079,7 +2076,7 @@ PR을 넘어서까지 남아야 할 내용이라면 다음 중 하나에 넣으�
 
 > ### 🚨 주석을 발견하면 반드시 맥락 속에서 읽으세요. 아직도 말이 되나요? 그렇지 않다면 제거하거나 업데이트하거나 도움을 요청하세요. 주석은 여러분을 불편하게 만들어야 합니다.
 
-## 8.5 주석 대신 코드로 표현하기
+## 주석 대신 코드로 표현하기
 
 주석으로 길게 설명한 블록 대신, 로직을 이름이 잘 지어진 헬퍼 함수로 나누세요:
 
@@ -2113,7 +2110,7 @@ fn save_auth_user(&self) -> Result<PathBuf, MyError> {
 
 > ❗ 이름이 의미를 더할 때 추출하세요 — 비슷해 보이는 몇 줄을 중복 제거하기 위한 목적이 아닙니다. 중복이 더 나은 선택인 경우에 대해서는 [Chapter 1, §1.8](#sec-ch01)을 참고하세요.
 
-## 8.6 `TODO`는 이슈로 만들기
+## `TODO`는 이슈로 만들기
 
 소유자도 없이 `// TODO:`를 코드베이스 곳곳에 남기지 마세요. 대신 다음과 같이 하세요:
 
@@ -2126,7 +2123,7 @@ fn save_auth_user(&self) -> Result<PathBuf, MyError> {
 
 이렇게 하면 `TODO`를 추적하고 실행 가능하며 모두에게 보이게 만들 수 있습니다.
 
-## 8.7 문서 주석을 사용하면 좋은 경우
+## 문서 주석을 사용하면 좋은 경우
 
 `///` 문서 주석으로 다음을 문서화하세요:
 
@@ -2161,7 +2158,7 @@ fn load_user(path: &Path) -> Result<User, MyError> {...}
 fn square(x: impl ToInt) -> u128 { ... }
 ```
 
-## 8.8 Rust의 문서화: 방법, 시기, 이유
+## Rust의 문서화: 방법, 시기, 이유
 
 Rust는 rustdoc을 통한 일급 문서화 도구를 제공하므로, 코드 문서화는 관용적이고 유지보수하기 좋은 Rust 코드를 작성하는 핵심 요소입니다. 문서화에 도움이 되는 문서 전용 린트로는 다음과 같은 것들이 있습니다:
 
@@ -2228,7 +2225,7 @@ pub fn add(a: i32, b: i32) -> i32 {
 //! ```
 ```
 
-## 8.9 문서화 범위 체크리스트
+## 문서화 범위 체크리스트
 
 📦 크레이트 수준(lib.rs)
 
@@ -2286,7 +2283,7 @@ pub fn add(a: i32, b: i32) -> i32 {
 | C++        	| 원시 타입과 참조                           	| 날것 포인터 `T*`와 스마트 포인터 `shared_ptr`, `unique_ptr` 	| 스레드, `std::future`, `std::async`, (c++ 20부터 `co_await`/코루틴) 	| ✅ 대부분 허용                       	|
 | Rust       	| 원시 타입, 배열, `impl Copy`               	| `&T`, `&mut T`, `Box<T>`, `Arc<T>`                         	| `async/await`, `tokio`, `Future`, `JoinHandle`, `Send + Sync`              	|    ✅🔒 안전하고 명시적                        	|
 
-## 9.1 스레드 안전성
+## 스레드 안전성
 
 Rust는 `Send`와 `Sync` 트레이트를 사용해 포인터를 추적한다:
 
@@ -2312,7 +2309,7 @@ Rust는 `Send`와 `Sync` 트레이트를 사용해 포인터를 추적한다:
 | `LazyLock<T>`    	| `LazyCell<T>`의 스레드 안전 버전                                             	| 예                                  	| 멀티스레드 복잡 초기화	|
 | `*const T/*mut T` 	| 날것 포인터                                                                 	| 아니요, 사용자가 직접 안전성을 보장해야 함 	| 날것 메모리 / FFI |
 
-## 9.2 포인터 사용 시점:
+## 포인터 사용 시점:
 
 ### `&T` - 공유 빌림:
 
@@ -2548,7 +2545,7 @@ let _ = &*CONFIG;
 `examples/` 아래 3개 예제의 전체 소스를 이 책에 그대로 싣는다.
 `cargo test --workspace --all-features` 대상이며, 본문 Chapter 7 · Chapter 9에서 인용된다.
 
-## A.1 `examples/simple-type-state`
+## `examples/simple-type-state`
 
 `File<FileNotOpened>` → `File<FileOpened>` 타입 상태 예제이다. 본문 [@sec-ch07]에서 인용한다.
 
@@ -2623,7 +2620,7 @@ fn main() {
 hello world!
 ```
 
-## A.2 `examples/type-state-builder`
+## `examples/type-state-builder`
 
 필수 필드(`name`, `age`)를 컴파일 타임에 강제하는 빌더 예제이다. 본문 [@sec-ch07]에서 인용한다.
 
@@ -2726,7 +2723,7 @@ fn main() {
 }
 ```
 
-## A.3 `examples/once_cell`
+## `examples/once_cell`
 
 `OnceCell` + `Rc` 공유 설정 예제이다. 본문 [@sec-ch09]에서 인용한다.
 

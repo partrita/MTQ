@@ -577,7 +577,7 @@ cargo run
 
 빌드 출력이 나타난 후, `hello world` 메시지가 표시되는 TUI 애플리케이션이 실행됩니다.
 
-![hello](images/hello-ratatui.gif)
+![Hello Ratatui](images/hello-ratatui.gif)
 
 아무 키나 누르면 앱이 종료되고 이전 터미널 상태로 깨끗하게 복귀합니다.
 
@@ -599,7 +599,7 @@ cargo run
 
 완성된 애플리케이션의 모습은 다음과 같습니다.
 
-![basic-app demo](images/basic-app.png)
+![기본 앱 데모](images/basic-app.png)
 
 애플리케이션은 [`Paragraph`] 위젯 안에 카운터 값을 렌더링합니다. 사용자가 좌우 화살표 키를 누르면 카운터 값이 1씩 증가하거나 감소합니다.
 
@@ -1181,7 +1181,7 @@ cargo run
 
 다음과 같은 UI가 표시됩니다.
 
-![basic-app demo](images/basic-app.gif)
+![기본 앱 데모](images/basic-app.gif)
 
 왼쪽 및 오른쪽 방향키를 눌러 카운터 값을 조작해 보세요. Q를 누르면 종료됩니다.
 
@@ -1401,7 +1401,7 @@ fn main() -> io::Result<()> {
 }
 ```
 
-결과적으로 애플리케이션의 기본 패닉 핸들러가 실행되어 에러 내용을 뒤죽박죽으로 깨진 채 표시하게 됩니다. 이는 로우 모드(raw mode) 상태가 유지되어 터미널이 개행 문자(newline)를 평소처럼 해석하지 못하기 때문입니다. 또한 셸 프롬프트도 엉뚱한 위치에 렌더링됩니다.
+결과적으로 애플리케이션의 기본 패닉 핸들러가 실행되어 에러 내용이 뒤죽박죽으로 깨져서 표시됩니다. 이는 로우 모드(raw mode) 상태가 유지되어 터미널이 개행 문자(newline)를 정상적으로 해석하지 못하기 때문입니다. 또한 셸 프롬프트도 엉뚱한 위치에 렌더링됩니다.
 
 ![Basic App Error](images/basic-app-error.gif)
 
@@ -1413,7 +1413,7 @@ Rust 애플리케이션이 실패하는 방식에는 크게 두 가지가 있습
 
 > Rust는 에러를 크게 _복구 가능한(recoverable)_ 에러와 _복구 불가능한(unrecoverable)_ 에러 두 가지 범주로 나눕니다. _파일을 찾을 수 없는 오류_와 같은 복구 가능한 에러의 경우, 보통 사용자에게 문제를 알리고 작업을 재시도하는 것으로 처리합니다. 반면 복구 불가능한 에러는 항상 배열의 범위를 벗어나 접근하려는 시도와 같은 버그의 증상이며, 프로그램을 즉시 중단해야 합니다. -- <https://doc.rust-lang.org/book/ch09-00-error-handling.html>
 
-처리되지 않은 에러를 깔끔하게 표시하는 효과적인 접근법 중 하나는 color-eyre 크레이트를 사용하여 에러 보고 훅을 확장하는 것입니다. 대체 화면(alternate screen)과 로우 모드(raw mode)에서 실행되는 ratatui 애플리케이션에서는 이러한 에러를 사용자에게 표시하기 전에 반드시 터미널을 원래 상태로 복구해야 합니다.
+처리되지 않은 에러를 깔끔하게 표시하는 효과적인 방법 중 하나는 color-eyre 크레이트를 사용해 에러 보고 훅을 확장하는 것입니다. 대체 화면(alternate screen)과 로우 모드(raw mode)에서 실행되는 ratatui 애플리케이션에서는 이러한 에러를 사용자에게 표시하기 전에 반드시 터미널을 원래 상태로 복구해야 합니다.
 
 ---
 
@@ -2017,10 +2017,9 @@ Sleep 2.5s
 
 -->
 
-![Counter app demo](https://user-images.githubusercontent.com/1813121/263404720-41bd81a0-4eec-479c-9333-44363a183613.gif)
+![비동기 카운터 데모](https://user-images.githubusercontent.com/1813121/263404720-41bd81a0-4eec-479c-9333-44363a183613.gif)
 
 이 다중 파일 튜토리얼의 전체 소스 코드는 다음 링크에서 확인할 수 있습니다:
-<https://github.com/ratatui/ratatui-website/tree/main/code/tutorials/ratatui-counter-app>.
 
 ::: {.callout-note title="과제"}
 
@@ -2165,7 +2164,7 @@ pub fn render(app: &mut App, frame: &mut Frame) {
 
 렌더링이 완료되면 UI는 다음과 같은 모습이 됩니다.
 
-![Counter app demo](https://user-images.githubusercontent.com/1813121/263155937-d8a8b6f6-97f4-4839-b855-ffd0249c2ae0.png)
+![비동기 카운터 데모](https://user-images.githubusercontent.com/1813121/263155937-d8a8b6f6-97f4-4839-b855-ffd0249c2ae0.png)
 
 ##### update.rs
 
@@ -2277,7 +2276,7 @@ fn main() -> Result {
 
 아키텍처 관점에서도 코드 흐름을 파악하고 상태를 추론하기가 까다로워집니다. 예를 들어 앱의 현재 상태에 따라 동일한 키 입력이라도 _전혀 다른_ 동작을 수행해야 할 수 있습니다(가령 텍스트 입력 필드에 포커스가 있을 때는 `"j"`를 글자로 입력해야 하지만, 목록에 포커스가 있을 때는 커서를 아래로 이동해야 하는 경우 등).
 
-![Pressing `j` 3 times to increment counter and 3 times in the text field](https://user-images.githubusercontent.com/1813121/254444604-de8cfcfa-eeec-417a-a8b0-92a7ccb5fcb5.gif)
+![`j` 키 3번 누름과 텍스트 필드 입력 데모](https://user-images.githubusercontent.com/1813121/254444604-de8cfcfa-eeec-417a-a8b0-92a7ccb5fcb5.gif)
 
 <!--
 ```vhs
@@ -5165,7 +5164,7 @@ Line, Span 및 Style에 대한 자세한 내용은 [텍스트 표시 레시피](
 +---------------------------------+
 ```
 
-이제 푸터 단락 위젯들을 해당 공간에 렌더링할 수 있습니다.
+이제 푸터 단락 위젯들을 해당 영역에 렌더링할 수 있습니다.
 
 ```rust
     frame.render_widget(mode_footer, footer_chunks[0]);
@@ -8589,7 +8588,7 @@ Enter
 Sleep 5s
 -->
 
-![](https://user-images.githubusercontent.com/1813121/272299743-f666980f-93b8-40d4-a979-1fce26d0f84a.gif)
+![위젯 쇼케이스 데모](https://user-images.githubusercontent.com/1813121/272299743-f666980f-93b8-40d4-a979-1fce26d0f84a.gif)
 
 이 코드를 직접 실행해 보면서 `EnterAlternateScreen`과 `LeaveAlternateScreen`을 실험해 보십시오.
 
@@ -16621,7 +16620,7 @@ cargo install cargo-generate
 cargo generate ratatui/templates
 ```
 
-![](https://user-images.githubusercontent.com/1813121/277114001-0d25a09c-f24e-4ffc-8763-cd258828cec0.gif)
+![프로덕션 템플릿 데모](https://user-images.githubusercontent.com/1813121/277114001-0d25a09c-f24e-4ffc-8763-cd258828cec0.gif)
 
 ## 주요 기능
 
@@ -19247,7 +19246,7 @@ impl Component for Home {
 
 `draw` 메서드는 `Frame`을 받아 카운터 정보를 표시하는 `Paragraph` 위젯과 텍스트 입력 위젯을 화면에 렌더링합니다.
 
-![](https://user-images.githubusercontent.com/1813121/254134161-477b2182-a3ee-4be9-a180-1bcdc56c8a1d.png)
+![비동기 홈 컴포넌트 화면](https://user-images.githubusercontent.com/1813121/254134161-477b2182-a3ee-4be9-a180-1bcdc56c8a1d.png)
 
 `Home` 컴포넌트의 `schedule_increment`와 `schedule_decrement` 메서드는 비동기 태스크를 실행하면서, 작업 시작과 완료 시점에 `action_tx` 채널로 `Action::EnterProcessing`, `Action::ExitProcessing` 등의 액션을 발행합니다.
 
@@ -19307,7 +19306,7 @@ impl Component for Home {
 
 애플리케이션이 `Insert` 모드로 진입하면 키 이벤트가 서드파티 라이브러리인 [`tui-input`](https://github.com/sayanarijit/tui-input)의 `Input` 핸들러로 전달되어 직관적인 텍스트 입력 및 커서 제어가 이뤄집니다.
 
-![](https://user-images.githubusercontent.com/1813121/254444604-de8cfcfa-eeec-417a-a8b0-92a7ccb5fcb5.gif)
+![텍스트 입력 및 키 이벤트 데모](https://user-images.githubusercontent.com/1813121/254444604-de8cfcfa-eeec-417a-a8b0-92a7ccb5fcb5.gif)
 
 ### FPS 성능 모니터링 컴포넌트
 
@@ -19898,7 +19897,7 @@ Tachyonfx FTL을 통해 브라우저에서 이러한 이펙트를 직접 체험�
 
 :::
 
-![](https://raw.githubusercontent.com/ratatui/tachyonfx/development/images/tfx-ftl.png)
+![Tachyonfx FTL 데모](https://raw.githubusercontent.com/ratatui/tachyonfx/development/images/tfx-ftl.png)
 
 ::: {.callout-note}
 
@@ -19922,7 +19921,7 @@ FTL 웹사이트 역시 Ratatui([Ratzilla](/ecosystem/ratzilla) 활용)로 제�
 
 [Tuitar](https://github.com/orhun/tuitar)는 Ratatui와 Mousefood로 제작된 기타 학습 도구이자 DIY 키트입니다.
 
-![](https://github.com/orhun/embedded-ratatui-talk/blob/main/assets/tuitar-fretboard-song.gif?raw=true)
+![Tuitar 프렛보드 데모](https://github.com/orhun/embedded-ratatui-talk/blob/main/assets/tuitar-fretboard-song.gif?raw=true)
 
 :::
 
@@ -20936,7 +20935,7 @@ ratatui = { version = "0.29", features = ["palette"] }
 
 `Canvas` 예제를 확장하여 그리기(Drawing) 기능을 추가했습니다. 이제 마우스를 사용하여 캔버스 위에 직접 그림을 그릴 수 있습니다:
 
-![](https://github.com/user-attachments/assets/cfb2f9f8-773b-4599-9312-29625ff2ca60)
+![캔버스 그리기 데모](https://github.com/user-attachments/assets/cfb2f9f8-773b-4599-9312-29625ff2ca60)
 
 ---
 
@@ -21709,7 +21708,7 @@ for widget in widgets {
 - `Flex::SpaceBetween`
 - `Flex::Legacy` (이전 기본값)
 
-![](images/constraint-explorer.gif)
+![제약 조건 탐색기](images/constraint-explorer.gif)
 
 기본값을 `Flex::Start`로 변경한 것 외에도 제약 조건(constraint)에 몇 가지 변경을 가했습니다.
 
@@ -22672,7 +22671,7 @@ fn main() {
 }
 ```
 
-![](https://user-images.githubusercontent.com/1813121/271896508-d5f6192c-d51b-4299-9b5e-9d91e4618f64.png)
+![Ratatui 개요](https://user-images.githubusercontent.com/1813121/271896508-d5f6192c-d51b-4299-9b5e-9d91e4618f64.png)
 
 #### Ratatui
 
@@ -22751,7 +22750,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 }
 ```
 
-![](https://user-images.githubusercontent.com/1813121/271896510-c8db19d1-f132-49b5-89da-c32cc21ab765.png)
+![Ratatui 렌더링 파이프라인](https://user-images.githubusercontent.com/1813121/271896510-c8db19d1-f132-49b5-89da-c32cc21ab765.png)
 
 Ratatui를 사용하면 작성해야 할 코드는 다소 늘어날 수 있지만, 화면에 표시하고자 하는 정확한 UI 구성을 정밀하게 직접 제어할 수 있다는 강력한 이점이 있습니다.
 
@@ -22759,7 +22758,7 @@ Ratatui를 사용하면 작성해야 할 코드는 다소 늘어날 수 있지�
 
 `ratatui` 자체는 터미널의 글꼴 크기를 제어하지 않습니다. `ratatui`는 자신이 실행 중인 터미널의 크기와 기능에 맞춰 콘텐츠를 렌더링할 뿐입니다. 글꼴 크기를 변경하려면 사용 중인 터미널 에뮬레이터 자체의 설정을 조정해야 합니다.
 
-![](https://user-images.githubusercontent.com/1813121/269147939-0ed031f2-1977-4e92-b4b4-6c217d02e79b.png)
+![터미널 폰트 설정 예시](https://user-images.githubusercontent.com/1813121/269147939-0ed031f2-1977-4e92-b4b4-6c217d02e79b.png)
 
 하지만 터미널 에뮬레이터에서 이 설정을 변경하는 것은 `ratatui` 기반 애플리케이션을 개발하고 있는 본인의 터미널 환경에만 글꼴 크기를 바꿀 뿐입니다.
 
