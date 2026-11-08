@@ -1,8 +1,8 @@
 ---
 title: "단백질 생명정보학의 LLM"
 author: "John M. Walker"
+lang: ko
 ---
-
 # 사전 학습된 단백질 언어 모델 조사
 
 Suresh Pokharel, Pawel Pratyush, Meenal Chaudhari, Michael Heinzinger, Doina Caragea, Hiroto Saigo, Dukka B. KC
@@ -191,7 +191,7 @@ ProLLaMA 프레임워크는 2단계 학습 접근 방식을 사용하여 LLaMA �
 
 지난 몇 년 동안 단백질 언어 모델 분야에서는 엄청난 진전이 있었다. PLM의 가장 중요한 두 가지 용도는 후속 분류 작업인 단백질 이해 작업과 단백질/항체/생물학적 제제의 공학 및 설계인 단백질 생성 작업이었다. 단백질 서열을 기반으로 한 단백질 언어 모델 분야에서는 엄청난 개선이 있었지만 단백질 구조를 기반으로 한 단백질 언어 모델의 경우 아직 같은 상황이 아니다. AlphaFold 덕분에 모든 단백질에 대해 예측된 구조를 사용할 수 있게 되면서 우리는 단백질 구조 기반 언어 모델 분야에서 더 많은 발전을 보게 될 것이다. 더욱이 NLP 분야의 LLM 기술은 놀라운 속도로 발전하고 있으며 이러한 진보들은 PLM에 통합될 것으로 보이다. 이 분야의 한 가지 과제는 이러한 모델에서 생성된 임베딩에 대한 해석 가능성(interpretability)의 부족이었다. 아래에서는 이 분야에서 나타나고 있는 몇 가지 최신 트렌드를 요약한다.
 
-### 1. 소형 단백질 언어 모델(및 규모 조정)
+### 1. 소형 단백질 언어 모델 및 규모 조정
 
 PLM이 문맥적 관계를 이해하는 능력이 뛰어나고 단백질 생물정보학의 후속 작업에서 전통적인 접근 방식들을 앞선다는 점에는 의심의 여지가 없다. 최근에는 자연어 처리(NLP)와 같은 흐름을 따라 단백질 언어 모델의 규모가 계속 커지고 있다. 다만 이런 PLM을 학습시키는 일이 상당한 도전 과제라는 점에 유의해야 한다. 이와 관련하여 계산 요구량이 더 적으면서 대형 모델과 비슷하게 작동하는 소규모 단백질 언어 모델을 탐구하는 연구들이 이어지고 있다. 아울러 효율적인 코드베이스 구축, 현대적 구조 설계 및 데이터 품질 문제 해결을 위한 노력도 이어지고 있다. Amplify 는 기존의 다른 단백질 언어 모델보다 학습 및 배포 비용이 적게 드는 새로운 모델이다.
 
@@ -223,7 +223,7 @@ PLM을 학습시킬 때 따르는 어려움, 특히 데이터 부족 문제를 �
 
 PLM에서도 프롬프트 기반 미세 조정이 적용되기 시작했다. PTMGPT2는 단백질 서열 기반의 GPT 모델인 ProtGPT 모델의 프롬프트 기반 미세 조정으로, PTM 분류 레이블 생성을 위해 ProtGPT2를 미세 조정한다.
 
-# 다양한 단백질 예측 작업을 위해 효율적인 미세 조정을 거친 구조 인식 단백질 언어 모델 강화
+## 다양한 단백질 예측 작업을 위해 효율적인 미세 조정을 거친 구조 인식 단백질 언어 모델 강화
 
 Yichuan Zhang, Yongfang Qin, Mahdi Pourmirzaei, Qing Shao, Duolin Wang, Dong Xu
 
@@ -414,7 +414,7 @@ $$
 
 ### 3. 비지도 단백질 클러스터링
 
-#### 3.. CATH 구조적 계층 구조의 클러스터링
+#### 3. CATH 구조적 계층 구조의 클러스터링
 
 CATH 는 단백질의 구조적 및 기능적 특징을 기반으로 단백질 구조를 분류하는 계층적 분류 시스템이다. 우리는 서열 잠재 공간에 구조 정보를 통합하는 능력을 결정함으로써 S-PLM의 성능을 평가했다. 단백질의 구조적 측면을 강조하기 위해 CATH 슈퍼패밀리당 하나의 대표 서열을 의도적으로 선택했으며 최대 서열 정체성이 40%인 CATHS 데이터셋을 사용했다. 분석은 서열 유사성 기반의 상동 슈퍼패밀리를 제외하고 CATH 계층 구조의 클래스, 아키텍처 및 토폴로지 수준에 중점을 두었다.
 
@@ -422,7 +422,7 @@ S-PLM 및 S-PLM2에 의해 생성된 서열 표현을 서열 정보에만 의존
 
 Calinski-Harabasz 인덱스(CHI) 는 군집 간 분산과 군집 내 분산 사이의 비율을 측정하여 군집 유효성에 대한 지표 역할을 한다. 다양한 모델에 의해 생성된 서열 임베딩이 CATH 구조적 계층 구조를 구별하는 능력을 정량적으로 평가하기 위해 CHI를 사용했다. 이 평가에서 CATH 카테고리는 지상 검증(ground-truth) 군집으로 사용되었다. 그림 4b에 설명된 것처럼 S-PLM1의 CHI 점수는 클래스, 아키텍처 및 토폴로지 수준에서 ProsT5보다 약 30% 높고 ESM2보다 약 300% 높다. 그러나 S-PLM2는 훨씬 더 뚜렷한 이득을 보여주었으며 CHI 점수는 CATH 클래스에서 ProsT5보다 약 140% 높고 CATH 아키텍처 및 토폴로지 모두에서 약 50% 높았다. CHI 점수를 기준으로 하면, S-PLM2는 분명히 S-PLM1을 능가하며 이는 S-PLM2가 3D 좌표 특징과 잔기 수준 대조 학습을 직접 사용하기 때문에 CATH 구조적 계층 구조를 클러스터링하는 데 더 효과적임을 시사한다. 이러한 CATH 카테고리가 단백질 구조에 기반한다는 점을 고려할 때, 이 분석은 S-PLM1과 S-PLM 모두에서 생성된 서열 임베딩이 단백질 구조 정보에 대한 상당한 인식을 보여주며 S-PLM2가 더 정제된 표현을 제공한다는 것을 강력하게 뒷받침한다.
 
-#### 3.. 효소 클러스터링
+#### 3. 효소 클러스터링
 
 데아미나제(deaminase) 패밀리 클러스터링에서 S-PLM 및 S-PLM 모델의 효과를 평가하기 위해, 이들의 서열 임베딩을 ESM, PromptProtein 및 ProstT5라는 세 가지 다른 단백질 언어 모델(PLM)에 의해 생성된 임베딩과 비교했다. 서열 데이터는 아미노산 서열 분석만으로는 감지할 수 없는 새로운 패밀리와 데아미나제 기능을 식별하기 위해 구조 기반 클러스터링을 사용한 Huang 등의 연구에서 가져왔다 . S-PLM 및 S-PLM2를 사용하여 각 단백질에 대해 128차원 임베딩을 생성한 다음 t-SNE를 적용하여 이러한 임베딩을 2D 표현으로 축소하고 K-평균 클러스터링을 사용했다. 조정 랜드 인덱스(ARI)는 K-평균 클러스터를 알려진 데아미나제 패밀리 어노테이션과 비교하여 계산되었다. 그림 5a, b에서 볼 수 있듯이 S-PLM1은 ARI 0., S-PLM2는 ARI 0.86을 달성하여 ESM (0.63), Prompt-Protein (0.46) 및 ProstT (0.80)를 능가했다.
 
@@ -498,7 +498,7 @@ Adapter S-PLM Finetune S-PLM Adapter S-PLM2-onehot
 
 정리하면, 사전 학습된 ESM 모델에 구조 인지 모듈을 통합함으로써 S-PLM은 ESM2의 서열 표현 능력을 유지하면서 구조 정보를 효과적으로 반영한다. S-PLM과 효율적인 미세 조정 전략은 단백질 분석 및 예측 작업에 강력하고 유연한 수단이 된다.
 
-# ProtFlash 탐구: 단백질 데이터 분석을 위한 효율적인 접근 방식
+## ProtFlash 탐구: 단백질 데이터 분석을 위한 효율적인 접근 방식
 
 Lei Wang, Zhidong Xue, Yan Wang
 
@@ -545,9 +545,9 @@ conda install pytorch torchvision torchaudio -c pytorch
 최신 릴리스 버전을 사용하여 이 한 줄의 명령으로 설치할 수 있다.
 
 ```txt
-# 최신 버전
+## 최신 버전
 pip install git+https://github.com/isyslab-hust/ProtFlash
-# 안정 버전
+## 안정 버전
 pip install ProtFlash
 ```
 
@@ -572,7 +572,7 @@ from ProtFlash.utilis import batchConverter
 ids, batch_token, lengths = batchConverter(data)
 model = load_protflash_base()
 with torch.no_grad(): token_embedding = model(batch_token, lengths)
-# 평균화를 통해 서열별 표현 생성
+## 평균화를 통해 서열별 표현 생성
 representations = []
 for i, (_, seq) in enumerate(data): representations.append(token_embedding[i, 0: len(seq) + 1].mean(0))
 ```
@@ -585,8 +585,8 @@ for i, (_, seq) in enumerate(data): representations.append(token_embedding[i, 0:
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
-# 'representations'에 이전 코드의 평균 임베딩이 포함되어 있다고 가정함
-# t-SNE를 위해 리스트를 NumPy 배열로 변환
+## 'representations'에 이전 코드의 평균 임베딩이 포함되어 있다고 가정함
+## t-SNE를 위해 리스트를 NumPy 배열로 변환
 embeddings_array = np.array(representations)
 ```
 
@@ -594,10 +594,10 @@ embeddings_array = np.array(representations)
 ```python
 tsne = TSNE(n_components=2, random_state=42)
 tsne_results = tsne.fit_transform(embeddings_array)
-# t-SNE 결과 플로팅
+## t-SNE 결과 플로팅
 plt.figure(figsize=(8,6))
 plt.scatter(tsne_results[:,0],tsne_results[:,1],marker='o')
-# 단백질 식별자로 점 주석 달기
+## 단백질 식별자로 점 주석 달기
 for i,(protein_id,_) in enumerate(data): plt.annotate(protein_id,(tsne_results[i,0],tsne_results[i,1]),fontsize=9)
 plt.title("t-SNE Visualization of Protein Sequence Representations")
 plt.xlabel("t-SNE Component 1")
@@ -648,13 +648,13 @@ model.load_state_dict(model_data['state_dict'])
 
 ### 3. 모델 최적화
 
-#### 3.. LoRA 소개
+#### 3. LoRA 소개
 
 저차원 적응(LoRA) 은 신경망을 위한 파라미터 효율적인 미세 조정 기술이다. 사전 학습된 모델의 가중치에 저차원 분해를 적용하여 미세 조정 중에 훈련해야 하는 파라미터 수를 크게 줄여 특히 다운스트림 작업에서 훈련 효율성을 높이다.
 
 LoRA는 신경망의 가중치 업데이트 행렬 ΔW를 두 개의 작은 행렬의 곱으로 분해하여 작동한다. $\Delta { \cal W } = { \cal A } \times { \cal B }$이며 여기서 $A \in R ^ { d \times \ r }$이고 $\boldsymbol { B } \in \boldsymbol { R } ^ { r \times \textit { k } }$인다. $r$은 저차원 차원(일반적으로 $d$ 및 $k$보다 훨씬 작음)인다. 미세 조정 중에 원래 가중치 행렬 W는 고정되고 저차원 행렬 $A$와 $B$만 훈련된다. 이는 훈련 가능한 파라미터 수를 $d \times k$에서 $( d \times \boldsymbol { r } ) + ( \boldsymbol { r } \times \boldsymbol { k } )$로 줄여 미세 조정을 더욱 효율적으로 만든다. 최종 적응된 가중치는 $W + \Delta W = W + A \times B$가 되어 모델이 더 적은 파라미터로 새로운 작업에 적응하면서 사전 학습된 지식을 유지할 수 있게 해준다.
 
-#### 3.. minLoRA 라이브러리 설치하기
+#### 3. minLoRA 라이브러리 설치하기
 
 minLoRA(https://github.com/cccntu/minlora)는 LoRA를 재구현하기 위한 작지만 완벽한 기능을 갖춘 PyTorch 라이브러리이다. 모델 정의를 수정하지 않고도 `torch.nn.Module`을 상속하는 모든 모델에 LoRA를 직접 적용할 수 있다. 이 라이브러리는 파라미터화를 위해 PyTorch의 `torch.nn.utils.parametrize`를 활용하므로 확장이 용이하며 사용자가 맞춤형 LoRA 파라미터화 방법을 추가할 수 있도록 지원한다. 약 100줄 내외의 코드만으로도 minLoRA는 다양한 LoRA 모델의 학습과 추론을 지원하며 LoRA 통합을 위한 단순하면서도 강력한 솔루션을 제공한다. minLoRA 라이브러리를 설치하려면 다음 단계를 따르라.
 
@@ -664,7 +664,7 @@ cd minLoRA
 pip install -e .
 ```
 
-#### 3.. ProtFlash에서 LoRA 적용하기
+#### 3. ProtFlash에서 LoRA 적용하기
 
 이 코드 조각은 LoRA 모듈을 ProtFlash 모델에 통합하고 LoRA 파라미터를 최적화하는 방법을 보여준다. 구체적인 단계는 다음과 같다.
 
@@ -678,26 +678,26 @@ pip install -e .
 from minlora import add_lora, get_lora_params, get_lora_state_dict, LoRAParametrization
 from functools import partial
 
-# LoRA 구성
+## LoRA 구성
 lora_config = {
     torch.nn.Linear: {
         "weight": partial(LoRAParametrization.from_linear, rank=3),
     },
 }
 
-# 원본 ProtFlash 모델 로드
+## 원본 ProtFlash 모델 로드
 model = load_protflash_base()
 
-# ProtFlash 모델에 LoRA 추가
+## ProtFlash 모델에 LoRA 추가
 add_lora(model, lora_config=lora_config)
 ```
 
 ```python
-# 모델을 적절한 장치로 이동
+## 모델을 적절한 장치로 이동
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 model = model.to(device)
 
-# 최적화를 위한 LoRA 파라미터 획득 예시
+## 최적화를 위한 LoRA 파라미터 획득 예시
 optimizer = torch.optim.Adam(get_lora_params(model), lr=3e-4)
 ```
 
@@ -707,7 +707,7 @@ optimizer = torch.optim.Adam(get_lora_params(model), lr=3e-4)
 
 요약하자면, 본 장은 ProtFlash 사용법을 자세히 안내하고 단백질 서열 분석에서의 효과적인 응용 사례를 보여주었다. 생물정보학 입문자든 전문가든, 이 가이드를 따르면 ProtFlash의 기능을 빠르게 익히고 충분히 활용할 수 있을 것이다.
 
-# 거대 언어 모델과 그래프 신경망을 이용한 단백질-단백질 모델 순위 결정
+## 거대 언어 모델과 그래프 신경망을 이용한 단백질-단백질 모델 순위 결정
 
 Xiaotong Xu 및 Alexandre M. J. J. Bonvin
 
@@ -817,7 +817,7 @@ DeepRank-GNN-esm은 주로 두 개의 체인(chain)이 포함된 상호작용에
 
 ### 3. DeepRank-GNN-esm 계산 실행
 
-#### 3.. 명령줄 인터페이스 도구를 사용한 계산 실행
+#### 3. 명령줄 인터페이스 도구를 사용한 계산 실행
 
 하나의 입력 예시를 통해 도구의 사용법을 보여준다.
 
@@ -844,7 +844,7 @@ DeepRank-GNN-esm은 주로 두 개의 체인(chain)이 포함된 상호작용에
 
 적은 수($<100$)의 PDB 구조 순위를 매길 때는 명령줄 인터페이스 도구 사용을 권장한다. 이 도구는 모든 기능을 하나의 사용자 친화적인 명령으로 통합했다. 그러나 한 번에 하나의 입력 PDB만 처리하기 때문에 과정이 상대적으로 느릴 수 있으며 Python에서 직접 예측을 실행하는 것이 더 효율적일 수 있다(소제목 3.. 참조).
 
-#### 3.. 딥러닝 아키텍처를 이용한 Python에서의 계산
+#### 3. 딥러닝 아키텍처를 이용한 Python에서의 계산
 
 DeepRank-GNN-esm은 Python 딥러닝 아키텍처로도 사용할 수 있다. 예시(PDBID: 1ATN)를 통해 그 과정을 설명한다. 데이터 로딩을 위해 여러 CPU를 활용하여 병렬 예측을 실행함으로써 명령줄 도구 버전보다 프로세스 속도를 높일 수 있다.
 
@@ -935,7 +935,7 @@ model.test(hdf5 = "GNN_ism_prediction.hdf5")
 
 ### 3. 결과 분석
 
-#### 3.. 명령줄 인터페이스 도구 출력 분석
+#### 3. 명령줄 인터페이스 도구 출력 분석
 
 명령줄 도구는 현재 작업 디렉토리 내에 결과 폴더를 생성한다. 폴더의 구조는 다음과 같다.
 
@@ -957,18 +957,18 @@ model.test(hdf5 = "GNN_ism_prediction.hdf5")
 ```python
 import h5py
 f = h5py.File("1B6C-gnn-esm_pred_A_B/graph.hdf5")
-# 모든 노드 특징 보기
+## 모든 노드 특징 보기
 node_features = f["1B6C"]["node_data"].keys()
 print(node_features)
-# 노드 특징 임베딩 보기
+## 노드 특징 임베딩 보기
 embeddings = f["1B6C"]["node_data"]["embedding"][:]
 print(embeddings)
-# 엣지 특징 거리 보기
+## 엣지 특징 거리 보기
 distance = f["1B6C"]["edge_data"]["dist"][:]
 print(distance)
 ```
 
-#### 3.. Python DeepRank-GNN-esm 네트워크 아키텍처 출력 분석
+#### 3. Python DeepRank-GNN-esm 네트워크 아키텍처 출력 분석
 
 위에서 제공한 코드 조각은 "GNN_esm_prediction.hdf5"라는 이름의 출력 HDF 파일을 생성한다. 명령줄 도구의 출력과 마찬가지로 Python 코드를 통해 예측된 $f_{nat}$에 액세스할 수 있다.
 
@@ -1035,7 +1035,7 @@ model.train(
 8. 각 입력 파라미터에 대한 자세한 설명은 ESMFold 저장소나 우리의 원본 DeepRank-GNN-esm 논문의 보충 자료를 참조하라.
 9. 학습 파라미터의 예로, GPU GeForce GTX 1080 Ti 카드(11G 메모리)의 경우 "batch_size" = 64 및 "lr" = 0.001을 사용한다.
 
-# 단백질 언어 모델을 활용한 프로테옴의 기능 주해: ProtTrans 모델의 대규모 처리 구현
+## 단백질 언어 모델을 활용한 프로테옴의 기능 주해: ProtTrans 모델의 대규모 처리 구현
 
 Ildefonso Cases, Gemma Martínez-Redondo, Rosa Fernández, Ana M. Rojas
 
@@ -1073,7 +1073,7 @@ ProtTrans는 goPredSim 방법의 핵심이며 이는 개별 서열의 기능 주
 
 FANTASIA는 goPredSim 방식을 대규모로 구현한 것으로, 높은 RAM 요구량 때문에 워크스테이션이나 HPC 시설이 필요하다(참고 4). FANTASIA(그림 1)는 (1) FASTA 펩타이드 파일을 입력으로 받아(그림 1a), (2) 데이터를 전처리하고(참고 5, 그림 1d), (3) GOPredSIM(ProtT 모델 활용)을 실행하여 GO 주해를 수행하며(참고 6, 그림 1b, e), (4) topGO 농축 분석 도구 의 입력값으로 바로 사용할 수 있는 출력 파일을 생성한다(그림 1c, f). 모든 이소폼(isoform)을 입력으로 사용할 경우(그림 1e), 각 유전자 이소폼의 GO 용어를 통합하여(그림 1f) 유전자당 GO 용어 목록을 만든다. 상세한 다운로드 지침은 여기(https://github.com/MetazoaPhylogenomicsLab/FANTASIA)에서 확인할 수 있다.
 
-#### 3.. Singularity 이미지를 이용한 설치 (CPU 전용)
+#### 3. Singularity 이미지를 이용한 설치 (CPU 전용)
 
 현재 Singularity 이미지로 구현된 FANTASIA를 실행하려면 기본적인 커맨드라인 기술이 필요하다.
 
@@ -1084,7 +1084,7 @@ FANTASIA는 goPredSim 방식을 대규모로 구현한 것으로, 높은 RAM 요
 2. 다운로드가 완료되면 다음과 같이 실행할 수 있다(Singularity가 설치되어 있어야 한다).
 문법: `./fantasia --infile protein.fasta [--outpath output_path] [--allisoforms gene_isoform_conversion.txt] [--keepintermediate]`. 옵션 설명은 참고 7을 확인하라.
 
-#### 3.. FANTASIA 로컬 설치 (GPU 지원)
+#### 3. FANTASIA 로컬 설치 (GPU 지원)
 
 Singularity를 사용할 수 없는 환경을 위해 소스 코드를 제공하며 숙련된 사용자가 직접 설치할 수 있다.
 
@@ -1155,7 +1155,7 @@ x는 서열의 개수이다.
 2. -a/--allisoforms: (선택) 모든 이소폼을 사용해 유전자당 주해를 얻기 위한 유전자 및 이소폼 ID 대응 정보가 담긴 탭 구분 파일이다.
 -p/--prefix: (선택) 출력 폴더와 파일명에 추가할 접두사(예: 종 코드)인다. 지정하지 않으면 입력 파일 이름이 사용된다.
 
-# 언어 모델 기반의 단백질-핵산 결합 부위 예측의 진전
+## 언어 모델 기반의 단백질-핵산 결합 부위 예측의 진전
 
 Sumit Tarafder, Xinyu Wang, Rahmatullah Roche, Debswapna Bhattacharya
 
@@ -1249,7 +1249,7 @@ EquiPNAS의 예측 성능은 단백질-핵산 결합 부위 예측을 위한 다
 4. ESM-2는 800만 개에서 150억 개의 파라미터를 가진 다양한 사전 학습 단백질 언어 모델(pLM)을 제공한다. EquiPNAS는 기본적으로 150억 개의 파라미터를 가진 가장 큰 모델인 esm2_t48_15B_UR50D를 사용한다. 흥미롭게도 800만 개의 파라미터를 가진 가장 작은 모델인 esm2_t6_8M_UR50D를 사용했을 때 성능이 가장 낮았으며 파라미터 수가 증가함에 따라 성능이 지속적으로 개선되었다. 이는 150억 개 파라미터 모델이 단백질-DNA 및 단백질-RNA 결합 부위 예측 모두에서 최상의 결과를 낸다는 점을 확인시켜 주며 단백질 정보학에서 거대 언어 모델(LLM)의 중요성을 입증한다.
 5. EquiPNAS가 달성한 ROC-AUC는 높은 정확도를 보여주지만 PR-AUC 결과는 결합 부위 예측 측면에서 전반적으로 저조한 성능을 나타낸다. ROC-AUC는 높지만 PR-AUC가 낮은 모델은 양성 클래스와 음성 클래스를 구분하는 데는 효과적이지만 정밀도(precision) 확보에 어려움을 겪어 결합 잔기 예측에서 더 많은 거짓 양성(false positive)을 발생시킬 수 있음을 시사한다. 이러한 불일치는 더욱 신뢰할 수 있는 예측을 보장하기 위해 특히 불균형 데이터셋을 처리할 때 EquiPNAS의 정밀도를 정제하는 추가적인 최적화가 필요함을 시사한다.
 
-# 단백질 분류 예측에서 언어 모델의 실용적 응용: SignalP 6., DeepLoc 2., DeepLocPro 1.
+## 단백질 분류 예측에서 언어 모델의 실용적 응용: SignalP 6., DeepLoc 2., DeepLocPro 1.
 
 Henrik Nielsen
 
@@ -1403,7 +1403,7 @@ SignalP 6.0은 ‘Fast’와 ‘Slow’ 버전 중 하나를 선택할 수 있�
 
 웹 서버에서는 시퀀스를 붙여넣거나 업로드한 후 ‘Submit’을 클릭하면 된다(그림 1 참조). 명령줄에서는 ‘signalp -ff input.fasta -od output-directory’ 명령어를 실행한다.
 
-#### 3.. 옵션
+#### 3. 옵션
 
 유기체(Organism): 소제목 1.1에서 설명했듯이, SignalP 6.0은 유기체 그룹 라벨과 무관하게 작동한다. 그룹 라벨을 무작위로 섞었을 때도 성능 저하가 관찰되지 않았기 때문이다. 그럼에도 불구하고 ‘Eukarya’(진핵생물)와 ‘Other’(기타) 중 하나를 선택하도록 한 것은, 진핵생물에서 Sec/SPI 유형이 아닌 신호 펩타이드(SP)에 대한 잘못된 예측을 억제하기 위함이다(참고 4 확인). 시퀀스의 출처를 모른다면 ‘Other’를 선택하라. 명령줄 인터페이스에서는 ‘-org eukarya’ 또는 ‘-org other’로 그룹을 지정한다.
 
@@ -1411,7 +1411,7 @@ SignalP 6.0은 ‘Fast’와 ‘Slow’ 버전 중 하나를 선택할 수 있�
 
 모델 모드(Model Mode): ‘Fast’와 ‘Slow’ 모드가 있다. SignalP 6.0은 3중 중첩 교차 검증(Three-fold nested cross-validation)으로 학습되었다. 즉, 데이터셋을 3개의 파티션으로 나누고(어떤 시퀀스도 다른 파티션의 시퀀스와 30% 이상의 정체성을 갖지 않도록 함), 각 파티션을 테스트 세트로 사용하는 동안 나머지 두 파티션을 다양한 조합의 학습 및 검증용으로 사용했다. 이를 통해 총 6개의 네트워크가 학습되었다. 미세 조정(fine-tuning)을 거쳤으므로 이 6개의 ProtBERT 모델은 서로 동일하지 않는다. ‘Slow’ 모드는 이 6개 모델을 순차적으로 실행하여 출력 확률의 평균을 낸다. ‘Fast’ 모드는 ‘모델 증류(model distillation)’ 기법을 기반으로 하며 하나의 네트워크가 ‘Slow’ 모드의 출력을 모방하도록 학습되었다(SignalP 6. 논문의 보충 참고 사항 1 참조). 따라서 ‘Fast’ 모드는 ‘Slow’ 모드에 비해 시간 소모가 6분의 1에 불과한다. 비신호 펩타이드(non-SP)와 5가지 SP 유형 사이의 식별 성능은 원래 모델과 매우 흡사하지만(SignalP 6. 논문의 보충 표 12 참조), 절단 부위(cleavage site) 예측 성능은 다소 떨어질 수 있다. 정확한 절단 부위와 영역 경계가 중요하다면 ‘Slow’ 모드를 사용하라.
 
-#### 3.. 출력
+#### 3. 출력
 
 ‘Long’ 출력 형식을 사용하면 입력된 각 시퀀스에 대해 표와 플롯이 생성된다. 표는 5가지 SP 유형과 ‘Other’(비신호 펩타이드)에 대한 시퀀스별 확률을 보여준다. SP로 예측된 경우 절단 부위도 표시된다. 플롯(그림 2, 3, 4, 5, 6 참조)은 영역 확률을 나타낸다.
 
@@ -1459,13 +1459,13 @@ SPII에 의해 절단되는 지질단백질 SP는 c-영역이 없지만 n- 및 h
 
 웹 서버에서는 시퀀스를 붙여넣거나 업로드한 후 ‘Submit’을 클릭한다. 명령줄에서는 ‘deeploc -f input.fasta -o output-directory’를 실행한다.
 
-#### 3.. 옵션
+#### 3. 옵션
 
 모델(Model): ‘High-quality (Slow)’ 또는 ‘High-throughput (Fast)’ 중 하나를 선택할 수 있다. 이 옵션은 각각 ProtT5(매개변수 30억 개) 또는 ESM1b(매개변수 6억 5천만 개) 사전 학습 모델을 선택한다. ‘Slow’ 모델은 ‘Fast’ 모델보다 약 2~4배 정도 더 오래 걸린다(DeepLoc 2. 및 2. 논문의 보충 표 1 참조 ). 명령줄 인터페이스에서 모델은 ‘-m Accurate’ 또는 ‘-m Fast’로 선택한다.
 
 출력 형식(Output Format): ‘Long’ 출력 형식은 각 시퀀스에 대해 로고 형태의 어텐션 플롯(attention plot)을 제공한다(아래 참조). 대량의 시퀀스를 제출할 때는 그림이 제외된 ‘Short’ 형식을 사용하라. 명령줄 인터페이스에서는 ‘-p’ 옵션을 통해 플롯 생성을 요청할 수 있다.
 
-#### 3.. 출력
+#### 3. 출력
 
 ‘Long’ 출력을 선택하면 각 시퀀스에 대해 헤더, 두 개의 표, 그리고 그림이 생성된다. 헤더에는 예측된 위치(localization), 막 결합(membrane association), 그리고 선별 신호(sorting signal)가 표시된다. DeepLoc 2.1은 멀티 라벨(multi-label) 방식이므로 각 카테고리에서 두 개 이상의 라벨이 예측될 수 있다. ‘위치’와 ‘막 결합’에는 항상 하나 이상의 라벨이 표시되지만 ‘신호’는 비어 있을 수 있다.
 
@@ -1507,7 +1507,7 @@ DeepLoc 2.1의 세 가지 예측(위치, 막 결합, 선별 신호)은 동일한
 
 웹 서버에서는 시퀀스를 붙여넣거나 업로드한 후 ‘Submit’을 클릭한다. 명령줄에서는 ‘deeplocpro -f input.fasta -o output-directory’를 실행한다.
 
-#### 3.. 옵션
+#### 3. 옵션
 
 유기체 그룹(Organism Group): 옵션으로 ‘Any’(기본값), ‘Archaea’(고균), ‘Gram negative’(그람 음성), ‘Gram positive’(그람 양성)가 있다(참고 9 확인). 모델 자체는 유기체 그룹에 구애받지 않는다. 이 옵션은 단순히 고균이나 그람 양성균 데이터에서 생물학적으로 불가능한 ‘외막(outer membrane)’이나 ‘주변질(periplasmic)’ 예측이 나오는 것을 억제하기 위한 장치이다. 이러한 예측은 ‘세포외(extracellular)’로 재할당된다. 명령줄 인터페이스에서 그룹은 ‘-g’ 옵션과 ‘any’, ‘archaea’, ‘positive’, ‘negative’ 인자로 지정한다.
 
@@ -1521,7 +1521,7 @@ sp_P0ADC1_LPTE_ECOLI 예측된 위치: 외막(Outer Membrane)
 
 그림 10 UniProt 시퀀스에 대한 결과를 보여주는 DeepLocPro 1.0의 로고 형태 어텐션 플롯 예시
 
-#### 3.. 출력
+#### 3. 출력
 
 DeepLocPro 1.0의 출력 결과는 DeepLoc 2.1과 매우 유사하지만 여러 면에서 더 단순하다. 선별 신호나 막 유형 예측이 없으며 임계값 표도 제공되지 않는다. DeepLocPro 1.0은 단일 라벨(single-label) 방식이므로 단순히 가장 높은 점수를 받은 카테고리를 예측값으로 선택하기 때문이다.
 
@@ -1543,7 +1543,7 @@ DeepLocPro 1.0의 출력 결과는 DeepLoc 2.1과 매우 유사하지만 여러 
 
 9. ‘그람 음성(Gram negative)’과 ‘그람 양성(Gram positive)’은 각각 이중막(diderm)과 단일막(monoderm)으로 해석해야 한다. 따라서 미코플라스마(Class Mollicutes)는 그람 음성으로 염색되더라도 ‘그람 양성’으로 간주해야 한다.
 
-# CNN-Meth: 진화 정보 기반 단백질 모델링을 이용해 리신 메틸화 부위를 정확히 예측하는 도구
+## CNN-Meth: 진화 정보 기반 단백질 모델링을 이용해 리신 메틸화 부위를 정확히 예측하는 도구
 
 Austin Spadaro, Alok Sharma, Iman Dehzangi
 
@@ -1667,7 +1667,7 @@ CNN-Meth의 구체적인 아키텍처는 각각 64개의 필터와 3의 윈도�
 7. 대상 리신은 전달된 PSSM 파일의 명명 규칙에 따라 지정되어야 한다. 업로드된 파일의 이름은 타깃 리신의 행 번호 뒤에 “.pssm”이 붙은 형태여야 한다. 예를 들어 타깃 리신이 단백질 시퀀스의 123번째 아미노산이라면 파일 이름은 123.pssm이어야 한다.
 8. CNN-Meth에는 PSSM 파일만 필요하다. 필요한 다른 특징들은 제공된 PSSM 파일을 참조하여 자동으로 생성된다.
 
-# Predicting the Pathogenicity of Human Protein Variants: Not Only a Matter of Residue Labeling
+## Predicting the Pathogenicity of Human Protein Variants: Not Only a Matter of Residue Labeling
 
 Matteo Manfredi, Gabriele Vazzana, Giulia Babbi, Elisa Bertolini, Castrense Savojardo, Pier Luigi Martelli, Rita Casadio
 
@@ -1775,7 +1775,7 @@ Reactome은 인간의 생물학적 과정을 설명하며 질환 관련 효소�
 
 우리는 단백질 임베딩과 얕은 학습 또는 딥러닝 방법을 기반으로 한 다양한 최신 예측 도구 모음을 구현했다. 이 도구 모음으로 선택된 단백질의 병원성 변이와 관련된 다양한 물리화학적 특성을 도출했으며 유전자형-표현형 관계를 더 잘 활용하기 위해 Reactome 경로의 맥락에서 단백질을 특성화하는 방법을 제시했다. 변이의 병원성 여부를 예측하는 E-SNPs&GO를 비롯한 예측 도구들은 모두 최첨단 기술을 기반으로 한다. 그러나 실험적 검증이 이루어지지 않는 한, 이러한 도구들이 모든 경우에 성공을 보장하는 것은 아니다.
 
-# 자연어 처리(NLP) 및 거대 언어 모델(LLM) 중심의 생물학적 기능 예측 방법에 관한 조사
+## 자연어 처리(NLP) 및 거대 언어 모델(LLM) 중심의 생물학적 기능 예측 방법에 관한 조사
 
 Dana Mary Varghese, T. Athulya, Vikash K. Mohani, and Shandar Ahmad
 
@@ -1896,7 +1896,7 @@ NLP 기반 모델은 문헌 마이닝을 통해 단백질이 특정 기능을 �
 
 서열, 구조 및 기타 맥락 정보로부터의 기능 예측은 생물정보학 연구에서 매우 활발한 분야로 남아 있다. 자연어 및 LLM 기반 방법은 출판 문헌의 빠른 마이닝을 가능하게 했을 뿐만 아니라, 아미노산 서열을 잠재된 저차원 공간으로 표현할 수 있는 길을 열어 기계 학습 모델에서의 활용을 가능하게 했다. 임베딩, 토큰화, 전이 학습 및 훈련 방법의 차이가 LLM 모델들을 구별하며 각 방향에서 개선이 이루어지고 있다. 미래에는 구조 예측의 성공 사례와 마찬가지로 서열 및 구조 기반 인코딩을 종합적으로 활용하여 대부분의 기능 예측이 서열로부터 직접 이루어질 것으로 기대된다.
 
-# PLMSearch 및 PLMAlign: 단백질 언어 모델(PLM) 기반의 상동 단백질 서열 검색 및 정렬
+## PLMSearch 및 PLMAlign: 단백질 언어 모델(PLM) 기반의 상동 단백질 서열 검색 및 정렬
 
 Wei Liu, Ziye Wang, Ronghui You, Chenghan Xie, Hong Wei, Yi Xiong, Jianyi Yang, Shanfeng Zhu
 
@@ -2088,7 +2088,7 @@ PLMSearch의 결과는 Code Ocean에 게시된 컨테이너(https://doi.org/10.2
 
 더 많은 검색(github.com/maovshao/PLMSearch) 및 정렬(github.com/maovshao/PLMAlign) 작업을 수행하려면 우리의 소스 코드를 직접 구현하여 사용하라.
 
-# 거대 컨텍스트, 깊은 통찰: 단백질-단백질 상호작용 분석의 발전을 위한 대규모 언어 모델 활용
+## 거대 컨텍스트, 깊은 통찰: 단백질-단백질 상호작용 분석의 발전을 위한 대규모 언어 모델 활용
 
 Kaicheng U, Sophia Meixuan Zhang, Suresh Pokharel, Pawel Pratyush, Farah Qaderi, Dongfang Liu, Junhan Zhao, Dukka B. KC, Siwei Chen
 
@@ -2282,7 +2282,7 @@ LLM 기반 방법이 PPI 부위 예측 분야를 크게 발전시켰음에도 �
 
 이러한 응용 사례들을 종합해 볼 때, LLM은 전통적인 PPI 부위 예측을 넘어 복잡한 생물학적 문제 해결에서 맡는 역할이 점차 확대되고 있음을 알 수 있다. 딥러닝의 힘과 방대한 단백질 서열 데이터를 결합함으로써 LLM은 텍스트와 서열 정보 모두에서 유의미한 생물학적 통찰을 끌어내는 새로운 길을 열어준다. 아직 충분히 연구되지 않은 이러한 영역에 대한 지속적인 탐구는 단백질 기능과 상호작용, 그리고 건강과 질병에서의 함의를 이해하는 데 커다란 진전을 가져올 것으로 기대된다.
 
-# PepBCL을 이용한 단백질-펩타이드 결합 부위 예측
+## PepBCL을 이용한 단백질-펩타이드 결합 부위 예측
 
 Ruheng Wang, Kenta Nakai, Leyi Wei
 
@@ -2418,10 +2418,10 @@ python train/protBert_main.py
 
 ```shell
 mkdir -p model_parameters
-# 데이터셋 1 파라미터 다운로드
+## 데이터셋 1 파라미터 다운로드
 wget https://drive.google.com/uc?id=FILE_ID_FOR_DATASET1 -O
 model_parameters/dataset1_parameters.pth
-# 데이터셋 2 파라미터 다운로드
+## 데이터셋 2 파라미터 다운로드
 wget https://drive.google.com/uc?id=FILE_ID_FOR_DATASET2 -O
 model_parameters/dataset2_parameters.pth
 ```
@@ -2496,9 +2496,9 @@ label = torch.tensor(label, dtype=torch.long)
 임계값을 설정하려는 사용자는 train/protBert_main.py 파일의 model_eval 함수를 수정할 수 있다. 예를 들어 임계값을 0.3으로 설정하려면 다음 코드를:
 
 ```ini
-# 양성 클래스 예측 확률 [batch_size, seq_len]
+## 양성 클래스 예측 확률 [batch_size, seq_len]
 pred_prob_sort = torch.max(pred_prob_all, 2)
-# 각 샘플에서 최대 예측 확률 [batch_size]
+## 각 샘플에서 최대 예측 확률 [batch_size]
 pred_class = pred_prob_sort[1]
 ```
 
@@ -2509,7 +2509,7 @@ threshold = 0.3
 pred_class = (pred_prob_positive > threshold).long()
 ```
 
-# 통합 모델 아키텍처 UniDL4BioPep을 이용한 펩타이드 생체 활성 예측
+## 통합 모델 아키텍처 UniDL4BioPep을 이용한 펩타이드 생체 활성 예측
 
 Zhenjiao Du, Nandan Kumar, Yonghui Li
 
@@ -2597,12 +2597,12 @@ def esm_embedding(esm2, esm2_Alphabet, peptide_sequence_list):
 그림 1
 
 ```python
-# 평균화를 통해 서열별 표현 생성
-# 참고: 토큰 0은 항상 서열 시작 토큰이므로 제외하고 토큰 1부터 시작함
+## 평균화를 통해 서열별 표현 생성
+## 참고: 토큰 0은 항상 서열 시작 토큰이므로 제외하고 토큰 1부터 시작함
 sequence_Representations = []
 for i, tokens_len in enumerate(batch_lens):
     sequence_Representations.append(token_Representations[i, 1 : tokens_len - 1].mean(0))
-# sequence_Representations는 리스트이며 각 요소는 텐서임
+## sequence_Representations는 리스트이며 각 요소는 텐서임
 embeddings_results = collections.defaultdict(list)
 for i in range(len(sequence_Representations)):
     # 텐서 형식은 sequence_Representations[0].numpy() 또는 sequence_Representations[0].tolist()를 통해 변환 가능
@@ -2616,7 +2616,7 @@ return embeddings_results
 ```
 
 ```python
-# esm2_t6_8M_UR50D 로드
+## esm2_t6_8M_UR50D 로드
 
 model, alphabet = esm.pretrained.esm2_t6_8M_UR50D()
 ```
@@ -2626,19 +2626,19 @@ model, alphabet = esm.pretrained.esm2_t6_8M_UR50D()
 단일 데이터셋
 ```python
 dataset = pd.read_excel('bitter_single_dataset_example.xlsx', header=0, index_col=None)
-# 두 개의 데이터셋
-# 학습 데이터셋 로딩
+## 두 개의 데이터셋
+## 학습 데이터셋 로딩
 dataset = pd.read_excel('bitter_train.xlsx', header=0, index_col=None)
-# 테스트 데이터셋 로딩
+## 테스트 데이터셋 로딩
 dataset = pd.read_excel('bitter_test.xlsx', header=0, index_col=None)
 ```
 
 ```python
-# 단일 데이터셋: 데이터셋을 두 번 분할하여 각각 학습, 검증, 테스트 세트를 얻음
+## 단일 데이터셋: 데이터셋을 두 번 분할하여 각각 학습, 검증, 테스트 세트를 얻음
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123, shuffle=True)
 X_train, X_valid, y_train, y_valid = train_test_split(X_train, y_train, test_size=0.2, random_state=234, shuffle=True)
-# 두 개의 데이터셋: 학습 및 검증 데이터셋만 분할하면 됨
-# random_state는 데이터셋 분할을 재현 가능하게 함
+## 두 개의 데이터셋: 학습 및 검증 데이터셋만 분할하면 됨
+## random_state는 데이터셋 분할을 재현 가능하게 함
 X_train, X_valid, y_train, y_valid = train_test_split(X_train, y_train, test_size=0.2, random_state=111, shuffle=True)
 ```
 
@@ -2647,9 +2647,9 @@ X_train, X_valid, y_train, y_valid = train_test_split(X_train, y_train, test_siz
 3단계 펩타이드 임베딩. 임베딩은 펩타이드 서열에 대해서만 계산된다. GPU 메모리 또는 RAM 소모를 줄이기 위해 데모에서는 임베딩 프로세스를 하나씩 수행한다. 펩타이드 서열을 로드하고 입력 서열의 형식이 ESM2의 입력 요구 사항을 충족하는지 확인한다. 마지막으로 향후 사용을 위해 임베딩 결과를 csv 파일로 저장한다(참고 3 참조).
 
 ```python
-# 훈련 데이터셋 로딩
+## 훈련 데이터셋 로딩
 dataset = pd.read_excel('bitter_single_dataset_example.xlsx', header=0, index_col = None)
-# 서열 임베딩 생성
+## 서열 임베딩 생성
 sequence_list = dataset['sequence']
 embeddings_results = pd.DataFrame()
 for seq in sequence_list:
@@ -2668,7 +2668,7 @@ for seq in sequence_list:
 단계 4: 정규화(선택 사항). 훈련 데이터셋을 사용하여 특징(feature)을 (0, 1) 범위로 스케일링하는 최소-최대 정규화(min-max normalization)를 수행한다. 여기서는 각 펩타이드를 320차원 벡터로 표현하며 정규화를 통해 각 차원이 $( 0 , 1 )$ 범위 내에 오도록 조정한다. 훈련 데이터셋에서 학습한 정규화 스케일러는 검증 및 테스트 데이터셋을 정규화하는 데에도 동일하게 적용된다.
 
 ```python
-# X 데이터 범위 정규화
+## X 데이터 범위 정규화
 from sklearn.preprocessing import MinMaxScaler
 scalar = MinMaxScaler()
 scalar.fit(X_train)
@@ -2699,11 +2699,11 @@ def ESM_CNN(X_train, y_train, X_test, y_test):
     x = Dense(2, activation='softmax', name='fc2')(x)
     model = Model(input = input, outputs = x, name='Predict')
     adam = Adam(learning_rate=0.001)
-# 모델 컴파일
+## 모델 컴파일
 model.compile(loss='sparse_categorical_crossentropy', optimizer=adam, metrics=['accuracy'])
-# 체크포인트 설정 및 최적 모델 저장
+## 체크포인트 설정 및 최적 모델 저장
 mc = ModelCheckpoint('best_model.keras', monitor='val_accuracy', mode='max', verbose=1, save_best_only=True, save_weights_only=False)
-# 콜백 리스트 요약
+## 콜백 리스트 요약
 callback_list = [mc]
 model_history = model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=100, callbacks=callback_list, batch_size=8, verbose=1)
 return model, model_history
@@ -2718,9 +2718,9 @@ model, model_history = ESM_CNN(X_train, y_train, X_valid, y_valid)
 단계 3: 저장된 모델을 불러와 테스트 데이터셋 성능 평가 수행
 
 ```python
-# 저장된 최적 모델을 불러와 테스트 데이터셋에서 성능 평가 수행
+## 저장된 최적 모델을 불러와 테스트 데이터셋에서 성능 평가 수행
 saved_model = load_model('best_model.keras')
-# 결과 수집 리스트
+## 결과 수집 리스트
 ACC_Collector = []
 BACC_Collector = []
 Sn_Collector = []
@@ -2730,7 +2730,7 @@ precision_Collector = []
 f1_Collector = []
 MCC_Collector = []
 AUC_Collector = []
-# 혼동 행렬
+## 혼동 행렬
 predicted_class = []
 predictedProbability = saved_model.predict(X_test, batch_size=1)
 for i in range(predictedProbability.shape[0]):
@@ -2740,7 +2740,7 @@ for i in range(predictedProbability.shape[0]):
     y_true = y_test
 from sklearn.metrics import confusion_matrix
 import math
-# np.ravel()은 평탄화된 1D 배열을 반환함
+## np.ravel()은 평탄화된 1D 배열을 반환함
 TN, FP, FN, TP = confusion_matrix(y_true, predicted_class).ravel() # 형태 [ [참-양성, 거짓-양성], [거짓-음성, 참-음성] ]
 ACC = (TP+TN)/(TP+TN+FP+FN)
 ACC_Collector.append(ACC)
@@ -2752,7 +2752,7 @@ f1_Collector.append(2*TP/(TP+FP)*TP/(TP+FN)/ (TP/(TP+FP)+TP/(TP+FN)))
 MCC = (TP*TN-FP*FN)/math.pow((TP+FP)*(TP+FN)*(TN+FP)*(TN+FN),0.5)
 MCC_Collector.append(MCC)
 BACC_Collector.append(0.5*TP/(TP+FN)+0.5*TN/(TN+FP))
-# 테스트 데이터셋의 성능 출력
+## 테스트 데이터셋의 성능 출력
 from sklearn.metrics import roc_auc_score
 AUC = roc_auc_score(y_test, predictedProbability[:,1])
 AUC_Collector.append(AUC)
@@ -2777,9 +2777,9 @@ print(AUC_Collector[0])
 
 ```python
 model, alphabet = esm.pretrained.esm2_t6_8M_UR50D()
-# 새로운 데이터셋 로딩
+## 새로운 데이터셋 로딩
 dataset = pd.read_excel('bitter_new_data.xlsx', header=0, index_col = None)
-# 서열 임베딩 생성
+## 서열 임베딩 생성
 sequence_list = dataset['sequence']
 embeddings_results = pd.DataFrame()
 for seq in sequence_list:
@@ -2798,16 +2798,16 @@ embeddings_results.to_csv('new_data_esm2_t6_8M_UR50D_unified_320_dimension.csv')
 단계 3(선택 사항): 학습 과정에서 데이터셋을 정규화했다면, 학습 데이터셋에서 얻은 스케일러를 사용하여 새로운 데이터셋에도 동일한 정규화를 적용한다.
 
 ```python
-# 펩타이드 임베딩 읽기
+## 펩타이드 임베딩 읽기
 X_data = pd.read_csv('whole_sample_dataset_esm2_t6_8M_UR50D_unified_320_dimension.csv', header=0, index_col=0, delimiter=',')
 X = np.array(X_data)
-# random_state에 대한 다음 숫자 값이 위 데이터 분할 섹션과 일치하는지 확인하세요.
+## random_state에 대한 다음 숫자 값이 위 데이터 분할 섹션과 일치하는지 확인하세요.
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123, shuffle=True, stratify=y)
 X_train, X_valid, y_train, y_valid = train_test_split(X_train, y_train, test_size=0.2, random_state=234, shuffle=True, stratify=y_train)
-# 펩타이드 임베딩 로딩
+## 펩타이드 임베딩 로딩
 X_new_embeddings = pd.read_csv('new_data_esm2_t6_8M_UR50D_unified_320_dimension.csv', header=0, index_col=0, delimiter=',')
-# X 데이터 범위 정규화
+## X 데이터 범위 정규화
 from sklearn.preprocessing import MinMaxScaler
 scalar = MinMaxScaler()
 scalar.fit(X_train)
@@ -2817,9 +2817,9 @@ X_new = scaler.transform(X_new) # X를 0-1 범위로 정규화
 
 단계 4: 저장된 모델을 불러와 예측을 수행하고 Microsoft Excel 형식의 출력 파일을 생성한다.
 ```python
-# 저장된 최적 모델을 불러와 테스트 데이터셋에서 성능 평가 수행
+## 저장된 최적 모델을 불러와 테스트 데이터셋에서 성능 평가 수행
 saved_model = load_model('best_model.keras')
-# 혼동 행렬
+## 혼동 행렬
 predicted_class = []
 predictedProbability = saved_model.predict(X_new, batch_size=1)
 for i in range(predictedProbability.shape[0]):
@@ -2837,7 +2837,7 @@ dataset.to_excel('new_data_prediction_result.xlsx')
 2. 이 프로토콜에서는 펩타이드 임베딩을 위해 ESM 언어 모델(esm2_t6_8M_UR50D)을 사용한다. 다양한 크기의 추가 ESM 모델 5종을 https://github.com/facebookresearch/esm 에서 확인할 수 있다. 이전 연구에 따르면 더 큰 ESM 모델이 일반적으로 펩타이드 표현력에서 더 나은 성능을 보였다 . 서열이 1,000개 이상인 데이터셋의 경우, esm2_t6_8M_UR50D 모델보다 약간의 성능 향상을 기대할 수 있는 더 큰 ESM 모델 사용을 권장한다. 다른 ESM 모델을 선택할 때는 모델 성능 최적화를 위해 하이퍼파라미터 조정이 필요할 수 있다. 다양한 ESM 모델의 하이퍼파라미터 튜닝에 관한 안내는 종합적인 튜닝을 수행한 pLM4Alg의 보충 자료(https://github.com/dzjxzyd/pLM4Alg)를 참조하시기 바란다 .
 3. 임베딩 결과를 먼저 저장한 뒤 이를 학습 시 불러오는 방식으로 임베딩과 학습 과정을 분리했다. 임베딩은 시간이 많이 소요되는 작업이므로 이러한 접근 방식은 학습 효율을 높여준다. 반면 학습은 각 펩타이드 서열이 반복적으로 사용되는 반복 과정이므로, 임베딩을 동시에 수행하면 동일한 서열에 대해 불필요한 임베딩 연산이 반복된다. 미리 계산된 임베딩을 학습에 직접 활용함으로써 동일한 펩타이드 서열을 여러 번 임베딩하는 데 드는 반복적인 시간 비용을 줄일 수 있다.
 
-# CLAPE: 단백질 언어 모델을 활용한 단백질-리간드 결합 부위 예측
+## CLAPE: 단백질 언어 모델을 활용한 단백질-리간드 결합 부위 예측
 
 Yufan Liu 및 Boxue Tian
 
@@ -2914,7 +2914,7 @@ $ wget https://github.com/YAndrewL/CLAPE/blob/main/example.fa
 ```
 
 ```txt
-# example.fa의 내용 (DNA 결합 단백질)
+## example.fa의 내용 (DNA 결합 단백질)
 
 >seq1
 
@@ -2966,13 +2966,13 @@ from clape import Clape, get_weights
 get_weights("your/model/path", "DNA")
 clape_model = Clape(model_path="your/model/path", ligand="DNA")
 results = clape_model.predict_from_pdb(pdb_file, chain)
-# 또는 이미 알고 있는 PDB 파일로 예측
+## 또는 이미 알고 있는 PDB 파일로 예측
 results = clape_model.predict_from_pdb(pdb_id, chain)
 ```
 
 predict_from_pdb 메서드에서는 PDB 파일로부터 직접 결합 부위를 예측하는 기능을 제공한다. 사용자는 분석할 단백질 체인(chain)의 ID를 지정해야 한다. 이 메서드는 먼저 PDB 파일에서 단백질 서열을 추출한 다음 모델을 사용하여 임베딩을 생성한다. 또한 네 글자로 된 PDB 항목(예: “1A0A”)을 제공하여 이 메서드를 호출할 수도 있는데, 이 경우 해당 PDB 파일이 PDB 웹사이트에서 자동으로 검색된다. 서열 기반 예측과 마찬가지로, keep_score 매개변수를 True로 설정하여 각 잔기가 결합 부위일 확률을 나타내는 예측 점수를 유지할 수 있다.
 
-# 단백질 번역 후 변형(PTM) 부위 예측의 거대 언어 모델(LLM) 기반 발전
+## 단백질 번역 후 변형(PTM) 부위 예측의 거대 언어 모델(LLM) 기반 발전
 
 Pawel Pratyush, Suresh Pokharel, Stefan Schulze, Lisa Bramer, Robert H. Newman, Dukka B. KC
 
@@ -3127,7 +3127,7 @@ LLM/pLM은 대규모 데이터셋에서 자기 지도 학습 방식으로 사전
 ![](images/c3c9506da34362bd56091c38bcd49445d5d2183a06933981a98465d24c39f50d.jpg)
 그림 1 본 장에서 논의된 트렌드의 개략도
 
-#### 3.. 특징 기반 접근 방식(LLM/pLM을 특징 추출기로 사용)
+#### 3. 특징 기반 접근 방식(LLM/pLM을 특징 추출기로 사용)
 
 사전 훈련된 임베딩은 파운데이션 모델(우리의 경우 pLM)의 마지막 은닉층에서 얻은 텐서이다. 이러한 임베딩은 종종 "마지막 은닉 상태(last hidden states)"라고 불린다. 임베딩의 차원은 추출된 은닉층의 크기에 의해 결정된다. 예를 들어 GPT2-small의 마지막 은닉층은 768차원이므로 각 토큰은 $768 \times 1$ 크기의 텐서로 표현된다. 이러한 임베딩은 파운데이션 모델의 파라미터를 동결한 상태에서 작업 특화 헤드를 추가함으로써 모든 다운스트림 단백질 작업에 대해 미세 조정될 수 있다. 따라서 이 접근 방식은 특징 기반 미세 조정(Feature-based finetuning)이라고도 불린다 .
 
@@ -3185,7 +3185,7 @@ PTM 부위 예측은 잔기 수준 작업이므로, 부위 특화 표현을 얻�
 | PTG-PLM | N-연결 당화 및 당화(Glycation) | WSWE | 단일 레이어 (마지막 은닉층) | WSWE |
 | UniPTM | 다중 PTM | FSPE | 단일 레이어 (마지막 은닉층) | - |
 
-#### 3.. 파운데이션 모델의 미세 조정
+#### 3. 파운데이션 모델의 미세 조정
 
 특징 기반 접근 방식의 대안은 레이블이 지정된 데이터셋을 사용하여 사전 훈련된 파운데이션 모델(즉, LLM 또는 pLM)을 다운스트림 작업에 적응시키는 것이다. 이 과정은 작업 특화 레이블을 사용하여 학습을 유도하면서 모델의 가중치를 미세 조정하는 과정을 포함한다. pLM의 미세 조정은 다음의 세 단계로 간소화될 수 있다.
 
@@ -3242,13 +3242,13 @@ PTM 부위 예측에서 PEFT 방법이 널리 탐색되지는 않았으나, Schr
 
 ### 3. 다중 pLM 통합 및 다중 모달/다면적 접근 방식
 
-#### 3.. 여러 pLM의 임베딩 통합
+#### 3. 여러 pLM의 임베딩 통합
 
 서열 인지 pLM은 다양한 다운스트림 작업에서 인상적인 성능을 입증해 왔지만 단일 pLM이나 단일 모달 임베딩에만 의존할 경우 예측 능력이 제한될 수 있다. 이러한 한계를 해결하기 위해 여러 pLM, 다른 모드에서의 임베딩 또는 기존의 표현 방식까지 통합하는 접근 방식이 개발되었다.
 
 각 pLM은 아키텍처, 사전 훈련 데이터셋 및 훈련 목적과 같은 측면에서 다른다. 이러한 차이 덕분에 pLM은 동일한 서열에 대해 고유한 특성을 포착할 수 있다. 서로 다른 pLM의 임베딩을 결합하면 각 모델의 상호 보완적인 강점을 살려 더 풍부한 서열 표현을 포착할 수 있다. 여러 pLM의 임베딩 통합은 LM-OGlcNAc-Site 에서 처음 탐색되었는데, 여기서는 O-GlcNAc 변형 부위를 예측하기 위해 Ankh , ESM-2 , ProtT 등 세 가지 pLM의 임베딩을 결정 수준에서 결합했다. 마찬가지로 Stack-OglyPred-PLM 은 O-연결 당화 예측을 위해 스택형 일반화를 사용하여 Ankh와 ProtT5의 임베딩을 결합한다. 또한 HOTGpred 는 동일한 작업을 위해 ESM-1 , ProtT , Seq2Vec 의 임베딩을 통합하는 조기 융합 전략을 채택한다. 마찬가지로 PTM-Mamba 는 인산화 및 아세틸화를 포함한 다중 PTM 부위 예측을 가능하게 하기 위해 게이트 융합 메커니즘을 통해 ESM-2의 임베딩을 맘바 아키텍처를 사용하여 생성된 자체 PTM 특화 임베딩과 통합한다.
 
-#### 3.. 코돈 인지 임베딩 통합
+#### 3. 코돈 인지 임베딩 통합
 
 유전 암호의 축퇴성(degeneracy)으로 인해 각 아미노산은 최대 6개의 서로 다른 코돈으로 인코딩될 수 있다 . 이는 코돈 서열(코딩 DNA)이 아미노산 서열만으로는 알 수 없는 추가 정보를 포함할 수 있음을 시사한다. 코돈 사용량은 단백질 합성 속도와 공동 번역 단백질 접힘(co-translational protein folding)에 영향을 미치는 것으로 알려져 있다 . 이는 코돈 사용량이 PTM 발생에 영향을 미칠 수 있음을 나타낸다. 최근 개발된 사전 훈련 pLM인 CaLM 은 코돈 알파벳(코딩 DNA)에서 훈련되었으며 여러 단백질 수준 작업에서 ProtTrans 및 ESM 제품군과 같은 아미노산 기반 pLM보다 우수한 성능을 보였다.
 
@@ -3256,11 +3256,11 @@ PTM 부위 예측에서 PEFT 방법이 널리 탐색되지는 않았으나, Schr
 
 서열을 가장 신뢰할 수 있는 코딩 서열로 번역하는 방식(흔히 "역번역"이라고 함)이 중요한 역할을 한다는 점에 유의해야 한다. 한 가지 접근 방식은 LinearDesign 과 같은 모델을 사용하여 코돈을 예측하는 것이다. 또 다른 방법은 단백질 서열을 실제 코딩 DNA에 매핑하는 것이다 . 예를 들어 CaLMPhosKAN은 UniProt 식별자를 비중복 RefSeq 뉴클레오타이드 서열에 매핑하여 단백질 서열을 실제 코딩 DNA로 번역하는 프로세스를 채택했다 . 구체적으로 CaLMPhosKAN은 NCBI 뉴클레오타이드 데이터베이스 에서 코딩 서열을 검색하고 Needleman-Wunsch(NW) 알고리즘을 통한 쌍별 정렬을 사용하여 UniProt 단백질과의 서열 일치성을 확인했다. 서열 일치도가 100%인 서열만 데이터셋에 포함되어 크기는 줄었지만 매우 신뢰할 수 있는 데이터셋이 구축되었다.
 
-#### 3.. 3D 구조 인지 임베딩 또는 3D 구조 통합
+#### 3. 3D 구조 인지 임베딩 또는 3D 구조 통합
 
 단백질의 기능과 상호 작용은 본질적으로 그들의 3차원(3D) 공간 형태와 연결되어 있다. 서열 기반의 사전 훈련된 pLM은 선형 아미노산 서열을 포착하지만 접힌 단백질 구조에서만 명확하게 나타나는 중요한 공간 관계와 구조적 모티프를 간과할 수 있다 . 이러한 한계를 해결하기 위해 3D 구조나 구조 인지 모델에서 유도된 임베딩을 통합하면 추가적인 문맥을 제공할 수 있다. 알파폴드 모델의 등장은 높은 신뢰도의 예측된 3D 구조를 제공함으로써 단백질 생물 정보학 분야에 주목할 만한 발전을 가능하게 했다 . 이는 PTM 부위 예측을 위해 구조 정보를 활용하는 도구들의 개발을 촉진했다. 본 장에서는 PTM 부위 예측을 위해 3D 구조를 활용하는 네 가지 도구를 논의한다. 26가지 유형의 PTM을 예측하는 MIND-S , N-연결 당화 예측을 위한 EMNGLy 와 CoNglyPred , 그리고 숙시닐화, S-니트로실화 및 크로토닐화 예측을 위한 PTM-CMGMS 인다. MIND-S와 PTM-CMGMS는 각각 그래프 어텐션 레이어와 대조 학습을 통해 잠재 표현을 학습하여 3D 구조를 활용하는 반면, EMNGLy는 마스크 역폴딩(MIF) 모델 에서 얻은 구조 인지 임베딩을 사용한다. 이 세 가지 방법 모두에서 3D 구조 정보는 3D 구조에만 의존하기보다는 서열 기반 특징에 대한 보완적인 표현으로 작용한다.
 
-#### 3.. 기존 표현 방식과의 통합
+#### 3. 기존 표현 방식과의 통합
 
 물리화학적 특성 및 진화 정보와 같은 기존 특징을 통합하는 것은 pLM 임베딩을 보완할 수 있다. 또한 국소 윈도우 서열에서 학습된 기존 NLP 인코더를 통합할 수도 있다. 주목할 만한 사례는 윈도우 서열에서 학습된 지도 학습형 임베딩 레이어(SEL)의 인코딩을 pLM 임베딩과 결합하여 부위에 대한 전역 및 국소 뷰를 모두 제공하는 방식이다 . pLMSNOSite , LMSuccSite , LMPhosSite 와 같은 도구들은 두 모델의 스택형 일반화를 활용한다. 하나는 FSPE 기반(전체 서열 잔기별 임베딩) pLM 임베딩으로 훈련된 모델이고 다른 하나는 윈도우 서열의 SEL 특징으로 훈련된 모델이다. 마찬가지로 LMCrot 는 FSWE 기반(전체 서열 윈도우 임베딩) pLM 임베딩의 잠재 표현을 SEL 및 물리화학적 특성에서 얻은 표현과 통합한다. 이와 같이 pLM 임베딩을 기존 표현 방식과 결합하는 다른 도구들은 표 5에 제시되어 있다.
 

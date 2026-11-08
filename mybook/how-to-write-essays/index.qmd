@@ -2,7 +2,11 @@
 title: "에세이 작성법"
 subtitle: "How to Write Essays: A step-by-step guide for all levels, with sample essays"
 author: "Don Shiach (돈 시아크)"
+lang: ko
 ---
+# 에세이 작성법
+
+ 에세이 작성법
 
 ## 머리말
 

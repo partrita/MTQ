@@ -1,8 +1,8 @@
 ---
 title: "바이오의약품 치료의 안전성"
 author: "브라이언 A. 발도"
+lang: ko
 ---
-
 # 제1장: 치료에 사용되는 승인된 바이오의약품과 그 이상반응
 
 생물의약품 치료를 다루는 이들에게 특히 "유사"라는 용어는 명확히 정의되지 않은 채 다양한 정도의 관련성을 포괄했다. 1902년부터 의회는 백신, 혈액제제 및 기타 일부 단백질을 포함한 제품으로 바이오의약품 목록을 확대해 왔으나, 화학적으로 합성된 폴리펩타이드는 계속 제외했다. 1938년 연방 식품, 의약품 및 화장품법에서 "의약품"은 질병의 조사, 예방 또는 치료를 위한 물질로 정의되었으나, 생물의약품과 비생물의약품 의약품을 구별하는 지침은 마련되지 않았다. 그러나 1944년 의회는 신약신청(NDA) 요건이 생물의약품에는 적용되지 않는다고 선언했다. 생물의약품은 현재 공중보건서비스법의 규정 하에 제제가 "안전하고, 순도 높으며 효능이 있는" 것을 보여주는 생물의약품면허신청(BLA)을 요구받아 시판되고 있다. 1947년까지 호르몬은 생물의약품 목록에서 제외되었으며 1980년대 중후반 바이오기술의 새 시대가 도래하면서 미국 식품의약국(FDA)은 "각 제품의 의도된 사용에 따라 사례별로 생물의약품으로 간주한다"는 정책 성명을 발표했다. 2003년 6월, Intercenter Agreement에 따라 FDA는 생물의약품평가연구센터(CBER)에서 이전에 심사·관리하던 일부 치료용 생물의약품을 의약품평가연구센터(CDER)로 이관했다. CDER로 이관된 치료용 생물의약품에는 단클론항체 사이토카인, 융합단백질, 일부 효소, 성장인자, 비백신 면역조절제, 그리고 동물·식물·미생물에서 유래한 치료용 단백질 및 이들의 재조합 버전이 포함된다. 인류·동물 또는 세균 유래의 세포 제품, 핵산·바이러스 및 유전자 전달 시스템을 포함한 유전자치료 제품, 인체 및 인체유래 세포·조직·세포기반 제품, 백신 및 예방접종 관련 제품, 알레르겐 추출물, 혈액제제(전혈, 혈소판제제, 혈장제제 등), 단백질 분해효소 및 복합제제 등은 CBER에 남아있다.
@@ -139,7 +139,7 @@ CRS의 일부 사례와 달리, 종양 용해 증후군(TLS)은 항암치료 시
 * 약물 이상반응 분류에서 A형 및 B형 반응 외에, 다섯 가지 다른 반응 유형을 구별한다. C형 반응은 코르티코스테로이드에 의한 억제로 입증되며 만성 또는 지속적 효과라 하며 드물게 나타난다; D형 반응은 지연 효과라 하며 디에틸스틸베스트롤에 의한 질암으로 설명되며 시간 및 용량 관련이다; E 범주, 치료 종료(또는 중단) 효과는 예를 들어 오피오이트 금단 증후군에서 보듯이, 지연 없거나 거의 없이 나타날 수 있다; F 범주, 치료 실패는 약물 상호작용으로 유발될 수 있으며 일반적으로 용량 관련이다; G 범주, 유전적 반응은 예: Succinylcholine(숙사메토니움) 과민성 및 일부 HLA-약물 과민반응 연관으로 볼 수 있다.
 * 많은 전신성 잠재적으로 생명을 위협하는 증후군이 다양한 바이오의약품 투여 중 또는 투여 후 저빈도로 발생할 수 있다. 여기에는 모세혈관 누출 증후군 사이토카인 방출 증후군, 혈구 식작 림프조직구증, 대식세포 활성화 증후군, 전신 염증 반응 증후군, 종양 용해 증후군 후방가역성 뇌병증 증후군, 면역 재건 염증 증후군 및 진행성 다중 초점 백질 뇌병증이 포함된다.
 
-# 제2장: 단클론항체 개론
+## 제2장: 단클론항체 개론
 
 ## 치료용 단클론항체의 진화: 쥐에서 사람으로
 
@@ -462,7 +462,7 @@ AHUS 비전형 용혈성 요독 증후군, CAPS 크료린관련 주기성 증후
 - 50개 승인된 항체 중 1개 이상이 TNF, CD20, α4β7 인테그린, EGFR, HER2, VEGF, B. anthracis PA, PD-1, IL-17A, IL-5 또는 PCSK9를 표적한다. 그러나 서로 다른 표적을 대상으로 하는 단클론항체가 도입되고 있다. 항원 IL-6, GD2, CD38, SLAMF7 및 항응고제 dabigatran이 이미 표적이 되고 있으며 Castleman병, 신경아세포종, 고콜레스테롤혈증, 고지혈증, 다발성 골수종, 요로상피세포암 및 호산구성 천식이 단클론항체 치료가 가능한 새로운 질환으로 추가되었다.
 - 현재 두 개의 단클론항체-약물 결합체(ADC), brentuximab vedotin과 trastuzumab emtansine이 FDA와 EMA에 승인되어 각각 항암 치료제로 사용되고 있다. Ibritumomab은 세포 사멸을 위한 방사성 표지가 부착되어 있다. ADC의 개념, 전략 및 기본 원리는 단순해 보이지만 실제에서는 네 가지 요소를 고려해야 한다: 표적, 단클론항체, 연결 구조 및 약물/독소 탑재체. 이것은 효과적이고 안전한 표적 치료 제품을 생산하는 데 있어많은 복잡한 개발 및 생산 과제를 제시한다.
 
-# 제3장: 암 치료용 승인 단클론항체
+## 제3장: 암 치료용 승인 단클론항체
 
 단클론항체는 이점이 크고 성공적인 치료법 개발은 상업적으로 큰 보상으로 이어진다. 암 치료에 쓰는 승인 단클론항체에는 확인되거나 제안된 작용 기전이 여럿 있다. 관련 분자기전은 주로 암세포를 직접 죽이는 작용, 성장 촉진 신호전달 경로 억제 암세포를 간접적으로 파괴하는 면역조절 효과이다. 소수 승인 단클론항체와 개발 파이프라인에 있는 더 많은 항체에서, 소위 항체-약물 접합체(ADC)(2장, "항체-약물 접합체" 절)로 직접 세포독성 작용을 나타낸다. 이는 잠재적으로 치명적인 독소, 약물 사이토카인 또는 방사성 핵종의 생체활성 페이로드를 부착하여 세포 사멸을 유도하는 방식이다. 예로는 ibritumomab tiuxetan("Ibritumomab Tiuxetan" 절), brentuximab vedotin("Brentuximab Vedotin" 절), trastuzumab emtansine("Ado-trastuzumab Emtansine" 절)이 있다. 세포 파괴적 면역조절 효과의 예로는 항체의존세포매개세포독성(ADCC)과 T세포와 항원제시세포 간 신호전달을 조절하는 억제 경로를 표적으로 하는 면역관문 조절이 있다. ADCC를 유도하는 항체와 면역관문을 조절하는 항체, 즉 세포독성 T 림프구 항원 4(CTLA-4)와 프로그래밍된 세포사멸 단백질 1(PD-1)을 표적으로 하는 단클론항체는 본 장 후반부에서 다룬다. 단클론항체의 작용 기전을 이해하는 일은 종양 인식과 세포 파괴 과정을 이해하는 데 중요하다. 마찬가지로 환자의 반응을 예측하는 바이오마커를 규명하면 특정 단클론항체로 가장 이익을 얻을 환자를 고르는 데 도움이 된다. 따라서 암 환자는 표적 약물에 좋은 반응이나 나쁜 반응을 예측한다고 알려진 특정 바이오마커 검사를 자주 받는다.
 
@@ -1091,7 +1091,7 @@ Tarhini A. Immune-mediated adverse events associated with ipilimumab CTLA-4 bloc
 Teeling JL, Mackus WJM, Wiegman LJJM, 연구팀의 The biological activity of human CD20 monoclonal antibodies is linked to unique epitopes on CD20. J Immunol. 2006;177:362-71.
 
 Thatcher N, Hirsch FR, Abober-Abyad N, 연구팀의 34th ESMO Congress - Highlights of the unsolved issues and emerging therapies in lung cancer. Ann Oncol. 2009;20:1495-503.
-# 제4장: 자가면역 및 염증성 질환 치료용 승인 단클론항체
+## 제4장: 자가면역 및 염증성 질환 치료용 승인 단클론항체
 
 아달리무맙, 세르톨리주맙 페골, 인플릭시맙, 골리무맙에 대한 블랙박스 경고 및 주의사항
 
@@ -1688,7 +1688,7 @@ van Schouwenburg PA, Rispens T, Wolbink GJ. Immunogenicity of anti-TNF biologic 
 Vichyanond P. Omalizumab in allergic diseases, a recent review. Asian Pac J Allergy Immunol. 2022;29:209-19.
 Walsh GM. Mepolizumab-based therapy in asthma: an update. Curr Opin Allergy Clin Immunol. 2015;15:392-6.
 
-# 제5장: 사이토카인
+## 제5장: 사이토카인
 
 ## 사이토카인
 
@@ -2189,7 +2189,7 @@ Tannoury CA, An HS. 척추수술에서의 골형성단백질 2(BMP-2) 사용 합
 Turner MD, Nedjai B, Hurst T 등. 사이토카인과 케모카인: 세포 신호전달과 염증성 질환의 교차점. Biochim Biophys Acta. 1843;2014:2563-82.
 
 Vacchelli E, Galluzzi L, Eggermont A 등. 면역자극성 사이토카인. Oncoimmunology. 2012;1:493-506. http://dx.doi.org/10.4161/onci.20459
-# 제6장: 융합단백질
+## 제6장: 융합단백질
 
 ## 융합단백질
 
@@ -2498,7 +2498,7 @@ Lecluse LLA, Dowlatshahi EA, Limpens CEJM, 외. Etanercept. 피부과적 이상�
 Ledingham J, Deighton C, 영국 류마티스학회 기준, 지침 및 감사 작업 그룹(SGAWG) 대표. 류마티스 관절염 성인에서의 TNFα 차단제 처방에 대한 영국 류마티스학회 지침 업데이트(2001년 4월 이전 지침의 업데이트). Rheumatol. 2004;44:157-63.
 Rath T, Baker K, Dumont JA, 외. Fc-융합단백질 및 FcRn: 장기 재순환을 위한 구조적 통찰...
 
-# 제7장: 재조합 펩타이드 및 단백질 호르몬: 인슐린, 글루카곤 및 유사체
+## 제7장: 재조합 펩타이드 및 단백질 호르몬: 인슐린, 글루카곤 및 유사체
 
 고정 약물 발진, 모낭염, 구진수포성 발진, 그리고 외음부질 가려움증이 보고했다. 프로게스테론에 대한 아나필락시스가 보고되었으며 월경 중에 발생하는 월경기 아나필락시스에서 관찰되는 주기적 아나필락시스는 이 스테로이드 호르몬 및/또는 방출된 프로스타글란딘에 기인한다.
 
@@ -3112,7 +3112,7 @@ Kumar S, O’Rahilly S, editors. Insulin resistance. Insulin action and its dist
 
 생식샘자극호르몬분비호르몬 Armstrong SP, Caunt CJ, Fowkes RC, 연구팀의 Pulsatile and sustained gonadotropin-releasing hormone (GnRH) receptor signaling. J Biol Chem. 2009;284:35746-57. Flanagan CA, Millar RP, Illing N. Advances in understanding gonadotropin-releasing hormone receptor structure and ligand interactions. Rev Reprod. 1997;2:113-20. Moreau J-P, Delavault P, Blumberg J. Luteinizing hormone-releasing hormone agonists in the treatment of prostate cancer: a review of their discovery, development, and place in therapy. Clin Ther. 2006;28:1485-508. Schally AV. Luteinizing hormone-releasing hormone analogs: their impact on the control of tumorigenesis. Peptides. 1999;20:1247-62. 부갑상호르몬 Crane JL, Cao X. Bone marrow mesenchymal stem cells and TGF-β signaling in bone remodeling. J Clin Invest. 2014;124:466-72. Hagström E, Michaëlsson K, Melhus H, 연구팀의 Plasma-parathyroid hormone is associated with subclinical and clinical atherosclerotic disease in 2 community-based cohorts. Arterioscler Thromb Vasc Biol. 2014;34:1567-73. Jilka RL. Molecular and cellular mechanisms of the anabolic effect of intermittent PTH. Bone. 2007;40:1434-46.
 
-# 제8장: 당단백질 호르몬
+## 제8장: 당단백질 호르몬
 
 ## 당단백질 호르몬
 
@@ -3233,7 +3233,7 @@ Cole LA. Biological functions of hCG and hCG-related molecules. Reprod Biol Endo
 Dietrich JW, Landgrafe G, Fotiadou EH. TSH and thyrotropic agonists: key actors in thyroid homeostasis. J Thyroid Res 2012:351864, 29 p. http://dx.doi.org/10.1155/2012/351864.
 Gramza A, Schuff KG. Recombinant human thyroid stimulating hormone in 2008: focus on thyroid cancer management. Onco Targets Ther 2008;1:87-101.
 Szkudlinski MW, Fremont V, Ronin C, 연구팀의 Thyroid-stimulating hormone and thyroid-stimulating hormone receptor structure-function relationships. Physiol Rev 2001;82:473-502.
-# 제9장: 치료용 승인 효소 - 성공적인 효소 대체 요법
+## 제9장: 치료용 승인 효소 - 성공적인 효소 대체 요법
 
 ## 가우처 질환
 
@@ -3712,7 +3712,7 @@ MPS II 환자 중 7세 이하의 유전자 결실, 재배치 또는 다른 돌�
 
 * ERT 및 외과적 시술 외에, 다른 치료법이 모색되고 있으며 조세포 이식, 기질 감소 요법, 챠퍼론 사용, 및 유전자 치료가 가장 유망하다.
 
-# 제10장: 혈액 응고 인자
+## 제10장: 혈액 응고 인자
 
 - 피브린(섬유소)은 혈소판 표면의 당단백질 복합체 GPIb 알파-V-IX(CD42a-d 복합체)(그림 10.1)에 결합하며 각각 서로 다른 유전자가 암호화한다. 한편 GPIb 알파와 트롬빈 사이의 상호작용(그림 10.2)은 혈관 손상 부위에서 혈소판 응집에 필요하다. GPIb 알파-V-IX 복합체 단백질의 결함은 다양한 분자적 결함을 수반하는 상태, 즉 상염색체 열성 질환인 베르나르-술리에 증후군(출혈성 혈소판 이영양증 또는 거대 혈소판 증후군이라고도 함)을 일으키며 점막피부 출혈 낮은 혈소판 수, 자반증, 잇몸 출혈, 여성의 월경과다, 위장관 출혈 등의 증상이 나타난다. 폰 빌레브란트 인자의 결핍은 유전성 응고 이상인 폰 빌레브란트병의 원인이 되며, 대개 유전성이지만 반드시 그렇지는 않으며, 종종 코피 같은 증상이 없거나 경미하다. 질환형에 따라 폰 빌레브란트 인자 분비를 촉진하는 데스모프레신(7장, "데스모프레신" 절)을 비강 내 또는 정맥 내로 투여한다. 더 중증인 경우에는 Wilate®처럼 고도로 정제되지 않은 인간 제VIII 인자 제제를 폰 빌레브란트 인자 공급원으로 사용한다(표 10.1). 재조합 제제를 포함한 정제된 제VIII 인자는 폰 빌레브란트 인자를 무시할 만한 양만 함유하거나 전혀 함유하지 않으므로 임상적으로 유용하지 않다. CHO 세포에서 발현된 폰 빌레브란트 인자 재조합 제제(vonicog alfa; Vonvendi®)는 폰 빌레브란트병 성인 환자의 출혈에 대한 적시 치료 및 조절에 적응증이 있어 최근 FDA가 승인하였다(표 10.1).
 
@@ -4016,7 +4016,7 @@ Shapiro AD, Hedner U. Advances in bypassing agent therapy for hemophilia patient
 
 Shusterman S, Manno CS. Transfusion of the patient with congenital coagulation defects. In Hillyer CD, Silberstein LE, Ness PM, et al, editors. Blood banking and transfusion medicine; basic principles and practice. 2nd ed. Philadelphia: Churchill Livingstone Elsevier; 2007. p. 467-81.
 
-# 제11장: 백신 - 정의, 약독화 및 다양한 백신 플랫폼
+## 제11장: 백신 - 정의, 약독화 및 다양한 백신 플랫폼
 
 기존 질환을 직접 치료하기 위해 투여하는 항체를 면역글로불린이라고 한다. 주로 I형 및 III형 과민반응 위험, 그리고 항원 결합 및 단백질 대사에 따른 보호력 손실로 인해, 현재 수동 면역은 주로 항독소와 광견병 및 거대세포바이러스 같은 일부 바이러스 감염에 대한 투여로 제한한다. 그러나 일부 상황에서는 수동 면역이 가용한 최선의 치료법이거나 선호되는 치료법이다. 예를 들어 호흡기세포융합바이러스(RSV)에 의한 영아의 하부 호흡기 질환 예방을 위해 투여하는 인간화 단클론항체인 팔리비주맵(Synagis®)(4장 "Palivizumab" 절), 그리고 생물학적 테러 위협에 대응하여 흡입성 탄저 치료를 위해 개발한 완전 인간 랙시바큐맵(Abthrax®)과 치오메릭 오빌톡.sax시맵(Anthim®) 단클론항체(4장 "Raxibacumab" 및 "Recent Approvals: Obiltoxaximab, Ikexizumab, Reslizumab" 절)가 이에 해당한다. 이러한 상황 외에도 항생제 내성 세균 문제의 증가, 그리고 신중하게 표적화된 단클론항체의 효과와 유용성을 고려하면, 이러한 고도로 특화된 약물이 수동 면역 치료를 위해 점점 더 많이 개발하고 사용할 것으로 보인다.
 
@@ -4371,7 +4371,7 @@ DNA 백신, 때때로 제3세대 백신이라고 불리며 병원체 항원을 �
 - Plotkin S, Orenstein W, Offit P. 백신. 6판. Philadelphia: Saunders; 2012.
 - Salmon DA, Proschan M, Forshee R 외. 급성 이행 마비(Guillain-Barré 증후군)와 백신 사이의 연관성.
 
-# 제12장: 보툴리눔 신경독소
+## 제12장: 보툴리눔 신경독소
 
 보툴리눔 신경독소의 7개 혈청형(A~G)을 구별하기 위해 7종의 단가 혈청을 사용하는 기존의 마우스 생체검사 기준으로 구별한다. 이후 유전자 시퀀싱, 비교 유전체학, 계통 분석을 활용한 연구로 BoNT/H 유전자를 동정 및 특성화하고 이것이 다른 bont 유전자들과 차이를 입증하였다. 이들 유전자(약 3,880개 염기쌍)는 7개 BoNT 혈청형 간에 34~97%의 서열 유사성을 보인다. 알려진 유전자 bont/A-G와 명백한 유전자 서열 차이 외에도, BoNT/H는 BoNT/A 유사, /B 유사, 및 F 유사 에피토프를 보유함을 밝혔다. 여덟 번째 BoNT 혈청형을 동정 및 특성화한 이 연구에서 흥미로운 반전이 있었는데, 연구 결과를 게재하기로 결정하는 과정에서 "우려 대상 이중사용 연구(DURC)"의 관점에서 검토되었다. 이로 인해 항독소가 개발될 때까지 해당 독소의 유전자 서열 게재가 보류되었다. 게재 전에 저자들은 미국 정부 기관 여러 곳과 선정된 저널인 Journal of Infectious Diseases의 편집자들과 상세한 협의를 진행하였다. 정보의 자유로운 흐름과 발견으로부터 가능한 모든 이익을 실현하는 것과, 오용 가능성과 관련된 공중보건 취약성 사이의 균형을 맞추려는 시도는 어려운 딜레마를 제시하였다. 게재와 관련된 심의에 참여한 기관에는 국립 알레르기 및 감염병 연구소(NIAID) 및 국립 보건원(NIH)의 해당 부서, 국토안보부 국가정보국장실, 미국 육군 감염병 의학연구소, 질병통제예방센터(CDC), 그리고 생물학적 대응 부서, FBI 대량파괴무기국 등이 포함되었다. David A. Relman(의학부, 미생물학 및 면역학부, 중앙 내과...)의 요약에 따르면...
 
@@ -4675,7 +4675,7 @@ Jancovik J, Brin MF. Botulinum toxin: historical perspective and potential new i
 Lacy DB, Stevens RC. Sequence homology and structural analysis of the Clostridial neurotoxins. J Mol Biol. 1999;291:1091-104.
 Lee K, Gu S, Jin L, 연구팀의 Structure of a bimodular botulinum neurotoxin complex provides insights into its oral toxicity. PloS Pathog. 2014;9:e1003690.
 
-# 제13장: 바이오시밀러
+## 제13장: 바이오시밀러
 
 EMA는 재조합 소마트로핀(소마트로핀; 인간 성장호르몬 [7장 "인간 성장호르몬" 절]) 제제 Omnitrope®를 승인하여 최초로 허가된 바이오시밀러가 되었다. 미국에서는 2009년의 바이오의약품 가격 경쟁 및 혁신법(BPCIA)이 FDA로 하여금 바이오시밀러의 규제 승인을 가능케 하는 절차를 개발할 수 있게 하였으며 2012년 초 FDA는 후원자가 바이오시밀러 승인을 받기 위해 따라야 할 경로를 개요로 한 초안을 발표하였다. 유럽연합과 마찬가지로 미국 시장용 바이오시밀러는 엄격한 비교성 요건을 적용받으며 이는 바이오의약품의 제조 공정이 변경될 때 "비교성"이 적용된다. 이러한 상황에서 후원자는 원래 대조 제품과 바이오시밀러가 "비교 가능"함을 입증해야 한다. 다만, 대조 제품 및 바이오시밀러 제품 자체와는 별개로 제조 공정의 비교성을 요구하는 것은 FDA나 EMA 어느 쪽도 의무화하지 않는다. 대조 제품과의 구조적·기능적 비교는 바이오시밀러 개발의 기반이 되며 이는 두 제제가 높은 수준으로 유사하고 동일한 1차 아미노산 서열을 가져야 함을 의미한다. 그러나 당화된 제제의 번역 후 변형으로 인해 동일한 아미노산 서열을 가지더라도 서로 다른 이소폼이 발생할 수 있으며 동일 제제의 서로 다른 배치에서 이질성이 나타날 수 있다. 완전한 동일성을 달성하는 데 예상되는 어려움은 여전히 문제로 남아 있으며 논란이 되는 규제적 질문이다. 아미노산 서열의 변이가 대조 제품과 다를 경우 유럽과 미국에서는 해당 제제를 바이오시밀러로 인정하지 않으며 WHO 정의에도 부합하지 않지만 전 세계 규제 기관 간에 "바이오시밀러"의 공통 정의는 없다(예: 유럽 대 중국 및 인도). 상용화된 두 개의 바이오시밀러를 특성 분석하고 대조 제품인 etanercept(Enbrel®)와 비교한 연구는 이질성 문제와 바이오시밀러가 대조 제품과 어느 정도까지 유사성을 입증해야 하는지를 잘 보여준다. 두 개의 상용화된 의도된 바이오시밀러 TNF 수용체 단백질 제품을 특성 분석하고 효력 및 펩티드 매핑, 전하 변이,탠덤 질량분석법, 친화력, N-당화 분석을 통해 etanercept 대조 제품과 비교하였다. 하나의 제품은 대조 제품인 Enbrel®과 높은 유사성을 보인 반면, 다른 제제는 Fc 영역에서 2개 아미노산 변이, 시알화된 N-올리고당의 현저한 함량 감소, 그리고 전하의 현저한 차이를 나타내었으나 친화력과 생물학적 활성은 대조 제제와 유사하였다. 따라서 유럽에서 바이오시밀러로 인정받기에 부적격한 1차 구조 및 당화의 차이가 있음에도 불구하고, 대조 제품과의 비교 가능한 생물학적 활성은 저자들에게 규제 기관의 서로 다른 바이오시밀러 정의에 주의를 환기하고, 이러한 제품의 안전성 및 유효성을 검증하기 위해 더 많은 비교성 연구를 수행해야 하는지에 대한 질문을 제기하게 하였다.
 

@@ -3,8 +3,8 @@ title: "단백질 공학 실전 가이드"
 author:
  - Tuck Seng Wong
  - Kang Lan Tee
+lang: ko
 ---
-
 # 1장 · 문헌 검색
 
 지도교수가 토양의 섬유소 분해 세균인 *Thermobifida fusca*를 발견했고 이 세균에서 유래한 효소들을 조합하여 셀룰로오스 분해용 효소 칵테일을 준비하되, 필요하다면 단백질 공학 접근법으로 효소 성능까지 끌어올려 달라고 요청했다고 가정해 보자.
@@ -109,7 +109,7 @@ Gomez del Pulgar EM 등 (2014) The cellulolytic system of *Thermobifida fusca*. 
 - Falagas ME, Pitsouni EI, Issioui T, Chochlakis D, Poulakkakis M, Stavrovski L (2005) Reference managers: a comparative analysis of products and features. Health Info Libr J 22(3):227-38
 - Higgins JPT, Green S 편 (2011) Cochrane Handbook for Systematic Reviews of Interventions. Chichester: Wiley-Blackwell. https://training.cochrane.org/handbook 에서 이용 가능
 
-# 2장 · 서열 분석
+## 2장 · 서열 분석
 
 ## 이 장에서 배울 내용
 
@@ -416,7 +416,7 @@ NCBI에서 유전자 서열을 가져올 때 코딩 가닥(coding strand), 즉 �
 
 - Artimo P, Jonnalagedda M, Arnold K, Baratin D, Csardi G, de Castro E, Duvaud S, Flegel V, Fortier A, Gasteiger E, Grosdidier A, Hernandez C, Ioannidis V, Kuznetsov D, Liechti R, Moretti S, Mostaguir K, Redaschi N, Rossier G, Xenarios I, Stockinger H (2012) ExPASy: SIB bioinformatics resource portal. Nucleic Acids Res 40(W1):W597-W603
 
-# 3장 · 구조 분석
+## 3장 · 구조 분석
 
 ## 이 장에서 배울 내용
 
@@ -557,7 +557,7 @@ DMPFold가 만든 삼차 구조 모델(청록색)을 SWISS-MODEL 모델과 비�
 
 - Berman HM, Westbrook J, Feng Z, Gilliland G, Bhat TN, Weissig H, Shindyalov IN, Bourne PE (2000) The Protein Data Bank. Nucleic Acids Res 28(1):235-244
 
-# 4장 · 단백질 발현 숙주와 발현 플라스미드
+## 4장 · 단백질 발현 숙주와 발현 플라스미드
 
 ## 이 장에서 배울 내용
 
@@ -939,7 +939,7 @@ Kimple ME, Brill AL, Pasker RL (2013) Overview of affinity tags for protein puri
 Protein Sci 73:9 9 1-9 9 23
 Young CL, Britton ZT, Robinson AS (2012) Recombinant protein expression and purification: a comprehensive review of affinity tags and microbial applications. Biotechnol J 7(5):620-634
 
-# 5장 · 유전자 클로닝
+## 5장 · 유전자 클로닝
 
 ## 이 장에서 배울 내용
 
@@ -1446,7 +1446,7 @@ PTO-올리고를 받으면 표 5.18과 5.19의 반응액·열순환 조건으로
 - Jajesniak P, Tee KL, Wong TS (2019) PTO-QuickStep: a fast and efficient method for cloning random mutagenesis libraries. Int J Mol Sci 20(16)
 - Tee KL, Wong TS (2013) Polishing the craft of genetic diversity creation in directed evolution. Biotechnol Adv 31(8):1707-1721
 
-# 6장 · 단백질 발현
+## 6장 · 단백질 발현
 
 ## 이 장에서 배울 내용
 
@@ -1559,7 +1559,7 @@ PTO-올리고를 받으면 표 5.18과 5.19의 반응액·열순환 조건으로
 - Kaur J, Kumar A, Kaur J (2018) Strategies for optimization of heterologous protein expression in *E. coli*: roadblocks and reinforcements. Int J Biol Macromol 106:803-822
 - Studier FW (2005) Protein production by auto-induction in high density shaking cultures. Protein Expr Purif 41(1):207-234
 
-# 7장 · 분석법
+## 7장 · 분석법
 
 ## 이 장에서 배울 내용
 
@@ -1972,7 +1972,7 @@ $$v = \frac{V_{max}\,C}{K_m + C}$$
 - Sittampalam GS, Kahl SD, Janzen WP (1997) High-throughput screening: advances in assay technologies. Curr Opin Chem Biol 1(3):384-391
 - Xiao H, Bao Z, Zhao H (2015) High throughput screening and selection methods for directed enzyme evolution. Ind Eng Chem Res 54(16):4011-4020
 
-# 8장 · 유전자 돌연변이유발
+## 8장 · 유전자 돌연변이유발
 
 ## 이 장에서 배울 내용
 
@@ -2497,7 +2497,7 @@ Wang W, Malcolm BA (1999) Two-stage PCR protocol allowing introduction of multip
 Wong TS, Tee KL, Hauer B, Schwaneberg U (2004) Sequence saturation mutagenesis (SeSaM): a novel method for directed evolution. Nucleic Acids Res 32(3):e26
 Wong TS, Zhurina D, Schwaneberg U (2006) The diversity challenge in directed protein evolution. Comb Chem High Throughput Screen 9(4):271-288
 
-# 9장 · 고처리량 스크리닝(HTS)
+## 9장 · 고처리량 스크리닝(HTS)
 
 ## 이 장에서 배울 내용
 
@@ -2809,7 +2809,7 @@ Hermann R, Lehmann M, Buchs J (2003) Characterization of gas-liquid mass transfe
 Kong F, Yuan L, Zheng YF, Chen W (2012) Automatic liquid handling for life science: a critical review of the current state of the art. J Lab Autom 17(3):169-185
 Trask OJ (2018) Guidelines for microplate selection in high content imaging. Methods Mol Biol 1683:75-88
 
-# 10장 · 단백질 변이체 분석 및 특성분석
+## 10장 · 단백질 변이체 분석 및 특성분석
 
 ## 이 장에서 배울 내용
 
@@ -3151,7 +3151,7 @@ Goldring JP (2012) Protein quantification methods to determine protein concentra
 Scopes RK (2001) Overview of protein purification and characterization. Curr Protoc Protein Sci Chapter 1:Unit 1.1
 Storz JF (2018) Compensatory mutations and epistasis for protein function. Curr Opin Struct Biol 50:18-25
 
-# 11장 · 단백질 변이체에서 이어가기
+## 11장 · 단백질 변이체에서 이어가기
 
 ## 이 장에서 배울 내용
 
@@ -3284,7 +3284,7 @@ Acevedo-Rocha CG, Reetz MT, Nov Y (2015) Economical analysis of saturation mutag
 Stemmer WP (1994) Rapid evolution of a protein in vitro by DNA shuffling. Nature 370(6488):389-391
 Zhao H, Giver L, Shao Z, Affholter JA, Arnold FH (1998) Molecular evolution by staggered extension process (StEP) in vitro recombination. Nat Biotechnol 16(3):258-261
 
-# 12장 · 취업 역량
+## 12장 · 취업 역량
 
 ## 이 장에서 배울 내용
 

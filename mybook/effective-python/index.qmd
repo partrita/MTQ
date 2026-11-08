@@ -2,8 +2,8 @@
 title: "효율적인 파이썬"
 subtitle: "더 나은 파이썬을 위한 125가지 구체적인 방법"
 author: "Brett Slatkin"
+lang: ko
 ---
-
 ## Chapter 1: 파이썬답게 생각하기
 
 프로그래밍 언어의 관용구는 그 언어를 사용하는 사람들이 만들어가요. 오랜 시간 동안 파이썬 커뮤니티는 특정 스타일을 따르는 코드를 설명할 때 *Pythonic*이라는 형용사를 사용해 왔어요. 파이썬다운 스타일은 컴파일러가 강제하는 엄격한 규칙이 아니에요. 언어를 사용하고 다른 사람들과 협업한 경험이 쌓이면서 자연스럽게 생겨난 거예요. 파이썬 프로그래머는 명시적인 것을 선호하고, 복잡한 것보다 단순한 것을 선택하며, 가독성을 최대한 높이려고 해요. (인터프리터에 `import this`를 입력해서 *The Zen of Python*을 읽어보세요.)
@@ -1111,7 +1111,7 @@ def take_match_action(light):
 `light` 변수 반복 참조를 없애고 각 조건 분기마다 `==` 연산자를 빼서 `match` 문이 `if` 문보다 나아 보여요. 하지만 모든 것에 문자열 리터럴을 써서 아직 이상적이지 않아요. 고치려고 보통은 각 신호등 색마다 모듈 수준 상수를 만들고 이렇게 코드를 바꿀 거예요.
 
 ```python
-# Added these constants
+## Added these constants
 RED = "red"
 YELLOW = "yellow"
 GREEN = "green"
@@ -4115,7 +4115,7 @@ print(list(it))
 파이썬 3.5 이하 버전에서는 딕셔너리 인스턴스를 순회하면 키가 임의의 순서로 반환됐어요. 순회 순서가 항목을 원래 삽입한 순서와 일치하지 않았다는 뜻이죠. 예를 들어 여기서는 파이썬 3.5 버전으로 동물 이름에서 새끼 이름으로 매핑하는 딕셔너리를 만들어 볼게요.
 
 ```python
-# Python 3.5
+## Python 3.5
 baby_names = {
     "cat": "kitten",
     "dog": "puppy",
@@ -4146,7 +4146,7 @@ print(baby_names)
 파이썬 3.5 이하에서는 `dict`가 제공하는 순회 순서에 의존하는 메서드들(`keys`, `values`, `items`, `popitem` 포함)이 모두 비슷하게 랜덤해 보이는 동작을 보여줘요.
 
 ```python
-# Python 3.5
+## Python 3.5
 print(list(baby_names.keys()))
 print(list(baby_names.values()))
 print(list(baby_names.items()))
@@ -4179,7 +4179,7 @@ print(baby_names.popitem())  # Last item inserted
 함수에 넘기는 키워드 인수(`**kwargs` 캐치올 매개변수를 포함해서요 (아이템 35: “키워드 인수로 선택적 동작 제공하기”와 아이템 37: “키워드 전용 및 위치 전용 인수로 명확성 강제하기” 참고))는 옛날 파이썬 버전에서는 겉보기에 랜덤한 순서로 들어와서 함수 호출을 디버깅하기 어렵게 만들어요.
 
 ```python
-# Python 3.5
+## Python 3.5
 def my_func(**kwargs):
     for key, value in kwargs.items():
         print("%s = %s" % (key, value))
@@ -4208,7 +4208,7 @@ kangaroo = joey
 클래스는 인스턴스 딕셔너리용으로 `dict` 타입을 써요. 이전 파이썬 버전에서는 `object` 필드가 이런 랜덤화 동작을 보여줘요.
 
 ```python
-# Python 3.5
+## Python 3.5
 class MyClass:
     def __init__(self):
         self.alligator = "hatchling"
@@ -4610,10 +4610,10 @@ visits = {
 나라 이름이 딕셔너리에 이미 있든 없든 `setdefault` 메서드로 새 도시를 집합에 추가할 수 있어요. `get` 메서드와 대입 표현식으로 같은 동작을 만드는 것보다 코드가 훨씬 짧아요.
 
 ```python
-# Short
+## Short
 visits.setdefault("France", set()).add("Arles")
 
-# Long
+## Long
 if (japan := visits.get("Japan")) is None:
     visits["Japan"] = japan = set()
 
@@ -5206,11 +5206,11 @@ Average: 67.5, Median: 68.5, Count 10
 이 코드에는 두 가지 문제가 있어요. 첫째, 반환 값이 전부 숫자라서 순서를 실수로 바꾸기 쉬워요(예를 들어 평균과 중앙값을 뒤바꾸는 식이죠). 나중에 찾기 어려운 버그로 이어질 수 있어요. 반환 값을 많이 사용하는 건 오류가 나기 쉬워요:
 
 ```python
-# Correct:
+## Correct:
 minimum, maximum, average, median, count =
 get_stats_more(lengths)
 
-# Oops! Median and average swapped:
+## Oops! Median and average swapped:
 minimum, maximum, median, average, count =
 get_stats_more(lengths)
 ```
@@ -11392,7 +11392,7 @@ class Point3D(BetterSerializable):
         self.y = y
         self.z = z
 
-# Forgot to call register_class! Whoops!
+## Forgot to call register_class! Whoops!
 ```
 
 등록 깜빡한 클래스의 `object`를 역직렬화하려고 하면 런타임에 코드가 깨져요:
@@ -12699,15 +12699,15 @@ counter = result
 카운터를 증가시키는 파이썬 스레드는 이 연산들 중 어느 두 연산 사이에서도 중단될 수 있어요. 연산들이 서로 엇갈리는 방식 때문에 오래된 버전의 `value`가 카운터에 대입되면 문제가 돼요. 두 스레드 A와 B 사이의 나쁜 상호작용 예시는 다음과 같아요:
 
 ```python
-# Running in Thread A
+## Running in Thread A
 value_a = counter
 delta_a = get_offset(data_a)
-# Context switch to Thread B
+## Context switch to Thread B
 value_b = counter
 delta_b = get_offset(data_b)
 result_b = value_b + delta_b
 counter = result_b
-# Context switch back to Thread A
+## Context switch back to Thread A
 result_a = value_a + delta_a
 counter = result_a
 ```
@@ -13565,7 +13565,7 @@ def game_logic_thread(item):
         next_state = e
     return (y, x, next_state)
 
-# Start the threads upfront
+## Start the threads upfront
 threads = []
 for _ in range(5):
     thread = StoppableWorker(
@@ -15019,7 +15019,7 @@ confirm_merge(input_paths, output_path)
 예를 들어 파이썬으로 계산이 무거운 일을 하면서 여러 CPU 코어를 쓰고 싶다고 해요. 더 무거운 알고리즘(나비에–스토크스 방정식으로 유체 역학을 시뮬레이션하는 것 같은)의 대리자로 두 수의 최대공약수를 구하는 구현을 써 볼게요:
 
 ```python
-# my_module.py
+## my_module.py
 def gcd(pair):
     a, b = pair
     low = min(a, b)
@@ -15032,7 +15032,7 @@ def gcd(pair):
 병렬 처리가 없어서 이 함수를 직렬로 실행하면 시간이 선형으로 늘어나요:
 
 ```python
-# run_serial.py
+## run_serial.py
 import my_module
 import time
 
@@ -15066,7 +15066,7 @@ Took 5.643 seconds
 GIL이 파이썬의 다중 CPU 코어 병렬 사용을 막아서 이 코드를 여러 파이썬 스레드로 실행해도 속도 향상이 없어요. 여기서는 위와 같은 계산을 `concurrent.futures` 모듈의 `ThreadPoolExecutor` 클래스와 워커 스레드 여덟 개(제 컴퓨터 CPU 코어 수에 맞췄어요)로 해요:
 
 ```python
-# run_threads.py
+## run_threads.py
 import my_module
 from concurrent.futures import ThreadPoolExecutor
 import time
@@ -15095,7 +15095,7 @@ Took 5.810 seconds
 이제 놀라운 부분이에요: 코드 한 줄만 바꾸면 마법 같은 일이 일어나요. `concurrent.futures` 모듈의 `ThreadPoolExecutor`를 `ProcessPoolExecutor`로 바꾸면 전부 빨라져요:
 
 ```python
-# run_parallel.py
+## run_parallel.py
 import my_module
 from concurrent.futures import ProcessPoolExecutor
 import time
@@ -17752,7 +17752,7 @@ PyInit_my_extension(void)
 이제 C 코드를 CPython 인터프리터가 동적으로 로드할 수 있는 네이티브 라이브러리로 컴파일해야 해요. 가장 간단한 방법은 최소한의 `setup.py` 설정 파일을 정의하는 거예요:
 
 ```python
-# setup.py
+## setup.py
 from setuptools import Extension, setup
 
 setup(
@@ -17782,7 +17782,7 @@ $ python3 setup.py develop
 컴파일이 끝나면 파이썬으로 작성한 테스트로 (아이템 108: "`TestCase` 서브클래스에서 관련 동작을 검증하세요" 참고) 확장 모듈이 예상대로 동작하는지 확인할 수 있어요:
 
 ```python
-# my_extension_test.py
+## my_extension_test.py
 import unittest
 import my_extension
 
@@ -17878,7 +17878,7 @@ PyObject *dot_product(PyObject *self, PyObject *args)
 구현은 객체 레퍼런스 카운트를 제대로 관리해야 하고 오류 전파와 레퍼런스 빌리기의 특이한 점 때문에 더 복잡해져요. 하지만 결과물은 어쩌면 파이썬의 성배라고 할 수 있어요. 빠르고 사용하기 쉬운 모듈이니까요. 여기서는 여러 종류의 이터러블과 `Decimal` 숫자 클래스에 대해서도 동작한다는 걸 보여드릴게요(아이템 106: "정밀도가 중요할 때는 `decimal`을 사용하세요" 참고):
 
 ```python
-# my_extension2_test.py
+## my_extension2_test.py
 import unittest
 import my_extension2
 
@@ -18023,8 +18023,8 @@ sys     0m0.037s
 예를 들어 두 가지 기능을 가진 이미지 처리 도구를 만든다고 상상해 보세요. 첫 번째 모듈은 사용자가 지정한 설정에 따라 이미지의 밝기와 대비를 조절해요:
 
 ```python
-# adjust.py
-# Fast initialization
+## adjust.py
+## Fast initialization
 ...
 
 def do_adjust(path, brightness, contrast):
@@ -18034,8 +18034,8 @@ def do_adjust(path, brightness, contrast):
 두 번째 모듈은 이미지를 지정된 양만큼 지능적으로 보정해요. 현실적인 상황을 보여드리기 위해 큰 네이티브 이미지 처리 라이브러리를 로딩해야 해서 초기화가 느리다고 가정할게요:
 
 ```python
-# enhance.py
-# Very slow initialization
+## enhance.py
+## Very slow initialization
 ...
 
 def do_enhance(path, amount):
@@ -18045,7 +18045,7 @@ def do_enhance(path, amount):
 이 함수들을 `argparse` 내장 모듈로 커맨드라인 유틸리티로 만들 수 있어요. 여기서는 사용자가 지정한 명령에 따라 다른 플래그 집합을 요구하기 위해 `add_subparsers` 기능을 사용해요. `adjust` 명령은 `--brightness`와 `--contrast` 플래그를 받고, `enhance` 명령은 `--amount` 플래그만 필요해요:
 
 ```python
-# parser.py
+## parser.py
 import argparse
 
 PARSER = argparse.ArgumentParser()
@@ -18064,7 +18064,7 @@ adjust_parser.add_argument("--contrast", type=float)
 `main` 함수에서는 인수를 파싱한 뒤 그에 맞게 `enhance`와 `adjust` 모듈을 호출해요:
 
 ```python
-# mycli.py
+## mycli.py
 import adjust
 import enhance
 import parser
@@ -18123,7 +18123,7 @@ import time:      3347 |      14762 | parser
 한 가지 해결책은 실제로 사용할 때까지 의존성 임포트를 미루는 거예요. 파이썬은 프로그램 시작 시 모듈 범위의 `import` 문을 사용하는 것 외에도 런타임에 함수 안에서 모듈을 임포트하는 걸 지원하기 때문에 가능해요(이런 동적 특성의 다른 활용법은 아이템 122: "순환 의존성을 끊는 방법을 알아두세요" 참고). 여기서는 명령이 분기된 뒤 `main` 함수 안에서 `adjust` 모듈이나 `enhance` 모듈만 임포트하도록 커맨드라인 도구를 수정할게요:
 
 ```python
-# mycli_faster.py
+## mycli_faster.py
 import parser
 
 def main():
@@ -18182,7 +18182,7 @@ sys     0m0.013s
 모듈 지연 로딩은 단일 작업을 수행하고 종료되는 이런 커맨드라인 도구에는 아주 잘 맞아요. 하지만 웹 애플리케이션에서 콜드 스타트 지연 시간을 줄여야 한다면 어떻게 할까요? 이상적으로는 사용자가 실제로 그 기능을 요청하기 전까지는 `enhance` 모듈 로딩 비용이 발생하지 않아야 해요. 다행히 같은 접근법이 요청 핸들러 안에서도 동작해요. 여기서는 각 기능마다 대응하는 모듈을 동적으로 임포트하는 핸들러를 가진 `flask` 웹 애플리케이션을 만들어 볼게요:
 
 ```python
-# server.py
+## server.py
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -18216,7 +18216,7 @@ def do_enhance():
 동적 `import` 문의 비용이 클 거라고 생각할 수 있지만 실제로는 그렇게 나쁘지 않아요. 여기서는 `timeit` 내장 모듈을 사용해서(아이템 93: "`timeit` 마이크로벤치마크로 성능이 중요한 코드를 최적화하세요" 참고) 이미 임포트한 모듈을 동적으로 임포트하는 데 걸리는 시간을 측정해 볼게요:
 
 ```python
-# import_perf.py
+## import_perf.py
 import timeit
 
 trials = 10_000_000
@@ -18237,7 +18237,7 @@ print(f"{result/trials * 1e9:2.1f} nanos per call")
 이 오버헤드(52나노초)를 가늠해 보기 위해 동적 `import` 문을 락으로 보호되는 전역 변수로 바꾼 또 다른 예시를 보여드릴게요(프로그램 초기화 중에 여러 스레드가 몰리는 걸 막는 흔한 방법이에요):
 
 ```python
-# global_lock_perf.py
+## global_lock_perf.py
 import timeit
 import threading
 
@@ -18249,7 +18249,7 @@ initialized_lock = threading.Lock()
 result = timeit.timeit(
     stmt="""
 global initialized
-# Speculatively check without the lock
+## Speculatively check without the lock
 if not initialized:
     with initialized_lock:
         # Double check after holding the lock
@@ -20089,7 +20089,7 @@ x05\x8c\x07version\x94K\x02u\x85\x94R\x94.'
 파이썬에서 테스트를 작성하는 정석 방법은 내장 모듈인 `unittest`를 쓰는 거예요. 예를 들어, 다양한 입력에 대해 제대로 동작하는지 검증하고 싶은 유틸리티 함수가 이렇게 정의되어 있다고 해볼게요.
 
 ```python
-# utils.py
+## utils.py
 def to_str(data):
     if isinstance(data, str):
         return data
@@ -20103,7 +20103,7 @@ def to_str(data):
 테스트를 정의하려면 각자 기대하는 동작마다 테스트를 담은 두 번째 파일을 만들어요. 파일 이름은 `test_utils.py`나 `utils_test.py`처럼 정하면 되는데, 이름 규칙은 스타일 취향 문제예요.
 
 ```python
-# utils_test.py
+## utils_test.py
 from unittest import TestCase, main
 from utils import to_str
 
@@ -20161,7 +20161,7 @@ OK
 `TestCase` 클래스는 테스트에서 단언할 때 쓰는 헬퍼 메서드를 제공해요. 동등함을 확인할 때 쓰는 `assertEqual`, 불리언 식을 확인할 때 쓰는 `assertTrue`, 정밀도가 걱정될 때 쓰는 `assertAlmostEqual` (아이템 113: “부동소수점 테스트에서 정밀도를 조절하려면 `assertAlmostEqual`을 사용하세요” 참고) 등 정말 많아요 (전체 목록은 [https://docs.python.org/3/library/unittest.html](https://docs.python.org/3/library/unittest.html) 참고). 이 메서드들은 테스트가 실패한 정확한 이유를 이해하도록 모든 입력과 출력을 출력해주기 때문에 내장 `assert` 문보다 좋아요. 예를 들어, 여기서는 같은 테스트 케이스를 헬퍼 단언 메서드를 쓴 경우와 쓰지 않은 경우로 나란히 적어봤어요.
 
 ```python
-# assert_test.py
+## assert_test.py
 from unittest import TestCase, main
 from utils import to_str
 
@@ -20210,7 +20210,7 @@ FAILED (failures=2)
 예외를 검증하는 `assertRaises` 헬퍼 메서드도 있어요. `with` 문에서 컨텍스트 매니저로 쓸 수 있어요 (동작 방식은 아이템 82: “재사용 가능한 `try`/`finally` 동작을 위해 `contextlib`와 `with` 문을 고려하세요” 참고). `try`/`except` 문과 비슷해 보이지만, 예외가 어디서 발생해야 하는지가 훨씬 분명하게 드러나요.
 
 ```python
-# utils_error_test.py
+## utils_error_test.py
 from unittest import TestCase, main
 from utils import to_str
 
@@ -20230,7 +20230,7 @@ if __name__ == "__main__":
 `TestCase` 서브클래스에 복잡한 로직을 담은 헬퍼 메서드를 직접 정의해서 테스트를 더 읽기 쉽게 만들 수도 있어요. 다만 메서드 이름이 `test`라는 단어로 시작하지 않게 조심하세요. 그렇지 않으면 테스트 케이스인 것처럼 실행돼버려요. 이런 커스텀 테스트 헬퍼는 `TestCase` 단언 메서드를 호출하는 것 외에도, 어떤 가정이나 불변 조건이 깨졌는지 분명히 하려고 `fail` 메서드를 자주 써요. 예를 들어, 여기서는 제너레이터의 동작을 검증하는 커스텀 테스트 헬퍼 메서드를 정의해봤어요.
 
 ```python
-# helper_test.py
+## helper_test.py
 from unittest import TestCase, main
 
 def sum_squares(values):
@@ -20330,7 +20330,7 @@ FAILED (failures=1, errors=2)
 `TestCase` 클래스는 하나의 테스트 메서드 안에 여러 테스트를 정의해서 상용구를 없앨 수 있게 해주는 `subTest` 헬퍼 메서드도 제공해요. 데이터 기반 테스트를 작성할 때 특히 유용하고, 하나가 실패한 뒤에도 나머지 케이스 테스트를 계속할 수 있어요 (`TestCase`에 담긴 테스트 메서드들의 동작과 비슷해요; 다른 접근 방식은 아이템 110: “`setUp`, `tearDown`, `setUpModule`, `tearDownModule`로 테스트를 서로 격리하세요” 참고). 이를 보여주려고 여기서는 데이터 기반 테스트 예제를 정의해봤어요.
 
 ```python
-# data_driven_test.py
+## data_driven_test.py
 from unittest import TestCase, main
 from utils import to_str
 
@@ -20454,7 +20454,7 @@ toaster.doneness = 5
 toaster.push_down()
 print("After push down:", toaster.hot)
 
-# Time passes
+## Time passes
 ...
 print("After time:     ", toaster.hot)
 
@@ -20613,7 +20613,7 @@ OK
 예를 들어, 여기서는 각 테스트 전에 임시 디렉터리를 만들고 각 테스트가 끝난 뒤 내용을 지우는 `TestCase` 서브클래스를 정의해요.
 
 ```python
-# environment_test.py
+## environment_test.py
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest import TestCase, main
@@ -20639,7 +20639,7 @@ if __name__ == "__main__":
 이런 상황을 처리하려고 `unittest` 모듈은 모듈 수준의 테스트 하니스 초기화도 지원해요. 비용이 큰 리소스를 한 번만 설정해두면, 모든 `TestCase` 클래스와 테스트 메서드가 그 초기화를 반복하지 않고 실행돼요. 나중에 모듈의 모든 테스트가 끝나면 테스트 하니스를 한 번만 해체해요. 여기서는 `TestCase` 서브클래스를 담은 모듈 안에 `setUpModule`과 `tearDownModule` 함수를 정의해서 이런 동작을 활용해요.
 
 ```python
-# integration_test.py
+## integration_test.py
 from unittest import TestCase, main
 
 def setUpModule():
@@ -21286,7 +21286,7 @@ class MyTestCase3(unittest.TestCase):
 디버거를 시작하려면 내장 함수 `breakpoint`를 호출하기만 하면 돼요. 내장 모듈 `pdb`를 임포트해서 `set_trace` 함수를 실행하는 것과 같아요.
 
 ```python
-# always_breakpoint.py
+## always_breakpoint.py
 import math
 
 def compute_rmse(observed, ideal):
@@ -21337,7 +21337,7 @@ $ python3 always_breakpoint.py
 `breakpoint` 함수는 프로그램 어디에서든 호출할 수 있어요. 디버깅하려는 문제가 특수한 상황에서만 생긴다는 걸 알면, 특정 조건을 만족한 뒤에 `breakpoint`를 호출하는 평범한 파이썬 코드를 작성하면 돼요. 예를 들어, 여기서는 데이터 포인트의 제곱 오차가 `1`보다 클 때만 디버거를 시작해요.
 
 ```python
-# conditional_breakpoint.py
+## conditional_breakpoint.py
 def compute_rmse(observed, ideal):
     ...
     for got, wanted in zip(observed, ideal):
@@ -21372,7 +21372,7 @@ $ python3 conditional_breakpoint.py
 디버거 프롬프트에 닿는 또 다른 유용한 방법은 *사후 디버깅*을 쓰는 거예요. 예외를 일으키고 이미 죽은 *이후에* 프로그램을 디버깅할 수 있게 해줘요. `breakpoint` 함수 호출을 어디에 넣어야 할지 잘 모를 때 특히 도움이 돼요. 여기서는 함수 인자 중 하나에 `7j` 복소수가 들어 있어서 죽는 스크립트가 있어요.
 
 ```python
-# postmortem_breakpoint.py
+## postmortem_breakpoint.py
 import math
 
 def compute_rmse(observed, ideal):
@@ -21454,7 +21454,7 @@ ZeroDivisionError: float division by zero
 메모리 사용량을 디버깅하는 한 가지 방법은 내장 모듈 `gc`에 가비지 컬렉터가 현재 아는 모든 객체를 나열해달라고 하는 거예요. 꽤 무딘 도구지만 프로그램 메모리가 어디에 쓰이는지 감을 빨리 잡을 수 있어요. 여기서는 참조를 유지해서 메모리를 채우는 모듈을 정의해요.
 
 ```python
-# waste_memory.py
+## waste_memory.py
 import os
 
 class MyObject:
@@ -21478,7 +21478,7 @@ def run():
 그런 다음 내장 모듈 `gc`를 쓰는 프로그램을 실행해서 실행 중에 만든 객체가 몇 개인지, 할당된 객체 샘플 몇 개와 함께 출력해요.
 
 ```python
-# using_gc.py
+## using_gc.py
 import gc
 
 found_objects = gc.get_objects()
@@ -21507,7 +21507,7 @@ After:  16801
 파이썬 3.4에는 이 문제를 풀려고 새로운 내장 모듈 `tracemalloc`이 들어왔어요. `tracemalloc`으로는 객체를 할당된 위치로 거슬러 올라갈 수 있어요. 메모리 사용량의 전후 스냅샷을 찍고 비교해서 무엇이 바뀌었는지 보는 식으로 써요. 여기서는 이 접근 방식으로 프로그램에서 메모리를 가장 많이 쓰는 상위 세 곳을 출력해요.
 
 ```python
-# top_n.py
+## top_n.py
 import tracemalloc
 
 tracemalloc.start(10)                      # Set stack depth
@@ -21536,7 +21536,7 @@ waste_memory.py:11: size=82.8 KiB (+82.8 KiB), count=100
 `tracemalloc` 모듈은 각 할당의 전체 스택 트레이스도 출력할 수 있어요 (`tracemalloc.start` 함수에 넘긴 프레임 수까지). 여기서는 프로그램에서 메모리를 가장 많이 쓰는 곳의 스택 트레이스를 출력해요.
 
 ```python
-# with_trace.py
+## with_trace.py
 import tracemalloc
 
 tracemalloc.start(10)
@@ -21868,7 +21868,7 @@ server> b
 모듈 독스트링의 예는 다음과 같아요:
 
 ```python
-# words.py
+## words.py
 #!/usr/bin/env python3
 """Library for finding linguistic patterns in words.
 
@@ -22009,14 +22009,14 @@ mypackage/utils.py
 `utils` 모듈을 가져오려고 패키지 디렉터리 이름을 포함한 절대 모듈 이름을 사용할 수 있어요:
 
 ```python
-# main.py
+## main.py
 import mypackage.utils
 ```
 
 `from` 절을 써서 담고 있는 패키지 기준 상대 이름으로 자식 모듈을 가져올 수도 있어요:
 
 ```python
-# main2.py
+## main2.py
 from mypackage import utils
 ```
 
@@ -22029,7 +22029,7 @@ from mypackage import utils
 패키지의 첫 번째 쓰임은 모듈을 별도의 네임스페이스로 나누는 걸 돕는 거예요. 파일 이름이 같은 모듈이 여러 개 있어도 각기 다른 절대 경로로 구분되게 해줘요. 예를 들어 파일 이름이 같은 `utils.py` 두 모듈에서 속성을 가져오는 프로그램은 다음과 같아요:
 
 ```python
-# main.py
+## main.py
 from analysis.utils import log_base2_bucket
 from frontend.utils import stringify
 
@@ -22039,7 +22039,7 @@ bucket = stringify(log_base2_bucket(33))
 패키지에 정의된 함수, 클래스, 서브모듈의 이름이 같으면 이 방식이 깨져요. 예를 들어 `analysis.utils`와 `frontend.utils` 모듈 둘 다에서 `inspect` 함수를 쓰고 싶다고 해볼게요. 속성을 바로 가져오면 두 번째 `import` 문이 현재 범위의 `inspect` 값을 덮어써서 잘 안 돼요.
 
 ```python
-# main2.py
+## main2.py
 from analysis.utils import inspect
 from frontend.utils import inspect  # Overwrites!
 ```
@@ -22047,7 +22047,7 @@ from frontend.utils import inspect  # Overwrites!
 해결책은 `import` 문의 `as` 절을 써서 가져온 걸 현재 범위에서 원하는 이름으로 바꾸는 거예요:
 
 ```python
-# main3.py
+## main3.py
 from analysis.utils import inspect as analysis_inspect
 from frontend.utils import inspect as frontend_inspect
 
@@ -22061,7 +22061,7 @@ if analysis_inspect(value) == frontend_inspect(value):
 가져온 이름 충돌을 피하는 다른 방법은 항상 가장 높은 고유 모듈 이름으로 이름에 접근하는 거예요. 위 예에서는 `from` 절 대신 기본 `import` 문을 쓴다는 뜻이에요:
 
 ```python
-# main4.py
+## main4.py
 import analysis.utils
 import frontend.utils
 
@@ -22084,7 +22084,7 @@ if (analysis.utils.inspect(value) ==
 예를 들어 움직이는 발사체 사이의 충돌을 계산하는 패키지를 제공하고 싶다고 해볼게요. 여기서는 `mypackage`의 `models` 모듈을 정의해서 발사체의 표현을 담아요:
 
 ```python
-# models.py
+## models.py
 __all__ = ["Projectile"]
 
 class Projectile:
@@ -22096,7 +22096,7 @@ class Projectile:
 `mypackage`에 `utils` 모듈도 정의해서 `Projectile` 인스턴스에 대한 연산, 예를 들어 서로 사이의 충돌 시뮬레이션을 수행해요:
 
 ```python
-# utils.py
+## utils.py
 from .models import Projectile
 
 __all__ = ["simulate_collision"]
@@ -22113,7 +22113,7 @@ def simulate_collision(a, b):
 파이썬 패키지로 이렇게 하려면 `mypackage` 디렉터리의 `__init__.py` 파일을 고쳐야 해요. 이 파일이 가져올 때 실제로 `mypackage` 모듈의 내용이 되는 거예요. 그래서 `__init__.py`에 가져오는 걸 제한해서 `mypackage`의 명시적 API를 지정할 수 있어요. 제 내부 모듈들은 이미 `__all__`을 지정하고 있으니 내부 모듈에서 모든 걸 가져오고 그에 맞게 `__all__`을 업데이트하면 `mypackage`의 공개 인터페이스를 노출할 수 있어요:
 
 ```python
-# __init__.py
+## __init__.py
 __all__ = []
 from .models import *
 
@@ -22126,7 +22126,7 @@ __all__ += utils.__all__
 내부 모듈에 접근하는 대신 `mypackage`에서 바로 가져오는 API 사용자는 다음과 같아요:
 
 ```python
-# api_consumer.py
+## api_consumer.py
 from mypackage import *
 
 a = Projectile(1.5, 3)
@@ -22173,14 +22173,14 @@ after_a, after_b = simulate_collision(a, b)
 이런 문제를 피하는 가장 좋은 방법은 시작할 때 프로그램의 일부를 바꿔서 배포 환경에 따라 다른 기능을 제공하게 하는 거예요. 예를 들어 프로덕션용과 개발용으로 서로 다른 `__main__` 파일 두 개를 가질 수 있어요:
 
 ```python
-# dev_main.py
+## dev_main.py
 TESTING = True
 
 import db_connection
 
 db = db_connection.Database()
 
-# prod_main.py
+## prod_main.py
 TESTING = False
 
 import db_connection
@@ -22191,7 +22191,7 @@ db = db_connection.Database()
 두 파일의 유일한 차이는 `TESTING` 상수의 값이에요. 프로그램의 다른 모듈에서는 `__main__` 모듈을 가져와서 `TESTING` 값을 보고 자기 속성을 어떻게 정의할지 정할 수 있어요:
 
 ```python
-# db_connection.py
+## db_connection.py
 import __main__
 
 class TestingDatabase:
@@ -22216,7 +22216,7 @@ else:
 모듈 범위의 코드는 외부 설정을 다루는 것보다 더 다양하게 쓸 수 있어요. 예를 들어 프로그램이 호스트 플랫폼에 따라 다르게 동작해야 한다는 걸 안다면 모듈에 최상위 구조를 정의하기 전에 `sys` 모듈을 살펴볼 수 있어요:
 
 ```python
-# db_connection.py
+## db_connection.py
 import sys
 
 class Win32Database:
@@ -22250,7 +22250,7 @@ else:
 파이썬에는 언어와 표준 라이브러리를 위한 내장 예외 계층이 있어요(배경 지식은 아이템 86: “`Exception`과 `BaseException`의 차이를 이해하세요” 참고). 오류를 보고할 때 직접 새로운 타입을 정의하는 대신 내장 예외 타입을 쓰고 싶어져요. 예를 들어 제 모듈의 함수에 잘못된 매개변수가 넘어오면 언제든 `ValueError` 예외를 발생시킬 수 있어요:
 
 ```python
-# my_module.py
+## my_module.py
 def determine_weight(volume, density):
     if density <= 0:
         raise ValueError("Density must be positive")
@@ -22260,7 +22260,7 @@ def determine_weight(volume, density):
 어떤 경우에는 `ValueError`를 쓰는 게 맞지만 API에서는 새로운 예외 계층을 정의하는 게 훨씬 강력해요. 모듈에 루트 `Exception` 클래스를 제공하고 그 모듈에서 발생하는 다른 모든 예외가 루트 예외를 상속하게 해서 이렇게 할 수 있어요:
 
 ```python
-# my_module.py
+## my_module.py
 class Error(Exception):
     """Base-class for all exceptions raised by this module."""
 
@@ -22352,7 +22352,7 @@ ZeroDivisionError: division by zero
 루트 예외를 쓰는 세 번째 효과는 API를 미래에도 쓸 수 있게 해준다는 거예요. 시간이 지나면 특정 상황에서 더 구체적인 예외를 제공하려고 API를 확장하고 싶어질 수 있어요. 예를 들어 음수 밀도를 줬다는 오류 조건을 알리는 `Exception` 서브클래스를 추가할 수 있어요:
 
 ```python
-# my_module.py
+## my_module.py
 ...
 
 class NegativeDensityError(InvalidDensityError):
@@ -22395,7 +22395,7 @@ ValueError: Must supply non-negative density
 루트 예외 바로 아래에 더 넓은 예외 집합을 제공해서 API의 미래 대비를 더 강화할 수 있어요. 예를 들어 무게 계산과 관련된 오류 하나, 부피 계산과 관련된 오류 하나, 밀도 계산과 관련된 오류 하나가 있다고 해볼게요:
 
 ```python
-# my_module.py
+## my_module.py
 class Error(Exception):
     """Base-class for all exceptions raised by this module."""
 
@@ -22431,7 +22431,7 @@ class DensityError(Error):
 여기서 전역 설정에서 기본 문서 저장 위치를 가져오는 대화상자를 정의해 볼게요:
 
 ```python
-# dialog.py
+## dialog.py
 import app
 
 class Dialog:
@@ -22449,7 +22449,7 @@ def show():
 문제는 `prefs` 객체가 들어 있는 `app` 모듈이 프로그램 시작 시 같은 대화상자를 보여주기 위해 `dialog` 클래스를 임포트한다는 거예요:
 
 ```python
-# app.py
+## app.py
 import dialog
 
 class Prefs:
@@ -22464,7 +22464,7 @@ dialog.show()
 메인 프로그램에서 이렇게 `app` 모듈을 임포트하면 순환 의존성이 생겨요:
 
 ```python
-# main.py
+## main.py
 import app
 ```
 
@@ -22505,7 +22505,7 @@ AttributeError: partially initialized module 'app' has no
 순환 임포트 문제에 대한 첫 번째 접근은 임포트 순서를 바꾸는 거예요. 예를 들어 `app` 모듈의 다른 내용이 모두 실행된 뒤인 아래쪽에서 `dialog` 모듈을 임포트하면 `AttributeError` 예외가 사라져요:
 
 ```python
-# app.py
+## app.py
 class Prefs:
     ...
 
@@ -22529,7 +22529,7 @@ dialog.show()
 여기서 `configure`가 호출될 때만 `prefs` 객체에 접근하도록 `dialog` 모듈을 다시 정의해 볼게요:
 
 ```python
-# dialog.py
+## dialog.py
 import app
 
 class Dialog:
@@ -22547,7 +22547,7 @@ def configure():
 임포트 시점에 어떤 활동도 실행하지 않도록 `app` 모듈도 다시 정의해 볼게요:
 
 ```python
-# app.py
+## app.py
 import dialog
 
 class Prefs:
@@ -22562,7 +22562,7 @@ def configure():
 마지막으로 `main` 모듈은 실행이 세 단계로 명확히 나뉘어요—전부 임포트하고, 전부 `configure`하고, 첫 활동을 실행하기예요:
 
 ```python
-# main.py
+## main.py
 import app
 import dialog
 
@@ -22581,7 +22581,7 @@ dialog.show()
 여기서 동적 임포트를 사용하도록 `dialog` 모듈을 다시 정의해 볼게요. `dialog` 모듈이 초기화 시점에 `app`을 임포트하는 대신, `dialog.show` 함수가 런타임에 `app` 모듈을 임포트해요:
 
 ```python
-# dialog.py
+## dialog.py
 class Dialog:
     ...
 
@@ -22597,7 +22597,7 @@ def show():
 `app` 모듈은 원래 예시와 똑같이 둘 수 있어요. 맨 위에서 `dialog`를 임포트하고 맨 아래에서 `dialog.show`를 호출해요:
 
 ```python
-# app.py
+## app.py
 import dialog
 
 class Prefs:
@@ -23304,9 +23304,9 @@ OSError: No translation files found for default language en-us.
 이게 안 된 이유는 장고가 소스 파일 옆에서 번역 데이터 파일을 찾기 때문이에요. 아래 장고 코드 발췌에서 `localedir` 변수 값은 `".../django.zip/django/conf/locale"`인데, 파일 시스템의 디렉토리가 아니에요. 그 경로를 번역 로딩용 `gettext` 모듈에 넘기면 장고 라이브러리 코드가 파일을 찾지 못해서 위에 나온 `OSError` 예외가 발생해요:
 
 ```python
-# trans_real.py
-# Copyright (c) Django Software Foundation and
-# individual contributors. All rights reserved.
+## trans_real.py
+## Copyright (c) Django Software Foundation and
+## individual contributors. All rights reserved.
 class DjangoTranslation(gettext_module.GNUTranslations):
     ...
 
@@ -23325,7 +23325,7 @@ class DjangoTranslation(gettext_module.GNUTranslations):
 이 문제를 피하려고 파이썬은 내장 `pkgutil` 모듈을 제공해요. zip 아카이브에 있거나 커스텀 모듈 로더가 필요해도 모듈을 똑똑하게 살펴서 데이터 리소스에 제대로 접근하는 법을 판단해 줘요. 여기서 `pkgutil`을 사용해 장고가 zip 아카이브 때문에 찾지 못한 번역 파일을 로드해 볼게요:
 
 ```python
-# django_pkgutil.py
+## django_pkgutil.py
 import pkgutil
 
 data = pkgutil.get_data(
@@ -23335,7 +23335,7 @@ data = pkgutil.get_data(
 print(data.decode("utf-8"))
 
 >>>
-# This file is distributed under the same license as the Django
+## This file is distributed under the same license as the Django
  package.
 #
 msgid ""

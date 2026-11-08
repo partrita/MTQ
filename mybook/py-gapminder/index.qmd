@@ -3,8 +3,8 @@ engine: markdown
 title: "파이썬 데이터 분석 및 시각화 실습"
 author: "Allen Lee, Carpentry Instructors"
 date: "2026-08-15"
+lang: ko
 ---
-
 # 소개
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://slack-invite.carpentries.org/)
@@ -28,7 +28,7 @@ date: "2026-08-15"
 [singh-sourav]: https://software-carpentry.org/team/#singh-sourav
 [olav-vahtras]: https://software-carpentry.org/team/#vahtras_olav
 
-# 제1장: 실행과 종료
+## 제1장: 실행과 종료
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -353,7 +353,7 @@ $\sum_{i=1}^{N} 2^{-i} \approx 1$
 
 :::
 
-# 제2장: 변수와 할당
+## 제2장: 변수와 할당
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -399,7 +399,7 @@ print(first_name, 'is', age, 'years old')
 - 정의되지 않은 변수를 참조하거나 오타를 내면 `NameError`가 발생한다.
 
 ```python
-# print(last_name)  # NameError: name 'last_name' is not defined
+## print(last_name)  # NameError: name 'last_name' is not defined
 ```
 
 ::: {.callout-note appearance="simple"}
@@ -454,10 +454,10 @@ print(len('helium'))  # 6
 - 문법적으로 유효하더라도 의미 없는 변수명보다는 의도가 분명한 이름을 사용해야 협업과 유지보수가 수월하다.
 
 ```python
-# 피해야 할 예
+## 피해야 할 예
 flabadab = 42
 
-# 권장하는 예
+## 권장하는 예
 age = 42
 ```
 
@@ -536,7 +536,7 @@ initial = 'right'
 
 :::
 
-# 제3장: 데이터 타입과 타입 변환
+## 제3장: 데이터 타입과 타입 변환
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -575,7 +575,7 @@ print(type(fitness))     # <class 'str'>
 
 ```python
 print(5 - 3)
-# print('hello' - 'h')  # TypeError: unsupported operand type(s) for -: 'str' and 'str'
+## print('hello' - 'h')  # TypeError: unsupported operand type(s) for -: 'str' and 'str'
 ```
 
 ## 문자열의 연결과 반복
@@ -595,7 +595,7 @@ print('=' * 10)
 
 ```python
 print(len(full_name))
-# print(len(52))  # TypeError: object of type 'int' has no len()
+## print(len(52))  # TypeError: object of type 'int' has no len()
 ```
 
 ## 명시적 타입 변환 (Type Casting)
@@ -690,7 +690,7 @@ print(num_surveys)  # 15
 
 :::
 
-# 제4장: 내장 함수와 도움말
+## 제4장: 내장 함수와 도움말
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -714,7 +714,7 @@ print(num_surveys)  # 15
 - `#` 기호 뒤에 오는 텍스트는 파이썬 인터프리터가 실행하지 않고 무시한다.
 
 ```python
-# 이 줄은 실행되지 않는 주석입니다.
+## 이 줄은 실행되지 않는 주석입니다.
 adjustment = 0.5   # 코드 뒤에 설명을 덧붙일 때도 사용합니다.
 ```
 
@@ -767,9 +767,9 @@ help(round)
 - **런타임 오류 (Runtime Error):** 문법은 맞지만 실행 도중 발생하는 오류이다 (예: 정의되지 않은 변수를 참조하는 `NameError`, 0으로 나누는 `ZeroDivisionError`).
 
 ```python
-# name = 'Feng  # SyntaxError: unterminated string literal
+## name = 'Feng  # SyntaxError: unterminated string literal
 age = 53
-# print(aeg)    # NameError: name 'aeg' is not defined
+## print(aeg)    # NameError: name 'aeg' is not defined
 ```
 
 ## 코딩 문제 해결과 AI 활용 가이드
@@ -837,7 +837,7 @@ print(max(len(rich), len(poor)))
 
 :::
 
-# 제5장: 쉬는 시간
+## 제5장: 쉬는 시간
 
 ## 생각해 보기
 
@@ -847,7 +847,7 @@ print(max(len(rich), len(poor)))
 - 코드가 예상과 다르게 동작했을 때 원인을 어떻게 찾아냈는가?
 - 오타나 실수를 줄이기 위해 어떤 코딩 습관을 들이면 좋을까?
 
-# 제6장: 라이브러리 (Libraries)
+## 제6장: 라이브러리 (Libraries)
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -947,7 +947,7 @@ print(random.choice(bases))
 
 :::
 
-# 제7장: 데이터를 데이터프레임으로 읽어오기
+## 제7장: 데이터를 데이터프레임으로 읽어오기
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -1049,7 +1049,7 @@ print(data_americas.describe())
 
 :::
 
-# 제8장: Pandas 데이터프레임
+## 제8장: Pandas 데이터프레임
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -1080,10 +1080,10 @@ print(data_americas.describe())
 import pandas as pd
 data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 
-# 위치 기반 선택 (0번째 행, 0번째 열)
+## 위치 기반 선택 (0번째 행, 0번째 열)
 print(data.iloc[0, 0])
 
-# 레이블 기반 선택 ('Albania' 행, 'gdpPercap_1952' 열)
+## 레이블 기반 선택 ('Albania' 행, 'gdpPercap_1952' 열)
 print(data.loc["Albania", "gdpPercap_1952"])
 ```
 
@@ -1093,10 +1093,10 @@ print(data.loc["Albania", "gdpPercap_1952"])
 - `loc` 슬라이싱은 **끝 레이블을 포함**한다는 점에 유의한다 (`iloc`은 끝 인덱스를 제외).
 
 ```python
-# 'Albania' 행의 모든 열 선택
+## 'Albania' 행의 모든 열 선택
 print(data.loc["Albania", :])
 
-# 'Italy'부터 'Poland'까지, 1962년부터 1972년까지 슬라이싱
+## 'Italy'부터 'Poland'까지, 1962년부터 1972년까지 슬라이싱
 subset = data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972']
 print(subset)
 ```
@@ -1116,7 +1116,7 @@ print(subset[mask])
 - `groupby()` 메서드를 사용하면 특정 기준에 따라 데이터를 그룹으로 분할하고 집계 통계량을 계산할 수 있다.
 
 ```python
-# 유럽 전체 평균보다 높은지 여부를 기준으로 그룹화
+## 유럽 전체 평균보다 높은지 여부를 기준으로 그룹화
 mask_higher = data > data.mean()
 wealth_score = mask_higher.aggregate('sum', axis=1) / len(data.columns)
 print(data.groupby(wealth_score).sum())
@@ -1174,7 +1174,7 @@ fourth.to_csv('result.csv')
 
 :::
 
-# 제9장: 그래프 그리기 (Plotting)
+## 제9장: 그래프 그리기 (Plotting)
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -1227,11 +1227,11 @@ import pandas as pd
 
 data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
 
-# 열 이름에서 접두어 제거 후 정수형 연도로 변환
+## 열 이름에서 접두어 제거 후 정수형 연도로 변환
 years = data.columns.str.replace('gdpPercap_', '')
 data.columns = years.astype(int)
 
-# 호주(Australia) 데이터 그래프 출력
+## 호주(Australia) 데이터 그래프 출력
 data.loc['Australia'].plot()
 ```
 
@@ -1331,14 +1331,14 @@ plt.ylabel('GDP per capita')
 
 :::
 
-# 제10장: 점심 시간
+## 제10장: 점심 시간
 
 ## 휴식 및 네트워킹
 
 - 오전 실습 내용을 복습하고 휴식을 취한다.
 - 오후에는 파이썬 리스트, 루프, 조건문, 파일 일괄 처리 및 함수 작성을 진행한다.
 
-# 제11장: 리스트 (Lists)
+## 제11장: 리스트 (Lists)
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -1402,7 +1402,7 @@ print(primes)  # [2, 3, 5, 7]
 
 ```python
 element = 'carbon'
-# element[0] = 'C'  # TypeError: 'str' object does not support item assignment
+## element[0] = 'C'  # TypeError: 'str' object does not support item assignment
 ```
 
 :::: {.callout-important title="연습 문제"}
@@ -1461,7 +1461,7 @@ element = 'carbon'
 
 :::
 
-# 제12장: For 루프
+## 제12장: For 루프
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -1515,7 +1515,7 @@ for i in range(3):
 - 반복문을 돌며 합계, 개수, 문자열 등을 누적하여 하나의 결과를 만드는 패턴이다.
 
 ```python
-# 1부터 10까지의 합 구하기
+## 1부터 10까지의 합 구하기
 total = 0
 for number in range(1, 11):
     total = total + number
@@ -1576,7 +1576,7 @@ print(message)
 
 :::
 
-# 제13장: 조건문
+## 제13장: 조건문
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -1712,7 +1712,7 @@ print('Min:', smallest, 'Max:', largest)
 
 :::
 
-# 제14장: 데이터 세트 순회하기
+## 제14장: 데이터 세트 순회하기
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -1848,7 +1848,7 @@ print('확장자:', p.suffix)
 
 :::
 
-# 제15장: 쉬는 시간
+## 제15장: 쉬는 시간
 
 ## 생각해 보기
 
@@ -1857,7 +1857,7 @@ print('확장자:', p.suffix)
 - 데이터 파일이 수백 개로 늘어났을 때 수작업 대비 `glob`과 루프의 장점은 무엇인가?
 - 자주 반복되는 데이터 분석 로직을 어떻게 더 깔끔하게 정리할 수 있을까?
 
-# 제16장: 함수 작성하기
+## 제16장: 함수 작성하기
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -1898,10 +1898,10 @@ def print_date(year, month, day):
     joined = f"{year}/{month}/{day}"
     print(joined)
 
-# 위치 인수 (Positional Arguments)
+## 위치 인수 (Positional Arguments)
 print_date(1871, 3, 19)
 
-# 키워드 인수 (Keyword Arguments)
+## 키워드 인수 (Keyword Arguments)
 print_date(month=3, day=19, year=1871)
 ```
 
@@ -2018,7 +2018,7 @@ print(iterate(0.5, 10, 1.0))
 
 :::
 
-# 제17장: 변수의 범위 (Scope)
+## 제17장: 변수의 범위 (Scope)
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -2047,7 +2047,7 @@ def adjust(t):
     return temperature
 
 print(adjust(20))
-# print(temperature)  # NameError: name 'temperature' is not defined
+## print(temperature)  # NameError: name 'temperature' is not defined
 ```
 
 ## 에러 트레이스백(Traceback) 분석 요령
@@ -2070,7 +2070,7 @@ def clip(value):
     return min(max(0, value), limit)
 
 print(clip(120))
-# print(value)
+## print(value)
 ```
 
 ::: {.callout-caution collapse="true" title="해답"}
@@ -2089,7 +2089,7 @@ print(clip(120))
 
 :::
 
-# 제18장: 프로그래밍 스타일
+## 제18장: 프로그래밍 스타일
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -2207,7 +2207,7 @@ transform_string('et cetera', 10)
 
 :::
 
-# 제19장: 마무리
+## 제19장: 마무리
 
 ::: {.callout-tip title="학습 목표"}
 
@@ -2242,7 +2242,7 @@ transform_string('et cetera', 10)
 
 :::
 
-# 제20장: 피드백
+## 제20장: 피드백
 
 ::: {.callout-tip title="학습 목표"}
 

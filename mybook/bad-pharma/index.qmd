@@ -1,8 +1,8 @@
 ---
 title: "제약사가 환자를 해치는 방법"
 author: "벤 골드크레(BEN GOLDACRE)"
+lang: ko
 ---
-
 # 1장: 누락된 데이터
 
 ## 스폰서가 원하는 결과를 얻는 방식
@@ -653,7 +653,7 @@ EU 옴부즈맨의 결론은 명확했는데, EMA는 왜 이 중요한 정보에
 
 이를 수정하고 정치적으로나 기술적으로 재판 데이터에 대한 접근을 강제할 수 있는 방법에 대한 아이디어가 있다면 작성하고 온라인에 게시하고 어디에서 찾을 수 있는지 알려주십시오.
 
-# 2장: 신약은 어디에서 오는가?
+## 2장: 신약은 어디에서 오는가?
 
 ## 의약품의 탄생 과정
 
@@ -795,7 +795,7 @@ CRO 세계의 상업적 현실을 엿볼 수 있는 창은 이러한 서비스�
 
 현실은 훨씬 더 복잡하다.
 
-# 3장: 부실한 규제 당국
+## 3장: 부실한 규제 당국
 
 ## 의약품 승인 절차
 
@@ -1100,7 +1100,7 @@ FDA는 이레사에서 새로운 환자를 시작해서는 안 된다는 편지�
 
 하지만 먼저, 우리는 어떤 시험이 얼마나 쓰레기일 수 있는지 봐야 한다.
 
-# 4장: 엉터리 임상시험
+## 4장: 엉터리 임상시험
 
 지금까지 나는 임상시험의 개념을 당연하게 받아들였는데, 마치 복잡한 것이 없는 것처럼, 당신은 단지 일부 환자를 데려가고, 그들을 반으로 나누고, 한 그룹에 한 가지 치료를 하고, 다른 그룹에 다른 치료를 하고, 잠시 후에 두 그룹 사이의 결과에 차이가 있는지 본다.
 
@@ -1468,7 +1468,7 @@ GSK는 랜에서 12개월간의 자료는 재판이사회가 분석한 유일한
 
 업계 지원 리뷰에서 회의가 없다는 것은 그들이 포함된 연구의 방법론적 단점을 논의하는 방식에서도 입증되었으며 종종 단순히 그렇지 않았다. 코크레인 리뷰는 시험이 편향의 위험에 처했는지 여부를 고려할 가능성이 훨씬 더 높았으며 업계 지원 연구는 이러한 단점을 고려했다. 이는 논술편의 논술화보다 과학논문의 결과가 훨씬 중요하다는 점을 현저하게 상기시켜 주는 것이다. 산업 자금의 편향이 학계의 세계에 매우 깊숙이 침투한다는 것도 놀라운 경고이다.
 
-# 5장: 더 크고 단순한 임상시험
+## 5장: 더 크고 단순한 임상시험
 
 그래서 우리는 의학에 매우 심각한 문제가 있다는 것을 확인했다. 우리는 모든 종류의 치명적인 결함으로 고통받는 심하게 설계된 시험을 가지고 있는데, 대표성이 없는 환자를 대상으로 수행되고, 너무 짧고, 잘못된 결과를 측정하고, 결과가 비정상적이면 누락되고, 어리석은 방법으로 분석되며, 종종 단순히 비용이나 인센티브 부족으로 인해 전혀 수행되지 않는다. 이러한 문제는 시장에 약을 출시하는 데 사용되는 시험과 나중에 수행되는 시험 모두에서 공포스럽게 일반적이며 모두 의사와 환자의 치료 결정을 안내한다. 어떤 사람들은 아마도 연구를 우리가 사용하는 치료법에 대한 공정한 테스트를 수행하기보다는 가능한 한 많이 피해 가려는 아이디어가 게임으로 보는 것처럼 느껴진다.
 
@@ -1554,7 +1554,7 @@ CRASH 시험은 심각한 두부 손상을 입은 환자가 아직 의식이 없
 
 그리고 원하면 고칠 수 있다.
 
-# 6장: 제약 마케팅의 실체
+## 6장: 제약 마케팅의 실체
 
 지금까지 우리는 의학에서 치료 선택을 안내하기 위해 수집된 증거가 피할 수 있는 엄청난 편견과 문제로 고통받고 있음을 확인했다. 그러나 그것은 이야기의 일부일 뿐이며, 이 제대로 수집되지 않은 증거는 혼란스럽고 편향된 시스템을 통해 전파되고 구현되며, 이는 전체 추가적인 과장과 오류 층을 추가한다.
 
@@ -2196,7 +2196,7 @@ ACCME가 인증하는 CME 제공자를 검토했을 때 4명 중 1명이 공개�
 4. The US Sunshine Act is a good starting model for legislation: companies will be compelled to declare who they gave money to, how much, and on what date; but also what drug the payment related to. This information, displayed by doctors in waiting rooms, would be just fine.
 5. Conflict-of-interest policies vary hugely between institutions, and have never been reviewed in the UK. In the US this work has been done by the American Medical Students Association. Its website, www.amsascorecard.org, is a model to us all: it grades over a hundred institutions on their conflict-of-interest policies for gifts, consulting, speaking, disclosure, samples, drug reps, industry support for education and so on, using a transparent methodology and giving a summary grade for each institution, from A to F. Honestly, I feel weepy when I look at it.
 
-# 후기: 더 나은 데이터를 위하여
+## 후기: 더 나은 데이터를 위하여
 
 당신은 압도감을 느낄 수 있으며 나는 당신을 비난할 수 없다. 잠시 시간을 내어 요약하고 업계 임원이 어떻게 자신을 방어할 것인지 생각해보고 문제를 해결하는 방법을 찾아야 한다.
 

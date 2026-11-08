@@ -2,8 +2,8 @@
 title: "생명정보학 실용 매뉴얼"
 author: "Sufang Wang, Michael Gribskov"
 date: 2026-08-24
+lang: ko
 ---
-
 ## 서문
 
 생명정보학(bioinformatics) 분야는 놀라운 속도로 발전하고 있다. 기계학습과 데이터과학의 최신 성과를 활용하는 새로운 분석 기법들이 빠르게 개발됨에 따라, 오늘날의 생물학자들은 자연계에서 가장 복잡한 시스템에 대해 놀라운 통찰을 얻고 있다. 생명정보학을 배우고자 하는 학생들이 점점 늘어나지만 기존의 생명정보학 교재 대부분은 이론 중심이라 대용량 생물학 데이터를 다루는 데 도움이 되는 실험 중심 매뉴얼은 드물다. 따라서 생명정보학 강의와 통합할 수 있는 실험 교재가 필요하며 그 시급성도 크다.
@@ -49,7 +49,7 @@ DNA, RNA, 단백질은 생명정보학의 원재료이다. 독자들이 이들 �
 
 전반적으로 생명정보학는 21세기의 가장 근본적인 학문 중 하나로, 생물학, 컴퓨터과학, 수학, 통계학, 물리학, 화학의 지식을 통합한다. 이 책에서는 생명정보학의 기본 개념과 서열 데이터 분석 방법을 소개하며 이는 많은 생명과학 분야의 학생들에게 도움이 될 것이다. 다루는 주요 주제는 상동(homologous) 유전자/단백질을 식별함으로써 배울 수 있는 것들에 중심을 둔다. 여기에는 상동성(homology) 개념, 서열 데이터베이스 검색, 다중서열정렬, 계통수, 서열 모티프(motif) 기반 기능 주석이 포함된다. 또한 차등유전자발현과 RNA-seq 분석에 자주 쓰이는 기계학습 방법도 간략히 다룬다.
 
-# 제2장 항생제 내성 입문
+## 제2장 항생제 내성 입문
 
 항생제 내성(antibiotic resistance), 또는 항균제 내성(antimicrobial resistance, AMR)은 오늘날 세계가 직면한 가장 심각한 의료 문제 중 하나이다. 세균 감염으로 인한 사망이 비교적 드물었던 지난 1세기 이후, 이제 우리는 증조부 시대, 즉 사망의 50% 이상이 세균 감염으로 인할 수 있던 시절로 되돌아갈 가능성을 마주하고 있다. 생명정보학는 항생제 내성 연구에서 매우 큰 역할을 한다. 내성 유전자를 식별하고, 내성 유전자의 기원과 항생제 내성 기전을 규명하며 때로는 대체 치료법을 찾는 데 활용될 수 있다. 이 장은 항생제 내성의 개념과 기전을 소개하며 이것이 생명정보학 분석이 생물학적 질문 해결에 어떻게 활용되는지 보여주는 예제로 사용된다.
 
@@ -149,7 +149,7 @@ DNA, RNA, 단백질은 생명정보학의 원재료이다. 독자들이 이들 �
 4. May M. How to fight antibiotic resistance. Nat Med. 2023;29(7):15836. https://doi.org/10.1038/d41591-023-00043-5.
 5. Overuse of Antibiotics on Farms. http://consumersunion.org/wp-content/uploads/2013/02/Overuse_of_Antibiotics_On_Farms.pdf
 
-# 제3장 진화와 상동성 입문
+## 제3장 진화와 상동성 입문
 
 진화와, 핵산 및 단백질 서열에서 드러나는 거대분자들 간의 관계는 서열분석의 토대이다. 진화 과정이 어떻게 작동하는지 이해하는 것이 서열을 비교하고 진화적 관계에 있는 서열을 식별하는 방법을 이해하는 열쇠이다. 유전자와 그것이 인코딩하는 단백질이 공통 조상으로부터 물려받아 진화로 인한 제한된 변화만을 겪었다는 사실은, 그런 유전자/단백질(상동유전자, homolog)들이 유사한 구조와 기능을 가짐을 의미한다. 따라서 유전자/단백질 서열이 상동(homologous)인지 판단하는 것은 생명정보학의 핵심 과제이다. 다시 말해 서열들이 상동인지를 결정하는 일은 관찰된 서열 유사도가 우연히 나타날 수 있는 수준이 아니라는 우리의 확신에 달려 있다. 이 장에서는 진화와 상동성 개념과, 유전자/단백질이 상동인지 판정하는 방법을 논의한다.
 
@@ -222,7 +222,7 @@ S_ab = I_ab / L, D_ab = (L − I_ab)/L = 1 − S_ab (3.1)
 3. Pearson WR. An introduction to sequence similarity ("homology") searching. Curr Protoc Bioinformatics. 2013;Chapter 3:3... https://doi.org/10.1002/0471250953.bi0301s.
 4. Koonin EV, Galperin MY. Chapter 2Evolutionary concept in genetics and genomics. In: Sequenceevolutionfunction: computational approaches in comparative genomics. Kluwer Academic; 2003. https://www.ncbi.nlm.nih.gov/books/NBK20255/#A.
 
-# 제4장 서열 준비하기
+## 제4장 서열 준비하기
 
 과학 정보는 매우 방대하고 상세해졌다. 수천 종의 생물에서 전장게놈서열이 결정되었고 유전자·단백질 조절, 예측 및 실험적으로 결정된 단백질 구조, 단백질-단백질 상호작용, 유전자/단백질 기능, 질병과의 관계 등 관련 데이터도 어마어마하게 쌓여 있다(몇 가지만 예로 든 것이다). 특정 유전자/단백질이나 과정과 관련된 정보를 찾는 일은 길고 지루한 과정일 수 있다. 다행히 가장 중요한 저장소들 대부분은 서로 연결(crosslink)되어 있지만 정보량 자체가 워낙 많아 원하는 것을 찾기 어려울 수 있다. 이 장에서는 항생제 콜리스틴(colistin)을 예로 들어, 콜리스틴과 그 작용 기전, 내성 기전에 대한 정보를 찾을 수 있는 몇 가지 유용한 자원을 살펴본다. 학생들은 비슷한 접근법으로 자신이 선택한 항생제(aoi, antibiotic of interest)에 관한 정보를 찾을 수 있다.
 
@@ -380,7 +380,7 @@ NCBI 데이터베이스에서 mcr-1 단백질 서열 내려받기
 
 1. For details on building PubMed queries: https://pubmed.ncbi.nlm.nih.gov/help/
 
-# 제5장 서열 비교 통계 탐구
+## 제5장 서열 비교 통계 탐구
 
 이전 장에서 학생들은 이미 aoi와 관련된 유전자 및 단백질 서열을 확보했다. 이들 유전자/단백질에 대해 진화적 관계 같은 더 많은 정보를 얻으려면 관련 유전자/단백질의 서열을 얻는 것이 유용하다. 상동체의 보존 영역이 분자의 구조와 기능과 밀접히 연관되어 있기 때문이다. 유전자들이 상동인지 판단하려면, 그 서열들이 우연히 기대되는 것보다 더 유사한지를 결정해야 한다.
 
@@ -475,7 +475,7 @@ NCBI 데이터베이스에서 mcr-1 단백질 서열 내려받기
 1. Koonin EV, Galperin MY. Chapter 2: Computational approaches in comparative genomics. In: Sequence evolution function. Boston: Kluwer Academic; 2003. https://www.ncbi.nlm.nih.gov/books/NBK20260/.
 2. Mitrophanov AY, Borodovsky M. Statistical significance in biological sequence analysis. Brief Bioinform. 2006;7(1):224. https://doi.org/10.1093/bib/bbk.
 
-# 제6장 BLAST로 상동서열 찾기
+## 제6장 BLAST로 상동서열 찾기
 
 가장 흔한 생명정보학 분석 중 하나는 관심 서열(soi, sequence of interest)에 상동인 단백질을 식별하는 것이다. soi가 새 게놈에서 온 신규 단백질일 수도 있는데, 이 경우 기능을 예측하려고 상동체를 찾는다. 또는 특정 기능을 가진 단백질이 얼마나 광범위하게 존재하는지 알고 싶은 경우도 있다. 이 장에서는 최근까지 널리 퍼진 내성이 거의 없던 몇 안 되는 항생제 중 하나였던 콜리스틴(유감스럽게도 더 이상 사실이 아니다)에 내성을 일으키는 단백질들의 상동체를 검색한다. 학생들은 2, 3장에서 aoi를 선택했을 것이므로 같은 방식으로 자신의 aoi 상동체를 식별해야 한다. 우리는 기본 국소정렬검색도구(basic local alignment search tool, BLAST)를 사용해 aoi의 상동체를 찾는다.
 
@@ -618,7 +618,7 @@ BLAST 메인 결과 페이지(a)에서 taxonomy reports 링크를 클릭한다. 
 1. The Statistics of Sequence Similarity Scores. https://www.ncbi.nlm.nih.gov/BLAST/tutorial/Altschul-1.html
 2. BLAST Glossary. https://www.ncbi.nlm.nih.gov/books/NBK62051/
 
-# 제7장 UniProt로 상동서열 찾기
+## 제7장 UniProt로 상동서열 찾기
 
 이전 실습에서 학생들은 단백질 서열 질의가 DNA 서열 질의보다 상동체 식별에 더 유리함을 관찰했을 것이다. 유니버설 단백질 자원(Universal Protein Resource, UniProt)은 유럽생물정보학연구소(EMBL-EBI), 스위스생물정보학연구소(SIB), 단백질정보자원(PIR)의 협력체로, 세계 최고 수준의 고품질·포괄적·무료 단백질 서열 및 기능 정보 자원이다. UniProt에는 단백질 서열 외에 유전학, 구조, 기능 정보도 들어 있다. 우리는 텍스트 검색과 서열 비교 기능을 모두 사용해 aoi 관련 단백질을 식별한다. 서열 비교(BLAST)로 서열을 찾는 것 외에, 넓은 분류학적 분포를 가진 서열을 원하는 경우가 있다. 그런 예가 10장에서 계통수로 항생제 내성의 수평전이를 살펴볼 때이다. 이 장에서는 UniProt로 넓은 분류 범위의 서열을 선택하는 방법을 배운다. UniProt은 널리 분포된 서열 집합을 찾는 대안으로 UniRef 데이터베이스도 제공한다.
 
@@ -769,7 +769,7 @@ OS = Aeromonas salmonicida (strain A449).
 
 1. Genome Taxonomy Database, Parks DH, Chuvochina M, Waite DW, Rinke C, Skarshewski A, Chaumeil PA, Hugenholtz P. A standardized bacterial taxonomy based on genome phylogeny substantially revises the tree of life. Nat Biotechnol. 2018;36(10):9961004. https://doi.org/10.1038/nbt..
 
-# 제8장 다중서열정렬
+## 제8장 다중서열정렬
 
 우리는 서열 정렬의 개념, 통계적 배경, 데이터베이스를 이미 소개했다. pairwise 서열 정렬 외에 다중서열정렬(multiple sequence alignment, MSA)은 뉴클레오티드 또는 단백질 서열 패밀리의 구조와 기능을 예측하는 데 쓸 수 있는 많은 정보를 제공한다. 단백질의 구조와 기능은 서열 진화를 제약한다. 단백질 구조·기능에 중요한 영역은 변화가 더 느리게 축적되는데, 선택이 비기능적 단백질을 가진 개체를 집단에서 제거하는 경향이 있기 때문이다(적합도에 영향을 주는 단백질이라고 가정). 따라서 MSA는 단백질의 중요한 기능 영역이 어디에 있는지에 대한 강력한 단서를 준다. 우리는 이미 Blast와 UniProt로 서열을 선택하는 방법을 배웠다(7장). 이 장에서는 선택된 서열들로 다중서열정렬을 만든다.
 
@@ -886,7 +886,7 @@ Clustal Omega
 4. Sievers F, Wilm A, Dineen D, Gibson TJ, Karplus K, Li W, Lopez R, McWilliam H, Remmert M, Söding J, Thompson JD, Higgins DG. Fast, scalable generation of high-quality protein multiple sequence alignments using Clustal Omega. Mol Syst Biol. 2011;7:539. https://doi.org/10.1038/msb...
 5. Sievers F, Higgins DG. Clustal omega. Curr Protoc Bioinformatics. 2014;48:3..... https://doi.org/10.1002/0471250953.bi0313s.
 
-# 제9장 보존된 서열 모티프 식별
+## 제9장 보존된 서열 모티프 식별
 
 서열 모티프(motif)는 생물학적 서열의 핵심 구성요소로, 단백질 기능과 그 조절에 중요한 보존 패턴을 나타낸다. 모티프는 DNA에서도 발생하며 전사 프로모터와 종결자 같은 조절 요소와 흔히 연관된다. 이 장에서는 보존된 서열 모티프를 식별하고 단백질의 3차 구조와 보존 서열 모티프 사이의 관계를 살펴본다.
 
@@ -1051,7 +1051,7 @@ aoi 활성부위 6Å 이내의 아미노산 잔기와 이들이 보존 서열 �
 
 1. Proteins: secondary structure and fibrous proteins. http://cbc.arizona.edu/classes/bioc462/462a/NOTES/Protein_Structure/secondary_structure.htm
 
-# 제10장 계통수 작성
+## 제10장 계통수 작성
 
 이 장에서는 여러 종의 세균에서 온 당신의 aoi 유전자 패밀리 서열로 계통수(phylogenetic tree)를 만들고 이 서열 기반 트리를 세균의 알려진 분류와 비교한다. 실제 연구라면 유전자의 뉴클레오티드 서열을 쓰겠지만 단순화를 위해 이 실습에서는 단백질 서열을 사용한다. 단백질 서열은 모호함 없이 정렬하기 쉽고 GC 함량 차이 같은 함정(red herrings)을 걱정할 필요가 없다. 덕분에 트리 작성이 더 단순해진다. 거리기반(distance-based) 간단한 방법으로 트리를 만든다. 아주 먼 종들의 서열이 트리에서 본래보다 가깝게 나타나면 그것은 수평적 유전자 전이의 좋은 증거이다.
 
@@ -1167,7 +1167,7 @@ TreeDyn으로 계통수 라벨을 해당 문 또는 강별로 색칠할 수 있�
 
 1. http://evolution.berkeley.edu/evolibrary/article/evo_03 진화 분석과 계통수 기초에 대한 온라인 입문 자료.
 
-# 제11장 RNA-Seq 데이터를 이용한 유전자 발현 분석
+## 제11장 RNA-Seq 데이터를 이용한 유전자 발현 분석
 
 유전자 발현(gene expression)은 DNA에서 메신저 RNA로의 전사와 그에 이은 단백질 번역으로 정의할 수 있다. 차세대 시퀀싱(next-generation sequencing, NGS) 기술의 발전으로 생물의 게놈과 전사체(transcriptome)의 완전한 서열을 빠르게 결정하는 것이 가능해졌다. RNA 시퀀싱(RNA-Seq)은 새로운 전사체 변이체와 스플라이스 부위를 발견하거나, 유전자 발현 분석을 위해 mRNA를 정량화할 수 있다. 암묵적으로, mRNA 전사물들이 생물의 단백질 전체 집합을 인코딩하므로 그 생물의 프로테옴도 얻을 수 있다. RNA-seq는 생물학 실험실에서 유전자 발현을 연구하는 강력한 도구가 되었다. 그러나 이런 고속처리 시퀀싱 데이터의 분석에는 일정 수준의 프로그래밍 능력과 통계 지식이 필요하다. 이 장에서는 RNA-seq 분석의 기본 단계, 다중검정 문제(multiple testing problem), R 소프트웨어로 차등발현유전자(differentially expressed genes)를 분석하는 방법을 소개한다.
 
@@ -1230,12 +1230,12 @@ RNA-Seq 실험은 실험 설계에 매우 민감하다. 반드시 실험 설계�
 R 콘솔을 열고 아래 명령을 입력하라
 
 ```r
-# Read dataset
-# Pay attention to the slash direction in the file path. The default slash in windows computer is
-# toward right, you need to change as shown below. "PathToData" means the directory where you save
-# "raw.genes.matrix". Please make sure you put the actual path in below command to read the data.
-# read the data in an object called data1
-# The count data will be read in and stored in the matrix mycountData.
+## Read dataset
+## Pay attention to the slash direction in the file path. The default slash in windows computer is
+## toward right, you need to change as shown below. "PathToData" means the directory where you save
+## "raw.genes.matrix". Please make sure you put the actual path in below command to read the data.
+## read the data in an object called data1
+## The count data will be read in and stored in the matrix mycountData.
 data1 <-read.delim("/PathToData/raw.genes.matrix", stringsAsFactors=F, row.names=1)
 head(data1)
 dim(data1)
@@ -1246,45 +1246,45 @@ head(mycountData)
 ## 11. 실습 2: DESeq2로 단일인자 설계 DEG 식별
 
 ```r
-# DESeq2
-# http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html
-# Please follow the instructions from the link above to install the DESeq2 package
-# after installation, load the package
+## DESeq2
+## http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html
+## Please follow the instructions from the link above to install the DESeq2 package
+## after installation, load the package
 library(DESeq2)
-# give the conditions for each column, in our example data, the first three are control groups,
-# then three experimental groups
+## give the conditions for each column, in our example data, the first three are control groups,
+## then three experimental groups
 mycolData <-data.frame(row.names = colnames( mycountData ),
                        condition = c( "control","control","control","exp","exp","exp" ))
-# generate the data object with the experimental design
+## generate the data object with the experimental design
 mydds <-DESeqDataSetFromMatrix(countData = mycountData,
                                colData = mycolData,
                                design = ~condition)
-# pre-filtering, filter the genes that have too few reads
+## pre-filtering, filter the genes that have too few reads
 sumcontrol<-rowSums(mycountData[,1:3])
 sumexp <-rowSums(mycountData[,4:6])
 plot(log10(sumcontrol),log10(sumexp))
-# from the plot, you can see there are some genes that have the reads only in one condition,
-# since we used log10 as the base, in our case, the pre-filtering threshold is set as 100
+## from the plot, you can see there are some genes that have the reads only in one condition,
+## since we used log10 as the base, in our case, the pre-filtering threshold is set as 100
 mydds <-mydds[ rowSums(counts(mydds)) > 100, ]
 mydds$condition <-factor(mydds$condition, levels=c("control","exp"))
 mydds <-DESeq(mydds)
 myres <-results(mydds)
 head(myres)
-# Determine threshold, which means how many differentially expressed genes (DEG) will be
-# kept. We use a combination of adjusted P-value and Log2FC as the filtering conditions.
-# Sometimes, the number of DEG can be thousands, sometimes only 10 or 20, it depends on
-# the experimental design and sequencing results. There is no standard or fixed threshold
-# for DEG, therefore, we need to try different thresholds to see which one gives the
-# reasonable number of DEG.
+## Determine threshold, which means how many differentially expressed genes (DEG) will be
+## kept. We use a combination of adjusted P-value and Log2FC as the filtering conditions.
+## Sometimes, the number of DEG can be thousands, sometimes only 10 or 20, it depends on
+## the experimental design and sequencing results. There is no standard or fixed threshold
+## for DEG, therefore, we need to try different thresholds to see which one gives the
+## reasonable number of DEG.
 resSig <-subset(myres, (padj <= 0.05 & abs(log2FoldChange) >= 1))
 dim(resSig)
-# it shows this
-# [1] 472 6
+## it shows this
+## [1] 472 6
 resdata <-merge(as.data.frame(resSig),
                 as.data.frame(counts(mydds, normalized=FALSE)),
                 by="row.names",sort=FALSE)
 head(resdata)
-# save results in a file called DEG.csv
+## save results in a file called DEG.csv
 write.table(resdata,file="/PathToData/DEG.csv",sep=",")
 ```
 
@@ -1292,8 +1292,8 @@ write.table(resdata,file="/PathToData/DEG.csv",sep=",")
 
 ```r
 plot(myres$log2FoldChange ,-log10(myres$padj))
-# x axis: log-fold change (biological significance)
-# y axis: -log10(adjusted p-value) (statistical significance)
+## x axis: log-fold change (biological significance)
+## y axis: -log10(adjusted p-value) (statistical significance)
 ```
 
 ## 11. 분석/노트북
@@ -1310,7 +1310,7 @@ plot(myres$log2FoldChange ,-log10(myres$padj))
 6. False discovery rate: simple definition, adjusting for FDR. https://www.statisticshowto.com/false-discovery-rate/
 7. The Benjamini-Hochberg procedure (FDR) and P-value adjusted explained. https://www.r-bloggers.com/2023/07/the-benjamini-hochberg-procedure-fdr-and-p-value-adjusted-explained/
 
-# 제12장 RNA-Seq에서의 기계학습 방법
+## 제12장 RNA-Seq에서의 기계학습 방법
 
 특정 유전자들이 왜 차등발현되는지 즉시 이해하기란 종종 어렵다. DEG를 식별한 후에는 유사하게 반응하는 유전자 그룹 또는 어떤 생물학적 네트워크가 영향을 받는지 파악하고 싶어진다. 우리는 더 분석하기 위해 기계학습(machine learning) 방법을 사용한다. 기계학습은 컴퓨터가 인간의 행동을 모방하거나 학습하여 지식이나 기술을 습득하고, 정보를 재구성하고, 구조화하는 연구 분야이다. 컴퓨터과학, 통계학, 확률론 등이 얽힌 학제간 분야이다. 빅데이터 시대에 데이터 분석 수요가 계속 늘어나면서 기계학습을 통해 효율적으로 지식을 획득하는 것이 연구와 산업의 주요 과제 중 하나가 되었다.
 
@@ -1389,36 +1389,36 @@ PCA의 유용한 용도 하나는 처치군의 반복들이 실제로 유사하�
 R 콘솔을 열고 아래 명령을 입력하라.
 
 ```r
-# Create an example data matrix with six samples, each with three gene expression values
-# the expression level of gene2 is 8 units higher that of gene1 with a small random amount
-# (0.0 - 1.0) added
+## Create an example data matrix with six samples, each with three gene expression values
+## the expression level of gene2 is 8 units higher that of gene1 with a small random amount
+## (0.0 - 1.0) added
 sample1 <-c(2,0,3)
 sample2 <-c(1,0,5)
 sample3 <-c(3,0,4)
 sample4 <-c(6,0,4)
 sample5 <-c(5,0,5)
 sample6 <-c(7,0,5)
-# create a dataframe with six samples
+## create a dataframe with six samples
 df <-data.frame( sample1, sample2, sample3, sample4, sample5, sample6,
                  row.names=c('gene1', 'gene2', 'gene3'))
 df['gene2',] <-df['gene1',] + 8 + runif(n=1, min=0, max=1)
-# look at what df is
+## look at what df is
 df
-# plot the expression of each gene in a different color. First plot gene1, then add lines for gene
-# 2 and gene3, and the legend
+## plot the expression of each gene in a different color. First plot gene1, then add lines for gene
+## 2 and gene3, and the legend
 plot(x=1:6, df['gene1',], type="l", col="red",lwd=3, ylim=c(0,20),
      xlab="Samples", ylab="Expression", main="Gene Expression")
 lines(x=1:6,df['gene2',],col="blue",lwd=3)
 lines(x=1:6,df['gene3',],col="green",lwd=3)
 legend("topright", col=c("red","blue","green"), paste("gene",1:3, sep=""),
        lty=1, lwd=3, cex=1.0)
-# plot heatmap with clustering in both dimensions.
-# Options:
-# scale = "row" or "column" -> normalize the data across rows or column
-# clustering_distance_rows_"euclidean", "correlation", "manhattan" -> distance between items
-# clustering_distance_columns_"euclidean", "correlation", "manhattan" -> distance between
-# items
-# clustering_method = "average", "ward.D2", "complete" -> method for forming clusters
+## plot heatmap with clustering in both dimensions.
+## Options:
+## scale = "row" or "column" -> normalize the data across rows or column
+## clustering_distance_rows_"euclidean", "correlation", "manhattan" -> distance between items
+## clustering_distance_columns_"euclidean", "correlation", "manhattan" -> distance between
+## items
+## clustering_method = "average", "ward.D2", "complete" -> method for forming clusters
 library(pheatmap)
 pheatmap(as.matrix(df), scale="none",
          clustering_distance_rows="euclidean",
@@ -1435,31 +1435,31 @@ pheatmap(as.matrix(df), scale="none",
 ## 12. 실습 2: 전체 유전자를 사용한 주성분분석
 
 ```r
-# prcomp-based on singular value decomposition
-# type use ?prcomp for more information
-# read data
+## prcomp-based on singular value decomposition
+## type use ?prcomp for more information
+## read data
 data1 <-read.delim("/PathToData/raw.genes.matrix", stringsAsFactors=F, row.names=1)
 head(data1)
 dim(data1)
-# transpose data so that rows are samples, columns are features/genes. This will produce a
-# PCA plot of samples vs samples. Three different versions of the data are created:
-# dataT - original complete data
-# dataT2 - only the genes where the sum of the expression across all samples is > 0.1
-# dataT3 - log-transformed version of dataT2
+## transpose data so that rows are samples, columns are features/genes. This will produce a
+## PCA plot of samples vs samples. Three different versions of the data are created:
+## dataT - original complete data
+## dataT2 - only the genes where the sum of the expression across all samples is > 0.1
+## dataT3 - log-transformed version of dataT2
 dataT <-t(data1)
 dataT2 <-dataT[, colSums(dataT != 0) > 0.1]
 dataT3 <-log10(dataT2+1)
-# in the following section do the analysis with each of the three datasets dataT, dataT2 and
-# dataT3
+## in the following section do the analysis with each of the three datasets dataT, dataT2 and
+## dataT3
 pca <-prcomp(dataT3, scale.=TRUE)
 summary(pca)
-# scree plots are used to examine the amount of the variance represent by each principal
-# component (transformed axis)
+## scree plots are used to examine the amount of the variance represent by each principal
+## component (transformed axis)
 barplot(pc$sdev^2/sum(pc$sdev^2), xlab="principal component", ylab="% of variance")
-# cumulative variance
+## cumulative variance
 barplot(cumsum(pc$sdev^2/sum(pc$sdev^2)), xlab="principal component",
         ylab="cumulative % of variance")
-# PCA plot
+## PCA plot
 myColor <-rep(NA,nrow(dataT3))
 myColor[1:3] <-"red"
 myColor[4:6] <-"blue"
@@ -1470,7 +1470,7 @@ legend("topleft",pch=16,col=c("red","blue"), c("control","exp"))
 ## 12. 실습 3: DEG를 사용한 주성분분석
 
 ```r
-# read data
+## read data
 data2<-read.delim("/PathToData/DEG.csv" ,stringsAsFactors=F,row.names=1,sep=",")
 head(data2)
 dim(data2)
@@ -1479,12 +1479,12 @@ dataT2 <- dataT[, colSums( dataT != 0) > 0.1]
 dataT3 <-log10(dataT2+1)
 pc2 <-prcomp(dataT3,scale.=TRUE )
 summary(pc2)
-# scree plot
+## scree plot
 barplot(pc2$sdev^2/sum(pc2$sdev^2),xlab="principal component",ylab="% of variance")
-# cumulative variance
+## cumulative variance
 barplot(cumsum(pc2$sdev^2/sum(pc2$sdev^2)),xlab="principal component",
         ylab="cumulative % of variance")
-# score plot
+## score plot
 myColor <-rep(NA ,nrow(dataT3))
 myColor[1:3] <-"red"
 myColor[4:6] <-"blue"
@@ -1496,7 +1496,7 @@ legend("topleft",pch=16,col=c("red","blue"),legend=c("control","exp"), cex=0.9)
 그림은 JPEG 형식 또는 TIFF 형식으로 저장할 수도 있다.
 
 ```r
-# save figure in jpeg format
+## save figure in jpeg format
 jpeg(filename="/PathToFig/Fig_PCA.jpeg" , width=5400, height=5400, res=900)
 par(mar = c(5,5,4,2) + 0.2)
 plot(pc2$x[,1:2],col=myColor, pch=16,cex=2,main="PCA" ,xlab="PC1" ,

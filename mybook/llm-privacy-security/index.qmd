@@ -2,8 +2,8 @@
 title: "LLM 프라이버시와 보안"
 subtitle: "개인화 AI를 위한 실전 프라이버시 보호 기법"
 author: "Baihan Lin"
+lang: ko
 ---
-
 
 # 1장 소개
 
@@ -88,7 +88,7 @@ LLM은 학습 데이터에 있던 편향을 물려받아 증폭시켜 차별적�
 
 LLM에서 프라이버시와 보안이 왜 중요한지 확인했으니, 이제 이 모델들이 실제로 어떻게 작동하는지 이해할 차례입니다. 다음 장에서는 대규모 언어 모델의 기술적 기반을 들여다보며 아키텍처와 학습 과정, 그리고 인상적인 능력과 고유한 취약점을 동시에 만들어내는 특성들을 탐구합니다.
 
-# 2장 대규모 언어 모델 이해하기
+## 2장 대규모 언어 모델 이해하기
 
 최근 몇 년간 대규모 언어 모델(LLM)은 자연어 처리(NLP) 분야의 획기적인 기술로 떠올랐습니다. 이 강력한 모델들은 기계가 인간 언어를 이해하고 생성하며 다루는 방식을 바꿔 놓았고, 언어 번역, 텍스트 요약, 질의응답, 콘텐츠 제작 같은 폭넓은 응용을 가능하게 했습니다. 이 장에서는 LLM의 기초를 탐구하면서 아키텍처, 사전 학습 기법, 평가 지표, 그리고 개발과 배포에 따른 프라이버시·보안 평가를 깊이 살펴봅니다.
 
@@ -782,7 +782,7 @@ RAG 시스템은 전통적 LLM에는 없는 새로운 프라이버시·보안 �
 
 이후 장에서 보겠지만, 사전 학습·파인튜닝 기법을 사용할 때는 학습 데이터(민감한 정보, 개인 정보, 기밀 정보를 담고 있을 수 있습니다)의 프라이버시·보안 함의를 고려하는 것이 결정적입니다. 제대로 처리하지 못하면 이 정보가 모델에 기억되어 추론이나 생성 중에 누출될 수 있습니다.
 
-# 3장 LLM의 프라이버시·보안 위험 평가하기
+## 3장 LLM의 프라이버시·보안 위험 평가하기
 
 수다스러운 AI 친구들의 알고리즘적 해부 구조를 익혔으니, 이제 이들을 실세계라는 어두운 숲으로 인도할 준비가 되었다. 탐정 모자를 쓰고 이 AI 수다쟁이들이 프라이버시 침해와 보안 공격에 얼마나 취약한지 평가하는 법을 배우게 된다. AI 친구들의 건강 검진이라 생각하면 된다. 혈압을 재는 대신 비밀을 지키고 디지털 말썽꾸러기들을 막아내는 능력을 측정하는 것이다.
 
@@ -1433,7 +1433,7 @@ def dynamic_perplexity_threshold(perplexities_non_training, margin=0.1):
 
 ```python
 
-# Perplexities for nontraining data
+## Perplexities for nontraining data
 non_training_perplexities = [12.3, 11.7, 13.1, 10.8]
 dynamic_threshold = dynamic_perplexity_threshold(non_training_perplexities)
 ```
@@ -1784,14 +1784,14 @@ LLMPrivacySecurityEvaluator는 프라이버시·보안 개념을 이해하도록
 ```python
 print("Welcome to the LLM Privacy & Security Clinic!")
 
-# Initialize the evaluator with a model
+## Initialize the evaluator with a model
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("google/gemma-1.1-2b-it")
 model = AutoModelForCausalLM.from_pretrained("google/gemma-1.1-2b-it").to("cuda")
 evaluator = LLMPrivacySecurityEvaluator(model, tokenizer)
 
-# Privacy Evaluation: Simulate checking if sensitive information is at risk
+## Privacy Evaluation: Simulate checking if sensitive information is at risk
 print("\nPrivacy Evaluation:")
 sensitive_data = [
     "My secret pizza recipe includes pineapple",
@@ -1800,7 +1800,7 @@ sensitive_data = [
 privacy_score = evaluator.evaluate_privacy(sensitive_data[0], sensitive_data[1])
 print(f"Privacy Score: {privacy_score} (lower is better)")
 
-# 보안 평가: 무단 정보를 제공하는 데 모델이 얼마나 취약한지 테스트하기
+## 보안 평가: 무단 정보를 제공하는 데 모델이 얼마나 취약한지 테스트하기
 
 print("\nSecurity Evaluation:")
 test_cases = [
@@ -1810,16 +1810,16 @@ test_cases = [
 security_score = evaluator.evaluate_security(test_cases[0][0], test_cases[0][1])
 print(f"Security Score: {security_score} (higher is better)")
 
-# 멤버십 추론 테스트: 특정 텍스트가 모델의 학습 데이터셋에
+## 멤버십 추론 테스트: 특정 텍스트가 모델의 학습 데이터셋에
 
-# 포함되어 있었는지 검사
+## 포함되어 있었는지 검사
 
 print("\nMembership Inference Test:")
 text = "This is a super secret text that might be in the training data."
 membership_prob = evaluator.simulate_membership_inference(text)
 print(f"Probability of membership: {membership_prob:.4f}")
 
-# 데이터 추출 테스트: 민감한 정보를 모델에서 빼낼 수 있는지 확인
+## 데이터 추출 테스트: 민감한 정보를 모델에서 빼낼 수 있는지 확인
 
 print("\nData Extraction Test:")
 prompt = "What's the capital of France? Hint: It starts with P"
@@ -1827,7 +1827,7 @@ target_info = "Paris"
 extraction_rate = evaluator.simulate_data_extraction(prompt, target_info)
 print(f"Data Extraction Success Rate: {extraction_rate:.4f}")
 
-# 진단 마무리
+## 진단 마무리
 
 print("\nCheckup complete! Thanks for visiting the LLM Privacy & Security " "Clinic!")
 ```
@@ -1976,7 +1976,7 @@ LLM 취약점을 제대로 이해하려면 앞서 말한 공개 벤치마크 외
 
 프라이버시와 보안 위험을 평가하는 포괄적 방법을 갖췄으니, 이제 진단에서 치료로 나아갈 준비가 되었습니다. 다음 장에서는 이런 보호 장치를 처음부터 모델에 직접 내장할 수 있게 해 주는 프라이버시 보존 학습 기법을 다룹니다. AI 보안에서도 예방 한 방이 치료 열 방을 이기기 때문입니다.
 
-# 4장 프라이버시 보존 학습 기법
+## 4장 프라이버시 보존 학습 기법
 
 지금까지의 여정에서 우리는 LLM을 만드는 법과, 프라이버시 및 보안이라는 건강 상태 측면에서 모델을 올바르게 평가하는 법을 배웠습니다. 이제는 이런 보호 장치를 모델에 직접 내장해서 AI 친구들을 건강하게 유지하는 법을 배울 차례입니다. 이 장에서는 민감한 정보로 AI를 학습시키면서도 그 정보를 밖으로 새지 않게 하는 기법군을 탐구합니다.
 
@@ -2000,13 +2000,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
-# 시뮬레이션 환자 데이터 (연령, 혈압, 콜레스테롤, 진단)
+## 시뮬레이션 환자 데이터 (연령, 혈압, 콜레스테롤, 진단)
 
 np.random.seed(42)
 data = np.random.rand(1000, 3)
 labels = (data[:, 0] + data[:, 1] + data[:, 2] > 1.5).astype(int)
 
-# '독특한' 환자 몇 명 추가
+## '독특한' 환자 몇 명 추가
 
 unique_patients = np.array([
     [0.1, 0.1, 0.1, 0],  # Alice
@@ -2015,18 +2015,18 @@ unique_patients = np.array([
 data = np.vstack([data, unique_patients[:, :3]])
 labels = np.concatenate([labels, unique_patients[:, 3]])
 
-# 간단한 모델 학습
+## 간단한 모델 학습
 
 X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.2)
 model = LogisticRegression()
 model.fit(X_train, y_train)
 
-# 모델 테스트
+## 모델 테스트
 
 accuracy = accuracy_score(y_test, model.predict(X_test))
 print(f"Model accuracy: {accuracy:.2f}")
 
-# Alice와 Bob에 대한 정보 추출 시도
+## Alice와 Bob에 대한 정보 추출 시도
 
 alice = np.array([[0.1, 0.1, 0.1]])
 bob = np.array([[0.9, 0.9, 0.9]])
@@ -2058,18 +2058,18 @@ Probability for Bob: [4.20101535e-04 9.99579898e-01]
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-# 토크나이저와 모델 초기화
+## 토크나이저와 모델 초기화
 tokenizer = AutoTokenizer.from_pretrained('google/gemma-1.1-2b-it')
 model = AutoModelForCausalLM.from_pretrained('google/gemma-1.1-2b-it')
 
-# 시뮬레이션된 민감 학습 데이터
+## 시뮬레이션된 민감 학습 데이터
 sensitive_data = [
     "Alice's Social Security number is 987-65-4321.",
     "Bob's credit card number is 5678-9012-3456-7890.",
     "Charlie's password is '987password321'.",
 ]
 
-# 민감 데이터로 모델 파인튜닝
+## 민감 데이터로 모델 파인튜닝
 model.train()
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-5)
 
@@ -2087,7 +2087,7 @@ for epoch in range(5):
 
 print("Model fine-tuned on sensitive data.")
 
-# 이제 민감 정보 추출을 시도해 본다
+## 이제 민감 정보 추출을 시도해 본다
 def generate_text(prompt, max_length=20):
     input_ids = tokenizer.encode(prompt, return_tensors='pt')
     output = model.generate(
@@ -2096,13 +2096,13 @@ def generate_text(prompt, max_length=20):
     )
     return tokenizer.decode(output[0], skip_special_tokens=True)
 
-# Alice의 SSN 추출 시도
+## Alice의 SSN 추출 시도
 print(generate_text("Alice's Social Security number is"))
 
-# Bob의 신용카드 번호 추출 시도
+## Bob의 신용카드 번호 추출 시도
 print(generate_text("Bob's credit card number is"))
 
-# Charlie의 비밀번호 추출 시도
+## Charlie의 비밀번호 추출 시도
 print(generate_text("Charlie's password is"))
 ```
 
@@ -2148,7 +2148,7 @@ import torch
 model_id = "unsloth/Llama-3.2-1B"
 tokenizer = AutoTokenizer.from_pretrained(model_id, use_fast=True)
 
-# 중요: Llama 모델에는 기본 pad 토큰이 없음
+## 중요: Llama 모델에는 기본 pad 토큰이 없음
 tokenizer.pad_token = tokenizer.eos_token
 
 model = AutoModelForCausalLM.from_pretrained(
@@ -2156,10 +2156,10 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 model.config.use_cache = False  # 학습 안정성을 위해 캐시 비활성화
 
-# HuggingFace datasets으로 로드
+## HuggingFace datasets으로 로드
 dataset = load_dataset('text', data_files={'train': 'sensitive_data.txt'})
 
-# 데이터셋 토크나이즈
+## 데이터셋 토크나이즈
 def tokenize_function(examples):
     return tokenizer(
         examples['text'], truncation=True, padding='max_length', max_length=128
@@ -2181,7 +2181,7 @@ training_args = TrainingArguments(
     logging_steps=1, save_total_limit=2,
 )
 
-# 모델 파인튜닝
+## 모델 파인튜닝
 trainer = Trainer(
     model=model, args=training_args,
     train_dataset=tokenized_dataset['train'],
@@ -2190,7 +2190,7 @@ trainer = Trainer(
 trainer.train()
 print("Model fine-tuned on sensitive data.")
 
-# 추론과 추출 리스크 데모
+## 추론과 추출 리스크 데모
 def generate_text(prompt, max_length=20):
     input_ids = tokenizer.encode(prompt, return_tensors='pt').to(model.device)
     attention_mask = torch.ones_like(input_ids)
@@ -2263,7 +2263,7 @@ def generate_synthetic_data(n_users=10, n_entries_per_user=5):
             user_data.append(user_info)
     return user_data
 
-# 사용자 100명, 각 5개 항목의 합성 데이터 생성
+## 사용자 100명, 각 5개 항목의 합성 데이터 생성
 synthetic_data = generate_synthetic_data()
 ```
 
@@ -2361,18 +2361,18 @@ LLM 학습에 차등 프라이버시를 적용하는 가장 실용적인 길은 
 Opacus를 활용한 실용적 구현입니다:
 
 ```python
-# 사전학습 모델과 토크나이저 로드
+## 사전학습 모델과 토크나이저 로드
 device = "cuda"
 model_name = "google/gemma-1.1-2b-it"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name).to(device)
 
-# 프라이버시 매개변수 정의
+## 프라이버시 매개변수 정의
 epsilon = 1.0
 delta = 1e-5
 max_grad_norm = 1.0
 
-# 학습 데이터 준비 (합성 데이터 사용 예)
+## 학습 데이터 준비 (합성 데이터 사용 예)
 import random
 synthetic_data = [
     tokenizer(
@@ -2383,18 +2383,18 @@ synthetic_data = [
 ]
 input_ids = torch.cat([d["input_ids"] for d in synthetic_data])
 
-# CausalLM에서는 labels가 input_ids와 같다고 가정
+## CausalLM에서는 labels가 input_ids와 같다고 가정
 labels = torch.cat([d["input_ids"] for d in synthetic_data])
 dataset = TensorDataset(input_ids, labels)
 train_dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
 
-# 프라이버시 엔진 생성
+## 프라이버시 엔진 생성
 privacy_engine = PrivacyEngine()
 
-# make_private 호출 전에 모델을 학습 모드로 설정
+## make_private 호출 전에 모델을 학습 모드로 설정
 model.train()  # 학습 모드 활성화를 위한 라인
 
-# 모델과 옵티마이저를 프라이빗하게 만들기
+## 모델과 옵티마이저를 프라이빗하게 만들기
 model, optimizer, train_dataloader = privacy_engine.make_private(
     module=model,
     optimizer=torch.optim.AdamW(model.parameters(), lr=1e-5),
@@ -2405,7 +2405,7 @@ model, optimizer, train_dataloader = privacy_engine.make_private(
 ```
 
 ```python
-# 학습 루프
+## 학습 루프
 num_epochs = 3  # 학습 에폭 수 정의
 for epoch in range(num_epochs):
     for batch in train_loader:
@@ -2417,7 +2417,7 @@ for epoch in range(num_epochs):
         loss.backward()
         optimizer.step()
 
-# 프라이버시 예산 확인
+## 프라이버시 예산 확인
 epsilon = privacy_engine.get_epsilon(delta=delta)
 print(f"The current privacy budget is: (ε = {epsilon:.2f}, δ = {delta})")
 ```
@@ -2541,16 +2541,16 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import copy
 
-# 글로벌 모델과 토크나이저 초기화
+## 글로벌 모델과 토크나이저 초기화
 global_model = AutoModelForCausalLM.from_pretrained('google/gemma-1.1-2b-it')
 tokenizer = AutoTokenizer.from_pretrained('google/gemma-1.1-2b-it')
 
-# Alice와 Bob의 시뮬레이션 로컬 데이터셋
-# 실제로는 이 데이터셋들이 별도 기기나 위치에 보관됨
+## Alice와 Bob의 시뮬레이션 로컬 데이터셋
+## 실제로는 이 데이터셋들이 별도 기기나 위치에 보관됨
 alice_data = torch.tensor([[1, 2, 3, 4, 5]])  # 더미 데이터
 bob_data = torch.tensor([[6, 7, 8, 9, 10]])  # 더미 데이터
 
-# DataLoader 정의
+## DataLoader 정의
 alice_loader = DataLoader(TensorDataset(alice_data), batch_size=1)
 bob_loader = DataLoader(TensorDataset(bob_data), batch_size=1)
 ```
@@ -2598,7 +2598,7 @@ def train_locally(client_name, local_model, data_loader, learning_rate=1e-5, epo
     return updates, total_loss
 
 
-# 각 로컬 클라이언트의 학습이 끝나면 연합 평균으로 갱신값을 집계합니다:
+## 각 로컬 클라이언트의 학습이 끝나면 연합 평균으로 갱신값을 집계합니다:
 def federated_averaging(global_model, updates_list, weights=None):
     """Aggregate model updates using weighted averaging."""
     if weights is None:
@@ -2628,7 +2628,7 @@ def federated_averaging(global_model, updates_list, weights=None):
 
 
 ```python
-# 연합 학습 루프
+## 연합 학습 루프
 for round_num in range(10):
     print(f"\nFederated Round {round_num+1}")
 
@@ -2702,20 +2702,20 @@ f(E(x1), E(x2), ..., E(xn)) = E(f(x1, x2, ..., xn))
 Paillier라는 부분 동형 암호 스킴을 제공하는 phe 라이브러리로 단순화된 예제를 구현해 봅니다. 단순화된 예제이며 LLM을 위한 HE의 완전한 구현은 아님에 유의하십시오. FHE는 연산량이 방대해서 phe 라이브러리로 더 간단한 예제를 진행합니다:
 
 ```python
-# 모델 매개변수 암호화 (간소화: 작은 부분집합만 암호화)
+## 모델 매개변수 암호화 (간소화: 작은 부분집합만 암호화)
 encrypted_params = [
     [public_key.encrypt(float(x)) for x in p.data.numpy().flatten()]
     for p in model.parameters()
 ]
 
-# 암호화된 입력 데이터 시뮬레이션
+## 암호화된 입력 데이터 시뮬레이션
 input_data = np.random.rand(5, 768)  # 768은 임베딩 차원으로 가정
 encrypted_input = [
     [public_key.encrypt(float(x)) for x in row]
     for row in input_data
 ]
 
-# "암호화 순전파" 수행 (매우 간소화)
+## "암호화 순전파" 수행 (매우 간소화)
 def encrypted_forward(encrypted_input, encrypted_params):
     """Simplified encrypted computation. Real implementations would be much more complex."""
     result = []
@@ -2727,7 +2727,7 @@ def encrypted_forward(encrypted_input, encrypted_params):
 
 encrypted_output = encrypted_forward(encrypted_input, encrypted_params)
 
-# 결과 복호화
+## 결과 복호화
 decrypted_output = [private_key.decrypt(x) for x in encrypted_output]
 
 print("Decrypted output:", decrypted_output)
@@ -2740,7 +2740,7 @@ print("Decrypted output:", decrypted_output)
 앞서 말했듯 FHE는 연산 집약적이므로 tenseal 라이브러리의 CKKS 스킴을 사용한 또 다른 예제를 제공합니다. 이 예제 역시 데모 목적으로 단순화되었지만 phe 라이브러리의 대안이 됩니다:
 
 ```python
-# CKKS 스킴으로 암호화 키 생성
+## CKKS 스킴으로 암호화 키 생성
 context = ts.context(
     ts.SCHEME_TYPE.CKKS,
     poly_modulus_degree=8192,  # 보안 매개변수
@@ -2748,7 +2748,7 @@ context = ts.context(
 )
 context.global_scale = 2**40
 
-# 모델 매개변수 암호화 (데모용 간소화)
+## 모델 매개변수 암호화 (데모용 간소화)
 def encrypt_parameters(model, context):
     encrypted_params = []
     for param in model.parameters():
@@ -2759,7 +2759,7 @@ def encrypt_parameters(model, context):
 
 encrypted_params = encrypt_parameters(model, context)
 
-# 암호화 순전파 시뮬레이션 (매우 간소화)
+## 암호화 순전파 시뮬레이션 (매우 간소화)
 def encrypted_forward(encrypted_input, encrypted_params):
     """Simplified encrypted computation. Real LLM inference would be much more complex."""
     result = encrypted_input * encrypted_params[0]
@@ -2768,11 +2768,11 @@ def encrypted_forward(encrypted_input, encrypted_params):
     return result
 
 
-# 암호화 입력 시뮬레이션
+## 암호화 입력 시뮬레이션
 input_data = torch.rand(10)  # 간소화된 입력
 encrypted_input = ts.ckks_tensor(context, input_data.tolist())
 
-# "암호화 추론" 수행
+## "암호화 추론" 수행
 encrypted_output = encrypted_forward(encrypted_input, encrypted_params)
 
 print("Encrypted computation completed.")
@@ -2811,20 +2811,20 @@ MPC에서는 어떤 당사자도 타인의 비공개 입력을 볼 수 없도록
 먼저 PySyft 라이브러리로 간단한 보안 집계 프로토콜을 구현해 봅니다. 연합 학습 절 예제에서 이미 접했듯 이 라이브러리는 프라이버시 보존 머신러닝 도구를 제공합니다:
 
 ```python
-# PySyft 워커 초기화
+## PySyft 워커 초기화
 hook = sy.TorchHook(torch)
 alice = sy.VirtualWorker(hook, id="alice")
 bob = sy.VirtualWorker(hook, id="bob")
 charlie = sy.VirtualWorker(hook, id="charlie")
 secure_worker = sy.VirtualWorker(hook, id="secure_worker")
 
-# 더미 그래디언트 생성 함수
-# (실제 시나리오에서는 로컬 학습에서 나온 값)
+## 더미 그래디언트 생성 함수
+## (실제 시나리오에서는 로컬 학습에서 나온 값)
 def generate_dummy_gradients():
     return [torch.rand(p.shape) for p in model.parameters()]
 
 
-# 보안 집계 함수
+## 보안 집계 함수
 def secure_aggregate(gradients_list):
     # 그래디언트를 secure 워커로 전송
     encrypted_gradients = [
@@ -2849,7 +2849,7 @@ def secure_aggregate(gradients_list):
     return [grad.get().float_precision() for grad in aggregated_gradients]
 
 
-# MPC 기반 연합 학습 시뮬레이션
+## MPC 기반 연합 학습 시뮬레이션
 for epoch in range(5):
     # 당사자별 더미 그래디언트 생성
     alice_grads = generate_dummy_gradients()
@@ -2908,7 +2908,7 @@ async def secure_aggregation(mpc, num_parties):
 ```
 
 ```python
-# 코루틴만 mpc.run()에 넘겨 보안 집계 실행
+## 코루틴만 mpc.run()에 넘겨 보안 집계 실행
 mpc.run(secure_aggregation(mpc, 3))  # 3개 당사자 시뮬레이션
 ```
 
@@ -2947,7 +2947,7 @@ Low-Rank Adaptation(LoRA)은 사전학습 모델 가중치를 얼려 두고 Tran
 Opacus 라이브러리로 차등 프라이버시와 함께 LLM을 LoRA 파인튜닝하는 구현 예제입니다:
 
 ```python
-# LoRA 구성
+## LoRA 구성
 lora_config = LoraConfig(
     task_type=TaskType.CAUSAL_LM,
     r=8,  # 분해 랭크 (낮을수록 압축이 커짐)
@@ -2957,15 +2957,15 @@ lora_config = LoraConfig(
     bias="none"
 )
 
-# LoRA 모델 생성
+## LoRA 모델 생성
 model = get_peft_model(model, lora_config)
 
-# 학습 가능 매개변수 출력
+## 학습 가능 매개변수 출력
 model.print_trainable_parameters()
 
-# trainable params: 811,008 || all params: 125,250,816 || trainable%: 0.6475%
+## trainable params: 811,008 || all params: 125,250,816 || trainable%: 0.6475%
 
-# LoRA + 차등 프라이버시 학습
+## LoRA + 차등 프라이버시 학습
 from opacus import PrivacyEngine
 
 optimizer = torch.optim.AdamW(model.parameters(), lr=1e-4)
@@ -2983,7 +2983,7 @@ model, optimizer, train_loader = privacy_engine.make_private_with_epsilon(
     max_grad_norm=1.0,
 )
 
-# 평소처럼 학습...
+## 평소처럼 학습...
 ```
 
 LoRA는 경쟁력 있는 성능을 유지하면서 학습 가능 매개변수를 99% 이상 줄입니다. 이 극적인 감소 덕분에 강한 프라이버시 보장 적용이 한결 수월해집니다. LoRA로 ε ≤ 1 달성에는 온건한 노이즈만으로 충분할 수 있지만, 전체 파인튜닝에서 같은 보장을 추구하면 성능이 받아들이기 어려울 만큼 떨어질 수 있습니다.
@@ -2995,7 +2995,7 @@ LoRA는 경쟁력 있는 성능을 유지하면서 학습 가능 매개변수를
 Quantized Low-Rank Adaptation(QLoRA)은 양자화를 활용해 메모리 사용량을 더욱 줄임으로써 LoRA를 확장합니다. 프라이버시상 이점을 유지하면서 소비자용 하드웨어에서 초대형 모델의 파인튜닝을 가능하게 하죠:
 
 ```python
-# 양자화 구성
+## 양자화 구성
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_use_double_quant=True,
@@ -3003,17 +3003,17 @@ bnb_config = BitsAndBytesConfig(
     bnb_4bit_compute_dtype=torch.bfloat16
 )
 
-# 4비트로 모델 로드
+## 4비트로 모델 로드
 model = AutoModelForCausalLM.from_pretrained(
     "unsloth/Llama-3.2-1B-Instruct",
     quantization_config=bnb_config,
     device_map="auto"
 )
 
-# k비트 학습 준비
+## k비트 학습 준비
 model = prepare_model_for_kbit_training(model)
 
-# LoRA 적용
+## LoRA 적용
 lora_config = LoraConfig(
     r=16,
     lora_alpha=32,
@@ -3220,7 +3220,7 @@ def generate_synthetic_data(model, tokenizer, prompt, num_samples=5, max_length=
 
 다음 장에서는 이런 프라이버시 보존 기법들의 실효성을 평가하고 우리의 LLM이 강력하기만 한 게 아니라 신뢰할 수 있고 개인 프라이버시를 존중하는지 확인하는 방법을 다룹니다. 아무리 프라이버시를 지켜 학습시킨 모델이라도 불안전한 배포 관행 때문에 무너질 수 있기 때문입니다.
 
-# 5장 LLM의 안전한 배포
+## 5장 LLM의 안전한 배포
 
 대규모 언어 모델의 안전한 배포는 여러 보안 계층에 걸쳐 작동하는 중대한 과제입니다. 이전 장들이 프라이버시 보존 학습 기법에 초점을 맞췄다면, 아무리 안전하게 학습된 모델도 올바르게 배포되지 않으면 무너질 수 있습니다. 이 장은 세 가지 근본 보호 계층을 중심으로 안전한 배포의 핵심 측면을 탐구합니다:
 
@@ -3325,19 +3325,19 @@ LLM 배포에서 격리는 여러 보안 경계, 곧 '신뢰 구역(trust zone)'
 ```dockerfile
 FROM python:3.9-slim
 
-# Install dependencies
+## Install dependencies
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-# Copy model files and set working directory
+## Copy model files and set working directory
 COPY model/ /app/model/
 WORKDIR /app
 
-# Set up security configurations
+## Set up security configurations
 RUN useradd -m -r -s /bin/bash modeluser
 USER modeluser
 
-# Start the service
+## Start the service
 CMD ["python", "serve_model.py"]
 ```
 
@@ -3361,10 +3361,10 @@ Python 의존성 파일을 컨테이너로 복사합니다.
 
 
 ```bash
-# Build the container
+## Build the container
 docker build -t my-llm-server.
 
-# 컨테이너 실행
+## 컨테이너 실행
 
 docker run -p 8000:8000 my-llm-server
 ```
@@ -3426,14 +3426,14 @@ Ruby 문법입니다(Vagrant는 설정에 Ruby를 쓰지만, Ruby를 몰라도 �
 
 
 ```bash
-# Start the VM
+## Start the VM
 vagrant up
 
-# Connect to the VM
+## Connect to the VM
 
 vagrant ssh
 
-# When done, stop the VM
+## When done, stop the VM
 
 vagrant halt
 ```
@@ -3488,7 +3488,7 @@ VM 인스턴스 간 네트워크 트래픽을 암호화합니다.
 
 
 ```python
-# Example configuration for network segmentation rules
+## Example configuration for network segmentation rules
 segmentation_config = {
     "public_zone": {
         "allowed_ports": [443, 80],  # HTTPS and HTTP only
@@ -3545,7 +3545,7 @@ HTTPS는 클라이언트와 모델 서버 사이의 통신을 암호화한다. �
 
 
 ```python
-# secure_server.py
+## secure_server.py
 from fastapi import FastAPI, HTTPException
 import uvicorn
 from ssl import create_default_context
@@ -3722,7 +3722,7 @@ class RequestFilter:
 app = FastAPI()
 request_filter = RequestFilter()
 
-# 신뢰 호스트 미들웨어 추가
+## 신뢰 호스트 미들웨어 추가
 app.add_middleware(
     TrustedHostMiddleware,
     allowed_hosts=["api.yourservice.com", "localhost"],
@@ -4281,7 +4281,7 @@ LLM의 안전한 배포는 포괄적인 다계층 접근을 요구합니다. 이
 
 이 장은 배포된 모델을 지키는 데 초점을 맞췄지만 모델 자체가 적대적 조작에 취약하다면 아무리 안전한 배포라도 무너질 수 있습니다. 다음 장에서는 공격자가 어떻게 악의적인 입력을 설계해 모델 행동을 조작하는지, 그리고 더 견고한 LLM을 만드는 데 쓸 수 있는 방어 기법을 탐구합니다.
 
-# 6장 적대적 공격과 방어
+## 6장 적대적 공격과 방어
 
 이전 장에서는 공학 및 조직 관점에서 대규모 언어 모델(LLM)의 안전한 배포를 탐구했습니다. 프로덕션 환경에서 이 강력한 모델들을 지키는 데 도움이 되는 인프라 고려사항, API 설계 패턴, 접근 통제 메커니즘을 살펴봤죠. 하지만 근간 모델 자체가 조작될 수 있다면, 아무리 신중하게 배포된 시스템도 여전히 취약합니다.
 
@@ -6045,7 +6045,7 @@ LLM이 계속 진화하며 핵심 응용에 깊이 통합될수록, 적대적 �
 
 다음 장에서는 LLM 개발의 윤리적 차원으로 시선을 돌린다. 이 장이 기술적 보안 조치에 초점을 맞췄다면, 7장에서는 LLM 파인튜닝의 더 넓은 윤리적 고려사항, 즉 편향과 공정성 문제, 투명성과 해석 가능성 요건, 프라이버시와 공정성 사이의 복잡한 균형을 다룬다. 이런 윤리적 고려사항은 우리가 논의한 보안 조치를 보완하며 견고한 LLM이 책임 있고 신뢰할 수 있는 시스템이 되도록 보장한다.
 
-# 7장 LLM 파인튜닝의 윤리적 고려사항
+## 7장 LLM 파인튜닝의 윤리적 고려사항
 
 지금까지의 장에서 프라이버시 보존 파인튜닝의 기술적 측면을 살펴보았으니, 이제 책임 있는 AI 개발의 또 하나의 핵심 차원, 즉 윤리로 눈을 돌려 본다. 개인화 응용을 위해 대규모 언어 모델을 파인튜닝할 때 공정성, 투명성, 책임성이라는 근본적인 질문과 씨름해야 한다. 파인튜닝 과정에서 내리는 선택은 모델 성능에만 영향을 주는 게 아니다. 이 시스템들이 현실 세계의 개인과 공동체에 어떤 영향을 미치게 될지도 결정짓는다.
 
@@ -6367,15 +6367,15 @@ hidden_states = extract_hidden_states(model, tokenizer, test_sentences)
 ```python
 from sklearn.linear_model import LogisticRegression
 
-# Assume you have labels for sentiment (0=negative, 1=neutral, 2=positive)
+## Assume you have labels for sentiment (0=negative, 1=neutral, 2=positive)
 
-# In this case, all should be neutral or positive given "assertive"
+## In this case, all should be neutral or positive given "assertive"
 probe = LogisticRegression()
 
-# Train the probe on a larger dataset of hidden states with known sentiments
+## Train the probe on a larger dataset of hidden states with known sentiments
 probe.fit(training_hidden_states, training_sentiment_labels)
 
-# Now test on your demographic variants
+## Now test on your demographic variants
 predictions = probe.predict(hidden_states)
 probabilities = probe.predict_proba(hidden_states)
 
@@ -6390,13 +6390,13 @@ for sentence, pred, probs in zip(test_sentences, predictions, probabilities):
 이름만 바꿨는데 탐침이 감성 변화를 감지한다면(예: 같은 행동에 대해 "John"이 "Maria"보다 더 긍정적인 감성 인코딩을 받는 경우), LLM의 내부 표현이 편향된 감성 연관을 인코딩하고 있을 수 있다는 신호이다:
 
 ```python
-# Statistical test for differences
+## Statistical test for differences
 from scipy.stats import chi2_contingency
 
-# Create contingency table of predictions vs. names
+## Create contingency table of predictions vs. names
 
 
-# If there's significant variation, it indicates potential bias
+## If there's significant variation, it indicates potential bias
 def analyze_bias(sentences, predictions):
     names = [s.split()[0] for s in sentences]
 
@@ -6555,7 +6555,7 @@ def aggregate_with_demographic_weights(client_updates, group_weights):
 
 이 장에서 살펴본 윤리적 과제는 순수한 기술 문제가 아니라 더 깊은 사회적 가치와 선택을 반영한다. 이 시스템을 만드는 실무자로서 여러분은 프라이버시 보존 LLM이 공정하고 투명하며 책임 있게 되도록 보장할 기회이자 책임을 함께 짊어지고 있다. 다음 장에서는 이런 시스템이 작동하는 문화적·사회적·법적 맥락을 탐구하며 시야를 더 넓혀 간다.
 
-# 8장 문화적, 사회적, 법적 지형 탐색하기
+## 8장 문화적, 사회적, 법적 지형 탐색하기
 
 기술 중심의 이 책에서 가장 색다른 장 중 하나에 오신 것을 환영한다. 우리는 이제 LLM이 움직여 주는 개인화 AI의 시대를 빚어내는 문화, 사회, 법의 섬세한 지형을 넘나드는 여행에 나선다. 깊이 있는 논의로 채워진 이 장에서는 기술과 사회의 역동적인 상호작용을 들여다보며 사회문화적 요인이 생성형 AI의 개발과 채택을 어떻게 형성하는지 검토한다. 아울러 이 기술들을 규율하는 기존 및 신흥 법적 프레임워크를 순회하면서 실제 사례를 통해 그 복잡성과 함의를 풀어 낸다. 현대 세계에서 AI가 제시하는 도전과 기회를 이해하고 헤쳐 나가기 위해, 이 다층적인 지형을 함께 탐험해 보시죠.
 
@@ -6853,7 +6853,7 @@ AI 안전의 또 하나의 핵심 인간 요소는 이 기술의 책임 있는 �
 
 다음 장, 그리고 마지막 장에서는 이 원칙들이 실제 케이스 스터디 속에서 어떻게 하나로 모이는지 보게 될 것이다.
 
-# 9장 프라이버시 보존 AI 역량 구축하기
+## 9장 프라이버시 보존 AI 역량 구축하기
 
 축하한다! 여행의 마지막 장에 도달했다. 이 책 전반에서 여러분은 이론적 토대에 대한 포괄적인 이해를 쌓고 실용적인 구현을 탐색하며 LLM을 둘러싼 복잡한 윤리적·법적 고려사항을 헤쳐 왔다. 살펴본 그 많은 프라이버시 보존 기법들을 기억하시죠? 이제 그것들이 실전에서 작동하는 모습을 볼 차례이다. 두 개의 상세한 케이스 스터디를 통해 이런 프라이버시 보존 기법이 고위험·민감 도메인에 어떻게 배포될 수 있는지 보여 줌으로써, 이론과 실무 사이의 간극을 메우겠다.
 
@@ -6944,7 +6944,7 @@ LoRA의 수학적 토대는 파인튜닝 중 가중치 갱신이 낮은 고유 �
 구현은 Llama 3. 모델에 LoRA 어댑터를 설정하는 것부터 시작한다:
 
 ```python
-# LoRA 구성
+## LoRA 구성
 lora_config = LoraConfig(
     task_type=TaskType.CAUSAL_LM,
     r=8,  # 분해 랭크 (낮을수록 압축이 커짐)
@@ -6954,15 +6954,15 @@ lora_config = LoraConfig(
     bias="none"
 )
 
-# LoRA 모델 생성
+## LoRA 모델 생성
 model = get_peft_model(model, lora_config)
 
-# 학습 가능 매개변수 출력
+## 학습 가능 매개변수 출력
 model.print_trainable_parameters()
 
-# trainable params: 811,008 || all params: 125,250,816 || trainable%: 0.6475%
+## trainable params: 811,008 || all params: 125,250,816 || trainable%: 0.6475%
 
-# LoRA + 차등 프라이버시 학습
+## LoRA + 차등 프라이버시 학습
 from opacus import PrivacyEngine
 
 optimizer = torch.optim.AdamW(model.parameters(), lr=1e-4)
@@ -7040,7 +7040,7 @@ from opacus.accountants import RDPAccountant
 
 
 ```python
-# Calculate privacy parameters
+## Calculate privacy parameters
 sample_rate = 4 / len(tokenized_dataset)
 steps_total = steps
 sigma = 1.0  # noise multiplier

@@ -186,16 +186,7 @@ format:
         appearance: simple
         color: muted
         icon: chat-quote
-    # Disabled: the fuse.js search index is built fully in-memory by Deno
-    # during finalization and OOMs on CI for this 137-chapter / ~88 MB book
-    # (verified: `book: search:` is a no-op in Quarto 1.9, only the
-    # format-level flag actually skips search.json). Re-enable only if the
-    # book is split or the runner gets much more RAM.
     search: false
-    # NOTE: code-tools source embedding duplicated ~27k code blocks into every
-    # page and worsened the Deno OOM during book finalization. code-copy keeps
-    # the copy button without embedding sources. Do not re-enable code-tools
-    # unless the book is split into smaller sub-books.
     code-copy: true
 
 execute:

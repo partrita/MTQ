@@ -1,8 +1,23 @@
 ---
 title: "기계 번역 모음"
-
+lang: ko
 ---
+ 이 글은 발췌본이다. 원본 분량에 비해 줄었다.
+
 
 # 환영합니다
 
 《기계 번역 모음》에 오신 것을 환영합니다. 여기에서는 여러 영문 책을 한국어로 기계 번역하여 제공합니다.
+## 파트 네비게이션
+- [1. 기초 컴퓨터 과학 및 시스템 도구](linux-commands/index.qmd)
+- [2. 프로그래밍 언어 및 소프트웨어 엔지니어링](python-mastery/index.qmd)
+- [3. 인공지능, LLM 및 머신러닝](ai-in-action/index.qmd)
+- [4. 데이터 사이언스, 엔지니어링 및 시각화](data-analysis/index.qmd)
+- [5. 인과추론 및 통계 모델링](causal-inf-r/index.qmd)
+- [6. 생명정보학, 계산생물학 및 바이오 파이썬](py-bioinformatics/index.qmd)
+- [7. 단백질 공학, 면역학 및 항체 치료제](protein-engineering/index.qmd)
+- [8. 신약 개발, 약동학 및 바이오의약품 규제](ai-drug-discovery/index.qmd)
+- [9. 비즈니스, 경영 및 전략적 리더십](business-and-strategy/index.qmd)
+- [10. 커뮤니케이션, 설득 및 글쓰기 기술](communication-book/index.qmd)
+- [11. 생산성, 시간 관리 및 습관 형성](time-management-dummies/index.qmd)
+- [12. 철학, 심리학 및 삶의 지혜](stoic-six-pack/index.qmd)
