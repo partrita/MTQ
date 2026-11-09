@@ -2313,7 +2313,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/hello-ratatui.gif" class="img-fluid figure-img"></p>
-<figcaption>hello</figcaption>
+<figcaption>Hello Ratatui</figcaption>
 </figure>
 </div>
 <p>아무 키나 누르면 앱이 종료되고 이전 터미널 상태로 깨끗하게 복귀합니다.</p>
@@ -2346,7 +2346,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/basic-app.png" class="img-fluid figure-img"></p>
-<figcaption>basic-app demo</figcaption>
+<figcaption>기본 앱 데모</figcaption>
 </figure>
 </div>
 <p>애플리케이션은 [<code>Paragraph</code>] 위젯 안에 카운터 값을 렌더링합니다. 사용자가 좌우 화살표 키를 누르면 카운터 값이 1씩 증가하거나 감소합니다.</p>
@@ -2943,7 +2943,7 @@ test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/basic-app.gif" class="img-fluid figure-img"></p>
-<figcaption>basic-app demo</figcaption>
+<figcaption>기본 앱 데모</figcaption>
 </figure>
 </div>
 <p>왼쪽 및 오른쪽 방향키를 눌러 카운터 값을 조작해 보세요. Q를 누르면 종료됩니다.</p>
@@ -3191,7 +3191,7 @@ test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>    <span class="pp">ratatui::</span>run(<span class="op">|</span>terminal<span class="op">|</span> <span class="pp">App::</span><span class="kw">default</span>()<span class="op">.</span>run(terminal))</span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>결과적으로 애플리케이션의 기본 패닉 핸들러가 실행되어 에러 내용을 뒤죽박죽으로 깨진 채 표시하게 됩니다. 이는 로우 모드(raw mode) 상태가 유지되어 터미널이 개행 문자(newline)를 평소처럼 해석하지 못하기 때문입니다. 또한 셸 프롬프트도 엉뚱한 위치에 렌더링됩니다.</p>
+<p>결과적으로 애플리케이션의 기본 패닉 핸들러가 실행되어 에러 내용이 뒤죽박죽으로 깨져서 표시됩니다. 이는 로우 모드(raw mode) 상태가 유지되어 터미널이 개행 문자(newline)를 정상적으로 해석하지 못하기 때문입니다. 또한 셸 프롬프트도 엉뚱한 위치에 렌더링됩니다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/basic-app-error.gif" class="img-fluid figure-img"></p>
@@ -3209,7 +3209,7 @@ test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 <blockquote class="blockquote">
 <p>Rust는 에러를 크게 <em>복구 가능한(recoverable)</em> 에러와 <em>복구 불가능한(unrecoverable)</em> 에러 두 가지 범주로 나눕니다. _파일을 찾을 수 없는 오류_와 같은 복구 가능한 에러의 경우, 보통 사용자에게 문제를 알리고 작업을 재시도하는 것으로 처리합니다. 반면 복구 불가능한 에러는 항상 배열의 범위를 벗어나 접근하려는 시도와 같은 버그의 증상이며, 프로그램을 즉시 중단해야 합니다. – <a href="https://doc.rust-lang.org/book/ch09-00-error-handling.html" class="uri">https://doc.rust-lang.org/book/ch09-00-error-handling.html</a></p>
 </blockquote>
-<p>처리되지 않은 에러를 깔끔하게 표시하는 효과적인 접근법 중 하나는 color-eyre 크레이트를 사용하여 에러 보고 훅을 확장하는 것입니다. 대체 화면(alternate screen)과 로우 모드(raw mode)에서 실행되는 ratatui 애플리케이션에서는 이러한 에러를 사용자에게 표시하기 전에 반드시 터미널을 원래 상태로 복구해야 합니다.</p>
+<p>처리되지 않은 에러를 깔끔하게 표시하는 효과적인 방법 중 하나는 color-eyre 크레이트를 사용해 에러 보고 훅을 확장하는 것입니다. 대체 화면(alternate screen)과 로우 모드(raw mode)에서 실행되는 ratatui 애플리케이션에서는 이러한 에러를 사용자에게 표시하기 전에 반드시 터미널을 원래 상태로 복구해야 합니다.</p>
 <hr>
 <p><code>color-eyre</code> 크레이트를 추가합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="ex">cargo</span> add color-eyre</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
@@ -3792,10 +3792,10 @@ Sleep 2.5s
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://user-images.githubusercontent.com/1813121/263404720-41bd81a0-4eec-479c-9333-44363a183613.gif" class="img-fluid figure-img"></p>
-<figcaption>Counter app demo</figcaption>
+<figcaption>비동기 카운터 데모</figcaption>
 </figure>
 </div>
-<p>이 다중 파일 튜토리얼의 전체 소스 코드는 다음 링크에서 확인할 수 있습니다: <a href="https://github.com/ratatui/ratatui-website/tree/main/code/tutorials/ratatui-counter-app" class="uri">https://github.com/ratatui/ratatui-website/tree/main/code/tutorials/ratatui-counter-app</a>.</p>
+<p>이 다중 파일 튜토리얼의 전체 소스 코드는 다음 링크에서 확인할 수 있습니다:</p>
 <div class="callout callout-style-default callout-note callout-titled" title="과제">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3930,7 +3930,7 @@ Sleep 2.5s
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://user-images.githubusercontent.com/1813121/263155937-d8a8b6f6-97f4-4839-b855-ffd0249c2ae0.png" class="img-fluid figure-img"></p>
-<figcaption>Counter app demo</figcaption>
+<figcaption>비동기 카운터 데모</figcaption>
 </figure>
 </div>
 </section>
@@ -4037,7 +4037,7 @@ Sleep 2.5s
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://user-images.githubusercontent.com/1813121/254444604-de8cfcfa-eeec-417a-a8b0-92a7ccb5fcb5.gif" class="img-fluid figure-img"></p>
-<figcaption>Pressing <code>j</code> 3 times to increment counter and 3 times in the text field</figcaption>
+<figcaption><code>j</code> 키 3번 누름과 텍스트 필드 입력 데모</figcaption>
 </figure>
 </div>
 <!--
@@ -6652,7 +6652,7 @@ Type "q"
 | Length == 50%  | Length == 50%  |
 |                |                |
 +---------------------------------+</code></pre>
-<p>이제 푸터 단락 위젯들을 해당 공간에 렌더링할 수 있습니다.</p>
+<p>이제 푸터 단락 위젯들을 해당 영역에 렌더링할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb166"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb166-1"><a href="#cb166-1" aria-hidden="true" tabindex="-1"></a>    frame<span class="op">.</span>render_widget(mode_footer<span class="op">,</span> footer_chunks[<span class="dv">0</span>])<span class="op">;</span></span>
 <span id="cb166-2"><a href="#cb166-2" aria-hidden="true" tabindex="-1"></a>    frame<span class="op">.</span>render_widget(key_notes_footer<span class="op">,</span> footer_chunks[<span class="dv">1</span>])<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="ui-editing.rs-팝업-입력-모달" class="level4">
@@ -10047,7 +10047,12 @@ Enter
 
 Sleep 5s
 -->
-<p><img src="https://user-images.githubusercontent.com/1813121/272299743-f666980f-93b8-40d4-a979-1fce26d0f84a.gif" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://user-images.githubusercontent.com/1813121/272299743-f666980f-93b8-40d4-a979-1fce26d0f84a.gif" class="img-fluid figure-img"></p>
+<figcaption>위젯 쇼케이스 데모</figcaption>
+</figure>
+</div>
 <p>이 코드를 직접 실행해 보면서 <code>EnterAlternateScreen</code>과 <code>LeaveAlternateScreen</code>을 실험해 보십시오.</p>
 <p>모든 터미널 에뮬레이터가 대체 화면을 지원하는 것은 아니며, 지원하더라도 처리 방식이 다를 수 있습니다. 따라서 사용하는 백엔드에 따라 동작이 달라질 수 있습니다. 대체 화면을 어떻게 구현하는지 이해하려면 항상 해당 백엔드의 설명서를 참조하세요.</p>
 <p>마우스 캡처(Mouse capture)는 터미널이 클릭, 스크롤, 마우스 이동과 같은 마우스 이벤트를 감지하여 특수 시퀀스나 이벤트 형태로 애플리케이션에 전달하는 모드입니다. 이를 통해 애플리케이션은 마우스 동작을 처리하고 이에 반응하여 터미널 내에서 보다 대화형이고 그래픽적인 사용자 경험을 제공할 수 있습니다. 이는 터미널 기반 게임, 텍스트 에디터 또는 사용자의 보다 직접적인 상호작용이 필요한 프로그램에 특히 유용합니다.</p>
@@ -18165,7 +18170,12 @@ PTY 통합 테스트 예시
 <p>템플릿을 사용하려면 먼저 <code>cargo-generate</code>를 설치한 뒤, 원하는 템플릿을 기반으로 새 애플리케이션을 생성하십시오:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb434"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb434-1"><a href="#cb434-1" aria-hidden="true" tabindex="-1"></a><span class="ex">cargo</span> install cargo-generate</span>
 <span id="cb434-2"><a href="#cb434-2" aria-hidden="true" tabindex="-1"></a><span class="ex">cargo</span> generate ratatui/templates</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<p><img src="https://user-images.githubusercontent.com/1813121/277114001-0d25a09c-f24e-4ffc-8763-cd258828cec0.gif" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://user-images.githubusercontent.com/1813121/277114001-0d25a09c-f24e-4ffc-8763-cd258828cec0.gif" class="img-fluid figure-img"></p>
+<figcaption>프로덕션 템플릿 데모</figcaption>
+</figure>
+</div>
 </section>
 <section id="주요-기능" class="level2">
 <h2 class="anchored" data-anchor-id="주요-기능">주요 기능</h2>
@@ -20707,7 +20717,12 @@ PTY 통합 테스트 예시
 <span id="cb479-259"><a href="#cb479-259" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb479-260"><a href="#cb479-260" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>draw</code> 메서드는 <code>Frame</code>을 받아 카운터 정보를 표시하는 <code>Paragraph</code> 위젯과 텍스트 입력 위젯을 화면에 렌더링합니다.</p>
-<p><img src="https://user-images.githubusercontent.com/1813121/254134161-477b2182-a3ee-4be9-a180-1bcdc56c8a1d.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://user-images.githubusercontent.com/1813121/254134161-477b2182-a3ee-4be9-a180-1bcdc56c8a1d.png" class="img-fluid figure-img"></p>
+<figcaption>비동기 홈 컴포넌트 화면</figcaption>
+</figure>
+</div>
 <p><code>Home</code> 컴포넌트의 <code>schedule_increment</code>와 <code>schedule_decrement</code> 메서드는 비동기 태스크를 실행하면서, 작업 시작과 완료 시점에 <code>action_tx</code> 채널로 <code>Action::EnterProcessing</code>, <code>Action::ExitProcessing</code> 등의 액션을 발행합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb480"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb480-1"><a href="#cb480-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">pub</span> <span class="kw">fn</span> schedule_increment(<span class="op">&amp;</span><span class="kw">mut</span> <span class="kw">self</span><span class="op">,</span> i<span class="op">:</span> <span class="dt">usize</span>) <span class="op">{</span></span>
 <span id="cb480-2"><a href="#cb480-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> tx <span class="op">=</span> <span class="kw">self</span><span class="op">.</span>action_tx<span class="op">.</span>clone()<span class="op">.</span>unwrap()<span class="op">;</span></span>
@@ -20756,7 +20771,12 @@ PTY 통합 테스트 예시
 <span id="cb481-25"><a href="#cb481-25" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이 방식을 취하면 중앙 이벤트 루프에서 수신된 액션을 하위 컴포넌트들에 순차 전파하여, 단 하나의 <code>Action</code>으로도 여러 컴포넌트의 상태를 유기적으로 갱신할 수 있습니다.</p>
 <p>애플리케이션이 <code>Insert</code> 모드로 진입하면 키 이벤트가 서드파티 라이브러리인 <a href="https://github.com/sayanarijit/tui-input"><code>tui-input</code></a>의 <code>Input</code> 핸들러로 전달되어 직관적인 텍스트 입력 및 커서 제어가 이뤄집니다.</p>
-<p><img src="https://user-images.githubusercontent.com/1813121/254444604-de8cfcfa-eeec-417a-a8b0-92a7ccb5fcb5.gif" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://user-images.githubusercontent.com/1813121/254444604-de8cfcfa-eeec-417a-a8b0-92a7ccb5fcb5.gif" class="img-fluid figure-img"></p>
+<figcaption>텍스트 입력 및 키 이벤트 데모</figcaption>
+</figure>
+</div>
 </section>
 </section>
 <section id="httpsuser-images.githubuserconten" class="level2">
@@ -21759,7 +21779,12 @@ See https://github.com/withastro/astro/issues/8886 -->
 <p>Tachyonfx FTL을 통해 브라우저에서 이러한 이펙트를 직접 체험해 볼 수 있습니다: <a href="https://junkdog.github.io/tachyonfx-ftl/" class="uri">https://junkdog.github.io/tachyonfx-ftl/</a></p>
 </div>
 </div>
-<p><img src="https://raw.githubusercontent.com/ratatui/tachyonfx/development/images/tfx-ftl.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/ratatui/tachyonfx/development/images/tfx-ftl.png" class="img-fluid figure-img"></p>
+<figcaption>Tachyonfx FTL 데모</figcaption>
+</figure>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -21810,7 +21835,12 @@ See https://github.com/withastro/astro/issues/8886 -->
 </div>
 <div class="callout-body-container callout-body">
 <p><a href="https://github.com/orhun/tuitar">Tuitar</a>는 Ratatui와 Mousefood로 제작된 기타 학습 도구이자 DIY 키트입니다.</p>
-<p><img src="https://github.com/orhun/embedded-ratatui-talk/blob/main/assets/tuitar-fretboard-song.gif?raw=true" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/orhun/embedded-ratatui-talk/blob/main/assets/tuitar-fretboard-song.gif?raw=true" class="img-fluid figure-img"></p>
+<figcaption>Tuitar 프렛보드 데모</figcaption>
+</figure>
+</div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -22818,7 +22848,12 @@ See https://github.com/withastro/astro/issues/8886 -->
 <section id="canvas-그리기-예제" class="level3">
 <h3 class="anchored" data-anchor-id="canvas-그리기-예제">Canvas: 그리기 예제 🎨</h3>
 <p><code>Canvas</code> 예제를 확장하여 그리기(Drawing) 기능을 추가했습니다. 이제 마우스를 사용하여 캔버스 위에 직접 그림을 그릴 수 있습니다:</p>
-<p><img src="https://github.com/user-attachments/assets/cfb2f9f8-773b-4599-9312-29625ff2ca60.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/user-attachments/assets/cfb2f9f8-773b-4599-9312-29625ff2ca60.png" class="img-fluid figure-img"></p>
+<figcaption>캔버스 그리기 데모</figcaption>
+</figure>
+</div>
 <hr>
 </section>
 </section>
@@ -23567,7 +23602,12 @@ See https://github.com/withastro/astro/issues/8886 -->
 <li><code>Flex::SpaceBetween</code></li>
 <li><code>Flex::Legacy</code> (이전 기본값)</li>
 </ul>
-<p><img src="images/constraint-explorer.gif" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/constraint-explorer.gif" class="img-fluid figure-img"></p>
+<figcaption>제약 조건 탐색기</figcaption>
+</figure>
+</div>
 <p>기본값을 <code>Flex::Start</code>로 변경한 것 외에도 제약 조건(constraint)에 몇 가지 변경을 가했습니다.</p>
 <ol type="1">
 <li><code>Min(v)</code>는 이제 모든 <code>Flex</code> 모드에서 축소되는 대신 초과 공간을 할당받아 커집니다(이전 동작을 유지하는 <code>Flex::Legacy</code> 제외).</li>
@@ -24502,7 +24542,12 @@ See https://github.com/withastro/astro/issues/8886 -->
 <span id="cb627-12"><a href="#cb627-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 이벤트 루프 시작</span></span>
 <span id="cb627-13"><a href="#cb627-13" aria-hidden="true" tabindex="-1"></a>    siv<span class="op">.</span>run()<span class="op">;</span></span>
 <span id="cb627-14"><a href="#cb627-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<p><img src="https://user-images.githubusercontent.com/1813121/271896508-d5f6192c-d51b-4299-9b5e-9d91e4618f64.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://user-images.githubusercontent.com/1813121/271896508-d5f6192c-d51b-4299-9b5e-9d91e4618f64.png" class="img-fluid figure-img"></p>
+<figcaption>Ratatui 개요</figcaption>
+</figure>
+</div>
 </section>
 <section id="ratatui" class="level4">
 <h4 class="anchored" data-anchor-id="ratatui">Ratatui</h4>
@@ -24577,7 +24622,12 @@ See https://github.com/withastro/astro/issues/8886 -->
 <span id="cb628-68"><a href="#cb628-68" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb628-69"><a href="#cb628-69" aria-hidden="true" tabindex="-1"></a>  <span class="cn">Ok</span>(())</span>
 <span id="cb628-70"><a href="#cb628-70" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<p><img src="https://user-images.githubusercontent.com/1813121/271896510-c8db19d1-f132-49b5-89da-c32cc21ab765.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://user-images.githubusercontent.com/1813121/271896510-c8db19d1-f132-49b5-89da-c32cc21ab765.png" class="img-fluid figure-img"></p>
+<figcaption>Ratatui 렌더링 파이프라인</figcaption>
+</figure>
+</div>
 <p>Ratatui를 사용하면 작성해야 할 코드는 다소 늘어날 수 있지만, 화면에 표시하고자 하는 정확한 UI 구성을 정밀하게 직접 제어할 수 있다는 강력한 이점이 있습니다.</p>
 </section>
 </section>
@@ -24587,7 +24637,12 @@ See https://github.com/withastro/astro/issues/8886 -->
 <section id="ratatui-코드를-통해-터미널의-글꼴폰트-크기를-임의로-변경할-수-있나요" class="level3">
 <h3 class="anchored" data-anchor-id="ratatui-코드를-통해-터미널의-글꼴폰트-크기를-임의로-변경할-수-있나요">Ratatui 코드를 통해 터미널의 글꼴(폰트) 크기를 임의로 변경할 수 있나요?</h3>
 <p><code>ratatui</code> 자체는 터미널의 글꼴 크기를 제어하지 않습니다. <code>ratatui</code>는 자신이 실행 중인 터미널의 크기와 기능에 맞춰 콘텐츠를 렌더링할 뿐입니다. 글꼴 크기를 변경하려면 사용 중인 터미널 에뮬레이터 자체의 설정을 조정해야 합니다.</p>
-<p><img src="https://user-images.githubusercontent.com/1813121/269147939-0ed031f2-1977-4e92-b4b4-6c217d02e79b.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://user-images.githubusercontent.com/1813121/269147939-0ed031f2-1977-4e92-b4b4-6c217d02e79b.png" class="img-fluid figure-img"></p>
+<figcaption>터미널 폰트 설정 예시</figcaption>
+</figure>
+</div>
 <p>하지만 터미널 에뮬레이터에서 이 설정을 변경하는 것은 <code>ratatui</code> 기반 애플리케이션을 개발하고 있는 본인의 터미널 환경에만 글꼴 크기를 바꿀 뿐입니다.</p>
 <p>사용자가 터미널 단축키를 사용해 화면을 확대/축소하면 일반적으로 터미널의 글꼴 크기가 변경됩니다. 개발자는 사전에 사용자의 터미널 글꼴 크기가 얼마인지 알 방법이 없습니다.</p>
 <p>그러나 현재 터미널의 크기(즉, 열(Columns)과 행(Rows)의 수)는 알아낼 수 있습니다. 또한 사용자가 화면을 확대하거나 축소할 때마다 <code>ratatui</code> 애플리케이션은 새로운 열과 행 정보를 담은 터미널 크기 조정(Resize) 이벤트를 수신하게 됩니다. 따라서 <code>ratatui</code> 애플리케이션이 이러한 크기 변경을 유연하고 자연스럽게 처리할 수 있도록 구현해야 합니다.</p>
