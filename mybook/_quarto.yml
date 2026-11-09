@@ -18,6 +18,7 @@ book:
       chapters:
         - python-mastery/index.qmd
         - effective-python/index.qmd
+        - little-schemer/index.qmd
         - swift-for-py/index.qmd
         - learn-rust/index.qmd
         - rust-essentials/index.qmd
@@ -122,6 +123,7 @@ book:
         - writing-to-learn/index.qmd
         - how-to-write-essays/index.qmd
         - improve-handwriting/index.qmd
+        - manufacturing-consent/index.qmd
     - part: "생산성, 시간 관리 및 습관 형성"
       chapters:
         - atomic-habits-workbook/index.qmd
@@ -172,6 +174,9 @@ book:
         - essay-change-think/index.qmd
         - little-book-of-stoicism/index.qmd
         - power-of-now/index.qmd
+    - part: "Designing Data-Intensive Applications"
+      chapters:
+        - designing-data-intensive-apps/index.qmd
 
 engine: markdown
 
