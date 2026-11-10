@@ -8,54 +8,60 @@ book:
   date: "2025-11-11"
   chapters:
     - index.qmd
-    - part: "기초 컴퓨터 과학 및 시스템 도구"
+    - part: "컴퓨터 과학과 수학의 기초"
       chapters:
         - linux-commands/index.qmd
         - linear-algebra/index.qmd
         - advanced-algorithms-ds/index.qmd
         - hamming-science-engineering/index.qmd
-    - part: "프로그래밍 언어 및 소프트웨어 엔지니어링"
+    - part: "프로그래밍 언어와 파이썬"
       chapters:
         - python-mastery/index.qmd
         - effective-python/index.qmd
         - little-schemer/index.qmd
         - swift-for-py/index.qmd
+    - part: "Rust 생태계"
+      chapters:
         - learn-rust/index.qmd
         - rust-essentials/index.qmd
-        - rust-python/index.qmd
-        - rustc-guide/index.qmd
-        - async-rust/index.qmd
         - rust-best-practices/index.qmd
+        - async-rust/index.qmd
         - rust-tui/index.qmd
+        - rustc-guide/index.qmd
+        - rust-python/index.qmd
+    - part: "소프트웨어 설계와 개발자 커리어"
+      chapters:
         - software-architecture-decisions/index.qmd
         - think-like-cto/index.qmd
         - beyond-vibe-coding/index.qmd
         - writing-for-developers/index.qmd
         - own-your-tech-career/index.qmd
-    - part: "인공지능, LLM 및 머신러닝"
+    - part: "인공지능과 머신러닝"
       chapters:
         - why-machines-learn/index.qmd
         - ai-in-action/index.qmd
-        - genai-fastapi/index.qmd
         - building-ai-products/index.qmd
+        - genai-fastapi/index.qmd
         - llm-privacy-security/index.qmd
         - nexus-harari/index.qmd
-    - part: "데이터 사이언스, 엔지니어링 및 시각화"
+    - part: "데이터 과학과 데이터 엔지니어링"
       chapters:
         - data-analysis/index.qmd
         - py-gapminder/index.qmd
         - becoming-a-data-head/index.qmd
         - financial-data-engineering/index.qmd
         - data-engineering-best-practices/index.qmd
+        - designing-data-intensive-apps/index.qmd
         - data-and-goliath/index.qmd
         - dataviz/index.qmd
         - storytelling-with-data/index.qmd
-    - part: "인과추론 및 통계 모델링"
+    - part: "인과추론과 통계 모델링"
       chapters:
         - causal-inf-r/index.qmd
         - causal-inference-what-if/index.qmd
         - causal-inference-statistics/index.qmd
-    - part: "생명정보학, 계산생물학 및 바이오 파이썬"
+        - biostatistics-dummies/index.qmd
+    - part: "생명정보학과 계산생물학"
       chapters:
         - py-biologists/index.qmd
         - py-bioinformatics/index.qmd
@@ -64,27 +70,29 @@ book:
         - seq-biopython/index.qmd
         - manage-biodata/index.qmd
         - streamline-lab-py/index.qmd
-        - dl-biology/index.qmd
-        - llm-protein/index.qmd
         - practical-bioinformatics-lab/index.qmd
         - statistical-bioinformatics/index.qmd
         - cancer-bioinformatics/index.qmd
         - cell-biology-numbers/index.qmd
-    - part: "단백질 공학, 면역학 및 항체 치료제"
+        - dl-biology/index.qmd
+        - llm-protein/index.qmd
+    - part: "단백질 공학과 항체 치료제"
       chapters:
         - protein-engineering/index.qmd
         - protein-engineering-report/index.qmd
-        - clinical-immunology/index.qmd
-        - cancer-immunotherapy-methods/index.qmd
-        - biomarkers-immunotherapy/index.qmd
-        - cancer-biomarkers/index.qmd
         - antibody-engineering/index.qmd
         - antibody-therapeutics-dev/index.qmd
         - bispecific-antibodies/index.qmd
         - fc-mediated-antibodies/index.qmd
         - adc-methods/index.qmd
         - adc-metabolic-dynamics/index.qmd
-    - part: "신약 개발, 약동학 및 바이오의약품 규제"
+    - part: "면역학과 바이오마커"
+      chapters:
+        - clinical-immunology/index.qmd
+        - cancer-immunotherapy-methods/index.qmd
+        - biomarkers-immunotherapy/index.qmd
+        - cancer-biomarkers/index.qmd
+    - part: "신약 개발과 바이오의약품 규제"
       chapters:
         - ai-drug-discovery/index.qmd
         - drug-development-academia/index.qmd
@@ -92,14 +100,16 @@ book:
         - clinical-trials-brody/index.qmd
         - biologics-safety/index.qmd
         - biosimilarity-fda/index.qmd
-        - biostatistics-dummies/index.qmd
         - healthcare-data/index.qmd
         - bad-pharma/index.qmd
-    - part: "비즈니스, 경영 및 전략적 리더십"
+    - part: "비즈니스, 전략 및 리더십"
       chapters:
         - personal-mba/index.qmd
+        - zero-to-one/index.qmd
         - making-futures-work/index.qmd
         - marketing-research/index.qmd
+        - latte-factor/index.qmd
+        - five-types-of-wealth/index.qmd
         - one-minute-manager/index.qmd
         - rules-of-work/index.qmd
         - working-caro/index.qmd
@@ -107,61 +117,65 @@ book:
         - leaders-emotional-agility/index.qmd
         - leaders-guide-influence/index.qmd
         - leaders-guide-presenting/index.qmd
-        - five-types-of-wealth/index.qmd
-        - latte-factor/index.qmd
-        - zero-to-one/index.qmd
-    - part: "커뮤니케이션, 설득 및 글쓰기 기술"
+    - part: "커뮤니케이션과 설득"
       chapters:
-        - talk-like-ted/index.qmd
-        - just-listen/index.qmd
         - communication-book/index.qmd
         - how-we-communicate/index.qmd
+        - just-listen/index.qmd
+        - talk-like-ted/index.qmd
         - think-again-argue/index.qmd
         - storytelling-user-experience/index.qmd
+    - part: "글쓰기와 연구"
+      chapters:
+        - how-to-read-a-book/index.qmd
         - craft-of-research/index.qmd
-        - everybody-needs-an-editor/index.qmd
-        - writing-to-learn/index.qmd
         - how-to-write-essays/index.qmd
+        - writing-to-learn/index.qmd
+        - everybody-needs-an-editor/index.qmd
         - improve-handwriting/index.qmd
         - manufacturing-consent/index.qmd
-    - part: "생산성, 시간 관리 및 습관 형성"
+    - part: "생산성, 습관 및 삶의 설계"
       chapters:
         - atomic-habits-workbook/index.qmd
         - high-5-habit/index.qmd
         - deep-work/index.qmd
-        - dopamine-detox/index.qmd
         - now-habit/index.qmd
+        - twelve-monotasks/index.qmd
+        - pomodoro-technique/index.qmd
+        - time-management-dummies/index.qmd
         - little-guide-unprocrastination/index.qmd
         - procrastination-burka/index.qmd
-        - twelve-monotasks/index.qmd
-        - time-management-dummies/index.qmd
+        - dopamine-detox/index.qmd
         - focus-simplicity-manifesto-book/index.qmd
-        - pomodoro-technique/index.qmd
-        - art-of-laziness/index.qmd
-        - art-creative-thinking/index.qmd
         - journaling-habit/index.qmd
         - love-to-learn/index.qmd
         - life-hacks/index.qmd
-    - part: "철학, 심리학 및 삶의 지혜"
+        - minimalist-guide/index.qmd
+        - live-more-with-less/index.qmd
+        - art-of-laziness/index.qmd
+        - art-creative-thinking/index.qmd
+    - part: "철학, 불교 및 영성"
       chapters:
         - meditations-aurelius/index.qmd
         - meditations-hammond/index.qmd
         - letters-from-a-stoic/index.qmd
         - epictetus-discourses/index.qmd
         - stoic-six-pack/index.qmd
+        - little-book-of-stoicism/index.qmd
         - shortness-of-life/index.qmd
         - life-is-short/index.qmd
         - siddhartha/index.qmd
         - suttanipata/index.qmd
         - bible/index.qmd
-        - ego-is-the-enemy/index.qmd
-        - stop-worrying-start-living/index.qmd
         - mindfulness-dummies/index.qmd
         - waking-up/index.qmd
+        - power-of-now/index.qmd
+    - part: "심리학과 자기계발"
+      chapters:
+        - ego-is-the-enemy/index.qmd
+        - stop-worrying-start-living/index.qmd
         - ikigai/index.qmd
         - awakening-ikigai/index.qmd
-        - minimalist-guide/index.qmd
-        - live-more-with-less/index.qmd
         - me-but-better/index.qmd
         - single-on-purpose/index.qmd
         - you-are-badass/index.qmd
@@ -172,11 +186,7 @@ book:
         - science-of-living/index.qmd
         - wicked/index.qmd
         - essay-change-think/index.qmd
-        - little-book-of-stoicism/index.qmd
-        - power-of-now/index.qmd
-    - part: "Designing Data-Intensive Applications"
-      chapters:
-        - designing-data-intensive-apps/index.qmd
+        - how-to-disagree-better/index.qmd
 
 engine: markdown
 
