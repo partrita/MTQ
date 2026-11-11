@@ -3,7 +3,7 @@ title: "ADC 방법 및 프로토콜"
 author: "L. 네이선 튜미(L. Nathan Tumey)"
 lang: ko
 ---
-# 1장: 현재 ADC 발굴 및 개발 동향 개요
+1장: 현재 ADC 발굴 및 개발 동향 개요
 
 저자: L. 네이선 튜미(L. Nathan Tumey)
 
@@ -642,7 +642,7 @@ TCEP에 의한 환원 반응 온도 및 반응 시간은 환원되는 이황화 
 
 생체 내 수용액 환경에서 생체 분자(단백질, 핵산, 지질 등)와 부반응을 일으키지 않고 온화한 조건에서 매우 빠르고 정량적으로 결합하는 생물직교(Bioorthogonal) 클릭 화학은 완벽한 위치 특이적 ADC를 합성하는 핵심 수단이다.
 
-### 대표적인 클릭 화학 반응군
+대표적인 클릭 화학 반응군
 
 | 반응 유형 | 반응 작용기 A (항체 조작) | 반응 작용기 B (링커-페이로드) | 생성 결합 | 주요 특징 및 촉매 |
 |--|---|---|---|---|
@@ -1018,7 +1018,7 @@ Step 3: DBCO-링커-페이로드 (예: DBCO-PEG4-Ahx-DM1) 첨가
 1. 항체(250 μg)가 PBS 또는 타 완충액에 있는 경우, 40 kDa 탈염 스핀 컬럼(1,500 × g, 2분)을 통해 25 mM TBS 완충액(pH 7.4)으로 완충액을 교환한다.
 2. 50 kDa 원심 필터를 사용하여 부피를 약 100~200 μL로 조정한다.
 
-### 9.3.2 GlycINATOR® 처리를 통한 Fc 당사슬 절단
+9.3.2 GlycINATOR® 처리를 통한 Fc 당사슬 절단
 
 1. 고정화 GlycINATOR® 스핀 컬럼을 TBS 완충액 300 μL로 3회 원심 세척(200 × g, 1분)한다.
 2. 항체 용액(100~200 μL)을 컬럼 수지 위에 천천히 가한다.
@@ -1374,7 +1374,7 @@ HIC는 고농도 염 완충액(호프마이스터 계열의 황산암모늄 등)
 
 Oscar Hernandez-Alba, Anthony Ehkirch, Alain Beck, and Sarah Cianferani
 
-## 개요
+개요
 
 비변성 조건에서 수행되는 질량분석법(네이티브 MS, Native Mass Spectrometry)은 항체-약물 접합체(ADC)의 정량 및 정성 분석에서 매우 유용한 도구임이 입증되었으며 특히 시스테인 접합 ADC와 같이 비공유 결합성 상호작용으로 서브유닛이 유지되는 구조 분석에 탁월하다. 여기에 이온 이동도 질량분석법(IM-MS, Ion Mobility Mass Spectrometry)을 결합하면 회전 평균 충돌 단면적(CCS, Collision Cross Section)을 기반으로 기상 이온을 분리할 수 있어, ADC의 3차원 입체 구조(conformation) 특성 분석이라는 추가 차원의 정보를 제공한다. 최근에는 네이티브 MS/IM-MS 분석 전 온라인 방식으로 완충액 교환(탈염)을 자동 수행하기 위해 크기 배제 크로마토그래피(SEC, Size Exclusion Chromatography)를 결합하는 기법이 주목받고 있다. 온라인 SEC-네이티브 MS/IM-MS는 ADC의 전반적인 구조적 특성화는 물론, 출시 및 품질 관리에 필수적인 주요 품질 속성(CQA)-약물 탑재 분포(DLD), 약물-항체 비율(DAR), 평균 DAR($DAR_{av}$), 비접합 항체(DAR 0) 함량 등-을 정밀하게 평가할 수 있게 해준다.
 
@@ -1423,7 +1423,7 @@ Oscar Hernandez-Alba, Anthony Ehkirch, Alain Beck, and Sarah Cianferani
  - 피루브산 키나아제 (Pyruvate Kinase, PK from rabbit muscle, 237 kDa)
 2. 각 표준 단백질을 100 mM 암모늄 아세테이트 완충액에 5~10 μM 농도로 용해하여 준비한다.
 
-## 방법
+방법
 
 ### 3.1 ADC 시료 준비 및 탈염
 
@@ -1524,7 +1524,7 @@ DAR_{av} = \frac{\sum_{k=0}^{8} k \cdot I_k}{\sum_{k=0}^{8} I_k}
 
 Jintang He, Surinder Kaur, and Keyang Xu
 
-## 개요
+개요
 
 항체-약물 접합체(ADC)는 저분자 화합물과 거대 단백질 분자가 결합된 복합 구조를 지니고 있으며 생체 순환 과정에서 시간에 따라 다양한 생체 내 변환(생체 변환, biotransformation)을 겪는다. 본 챕터에서는 ADC의 생체 내 변환 및 안정성을 심도 있게 특성화하기 위한 고분해능 오비트랩 질량분석(High-Resolution Orbitrap MS) 접근법을 설명한다. 기존의 사중극자 비행시간형 질량분석기(Q-TOF MS)를 사용한 방식과 비교할 때, 여기에 제시된 오비트랩 분석법은 질량 분해능을 현저히 향상시켜 ADC 대사체(catabolites)를 훨씬 더 포괄적이고 정밀하게 규명할 수 있게 해준다. 특히 미세한 질량 차이(작은 질량 이동)를 수반하는 ADC의 생체 내 변환 경로를 추적하고 특성화하는 데 매우 유용하다.
 
@@ -1565,7 +1565,7 @@ Jintang He, Surinder Kaur, and Keyang Xu
 1. 질량분석기: Q Exactive Plus Hybrid Quadrupole-Orbitrap Mass Spectrometer (Thermo Fisher Scientific)
 2. 소프트웨어: Protein Deconvolution 4.0 소프트웨어 (ReSpect™ 알고리즘 탑재, Thermo Fisher Scientific)
 
-## 방법
+방법
 
 ### 3.1 생체 시료 내 ADC의 친화도 포집
 생체 시료(혈장 등)로부터 ADC를 선택적으로 추출하기 위해 자성 비드를 이용한 면역 친화 포집을 수행한다. KingFisher 96 자성 처리기를 사용하여 혼합, 세척, 수집 및 이동 과정을 자동화한다 (*Note 1*).
@@ -1665,7 +1665,7 @@ Jintang He, Surinder Kaur, and Keyang Xu
 
 Linjie Han, Michael Boyne, and Jennifer F. Nemeth
 
-## 개요
+개요
 
 항체-약물 접합체(ADC)에서 세포독성 링커-약물이 항체에 결합하는 위치(접합 부위, conjugation sites)는 ADC의 구조적 안정성, 약동학(PK) 프로파일 및 치료 지수(therapeutic index)에 직접적인 영향을 미친다. 따라서 접합 부위 및 위치 이성질체 분포의 규명은 ADC 개발 및 품질 관리에 필수적이다. 고분해능 질량분석기와 결합된 펩타이드 맵핑(Peptide mapping LC-MS/MS)은 단백질 서열 상의 접합 부위를 아미노산 수준에서 정확히 규명할 수 있는 표준 바텀업(bottom-up) 분석 기술이다. 본 챕터에서는 쇄간 시스테인 결합 ADC 및 라이신/엔지니어링 시스테인 결합 ADC의 접합 부위를 식별하기 위한 최적화된 시료 전처리, LC-MS/MS 분석 조건 및 데이터 해석 전략(특이적 시그니처 프래그먼트 이온 활용법 포함)을 상세히 설명한다.
 
@@ -1698,7 +1698,7 @@ Linjie Han, Michael Boyne, and Jennifer F. Nemeth
 7. 시퀀싱 등급 트립신 (Sequencing Grade Modified Trypsin): 1 mg/mL 수용액으로 동결건조 분말을 재구성하여 사용 (*Note 8*).
 8. 탈염 스핀 컬럼: Thermo Scientific Zeba Spin Desalting Columns (7K MWCO) 또는 Bio-Rad Micro Bio-Spin 6 (*Note 5*).
 
-## 방법
+방법
 
 모든 시료와 시약은 사용 전 상온에 도달하도록 하며 별도 지침이 없는 한 모든 과정은 상온 및 차광 상태에서 진행한다.
 
@@ -1806,7 +1806,7 @@ Linjie Han, Michael Boyne, and Jennifer F. Nemeth
 
 Hua Sang, Gaoyuan Lu, Yuzhe Liu, Xiaolu Chen, Hui Ye, and Wentao Hu
 
-## 개요
+개요
 
 임상에서 널리 쓰이는 라이신(Lysine, Lys) 접합 항체-약물 접합체(ADC, 예: 트라스투주맙 엠탄신/T-DM1)는 항체 표면의 수많은 라이신 잔기에 무작위로 약물이 결합하므로 수십~수백 종의 위치 이성질체(positional isomers)로 구성된 매우 복잡한 혼합물 형태를 띤다. 본 챕터에서는 이러한 라이신 접합 ADC의 접합 부위를 정확히 식별하고 각 잔기별 접합 점유율(접합 수준, Conjugation level)을 정량화하기 위한 통합 질량분석 프로토콜을 제시한다.
 
@@ -1851,7 +1851,7 @@ Hua Sang, Gaoyuan Lu, Yuzhe Liu, Xiaolu Chen, Hui Ye, and Wentao Hu
 7. 이동상 B: 아세토니트릴(ACN) 중 0.1% 포름산(FA) 용액
 8. 내부 표준물질(IS): 표적 펩타이드와 m/z 간섭이 없는 안정한 합성 펩타이드 표준품
 
-## 방법
+방법
 
 ### 3.1 1단계: 시그니처 이온 핑거프린팅을 통한 라이신 접합 부위 동정
 
@@ -1935,7 +1935,7 @@ Hua Sang, Gaoyuan Lu, Yuzhe Liu, Xiaolu Chen, Hui Ye, and Wentao Hu
 
 Wenjing Ning and Yanqun Zhao
 
-## 개요
+개요
 
 모세관 전기영동(CE, Capillary Electrophoresis)은 인가된 전압 하에서 하전된 분자의 전기영동 이동도(electrophoretic mobility) 차이에 기반하여 정밀하게 물질을 분리하는 고효율 분리 분석 기법이다. 이는 ADC를 비롯한 바이오의약품의 특성 규명 및 품질 관리에 매우 광범위하게 활용되고 있다. 본 챕터에서는 모세관 전기영동을 이용한 ADC 특성화의 단계별 표준 절차를 상세히 설명하며 특히 순도(Purity) 및 단편 분석을 위한 환원 및 비환원 모세관 전기영동-도데실황산나트륨 분석법(Reduced & Non-reduced CE-SDS)과 전하 이질성(Charge Heterogeneity) 분석을 위한 이미징 모세관 등전점 전기영동(iCIEF, Imaged Capillary Isoelectric Focusing)에 초점을 맞춘다.
 
@@ -1995,7 +1995,7 @@ Wenjing Ning and Yanqun Zhao
  - 음극액 (Catholyte): 100 mM 수산화나트륨 수용액 (0.1\% \text{ MC}$ 함유)
 6. TTM 세척액: 0.5% MC 수용액 (모세관 세척 및 컨디셔닝용).
 
-## 방법
+방법
 
 ### 3.1 CE-SDS를 이용한 ADC 순도 및 단편 분석
 
@@ -2099,7 +2099,7 @@ Wenjing Ning and Yanqun Zhao
 
 Rabah Gahoual, Morgan Sarrut, Alain Beck, and Yannis-Nicolas François
 
-## 개요
+개요
 
 모세관 존 전기영동(CZE)과 고분해능 탠덤 질량분석법(MS/MS)의 결합(CE-MS)은 바이오의약품의 1차 아미노산 서열, 번역 후 변형(PTM), 글리코실화(당사슬) 및 약물 접합 부위를 단일 주입(single injection)으로 100% 서열 커버리지에 가깝게 규명할 수 있는 매우 강력한 분석 플랫폼이다. 본 챕터에서는 시스리스 나노 전기분무(Sheathless NanoESI) 인터페이스를 장착한 CE-MS 시스템을 활용하여 시스테인 접합 ADC인 브렌툭시맙 베도틴(Brentuximab vedotin, Adcetris®)의 1차 구조, N-당화 이형체(Glycoforms) 프로파일, 그리고 결합된 약물-링커(MMAE) 펩타이드의 접합 부위를 모호함 없이 규명하는 단계별 분석 프로토콜을 설명한다.
 
@@ -2145,7 +2145,7 @@ ADC의 품질 및 안전성을 보증하기 위해서는 1차 아미노산 서�
 4. 질량분석기: TripleTOF 5600+ 하이브리드 사중극자 비행시간형 질량분석기 (NanoSpray III 소스 장착, Sciex).
 5. 질량 교정액: β-갈락토시다아제(β-galactosidase) 트립신 소화액을 200 mM 암모늄 아세테이트(pH 4.0)로 희석한 2.0 μM 표준 교정액.
 
-## 방법
+방법
 
 모든 과정은 별도 지침이 없는 한 상온에서 진행한다 (*Note 1*).
 
@@ -2208,7 +2208,7 @@ ADC의 품질 및 안전성을 보증하기 위해서는 1차 아미노산 서�
 
 Calvin L. Becker, Robert J. Duffy, Jorge Gandarilla, and Steven M. Richter
 
-## 개요
+개요
 
 항체-약물 접합체(ADC)의 시험관 내(in vitro) 세포독성 효능은 약물 탑재량에 비례하여 높은 약물 탑재 종일수록 낮은 $IC_{50}$ 값을 나타낸다. 그러나 생체 내(in vivo) 항종양 효능은 혈장 소실율(클리어런스), 용량 제한 독성(DLT) 등 복합적인 생물학적 인자의 영향을 크게 받는다. 특정 약물 탑재량(예: DAR 2 / E2)을 가지는 단일 종을 고순도로 분리하기 위한 분취용(Preparative) 소수성 상호작용 크로마토그래피(HIC) 공정 개발은 접합 반응 최적화, 레진(Resin) 선별, 용해도 평가, 선형 그래디언트 스크리닝 및 스텝 그래디언트 조건 확립 등 일련의 체계적 단계를 거친다. 본 챕터에서는 2개의 모노메틸 아우리스타틴 E(MMAE) 분자가 결합된 ADC(E2)를 모델로 하여 목표 약물 탑재 종을 고순도·고수율로 대량 분취 정제하기 위한 HIC 공정 개발의 원리와 실무적 고려사항을 상세히 설명한다.
 
@@ -2266,7 +2266,7 @@ Calvin L. Becker, Robert J. Duffy, Jorge Gandarilla, and Steven M. Richter
 
 - 분취용 컬럼: HiScreen Butyl HP 컬럼 ($4.7\text{ mL}$, 베드 높이 10 cm, 입자 크기 $34\text{ }\mu\text{m}$) 또는 Butyl Sepharose HP 충전 컬럼.
 
-## 방법
+방법
 
 ### 3.1 ADC 시료의 염 용해도 한계 평가
 
@@ -2332,11 +2332,11 @@ Calvin L. Becker, Robert J. Duffy, Jorge Gandarilla, and Steven M. Richter
 
 - 크로마토그래피 시스템, 유로 배관, 밸브 및 내알칼리성 HIC 레진은 0.5 N NaOH를 순환 통액하여 상온에서 최소 30분 이상 접촉시킨 후, 멸균 무발열 정제수(WFI)로 중화 세척한다.
 
-## 20장: ADC 제조 시 저분자 및 내독소 오염물의 검출 및 제거
+20장: ADC 제조 시 저분자 및 내독소 오염물의 검출 및 제거
 
 L. Nathan Tumey and Christopher A. Leverett
 
-## 개요
+개요
 
 항체-약물 접합체(ADC) 제조 과정에서 미반응 유리 저분자 약물(Free drug 또는 Linker-payload)이나 박테리아 유래 내독소(Endotoxin, LPS)와 같은 불순물이 잔류하면, 생물학적 활성 평가의 왜곡 및 동물 시험에서의 심각한 비특이적 독성/발열 반응을 유발한다. 따라서 전임상 및 임상 시험용 ADC 원액의 품질과 안전성을 확보하기 위해서는 이러한 오염물을 고감도로 검출하고 효과적으로 제거하는 정제 기술이 필수적이다. 본 챕터에서는 비접합 유리 약물-링커 불순물을 정량하기 위한 범용 고속 역상 액체 크로마토그래피(RP-HPLC-PDA) 분석법과 함께, 거대 다공성 폴리스티렌 흡착 비드(Bio-Beads™ SM-2)를 이용한 유리 약물 제거법, 그리고 폴리믹신 B 친화성 레진(Detoxi-Gel™)을 이용한 내독소 제거 및 배치 구제(rescue) 프로토콜을 설명한다.
 
@@ -2388,7 +2388,7 @@ L. Nathan Tumey and Christopher A. Leverett
 3. 내독소 정량 측정기: Endosafe® PTS 휴대용 정량 시스템 (Charles River).
 4. 일회용 LAL 시험 카트리지: Endosafe® LAL Cartridges (감도 0.05~5.0 EU/mL 또는 0.01~1.0 EU/mL, Charles River).
 
-## 방법
+방법
 
 ### 3.1 역상 HPLC-PDA를 이용한 유리 약물 검출 및 정량
 
@@ -2425,7 +2425,7 @@ L. Nathan Tumey and Christopher A. Leverett
 
 5. 정량 계산: ADC 시료 내 저분자 피크의 평균 AUC를 1 μM 및 5 μM 표준액의 검량선과 비교하여 시료 내 유리 약물의 몰 농도(μM)를 산출한다.
 
-### 3.2 Bio-Beads™ SM-2를 이용한 유리 약물 제거
+3.2 Bio-Beads™ SM-2를 이용한 유리 약물 제거
 
 1. 비드 사전 세척 및 탈발열/탈오염:
  - Bio-Beads SM-2 약 250~300 mg에 메탄올 2.0 mL를 넣고 상온에서 수 분간 진탕(600~800 rpm)한 후 메탄올을 피펫으로 제거한다.
@@ -2440,7 +2440,7 @@ L. Nathan Tumey and Christopher A. Leverett
  - 유리 약물 제거가 확인되면, 시료 전체를 0.2 μm Spin-X 원심분리 튜브 필터에 옮기고 300 × g에서 30초간 원심분리하여 Bio-Beads를 완전히 걸러낸다.
  - 비드를 최소량의 DPBS로 1회 세척하여 추가 회수하고 결합된 여액을 50 kDa 한외여과 장치로 목표 농도까지 재농축한다 (최종 단백질 회수율 통상 > 75~85%).
 
-### 3.3 Detoxi-Gel™ 친화성 컬럼을 이용한 내독소 제거
+3.3 Detoxi-Gel™ 친화성 컬럼을 이용한 내독소 제거
 
 1. 내독소 오염도 사전 측정:
  - Endosafe PTS 시스템을 사용하여 오염된 ADC 원액(예: 1.73 mg/mL, 4.2 mL)의 초기 내독소 농도를 측정한다 (예: > 25 EU/mL 검출, *Note 6*).
@@ -2471,7 +2471,7 @@ L. Nathan Tumey and Christopher A. Leverett
 
 Yilma T. Adem
 
-## 개요
+개요
 
 단클론항체(mAb)에 세포독성 약물을 접합하면 다양한 약물-항체 비율(DAR)을 가지는 이질적인 혼합물이 생성된다. 항체-약물 접합체(ADC)는 쇄간(interchain) 이황화 결합의 티올기에 소수성 약물이 결합하는 등의 구조적 변형으로 인해 모체(parent) 항체에 비해 물리적 안정성이 저하되는 경향을 보인다. 저분자 약물의 결합은 항체의 물리화학적 특성을 변화시키고 열역학적 언폴딩 및 응집(aggregation)과 같은 분해 경로에 큰 영향을 미친다. 따라서 응집체 형성과 같은 주요 품질 속성(CQA)의 변화를 추적하기 위해 적절한 안정성 지시 분석법(Stability-indicating analytical methods)을 적용하는 것이 필수적이다. 본 챕터에서는 ADC 제형 개발 및 배치 적합성 평가를 위한 가혹 스트레스(열 스트레스) 조건 설정 원리와 함께, 농도 측정(UV-Vis), 열역학적 안정성 평가(DSC), 크기 변이체 분석(SE-HPLC), DAR 분포 분석(HIC)의 실무 표준 프로토콜을 설명한다.
 
@@ -2506,7 +2506,7 @@ Yilma T. Adem
 9. 시차 주사 열량계(DSC): MicroCal VP-Capillary DSC (또는 MicroCal PEAQ-DSC, Malvern Panalytical) 및 96웰 플레이트.
 10. 초저온 냉동고(-70 °C) 및 항온 배양기 (30 °C, 40 °C).
 
-## 방법
+방법
 
 ### 3.1 열 스트레스 가혹 분해 시료 준비
 
@@ -2577,7 +2577,7 @@ $$
 
 Haripada Maity and Srinivas Chennamsetty
 
-## 개요
+개요
 
 항체-약물 접합체(ADC)는 표적 특이적 단클론항체(mAb)와 강력한 세포독성 약물이 링커를 통해 공유결합된 복합 생물치료제이다. 항체에 소수성 페이로드가 접합되면 항체의 고차 구조(Higher-Order Structure, HOS), 분자 간 상호작용, 열역학적 형태 안정성 및 응집(Aggregation) 경로에 상당한 변화가 유발된다. 따라서 ADC 개발 시 접합 전후 및 보관 중 단백질의 2차/3차 구조 무결성과 응집 메커니즘을 규명하는 생물물리학적(Biophysical) 특성 분석이 필수적이다. 본 챕터에서는 원편광 이색성(CD) 분광법, 고유 형광(Intrinsic Tryptophan Fluorescence) 분광법, ANS 외인성 형광 분광법, 시차 주사 열량측정법(DSC), 그리고 세 가지 형광 염료(Sypro Orange, DCVJ, Thioflavin T)를 결합한 차등 주사 형광법(Differential Scanning Fluorescence, DSF) 등 핵심 생물물리학 기법의 원리와 실무 프로토콜을 제시한다.
 
@@ -2685,7 +2685,7 @@ Haripada Maity and Srinivas Chennamsetty
 
 Shengjia Wu and Dhaval K. Shah
 
-## 개요
+개요
 
 세포독성 분석(Cytotoxicity assay)은 시간과 비용이 많이 소요되는 in vivo 동물 효능 시험으로 진입하기 전, 유망한 항체-약물 접합체(ADC) 후보물질을 선별(Triage)하고 표적 특이성을 검증하기 위한 필수적인 1차 스크리닝 시험이다. 표적 항원을 발현하는 세포는 수용체 매개 세포내이입(Endocytosis)을 통해 ADC를 효율적으로 섭취하고 리소좀에서 유리된 세포독성 페이로드에 따라 사멸하게 된다. 이러한 ADC의 세포독성은 배양 종료 후 살아있는 세포의 백분율(Cell viability, %)을 측정하여 정량화할 수 있다. 본 챕터에서는 96웰 플레이트 기반의 테트라졸륨 비색 분석법(MTT assay)을 이용하여 단일 배양계(Monoculture)에서 ADC의 세포독성 곡선 및 반수 최대 억제 농도($IC_{50}$)를 도출하는 방법과 함께, 녹색 형광 단백질(GFP)이 형질전환된 항원 음성 세포를 이용한 공동 배양계(Co-culture system)에서 ADC의 바이스탠더(Bystander) 사멸 효과를 정량 평가하는 표준 프로토콜을 설명한다.
 
@@ -2720,7 +2720,7 @@ ADC의 표적 선택성을 엄밀히 검증하기 위해서는 표적 항원 양
 6. 5 mg/mL MTT 용액: 멸균 DPBS에 MTT 분말 5 mg/mL을 녹인 후 0.2 μm 필터로 여과하여 차광 용기(호일 래핑)에 담아 4 °C(단기) 또는 -20 °C(장기)에 보관 (*Note 1*).
 7. 포르마잔 용해 완충액 (Solubilization Solution): 0.01 M HCl을 포함하는 10% (w/v) SDS 수용액 (*Note 2, 3*).
 
-## 방법
+방법
 
 ### 3.1 세포 수 및 선형 작업 범위 결정
 
@@ -2795,7 +2795,7 @@ $\text{Ag}^+$ 세포에서 유리된 페이로드가 인접한 $\text{Ag}^-$ 세
 
 Andrew J. Bessire and Chakrapani Subramanyam
 
-## 개요
+개요
 
 항체-약물 접합체(ADC) 개발의 핵심 단계 중 하나는 암세포 내로 섭취된 후 리소좀 효소에 노출되었을 때 방출되는 최종 활성 대사체(방출 종, Released entity)의 정확한 화학적 구조와 방출 경로를 규명하고 검증하는 것이다. 고분해능 LC-MS/MS와 상용 인간 리소좀 추출 효소(Human lysosomal enzymes)를 결합한 in vitro 모델은 신규 ADC의 세포 내 페이로드 방출 특성을 탐색하고 새로운 페이로드-링커 구조의 잠재적인 대사적·화학적 취약점(Labile sites)을 사전에 평가할 수 있는 매우 유용한 분석 도구이다. 본 챕터에서는 카텝신 B 절단형(Cathepsin B-cleavable) 링커 ADC와 비절단형(Non-cleavable) 링커 ADC 모두에 적용 가능한 표준 리소좀 이화작용 평가법 및 고분해능 질량분석 데이터 해석 전략을 상세히 설명한다.
 
@@ -2837,7 +2837,7 @@ Andrew J. Bessire and Chakrapani Subramanyam
 4. 이동상 A: 0.1% 포름산(FA) 수용액.
 5. 이동상 B: 아세토니트릴(ACN) 중 0.1% 포름산(FA) 용액.
 
-## 방법
+방법
 
 ### 3.1 리소좀 효소 인큐베이션
 
@@ -2900,7 +2900,7 @@ Andrew J. Bessire and Chakrapani Subramanyam
 
 Cong Wei
 
-## 개요
+개요
 
 항체-약물 접합체(ADC)의 혈장 안정성(Plasma stability)은 순환기 내 약동학(PK), 항암 치료 효능 및 전신 안전성에 결정적인 영향을 미친다. 고분해능 액체 크로마토그래피-질량분석법(LC-MS)은 생체 혈장 매트릭스 내에서 ADC의 구조적 무결성과 경시적 약물 탈락을 정밀하게 추적·평가할 수 있는 강력한 플랫폼이다. 본 챕터에서는 마우스, 래트, 원숭이 및 인간 혈장 환경에서 배양된 ADC를 면역친화성 포집(Immunoaffinity capture), 온-비드 탈당화(Deglycosylation), 산성 용리 및 TCEP 환원 처리를 거쳐 LC-MS로 분석함으로써, 144시간에 걸친 약물-항체 비율(DAR)의 경시적 변화 및 평균 DAR($DAR_{av}$) 감소 프로파일을 고감도로 평가하는 표준 프로토콜을 제시한다.
 
@@ -2944,7 +2944,7 @@ Cong Wei
 7. LC 컬럼: ACQUITY UPLC Protein BEH300 $C_4$ iKey 컬럼 ($1.7\text{ }\mu\text{m}, 0.3 \times 100\text{ mm}$, Waters).
 8. LC-MS 시스템: Waters nanoACQUITY UPLC 및 Xevo G2 Q-TOF 질량분석기.
 
-## 방법
+방법
 
 ### 3.1 ADC와 생체 혈장의 in vitro 인큐베이션
 
@@ -3009,7 +3009,7 @@ $$
 
 Dhaval K. Shah and Ashutosh P. Singh
 
-## 개요
+개요
 
 항체-약물 접합체(ADC)의 생체 시료 분석(Bioanalysis)은 대형 단백질 항체와 저분자 세포독성 페이로드가 결합된 복합 구조로 인해 일반 바이오의약품보다 훨씬 까다롭다. 혈장, 혈청, 종양 및 각종 조직 균질액과 같은 생체 매트릭스에서 ADC의 체내 동태(PK)와 치료 효능/독성을 정확히 평가하기 위해서는 세 가지 핵심 분석체-총 항체(Total antibody), 접합 항체(Conjugated antibody), 유리 약물(Free drug)-를 구분하여 측정해야 한다. 본 챕터에서는 미세 마이크로플레이트 기반의 샌드위치 효소면역측정법(Sandwich ELISA)을 활용하여 생체 조직 및 혈장 시료 내 총 항체 농도(Total-antibody concentration)를 정량하기 위한 표준 실험 프로토콜, 검량선 작성 노하우, 그리고 접합 항체(Conjugated-antibody) 분석으로의 응용 전략을 상세히 설명한다.
 
@@ -3050,7 +3050,7 @@ ADC는 생체 투여 후 체내 순환 및 조직 분포 과정에서 탈접합(
 7. 마이크로플레이트 리더: 405 nm 동역학(Kinetic) 모드 및 종말점 흡광 측정 지원 리더기.
 8. ADC 표준물질 (Standard): 분석 대상 시료와 동일한 배치의 Trastuzumab-vc-MMAE 스톡 용액 (1,000 ng/mL부터 0.98 ng/mL까지 2배 연속 희석한 11개 농도 포인트 표준곡선 준비, *Note 7, 8, 9*).
 
-## 방법
+방법
 
 모든 단계는 별도 지침이 없는 한 상온에서 수행한다.
 

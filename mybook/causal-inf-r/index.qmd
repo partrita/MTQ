@@ -98,7 +98,7 @@ pak::pak(c(
 
 ## 관례
 
-### 현대적인 R 기능
+현대적인 R 기능
 
 이 책에서는 R 4.. 이상 버전의 두 가지 현대적인 R 기능을 사용한다.
 첫 번째는 네이티브 파이프, `|>`입니다.
@@ -122,12 +122,12 @@ pak::pak(c(
 ```{.r}
 #| eval: false
 options(
-  # ggplot2의 기본 색상을 색맹 친화적인 Okabe-Ito 및 Viridis 팔레트로 설정
+# ggplot2의 기본 색상을 색맹 친화적인 Okabe-Ito 및 Viridis 팔레트로 설정
   ggplot2.discrete.colour = ggokabeito::palette_okabe_ito(),
   ggplot2.discrete.fill = ggokabeito::palette_okabe_ito(),
   ggplot2.continuous.colour = "viridis",
   ggplot2.continuous.fill = "viridis",
-  # 테마 글꼴 및 크기 설정
+# 테마 글꼴 및 크기 설정
   book.base_family = "sans",
   book.base_size = 14
 )
@@ -511,7 +511,7 @@ ChatGPT의 기반이 되는 것과 같은 대규모 언어 모델조차도 예�
 ::: {.callout-note}
 ## 인과 추론과 설명
 
-일부 저자들은 "인과 추론"과 "설명"이라는 문구를 혼용하여 사용한다.
+## 일부 저자들은 "인과 추론"과 "설명"이라는 문구를 혼용하여 사용한다.
 우리는 그 점을 조금 더 신중하게 다룬다.
 인과 추론은 항상 설명과 관계가 있지만 우리는 한 가지가 다른 것에 미치는 영향을 그것이 어떻게 일어나는지 이해하지 못하더라도 정확하게 추정할 수 있다.
 
@@ -616,10 +616,10 @@ ChatGPT의 기반이 되는 것과 같은 대규모 언어 모델조차도 예�
 
 묘사적이든, 예측적이든, 추론적이든 각 분석 과업은 명확하고 정확한 질문에서 시작해야 한다.
 (우리가 다시 집중할) 인과적 질문의 구조를 더 잘 이해하기 위해 다이어그램을 그려봅시다.
-문장 다이어그램(Diagramming sentences)은 문장의 구조를 시각적으로 표현하기 위해 사용되는 문법적 방법으로, 가끔 초등학교에서 교육되기도 한다.
+## 문장 다이어그램(Diagramming sentences)은 문장의 구조를 시각적으로 표현하기 위해 사용되는 문법적 방법으로, 가끔 초등학교에서 교육되기도 한다.
 이 기술에서는 문장을 주어, 동사, 목적어, 수식어와 같은 구성 요소로 해체한 다음 일련의 선과 기호를 사용하여 표시한다.
 다이어그램에서 이러한 요소들의 배열은 그들의 구문적 역할과 문장의 전체 구조 내에서 어떻게 상호 작용하는지를 반영한다.
-문장을 이러한 시각적 표현으로 분해함으로써, 다이어그램 그리기는 학습자가 문장 구성의 미묘한 차이를 파악하고 문법적 오류를 식별하며 단어들 사이의 복잡한 연결을 이해하는 데 도움을 줄 수 있다.
+## 문장을 이러한 시각적 표현으로 분해함으로써, 다이어그램 그리기는 학습자가 문장 구성의 미묘한 차이를 파악하고 문법적 오류를 식별하며 단어들 사이의 복잡한 연결을 이해하는 데 도움을 줄 수 있다.
 인과적 주장에도 비슷한 아이디어를 적용할 수 있다.
 다음은 인과적 주장을 어떻게 다이어그램으로 그릴 수 있는지에 대한 예시이다.
 우리는 *원인(cause)*, *효과(effect)*, *주체(subject)* (누구를 위해?), 그리고 *시기(timing)* (언제?)를 뽑아냈습니다.
@@ -716,11 +716,10 @@ status("complete")
 특히 사망자 대부분은 5세 미만 어린이이다 [@Fink2022].
 말라리아는 임산부에게도 치명적이며 조산이나 저체중아 출산 등 임신 결과에 악영향을 미친다.
 
-모기장은 말라리아 기생충의 주요 숙주인 모기에게 물리지 않도록 물리적 장벽을 제공하여 질병과 사망을 예방한다.
+## 모기장은 말라리아 기생충의 주요 숙주인 모기에게 물리지 않도록 물리적 장벽을 제공하여 질병과 사망을 예방한다.
 인류는 아주 오래전부터 모기장을 사용해 왔다.
 기원전 5세기 그리스의 역사학자 헤로도토스(Herodotus)는 *역사(The Histories)*에서 이집트인들이 낚시 그물을 모기장 대용으로 쓰는 모습을 기록했다.
 
-> 늪지대 위에 사는 사람들은 수많은 각다귀(gnats)를 피해 높은 타워 위에서 휴식을 취한다. 각다귀는 바람 때문에 높이 날지 못하기 때문이다. 타워를 세우기 어려운 지역의 사람들은 투망(casting net)을 활용한다. 낮에는 물고기를 잡는 데 쓰고 밤에는 침대 주위에 그물을 둘러 그 안에서 잠을 잡니다. 옷이나 리넨 시트는 각다귀가 뚫고 물 수 있지만 그물은 통과하지 못한다 [@thehist].
 
 현대의 모기장은 제2차 세계 대전 당시 러시아 군인들의 사례에서 착안해 살충제 처리가 된 경우가 많지만 [@nevill1996], 여전히 낚시 그물로 전용되는 사례도 종종 발견 된다 [@gettleman2015].
 
@@ -827,7 +826,7 @@ library(tidyverse)
 if (requireNamespace("causalworkshop", quietly = TRUE)) {
   library(causalworkshop)
 } else {
-  # Create dummy data if causalworkshop is not available
+# Create dummy data if causalworkshop is not available
   set.seed(123)
   n <- 1000
   net_data <- tibble(
@@ -840,11 +839,11 @@ if (requireNamespace("causalworkshop", quietly = TRUE)) {
     resistance = rnorm(n, 30, 10)
   ) |>
     mutate(
-      # Create net usage based on income, health, temperature
+# Create net usage based on income, health, temperature
       net_prob = plogis(-2 + 0.002 * income + 0.01 * health + 0.05 * temperature),
       net_num = rbinom(n, 1, net_prob),
       net = ifelse(net_num == 1, "Net", "No Net"),
-      # Create malaria risk based on net usage and confounders
+# Create malaria risk based on net usage and confounders
       malaria_risk = 60 - 15 * net_num - 0.005 * income - 0.3 * health - 1.0 * temperature + rnorm(n, 0, 10)
     ) |>
     select(-net_prob) # Remove intermediate variable
@@ -959,7 +958,7 @@ if (requireNamespace("ggdag", quietly = TRUE) && requireNamespace("ggokabeito", 
     theme(legend.position = "none") +
     coord_cartesian(clip = "off")
 } else {
-  # Create a simple placeholder plot if ggdag is not available
+# Create a simple placeholder plot if ggdag is not available
   ggplot() +
     annotate("text", x = 0.5, y = 0.5,
              label = "DAG visualization requires ggdag package\nPlease install: remotes::install_github('r-causal/ggdag')",
@@ -1074,7 +1073,7 @@ if (requireNamespace("ggdag", quietly = TRUE) && requireNamespace("ggokabeito", 
     ) +
     guides(alpha = "none", edge_alpha = "none")
 } else {
-  # ggdag 패키지를 사용할 수 없는 경우 간단한 자리 표시용 그래프 생성
+# ggdag 패키지를 사용할 수 없는 경우 간단한 자리 표시용 그래프 생성
   ggplot() +
     annotate("text", x = 0.5, y = 0.5,
              label = "DAG 경로 시각화를 위해서는 ggdag 패키지가 필요합니다\n설치 방법: remotes::install_github('r-causal/ggdag')",
@@ -1083,7 +1082,7 @@ if (requireNamespace("ggdag", quietly = TRUE) && requireNamespace("ggokabeito", 
 }
 ```
 
-모기장 사용과 말라리아 위험만을 포함하는 단순 선형 회귀를 계산하면, 에 나타난 7개의 다른 교란 경로가 이를 왜곡하기 때문에 우리가 얻는 효과는 올바르지 않는다.
+## 모기장 사용과 말라리아 위험만을 포함하는 단순 선형 회귀를 계산하면, 에 나타난 7개의 다른 교란 경로가 이를 왜곡하기 때문에 우리가 얻는 효과는 올바르지 않는다.
 DAG 용어로 말하자면, 우리가 추구하는 인과 추정치를 왜곡하는 이러한 열린 경로들을 *차단(block)*해야 한다.
 (층화, 매칭, 가중치 부여 등 여러 기술을 통해 경로를 차단할 수 있다. 책 전반에 걸쳐 여러 방법을 살펴볼 것이다.) 다행히도 DAG를 명시함으로써 우리가 통제해야 할 변수들을 정확하게 결정할 수 있다.
 이 DAG의 경우, 세 가지 변수를 통제해야 한다: `income`(소득), `health`(건강 상태), 그리고 `temperature`(기온).
@@ -1135,14 +1134,14 @@ if (requireNamespace("propensity", quietly = TRUE)) {
   library(propensity)
   net_data_wts <- propensity_model |>
     augment(data = net_data, type.predict = "response") |>
-    # .fitted는 주어진 관측치에 대해 모델이 예측한 값입니다
+.fitted는 주어진 관측치에 대해 모델이 예측한 값입니다
     mutate(wts = wt_ate(.fitted, net_num))
 } else {
-  # propensity 패키지를 사용할 수 없는 경우 ATE 가중치의 수동 구현
+# propensity 패키지를 사용할 수 없는 경우 ATE 가중치의 수동 구현
   net_data_wts <- propensity_model |>
     augment(data = net_data, type.predict = "response") |>
     mutate(
-      # 수동 ATE 가중치 계산
+# 수동 ATE 가중치 계산
       wts = ifelse(net_num == 1, 1/.fitted, 1/(1-.fitted))
     )
 }
@@ -1179,7 +1178,7 @@ if (requireNamespace("halfmoon", quietly = TRUE)) {
     scale_y_continuous(labels = abs) +
     labs(x = "성향 점수 (propensity score)")
 } else {
-  # halfmoon 패키지를 사용할 수 없는 경우 일반 히스토그램으로 대체
+# halfmoon 패키지를 사용할 수 없는 경우 일반 히스토그램으로 대체
   ggplot(net_data_wts, aes(.fitted, fill = net)) +
     geom_histogram(bins = 50, alpha = 0.7, position = "identity") +
     labs(x = "성향 점수 (propensity score)", fill = "Used net") +
@@ -1207,7 +1206,7 @@ if (requireNamespace("halfmoon", quietly = TRUE)) {
     scale_y_continuous(labels = abs) +
     labs(x = "성향 점수 (propensity score)")
 } else {
-  # halfmoon 패키지를 사용할 수 없는 경우 일반 히스토그램으로 대체
+# halfmoon 패키지를 사용할 수 없는 경우 일반 히스토그램으로 대체
   ggplot(net_data_wts, aes(.fitted, fill = net)) +
     geom_histogram(bins = 50, alpha = 0.7, position = "identity") +
     labs(x = "성향 점수 (propensity score)", fill = "Used net") +
@@ -1255,7 +1254,7 @@ if (requireNamespace("halfmoon", quietly = TRUE)) {
   ) +
     geom_love()
 } else {
-  # halfmoon 패키지를 사용할 수 없는 경우의 수동 SMD 계산 또는 밀도 그래프
+# halfmoon 패키지를 사용할 수 없는 경우의 수동 SMD 계산 또는 밀도 그래프
   net_data_wts |>
     select(net, income, health, temperature) |>
     pivot_longer(-net, names_to = "variable", values_to = "value") |>
@@ -1315,29 +1314,29 @@ net_data_wts |>
 library(rsample)
 
 fit_ipw <- function(.split, ...) {
-  # 부트스트랩된 데이터 프레임 가져오기
+# 부트스트랩된 데이터 프레임 가져오기
   .df <- as.data.frame(.split)
 
-  # 성향 점수 모델 적합시키기
+# 성향 점수 모델 적합시키기
   propensity_model <- glm(
     net_num ~ income + health + temperature,
     data = .df,
     family = binomial()
   )
 
-  # 역확률 가중치 계산하기
+# 역확률 가중치 계산하기
   .df <- propensity_model |>
     augment(type.predict = "response", data = .df) |>
     mutate(
       wts = if (requireNamespace("propensity", quietly = TRUE)) {
         propensity::wt_ate(.fitted, net_num)
       } else {
-        # ATE 가중치 수동 계산
+# ATE 가중치 수동 계산
         ifelse(net_num == 1, 1/.fitted, 1/(1-.fitted))
       }
     )
 
-  # 올바르게 부트스트랩된 ipw 모델 적합시키기
+# 올바르게 부트스트랩된 ipw 모델 적합시키기
   lm(malaria_risk ~ net, data = .df, weights = wts) |>
     tidy()
 }
@@ -1539,7 +1538,7 @@ class E,B grey
 많은 개인을 무작위로 배정하여 범죄를 떠나게 하거나 남게 한 뒤 결과에 어떤 영향을 미치는지 살펴보는 실험을 수행할 수 있다(물론 이는 윤리적 문제가 있어 관찰 데이터가 흥미로운 이유가 되기도 한다).
 어떤 경우든 관찰된 데이터로부터 관찰 불가능한 반사실을 구축하려면 통계적 기술이 필요하다.
 
-## 잠재적 결과
+잠재적 결과
 
 실제 결과(factual outcomes)와 반사실적 결과(counterfactual outcomes)는 **잠재적 결과**의 두 가지 실현이다.
 원인이 발생하기 전 잠재적 결과는 어떤 노출을 받느냐에 따라 일어날 수 있는 모든 가능성을 의미한다.
@@ -1652,12 +1651,12 @@ data |>
 ```{.r}
 ## 우리는 무작위적인 일을 하고 있으므로,
 ## 코드를 실행할 때마다 항상 동일한 결과를 관찰할 수 있도록
-## 시드를 설정합니다.
+시드를 설정합니다.
 set.seed(11)
 data_observed <- data |>
   mutate(
-    # 노출을 무작위로 변경합니다. 각 그룹에 속할 확률이 0.5인
-    # 이항 분포로부터 생성됩니다.
+# 노출을 무작위로 변경합니다. 각 그룹에 속할 확률이 0.5인
+이항 분포로부터 생성됩니다.
     exposure = if_else(
       rbinom(n(), 1, 0.5) == 1, "chocolate", "vanilla"
     ),
@@ -1863,7 +1862,7 @@ plot_data <- data_observed |>
     id_assignment = FALSE
   )
 
-## 그룹 평균 계산 및 레이블 텍스트 추가
+그룹 평균 계산 및 레이블 텍스트 추가
 avg_labels <- compute_avg_labels(plot_data, c("potential_outcome", "exposure", "observed")) |>
   mutate(
     exposure_lbl = str_replace_all(exposure, "실제로 |를 먹음", ""),
@@ -1997,13 +1996,13 @@ data_observed_exch <- data |>
   mutate(
     prefer_chocolate = y_chocolate > y_vanilla,
     exposure = case_when(
-      # 초콜릿을 더 좋아하는 사람들은 80%의 확률로 그것을 선택했습니다
+초콜릿을 더 좋아하는 사람들은 80%의 확률로 그것을 선택했습니다
       prefer_chocolate ~ if_else(
         rbinom(n(), 1, 0.8) == 1,
         "chocolate",
         "vanilla"
       ),
-      # 바닐라를 더 좋아하는 사람들은 80%의 확률로 그것을 선택했습니다
+바닐라를 더 좋아하는 사람들은 80%의 확률로 그것을 선택했습니다
       !prefer_chocolate ~ if_else(
         rbinom(n(), 1, 0.8) == 1,
         "vanilla",
@@ -2228,13 +2227,13 @@ data_observed_struc <- data |>
 set.seed(1)
 data_observed_struc <- data_observed_struc |>
   mutate(
-    # 알레르기 확률 30%
+# 알레르기 확률 30%
     allergy = rbinom(n(), 1, 0.3) == 1,
-    # 이 경우 `y_vanilla`는 불가능함
+# 이 경우 `y_vanilla`는 불가능함
     exposure = if_else(allergy, "chocolate", exposure),
     y_vanilla = if_else(allergy, NA, y_vanilla),
     observed_outcome = case_when(
-      # 알레르기가 있는 사람들은 항상 초콜릿을 선택함
+# 알레르기가 있는 사람들은 항상 초콜릿을 선택함
       allergy ~ y_chocolate,
       exposure == "chocolate" ~ y_chocolate,
       exposure == "vanilla" ~ y_vanilla
@@ -2718,8 +2717,8 @@ data <- tibble(
   y_chocolate_chocolate = c(4, 4, 6, 5, 6, 5, 6, 7, 5, 6),
   y_vanilla_vanilla = c(1, 3, 4, 5, 5, 6, 8, 6, 3, 5)
 ) |>
-  # 파트너가 다른 맛을 얻었을 때
-  # 행복도가 2 증가함
+# 파트너가 다른 맛을 얻었을 때
+# 행복도가 2 증가함
   mutate(
     y_chocolate_vanilla = y_chocolate_chocolate + 2,
     y_vanilla_chocolate = y_vanilla_vanilla + 2
@@ -2962,7 +2961,7 @@ data_observed_interf |>
 ```{.r}
 set.seed(11)
 
-## 우리는 이제 개인이 아니라 *파트너십*을 무작위 배정하고 있습니다
+우리는 이제 개인이 아니라 *파트너십*을 무작위 배정하고 있습니다
 partners <- tibble(
   partner_id = 1:5,
   exposure = if_else(
@@ -2972,7 +2971,7 @@ partners <- tibble(
 partners_observed <- data |>
   left_join(partners, by = "partner_id") |>
   mutate(
-    # 모든 파트너십은 동일한 노출을 가집니다
+모든 파트너십은 동일한 노출을 가집니다
     exposure_partner = exposure,
     observed_outcome = case_when(
       exposure == "chocolate" & exposure_partner == "chocolate" ~
@@ -3161,7 +3160,6 @@ status("complete")
 
 ## 인과적 가정의 시각화
 
-> 우리가 어떤 것을 그 자체로만 떼어내려 할 때, 그것이 우주의 모든 것과 끊을 수 없는 수천 개의 보이지 않는 끈으로 단단히 묶여 있음을 발견하게 된다. -- 존 뮤어(John Muir)
 
 **인과 다이어그램(Causal diagrams)**은 답하고자 하는 질문의 인과 구조 가정을 시각화하는 도구이다.
 무작위 실험에서 인과 구조는 매우 간단하다.
@@ -3299,7 +3297,7 @@ dag_flows |>
 
 
 ::: {.callout-tip}
-## DAG는 SEM인가요?
+DAG는 SEM인가요?
 
 심리학 및 기타 사회과학 분야에서 흔히 사용되는 모델링 기법인 **구조 방정식 모델(structural equation models, SEM)**에 익숙하다면, SEM과 DAG 사이의 몇 가지 유사점을 발견할 수 있을 것이다.
 DAG는 *비모수적(non-parametric)* SEM의 한 형태이다.
@@ -3542,7 +3540,7 @@ collider_t |>
 우리는 흔히 교환 가능성을 교란이 없다는 가정으로 언급한다.
 사실 이는 완전히 정확한 표현은 아니다.
 잠재적 결과의 교환 가능성을 위해서는 **열린 비인과적 경로(open, non-causal paths)**가 없어야 한다 [@hernan2021].
-대부분의 경우 이들은 교란 경로이다.
+## 대부분의 경우 이들은 교란 경로이다.
 그러나 콜라이더에 대한 조건부화 또한 경로를 열 수 있다.
 이들은 교란 요인이 아님에도 불구하고 그렇게 함으로써 두 그룹 사이에 비교환 가능성(non-exchangeability)을 생성한다: 그들은 노출과 결과에 중요한 방식으로 서로 다르다.
 
@@ -3558,7 +3556,7 @@ collider_t |>
 DAG는 복잡한 설정에서도 조정 집합을 식별하는 데 도움을 줄 수 있다 [@vanderzander2019].
 
 ::: {.callout-tip}
-## 상호작용은 어떤가요?
+상호작용은 어떤가요?
 
 DAG는 추론의 중요한 부분임에도 불구하고 상호작용(interaction)이나 효과 추정치 수정(effect estimate modification)에 대해 직접적으로 언급하지 않는다.
 엄밀히 말하면, 상호작용은 DAG에 있는 관계들의 함수 형태(functional form)의 문제이다.
@@ -3648,11 +3646,11 @@ podcast_dag <- dagify(
   exam ~ mood + prepared,
   coords = time_ordered_coords(
     list(
-      # 시점 1
+# 시점 1
       c("prepared", "humor", "mood"),
-      # 시점 2
+# 시점 2
       "podcast",
-      # 시점 3
+# 시점 3
       "exam"
     )
   ),
@@ -3676,7 +3674,7 @@ ggdag(podcast_dag, use_labels = TRUE, use_text = FALSE) +
 ```{.r}
 theme_set(
   theme_dag() %+replace%
-    # 몇 가지 추가 스타일링을 더합니다
+몇 가지 추가 스타일링을 더합니다
     theme(
       legend.position = "bottom",
       strip.text.x = element_text(margin = margin(2, 0, 2, 0, "mm"))
@@ -3753,7 +3751,7 @@ pod_dag |>
 #| label: fig-paths-podcast
 #| fig-cap: "`ggdag_paths()`는 DAG의 열린 경로들을 시각화합니다. `podcast_dag`에는 두 개의 열린 경로가 있습니다: `mood`로부터의 포크와 `prepared`로부터의 포크입니다."
 podcast_dag |>
-  # 경로뿐만 아니라 전체 DAG를 연한 회색 "그림자"로 보여줍니다
+경로뿐만 아니라 전체 DAG를 연한 회색 "그림자"로 보여줍니다
   ggdag_paths(shadow = TRUE, use_text = FALSE, use_labels = TRUE)
 ```
 
@@ -3768,7 +3766,7 @@ podcast_dag_tidy <- podcast_dag |>
 podcast_dag_tidy
 ```
 
-대부분의 빠른 그래프 함수들은 `dagitty` 객체가 아직 tidy DAG라 아니라면 변환한 다음, 어떤 식으로든 데이터를 조작한다.
+## 대부분의 빠른 그래프 함수들은 `dagitty` 객체가 아직 tidy DAG라 아니라면 변환한 다음, 어떤 식으로든 데이터를 조작한다.
 예를 들어, `dag_paths`는 `ggdag_paths`의 기초가 되는 함수이다; 이는 경로에 대한 데이터를 포함하는 tidy DAG를 반환한다.
 여러분은 이러한 객체들에 대해 여러 `dplyr` 함수들을 직접 사용할 수 있다.
 
@@ -3826,7 +3824,7 @@ ggdag_adjustment_set(
 #| fig-height: 4.5
 #| fig-align: center
 podcast_dag_tidy |>
-  # 데이터에 조정 집합 추가
+데이터에 조정 집합 추가
   dag_adjustment_sets() |>
   ggplot(aes(
     x = x,
@@ -3836,12 +3834,12 @@ podcast_dag_tidy |>
     color = adjusted,
     shape = adjusted
   )) +
-  # ggdag의 커스텀 geom: 노드, 에지, 레이블 추가
+ggdag의 커스텀 geom: 노드, 에지, 레이블 추가
   geom_dag_edges() +
   geom_dag_point() +
-  # 조정된 경로 제거
+조정된 경로 제거
   geom_dag_label_repel() +
-  # 일반적인 ggplot 함수들도 사용할 수 있습니다
+일반적인 ggplot 함수들도 사용할 수 있습니다
   scale_shape_manual(values = c(adjusted = 15, unadjusted = 19))
 ```
 
@@ -3862,7 +3860,7 @@ ggdag_adjustment_set(
   podcast_dag,
   use_text = FALSE,
   use_labels = TRUE,
-  # 모든 조정 집합 가져오기
+# 모든 조정 집합 가져오기
   type = "all"
 )
 ```
@@ -3943,11 +3941,11 @@ podcast_dag_wrong <- dagify(
   exam ~ prepared,
   coords = time_ordered_coords(
     list(
-      # 시점 1
+# 시점 1
       c("prepared", "humor"),
-      # 시점 2
+# 시점 2
       "podcast",
-      # 시점 3
+# 시점 3
       "exam"
     )
   ),
@@ -4097,12 +4095,12 @@ podcast_dag3 <- dagify(
   showed_up ~ podcast + mood + prepared,
   coords = time_ordered_coords(
     list(
-      # 시점 1
+# 시점 1
       c("prepared", "humor", "mood"),
-      # 시점 2
+# 시점 2
       "podcast",
       "showed_up",
-      # 시점 3
+# 시점 3
       "exam"
     )
   ),
@@ -4202,7 +4200,7 @@ podcast_dag4 <- dagify(
     u1 = "측정되지 않음",
     u2 = "측정되지 않음"
   ),
-  # 측정되지 않은 변수들
+# 측정되지 않은 변수들
   latent = c("u1", "u2")
 )
 
@@ -4251,7 +4249,7 @@ butterfly_bias(x = "podcast", y = "exam", m = "mood", a = "u1", b = "u2") |>
 선택 편향의 또 다른 흔한 형태는 **추적 관찰 소실(loss-to-follow-up)**로 인한 것이다: 사람들이 노출 및 결과와 관련된 방식으로 연구에서 중도 탈락하는 경우이다.
 우리는 @sec-longitudinal 에서가 주제로 다시 돌아올 것이다.
 
-### 노출의 원인과 결과의 원인
+노출의 원인과 결과의 원인
 
 중요한 또 다른 유형의 인과 구조를 살펴봅시다: 노출의 원인이지만 결과의 원인은 아닌 경우와, 그 반대로 결과의 원인이지만 노출의 원인은 아닌 경우이다.
 원래의 DAG에 `grader_mood`(채점자의 기분)라는 변수를 추가해 보겠다.
@@ -4266,11 +4264,11 @@ podcast_dag5 <- dagify(
   exam ~ mood + prepared + grader_mood,
   coords = time_ordered_coords(
     list(
-      # 시점 1
+# 시점 1
       c("prepared", "humor", "mood"),
-      # 시점 2
+# 시점 2
       c("podcast", "grader_mood"),
-      # 시점 3
+# 시점 3
       "exam"
     )
   ),
@@ -4442,7 +4440,7 @@ DAG를 만들고 동료들에게 제시했을 때, 중요한 것을 놓쳤다는
 후보 DAG가 하나 이상이라면, 그들의 조정 집합을 확인하라.
 만약 두 DAG가 공통으로 가진 조정 집합이 있다면, 그 집합들에 집중하라; 그러면 여러분이 가진 그럴듯한 가정들을 충족하는 방식으로 나아갈 수 있다.
 
-### 여러분의 질문을 고려하라
+여러분의 질문을 고려하라
 
  에서 보았듯이, 어떤 질문들은 특정 데이터로 답하기 어려울 수 있는 반면, 다른 질문들은 더 접근하기 쉬울 수 있다.
 여러분은 정확히 무엇을 추정하고 싶은지 고려해야 한다.
@@ -4460,7 +4458,7 @@ DAG를 만들고 동료들에게 제시했을 때, 중요한 것을 놓쳤다는
 수 세기 전 북미에서의 담배 사용은 전 세계 인구 중에서 독특한 것이었다. 비록 당시의 의례적인 담배 사용은 현대의 기호용 사용과는 꽤 달랐지만 말이다.
 많은 변화가 수 세기에 걸쳐서처럼 극적으로 일어나지는 않겠지만 때때로 그러한 일이 발생한다. 예를 들어, 한 국가의 규제가 특정 요인에 대한 인구의 노출을 효과적으로 제거하는 경우가 그렇다.
 
-### 노드들을 시간 순서대로 배치하라
+노드들을 시간 순서대로 배치하라
 
 앞서 논의했듯이, 변수들을 왼쪽에서 오른쪽으로 또는 위에서 아래로 시간 순서대로 배치할 것을 권장한다.
 여기에는 두 가지 이유가 있다.
@@ -4530,7 +4528,7 @@ dagify(
 마찬가지로, 우리가 변화를 시간의 흐름에 따라 모델링할지 아니면 단지 그 두 시점만 모델링할지 여부도 질문에 따라 달라진다.
 종종 이러한 피드포워드 관계는 여러분이 **시간 가변적 교란(time-varying confounding)**을 다루어야 함을 의미하며 우리는 이에 대해 [Chapter -@sec-longitudinal] 에서 논의할 것이다.
 
-### 전체 데이터 수집 과정을 고려하라
+전체 데이터 수집 과정을 고려하라
 
 앞의 예가 보여주었듯이, 질문의 인과 구조만큼이나 우리가 데이터를 수집한 *방법*을 고려하는 것이 필수적이다.
 전체 데이터 수집 과정을 고려하는 것은 "발견된(found)" 데이터 --- 연구 질문에 답하기 위해 의도적으로 수집되지 않은 데이터셋 --- 로 작업할 때 특히 중요하다.
@@ -4600,7 +4598,7 @@ dagify(
 
 
 ::: {.callout-tip}
-## 환자-대조군 연구는 어떤가요?
+환자-대조군 연구는 어떤가요?
 
 역학에서 표준적인 연구 설계 중 하나는 환자-대조군 연구(case-control study)이다.
 환자-대조군 연구는 연구 대상인 결과가 희귀하거나 발생하기까지 매우 오랜 시간이 걸릴 때(많은 종류의 암과 같이) 유익하다.
@@ -4633,7 +4631,7 @@ dagify(
 
 :::
 
-### 가지고 있지 않은 변수들을 포함하라
+가지고 있지 않은 변수들을 포함하라
 
 데이터에서 측정한 변수들뿐만 아니라 인과 구조에 중요한 *모든* 변수들을 포함하는 것이 매우 중요하다.
 `ggdag`는 측정되지 않은 변수들을 "잠재적(latent)" 변수로 표시할 수 있다; 그러면 측정되지 않은 변수가 없는 사용 가능한 조정 집합들만 반환할 것이다.
@@ -4694,7 +4692,7 @@ dagify(
   ggdag(edge_type = "arc")
 ```
 
-### DAG를 포화시킨 뒤 정제하라
+DAG를 포화시킨 뒤 정제하라
 
 앞서 이를 논의할 때 **포화된 (saturated)** DAG를 언급했다.
 이들은 시간 순서에 기반하여 가능한 모든 화살표가 포함된 DAG입니다. 즉, 모든 변수가 시간상 그 이후에 나오는 변수들을 유발한다고 가정하는 것이다.
@@ -4856,7 +4854,7 @@ DAG에 언제가 정보를 포함해야 할까?
 ### 강건성 체크 사용하기
 
 마지막으로, 여러분의 DAG에 대해 강건성 체크를 수행할 것을 권장한다.
-대부분의 조건에서 DAG의 정확성을 결코 검증할 수 없지만 DAG의 함의들을 사용하여 이를 뒷받침할 수는 있다.
+## 대부분의 조건에서 DAG의 정확성을 결코 검증할 수 없지만 DAG의 함의들을 사용하여 이를 뒷받침할 수는 있다.
 상황에 따라 세 가지 유형의 강건성 체크가 도움이 될 수 있다.
 
 1. **부정 대조군 (Negative controls)** [@Lipsitch2010]. 이는 부정 노출 대조군과 부정 결과 대조군의 두 가지 형태가 있다. 아이디어는 하나와는 연관되어 있지만 다른 하나와는 연관되지 않은 것(예: 결과와는 연관되지만 노출과는 연관되지 않은 것)을 찾아내어, 아무런 효과가 나타나지 않아야 함을 이용하는 것이다. 효과가 나타나지 않아야 하기 때문에, 여러분은 이제 *다른* 효과들을 얼마나 잘 통제하고 있는지에 대한 측정치(예: 무효값으로부터의 차이)를 갖게 된다. 이상적으로 부정 대조군의 교란 요인들은 연구 질문의 것들과 유사해야 한다.
@@ -4943,7 +4941,7 @@ datasaurus_dozen |>
 #| message: false
 #| fig-cap: "요약 통계와 시각화 결과가 거의 동일한 네 개의 데이터셋인 인과적 콰르텟. 각 데이터셋의 인과 구조는 서로 다르며 데이터만으로는 어느 것이 어느 것인지 알 수 없습니다."
 causal_quartet |>
-  # 데이터셋 이름을 숨깁니다
+데이터셋 이름을 숨깁니다
   mutate(dataset = as.integer(factor(dataset))) |>
   group_by(dataset) |>
   mutate(exposure = scale(exposure), outcome = scale(outcome)) |>
@@ -5019,7 +5017,7 @@ effects |>
 
 ```{.r}
 causal_quartet |>
-  # 데이터셋 이름을 숨깁니다
+데이터셋 이름을 숨깁니다
   mutate(dataset = as.integer(factor(dataset))) |>
   group_by(dataset) |>
   summarize(cor = round(cor(covariate, exposure), 2))
@@ -5032,7 +5030,7 @@ causal_quartet |>
 #| message: false
 #| fig-cap: "`exposure`와 `covariate` 사이의 표준화된 관계. 우리는 여전히 `covariate`가 교란 요인인지, 매개 요인인지, 아니면 콜라이더인지 판단하기 위한 충분한 정보를 가지고 있지 않습니다."
 causal_quartet |>
-  # 데이터셋 이름을 숨깁니다
+데이터셋 이름을 숨깁니다
   mutate(dataset = as.integer(factor(dataset))) |>
   group_by(dataset) |>
   mutate(covariate = scale(covariate), exposure = scale(exposure)) |>
@@ -5044,7 +5042,7 @@ causal_quartet |>
 ```
 
 ::: {.callout-tip}
-## 왜 계수를 표준화했나요?
+왜 계수를 표준화했나요?
 
 `scale`에 구현된 것처럼 숫자형 변수를 평균이 0이고 표준 편차가 1이 되도록 표준화하는 것은 통계학에서 흔히 쓰이는 기술이다.
 이는 여러 이유로 유용하지만 여기서는 각 데이터셋에서 `covariate`와 `exposure` 사이의 동일한 상관관계를 강조하기 위해 변수들을 스케일링하기로 했다.
@@ -5060,7 +5058,7 @@ OLS 모델의 베타 계수는 변수의 공분산과 표준 편차 정보를 �
 #| message: false
 #| fig-cap: "스케일링되지 않은 @fig-causal_quartet_covariate"
 causal_quartet |>
-  # 데이터셋 이름을 숨깁니다
+데이터셋 이름을 숨깁니다
   mutate(dataset = as.integer(factor(dataset))) |>
   ggplot(aes(covariate, exposure)) +
   geom_point() +
@@ -5582,26 +5580,26 @@ library(tidyverse)
 set.seed(1)
 n <- 10000
 satisfaction1 <- tibble(
-  # 무료 (0) 또는 프리미엄 (1)
+# 무료 (0) 또는 프리미엄 (1)
   customer_type = rbinom(n, 1, 0.5),
   p_exposure = case_when(
-    # 프리미엄 고객은 일간 업데이트를 받을 가능성이 더 높음
+# 프리미엄 고객은 일간 업데이트를 받을 가능성이 더 높음
     customer_type == 1 ~ 0.75,
-    # 무료 고객은 주간 업데이트를 받을 가능성이 더 높음
+# 무료 고객은 주간 업데이트를 받을 가능성이 더 높음
     customer_type == 0 ~ 0.25
   ),
-  # 주간 (0) vs 일간 (1)
+# 주간 (0) vs 일간 (1)
   update_frequency = rbinom(n, 1, p_exposure),
-  # 0인 진정한 평균 처치 효과 생성
-  # 이를 위해 잠재적 결과 생성, 먼저 노출 = 0인 경우
-  # `y0` = `satisfaction(weekly)`
-  # 아래 방정식에 `update_frequency`가 포함되지 않았음에 주목하십시오
-  # 평균 0, 표준 편차 1인 정규 분포를 따르는 무작위 오차항을
-  # 추가하기 위해 rnorm(n)을 사용합니다
+# 0인 진정한 평균 처치 효과 생성
+이를 위해 잠재적 결과 생성, 먼저 노출 = 0인 경우
+# `y0` = `satisfaction(weekly)`
+# 아래 방정식에 `update_frequency`가 포함되지 않았음에 주목하십시오
+평균 0, 표준 편차 1인 정규 분포를 따르는 무작위 오차항을
+추가하기 위해 rnorm(n)을 사용합니다
   y0 = customer_type + rnorm(n),
-  # 진정한 효과가 0이므로, 노출 = 1인 경우의 잠재적 결과도 동일함
+# 진정한 효과가 0이므로, 노출 = 1인 경우의 잠재적 결과도 동일함
   y1 = y0,
-  # 실무에서는 이들 중 하나만 관찰함
+# 실무에서는 이들 중 하나만 관찰함
   satisfaction = (1 - update_frequency) * y0 +
     update_frequency * y1,
   observed_potential_outcome = case_when(
@@ -5694,8 +5692,8 @@ satisfaction_strat_est |>
 
 ```{.r}
 satisfaction_strat_est |>
-  # 참고: 교란 요인 그룹들의 크기가 동일하지 않다면
-  # 여기에 가중치를 부여해야 합니다
+# 참고: 교란 요인 그룹들의 크기가 동일하지 않다면
+여기에 가중치를 부여해야 합니다
   summarise(estimate = mean(estimate))
 ```
 
@@ -5736,9 +5734,9 @@ ggdag(dag2, use_text = FALSE) +
 
 ```{.r}
 satisfaction2 <- tibble(
-  # 무료(0) 또는 프리미엄(1)
+# 무료(0) 또는 프리미엄(1)
   customer_type = rbinom(n, 1, 0.5),
-  # 업무 시간 (예: 1, 아니오: 0)
+# 업무 시간 (예: 1, 아니오: 0)
   business_hours = rbinom(n, 1, 0.5),
   p_exposure = case_when(
     customer_type == 1 & business_hours == 1 ~ 0.75,
@@ -5746,9 +5744,9 @@ satisfaction2 <- tibble(
     customer_type == 1 & business_hours == 0 ~ 0.2,
     customer_type == 0 & business_hours == 0 ~ 0.1
   ),
-  # 주간(0) 대 일간(1)
+# 주간(0) 대 일간(1)
   update_frequency = rbinom(n, 1, p_exposure),
-  # 업무 시간 동안 이용 가능성이 더 높음
+# 업무 시간 동안 이용 가능성이 더 높음
   customer_service_prob = business_hours * 0.9 +
     (1 - business_hours) * 0.2,
   customer_service = rbinom(n, 1, prob = customer_service_prob),
@@ -5864,11 +5862,11 @@ ggdag(dag3, use_text = FALSE, use_edges = FALSE) +
 
 ```{.r}
 satisfaction3 <- tibble(
-  # 사용자 수
+# 사용자 수
   num_users = runif(n, min = 1, max = 500),
-  # 큰 고객일수록 일간 업데이트를 받을 확률이 높음
+# 큰 고객일수록 일간 업데이트를 받을 확률이 높음
   update_frequency = rbinom(n, 1, plogis(num_users / 100)),
-  # 사용자가 많을수록 만족도는 낮아짐
+# 사용자가 많을수록 만족도는 낮아짐
   satisfaction = 70 + -0.2 * num_users + rnorm(n)
 ) |>
   mutate(
@@ -5915,7 +5913,7 @@ satisfaction3_strat |>
 
 ::: {#tip-bins .callout-tip}
 
-## 구간의 수를 바꾸면 어떤 일이 일어날까?
+구간의 수를 바꾸면 어떤 일이 일어날까?
 
 구간의 수를 늘리면 어떻게 되는지 살펴봅시다. 아래 그림에서 우리는 구간의 수를 텍스트 예시의 5개에서 3개에서 20개 사이로 변경해 보았다. 구간의 수가 늘어날수록 편향이 감소하는 것을 확인할 수 있다.
 
@@ -6003,7 +6001,7 @@ satisfaction3 |>
 ## 모수적 결과 모델 {#sec-parametric}
 
 층화를 조건부 평균(conditional means)을 계산하는 것으로 생각할 수 있다.
-조건부 평균의 더 일반적인 확장은 다변량 선형 회귀이다.
+## 조건부 평균의 더 일반적인 확장은 다변량 선형 회귀이다.
 우리가 `outcome ~ exposure + confounder + confounder + ...` 형태의 변수들로 `lm`을 적합시킬 때, 우리는 이를 **결과 모델(outcome model)**이라고 부른다. 노출과 교란 요인들을 포함하여 결과를 종속 변수로 하여 모델을 적합시키기 때문이다.
 이는 또한 회귀 모델에서 교란 요인들을 직접 조정하기 때문에 **직접 조정(direct adjustment)** 또는 **회귀 조정(regression adjustment)**이라고 불리기도 한다.
 두 개의 이진 교란 요인이 있는 예시에서 `lm`을 사용하여 효과를 계산해 봅시다:
@@ -6047,11 +6045,11 @@ lm(
 ```{.r}
 set.seed(11)
 satisfaction4 <- tibble(
-  # 사용자 수
+# 사용자 수
   num_users = runif(n, 1, 500),
-  # 큰 고객일수록 일간 업데이트를 받을 확률이 높음
+# 큰 고객일수록 일간 업데이트를 받을 확률이 높음
   update_frequency = rbinom(n, 1, plogis(num_users / 100)),
-  # 만족도와 사용자 수 사이의 비선형 관계
+# 만족도와 사용자 수 사이의 비선형 관계
   satisfaction = 70 - 0.001 * (num_users-300)^2 - 0.001 * (num_users - 300)^3
 ) |>
   mutate(
@@ -6182,7 +6180,7 @@ satisfaction4_strat |>
 책의 대부분에서 우리는 간단한 전후 데이터를 분석할 것이다: 기준점 데이터가 있고 단일 시점에 노출이 발생하며 노출 후에 결과가 발생한다.
 @sec-longitudinal 및 다른 장들에서 우리는 더 복잡한 질문과 데이터를 다룰 것이다.
 
-## 인과 추론을 위한 추정량 개요
+인과 추론을 위한 추정량 개요
 
 우리가 보았듯이 층화나 다변량 선형 회귀와 같은 간단한 방법으로도 인과 추론을 하는 것이 가능하다.
 하지만 책의 나머지 부분에서는 우리가 던지고 싶은 질문에 더 유연하게 답할 수 있게 해주는 다른 인과 방법론들에 집중할 것이다.
@@ -6228,13 +6226,13 @@ satisfaction4_strat |>
 #| fig-cap: "무작위 설정에서 인과 효과를 추정하는 세 가지 방법. 첫 번째 효과는 조정되지 않았습니다. 두 번째는 조정된 선형 모델(직접 조정)입니다. 세 번째는 역확률 가중 선형 모델입니다. 세 모델 모두 우리에게 편향되지 않은 답을 주지만 두 가지 조정 접근 방식은 더 정밀한 답을 줍니다. 그들의 표준 오차는 더 작고 따라서 신뢰 구간은 더 좁습니다."
 
 satisfaction_randomized <- tibble(
-  # 무료(0) 또는 프리미엄(1)
+# 무료(0) 또는 프리미엄(1)
   customer_type = rbinom(n, 1, 0.5),
-  # 업무 시간 (예: 1, 아니오: 0)
+# 업무 시간 (예: 1, 아니오: 0)
   business_hours = rbinom(n, 1, 0.5),
-  # 주간(0) vs 일간(1), 이제 무작위임
+# 주간(0) vs 일간(1), 이제 무작위임
   update_frequency = rbinom(n, 1, 0.5),
-  # 업무 시간 동안 이용 가능성이 더 높음
+# 업무 시간 동안 이용 가능성이 더 높음
   customer_service_prob = business_hours *
     0.9 + (1 - business_hours) * 0.2,
   customer_service = rbinom(n, 1, prob = customer_service_prob),
@@ -6411,7 +6409,7 @@ parks_metadata_raw
 
 ```{.r}
 parks_metadata_raw |>
-  # 0: 엑스트라 매직 아워 없음, 1: 엑스트라 매직 아워 있음
+# 0: 엑스트라 매직 아워 없음, 1: 엑스트라 매직 아워 있음
   count(year, mkemhmorn)
 ```
 
@@ -6420,7 +6418,7 @@ parks_metadata_raw |>
 
 ```{.r}
 parks_metadata_raw |>
-  # 엑스트라 매직 아워
+# 엑스트라 매직 아워
   count(year, mkemhmorn) |>
   group_by(year) |>
   summarize(days = sum(n))
@@ -6616,12 +6614,12 @@ R에는 `skimr::skim`이나 `pointblank::scan_data`와 같이 데이터셋을 �
 #| message: false
 #| warning: false
 seven_dwarfs_9 <- seven_dwarfs_train |>
-  # 적격성 기준
+# 적격성 기준
   filter(year(park_date) == 2018) |>
-  # 대기 시간 기록에서 시간을 추출합니다
+대기 시간 기록에서 시간을 추출합니다
   mutate(hour = hour(wait_datetime)) |>
-  # 결과 정의:
-  # 날짜와 시간별로 평균 대기 시간을 계산합니다
+# 결과 정의:
+날짜와 시간별로 평균 대기 시간을 계산합니다
   group_by(park_date, hour) |>
   summarize(
     across(
@@ -6634,8 +6632,8 @@ seven_dwarfs_9 <- seven_dwarfs_train |>
     ),
     .groups = "drop"
   ) |>
-  # NaN을 NA로 대체합니다
-  # 이는 해당 시간에 관측치가 없어 벡터의 길이가 0일 때 발생합니다
+NaN을 NA로 대체합니다
+이는 해당 시간에 관측치가 없어 벡터의 길이가 0일 때 발생합니다
   mutate(across(
     c(
       wait_minutes_posted_avg,
@@ -6643,8 +6641,8 @@ seven_dwarfs_9 <- seven_dwarfs_train |>
     ),
     \(.x) if_else(is.nan(.x), NA, .x)
   )) |>
-  # 결과 정의:
-  # 9시에서 10시 사이의 평균 대기 시간만 유지합니다
+# 결과 정의:
+9시에서 10시 사이의 평균 대기 시간만 유지합니다
   filter(hour == 9)
 
 seven_dwarfs_9
@@ -6672,19 +6670,19 @@ parks_metadata_raw |>
 
 ```{.r}
 parks_metadata <- parks_metadata_raw |>
-  ## 노출 정의, 배정 절차,
-  ## 그리고 분석 계획: ID, 노출, 교란 요인들을 선택합니다
+## 노출 정의, 배정 절차,
+그리고 분석 계획: ID, 노출, 교란 요인들을 선택합니다
   select(
-    # id
+# id
     park_date = date,
-    # 노출
+# 노출
     park_extra_magic_morning = mkemhmorn,
-    # 교란 요인들
+# 교란 요인들
     park_ticket_season = wdw_ticket_season,
     park_temperature_high = wdwmaxtemp,
     park_close = mkclose
   ) |>
-  ## 적격성 기준: 2018년의 날짜들
+## 적격성 기준: 2018년의 날짜들
   filter(year(park_date) == 2018)
 ```
 
@@ -6719,7 +6717,7 @@ count_by_month <- function(parks_metadata, .var) {
       )
     ) |>
     count(month, {{ .var }}) |>
-    # 암묵적으로 누락된 조합을 채웁니다
+암묵적으로 누락된 조합을 채웁니다
     complete(
       month,
       {{ .var }},
@@ -6873,7 +6871,7 @@ seven_dwarfs_9 |>
       park_temperature_high
     )
   ) |>
-  # 표에 전체 열을 추가합니다
+표에 전체 열을 추가합니다
   add_overall(last = TRUE)
 ```
 
@@ -6890,7 +6888,7 @@ vis_miss(seven_dwarfs_9)
 ```
 
 게시된 대기 시간의 누락된 관측치는 기록이 아예 없는 날짜들에만 국한되지 않았다.
-일부 날짜들은 레코드는 있었지만 비어 있었다.
+## 일부 날짜들은 레코드는 있었지만 비어 있었다.
 예를 들어 1월 24일에는 9개의 레코드가 있었지만 두 종류의 대기 시간 모두 누락되었다.
 
 ```{.r}
@@ -6943,7 +6941,7 @@ dataset |>
 하지만 확률적(stochastic) 긍정성 위배와 구조적(structural) 긍정성 위배의 차이를 구분할 수 있는 유일한 방법은 배경 지식뿐이다.
 예를 들어, 특정 폐쇄 시간에 엑스트라 매직 아워가 없었던 것이 단지 우연일 수도 있지만(확률적 위배), 교란 요인들을 고려할 때 엑스트라 매직 아워를 가질 자격이 없는 날들이 있을 수도 있다(구조적 위배).
 
-### 긍정성 위배에 대한 단일 변수 체크
+긍정성 위배에 대한 단일 변수 체크
 
  는 아침 엑스트라 매직 아워 여부에 따른 매직 킹덤 공원 폐쇄 시간의 분포를 보여준다.
 두 노출 수준 모두 대부분의 공변량 공간을 포괄하고 있지만 매직 킹덤이 16:30과 21:00에 폐쇄된 날 중에는 아침 엑스트라 매직 아워가 있었던 날이 없었다.
@@ -7040,7 +7038,7 @@ ggplot(
   theme(panel.grid.major.x = element_blank())
 ```
 
-### 긍정성 위배에 대한 다변수 체크
+긍정성 위배에 대한 다변수 체크
 
 세 가지 교란 요인들 사이에서 긍정성 위배의 잠재적 증거가 보인다.
 여기서는 변수가 아주 적기 때문에 이를 더 자세히 살펴볼 수 있다.
@@ -7051,12 +7049,12 @@ ggplot(
 #| fig-cap: "세 가지 교란 요인(과거 최고 기온, 공원 폐쇄 시간, 티켓 시즌)에 걸친 긍정성 위배 확인."
 #| fig-width: 9
 prop_exposed <- seven_dwarfs_9 |>
-  ## park_temperature_high를 3분위수로 나눕니다
+park_temperature_high를 3분위수로 나눕니다
   mutate(park_temperature_high_bin = cut(
     park_temperature_high,
     breaks = 3
   )) |>
-  ## 공원 폐쇄 시간을 구간화합니다
+공원 폐쇄 시간을 구간화합니다
   mutate(park_close_bin = case_when(
     hour(park_close) < 19 & hour(park_close) > 12 ~ "(1) early",
     hour(park_close) >= 19 & hour(park_close) < 24 ~ "(2) standard",
@@ -7067,7 +7065,7 @@ prop_exposed <- seven_dwarfs_9 |>
     park_temperature_high_bin,
     park_ticket_season
   ) |>
-  ## 각 구간에서의 노출 비율을 계산합니다
+각 구간에서의 노출 비율을 계산합니다
   summarize(
     prop_exposed = mean(park_extra_magic_morning == "엑스트라 매직 아워"),
     .groups = "drop"
@@ -7256,10 +7254,10 @@ dag_plot +
 ```{.r}
 #| eval: false
 glm(
-  # 처치 확률을 예측합니다
+처치 확률을 예측합니다
   exposure ~ confounder_1 + confounder_2,
   data = df,
-  # 로지스틱 회귀를 사용합니다
+로지스틱 회귀를 사용합니다
   family = binomial()
 )
 ```
@@ -7273,7 +7271,7 @@ glm(
   data = df,
   family = binomial()
 ) |>
-  # .fitted 열에 예측된 확률이 포함된 원래의 데이터 프레임을 가져옵니다
+.fitted 열에 예측된 확률이 포함된 원래의 데이터 프레임을 가져옵니다
   augment(type.predict = "response", data = df)
 ```
 
@@ -7515,7 +7513,7 @@ ps_logit_scale <- predict(ps_mod)
 matchit_obj <- matchit(
   park_extra_magic_morning ~ park_ticket_season + park_close + park_temperature_high,
   data = seven_dwarfs_9_with_ps,
-  # 로짓 척도로 적합시킨 성향 점수로 매칭합니다
+로짓 척도로 적합시킨 성향 점수로 매칭합니다
   distance = ps_logit_scale
 )
 
@@ -7850,7 +7848,7 @@ seven_dwarfs_9_with_wt |>
 
 ::: {.callout-note}
 
-## 매칭과 가중치 부여 중 언제 무엇을 사용해야 할까?
+매칭과 가중치 부여 중 언제 무엇을 사용해야 할까?
 
 가중치 부여가 매칭보다 통계적으로 더 효율적이므로, 가능하면 매칭보다는 가중치 부여를 사용할 것을 권장한다. 하지만 매칭에는 뚜렷한 장점이 있다: 바로 이해하기 쉽다는 것이다. 통계적 배경 지식이 있는 사람은 가중치 분석 결과를 해석하는 데 익숙할 수 있지만 그렇지 않은 이해관계자는 가상 인구나 왜 표본 크기가 정수가 아닌 값이 될 수 있는지 이해하지 못할 수 있다. 따라서 데이터가 많고 분석 결과의 해석을 돕는다고 판단된다면 매칭이 좋은 옵션이 될 수 있다.
 
@@ -8162,7 +8160,7 @@ scale_color_manual(
 
 ## 균형 개선하기
 
-### 인과 모델링에 예측 지표를 사용하지 말라
+인과 모델링에 예측 지표를 사용하지 말라
 
 대체로 예측 모델을 구축할 때 흔히 사용되는 지표들은 인과 모델을 구축하는 데 부적절하다.
 연구자와 데이터 과학자들은 종종 R^2^, AUC, 정확도(accuracy), 그리고 (종종 부적절하게) p-값과 같은 지표들을 사용하여 모델에 대한 결정을 내립니다.
@@ -8329,12 +8327,12 @@ $$
 ```{.r}
 set.seed(928)
 ab <- tibble(
-  # 노출 x를 이항 분포로부터 생성합니다.
-  # 노출 A일 확률은 0.5입니다.
+노출 x를 이항 분포로부터 생성합니다.
+노출 A일 확률은 0.5입니다.
   x = rbinom(100, 1, 0.5),
-  # "진정한" 평균 처치 효과를 1로 생성합니다.
-  # 평균이 0이고 표준 편차가 1인 정규 분포를 따르는
-  # 무작위 오차항을 추가하기 위해 rnorm(100)을 사용합니다.
+"진정한" 평균 처치 효과를 1로 생성합니다.
+평균이 0이고 표준 편차가 1인 정규 분포를 따르는
+무작위 오차항을 추가하기 위해 rnorm(100)을 사용합니다.
   y = x + rnorm(100)
 )
 ```
@@ -8433,7 +8431,7 @@ $$
 연구의 목표나 인과적 질문에 따라 우리는 서로 다른 추정 대상을 추정하고 싶을 수 있다.
 여기서는 가장 일반적인 인과 추정 대상들과 그들의 대상 인구, 그들이 답하는 데 도움이 될 수 있는 인과적 질문들, 그리고 이를 추정하기 위해 사용되는 방법들을 개괄할 것이다 [@greifer2021choosing].
 
-### 평균 처치 효과
+평균 처치 효과
 
 흔히 쓰이는 추정 대상은 평균 처치 효과(average treatment effect, ATE)이다.
 대상 인구(target population)는 관심 있는 *전체 표본* 또는 인구 집단이다.
@@ -8444,7 +8442,7 @@ $$E[Y(1) - Y(0)]
 $$
 예를 들어 "특정 정책을 모든 대상 환자에게 적용해야 하는가?"와 같은 연구 질문이 이에 해당한다 [@greifer2021choosing].
 
-대부분의 무작위 대조 시험은 ATE를 목표 추정 대상으로 설계 된다.
+## 대부분의 무작위 대조 시험은 ATE를 목표 추정 대상으로 설계 된다.
 앞서 `ab` 데이터에 적용했던 추정량은이 경우 잘 작동할 것이다.
 우리는 또한 매칭(matching)과 가중치 부여(weighting)라는 다른 두 가지 유형의 추정량도 보았다.
 비무작위 설정에서 여러분은 전체 매칭(full matching)을 사용하여 ATE를 추정할 수 있다.
@@ -8505,7 +8503,7 @@ tbl_summary(
   by = park_extra_magic_morning,
   include = c(park_ticket_season, park_close, park_temperature_high)
 ) |>
-  # 표에 전체(overall) 열을 추가합니다
+표에 전체(overall) 열을 추가합니다
   add_overall(last = TRUE)
 ```
 
@@ -8553,14 +8551,14 @@ ggplot(seven_dwarfs_wts, aes(x = w_ate)) +
 set.seed(928)
 n <- 100
 finite_sample <- tibble(
-  # z는 평균 0, 표준 편차 1인 정규 분포를 따름
+# z는 평균 0, 표준 편차 1인 정규 분포를 따름
   z = rnorm(n),
-  # x는 정규 분포 오차를 가진 프로빗 선택 모델로부터 정의됨
+# x는 정규 분포 오차를 가진 프로빗 선택 모델로부터 정의됨
   x = case_when(
     0.5 + z + rnorm(n) > 0 ~ 1,
     TRUE ~ 0
   ),
-  # y는 연속형이며 정규 분포 오차를 가지고 오직 z에만 의존함
+# y는 연속형이며 정규 분포 오차를 가지고 오직 z에만 의존함
   y = z + rnorm(n)
 )
 ```
@@ -8595,7 +8593,7 @@ finite_sample_wts |>
 #| cache: true
 #| code-fold: true
 sim <- function(n) {
-  ## 시뮬레이션 데이터셋 생성
+## 시뮬레이션 데이터셋 생성
   finite_sample <- tibble(
     z = rnorm(n),
     x = case_when(
@@ -8666,7 +8664,7 @@ hdr <- paste0(
   "N = {n_unweighted}; ESS = {format(n, digits = 1, nsmall = 1)}"
 )
 seven_dwarfs_svy <- svydesign(
-  # ~1은 설문 조사가 클러스터링된 데이터가 아님을 survey에 알려줍니다
+~1은 설문 조사가 클러스터링된 데이터가 아님을 survey에 알려줍니다
   ids = ~1,
   data = seven_dwarfs_wts,
   weights = ~w_ate
@@ -8676,7 +8674,7 @@ tbl_svysummary(
   by = park_extra_magic_morning,
   include = c(park_ticket_season, park_close, park_temperature_high)
 ) |>
-  # 그룹별 *유효 표본 크기(effective sample size)*를 제공합니다
+그룹별 *유효 표본 크기(effective sample size)*를 제공합니다
   add_ess_header(header = hdr) |>
   add_overall(last = TRUE)
 ```
@@ -8730,7 +8728,7 @@ ATE는 *전체 인구*를 목표로 하는 추정 대상이다.
 따라서 우리는 처치 값의 전체 범위에 걸쳐 이러한 가정들을 충족해야 한다. 즉, 처치받지 않은 그룹의 반사실적 상황을 추정하기 위해 처치받은 그룹을 사용해야 하고 처치받은 그룹의 반사실적 상황을 추정하기 위해 처치받지 않은 그룹을 사용해야 한다.
 두 집단 모두로부터 정보를 빌려와야 하기 때문에, 긍정성 가정의 한 측면은 노출될 확률이 0보다 크고 1보다 작아야 한다는 것이다: $0<p<1$.
 
-### 처치받은 집단에서의 평균 처치 효과
+처치받은 집단에서의 평균 처치 효과
 
 우리가 본 또 다른 추정 대상 `{MatchIt}`의 기본 추정 대상이기도 한 은 처치받은 집단에서의 평균 처치 효과(average treatment effect among the treated, ATT)이다.
 ATT의 대상 인구는 *노출된(처치받은)* 인구 집단이다.
@@ -8948,7 +8946,7 @@ $$
 우리는 오직 `y(0)`만 추정하면 되며 이를 위해 처치받지 않은 사람들로부터 정보를 빌려올 것이다.
 이는 우리 가정에 두 가지 결과를 가져온다: 1) 교환 가능성 가정은 오직 잠재적 결과 `y(0)`에 대해서만 충족되면 되도록 완화되고 2) 긍정성 가정은 $p < 1$ 만 요구하도록 완화 된다; 즉, 노출되지 *않을* 확률이 *어느 정도는* 있어야 한다.
 
-### 비노출군에서의 평균 처치 효과
+비노출군에서의 평균 처치 효과
 
 비노출군(대조군)에서의 평균 처치 효과(ATU 또는 ATC)를 추정하기 위한 대상 인구는 *비노출된(처치받지 않은)* 인구 집단이다.
 우리는 이 추정 대상을 지칭하기 위해 ATU와 ATC를 모두 사용할 것이다.
@@ -9062,7 +9060,7 @@ ATC의 경우, 우리는 인과적 가정을 *처치받지 않은* 그룹에 대
 이는 비노출군이 있는 곳 어디에나 노출군 관측치가 일부 있어야 함을 의미한다.
 즉, 이제 우리는 $p > 0$ 이라는 긍정성 가정을 갖게 된다: 처치받을 확률이 *어느 정도는* 존재해야 한다.
 
-### 균등하게 매칭 가능한 집단에서의 평균 처치 효과
+균등하게 매칭 가능한 집단에서의 평균 처치 효과
 
 균등하게 매칭 가능한 집단에서의 평균 처치 효과(average treatment effect among the evenly matchable, ATM)를 추정하기 위한 대상 인구는 균등하게 매칭 가능한 사람들이다.
 이 인과 추정 대상은 어떤 거리 척도에 의해 "균등하게 매칭 가능"하다고 간주되는 사람들에 대해 조건부화한다.
@@ -9183,7 +9181,7 @@ ATM 가중치는 0과 1 사이로 제한되므로, 모든 관측치들은 하향
 인과적 가정 또한 ATM에 대해서는 완화 된다: 우리는 ATE와 동일한 교환 가능성 및 긍정성 가정을 가지지만 이러한 가정들은 전체 인구가 아닌 오직 균등하게 매칭 가능한 사람들에 대해서만 요구 된다.
 중첩 영역의 중간 부분에서의 교란이 덜 극단적이고 정의상 더 나은 긍정성을 갖기 때문에 이는 종종 더 실현 가능한 가정이 된다.
 
-### 중첩된 집단에서의 평균 처치 효과
+중첩된 집단에서의 평균 처치 효과
 
 ATM은 임상적 평형 상태에 있는 특정 인구 집단(균등하게 매칭 가능한 사람들)을 추정하지만 평형 상태를 고려하는 방법에는 여러 가지가 있다.
 관련된 또 다른 대상 인구는 중첩된 집단에서의 평균 처치 효과(average treatment effect among the overlap population, ATO)이다.
@@ -9254,7 +9252,7 @@ ATM 가중치와 마찬가지로, ATO 가중치는 0과 1 사이로 제한되어
 #| cache: true
 #| code-fold: true
 sim <- function(n) {
-  ## 시뮬레이션 데이터셋 생성
+## 시뮬레이션 데이터셋 생성
   finite_sample <- tibble(
     z = rnorm(n),
     x = case_when(
@@ -9732,17 +9730,17 @@ wt_means
 
 ```{.r}
 fit_ipw <- function(.split, ...) {
-  # 부트스트랩된 데이터 프레임 가져오기
+# 부트스트랩된 데이터 프레임 가져오기
   .df <- as.data.frame(.split)
 
-  # 성향 점수 모델 적합시키기
+# 성향 점수 모델 적합시키기
   propensity_model <- glm(
     park_extra_magic_morning ~ park_ticket_season + park_close + park_temperature_high,
     data = .df,
     family = binomial()
   )
 
-  # 역확률 가중치 계산하기
+# 역확률 가중치 계산하기
   .df <- propensity_model |>
     augment(type.predict = "response", data = .df) |>
     mutate(wts = wt_att(
@@ -9751,7 +9749,7 @@ fit_ipw <- function(.split, ...) {
       exposure_type = "binary"
     ))
 
-  # 올바르게 부트스트랩된 ipw 모델 적합시키기
+# 올바르게 부트스트랩된 ipw 모델 적합시키기
   lm(
     wait_minutes_posted_avg ~ park_extra_magic_morning,
     data = .df,
@@ -9769,7 +9767,7 @@ fit_ipw <- function(.split, ...) {
 library(rsample)
 library(tidyverse)
 
-## 부트스트랩 샘플에 대해 ipw 모델을 적합시킵니다
+부트스트랩 샘플에 대해 ipw 모델을 적합시킵니다
 bootstrapped_seven_dwarfs <- bootstraps(
   seven_dwarfs_9,
   times = 1000,
@@ -9867,7 +9865,7 @@ svyglm(wait_minutes_posted_avg ~ park_extra_magic_morning, des) |>
 
 ### 성향 점수 모델까지 고려하는 샌드위치 추정량
 
-가장 정확한 샌드위치 추정량은 성향 점수 모델을 추정할 때의 불확실성까지 고려하는 것이다.
+## 가장 정확한 샌드위치 추정량은 성향 점수 모델을 추정할 때의 불확실성까지 고려하는 것이다.
 `ipw` 함수를 통해 이를 수행할 수 있다.
 이를 위해 성향 점수 모델과 결과 모델을 모두 제공해야 한다.
 
@@ -9943,7 +9941,7 @@ results |>
 
 :::
 
-### 절대적 및 상대적 척도
+절대적 및 상대적 척도
 
 위험 차이와 같은 절대적 척도(absolute measures)와 위험비 및 오즈비와 같은 상대적 척도(relative measures)는 처치 효과에 대해 서로 다른 관점을 제공한다.
 결과의 기준 확률(baseline probability)에 따라, 절대적 척도와 상대적 척도는 서로 다른 결론으로 이끌 수 있다.
@@ -10225,7 +10223,7 @@ lm(
 
 연속형 노출 가중치는 모델링 선택에 매우 민감한다.
 특히 극단적인 가중치의 존재가 문제인데, 이는 다른 유형의 노출에서도 발생할 수 있다.
-일부 관측치가 극단적인 가중치를 가질 때 성향이 *불안정해져* 신뢰 구간이 넓어진다.
+## 일부 관측치가 극단적인 가중치를 가질 때 성향이 *불안정해져* 신뢰 구간이 넓어진다.
 노출의 한계 분포(marginal distribution)를 써서 이를 안정화할 수 있다.
 성향 점수의 한계 분포를 계산하는 일반적인 방법은 예측 변수가 없는 회귀 모델을 사용하는 것이다.
 
@@ -10440,12 +10438,12 @@ library(broom)
 library(touringplans)
 library(dplyr)
 
-## 범주형 노출 예시: 티켓 시즌(peak, regular, value)이 대기 시간에 미치는 영향
+범주형 노출 예시: 티켓 시즌(peak, regular, value)이 대기 시간에 미치는 영향
 seven_dwarfs_9 <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 9) |>
   drop_na() |>
   mutate(
-    # 티켓 시즌을 명시적으로 factor로 지정
+# 티켓 시즌을 명시적으로 factor로 지정
     park_ticket_season = factor(
       park_ticket_season,
       levels = c("value", "regular", "peak")  # value를 기준 범주로
@@ -10492,15 +10490,15 @@ $$
 seven_dwarfs_with_ps <- seven_dwarfs_9 |>
   bind_cols(ps_probs) |>
   mutate(
-    # 실제 받은 처치의 성향 점수
+# 실제 받은 처치의 성향 점수
     ps_actual = case_when(
       park_ticket_season == "value"   ~ ps_value,
       park_ticket_season == "regular" ~ ps_regular,
       park_ticket_season == "peak"    ~ ps_peak
     ),
-    # ATE 가중치 (역확률)
+# ATE 가중치 (역확률)
     w_ate = 1 / ps_actual,
-    # 안정화된 ATE 가중치
+# 안정화된 ATE 가중치
     marginal_prob = case_when(
       park_ticket_season == "value"   ~ mean(park_ticket_season == "value"),
       park_ticket_season == "regular" ~ mean(park_ticket_season == "regular"),
@@ -10513,7 +10511,7 @@ cat("ATE 가중치 요약:\n")
 summary(seven_dwarfs_with_ps$w_ate_stable)
 ```
 
-### 범주가 많을 때의 진단
+범주가 많을 때의 진단
 
 범주형 노출에서 가중치 부여의 효과를 진단하는 방법은 이진 노출과 유사하다.
 각 처치 범주 쌍 사이의 공변량 균형을 확인해야 한다.
@@ -10539,7 +10537,7 @@ for (s1 in 1:(length(seasons) - 1)) {
     subset_data <- seven_dwarfs_with_ps |>
       filter(park_ticket_season %in% c(season_a, season_b))
 
-    # 가중치 부여 전후 온도의 SMD
+# 가중치 부여 전후 온도의 SMD
     preweight_smd <- with(
       subset_data,
       (mean(park_temperature_high[park_ticket_season == season_a]) -
@@ -10775,7 +10773,7 @@ fit_wait_minutes <- lm(
 현재 사례에서는 크기가 10,000인 데이터 프레임을 생성하기 위해 복원 추출(sampling with replacement)을 사용할 것이다.
 
 ```{.r}
-## 몬테카를로 실행에서 재현성을 위해 시드를 설정하는 것이 중요합니다
+몬테카를로 실행에서 재현성을 위해 시드를 설정하는 것이 중요합니다
 set.seed(8675309)
 
 df_sim_baseline <- seven_dwarfs_9 |>
@@ -10789,11 +10787,11 @@ df_sim_baseline <- seven_dwarfs_9 |>
 다른 시뮬레이션(이 경우 유일하게 남은 변수인 `wait_minutes_posted_avg`)은 예상대로 진행 된다.
 
 ```{.r}
-## 우리가 추정하고자 하는 인과적 대비를 위해 노출 그룹을 설정합니다
+우리가 추정하고자 하는 인과적 대비를 위해 노출 그룹을 설정합니다
 df_sim_time_1 <- df_sim_baseline |>
   mutate(park_extra_magic_morning = c(rep(1, 5000), rep(0, 5000)))
 
-## 2단계의 모수적 모델에 따라 결과를 시뮬레이션합니다
+2단계의 모수적 모델에 따라 결과를 시뮬레이션합니다
 df_outcome <- fit_wait_minutes |>
   augment(newdata = df_sim_time_1) |>
   rename(wait_minutes_posted_avg = .fitted)
@@ -10885,7 +10883,7 @@ dagify(
 library(splines)
 
 fit_models <- function(.data) {
-  # park_extra_magic_morning에 대한 로지스틱 회귀
+# park_extra_magic_morning에 대한 로지스틱 회귀
   fit_extra_magic <- glm(
     park_extra_magic_morning ~
       park_ticket_season + park_close + park_temperature_high,
@@ -10893,7 +10891,7 @@ fit_models <- function(.data) {
     family = "binomial"
   )
 
-  # wait_minutes_posted_avg에 대한 선형 모델
+# wait_minutes_posted_avg에 대한 선형 모델
   fit_wait_minutes_posted <- lm(
     wait_minutes_posted_avg ~
       park_extra_magic_morning + park_ticket_season + park_close +
@@ -10901,10 +10899,10 @@ fit_models <- function(.data) {
     data = .data
   )
 
-  # wait_minutes_actual_avg에 대한 선형 모델
-  # 더 유연하게 만들기 위해 스플라인을 추가해 봅시다.
-  # 여기에는 상호작용 등 많은 옵션을 추가할 수 있지만
-  # 데이터가 충분하지 않으면 경고가 뜨거나 모델이 수렴하지 않을 수 있음에 유의하십시오.
+# wait_minutes_actual_avg에 대한 선형 모델
+더 유연하게 만들기 위해 스플라인을 추가해 봅시다.
+여기에는 상호작용 등 많은 옵션을 추가할 수 있지만
+# 데이터가 충분하지 않으면 경고가 뜨거나 모델이 수렴하지 않을 수 있음에 유의하십시오.
   fit_wait_minutes_actual <- lm(
     wait_minutes_actual_avg ~
       ns(wait_minutes_posted_avg, df = 3) +
@@ -10914,7 +10912,7 @@ fit_models <- function(.data) {
     data = .data
   )
 
-  # 다음 시뮬레이션 단계로 넘길 수 있도록 리스트를 반환합니다
+다음 시뮬레이션 단계로 넘길 수 있도록 리스트를 반환합니다
   return(
     list(
       .data = .data,
@@ -10930,44 +10928,44 @@ fit_models <- function(.data) {
 
 ```{.r}
 ## simulate_process의 인자들은 다음과 같습니다:
-## fit_obj는 fit_models 함수로부터 반환된 리스트입니다
-## contrast는 노출 그룹(기본값 60)과 대조 그룹(기본값 30) 설정을 제공합니다
-## n_sample은 .data의 기준점 재표본 크기입니다
+fit_obj는 fit_models 함수로부터 반환된 리스트입니다
+contrast는 노출 그룹(기본값 60)과 대조 그룹(기본값 30) 설정을 제공합니다
+n_sample은 .data의 기준점 재표본 크기입니다
 simulate_process <- function(
   fit_obj,
   contrast = c(60, 30),
   n_sample = 10000
 ) {
-  # 기준점 변수들의 무작위 표본을 추출합니다
+기준점 변수들의 무작위 표본을 추출합니다
   df_baseline <- fit_obj |>
     pluck(".data") |>
     select(park_ticket_season, park_close, park_temperature_high) |>
     slice_sample(n = n_sample, replace = TRUE)
 
-  # park_extra_magic_morning을 시뮬레이션합니다
+park_extra_magic_morning을 시뮬레이션합니다
   df_sim_time_1 <- fit_obj |>
     pluck("fit_extra_magic") |>
     augment(newdata = df_baseline, type.predict = "response") |>
-    # .fitted는 park_extra_magic_morning이 1일 확률이므로,
-    # 이를 사용하여 0/1 결과를 생성합니다
+# .fitted는 park_extra_magic_morning이 1일 확률이므로,
+이를 사용하여 0/1 결과를 생성합니다
     mutate(
       park_extra_magic_morning = rbinom(n(), 1, .fitted)
     )
 
-  # 개입 변수이므로 wait_minutes_posted_avg를 할당합니다
+개입 변수이므로 wait_minutes_posted_avg를 할당합니다
   df_sim_time_2 <- df_sim_time_1 |>
     mutate(
       wait_minutes_posted_avg =
         c(rep(contrast[1], n_sample / 2), rep(contrast[2], n_sample / 2))
     )
 
-  # 결과를 시뮬레이션합니다
+결과를 시뮬레이션합니다
   df_outcome <- fit_obj |>
     pluck("fit_wait_minutes_actual") |>
     augment(newdata = df_sim_time_2) |>
     rename(wait_minutes_actual_avg = .fitted)
 
-  # 대비 추정 단계로 파이프할 수 있도록 리스트를 반환합니다
+대비 추정 단계로 파이프할 수 있도록 리스트를 반환합니다
   return(
     list(
       df_outcome = df_outcome,
@@ -10980,7 +10978,7 @@ simulate_process <- function(
 마지막으로 4단계에서는, 시뮬레이션된 데이터를 사용하여 요약 통계량과 관심 있는 인과적 대비를 계산한다.
 
 ```{.r}
-## sim_obj는 simulate_process() 함수에 의해 생성된 리스트입니다
+sim_obj는 simulate_process() 함수에 의해 생성된 리스트입니다
 compute_stats <- function(sim_obj) {
   exposure_val <- sim_obj |>
     pluck("contrast", 1)
@@ -11006,7 +11004,7 @@ compute_stats <- function(sim_obj) {
 그 과정을 확인한 후에는, 신뢰 구간을 얻기 위해 부트스트래핑을 수행할 것이다.
 
 ```{.r}
-## 우리가 던지는 인과적 질문을 반영하도록 데이터를 가공합니다
+우리가 던지는 인과적 질문을 반영하도록 데이터를 가공합니다
 eight <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 8) |>
   select(-wait_minutes_actual_avg)
@@ -11018,19 +11016,19 @@ nine <- seven_dwarfs_train_2018 |>
 wait_times <- eight |>
   left_join(nine, by = "park_date") |>
   drop_na(wait_minutes_actual_avg)
-## 모든 것이 계획대로 작동하는지 확인하기 위해 단일 점 추정치를 구합니다
+모든 것이 계획대로 작동하는지 확인하기 위해 단일 점 추정치를 구합니다
 wait_times |>
   fit_models() |>
   simulate_process() |>
   compute_stats() |>
-  # rsample은 결과가 이런 식으로 이름 붙여지는 것을 선호합니다
+rsample은 결과가 이런 식으로 이름 붙여지는 것을 선호합니다
   pivot_longer(
     names_to = "term",
     values_to = "estimate",
     cols = everything()
   )
 
-## 부트스트랩 신뢰 구간을 계산합니다
+부트스트랩 신뢰 구간을 계산합니다
 library(rsample)
 
 boots <- bootstraps(wait_times, times = 1000, apparent = TRUE) |>
@@ -11053,7 +11051,7 @@ results <- int_pctl(boots, models)
 results
 ```
 
-요약하자면, 우리의 결과는 다음과 같이 해석 된다: 오전 8시의 게시 대기 시간을 60분으로 설정하면 오전 9시의 실제 대기 시간은 `r results |> filter(term == "x_60") |> pull(.estimate) |> round(1)`분이 되는 반면, 게시 대기 시간을 30분으로 설정하면 실제 대기 시간은 이보다 더 긴 `r results |> filter(term == "x_30") |> pull(.estimate) |> round(1)`분이 된다.
+## 요약하자면, 우리의 결과는 다음과 같이 해석 된다: 오전 8시의 게시 대기 시간을 60분으로 설정하면 오전 9시의 실제 대기 시간은 `r results |> filter(term == "x_60") |> pull(.estimate) |> round(1)`분이 되는 반면, 게시 대기 시간을 30분으로 설정하면 실제 대기 시간은 이보다 더 긴 `r results |> filter(term == "x_30") |> pull(.estimate) |> round(1)`분이 된다.
 달리 말하면, 오전 8시의 게시 대기 시간을 30분에서 60분으로 늘리면 오전 9시의 실제 대기 시간은 약 `r round(abs(results |> filter(term == "estimate") |> pull(.estimate)), 1)`분 짧아지는 결과를 낳습니다.
 
 우리 모델 중 하나에서 완전 분류(perfect discrimination)에 관한 경고(`fitted probabilities numerically 0 or 1 occurred`)가 발생했음에 유의하라; 이는 표본 크기가 크지 않고 모델 중 하나가 복잡성으로 인해 과하게 명시되었을 때 발생할 수 있다.
@@ -11063,7 +11061,7 @@ results
 
 ## G-공식을 이용한 동적 처치 체계 {#sec-dynamic}
 
-## 자연적 과정
+자연적 과정
 
 
 <!-- =========================================
@@ -11084,7 +11082,7 @@ status("wip")
 예를 들어 아침 엑스트라 매직 아워(Extra Magic Morning)가 대기 시간에 미치는 효과는 티켓 시즌에 따라 다를 수 있다. 성수기에는 효과가 더 크고 비수기에는 작을 수 있기 때문이다.
 이처럼 상호작용은 '효과 수정(effect modification)'이라고도 하며 인과 추론에서 매우 중요한 개념이다.
 
-## 함수 형태, 이질적 효과, 그리고 공동 원인
+함수 형태, 이질적 효과, 그리고 공동 원인
 
 인과 효과는 모집단 전체에서 균일하지 않을 때가 많다.
 이처럼 개인마다 다르게 나타나는 효과를 **이질적 처치 효과(heterogeneous treatment effects, HTE)**라고 한다.
@@ -11126,7 +11124,7 @@ tidy(fit_linear)
 tidy(fit_spline)
 ```
 
-### 이질적 처치 효과
+이질적 처치 효과
 
 이질적 처치 효과가 나타나면 평균 처치 효과(ATE)뿐만 아니라 특정 하위 집단의 효과에도 주목하게 된다.
 이를 **조건부 평균 처치 효과(Conditional Average Treatment Effect, CATE)**라고 한다.
@@ -11156,7 +11154,7 @@ seven_dwarfs_9 |>
 
 이 단순 비교는 교란 요인을 통제하지 않으므로 인과적으로 해석할 때 주의해야 한다.
 
-### 공동 원인
+공동 원인
 
 두 변수가 동시에 결과를 유발하면 이를 **공동 원인(joint causes)**이라고 한다.
 DAG에서는 두 노출 변수 모두 결과로 향하는 화살표를 가진 형태로 나타난다.
@@ -11218,7 +11216,7 @@ tidy(fit_interaction, conf.int = TRUE)
 결과에서 `park_extra_magic_morning:park_ticket_seasonvalue` 같은 항들이 상호작용 추정치이다.
 이 계수들은 각 티켓 시즌의 엑스트라 매직 아워 효과가 기준 시즌(peak)과 얼마나 다른지 보여준다.
 
-### 상호작용의 가산적($\times$ 절대적) vs. 승법적($\times$ 상대적) 척도
+상호작용의 가산적($\times$ 절대적) vs. 승법적($\times$ 상대적) 척도
 
 상호작용은 **가산적(additive) 척도**와 **승법적(multiplicative) 척도** 모두에서 정의할 수 있으며 두 척도의 상호작용이 항상 일치하지는 않는다.
 
@@ -11347,7 +11345,7 @@ TouringPlans 데이터의 변수는 대부분 누락이 없고 정확하게 측�
 library(ggdag)
 
 glyph <- function(data, params, size) {
-  # data$shape <- 15
+# data$shape <- 15
   data$size <- 5
   ggplot2::draw_key_point(data, params, size)
 }
@@ -11564,7 +11562,7 @@ x_measured <- if_else(
 lm(y ~ x_measured)
 ```
 
-일부 연구자들은 무작위 측정 오차가 예측 가능하게 무효 쪽으로 향할 것이라고 기대하지만 이것이 항상 사실은 아니다.
+## 일부 연구자들은 무작위 측정 오차가 예측 가능하게 무효 쪽으로 향할 것이라고 기대하지만 이것이 항상 사실은 아니다.
 이 가정이 어긋나는 사례는 [@Yland2022]를 참조하라.
 
 :::
@@ -11913,7 +11911,7 @@ missing_dag_2 <- if_else(posted_60 > .50, rbinom(365, 1, .95), 0) |>
   as.logical()
 missing_dag_3 <- if_else(actual > 22, rbinom(365, 1, .99), 0) |>
   as.logical()
-## 동일한 구조이지만 결측이 발생하는 것은 `posted` 변수입니다
+동일한 구조이지만 결측이 발생하는 것은 `posted` 변수입니다
 missing_dag_4 <- missing_dag_2
 missing_dag_5 <- missing_dag_3
 
@@ -12007,7 +12005,7 @@ dag_stats |>
 
 ## 회귀 교정
 
-일부 관측치에는 정확히 측정된 변수가 있지만 데이터셋 대부분에는 오차가 섞인 변수만 있을 때가 있다. 이를 흔히 **검증 세트(validation set)**라고 부른다.
+## 일부 관측치에는 정확히 측정된 변수가 있지만 데이터셋 대부분에는 오차가 섞인 변수만 있을 때가 있다. 이를 흔히 **검증 세트(validation set)**라고 부른다.
 이때 *회귀 교정(regression calibration)*이라는 간단한 접근 방식을 사용하면, 데이터셋의 나머지 관측치에 대해서도 정확한 값을 예측할 수 있다.
 정확히 측정된 일부 데이터를 바탕으로 전체 변수를 다시 교정(recalibrating)한다는 뜻에서 붙여진 이름이다.
 본질적으로는 관측수가 많은 변수와 측정 과정에 필수적인 다른 변수들을 포함하는 예측 모델이다.
@@ -12045,19 +12043,19 @@ library(propensity)
 fit_ipw_effect <- function(.fmla, .data = seven_dwarfs, .trt = "park_extra_magic_morning", .outcome_fmla = wait_minutes_posted_calib ~ park_extra_magic_morning) {
   .trt_var <- rlang::ensym(.trt)
 
-  # 성향 점수 모델 적합
+# 성향 점수 모델 적합
   propensity_model <- glm(
     .fmla,
     data = .data,
     family = binomial()
   )
 
-  # ATE 가중치 계산
+# ATE 가중치 계산
   .df <- propensity_model |>
     augment(type.predict = "response", data = .data) |>
     mutate(w_ate = wt_ate(.fitted, !!.trt_var, exposure_type = "binary"))
 
-  # IPW 모델 적합
+# IPW 모델 적합
   lm(.outcome_fmla, data = .df, weights = w_ate) |>
     tidy() |>
     filter(term == .trt) |>
@@ -12080,7 +12078,7 @@ effect_calib <- fit_ipw_effect(
 seven_dwarves_reg_impute <- calib_model |>
   augment(newdata = seven_dwarfs_train_2018) |>
   rename(wait_minutes_actual_impute = .fitted) |>
-  # 실제 값이 존재하는 경우 이를 채워 넣습니다
+실제 값이 존재하는 경우 이를 채워 넣습니다
   mutate(
     wait_minutes_actual_impute = coalesce(
       wait_minutes_actual_avg,
@@ -12180,7 +12178,7 @@ seven_dwarfs_to_impute_data <- seven_dwarfs_train_2018 |>
 
 predictor_matrix <- make.predictorMatrix(seven_dwarfs_to_impute_data)
 
-## 대치 모델에서 공원 날짜를 제외합니다
+대치 모델에서 공원 날짜를 제외합니다
 predictor_matrix[, 1] <- 0
 
 ## 데이터 대치
@@ -12207,22 +12205,22 @@ seven_dwarfs_mi_data <- complete(seven_dwarfs_mi, action = "all")
 fit_ipw_effect <- function(.fmla, .data = seven_dwarfs, .trt = "park_extra_magic_morning", .outcome_fmla = wait_minutes_posted_calib ~ park_extra_magic_morning) {
   .trt_var <- rlang::ensym(.trt)
 
-  # 성향 점수 모델 적합
+# 성향 점수 모델 적합
   propensity_model <- glm(
     .fmla,
     data = .data,
     family = binomial()
   )
 
-  # ATE 가중치 계산
+# ATE 가중치 계산
   .df <- propensity_model |>
     augment(type.predict = "response", data = .data) |>
     mutate(w_ate = wt_ate(.fitted, !!.trt_var, exposure_type = "binary"))
 
-  # 결과 모델 적합
+# 결과 모델 적합
   outcome_model <- lm(.outcome_fmla, data = .df, weights = w_ate)
 
-  # IPW 효과 적합
+# IPW 효과 적합
   ipw_output <- ipw(propensity_model, outcome_model, .df)
   return(c(estimate = ipw_output$estimates$estimate,
            std.err = ipw_output$estimates$std.err))
@@ -12304,7 +12302,7 @@ library(gt)
 ```
 
 인과 추론의 많은 가정이 검증 불가능하므로, 결과의 타당성을 우려하는 것은 자연스러운 일이다.
-16장에서는 가정과 결과의 강점 및 약점을 검토하는 몇 가지 방법을 소개한다.
+## 16장에서는 가정과 결과의 강점 및 약점을 검토하는 몇 가지 방법을 소개한다.
 우리는 두 가지 주요 방법을 살펴본다. 하나는 인과적 질문과 관련 DAG의 논리적 함의를 탐구하는 것이고 다른 하나는 측정되지 않은 교란(unmeasured confounding) 등이 있을 때 결과가 어떻게 달라질지 수학적 기법으로 정량화하는 것이다.
 이런 접근 방식을 **민감도 분석(sensitivity analyses)**이라고 한다. 분석 시 설정한 가정과 조건이 바뀌었을 때 결과가 얼마나 민감하게 반응하는지 확인하는 과정이다.
 
@@ -12316,7 +12314,7 @@ DAG는 분석의 기초가 되는 가정을 담고 있으므로, 타인뿐만 �
 ### 대안적 조정 집합과 대안적 DAG
 
 조정 집합 등을 찾으려고 DAG를 쿼리하는 수학적 원리를 활용하면 DAG의 다른 함의들도 확인할 수 있다.
-가장 단순한 함의 중 하나는, DAG가 옳고 데이터가 정확하게 측정되었다면 어떤 유효한 조정 집합을 사용하더라도 인과 효과에 대해 편향되지 않은 추정치를 얻어야 한다는 것이다.
+## 가장 단순한 함의 중 하나는, DAG가 옳고 데이터가 정확하게 측정되었다면 어떤 유효한 조정 집합을 사용하더라도 인과 효과에 대해 편향되지 않은 추정치를 얻어야 한다는 것이다.
  에서 소개한 DAG를 살펴봅시다.
 
 ```{.r}
@@ -12388,7 +12386,7 @@ emm_wait_dag_missing <- dagify(
 )
 
 ## 생성된 조정 집합:
-## park_ticket_season, park_close + park_ticket_season, park_temperature_high + park_ticket_season, or park_close + park_temperature_high + park_ticket_season
+park_ticket_season, park_close + park_ticket_season, park_temperature_high + park_ticket_season, or park_close + park_temperature_high + park_ticket_season
 adj_sets <- unclass(dagitty::adjustmentSets(emm_wait_dag_missing, type = "all")) |>
   map_chr(\(.x) glue::glue('{unlist(glue::glue_collapse(.x, sep = " + "))}')) |>
   glue::glue_collapse(sep = ", ", last = ", 또는 ")
@@ -12429,23 +12427,23 @@ emm_wait_dag_missing |>
 seven_dwarfs <- touringplans::seven_dwarfs_train_2018 |>
   filter(wait_hour == 9)
 
-## 나중에 `.data`와 `.trt`를 사용할 것입니다
+나중에 `.data`와 `.trt`를 사용할 것입니다
 fit_ipw_effect <- function(.fmla, .data = seven_dwarfs, .trt = "park_extra_magic_morning", .outcome_fmla = wait_minutes_posted_avg ~ park_extra_magic_morning) {
   .trt_var <- rlang::ensym(.trt)
 
-  # 성향 점수 모델 적합
+# 성향 점수 모델 적합
   propensity_model <- glm(
     .fmla,
     data = .data,
     family = binomial()
   )
 
-  # ATE 가중치 계산
+# ATE 가중치 계산
   .df <- propensity_model |>
     augment(type.predict = "response", data = .data) |>
     mutate(w_ate = wt_ate(.fitted, !!.trt_var, exposure_type = "binary"))
 
-  # IPW 모델 적합
+# IPW 모델 적합
   lm(.outcome_fmla, data = .df, weights = w_ate) |>
     tidy() |>
     filter(term == .trt) |>
@@ -12474,7 +12472,7 @@ tibble(
   gt::gt()
 ```
 
-### 부정 대조군
+부정 대조군
 
 대안적 조정 집합(alternate adjustment sets)은 DAG의 논리적 함의를 조사하는 한 방법이다. DAG가 옳다면 열린 백도어 경로를 올바르게 통제하는 방법은 여러 가지가 있을 수 있다.
 반대로 연구 질문의 인과 구조는 관계가 없어야 하는, 즉 **무효(null)**인 관계들도 함의한다.
@@ -12489,7 +12487,7 @@ tibble(
 3. 가설상의 결과에 의해 불가능할 효과를 확인한다.
 
 이는 실험실 연구에만 국한된 것이 아니다. 과학자들은 자신의 이해와 가설이 지닌 논리적 함의를 조사할 뿐이다.
-적절한 부정 대조군을 찾으려면 대개 질문을 둘러싼 인과 구조를 더 폭넓게 포함하도록 DAG를 확장해야 한다.
+## 적절한 부정 대조군을 찾으려면 대개 질문을 둘러싼 인과 구조를 더 폭넓게 포함하도록 DAG를 확장해야 한다.
 몇 가지 예시를 살펴봅시다.
 
 #### 부정 노출
@@ -12634,7 +12632,7 @@ ggplot(tibble(coefs = coefs, x = 1:63), aes(x = x, y = coefs)) +
   labs(y = "대기 시간 차이 (분)\n (`i`일 대기 시간 vs `i-n`일 EMM)", x = "`i - n`일")
 ```
 
-#### 부정 결과
+부정 결과
 
 이제 부정 대조군 결과의 예시를 살펴본다. 유니버설 스튜디오(Universal Studios)의 놀이기구 대기 시간이다.
 유니버설 스튜디오 역시 올랜도에 있으므로 대기 시간을 유발하는 요인들은 같은 날의 디즈니 월드와 비슷할 가능성이 크다.
@@ -12648,8 +12646,8 @@ ggplot(tibble(coefs = coefs, x = 1:63), aes(x = x, y = coefs)) +
 ```{.r}
 seven_dwarfs_sim <- seven_dwarfs_train_2018 |>
   mutate(
-    # 합리적인 유니버설 대기 시간을 시뮬레이션하기 위해
-    # 각 변수를 스케일링하고 약간의 무작위 노이즈를 추가합니다
+합리적인 유니버설 대기 시간을 시뮬레이션하기 위해
+각 변수를 스케일링하고 약간의 무작위 노이즈를 추가합니다
     wait_time_universal =
       park_temperature_high / 150 +
         as.numeric(park_close) / 1500 +
@@ -12757,7 +12755,7 @@ test_conditional_independence(
     ) |>
     as.data.frame(),
   type = "cis.loess",
-  # 신뢰 구간 계산을 위해 200개의 부트스트랩 샘플 사용
+# 신뢰 구간 계산을 위해 200개의 부트스트랩 샘플 사용
   R = 200
 ) |>
   ggdag_conditional_independence()
@@ -12775,7 +12773,7 @@ DAG-데이터 일관성 테스트는 DAG의 정답 여부를 *증명할 수 없�
 그렇다면 왜 이런 테스트를 수행할까?
 부정 대조군처럼이 테스트도 가정을 검토하는 수단이 된다.
 확신할 수는 없더라도 데이터가 전하는 정보에 귀를 기울일 필요가 있다.
-조건부 독립성이 성립함을 확인하는 것은 가정을 뒷받침하는 또 하나의 근거가 된다.
+## 조건부 독립성이 성립함을 확인하는 것은 가정을 뒷받침하는 또 하나의 근거가 된다.
 주의할 점이 있으므로 이런 확인 작업은 투명하게 공개해야 한다. 테스트 결과에 따라 수정했다면 원래 DAG도 함께 보고하는 것이 좋다.
 특히가 사례에서는 세 관계 모두에 직접적인 화살표를 추가해도 조정 집합은 바뀌지 않는다.
 
@@ -13035,7 +13033,7 @@ emm_wait_dag |>
 결과 유형(연속형, 이진형, 시간-사건형 등)과 미측정 교란 요인에 대해 알고 있는 정보에 따라 다양한 방법을 적용할 수 있다.
 이러한 분석이 미측정 교란이 전혀 없음을 증명할 수는 없지만 인과 추론의 핵심인 '미측정 교란 부재' 가정이 위배되었을 때 결과가 얼마나 민감하게 반응하는지 귀중한 통찰을 제공한다.
 
-#### 관찰된 노출-결과 효과
+관찰된 노출-결과 효과
 
 첫 번째 요소인 관찰된 노출-결과 효과는 민감도 분석을 수행하고자 하는 대상 인과 효과이다.
 효과 자체는 결과 모델의 선택에 따라 달라지며 이는 다시 결과의 분포와 원하는 효과 척도에 따라 결정 된다.
@@ -13051,7 +13049,7 @@ emm_wait_dag |>
 []장에 따르면 '과거 최고 기온'도 교란 요인이지만 이것이 측정되지 않아 조정 집합에 포함할 수 없다고 가정하겠다.
 이로 인해 관찰된 효과는 `r round(effects, 2)`가 되었다.
 
-#### 미측정 교란 요인-노출 효과
+미측정 교란 요인-노출 효과
 
 미측정 교란 요인과 노출 사이의 관계는 세 가지 방식으로 특징지을 수 있다.
 
@@ -13073,7 +13071,7 @@ emm_wait_dag |>
 이 변수들을 표준 편차 9로 나누면 '단위 분산' 정규 분포 변수로 표준화할 수 있다. 이렇게 하면 엑스트라 매직 아워가 있었던 날의 표준화된 평균은 8., 그렇지 않은 날은 9.11이 되어 평균 차이는 -0.17이 된다.
 이 수치를 기억해 두라. 다음 섹션의 민감도 분석에 활용할 것이다.
 
-#### 미측정 교란 요인-결과 효과
+미측정 교란 요인-결과 효과
 
 미측정 교란 요인과 결과 사이의 관계는 크게 두 가지 방식으로 정량화한다.
 
@@ -13165,7 +13163,7 @@ ggplot(
   )
 ```
 
-대부분의 경우 미측정 교란 요인이 노출과 결과에 미치는 정확한 영향력을 알기 어렵다.
+## 대부분의 경우 미측정 교란 요인이 노출과 결과에 미치는 정확한 영향력을 알기 어렵다.
 이럴 때는 조사할 두 값의 범위를 결정하는 방식이 효과적이다.
 []장이 그 예시이다.
 이 그래프를 보면, 과거 최고 기온의 1 표준 편차 변화가 평균 대기 시간을 최소 7분 정도 변화시키고 엑스트라 매직 아워가 있는 날과 없는 날의 평균 과거 최고 기온 차이가 약 1 표준 편차일 때 조정된 효과가 0(null)을 지나게 됨을 알 수 있다.
@@ -13423,10 +13421,10 @@ direct_effect <- tidy(outcome_model_direct) |>
   filter(term == "park_extra_magic_morning") |>
   pull(estimate)
 
-## 간접 효과 = 곱의 방법
+간접 효과 = 곱의 방법
 indirect_effect <- alpha_1 * beta_2
 
-## 총 효과 = 직접 효과 + 간접 효과
+총 효과 = 직접 효과 + 간접 효과
 total_effect <- direct_effect + indirect_effect
 
 cat(
@@ -13450,14 +13448,14 @@ library(rsample)
 compute_mediation <- function(.split) {
   .df <- as.data.frame(.split)
 
-  # 매개변수 모델
+# 매개변수 모델
   m_model <- lm(
     wait_8am ~ park_extra_magic_morning +
       park_ticket_season + park_close + park_temperature_high,
     data = .df
   )
 
-  # 결과 모델
+# 결과 모델
   y_model <- lm(
     wait_minutes_posted_avg ~
       park_extra_magic_morning + wait_8am +
@@ -13514,7 +13512,7 @@ tidy(outcome_with_interaction, conf.int = TRUE)
 이 경우 G-공식(@sec-g-comp) 방식이 자연스럽게 확장 된다.
 
 ::: {.callout-tip}
-## `{mediation}` 패키지
+`{mediation}` 패키지
 
 R의 `{mediation}` 패키지는 상호작용이 있는 경우를 포함하여 다양한 인과 매개 분석 방법을 지원한다.
 부트스트랩 기반의 신뢰 구간과 민감도 분석 기능도 포함하고 있어 실무에서 유용하다.
@@ -13622,20 +13620,20 @@ library(touringplans)
 library(broom)
 
 ## 디즈니 월드 예시: 특정 시간대의 데이터 분석
-## 시뮬레이션: 더운 날에 게시 대기 시간이 긴 경우 데이터가 누락되는 상황
+시뮬레이션: 더운 날에 게시 대기 시간이 긴 경우 데이터가 누락되는 상황
 set.seed(2024)
 
 seven_dwarfs_complete <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 9) |>
   drop_na(wait_minutes_posted_avg) |>
   mutate(
-    # 더운 날 + 긴 대기 시간일수록 기록이 빠진 확률 높다고 가정
+# 더운 날 + 긴 대기 시간일수록 기록이 빠진 확률 높다고 가정
     p_censored = plogis(
       -3 + 0.02 * park_temperature_high +
       0.01 * wait_minutes_posted_avg
     ),
     censored = rbinom(n(), 1, p_censored),
-    # 검열된 관측치의 결과를 NA로 처리
+# 검열된 관측치의 결과를 NA로 처리
     wait_observed = ifelse(censored == 0, wait_minutes_posted_avg, NA)
   )
 
@@ -13838,13 +13836,13 @@ longitudinal_with_weights <- longitudinal_data |>
     ps_t2_denom = predict(ps_model_t2_denom, type = "response"),
     ps_t2_num   = predict(ps_model_t2_num, type = "response"),
 
-    # 각 시점에서의 실제 처치를 받을 확률
+# 각 시점에서의 실제 처치를 받을 확률
     prob_t1_denom = ifelse(park_extra_magic_morning_t1 == 1, ps_t1_denom, 1 - ps_t1_denom),
     prob_t1_num   = ifelse(park_extra_magic_morning_t1 == 1, ps_t1_num, 1 - ps_t1_num),
     prob_t2_denom = ifelse(park_extra_magic_morning_t2 == 1, ps_t2_denom, 1 - ps_t2_denom),
     prob_t2_num   = ifelse(park_extra_magic_morning_t2 == 1, ps_t2_num, 1 - ps_t2_num),
 
-    # 시간 가변적 안정화 IPTW (두 시점의 가중치 곱)
+# 시간 가변적 안정화 IPTW (두 시점의 가중치 곱)
     sw = (prob_t1_num * prob_t2_num) / (prob_t1_denom * prob_t2_denom)
   )
 
@@ -13925,30 +13923,30 @@ library(dplyr)
 library(tidyr)
 library(broom)
 
-## 생존 분석 데이터를 시뮬레이션합니다
+생존 분석 데이터를 시뮬레이션합니다
 ## (실제 생존 데이터가 없어 touringplans 데이터를 기반으로 시뮬레이션)
 set.seed(2024)
 n <- 500
 
 survival_sim <- tibble(
   id = 1:n,
-  # 노출: 처치군(1) vs 대조군(0)
+# 노출: 처치군(1) vs 대조군(0)
   treatment = rbinom(n, 1, 0.5),
-  # 공변량 (교란 요인)
+# 공변량 (교란 요인)
   age_group = sample(c("young", "middle", "old"), n, replace = TRUE),
   severity = rnorm(n, 5, 1.5),  # 질병 중증도
 ) |>
   mutate(
-    # 처치가 사건 발생 위험을 감소시킨다고 가정
+# 처치가 사건 발생 위험을 감소시킨다고 가정
     baseline_hazard = 0.05 * exp(0.3 * (severity - 5)),
     hazard = baseline_hazard * exp(-0.5 * treatment),
-    # 지수 분포에서 생존 시간 생성
+# 지수 분포에서 생존 시간 생성
     true_time = rexp(n, rate = hazard),
-    # 12개월에서 행정적 검열
+# 12개월에서 행정적 검열
     admin_censor = 12,
-    # 무작위 탈락 검열 (처치군과 비교하여 중증도가 높으면 탈락 가능성 증가)
+# 무작위 탈락 검열 (처치군과 비교하여 중증도가 높으면 탈락 가능성 증가)
     random_censor = rexp(n, rate = 0.02 + 0.01 * (severity - 5)),
-    # 최종 추적 관찰 시간과 사건 여부
+# 최종 추적 관찰 시간과 사건 여부
     time = pmin(true_time, admin_censor, random_censor),
     event = as.integer(true_time <= pmin(admin_censor, random_censor))
   ) |>
@@ -14037,11 +14035,11 @@ max_time <- max(ceiling(survival_sim$time))
 
 ## 각 처치 조건에서 모든 시간 구간에 대한 사건 확률 예측
 predict_marginal_survival <- function(trt_val) {
-  # 모든 개인을 동일한 처치값으로 설정
+# 모든 개인을 동일한 처치값으로 설정
   pred_data <- survival_long |>
     mutate(treatment = trt_val)
 
-  # 각 시간 구간에서의 조건부 사건 확률 예측
+# 각 시간 구간에서의 조건부 사건 확률 예측
   pred_probs <- predict(pooled_logistic, newdata = pred_data, type = "response")
 
   pred_data |>
@@ -14078,7 +14076,7 @@ ggplot(survival_curves, aes(x = interval, y = survival,
 ```
 
 ```{.r}
-## 특정 시점에서의 효과 추정: 6개월 및 12개월 생존율 차이
+특정 시점에서의 효과 추정: 6개월 및 12개월 생존율 차이
 time_points <- c(6, 12)
 
 survival_at_time <- survival_curves |>
@@ -14106,7 +14104,7 @@ library(rsample)
 compute_survival_effect <- function(.split) {
   .df <- as.data.frame(.split)
 
-  # 선택된 샘플에 대한 장기형 데이터 재생성 (make_long_rows 재사용)
+# 선택된 샘플에 대한 장기형 데이터 재생성 (make_long_rows 재사용)
   survival_long_boot <- .df |>
     mutate(time_int = ceiling(time)) |>
     filter(!is.na(time_int)) |>
@@ -14116,7 +14114,7 @@ compute_survival_effect <- function(.split) {
     tidyr::unnest(rows) |>
     select(id, treatment, age_group, severity, interval, event_at_interval)
 
-  # 풀링된 로지스틱 회귀
+# 풀링된 로지스틱 회귀
   fit <- glm(
     event_at_interval ~
       treatment + ns(interval, df = 3) + age_group + severity,
@@ -14124,7 +14122,7 @@ compute_survival_effect <- function(.split) {
     family = binomial()
   )
 
-  # 각 처치 조건에서 12개월 생존율 추정
+# 각 처치 조건에서 12개월 생존율 추정
   compute_surv_at_12 <- function(trt) {
     pred_d <- survival_long_boot |> mutate(treatment = trt)
     prbs <- predict(fit, newdata = pred_d, type = "response")
@@ -14247,18 +14245,18 @@ outcome_model <- lm(
 ## 3단계: AIPW 추정량 계산
 seven_dwarfs_aipw <- seven_dwarfs_9 |>
   mutate(
-    # 성향 점수
+# 성향 점수
     ps = predict(ps_model, type = "response"),
 
-    # 결과 모델: 처치군으로 설정했을 때의 예측값
+# 결과 모델: 처치군으로 설정했을 때의 예측값
     mu1 = predict(outcome_model,
                   newdata = mutate(seven_dwarfs_9, park_extra_magic_morning = 1)),
 
-    # 결과 모델: 비처치군으로 설정했을 때의 예측값
+# 결과 모델: 비처치군으로 설정했을 때의 예측값
     mu0 = predict(outcome_model,
                   newdata = mutate(seven_dwarfs_9, park_extra_magic_morning = 0)),
 
-    # AIPW 개별 공헌
+# AIPW 개별 공헌
     aipw_component = (mu1 - mu0) +
       park_extra_magic_morning * (wait_minutes_posted_avg - mu1) / ps -
       (1 - park_extra_magic_morning) * (wait_minutes_posted_avg - mu0) / (1 - ps)
@@ -14401,7 +14399,7 @@ cat("TMLE ATE 추정치:", round(tmle_ate, 3), "분\n")
 library(tmle)
 
 ## TMLE에서는 머신러닝 알고리즘을 사용하는 Super Learner와 결합하여
-## 모델 오명시의 위험을 더욱 줄일 수 있습니다
+모델 오명시의 위험을 더욱 줄일 수 있습니다
 tmle_fit <- tmle(
   Y = seven_dwarfs_9$wait_minutes_posted_avg,
   A = seven_dwarfs_9$park_extra_magic_morning,
@@ -14449,7 +14447,7 @@ ggplot(methods_comparison, aes(x = reorder(방법, 방법_순서), y = ATE,
 ```
 
 ::: {.callout-tip}
-## 어떤 방법을 선택해야 할까?
+어떤 방법을 선택해야 할까?
 
 실무에서는 다음을 고려하라:
 
@@ -14509,7 +14507,7 @@ seven_dwarfs_9 <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 9) |>
   drop_na()
 
-## 예측 정확도가 높은 복잡한 모델이 반드시 좋은 인과 추정치를 주지 않습니다
+예측 정확도가 높은 복잡한 모델이 반드시 좋은 인과 추정치를 주지 않습니다
 ## 예시: 교란 요인을 과적합하면 성향 점수가 불안정해짐
 
 ## 단순 성향 점수 모델
@@ -14593,10 +14591,10 @@ ps_logistic <- glm(
 ## 실제 사용 시 아래 코드를 활성화
 ## library(ranger)
 ## ps_rf <- ranger(
-##   park_extra_magic_morning ~
-##     park_ticket_season + park_close + park_temperature_high,
-##   data = seven_dwarfs_9,
-##   probability = TRUE
+## park_extra_magic_morning ~
+## park_ticket_season + park_close + park_temperature_high,
+## data = seven_dwarfs_9,
+## probability = TRUE
 ## )
 
 ## 여기서는 로지스틱 회귀만 사용하여 AIPW 구현 보여줌
@@ -14655,11 +14653,11 @@ cv_splits <- vfold_cv(seven_dwarfs_9, v = k_folds)
 
 ## 각 폴드에서 교차 적합 수행
 compute_aipw_fold <- function(split) {
-  # 훈련 데이터와 검증 데이터 분리
+# 훈련 데이터와 검증 데이터 분리
   train_data <- training(split)
   test_data  <- testing(split)
 
-  # 훈련 데이터로 모델 적합
+# 훈련 데이터로 모델 적합
   ps_fold <- glm(
     park_extra_magic_morning ~
       park_ticket_season + park_close + park_temperature_high,
@@ -14674,7 +14672,7 @@ compute_aipw_fold <- function(split) {
     data = train_data
   )
 
-  # 검증 데이터에서 AIPW 점수 계산
+# 검증 데이터에서 AIPW 점수 계산
   ps_test <- predict(ps_fold, newdata = test_data, type = "response")
   mu1_test <- predict(outcome_fold,
                       newdata = mutate(test_data, park_extra_magic_morning = 1))
@@ -14721,21 +14719,21 @@ compute_dml_fold <- function(split) {
   train_data <- training(split)
   test_data  <- testing(split)
 
-  # 노출 모델: E[X | C]
+# 노출 모델: E[X | C]
   x_model <- lm(
     park_extra_magic_morning ~
       park_ticket_season + park_close + park_temperature_high,
     data = train_data
   )
 
-  # 결과 모델: E[Y | C] (노출 제외)
+# 결과 모델: E[Y | C] (노출 제외)
   y_model <- lm(
     wait_minutes_posted_avg ~
       park_ticket_season + park_close + park_temperature_high,
     data = train_data
   )
 
-  # 검증 데이터에서 잔차 계산
+# 검증 데이터에서 잔차 계산
   x_resid <- test_data$park_extra_magic_morning -
     predict(x_model, newdata = test_data)
   y_resid <- test_data$wait_minutes_posted_avg -
@@ -14752,7 +14750,7 @@ tidy(dml_fit, conf.int = TRUE)
 ```
 
 ::: {.callout-note}
-## 언제 머신러닝을 인과 추론에 사용해야 할까?
+언제 머신러닝을 인과 추론에 사용해야 할까?
 
 머신러닝을 인과 추론에 사용하면 유리한 상황:
 
@@ -14865,7 +14863,7 @@ library(dplyr)
 library(broom)
 
 ## 도구 변수 분석 시뮬레이션 예시
-## 의료 복지 프로그램 참여가 건강 결과에 미치는 효과
+의료 복지 프로그램 참여가 건강 결과에 미치는 효과
 ## 도구 변수: 무작위 배정된 인센티브(추첨)
 
 set.seed(2024)
@@ -14875,9 +14873,9 @@ n <- 1000
 iv_data <- tibble(
   u = rnorm(n),                           # 측정되지 않은 교란 (예: 건강 의식)
   z = rbinom(n, 1, 0.5),                  # 도구 변수: 인센티브 배정 (무작위)
-  # 노출: 프로그램 참여 (z와 u에 영향 받음)
+# 노출: 프로그램 참여 (z와 u에 영향 받음)
   x = as.integer(plogis(-1 + 1.5 * z + 0.8 * u) > runif(n)),
-  # 결과: 건강 점수 (x와 u에 영향 받음, z와는 x를 통해서만)
+# 결과: 건강 점수 (x와 u에 영향 받음, z와는 x를 통해서만)
   y = 2 * x + 1.5 * u + rnorm(n, sd = 0.5)
 )
 
@@ -14891,14 +14889,14 @@ ols_naive <- lm(y ~ x, data = iv_data)
 cat("\n단순 OLS 추정치 (편향됨):",
     round(tidy(ols_naive) |> filter(term == "x") |> pull(estimate), 3), "\n")
 
-## 2SLS: 1단계
+2SLS: 1단계
 first_stage <- lm(x ~ z, data = iv_data)
 iv_data$x_hat <- predict(first_stage)
 
 cat("1단계 F-통계량 (도구 변수 강도 확인):",
     round(summary(first_stage)$fstatistic[1], 1), "\n")
 
-## 2SLS: 2단계
+2SLS: 2단계
 second_stage <- lm(y ~ x_hat, data = iv_data)
 cat("\n2SLS IV 추정치 (올바른 추정):",
     round(tidy(second_stage) |> filter(term == "x_hat") |> pull(estimate), 3), "\n")
@@ -14945,7 +14943,7 @@ rdd_data <- tibble(
   score = runif(n, 40, 80),               # 입학 시험 점수
   treatment = as.integer(score >= threshold),  # 장학금 배정
   u = rnorm(n),                           # 측정되지 않은 개인 특성
-  # 결과: GPA (장학금이 5점 향상 효과, 점수/u도 영향)
+# 결과: GPA (장학금이 5점 향상 효과, 점수/u도 영향)
   outcome = 2 + 0.05 * score + 5 * treatment + 0.3 * u + rnorm(n)
 )
 
@@ -14990,7 +14988,7 @@ tidy(rdd_fit, conf.int = TRUE)
 `treatment` 계수가 임계값에서의 처치 효과 추정치이다 이것이 RDD가 추정하는 것이다.
 
 ::: {.callout-tip}
-## `{rdrobust}` 패키지
+`{rdrobust}` 패키지
 
 R에서 RDD를 위한 최적 대역폭 선택과 강건한 신뢰 구간을 계산하는 `{rdrobust}` 패키지를 사용하는 것을 권장한다:
 
@@ -15028,13 +15026,13 @@ did_data <- tibble(
   unit = rep(1:(2 * n_units), each = 2),
   time = rep(c("before", "after"), 2 * n_units),
   treatment_group = rep(c(rep(0, n_units), rep(1, n_units)), each = 2),
-  # 측정되지 않은 지역 고정 효과
+측정되지 않은 지역 고정 효과
   unit_effect = rep(rnorm(2 * n_units, 0, 2), each = 2),
-  # 공통 시간 추세
+# 공통 시간 추세
   time_trend = ifelse(time == "before", 0, 1),
-  # 처치 더미 (after × treatment)
+# 처치 더미 (after × treatment)
   treated = as.integer(treatment_group == 1 & time == "after"),
-  # 결과: 고용률 (처치 효과 = 3%)
+# 결과: 고용률 (처치 효과 = 3%)
   employment = 50 + unit_effect + 2 * time_trend +
     3 * treated + rnorm(2 * n_units * 2)
 ) |>
@@ -15148,15 +15146,15 @@ did_panel <- expand.grid(
 ) |>
   tibble() |>
   mutate(
-    # 처치군: 지역 11~20
+# 처치군: 지역 11~20
     treated_region = as.integer(region > n_regions / 2),
-    # 처치: 처치군에서 처치 시점 이후
+# 처치: 처치군에서 처치 시점 이후
     treatment = as.integer(treated_region == 1 & time >= treatment_time),
-    # 지역 고정 효과
+지역 고정 효과
     region_fe = rep(rnorm(n_regions, 0, 2), each = n_time),
-    # 공통 시간 추세
+# 공통 시간 추세
     time_trend = time * 0.5,
-    # 결과 변수 (처치 효과 = 2.5)
+# 결과 변수 (처치 효과 = 2.5)
     outcome = 10 + region_fe + time_trend + 2.5 * treatment +
       rnorm(n_regions * n_time, 0, 0.8)
   ) |>
@@ -15222,11 +15220,11 @@ tidy(did_twfe) |>
 ## install.packages("plm")
 ## library(plm)
 ## plm_did <- plm(
-##   outcome ~ treatment,
-##   data = did_panel,
-##   index = c("region", "time"),
-##   model = "within",   # 고정 효과
-##   effect = "twoways"  # 이원 고정 효과
+## outcome ~ treatment,
+## data = did_panel,
+## index = c("region", "time"),
+model = "within",   # 고정 효과
+effect = "twoways"  # 이원 고정 효과
 ## )
 ## summary(plm_did)
 
@@ -15272,7 +15270,7 @@ ggplot(event_study_results, aes(x = time, y = estimate)) +
 
 이벤트 스터디에서 처치 전 지점의 추정치가 0에 가까우면 평행 추세 가정에 대한 지지 근거가 된다.
 
-### 이종적 처치 시점 문제
+이종적 처치 시점 문제
 
 최근 계량경제학 연구는 TWFE 모델의 주요한 한계를 규명했다.
 이종 처치 시점(staggered adoption) 설계의 TWFE 추정치는 음수 가중치가 부여된 처치 효과가 섞여 있어 해석하기 힘들다.
@@ -15287,7 +15285,7 @@ staggered_data <- expand.grid(
 ) |>
   tibble() |>
   mutate(
-    # 처치 시점이 다른 세 그룹
+# 처치 시점이 다른 세 그룹
     treat_cohort = case_when(
       unit <= 10 ~ 3,   # 시점 3에 처치
       unit <= 20 ~ 5,   # 시점 5에 처치
@@ -15296,7 +15294,7 @@ staggered_data <- expand.grid(
     treatment = as.integer(time >= treat_cohort),
     unit_fe = rep(rnorm(30, 0, 1), each = 8),
     time_trend = time * 0.3,
-    # 각 코호트마다 다른 처치 효과
+각 코호트마다 다른 처치 효과
     te = case_when(
       treat_cohort == 3 ~ 2,
       treat_cohort == 5 ~ 4,
@@ -15333,11 +15331,11 @@ cs_did <- att_gt(
   data = staggered_data |> mutate(treat_cohort = ifelse(is.infinite(treat_cohort), 0, treat_cohort))
 )
 
-## 집계된 처치 효과
+집계된 처치 효과
 aggte(cs_did, type = "simple")
 ```
 
-## 합성 대조군
+합성 대조군
 
 **합성 대조군(Synthetic Control Method, SCM)**은 Abadie et al.(2010)이 개발한 방법으로, 처치된 단일 단위(국가, 지역 등)의 반사실적 결과를 대조군들의 가중 조합으로 구성한다.
 
@@ -15357,7 +15355,7 @@ n_donors <- 10
 n_time <- 16
 treat_time <- 8
 
-## 대조군 단위들의 결과
+대조군 단위들의 결과
 donor_outcomes <- matrix(
   rnorm(n_donors * n_time, mean = 10, sd = 2),
   nrow = n_time, ncol = n_donors
@@ -15426,7 +15424,7 @@ ggplot(synth_plot_data, aes(x = time, y = outcome,
 추론에는 **치환 검정(permutation tests)** 또는 **플라세보 검정(placebo tests)**을 사용한다.
 
 ::: {.callout-note}
-## DiD vs. 합성 대조군
+DiD vs. 합성 대조군
 
 | 특성 | DiD | 합성 대조군 |
 |------|-----|------------|
@@ -15455,7 +15453,6 @@ ggplot(synth_plot_data, aes(x = time, y = outcome,
 status("wip")
 ```
 
-> "정황 증거는 매우 까다로운 것입니다. 그것은 한 가지를 매우 분명하게 가리키는 것처럼 보일 수 있지만 관점을 조금만 바꾸면 전혀 다른 것을 가리키고 있음을 발견하게 될 수도 있습니다." --- 셜록 홈즈 (Sherlock Holmes)
 
 이 책의 마지막인 24장에서는 한 걸음 물러서서 더 큰 그림을 본다.
 단일 연구가 아무리 잘 설계되었어도 연구 하나만으로 인과적 주장을 확립하기는 어렵다.
@@ -15692,7 +15689,7 @@ dagify(
 ```{.r}
 #| message: false
 
-## 시뮬레이션: 여름 시즌 데이터로 연구했지만 연간 효과를 추정하고 싶은 경우
+시뮬레이션: 여름 시즌 데이터로 연구했지만 연간 효과를 추정하고 싶은 경우
 ## 연구 표본: 여름(peak season) 데이터만 있음
 study_sample <- seven_dwarfs_train_2018 |>
   filter(wait_hour == 9, park_ticket_season == "peak") |>
@@ -15716,13 +15713,13 @@ sampling_model <- glm(
 )
 
 ## 연구 표본에서의 가중치 계산
-## sampling_model은 combined 데이터로 학습되었으므로
+sampling_model은 combined 데이터로 학습되었으므로
 ## study_sample에 직접 augment() 불가 → predict()로 예측
 study_sample_with_weights <- study_sample |>
   mutate(
     ps_sampling = predict(sampling_model, newdata = study_sample,
                           type = "response"),
-    # 운송 가중치: (1 - P(S=1)) / P(S=1)
+# 운송 가중치: (1 - P(S=1)) / P(S=1)
     transport_weight = (1 - ps_sampling) / ps_sampling
   )
 
@@ -15731,7 +15728,7 @@ summary(study_sample_with_weights$transport_weight)
 ```
 
 ```{.r}
-## 연구 표본(peak season)에서의 효과
+연구 표본(peak season)에서의 효과
 ps_study <- glm(
   park_extra_magic_morning ~
     park_close + park_temperature_high,
@@ -15765,7 +15762,7 @@ cat("연구 표본(peak season) 효과:", round(study_result, 2), "분\n")
 cat("운송 후(연간 평균) 효과:", round(transported_result, 2), "분\n")
 ```
 
-## 불완전한 근거
+불완전한 근거
 
 실제 과학적 작업에서 우리는 완벽한 증거를 가지는 경우가 거의 없다.
 **불완전한 근거(ragged evidence)**는 서로 다른 연구들이 서로 다른 추정 대상을 사용하고, 서로 다른 가정을 만들고, 서로 다른 측면을 측정하며 심지어 서로 다른 결론에 도달할 수 있음을 의미한다.
@@ -15785,7 +15782,7 @@ cat("운송 후(연간 평균) 효과:", round(transported_result, 2), "분\n")
 #|   다이아몬드는 메타 분석 통합 추정치를 나타냅니다.
 #| message: false
 
-## 가상의 여러 연구 결과
+가상의 여러 연구 결과
 meta_results <- tibble(
   study = c(
     "연구 1 (RCT, 작은 규모)",
@@ -15947,11 +15944,11 @@ R에서의 부트스트래핑은 고전적인 `boot` 패키지를 시작으로, 
 
     ``` r
     indices <- sample(
-      # 인덱스 벡터 생성:
-      # 1부터 행의 수까지
+# 인덱스 벡터 생성:
+## 1부터 행의 수까지
       seq_len(nrow(this_data)),
-      # this_data와 동일한 길이의
-      # 인덱스 벡터를 샘플링
+# this_data와 동일한 길이의
+# 인덱스 벡터를 샘플링
       size = nrow(this_data),
       replace = TRUE
     )
@@ -16156,7 +16153,7 @@ samples |>
   facet_wrap(~sample)
 ```
 
-모집단으로부터 샘플링하는 것이 부트스트랩에서 수행하는 샘플링과 유사하다는 점을 눈치채셨을 것이다.
+## 모집단으로부터 샘플링하는 것이 부트스트랩에서 수행하는 샘플링과 유사하다는 점을 눈치채셨을 것이다.
 우리는 재표본(resample)을 그것이 나온 모집단을 대표하는 것으로 취급한다.
 이는 우리가 모수적 신뢰 구간(parametric confidence intervals)을 사용할 때와 마찬가지로, 우리가 관찰하는 분포를 원래 모집단의 관점에서 해석하는 데 도움을 준다.
 모집단 샘플링과 부트스트랩의 핵심적인 차이점은, 부트스트랩은 모집단 추정치가 아닌 *표본* 추정치 주변의 퍼짐 정도를 결정한다는 점이다.
@@ -16254,7 +16251,7 @@ coverage <- between(
 ) |>
   mean()
 ```
-## 왜 복원 추출인가?
+왜 복원 추출인가?
 부트스트랩을 처음 접하는 사람들은 우리가 복원 추출(resampling with replacement)을 한다는 점과 동일한 관측치가 부트스트랩 샘플에 두 번 이상 나타날 수 있다는 점에 종종 놀라곤 한다.
 수학적인 세부 사항은 위에서 인용한 출처들에 나와 있지만 왜 복원 추출이 효과가 있는지에 대한 직관을 기르는 데 도움이 될 몇 가지 실무적인 이유가 있다.
 첫째, 만약 *비복원(without replacement)* 추출을 한다면, 매번 원래의 데이터셋을 그대로 얻게 되므로 매번 동일한 추정치를 얻게 될 것이다.
@@ -16266,7 +16263,7 @@ coverage <- between(
 만약 이전 샘플에 포함된 개인을 제외하도록 샘플링을 제한한다면, 여러분의 샘플링 계획은 더 이상 독립적이지 않게 될 것이다; 각 샘플이 이전 샘플들에 의존하게 되기 때문이다.
 재표본 추출에서 각 관측치를 독립적으로 허용하는 것은, 마치 역확률 가중치 부여에서 샘플들의 가중치를 높이는 것과 비슷하게( @sec-using-ps 참조), 해당 관측치가 원래 모집단에서 자신과 유사한 다른 관측치들을 대리할 수 있게 해준다.
 
-## 부트스트랩 재표본은 몇 번이나 해야 할까?
+부트스트랩 재표본은 몇 번이나 해야 할까?
 
 이 책에서는 안정성과 계산 속도의 균형을 맞추기 위해 대부분의 문제에 1,000번의 부트스트랩 재표본을 사용한다.
 여러분의 실제 분석에서는 몇 번을 사용해야 할까?
@@ -16295,7 +16292,7 @@ s8_boots <- s8_boots |>
 
 :::
 
-## 어떤 신뢰 구간을 사용해야 할까?
+어떤 신뢰 구간을 사용해야 할까?
 
 지금까지 우리는 백분위수 기반의 신뢰 구간(percentile-based confidence intervals)을 사용해 왔다.
 이는 말 그대로 부트스트랩 추정치 분포의 2.5%와 97.5% 백분위수이다.
@@ -16338,7 +16335,7 @@ c(
 
 BCa 구간과 부트스트랩 t-통계량 구간은 비대칭 데이터에서 더 잘 작동한다.
 주목할 점은, 데이터의 분포와 관계없이 중심 극한 정리(central limit theorem)에 의해 표본 크기가 커질수록 평균은 정규 분포에 접근한다는 것이다(비록 비대칭 분포의 경우 필요한 표본 크기가 흔히 언급되는 30개가 아니라 수천 개가 될 수도 있지만요).
-조건부 평균인 회귀 모델의 계수들에 대해서도 흔히 이와 같은 현상이 나타난다.
+## 조건부 평균인 회귀 모델의 계수들에 대해서도 흔히 이와 같은 현상이 나타난다.
 중심 극한 정리가 효과를 발휘했다면, 백분위수 및 다른 유형의 신뢰 구간들도 아마 좋은 커버리지를 가질 것이다.
 
 ::: {.callout-tip}
@@ -16357,7 +16354,7 @@ BCa 구간과 부트스트랩 t-통계량 구간은 비대칭 데이터에서 �
 BCa 방식은 세 가지 중 계산 집약도가 가장 높다.
 현대적인 컴퓨터에서는 많은 문제에 대해 속도 차이가 미미하지만 백분위수 신뢰 구간이 잘 작동할 것으로 생각되고 BCa가 특히 오래 걸릴 때는 백분위수 방식을 사용하는 것이 유용할 수 있다.
 
-## 부트스트랩이 바로 작동하지 않는 경우는 언제인가?
+부트스트랩이 바로 작동하지 않는 경우는 언제인가?
 
 여기서 제시한 알고리즘은 많은 계산에 있어 단순하고 강력하지만 일부 유형의 추정치는 부트스트랩으로 작동하지 않거나 명목 신뢰 구간을 계산하기 위해 알고리즘의 변형이 필요한 것으로 알려져 있다.
 전형적인 예로 최솟값이나 최댓값과 같은 극단값(extrema)이 있다.

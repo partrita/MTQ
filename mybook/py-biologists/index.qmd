@@ -12,7 +12,7 @@ Martin은 지난 5년 동안 에든버러 대학교(Edinburgh University)의 생
 
 ## I. 서론 및 환경 설정 {.unnumbered}
 
-## 생물학자를 위한 프로그래밍 도서가 왜 필요한가요?
+생물학자를 위한 프로그래밍 도서가 왜 필요한가요?
 
 이 책을 읽고 계시다면 프로그래밍이 생물학자에게 필수 도구로 자리 잡았다는 점은 이미 알고 계실 것이다.
 
@@ -137,7 +137,7 @@ from __future__ import division
 
 ## II. 텍스트 출력 및 조작 {.unnumbered}
 
-### 왜 텍스트 작업에 관심을 가지나요?
+왜 텍스트 작업에 관심을 가지나요?
 
 파이썬 학습에 관한 책의 첫 페이지를 열면, 처음으로 접하는 코드 예제는 숫자와 관련되어 있을 가능성이 높다. 거기에는 그럴만한 이유가 있다. 숫자는 일반적으로 텍스트보다 다루기가 더 간단하다. (기초 산술을 마친 후에는) 숫자로 할 수 있는 일이 많지 않기 때문에 이해하기 쉬운 예제를 만드는 데 적합하다. 또한 프로그래밍 서적을 읽는 일반적인 사람들은 수치 계산이 필요해서 읽는 경우가 많다는 것도 꽤 확실한 추측이다.
 
@@ -208,7 +208,7 @@ He said, "Hello world"
 가끔 프로그램 안에 컴퓨터가 실행하기 위한 것이 아니라 사람이 읽기 위한 텍스트를 작성하고 싶을 때가 있다. 이런 종류의 줄을 주석(comment)이라고 부른다. 소스 코드에 주석을 포함하려면 줄을 해시 기호(#)로 시작하세요1:
 
 ```python
-# 이것은 주석입니다. 컴퓨터는 이를 무시합니다.
+이것은 주석입니다. 컴퓨터는 이를 무시합니다.
 print("Comments are very useful!")
 ```
 
@@ -306,7 +306,7 @@ World")
 
 위의 코드가 작동하지 않은 이유는 파이썬이 새 줄이 문자열의 일부인지(우리가 원했던 것), 아니면 소스 코드의 일부인지(실제로 해석된 방식) 헷갈려 했기 때문이다. 우리에게 필요한 것은 문자열의 일부로 새 줄을 포함하는 방법이며 다행히 파이썬에는 바로 그런 도구가 내장되어 있다. 새 줄을 포함하려면 백슬래시(\\) 뒤에 문자 `n`을 쓴다. 파이썬은 이것이 특수한 문자임을 알고 그에 맞게 해석한다. "Hello world"를 두 줄에 걸쳐 출력하는 코드는 다음과 같다:
 
-## 문자열 중간에 새 줄을 포함하는 방법
+문자열 중간에 새 줄을 포함하는 방법
 
 ```bash
 print("Hello\nworld")
@@ -393,7 +393,7 @@ AATTGGCC
 ```python
 upstream = "AAA"
 my_dna = upstream + "ATGC"
-## my_dna는 이제 "AAAATGC"가 됩니다.
+my_dna는 이제 "AAAATGC"가 됩니다.
 ```
 
 한 번에 여러 문자열을 이어 붙일 수도 있다:
@@ -402,7 +402,7 @@ my_dna = upstream + "ATGC"
 upstream = "AAA"
 downstream = "GGG"
 my_dna = upstream + "ATGC" + downstream
-## my_dna는 이제 "AAAATGCGGG"가 됩니다.
+my_dna는 이제 "AAAATGCGGG"가 됩니다.
 ```
 
 두 문자열을 연결한 결과 자체가 문자열이라는 점을 인식하는 것이 중요하다. 따라서 `print` 문 안에서 연결을 사용하는 것도 완전히 괜찮다:
@@ -418,7 +418,7 @@ print("Hello" + " " + "world")
 파이썬의 또 다른 유용한 내장 도구는 `len` 함수이다 (`len`은 length의 약자이다). `print` 함수와 마찬가지로 `len` 함수도 문자열인 단일 인자(인자가 무엇인지 기억나지 않는다면 `print` 함수를 논의했던 부분을 다시 살짝 보라)를 받는다. 그러나 `len` 함수의 동작은 상당히 다른다. 화면에 텍스트를 출력하는 대신, `len`은 저장할 수 있는 값을 출력한다. 이를 반환 값(return value)이라고 부른다. 즉, `len`을 사용하여 문자열의 길이를 계산하는 프로그램을 작성하면 프로그램은 실행되지만 아무런 출력도 보이지 않을 것이다:
 
 ```python
-## 이 줄은 아무런 출력도 생성하지 않습니다.
+이 줄은 아무런 출력도 생성하지 않습니다.
 len("ATGC")
 ```
 
@@ -514,7 +514,7 @@ after: ATGC
 
 ```python
 my_number = len("AGTC")
-## my_number는 4입니다
+my_number는 4입니다
 print(my_number.lower())
 ```
 
@@ -536,9 +536,9 @@ AttributeError: 'int' object has no attribute 'lower'
 protein = "vlspadktnv"
 ## 발린(v)을 티로신(y)으로 교체
 print(protein.replace("v", "y"))
-## 한 글자 이상을 교체할 수도 있습니다
+한 글자 이상을 교체할 수도 있습니다
 print(protein.replace("vls", "ymt"))
-## 원본 변수는 영향을 받지 않습니다
+원본 변수는 영향을 받지 않습니다
 print(protein)
 ```
 
@@ -560,9 +560,9 @@ vlspadktnv
 protein = "vlspadktnv"
 ## 3번에서 5번 위치까지 출력
 print(protein[3:5])
-## 위치는 1이 아니라 0부터 시작합니다
+위치는 1이 아니라 0부터 시작합니다
 print(protein[0:6])
-## 끝을 넘어서는 중단 위치를 사용하면 끝까지 사용하는 것과 같습니다
+끝을 넘어서는 중단 위치를 사용하면 끝까지 사용하는 것과 같습니다
 print(protein[0:60])
 ```
 
@@ -675,7 +675,7 @@ my_motif.count(my_dna)
 
 위의 주제들 중 많은 부분이 이후 장에서 다시 등장하여 더 자세히 논의될 것이지만 기초를 다지고 싶을 때는 언제든지 이 장으로 돌아올 수 있다. 이 장의 연습 문제는 문자열 조작 도구를 직접 써보며 익숙해질 좋은 기회가 될 것이다. 개별 도구를 빌딩 블록처럼 조합해 더 큰 프로그램을 만드는 연습도 하게 된다.
 
-## 연습 문제
+연습 문제
 
 알림: 연습 문제의 설명은 의도적으로 간결하며 다소 모호할 수 있다(실제 생활에서 작성하게 될 프로그램의 요구 사항과 마찬가지이다). 연습 문제를 깊이 파악한 풀이는 솔루션을 참조하라.
 
@@ -705,7 +705,7 @@ ACTGATCGATTACGTATAGTATTTGCTATCATACATATATATCGATGCGTTCAT
 
 이 서열의 상보 서열(complement)을 출력하는 프로그램을 작성하라.
 
-#### 제한 효소 절편 길이
+제한 효소 절편 길이
 
 다음은 짧은 DNA 서열이다:
 
@@ -933,7 +933,7 @@ print(replacement4.upper())
 
 출력을 통해 정확히 무슨 일이 일어나고 있는지 알 수 있다. 프로그램이 실행됨에 따라 각 염기는 차례대로 소문자 상보 염기로 교체된다. 다음 교체 작업은 대문자만 찾기 때문에, 우리 프로그램의 첫 번째 버전에서처럼 염기가 다시 원래대로 바뀌는 일이 발생하지 않는다.
 
-#### 제한 효소 절편 길이
+제한 효소 절편 길이
 
 이 연습 문제는 수동으로 문제를 해결하는 것부터 시작해 본다. DNA 서열을 살펴보면 21번 위치에서 EcoRI 사이트를 찾을 수 있다. 다음은 염기 위치가 표시되고 EcoRI 모티프가 굵게 표시된 서열이다:
 
@@ -1072,7 +1072,7 @@ print(my_dna[0:62] + my_dna[62:90].lower() + my_dna[90:10000])
 
 ## 3: 파일 읽기 및 쓰기
 
-### 왜 파일 작업에 그렇게 관심이 많나요?
+왜 파일 작업에 그렇게 관심이 많나요?
 
 이 장을 시작하면서 우리는 다시 한번 대부분의 프로그래밍 입문서와는 약간 다른 순서로 진행하고 있음을 발견하게 된다. 대다수의 입문서는 훨씬 나중이 되어서야 외부 파일 작업을 다루는데, 왜 우리는 지금 이를 소개하는 것일까?
 
@@ -1189,13 +1189,13 @@ print(my_file)
 파일에서 DNA 서열을 읽어 길이와 함께 출력하는 간단한 프로그램을 작성해 본다. 이 장에서 배운 파일 함수 및 메서드와 이전 장에서 본 내용을 종합하면 다음과 같은 코드가 나온다:
 
 ```python
-## 파일을 엽니다
+파일을 엽니다
 my_file = open("dna.txt")
-## 내용을 읽습니다
+내용을 읽습니다
 my_dna = my_file.read()
-## 길이를 계산합니다
+길이를 계산합니다
 dna_length = len(my_dna)
-## 출력을 인쇄합니다
+출력을 인쇄합니다
 print("sequence is " + my_dna + " and length is " + str(dna_length))
 ```
 
@@ -1217,7 +1217,7 @@ sequence is ACTGTACGTGCACTGATC
 ```python
 my_file = open("dna.txt")
 my_file_contents = my_file.read()
-## 파일 내용 끝에서 줄바꿈 제거
+파일 내용 끝에서 줄바꿈 제거
 my_dna = my_file_contents.rstrip("\n")
 dna_length = len(my_dna)
 print("sequence is " + my_dna + " and length is " + str(dna_length))
@@ -1246,7 +1246,7 @@ my_dna = my_file.read().rstrip("\n")
 
 이런 식으로 전체를 한 문장으로 쓰는 것이 어렵게 느껴진다면, 그냥 쪼개서 두 단계를 따로 수행하라. 그렇게 해도 프로그램은 똑같이 잘 작동할 것이다.
 
-#### 파일이 없는 경우
+파일이 없는 경우
 
 존재하지 않는 파일을 읽으려고 하면 어떻게 될까요?
 
@@ -1292,15 +1292,15 @@ my_file.write("Hello world")
 `print`와 마찬가지로 `write`에서도 모든 문자열을 인자로 사용할 수 있음을 기억해야 한다. 이는 또한 문자열을 반환하는 모든 메서드나 함수를 사용할 수 있음을 의미한다. 다음은 모두 완전히 괜찮은 코드이다:
 
 ```python
-## "abcdef"를 씁니다
+"abcdef"를 씁니다
 my_file.write("abc" + "def")
-## "8"을 씁니다
+"8"을 씁니다
 my_file.write(str(len('AGTGCTAG')))
-## "TTGC"를 씁니다
+"TTGC"를 씁니다
 my_file.write("ATGC".replace('A', 'T'))
-## "atgc"를 씁니다
+"atgc"를 씁니다
 my_file.write("ATGC".lower())
-## my_variable의 내용을 씁니다
+my_variable의 내용을 씁니다
 my_file.write(my_variable)
 ```
 
@@ -1311,7 +1311,7 @@ my_file.write(my_variable)
 ```python
 my_file = open("out.txt", "w")
 my_file.write("Hello world")
-## 파일을 닫는 것을 잊지 마세요
+파일을 닫는 것을 잊지 마세요
 my_file.close()
 ```
 
@@ -1345,7 +1345,7 @@ my_file = open("/Users/martin/Desktop/myfolder/myfile.txt")
 * 물론 파일을 단순히 읽는 것 외에도 하고 싶은 일이 많다. 우리는 또한 프로그램이 파일을 이동하고 복사하며 파일과 디렉토리를 생성 및 삭제하고 파일과 그 속성을 나열할 수 있기를 원한다. 이러한 작업을 수행하는 데 필요한 도구들은 9장에서 다룰 것이다.
 * 마지막으로, 모든 예제에 공통된 또 다른 특징은 파일 이름이 코드의 일부로 작성되었다는 점이다. 우리는 대개 실제 프로그램이 더 유연하고 사용자가 지정한 파일을 읽을 수 있기를 원한다. 9장에서는 다양한 형태의 사용자 입력도 다루며 프로그램이 파일 이름을 유연하게 받아들이도록 만드는 방법을 배울 것이다.
 
-## 연습 문제
+연습 문제
 
 #### 유전체 DNA 나누기
 
@@ -1419,17 +1419,17 @@ noncoding_file.write(intron)
 프로그램의 서로 다른 부분들을 구분하기 위해 빈 줄을 넣어 모두 합쳐본다:
 
 ```python
-## 파일을 열고 내용을 읽습니다
+파일을 열고 내용을 읽습니다
 dna_file = open("genomic_dna.txt")
 my_dna = dna_file.read()
-## DNA 서열의 각 부분을 추출합니다
+DNA 서열의 각 부분을 추출합니다
 exon1 = my_dna[0:62]
 intron = my_dna[62:90]
 exon2 = my_dna[90:10000]
-## 두 개의 출력 파일을 엽니다
+두 개의 출력 파일을 엽니다
 coding_file = open("coding_dna.txt", "w")
 noncoding_file = open("noncoding_dna.txt", "w")
-## 서열을 출력 파일에 씁니다
+서열을 출력 파일에 씁니다
 coding_file.write(exon1 + exon2)
 noncoding_file.write(intron)
 ```
@@ -1541,21 +1541,21 @@ output.write('>' + header_3 + '\n' + seq_3.replace('-', '') + '\n')
 다음은 앞부분의 변수 정의와 빈 줄, 주석을 포함한 최종 코드이다:
 
 ```python
-## 모든 헤더 변수의 값을 설정합니다
+모든 헤더 변수의 값을 설정합니다
 header_1 = "ABC123"
 header_2 = "DEF456"
 header_3 = "HIJ789"
-## 모든 서열 변수의 값을 설정합니다
+모든 서열 변수의 값을 설정합니다
 seq_1 = "ATCGTACGATCGATCGATCGCTAGACGTATCG"
 seq_2 = "actgatcgacgatcgatcgatcacgact"
 seq_3 = "ACTGAC-ACTGT-ACTGTA---CATGTG"
-## 출력물을 담을 새 파일을 만듭니다
+출력물을 담을 새 파일을 만듭니다
 output = open("sequences.fasta", "w")
-## seq1에 대한 헤더와 서열을 씁니다
+seq1에 대한 헤더와 서열을 씁니다
 output.write('>' + header_1 + '\n' + seq_1 + '\n')
-## seq2에 대한 헤더와 대문자로 변환된 서열을 씁니다
+seq2에 대한 헤더와 대문자로 변환된 서열을 씁니다
 output.write('>' + header_2 + '\n' + seq_2.upper() + '\n')
-## seq3에 대한 헤더와 하이픈이 제거된 서열을 씁니다
+seq3에 대한 헤더와 하이픈이 제거된 서열을 씁니다
 output.write('>' + header_3 + '\n' + seq_3.replace('-', '') + '\n')
 ```
 
@@ -1574,19 +1574,19 @@ output_3 = open(header_3 + ".fasta", "w")
 또한 각 출력 파일에 대해 하나씩 `write` 문을 사용하도록 변경할 것이다. 각 파일에 올바른 서열이 들어가는지 확인하기 위해 번호에 주의해야 한다. 다음은 주석을 포함한 최종 코드이다.
 
 ```python
-## 모든 헤더 변수의 값을 설정합니다
+모든 헤더 변수의 값을 설정합니다
 header_1 = "ABC123"
 header_2 = "DEF456"
 header_3 = "HIJ789"
-## 모든 서열 변수의 값을 설정합니다
+모든 서열 변수의 값을 설정합니다
 seq_1 = "ATCGTACGATCGATCGATCGCTAGACGTATCG"
 seq_2 = "actgatcgacgatcgatcgatcacgact"
 seq_3 = "ACTGAC-ACTGT-ACTGTA---CATGTG"
-## 출력물을 담을 세 개의 파일을 만듭니다
+출력물을 담을 세 개의 파일을 만듭니다
 output_1 = open(header_1 + ".fasta", "w")
 output_2 = open(header_2 + ".fasta", "w")
 output_3 = open(header_3 + ".fasta", "w")
-## 각 출력 파일에 하나의 서열을 씁니다
+각 출력 파일에 하나의 서열을 씁니다
 output_1.write('>' + header_1 + '\n' + seq_1 + '\n')
 output_2.write('>' + header_2 + '\n' + seq_2.upper() + '\n')
 output_3.write('>' + header_3 + '\n' + seq_3.replace('-', '') + '\n')
@@ -1596,7 +1596,7 @@ output_3.write('>' + header_3 + '\n' + seq_3.replace('-', '') + '\n')
 
 ## 4: 리스트와 루프
 
-#### 리스트와 루프가 왜 필요한가요?
+리스트와 루프가 왜 필요한가요?
 
 지난 두 장에서 살펴보았던 연습 문제들을 떠올려 보라. 모두 한 번에 하나의 정보만 다루었다. 2장에서는 문자열 조작 도구를 사용하여 단일 서열을 처리했고 3장에서는 한 번에 하나씩 파일을 읽고 쓰는 연습을 했다. 여러 개의 데이터를 사용하는 것과 가장 가까웠던 경우는 세 개의 DNA 서열을 다루었던 3장의 마지막 연습 문제였다.
 
@@ -1605,7 +1605,7 @@ output_3.write('>' + header_3 + '\n' + seq_3.replace('-', '') + '\n')
 지금까지 우리는 하나의 정보 조각을 저장하는 몇 가지 데이터 유형(문자열, 숫자, 파일 객체)을 배웠습니다. 여러 정보 조각을 저장해야 했을 때(예를 들어 3장 연습 문제의 세 가지 DNA 서열) 우리는 단순히 그것들을 담을 변수를 더 많이 만들었다:
 
 ```python
-## 모든 서열 변수의 값을 설정합니다
+모든 서열 변수의 값을 설정합니다
 seq_1 = "ATCGTACGATCGATCGATCGCTAGACGTATCG"
 seq_2 = "actgatcgacgatcgatcgatcacgact"
 seq_3 = "ACTGAC-ACTGT-ACTGTA----CATGTG"
@@ -1616,7 +1616,7 @@ seq_3 = "ACTGAC-ACTGT-ACTGTA----CATGTG"
 우리는 또한 문장들이 위에서 아래로 매우 직선적인 방식으로 실행되는 프로그램들만 다루어 왔다. 프로그래밍에 대해 처음 생각하기 시작할 때는 이것이 큰 장점이 된다. 프로그램의 흐름을 따라가기가 매우 쉽기 때문이다. 하지만 이러한 순차적인 프로그래밍 스타일의 단점은 지난 장 끝부분에서 보았듯이 매우 중복된 코드를 낳는다는 것이다:
 
 ```python
-## 출력물을 담을 세 개의 파일을 만듭니다
+출력물을 담을 세 개의 파일을 만듭니다
 output_1 = open(header_1 + ".fasta", "w")
 output_2 = open(header_2 + ".fasta", "w")
 output_3 = open(header_3 + ".fasta", "w")
@@ -1647,7 +1647,7 @@ first_site = conservedSites[2]
 ```python
 apes = ["Homo sapiens", "Pan troglodytes", "Gorilla gorilla"]
 chimp_index = apes.index("Pan troglodytes")
-## chimp_index는 이제 1이 됩니다
+chimp_index는 이제 1이 됩니다
 ```
 
 파이썬에서는 1이 아니라 0부터 세기 시작하므로, 리스트의 첫 번째 요소는 항상 인덱스 0에 있다는 점을 기억해야 한다. 음수를 제공하면 파이썬은 처음이 아니라 리스트의 끝에서부터 세기 시작한다. 따라서 리스트의 마지막 요소를 가져오기가 쉽다:
@@ -1661,7 +1661,7 @@ last_ape = apes[-1]
 ```python
 ranks = ["kingdom","phylum", "class", "order", "family"]
 lower_ranks = ranks[2:5]
-## lower_ranks는 class, order, family가 됩니다
+lower_ranks는 class, order, family가 됩니다
 ```
 
 어디서 본 것 같지 않나요? 2장에서 부분 문자열을 얻기 위해 사용했던 것과 정확히 동일한 표기법이며 숫자들의 시작 부분은 포함하고 끝 부분은 제외하는 방식도 동일하게 작동한다. 문자열과 리스트에 동일한 표기법을 사용한다는 사실은 두 유형 사이의 깊은 관계를 암시한다. 사실 우리가 2장에서 부분 문자열을 추출할 때 했던 일은 문자열을 마치 문자들의 리스트인 것처럼 취급한 것이었다. 변수가 리스트가 아님에도 리스트인 것처럼 취급할 수 있다는 이 개념은 파이썬에서 매우 강력하며 이 장의 뒷부분에서 다시 다룰 것이다.
@@ -1865,7 +1865,7 @@ print(str(species))
 ```python
 file = open("some_input.txt")
 for line in file:
-    # 줄을 가지고 무언가를 수행합니다
+줄을 가지고 무언가를 수행합니다
 ```
 
 짧은 경고: 파일에서 데이터를 읽는 프로그램을 작성할 때는 `read` 메서드(전체 내용을 하나의 변수에 저장)를 사용하거나 루프 방식(각 줄을 따로 처리) 중 하나만 사용하는 것이 가장 좋다. 이 둘을 섞어서 쓰려고 하면 예상치 못한 동작이 발생할 수 있다. 그 이유는 파이썬이 각 파일에서의 위치를 추적하기 때문인데, 만약 `read` 메서드로 파일 객체의 내용을 읽었다면 파이썬은 이미 파일의 끝에 도달했다고 생각하므로 나중에 루프로 한 줄씩 처리하려고 해도 아무런 입력도 받지 못하게 된다. 만약 반드시 두 방법을 모두 사용해야 한다면 파일을 닫았다가 다시 열어서 이 문제를 해결할 수 있다.
@@ -1939,7 +1939,7 @@ for number in range(2, 14, 4):
 
 또한 우리가 리스트 작업을 위해 배운 표기법을 다른 유형의 데이터와 함께 사용할 수 있는 유용한 방법들도 보았다. 상황에 따라 문자열, 파일, 범위를 마치 리스트인 것처럼 사용할 수 있다. 이는 파이썬의 매우 유용한 특징이다. 리스트 작업을 위한 문법에 익숙해지면 이를 여러 곳에서 활용할 수 있기 때문이다. 이러한 도구들을 배우는 것은 우리가 이전 장에서 관찰했던 몇 가지 흥미로운 동작들을 이해하는 데에도 도움이 되었다.
 
-## 연습 문제
+연습 문제
 
 참고: 이 연습 문제에서 언급된 모든 파일은 연습 문제 다운로드 파일의 `chapter_4` 폴더에서 찾을 수 있다.
 
@@ -2026,17 +2026,17 @@ ACTAGCTAGTCTCGATGCATGATCAGCTTAGCTGATGATGCTATGCA
 이제 마지막 단계인 서열 길이를 화면에 출력하는 일만 남았다. 코드 한 줄만 더 추가하면 된다. 다음은 주석을 포함한 전체 최종 프로그램이다:
 
 ```python
-## 입력 파일을 엽니다
+입력 파일을 엽니다
 file = open("input.txt")
-## 출력 파일을 엽니다
+출력 파일을 엽니다
 output = open("trimmed.txt", "w")
-## 입력 파일을 한 번에 한 줄씩 훑어봅니다
+입력 파일을 한 번에 한 줄씩 훑어봅니다
 for dna in file:
-    # 15번째 문자부터 끝까지 부분 문자열을 가져옵니다
+15번째 문자부터 끝까지 부분 문자열을 가져옵니다
     trimmed_dna = dna[14:]
-    # 잘려진 서열을 파일에 씁니다
+잘려진 서열을 파일에 씁니다
     output.write(trimmed_dna)
-    # 길이를 화면에 출력합니다
+길이를 화면에 출력합니다
     print("processed sequence with length " + str(len(trimmed_dna)))
 ```
 
@@ -2171,32 +2171,32 @@ ATCGATCGATCGATCGATCGTAGCTAGCTACGATCG
 마지막 단계는 코딩 서열을 파일에 저장하는 것이다. 이는 프로그램 끝부분에 세 줄의 코드를 추가하여 수행할 수 있다. 다음은 주석을 포함한 최종 코드이다:
 
 ```python
-## 유전체 DNA 파일을 열고 내용을 읽습니다
+유전체 DNA 파일을 열고 내용을 읽습니다
 genomic_dna = open("genomic_dna.txt").read()
 
-## 엑손 위치 파일을 엽니다
+엑손 위치 파일을 엽니다
 exon_locations = open("exons.txt")
 
-## 코딩 서열을 담을 변수를 생성합니다
+코딩 서열을 담을 변수를 생성합니다
 coding_sequence = ""
 
-## 엑손 위치 파일의 각 줄을 훑어봅니다
+엑손 위치 파일의 각 줄을 훑어봅니다
 for line in exon_locations:
 
-    # 쉼표를 사용하여 줄을 나눕니다
+쉼표를 사용하여 줄을 나눕니다
     positions = line.split(',')
 
-    # 시작 및 종료 위치를 가져옵니다
+시작 및 종료 위치를 가져옵니다
     start = int(positions[0])
     stop = int(positions[1])
 
-    # 유전체 DNA에서 엑손을 추출합니다
+유전체 DNA에서 엑손을 추출합니다
     exon = genomic_dna[start:stop]
 
-    # 현재 코딩 서열 끝에 엑손을 추가합니다
+현재 코딩 서열 끝에 엑손을 추가합니다
     coding_sequence = coding_sequence + exon
 
-## 코딩 서열을 출력 파일에 씁니다
+코딩 서열을 출력 파일에 씁니다
 output = open("coding_sequence.txt", "w")
 output.write(coding_sequence)
 output.close()
@@ -2204,7 +2204,7 @@ output.close()
 
 ## 5: 사용자 정의 함수 작성하기
 
-#### 왜 우리만의 함수를 작성하고 싶어 하나요?
+왜 우리만의 함수를 작성하고 싶어 하나요?
 
 이 책의 가장 첫 번째 연습 문제인 2장에서 DNA 서열의 AT 함량을 계산하는 프로그램을 작성했던 때를 떠올려 보라. 코드를 다시 확인해 본다:
 
@@ -2372,7 +2372,7 @@ print(get_at_content(test_dna, 3))
 
 함수를 사용하는 것은 매우 중요하기 때문에, 앞으로의 연습 문제 솔루션에서는 문제 텍스트에 명시적으로 언급되지 않았더라도 적절한 경우 함수를 사용할 것이다. 여러분도 솔루션에서 함수를 사용하는 습관을 들이기를 권장한다.
 
-#### 함수가 항상 인자를 가져야 하는 것은 아니다
+함수가 항상 인자를 가져야 하는 것은 아니다
 
 파이썬 규칙에 함수가 반드시 인자를 가져야 한다는 내용은 없다. 인자가 없는 함수를 정의하는 것도 완벽하게 가능하다:
 
@@ -2411,7 +2411,7 @@ def get_at_content():
 
 만약 이런 식으로 코드를 작성하고 있는 자신을 발견한다면, 대개 함수 외부의 어떤 변수들이 내부에서 사용되고 있는지 파악하여 그것들을 인자로 바꾸는 것이 좋은 생각이다.
 
-#### 함수가 항상 값을 반환해야 하는 것은 아니다
+함수가 항상 값을 반환해야 하는 것은 아니다
 
 우리의 함수를 이렇게 변형한 경우를 고려해 본다. AT 함량을 반환하는 대신 화면에 출력하는 함수이다:
 
@@ -2428,7 +2428,7 @@ def print_at_content(dna):
 
 유연한 함수를 설계하는 비결은 'AT 함량을 계산하고 인쇄하는' 작업이 실제로는 두 개의 별개 작업, 즉 AT 함량을 계산하는 작업과 이를 인쇄하는 작업임을 인식하는 것이다. 함수가 단 한 가지 작업만 수행하도록 작성해 보라. 그러면 간단한 함수들을 빌딩 블록처럼 사용하여 더 복잡한 작업을 수행하는 코드를 쉽게 작성할 수 있다.
 
-#### 함수는 이름이 지정된 인자로 호출될 수 있다
+함수는 이름이 지정된 인자로 호출될 수 있다
 
 함수를 사용하기 위해 우리가 알아야 할 것은 무엇일까? 반환 값과 그 유형이 무엇인지 알아야 하고 인자의 개수와 유형을 알아야 한다. 이 책에서 지금까지 보았던 예제들의 경우, 인자의 순서도 알아야 했다. 예를 들어 `open` 함수를 사용하려면 파일 이름이 먼저 오고 그 뒤에 파일 모드가 온다는 것을 알아야 한다. 그리고 위에서 설명한 `get_at_content`의 두 인자 버전을 사용하려면 DNA 서열이 먼저 오고 그 뒤에 유효 숫자 개수가 온다는 것을 알아야 한다.
 
@@ -2469,7 +2469,7 @@ get_at_content(dna="ATCGTGACTCG", 2)
 
 키워드 인자는 인자가 많은 함수나 메서드에서 특히 유용할 수 있으며 이 책의 나머지 부분에 나오는 예제와 연습 문제 솔루션에서 적절히 사용할 것이다.
 
-#### 함수 인자는 기본값을 가질 수 있다
+함수 인자는 기본값을 가질 수 있다
 
 우리는 3장에서 파일을 여는 것에 대해 논의할 때 기본값이 있는 함수 인자를 접한 적이 있다. `open` 함수는 파일 이름과 모드 문자열이라는 두 개의 인자를 받지만 파일 이름만으로 호출하면 모드 문자열에 기본값을 사용한다는 점을 상기하라. 우리만의 함수에서도 이 기능을 쉽게 쓸 수 있다. 함수 정의의 첫 번째 줄에서 기본값을 지정하기만 하면 된다. 다음은 유효 숫자 개수의 기본값이 2인 `get_at_content` 함수의 버전이다:
 
@@ -2557,7 +2557,7 @@ assert get_at_content("AGG", 5) == 0.33333
 
 남은 장들에서는 예제와 풀이 모두에서 함수를 쓸 예정이니, 다음 장으로 넘어가기 전에 이 장의 새 개념에 익숙해지라.
 
-## 연습 문제
+연습 문제
 
 #### 아미노산 잔기 비율, 파트 1
 
@@ -2606,7 +2606,7 @@ print(percentage)
 
 ```python
 def get_aa_percentage(protein, aa):
-    # 두 입력을 모두 대문자로 변환
+# 두 입력을 모두 대문자로 변환
     protein = protein.upper()
     aa = aa.upper()
     aa_count = protein.count(aa)
@@ -2632,7 +2632,7 @@ AssertionError
 
 ```python
 def get_aa_percentage(protein, aa):
-    # 두 입력을 모두 대문자로 변환
+# 두 입력을 모두 대문자로 변환
     protein = protein.upper()
     aa = aa.upper()
     aa_count = protein.count(aa)
@@ -2654,13 +2654,13 @@ def get_aa_percentage(protein, aa):
 ```python
 protein = "MSRSLLLRLFLLFLLLLLLPPLP"
 aa_list = ['M', 'L', 'F']
-## total 변수는 일치하는 잔기의 총 개수를 보관합니다
+total 변수는 일치하는 잔기의 총 개수를 보관합니다
 total = 0
 for aa in aa_list:
     print("counting number of " + aa)
     aa = aa.upper()
     aa_count = protein.count(aa)
-    # 이 잔기의 개수를 총 합계에 더합니다
+이 잔기의 개수를 총 합계에 더합니다
     total = total + aa_count
     print("running total is " + str(total))
 percentage = total * 100 / len(protein)
@@ -2717,7 +2717,7 @@ def get_aa_percentage(protein, aa_list=['A', 'I', 'L', 'M', 'F', 'W', 'Y', 'V'])
 
 ## 6: 조건부 테스트
 
-#### 프로그램은 결정을 내려야 한다
+프로그램은 결정을 내려야 한다
 
 이전 장들의 예제와 연습 문제들을 되돌아보면, 의사 결정 과정이 부족하다는 점이 눈에 띈다. 우리는 개별 데이터 조각에 대한 단순한 계산에서 시작하여 데이터 컬렉션에 대한 더 복잡한 절차를 수행하는 단계로 나아갔지만 각 데이터 조각(서열, 염기, 종 이름, 엑손)은 모두 동일하게 취급되었다.
 
@@ -3005,7 +3005,7 @@ False
 
 ```python
 if is_at_rich(my_dna):
-    # 서열을 가지고 무언가를 수행합니다
+서열을 가지고 무언가를 수행합니다
 ```
 
 우리 함수의 마지막 네 줄은 조건을 평가하고 `True` 또는 `False`를 반환하는 데 할애되어 있으므로, 약간 더 간결한 버전을 작성할 수 있다. 이 예제에서는 조건을 평가하고 그 결과를 즉시 반환한다:
@@ -3029,7 +3029,7 @@ def is_at_rich(dna):
 
 우리는 조건을 사용하는 네 가지 서로 다른 도구인 `if`, `else`, `elif`, `while`을 유용성 순서대로 소개받았다. 아마 여러분이 작성하는 프로그램과 이 책의 연습 문제 솔루션에서 `if`와 `else`는 매우 빈번하게, `elif`는 가끔, `while`은 거의 사용하지 않는다는 것을 알게 될 것이다.
 
-## 연습 문제
+연습 문제
 
 연습 문제 다운로드 파일의 `chapter_6` 폴더에서 `data.csv`라는 텍스트 파일을 찾을 수 있다. 이 파일에는 여러 유전자에 대한 가상의 데이터가 들어 있다. 각 줄은 단일 유전자에 대해 종 이름, 서열, 유전자 이름, 발현 수준 순서로 필드를 포함하고 있다. 각 필드는 쉼표로 구분되어 있다 (그래서 파일 이름이 csv - Comma Separated Values - 인다). 스프레드시트의 테이블을 나타낸 것이라고 생각하면 된다. 각 줄은 행이고 각 필드는 열이다. 이 장의 모든 연습 문제는 이 파일에서 읽은 데이터를 사용한다.
 
@@ -3534,7 +3534,7 @@ AT rich region from 18 to 26
 
 동일한 것을 작성하는 여러 다른 방법이 있는 다른 상황들과 마찬가지로, 읽기에 가장 명확한 방식이 무엇인지에 따라 결정하는 것이 가장 좋다.
 
-## 연습 문제
+연습 문제
 
 #### 액세션 이름
 
@@ -3568,7 +3568,7 @@ xkn, yhdck, eihd39d, chdsye, hedle, xjhd53e, 45da, de37dp
 import re
 accs = ["xkn59438", "yhdck2", "eihd39d9", "chdsye847", "hedle3455", "xjhd53e", "45da", "de37dp"]
 for acc in accs:
-    # 테스트를 통과하면 인쇄합니다
+테스트를 통과하면 인쇄합니다
 ```
 
 이제 기준들을 하나씩 다루어 본다. 각 예제에 대해 코드가 나오고 바로 뒤에 출력 결과가 이어진다.
@@ -3787,10 +3787,10 @@ one fragment size is 384
 import re
 dna = open("dna.txt").read().strip("\n")
 all_cuts = [0]
-## AbcI에 대한 절단 위치 추가
+AbcI에 대한 절단 위치 추가
 for match in re.finditer(r"A[ATGC]TAAT", dna):
     all_cuts.append(match.start() + 3)
-## AbcII에 대한 절단 위치 추가
+AbcII에 대한 절단 위치 추가
 for match in re.finditer(r"GC[AG][AT]TG", dna):
     all_cuts.append(match.start() + 4)
 ## 마지막 위치 추가
@@ -3819,11 +3819,11 @@ import re
 dna = open("dna.txt").read().strip("\n")
 all_cuts = [0]
 
-## AbcI에 대한 절단 위치 추가
+AbcI에 대한 절단 위치 추가
 for match in re.finditer(r"A[ATGC]TAAT", dna):
     all_cuts.append(match.start() + 3)
 
-## AbcII에 대한 절단 위치 추가
+AbcII에 대한 절단 위치 추가
 for match in re.finditer(r"GC[AG][AT]TG", dna):
     all_cuts.append(match.start() + 4)
 
@@ -4026,7 +4026,7 @@ enzymes = {
     'AvaII':r'GG(A|T)CC',
     'BisI':r'GC[ATGC]GC'
 }
-## 딕셔너리에서 EcoRI 효소 제거
+딕셔너리에서 EcoRI 효소 제거
 enzymes.pop('EcoRI')
 ```
 
@@ -4189,14 +4189,14 @@ for trinucleotide in sorted(counts.keys()):
 ```python
 for key in my_dict.keys():
     value = my_dict.get(key)
-    # key와 value를 가지고 무언가를 수행합니다
+key와 value를 가지고 무언가를 수행합니다
 ```
 
 키뿐만 아니라 데이터 쌍에 대해 반복 처리하기 위해 `items` 메서드를 사용할 수 있다:
 
 ```python
 for key, value in my_dict.items():
-    # key와 value를 가지고 무언가를 수행합니다
+key와 value를 가지고 무언가를 수행합니다
 ```
 
 `items` 메서드는 이 책에서 지금까지 보았던 다른 모든 메서드들과 약간 다른 일을 한다. 단일 값이나 값들의 리스트를 반환하는 대신, 값들의 쌍으로 구성된 리스트를 반환한다. 그래서 루프 시작 부분에 두 개의 변수 이름을 주어야 하는 것이다. 다음은 `items` 메서드를 사용하여 이전과 똑같이 트리뉴클레오티드 개수 딕셔너리를 처리하는 방법이다:
@@ -4217,7 +4217,7 @@ for trinucleotide, count in counts.items():
 
 그 과정에서 딕셔너리가 할 수 있는 몇 가지 제한 사항들도 발견했다. 키로 몇 가지 데이터 유형만 사용할 수 있고 키는 고유해야 하며 순서에 의존할 수 없다. 물리적인 사전이 우리가 단어의 정의를 빠르게 찾을 수 있게 해주지만 그 반대는 아니듯이, 파이썬 딕셔너리도 키와 관련된 값을 빠르게 찾을 수 있게 해주지만 그 반대는 아니다.
 
-## 연습 문제
+연습 문제
 
 ## DNA 번역
 
@@ -4524,7 +4524,7 @@ assert translate_dna("ACGATCGATCGTNACGTACGATCGTACTCG") == "TIDRXVRSYS"
 ```
 ## 9: 파일, 프로그램, 그리고 사용자 입력
 
-#### 파일 내용 및 조작
+파일 내용 및 조작
 
 파일을 읽고 쓰는 것은 이 책의 앞부분인 3장에서 이미 다루었다. 하지만 어떤 프로그램들은 파일의 내용뿐만 아니라 파일과 폴더 그 자체를 다루어야 할 때도 있다. 특히 다른 도구나 소프트웨어와 함께 워크플로(work flow)의 일부로 작동해야 하는 프로그램의 경우 더욱 그렇다. 예를 들어, 파일을 복사, 이동, 이름 변경 또는 삭제해야 하거나, 특정 폴더 내의 모든 파일을 처리해야 할 수도 있다.
 
@@ -4544,7 +4544,7 @@ assert translate_dna("ACGATCGATCGTNACGTACGATCGTACTCG") == "TIDRXVRSYS"
 
 또한, 많은 함수의 코드 예제가 성공적으로 실행되려면 예제가 실행되는 컴퓨터에 실제로 해당 파일과 폴더가 존재해야 한다. 이 장의 코드 예제는 리눅스 스타일의 경로를 사용하며 제 컴퓨터에 있는 폴더와 파일을 참조하므로, 직접 실행해 보려면 자신의 컴퓨터에 있는 파일을 참조하도록 경로를 변경해야 할 것이다.
 
-#### 기본적인 파일 조작
+기본적인 파일 조작
 
 기존 파일의 이름을 바꾸려면 단순히 `os` 모듈을 임포트한 다음 `os.rename` 함수를 사용하면 된다. `os.rename` 함수는 두 개의 문자열 인자를 받는다. 첫 번째는 파일의 현재 이름이고 두 번째는 새 이름이다:
 
@@ -4728,7 +4728,7 @@ dna = "ATCGATCGTGACTAGCTACG"
 
 ```python
 accession = input("Enter the accession name")
-## accession 변수로 무언가를 수행합니다
+accession 변수로 무언가를 수행합니다
 ```
 
 `input` 함수는 우리가 본 다른 함수나 메서드와 약간 다르게 작동한다. 값을 반환하기 전에 어떤 일이 일어나기를 기다려야 하기 때문이다. 즉, 사용자가 문자열을 입력하고 엔터를 눌러야 한다. 사용자 입력은 문자열로 반환되므로(숫자와 같이 다른 용도로 사용해야 한다면 수동으로 변환해야 함), 줄 바꿈 문자로 끝날 수 있어 `rstrip`으로 제거하고 싶을 수도 있다.
@@ -4786,7 +4786,7 @@ python myprogram.py one two three
 
 장의 마지막 부분에서는 프로그램 실행 시 사용자 입력을 받는 두 가지 방법을 보았다. 과학 연구의 일부를 형성하는 프로그래밍 유형에는 일반적으로 명령행 인자를 사용하는 것이 더 좋다.
 
-## 연습 문제
+연습 문제
 
 연습 문제 다운로드의 `chapter_9` 폴더에는 줄당 하나씩 다양한 길이의 DNA 서열이 들어 있는 `.dna` 확장자 파일들이 있다. 두 연습 문제 모두 이 파일 세트를 사용하라.
 
@@ -4830,12 +4830,12 @@ reading sequences from xad.dna
 다음 단계는 각 파일에서 DNA 서열을 읽는 것이다. 이름 테스트를 통과한 각 파일에 대해 파일을 열고 한 번에 한 줄씩 처리하며 DNA 서열의 길이를 계산한다:
 
 ```python
-## 각 파일을 확인합니다
+각 파일을 확인합니다
 for file_name in os.listdir("."):
     if file_name.endswith(".dna"):
         print("reading sequences from " + file_name)
         dna_file = open(file_name)
-        # 각 줄을 확인합니다
+각 줄을 확인합니다
         for line in dna_file:
             dna = line.rstrip("\n")
             length = len(dna)
@@ -4865,19 +4865,19 @@ found a dna sequence with length 520
 좋아 보이다. 다양한 크기가 나오고 있네요. 다음으로 각 서열이 어느 빈(bin)에 들어가야 하는지 결정해야 한다. 빈의 경계가 일정한 패턴을 따르므로 `range` 함수를 사용하여 생성할 수 있다. 100부터 1000까지 100씩 증가하는 숫자 범위를 가져와서 하한선을 생성하고 99를 더해 빈의 상한선을 얻을 수 있다. 각 서열에 대해 이 과정을 거치며 각 빈에 속하는지 차례로 확인한다:
 
 ```python
-## 폴더의 각 파일을 훑어봅니다
+폴더의 각 파일을 훑어봅니다
 for file_name in os.listdir("."):
-    # .dna로 끝나는지 확인합니다
+.dna로 끝나는지 확인합니다
     if file_name.endswith(".dna"):
         print("reading sequences from " + file_name)
-        # 파일을 열고 각 줄을 처리합니다
+파일을 열고 각 줄을 처리합니다
         dna_file = open(file_name)
         for line in dna_file:
-            # 서열 길이를 계산합니다
+서열 길이를 계산합니다
             dna = line.rstrip("\n")
             length = len(dna)
             print("sequence length is " + str(length))
-            # 각 빈을 훑어보며 서열이 해당 빈에 속하는지 확인합니다
+각 빈을 훑어보며 서열이 해당 빈에 속하는지 확인합니다
             for bin_lower in range(100,1000,100):
                 bin_upper = bin_lower + 99
                 if length >= bin_lower and length < bin_upper:
@@ -4925,37 +4925,37 @@ DNA 서열을 특정 폴더의 파일에 쓰고 싶을 때, 같은 명명 체계
 ```python
 import os
 
-## 서열 번호를 저장할 변수를 생성합니다
+서열 번호를 저장할 변수를 생성합니다
 seq_number = 1
 
-## 각 빈에 대해 새 폴더를 생성합니다
+각 빈에 대해 새 폴더를 생성합니다
 for bin_lower in range(100, 1000, 100):
     bin_upper = bin_lower + 99
     bin_folder_name = str(bin_lower) + "_" + str(bin_upper)
     os.mkdir(bin_folder_name)
 
-## .dna로 끝나는 모든 파일을 처리합니다
+.dna로 끝나는 모든 파일을 처리합니다
 for file_name in os.listdir("."):
     if file_name.endswith(".dna"):
         print("reading sequences from " + file_name)
         dna_file = open(file_name)
-        # 각 줄에 대해 서열 길이를 계산합니다
+각 줄에 대해 서열 길이를 계산합니다
         for line in dna_file:
             dna = line.rstrip("\n")
             length = len(dna)
             print("sequence length is " + str(length))
-            # 서열이 어느 빈에 속하는지 파악합니다
+서열이 어느 빈에 속하는지 파악합니다
             for bin_lower in range(100,1000,100):
                 bin_upper = bin_lower + 99
                 if length >= bin_lower and length < bin_upper:
-                    # 올바른 빈을 알게 되면 서열을 씁니다
+올바른 빈을 알게 되면 서열을 씁니다
                     print("bin is " + str(bin_lower) + " to " + str(bin_upper))
                     bin_folder_name = str(bin_lower) + "_" + str(bin_upper)
                     output_path = bin_folder_name + '/' + str(seq_number) + '.dna'
                     output = open(output_path, "w")
                     output.write(dna)
                     output.close()
-                    # 서열 번호를 증가시킵니다
+서열 번호를 증가시킵니다
                     seq_number = seq_number + 1
 ```
 
@@ -5096,11 +5096,11 @@ atggct : 24
 import os
 import sys
 
-## 명령행 인자를 변수로 변환합니다
+명령행 인자를 변수로 변환합니다
 kmer_size = int(sys.argv[1])
 count_cutoff = int(sys.argv[2])
 
-## DNA를 분할하는 함수를 정의합니다
+DNA를 분할하는 함수를 정의합니다
 def split_dna(dna, kmer_size):
     kmers = []
     for start in range(0,len(dna)-(kmer_size-1),1):
@@ -5108,23 +5108,23 @@ def split_dna(dna, kmer_size):
         kmers.append(kmer)
     return kmers
 
-## 카운트를 저장할 빈 딕셔너리를 생성합니다
+카운트를 저장할 빈 딕셔너리를 생성합니다
 kmer_counts = {}
 
-## 올바른 이름을 가진 각 파일을 처리합니다
+올바른 이름을 가진 각 파일을 처리합니다
 for file_name in os.listdir("."):
     if file_name.endswith(".dna"):
         dna_file = open(file_name)
-        # 파일 내 각 DNA 서열을 처리합니다
+파일 내 각 DNA 서열을 처리합니다
         for line in dna_file:
             dna = line.rstrip("\n")
-            # 발견한 각 K-mer에 대해 카운트를 증가시킵니다
+발견한 각 K-mer에 대해 카운트를 증가시킵니다
             for kmer in split_dna(dna, kmer_size):
                 current_count = kmer_counts.get(kmer, 0)
                 new_count = current_count + 1
                 kmer_counts[kmer] = new_count
 
-## 카운트가 컷오프보다 높은 K-mer를 출력합니다
+카운트가 컷오프보다 높은 K-mer를 출력합니다
 for kmer, count in kmer_counts.items():
     if count > count_cutoff:
         print(kmer + " : " + str(count))

@@ -164,7 +164,6 @@ Jupyter Notebook은 바이오인포매틱스 분야에서 '디지털 실험 노�
 단일 시스템 환경에서는 같은 패키지의 서로 다른 버전을 동시에 설치할 수 없으므로, 프로젝트마다 독립된 파이썬 실행 환경을 제공하는 가상 환경(virtual environment) 도구가 필요하다.
 
 > [!NOTE]
-> 다음 환경 관리 명령어는 Linux 및 macOS 환경을 기준으로 설명한다. Windows 환경에서는 구체적인 실행 파일 경로와 명령어가 다를 수 있으므로 공식 문서를 참고하기 바란다.
 
 ### virtualenv
 
@@ -920,7 +919,7 @@ def at_content(dna):
     return at_content
 ```
 
-### pdb 활용 및 고급 기능
+pdb 활용 및 고급 기능
 
 지금까지 다룬 명령어(`l`, `p`, `n`, `c`, `b`, `s`)만으로도 대부분의 디버깅 작업을 수월하게 해결할 수 있다. 더 자세한 기능은 파이썬 공식 `pdb` 문서^[https://docs.python.org/3/library/pdb.html]를 참고할 수 있다.
 
@@ -930,17 +929,17 @@ def at_content(dna):
 
 `pdb` 외에도 작업 환경에 맞춰 사용할 수 있는 다양한 디버깅 도구가 존재한다.
 
-#### IDE 내장 디버거
+IDE 내장 디버거
 
 PyCharm, VS Code, Spyder, IDLE 등 대부분의 현대적인 IDE는 그래픽 기반 디버거를 기본 제공한다. 코드 옆의 줄 번호를 클릭하여 중단점을 직관적으로 설정하고, 변수 상태를 GUI 패널에서 한눈에 확인하며 디버깅할 수 있어 매우 편리하다.
 
-#### 향상된 명령줄 디버거
+향상된 명령줄 디버거
 
 * **ipdb**^[https://pypi.python.org/pypi/ipdb]: IPython의 강력한 탭 자동완성, 문법 강조, 가독성 높은 트레이스백 출력을 `pdb` 인터페이스에 결합한 도구이다.
 * **pdb++**^[https://pypi.python.org/pypi/pdbpp]: `pdb`의 드롭인(drop-in) 대체재로 문법 강조 및 추가 명령어를 제공한다.
 * **PuDB**^[https://pypi.python.org/pypi/pudb]: 콘솔 환경에서 전체 화면 TUI(Text User Interface)를 제공하여 변수 목록과 소스 코드를 그래픽 디버거처럼 한눈에 보며 조작할 수 있는 훌륭한 명령줄 도구이다.
 
-#### 독립형 GUI 디버거
+독립형 GUI 디버거
 
 * **Winpdb**^[http://winpdb.org/]: GUI 기반의 독립형 크로스 플랫폼 파이썬 디버거로 원격 디버깅을 지원한다.
 * **bugjar**^[http://pybee.org/bugjar/]: `pip`로 간편하게 설치할 수 있는 가벼운 독립형 그래픽 디버거이다.
@@ -971,7 +970,7 @@ PyCharm, VS Code, Spyder, IDLE 등 대부분의 현대적인 IDE는 그래픽 �
 
 이어서 파이썬의 패키지 관리 도구를 살펴보고, PyPI(Python Package Index)를 통해 코드를 배포하여 다른 사용자가 `pip`로 쉽게 설치할 수 있도록 만드는 방법을 알아본다. 패키지 제작자가 초기에 들여야 하는 노력이 조금 늘어나기는 하지만, 다른 사용자가 코드를 설치하고 활용하기는 훨씬 수월해진다.
 
-## 프로그램, 모듈, 패키지
+프로그램, 모듈, 패키지
 
 모듈과 패키징을 본격적으로 다루기 전에 프로그램, 모듈, 패키지의 차이점을 명확히 정리해 둘 필요가 있다. 우리가 파이썬으로 작성하는 대부분의 코드는 프로그램 형태다. 즉, 직접 실행되어 유용한 작업을 수행하는 파이썬 코드가 담긴 텍스트 파일이다.
 
@@ -1085,16 +1084,16 @@ $ pip uninstall python-dateutil
 ```python
 from __future__ import division
 
-## 입력 파일을 열고 내용을 읽은 뒤 개행 문자를 제거한다
+입력 파일을 열고 내용을 읽은 뒤 개행 문자를 제거한다
 dna = open('dna.txt').read().rstrip("\n")
 
-## AT 함량을 계산한다
+AT 함량을 계산한다
 length = len(dna)
 a_count = dna.count('A')
 t_count = dna.count('T')
 at_content = (a_count + t_count) / length
 
-## 결과를 출력한다
+결과를 출력한다
 print("AT content is " + str(at_content))
 ```
 
@@ -1111,10 +1110,10 @@ def calculate_at(dna):
     at_content = (a_count + t_count) / length
     return at_content
 
-## 입력 파일을 열고 내용을 읽은 뒤 개행 문자를 제거한다
+입력 파일을 열고 내용을 읽은 뒤 개행 문자를 제거한다
 dna = open('dna.txt').read().rstrip("\n")
 
-## 결과를 출력한다
+결과를 출력한다
 print("AT content is " + str(calculate_at(dna)))
 ```
 
@@ -1141,10 +1140,10 @@ def calculate_at(dna):
 ## print_at.py
 import at_calculator
 
-## 입력 파일을 열고 내용을 읽은 뒤 개행 문자를 제거한다
+입력 파일을 열고 내용을 읽은 뒤 개행 문자를 제거한다
 dna = open('dna.txt').read().rstrip("\n")
 
-## 모듈의 함수를 호출하여 결과를 출력한다
+모듈의 함수를 호출하여 결과를 출력한다
 print("AT content is " + str(at_calculator.calculate_at(dna)))
 ```
 
@@ -1160,7 +1159,7 @@ import at_calculator
 dna = raw_input("Enter a DNA sequence:\n")
 output_filename = raw_input("Enter a filename:\n")
 
-## 계산된 AT 함량을 출력 파일에 기록한다
+계산된 AT 함량을 출력 파일에 기록한다
 with open(output_filename, "w") as out:
     out.write(str(at_calculator.calculate_at(dna)))
 ```
@@ -1228,7 +1227,7 @@ A collection of functions for calculating properties of DNA sequences. Note: all
 
 from __future__ import division
 
-## AT 함량을 계산한다
+AT 함량을 계산한다
 def calculate_at(dna):
     ...
 ```
@@ -1317,7 +1316,7 @@ DNA 서열을 단백질 아미노산 서열로 번역하는 모듈 예제를 살
 def translate_dna(dna):
     """Return the translation of a DNA sequence"""
 
-    # 유전 부호 코돈 테이블 정의
+# 유전 부호 코돈 테이블 정의
     gencode = {
         'ATA':'I', 'ATC':'I', 'ATT':'I', 'ATG':'M',
         'ACA':'T', 'ACC':'T', 'ACG':'T', 'ACT':'T',
@@ -1340,7 +1339,7 @@ def translate_dna(dna):
     last_codon_start = len(dna) - 2
     protein = ""
 
-    # DNA 코돈을 순회하며 아미노산 서열을 조립한다
+DNA 코돈을 순회하며 아미노산 서열을 조립한다
     for start in range(0, last_codon_start, 3):
         codon = dna[start:start+3]
         amino_acid = gencode.get(codon.upper(), 'X')
@@ -1392,7 +1391,7 @@ gencode stores 64 codons
 
 대규모 데이터 구조나 리소스가 특정 함수에서만 선택적으로 쓰인다면, 해당 데이터 구조를 명시적으로 생성하는 전용 초기화 함수를 별도로 제공하거나, 함수 내부에서 데이터의 로드 여부를 확인하여 최초 요청 시에만 로드하는 지연 로딩(lazy loading) 방식을 적용하는 것이 바람직하다.
 
-## 패키지
+패키지
 
 모듈이라는 개념을 한 단계 더 체계화한 것이 패키지(package)다. 모듈이 관련된 함수와 클래스를 하나의 파일로 묶는 편리한 수단이라면, 패키지는 서로 연관된 여러 모듈을 하나의 디렉터리 구조로 묶는 수단이다.
 
@@ -1573,10 +1572,10 @@ $ python setup.py install
 
 ```python
 for line in open("somefile.txt"):
-    # check that the file is opening correctly
+# check that the file is opening correctly
     print(line)
 
-    # real code to process the line goes here...
+# real code to process the line goes here...
 ```
 
 여러분은 이미 테스트를 하고 있었던 셈이다. 가장 정교한 수준에서는 전용 테스트 라이브러리, 전용 CI/CD 테스트 서버, 테스트 구축과 실행을 전담하는 엔지니어들까지 관여한다. 단순한 수동 확인과 정교한 자동화 시스템이라는 두 극단 사이에는 폭넓은 스펙트럼이 존재한다.
@@ -1680,7 +1679,7 @@ k-mer를 추출하는 방식에 버그가 숨어 있었다. `for` 루프의 마�
 def find_common_kmers(dna, k, threshold):
     result = []
     for start in range(len(dna)):
-        # 서열 끝에서 최소 k개 염기만큼 떨어져 있는가?
+# 서열 끝에서 최소 k개 염기만큼 떨어져 있는가?
         if len(dna) - start > k - 1:
             ...
 ```
@@ -1913,7 +1912,7 @@ reads = ['ATCGTAC', 'ACTGNTTACGT', 'ACTGNNTACTG']
 filter_reads(reads, 1)
 assert reads == ['ATCGTAC']
 
-## 이제 reads는 ['ATCGTAC'] 상태가 된다
+이제 reads는 ['ATCGTAC'] 상태가 된다
 filter_reads(reads, 2)
 assert reads == ['ATCGTAC', 'ACTGNTTACGT']  # 실패!
 ```
@@ -2527,9 +2526,9 @@ def test_reverse_complement():
 
 ```python
 def retrieve_dna(accession):
-    # 서버 연결...
-    # 레코드 다운로드...
-    # 서열 추출...
+# 서버 연결...
+# 레코드 다운로드...
+# 서열 추출...
     return dna_sequence
 ```
 
@@ -3636,11 +3635,11 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 
 ## 성능 개선 실용 팁
 
-### 파일 입출력은 느리다
+파일 입출력은 느리다
 
 하드디스크나 네트워크 I/O는 RAM 메모리 접근보다 수 자릿수 이상 느리다. 많은 과학 분석 프로그램의 주된 병목은 디스크 I/O다.
 
-#### 중복 파일 읽기 방지
+중복 파일 읽기 방지
 
 루프 안에서 동일한 파일을 반복해서 열고 읽지 말아야 한다.
 
@@ -3671,7 +3670,7 @@ for i in range(10):
 for i in range(100000):
     if i % 1000 == 0:  # 1,000회마다 한 번만 출력
         print("processing number: " + str(i))
-    # 실제 데이터 처리 코드
+# 실제 데이터 처리 코드
 ```
 
 #### 효율적인 데이터 직렬화 및 압축
@@ -3691,7 +3690,7 @@ for i in range(100000):
 my_ids = ['abc123', 'def456', ...]
 for id in my_ids:
     data = urllib2.urlopen('http://example.org/protein/' + id)
-    # 데이터 처리
+# 데이터 처리
 ```
 
 중복 조회를 제거하거나 결과를 메모리에 캐싱하고, 대용량 분석의 경우 데이터베이스의 로컬 덤프 사본을 구축하여 네트워크 요청 자체를 없애는 것이 가장 효과적이다.
@@ -3740,7 +3739,7 @@ def find_common_kmers_quick(dna, k, threshold):
 동일한 서열 집합에서 A 염기 개수별(1~10개)로 서열을 분류할 때도 매번 `dna.count('A')`를 다시 계산하지 않고 딕셔너리에 미리 집계해 두면 중복 연산을 피할 수 있다.
 
 ```python
-## 사전 계산(캐싱)을 통한 중복 연산 방지
+사전 계산(캐싱)을 통한 중복 연산 방지
 seq_count = {}
 for dna in sequences:
     seq_count[dna] = dna.count('A')
@@ -3825,9 +3824,9 @@ seq = record[0]
 이 특성을 활용하여 계산 비용이 가벼운 조건이나 결과 결정 확률이 높은 조건을 앞쪽에 배치하면 큰 성능 향상을 얻을 수 있다.
 
 ```python
-## 1. 계산 비용 차이: 빠른 문자열 검사를 무거운 AT 계산보다 앞에 배치
+1. 계산 비용 차이: 빠른 문자열 검사를 무거운 AT 계산보다 앞에 배치
 for dna in dnas:
-    # dna.startswith('A')가 거짓이면 뒷부분(count 계산)은 아예 실행되지 않음
+# dna.startswith('A')가 거짓이면 뒷부분(count 계산)은 아예 실행되지 않음
     if dna.startswith('A') and (dna.count('A') + dna.count('T')) / len(dna) > 0.5:
         chosen.append(dna)
 ```
@@ -3840,7 +3839,7 @@ for dna in dnas:
 예를 들어 1kb 서열에서 `count('A') > 210`(대부분 참)과 `count('C') < 210`(대부분 거짓)을 검사할 때, 거짓일 확률이 높은 C 카운트 조건을 앞에 두는 것만으로도 전체 실행 시간을 절반으로 줄일 수 있다.
 
 ```python
-## 거짓일 확률이 높은 조건을 앞에 두어 단락 평가 유도
+거짓일 확률이 높은 조건을 앞에 두어 단락 평가 유도
 for dna in dnas:
     if dna.count('C') < 210 and dna.count('A') > 210:
         chosen.append(dna)
@@ -4583,7 +4582,7 @@ parser.add_argument(
 
 ```python
 if not 0 < args.threshold < 1:
-    # ...
+# ...
 ```
 
 하지만 그렇게 하면 `argparse`의 내장 에러 처리 및 도움말 시스템을 자연스럽게 활용하기 어렵다.
@@ -4887,7 +4886,7 @@ optional arguments:
 ```python
 k_values = [4, 6, 8]
 for kmer_length in k_values:
-    # ...
+# ...
 ```
 
 인터페이스에서는 이를 어떻게 지원할 수 있을까? 한 가지 방법은 최소/최대 k-mer 길이를 받아 그 범위의 모든 길이를 분석하게 만드는 것이다.
@@ -4906,7 +4905,7 @@ parser.add_argument(
 
 for kmer_length in range(args.kmer_length_minimum, args.kmer_length_maximum + 1):
     print("Counting kmers of length " + str(kmer_length))
-    # ...
+# ...
 ```
 
 잘 동작한다.
@@ -4935,7 +4934,7 @@ parser.add_argument(
 ```python
 for kmer_length in args.kmer_length:
     print("Counting kmers of length " + str(kmer_length))
-    # ...
+# ...
 ```
 
 사용법 메시지도 `-k` 플래그가 공백으로 구분된 여러 값을 받을 수 있음을 명시한다.
@@ -5085,7 +5084,7 @@ elif args.percentage_threshold is not None:
 
 for kmer, count in kmer_counts.items():
     if count > count_threshold:
-        # 출력 로직
+# 출력 로직
 ```
 
 각 방식을 독립적으로 사용할 때는 의도대로 동작한다.
@@ -5234,7 +5233,7 @@ for kmer, count in kmer_counts.items():
 
 ```python
 ## kmer_config_advanced.py
-## 입력 DNA 서열 파일 경로
+입력 DNA 서열 파일 경로
 input_filename = "dna.txt"
 
 ## 분석할 k-mer 길이 목록 (쉼표로 구분된 정수 리스트)
@@ -5289,7 +5288,7 @@ for kmer_length in cfg.kmer_lengths:
 ```ini
 ## kmers.config
 [input]
-## DNA 서열이 포함된 입력 파일 경로
+DNA 서열이 포함된 입력 파일 경로
 input_filename = dna.txt
 
 [analysis]
@@ -5387,12 +5386,12 @@ def kmers_form():
 ## find_kmers_bottle.py (이어서)
 @post('/output')
 def count_kmers():
-    # 폼 매개변수 추출 및 형변환
+# 폼 매개변수 추출 및 형변환
     dna = request.forms.get('dna')
     kmer_length = int(request.forms.get('kmer_length'))
     threshold = float(request.forms.get('threshold'))
 
-    # 결과 HTML 구성
+# 결과 HTML 구성
     result = ""  # ❶
     all_kmers = []
 
@@ -5501,10 +5500,10 @@ output_text = Tkinter.Text(window, height=10, width=30)
 output_text.pack()
 
 def analyse():
-    # 이전 결과 지우기
+# 이전 결과 지우기
     output_text.delete("1.0", Tkinter.END)
 
-    # 파라미터 가져오기 및 형변환
+# 파라미터 가져오기 및 형변환
     dna = dna_entry.get()
     kmer_length = int(kmer_length_entry.get())
     threshold = float(threshold_entry.get())

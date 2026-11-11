@@ -34,7 +34,7 @@ options(knitr.duplicate.label = "allow")
 
 데이터 분석과 인과추론이라는 매력적인 분야에 첫발을 내딛는 예비 통계학자, 계량경제학자, 데이터 과학자 독자에게 이 책이 든든한 길잡이가 되기를 바란다.
 
-## 인용 방법
+인용 방법
 
 ### 제1권: 데이터 분석의 기초
 
@@ -249,8 +249,8 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 ## usethis::use_description_defaults()
 ## usethis::use_description(package = c("tidyverse","usethis"),check_name = F)
 ## 
-## # .libPaths()
-## deps <- desc::desc_get_deps("C:/Program Files/R/R-4.0.4/library") 
+## .libPaths()
+## deps <- desc::desc_get_deps("C:/Program Files/R/R-4.0.4/library")
 ## deps <- desc::desc_get_deps("C:/Users/tn9k4/OneDrive - University of Missouri/Documents/R/win-library/4.0")
 
 ## if you want to make it beautiful for markdown
@@ -282,7 +282,7 @@ devtools::session_info()
 이 장에서는 효과적인 통계 분석을 수행하는 데 필수적인 수학적 및 계산적 도구들을 복습한다. 행렬론(Matrix Theory)과 선형대수학의 핵심 개념부터 시작하여 확률변수, 확률분포, 기댓값을 포함하는 기초 확률론(Probability Theory)을 살펴본다. 또한 함수, 도함수, 로그와 같은 중요한 수학적 기초를 되짚어본 후, R을 활용한 데이터 입출력 및 데이터 조작과 같은 실무적 요소로 나아간다. 이러한 주제들을 탄탄히 다져둠으로써 독자 독자는 이후 장에서 제시될 고급 통계 방법론을 다룰 수 있는 충분한 역량을 갖추게 될 것이다.
 
 ```{.r include="FALSE" #setup-2}
-## knitr::opts_chunk$set(warning = FALSE, message = FALSE,cache = TRUE) 
+## knitr::opts_chunk$set(warning = FALSE, message = FALSE,cache = TRUE)
 knitr::opts_chunk$set(out.width = "100%")
 ```
 
@@ -777,7 +777,7 @@ $L L^T = A$임을 직접 검증할 수 있다.
 
 #### 통계학에서의 응용
 
-##### 선형 연립방정식 풀이
+선형 연립방정식 풀이
 
 흔히 마주치는 통계학 문제는 $x$에 대해 $A x = b$를 푸는 것이다. 예를 들어 회귀분석이나 베이즈 사후 최빈값(Bayesian posterior modes)을 계산할 때, 공분산 행렬이나 정밀도 행렬이 포함된 선형 연립방정식을 풀어야 하는 경우가 많다. $A = LL^T$를 이용하면:
 
@@ -1157,7 +1157,7 @@ $$
 - $\text{Var}(X + c) = \text{Var}(X)$.
 - $X$와 $Y$가 독립이면 $\text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y)$.
 
-표준편차 $\sigma$는 다음과 같이 주어진다:
+## 표준편차 $\sigma$는 다음과 같이 주어진다:
 $$
 \sigma = \sqrt{\sigma^2} = \sqrt{\text{Var}(X)}.
 $$
@@ -2577,7 +2577,6 @@ $$
 
 연구하고자 하는 관심 분야나 해결해야 할 문제, 규명하고자 하는 관계가 있을 때, 이론적·실증적 프로세스는 훌륭한 나침반이 된다.
 
-> 피추정량(Estimand)은 "모집단에서 계산될 수 있으며 측정에 사용된 데이터 수집 설계에 따라 그 값이 달라지지 않는 과학적 관심 수량(즉, 표본 크기, 설문 설계, 무응답자 수, 후속 추적 노력 등에 영향을 받지 않는 고유값)"으로 정의된다 [@Rubin_1996].
 
 피추정량의 대표적인 예는 다음과 같다:
 
@@ -2623,13 +2622,13 @@ $$
 대신 통계적 추론은 표본 데이터가 주어졌을 때 모집단 모수에 대한 확률적 진술을 도출할 수 있는 체계적인 프레임워크를 제공한다.
 
 
-## 가설검정 프레임워크
+가설검정 프레임워크
 
 가설검정(Hypothesis testing)은 통계학의 가장 기초적인 도구 중 하나이다. 이는 표본 데이터를 사용하여 모집단 모수에 대한 주장이나 가정(가설)을 검정하는 공식적인 절차를 제공한다. 이 과정은 "새로운 마케팅 전략이 매출을 증가시키는가?" 또는 "두 가지 교수법 간에 시험 점수의 유의미한 차이가 있는가?"와 같은 질문에 답하는 데 도움을 주므로 비즈니스, 의학, 사회과학 등 다양한 분야에서 필수적이다.
 
 가설검정의 목표는 표본 데이터를 기반으로 모집단에 대한 의사결정을 내리거나 결론을 도출하는 것이다. 전체 모집단에 직접 접근할 수 있는 경우가 드물기 때문에 이러한 절차가 필요하다. 예를 들어 한 기업이 새로운 광고 캠페인이 매출을 증가시키는지 확인하고자 할 때, 전 세계의 모든 매장이 아닌 일부 표본 매장의 데이터를 분석할 수 있다.
 
-### 가설검정의 주요 단계
+가설검정의 주요 단계
 
 1. 가설 설정(Formulate Hypotheses): 귀무가설과 대립가설을 정의한다.
 2. 유의수준 선택 ($\alpha$, Choose a Significance Level): 제1종 오류를 범할 허용 확률을 결정한다.
@@ -2683,11 +2682,11 @@ $$
 가설검정에서 $\alpha$와 $\beta$의 균형을 맞추는 것은 매우 중요하다. 한쪽을 줄이면 대개 다른 쪽이 증가하기 때문이다. 예를 들어 $H_0$을 기각하기 어렵게 만들면($\alpha$ 감소), 실제 존재하는 효과를 탐지하지 못할 가능성이 높아진다($\beta$ 증가).
 
 
-### 가설검정에서 분포의 역할
+가설검정에서 분포의 역할
 
 분포는 가설검정에서 핵심적인 역할을 수행한다. 귀무가설($H_0$) 하에서 검정통계량이 어떻게 행동하는지를 이해하기 위한 수학적 모델을 제공하기 때문이다. 확률분포가 없다면 관측된 결과가 단순한 무작위 우연에 의한 것인지, 아니면 귀무가설을 기각할 만한 증거를 제공하는지를 판단하는 것이 불가능하다.
 
-#### 기대되는 결과
+기대되는 결과
 
 분포가 중요한 핵심 이유 중 하나는 $H_0$이 참일 때 검정통계량이 가질 가능성이 높은 값의 범위를 설명해 준다는 점이다. 이는 무작위 우연에 의한 데이터의 "정상적인" 변동으로 간주되는 범위를 파악하는 데 도움을 준다. 예를 들면 다음과 같다.
 
@@ -2764,7 +2763,7 @@ $$
 - 검정통계량이 0에 가까운 경우: 관측 데이터가 $H_0$ 하에서 기대되는 값과 매우 가깝다는 것을 나타낸다. $H_0$을 기각할 증거가 거의 없다.
 - 검정통계량이 0에서 멀리 떨어진 경우 (분포의 꼬리 부분): 관측 데이터가 $H_0$ 하의 기댓값에서 크게 벗어남을 시사한다. 이러한 편차는 $H_0$에 반하는 강력한 증거를 제공할 수 있다.
 
-#### 표준화가 중요한 이유
+표준화가 중요한 이유
 
 관측값과 기댓값의 차이를 표준화하면 측정 척도(scale)나 표본 크기 등의 요인에 의해 검정통계량이 왜곡되지 않도록 보장한다. 예를 들면 다음과 같다.
 
@@ -2831,7 +2830,7 @@ polygon(c(t_values[t_values >= t_critical], t_critical),
         col = "red",
         border = NA)
 
-## 관측 검정통계량 추가
+관측 검정통계량 추가
 points(
     t_obs,
     dt(t_obs, df),
@@ -5629,7 +5628,7 @@ $$
 - 열: 캠페인 후 투표 선호 (Yes, No).
 
 ```{.r}
-## 캠페인 전후의 투표 선호도
+캠페인 전후의 투표 선호도
 vote = matrix(c(682, 22, 86, 810), nrow = 2, byrow = TRUE,
               dimnames = list(
                 "Before" = c("Yes", "No"),
@@ -5720,7 +5719,7 @@ mcnemar_bowker_test <- function(table) {
     stop("Input must be a square matrix.")
   }
   
-  # 비대각 원소 추출
+# 비대각 원소 추출
   n <- nrow(table)
   stat <- 0
   df <- 0
@@ -5818,19 +5817,19 @@ stuart_maxwell_test <- function(table) {
     stop("Input must be a square matrix.")
   }
   
-  # 각 범주의 주변 합계
+# 각 범주의 주변 합계
   row_totals <- rowSums(table)
   col_totals <- colSums(table)
   
-  # 행과 열의 주변 합계 차이 벡터
+# 행과 열의 주변 합계 차이 벡터
   b <- row_totals - col_totals
   
-  # 귀무가설 하의 공분산 행렬
+# 귀무가설 하의 공분산 행렬
   total <- sum(table)
   V <- diag(row_totals + col_totals) - 
        (outer(row_totals, col_totals, "+") / total)
   
-  # 검정통계량 계산
+# 검정통계량 계산
   M2 <- t(b) %*% solve(V) %*% b
   df <- nrow(table) - 1
   p_value <- pchisq(M2, df = df, lower.tail = FALSE)
@@ -6047,7 +6046,7 @@ $$
 : 분할표에서의 소득 수준별 마케팅 캠페인 성공률 (Marketing campaign success by income level in a contingency table)
 
 ```{.r}
-## 데이터: 소득 수준별 성공 및 실패 빈도
+데이터: 소득 수준별 성공 및 실패 빈도
 income_levels <- c("Low", "Medium", "High")
 success <- c(20, 35, 45)
 failure <- c(30, 15, 5)
@@ -6063,13 +6062,13 @@ cochran_armitage_test <- function(success, failure, scores) {
   p_hat <- sum(success) / sum(N)
   weights <- scores
   
-  # 분자 계산
+# 분자 계산
   numerator <- sum(weights * (success - N * p_hat))
   
-  # 분모 계산
+# 분모 계산
   denominator <- sqrt(p_hat * (1 - p_hat) * sum(weights^2 * N))
   
-  # Z 통계량
+# Z 통계량
   Z <- numerator / denominator
   p_value <- 2 * (1 - pnorm(abs(Z)))
   
@@ -6165,7 +6164,7 @@ $$
 서비스 등급(기본, 표준, 프리미엄)이 높아질수록 고객 만족도 평가(1~5점 척도)가 향상되는지 분석하는 연구를 고려해 본다.
 
 ```{.r}
-## 예제 데이터: 서비스 등급별 고객 만족도 평가
+예제 데이터: 서비스 등급별 고객 만족도 평가
 satisfaction <- list(
   Basic = c(2, 3, 2, 4, 3),
   Standard = c(3, 4, 3, 5, 4),
@@ -6182,13 +6181,13 @@ manual_jonckheere <- function(ratings, groups) {
   pairwise_comparisons <- 0
   total_pairs <- 0
   
-  # 집단 쌍에 대해 반복
+# 집단 쌍에 대해 반복
   for (i in 1:(n_groups - 1)) {
     for (j in (i + 1):n_groups) {
       group_i <- ratings[groups == levels(groups)[i]]
       group_j <- ratings[groups == levels(groups)[j]]
       
-      # 일치 쌍 카운트
+# 일치 쌍 카운트
       for (x in group_i) {
         for (y in group_j) {
           if (x < y) pairwise_comparisons <- pairwise_comparisons + 1
@@ -6199,7 +6198,7 @@ manual_jonckheere <- function(ratings, groups) {
     }
   }
   
-  # 검정통계량 계산
+# 검정통계량 계산
   T <- pairwise_comparisons
   N <- length(ratings)
   mu_T <- total_pairs / 2
@@ -6753,7 +6752,7 @@ $$
 ## 관측 빈도
 observed <- c(10, 12, 8, 11, 9, 10)
 
-## 공정한 주사위 하의 기대 빈도
+공정한 주사위 하의 기대 빈도
 expected <- rep(10, 6)
 
 ## 카이제곱 적합도 검정 수행
@@ -6943,7 +6942,7 @@ $$
 ```{.r}
 library(philentropy)
 
-## 예제 1: 연속형의 경우
+예제 1: 연속형의 경우
 ## 명확한 패턴을 갖는 두 연속 확률분포 정의
 X_continuous <- c(0.1, 0.2, 0.3, 0.4)  # 합이 1이 되도록 정규화됨
 Y_continuous <- c(0.4, 0.3, 0.2, 0.1)  # 합이 1이 되도록 정규화됨
@@ -6952,7 +6951,7 @@ Y_continuous <- c(0.4, 0.3, 0.2, 0.1)  # 합이 1이 되도록 정규화됨
 KL_continuous <- KL(rbind(X_continuous, Y_continuous), unit = "log2")
 print(paste("KL 발산 (연속형):", round(KL_continuous, 2)))
 
-## 예제 2: 이산형의 경우
+예제 2: 이산형의 경우
 ## 두 이산 확률분포 정의 (사건 발생 빈도)
 X_discrete <- c(5, 10, 15, 20)
 Y_discrete <- c(20, 15, 10, 5)
@@ -7006,7 +7005,7 @@ $$
 ## 필요한 라이브러리 로드
 library(philentropy)
 
-## 예제 1: 연속형의 경우
+예제 1: 연속형의 경우
 X_continuous <- 1:10
 Y_continuous <- 1:20
 
@@ -7014,10 +7013,10 @@ Y_continuous <- 1:20
 JS_continuous <- JSD(rbind(X_continuous, Y_continuous), unit = "log2")
 print(paste("JS 발산 (연속형):", round(JS_continuous, 2)))
 
-## X_continuous와 Y_continuous는 연속분포를 나타냅니다.
-## 혼합 분포(M)는 내부적으로 두 분포의 평균으로 계산됩니다.
+X_continuous와 Y_continuous는 연속분포를 나타냅니다.
+혼합 분포(M)는 내부적으로 두 분포의 평균으로 계산됩니다.
 
-## 예제 2: 이산형의 경우
+예제 2: 이산형의 경우
 X_discrete <- c(5, 10, 15, 20)  # 관측 빈도
 Y_discrete <- c(20, 15, 10, 5)  # 관측 빈도
 
@@ -7786,7 +7785,7 @@ se_textbook <- sqrt(sigma2) / sqrt(n)
 c(curvature = se_curvature, textbook = se_textbook)
 ```
 
-### 추정치에서 관심 수량으로
+추정치에서 관심 수량으로
 
 완전한 통계 보고서는 독자가 모델을 다시 유도할 필요 없이 직관적으로 이해할 수 있는 형태로, 실질적으로 의미 있는 관심 수량(quantities of interest)의 점추정치와 불확실성의 정직한 측도를 함께 제시해야 한다 [@king2000making]. MLE $\hat{\theta} = (\hat{\beta}, \hat{\alpha})$와 추정 분산 $\hat{V}(\hat{\theta})$를 구하고 나면, 시뮬레이션을 통해 이를 관심 수량에 대한 진술로 변환할 수 있다. 그 절차는 먼저 추정 불확실성을 나타내기 위해 점근 분포로부터 모수를 추출하고($\tilde{\theta} \sim N(\hat{\theta}, \hat{V}(\hat{\theta}))$), 선택된 공변량 값 $x_c$에서 체계적 요소를 계산하며($\tilde{\theta}_c = g(x_c, \tilde{\beta})$), 선택적으로 근본적 불확실성을 더하기 위해 결과변수를 추출한 후($\tilde{y}_c \sim f(\tilde{\theta}_c, \tilde{\alpha})$), 시뮬레이션된 값들을 요약하는 것이다. 기댓값 수량(expected-value quantities)은 근본적 요소를 평균화하므로 추정 불확실성만을 수반하며 그 분산은 $n \to \infty$일 때 사라진다. 반면 예측값 수량(predicted-value quantities)은 근본적 요소를 유지하므로 표본이 아무리 커져도 0이 아닌 분산을 유지한다. 아래 청크는 단순 정규 모델에 대한 모수 시뮬레이션 단계를 보여준다.
 
@@ -9036,7 +9035,7 @@ s_b0 <-
     summary(model)$coefficients[1, 2]  # 절편의 표준오차
 s_b1 <- summary(model)$coefficients[2, 2]  # 기울기의 표준오차
 
-## 목표 신뢰수준
+목표 신뢰수준
 alpha <- 0.05  # 전체 유의수준
 
 ## 본페로니 보정
@@ -9083,18 +9082,18 @@ colnames(ellipse_df) <- c("beta_0", "beta_1")
 
 ## 신뢰구간 및 신뢰 타원 시각화
 p <- ggplot() +
-    # 신뢰 타원
+# 신뢰 타원
     geom_point(
         data = ellipse_df,
         aes(x = beta_0, y = beta_1),
         alpha = 0.1,
         color = "grey"
     ) +
-    # 점추정치
+# 점추정치
     geom_point(aes(x = b0_hat, y = b1_hat),
                color = "red",
                size = 3) +
-    # 본페로니 신뢰구간
+# 본페로니 신뢰구간
     geom_errorbar(aes(x = b0_hat, ymin = ci_b1[1], ymax = ci_b1[2]),
                   width = 0.1,
                   color = "blue") +
@@ -9193,7 +9192,7 @@ $$
 
 : 선형회귀 모델의 고전적 가정
 
-#### 모델 가정에 대한 진단
+모델 가정에 대한 진단
 
 오차 분산의 항상성(등분산성)
 
@@ -9350,7 +9349,7 @@ $$
 여기서 $\frac{\sigma^2}{2}$는 로그 변환에 따른 편향 보정(bias correction)을 반영한다.
 
 
-##### 박스-콕스 변환군
+박스-콕스 변환군
 
 박스-콕스 변환(Box-Cox transformation)은 다음과 같이 정의되는 다목적 변환군이다:
 
@@ -10170,15 +10169,15 @@ library(minpack.lm)  # 비선형 최소자승 함수 제공
 
 ## 비선형 함수 정의 (지수 모델)
 nonlinear_model <- function(theta, x) {
-    # theta는 모수 벡터: theta[1] = A, theta[2] = B
-    # x는 독립변수
-    # 모델 형태: A * exp(B * x)
+# theta는 모수 벡터: theta[1] = A, theta[2] = B
+# x는 독립변수
+# 모델 형태: A * exp(B * x)
     theta[1] * exp(theta[2] * x)
 }
 
 ## 명확성을 위해 SSE 함수 정의
 sse <- function(theta, x, y) {
-    # SSE = 실제 y와 모델 예측값 사이의 잔차제곱합
+# SSE = 실제 y와 모델 예측값 사이의 잔차제곱합
     sum((y - nonlinear_model(theta, x)) ^ 2)
 }
 
@@ -10346,7 +10345,7 @@ gauss_newton_modified <-
            max_iter = 100) {
     theta <- theta_init
     for (j in 1:max_iter) {
-      # 야코비 행렬을 수치적으로 계산
+# 야코비 행렬을 수치적으로 계산
       epsilon <- 1e-6
       F_matrix <-
         matrix(0, nrow = length(y), ncol = length(theta))
@@ -10357,14 +10356,14 @@ gauss_newton_modified <-
           (nonlinear_model(theta_perturb, x)-nonlinear_model(theta, x))/epsilon
       }
       
-      # 잔차 계산
+# 잔차 계산
       residuals <- y - nonlinear_model(theta, x)
       
-      # 가우스-뉴턴 이동 단계 계산
+# 가우스-뉴턴 이동 단계 계산
       delta <-
         solve(t(F_matrix) %*% F_matrix) %*% t(F_matrix) %*% residuals
       
-      # 보폭 반감법 구현
+# 보폭 반감법 구현
       alpha <- 1
       k <- 0
       while (sse(theta + alpha * delta, x, y) >= sse(theta, x, y) &&
@@ -10373,10 +10372,10 @@ gauss_newton_modified <-
         k <- k + 1
       }
       
-      # theta 갱신
+# theta 갱신
       theta_new <- theta + alpha * delta
       
-      # 수렴 여부 확인
+# 수렴 여부 확인
       if (sum(abs(theta_new - theta)) < tol) {
         break
       }
@@ -10492,10 +10491,10 @@ gradient_sse <- function(theta, x, y) {
     n <- length(y)
     residuals <- y - nonlinear_model(theta, x)
     
-    # theta_1에 대한 편도함수
+# theta_1에 대한 편도함수
     grad_1 <- -2 * sum(residuals * exp(theta[2] * x))
     
-    # theta_2에 대한 편도함수
+# theta_2에 대한 편도함수
     grad_2 <- -2 * sum(residuals * theta[1] * x * exp(theta[2] * x))
     
     return(c(grad_1, grad_2))
@@ -10521,7 +10520,7 @@ gradient_descent <-
         for (j in 1:max_iter) {
             grad <- gradient_sse(theta, x, y)
             
-            # 그래디언트의 NaN 또는 Inf 값 확인 (발산 방지)
+# 그래디언트의 NaN 또는 Inf 값 확인 (발산 방지)
             if (any(is.na(grad)) || any(is.infinite(grad))) {
                 cat("반복",
                     j,
@@ -10529,11 +10528,11 @@ gradient_descent <-
                 break
             }
             
-            # 갱신 단계
+갱신 단계
             theta_new <- theta - alpha * grad
             sse_values[j] <- sse(theta_new, x, y)
             
-            # 수렴 여부 확인
+# 수렴 여부 확인
             if (!is.finite(sse_values[j])) {
                 cat("반복", j, "에서 발산 감지됨\n")
                 break
@@ -10678,7 +10677,7 @@ levenberg_marquardt <-
         sse_values <- numeric(max_iter)
         
         for (j in 1:max_iter) {
-            # 야코비 행렬을 수치적으로 계산
+# 야코비 행렬을 수치적으로 계산
             epsilon <- 1e-6
             F_matrix <-
                 matrix(0, nrow = length(y), ncol = length(theta))
@@ -10690,10 +10689,10 @@ levenberg_marquardt <-
                      - nonlinear_model(theta, x)) / epsilon
             }
             
-            # 잔차 계산
+# 잔차 계산
             residuals <- y - nonlinear_model(theta, x)
             
-            # 레벤버그-마쿼트 갱신 계산
+# 레벤버그-마쿼트 갱신 계산
             A <-
                 t(F_matrix) %*% F_matrix + tau * diag(length(theta)) 
             + lambda * diag(length(theta))  # 정규화된 A
@@ -10704,26 +10703,26 @@ levenberg_marquardt <-
                         j,
                         "에서 특이행렬 감지됨 - tau 증가\n")
                     tau <<- tau * 10  # 안정화를 위해 tau 증가
-                    # NaN 갱신을 방지하기 위해 0 벡터 반환
+# NaN 갱신을 방지하기 위해 0 벡터 반환
                     return(rep(0, length(theta)))  
                 }
             )
             
             theta_new <- theta + delta
             
-            # 새로운 SSE 계산
+# 새로운 SSE 계산
             sse_values[j] <- sse(theta_new, x, y)
             
-            # tau를 동적으로 조정
+# tau를 동적으로 조정
             if (sse_values[j] < sse(theta, x, y)) {
-                # tau를 줄이되 너무 작아지지 않도록 방지
+tau를 줄이되 너무 작아지지 않도록 방지
                 tau <-
                     max(tau / 10, 1e-8)  
             } else {
                 tau <- tau * 10  # SSE가 증가하면 tau 증가
             }
             
-            # 수렴 여부 확인
+# 수렴 여부 확인
             if (sum(abs(delta)) < tol) {
                 cat(j, "회 반복 후 수렴 완료.\n")
                 return(list(theta = theta_new, sse_values = sse_values[1:j]))
@@ -10845,10 +10844,10 @@ sse <- function(theta, x, y) {
 gradient_sse <- function(theta, x, y) {
     residuals <- y - nonlinear_model(theta, x)
     
-    # theta_1에 대한 편도함수
+# theta_1에 대한 편도함수
     grad_1 <- -2 * sum(residuals * exp(theta[2] * x))
     
-    # theta_2에 대한 편도함수
+# theta_2에 대한 편도함수
     grad_2 <- -2 * sum(residuals * theta[1] * x * exp(theta[2] * x))
     
     return(c(grad_1, grad_2))
@@ -10858,7 +10857,7 @@ gradient_sse <- function(theta, x, y) {
 hessian_sse <- function(theta, x, y) {
     residuals <- y - nonlinear_model(theta, x)
     
-    # 2차 도함수 계산
+# 2차 도함수 계산
     H_11 <- 2 * sum(exp(2 * theta[2] * x))
     H_12 <- 2 * sum(x * exp(2 * theta[2] * x) * theta[1])
     H_21 <- H_12
@@ -10895,22 +10894,22 @@ newton_raphson <-
             grad <- gradient_sse(theta, x, y)
             hessian <- hessian_sse(theta, x, y)
             
-            # 헤시안의 가역성 확인
+# 헤시안의 가역성 확인
             if (det(hessian) == 0) {
                 cat("반복",
                     j,
                     "에서 헤시안이 특이행렬임 - 대신 단위행렬 사용.\n")
-                # 특이행렬인 경우 단위행렬로 대체
+# 특이행렬인 경우 단위행렬로 대체
                 hessian <-
                     diag(length(theta))  
             }
             
-            # 뉴턴 갱신 계산
+# 뉴턴 갱신 계산
             delta <- solve(hessian) %*% grad
             theta_new <- theta - delta
             sse_values[j] <- sse(theta_new, x, y)
             
-            # 수렴 여부 확인
+# 수렴 여부 확인
             if (sum(abs(delta)) < tol) {
                 cat(j, "회 반복 후 수렴 완료.\n")
                 return(list(theta = theta_new, sse_values = sse_values[1:j]))
@@ -11018,7 +11017,7 @@ result <- optim(
     fn = function(theta) sse(theta, x, y),  # SSE 최소화
     method = "BFGS",
     control = list(trace = 0)  # 최적화 진행 상황 출력 생략
-    # control = list(trace = 1, REPORT = 1)  # 최적화 진행 상황 출력
+# control = list(trace = 1, REPORT = 1)  # 최적화 진행 상황 출력
 )
 
 ## 결과 추출
@@ -11114,10 +11113,10 @@ sse <- function(theta, x, y) {
 gradient_sse <- function(theta, x, y) {
     residuals <- y - nonlinear_model(theta, x)
     
-    # theta_1에 대한 편도함수
+# theta_1에 대한 편도함수
     grad_1 <- -2 * sum(residuals * exp(theta[2] * x))
     
-    # theta_2에 대한 편도함수
+# theta_2에 대한 편도함수
     grad_2 <- -2 * sum(residuals * theta[1] * x * exp(theta[2] * x))
     
     return(c(grad_1, grad_2))
@@ -11127,7 +11126,7 @@ gradient_sse <- function(theta, x, y) {
 hessian_sse <- function(theta, x, y) {
     residuals <- y - nonlinear_model(theta, x)
     
-    # 2차 도함수 계산
+# 2차 도함수 계산
     H_11 <- 2 * sum(exp(2 * theta[2] * x))
     H_12 <- 2 * sum(x * exp(2 * theta[2] * x) * theta[1])
     H_21 <- H_12
@@ -11167,7 +11166,7 @@ trust_region_reflective <-
             grad <- gradient_sse(theta, x, y)
             hessian <- hessian_sse(theta, x, y)
             
-            # 헤시안의 가역성 확인
+# 헤시안의 가역성 확인
             if (det(hessian) == 0) {
                 cat("반복",
                     j,
@@ -11176,30 +11175,30 @@ trust_region_reflective <-
                     diag(n)  # 특이행렬인 경우 단위행렬로 대체
             }
             
-            # 뉴턴 이동 단계 계산
+# 뉴턴 이동 단계 계산
             delta_full <- -solve(hessian) %*% grad
             
-            # 신뢰 영역 제약 조건 적용
+# 신뢰 영역 제약 조건 적용
             if (sqrt(sum(delta_full ^ 2)) > delta_j) {
-                # 이동 크기 조정
+# 이동 크기 조정
                 delta <-
                     (delta_j / sqrt(sum(delta_full ^ 2))) * delta_full  
             } else {
                 delta <- delta_full
             }
             
-            # 새로운 theta를 계산하고 제약 조건을 만족하는지 확인
+# 새로운 theta를 계산하고 제약 조건을 만족하는지 확인
             theta_new <-
                 pmax(theta + delta, c(0,-Inf))  # 하한으로 반사
             sse_new <- sse(theta_new, x, y)
             
-            # 일치 비율(rho_j) 계산
+# 일치 비율(rho_j) 계산
             predicted_reduction <-
                 -t(grad) %*% delta - 0.5 * t(delta) %*% hessian %*% delta
             actual_reduction <- sse(theta, x, y) - sse_new
             rho_j <- actual_reduction / predicted_reduction
             
-            # 신뢰 영역 크기 조정
+# 신뢰 영역 크기 조정
             if (rho_j < 0.25) {
                 delta_j <- max(delta_j / 2, 1e-4)  # 축소
             } else if (rho_j > 0.75 &&
@@ -11207,7 +11206,7 @@ trust_region_reflective <-
                 delta_j <- min(2 * delta_j, delta_max)  # 확장
             }
             
-            # 단계 수락 또는 거절
+# 단계 수락 또는 거절
             if (rho_j > 0) {
                 theta <- theta_new  # 단계 수락
             } else {
@@ -11216,7 +11215,7 @@ trust_region_reflective <-
             
             sse_values[j] <- sse(theta, x, y)
             
-            # 수렴 여부 확인
+# 수렴 여부 확인
             if (sum(abs(delta)) < tol) {
                 cat(j, "회 반복 후 수렴 완료.\n")
                 return(list(theta = theta, sse_values = sse_values[1:j]))
@@ -11276,7 +11275,7 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 set.seed(1)
 ```
 
-## 잠재변수 및 확률효용 프레임워크
+잠재변수 및 확률효용 프레임워크
 
 본 장에서 다루는 모든 모형을 통합적으로 설명하는 방법은, 관측된 이산적 결과를 유발하는 관측되지 않은 연속형 지수(index), 즉 잠재변수(latent variable)를 상정하는 것이다.
 
@@ -11514,7 +11513,7 @@ H <- dfidx(Heating, choice = "depvar", varying = c(3:12))
 m0 <- mlogit(depvar ~ ic + oc | 0, H)
 summary(m0)
 
-## 열펌프(heat-pump) 대안을 기준으로 정규화한 대안별 상수항 추가
+열펌프(heat-pump) 대안을 기준으로 정규화한 대안별 상수항 추가
 mc <- mlogit(depvar ~ ic + oc, H, reflevel = "hp")
 apply(fitted(mc, outcome = FALSE), 2, mean)  # 이제 관측된 점유율과 정확히 일치함
 ```
@@ -11545,7 +11544,7 @@ $$
 
 여기서 $C$는 차분을 취할 때 상쇄되는 상수이다. 로그합의 변화량을 소득의 한계효용(가격 또는 비용 계수의 음수값)으로 나누면, 정책으로 인한 속성 변화를 소비자 잉여의 보상변화(Compensating Variation, CV) 측도로 환산할 수 있다. `mlogit`의 `logsum` 함수는이 항을 직접 계산하므로, 예를 들어 대중교통 이동 시간 단축으로 인한 후생 잉여는 정책 변화 전후의 포괄가치 차이를 적절히 스케일링하여 계산할 수 있다.
 
-### 선택 모형에서의 한계효과
+선택 모형에서의 한계효과
 
 개체 특성 설명변수(case-specific regressor)에 대해 대안 $l$이 선택될 확률에 미치는 한계효과는 다음과 같다.
 
@@ -11650,9 +11649,9 @@ $$
 
 잠재계층 로짓은 이질성이 매끄러운 연속 분포보다는 충성 고객 대 가격 민감 고객과 같이 소수의 구별되는 소비자 유형으로 더 잘 설명되는 응용 분야에 적합하며 혼합 분포에 대한 모수적 형태를 가정할 필요가 없다는 장점이 있다. 빈 계층이 존재할 수 있을 때 통상적인 우도비 검정은 비표준적이므로, 계층 수는 BIC와 같은 정보 기준(information criteria)을 바탕으로 선택한다. R에서는 `gmnl` 패키지를 통해 혼합 로짓과 잠재계층 로짓을 모두 추정할 수 있다.
 
-## 해석, 한계효과 및 적합도
+해석, 한계효과 및 적합도
 
-### 평균에서의 편효과 대 평균 편효과
+평균에서의 편효과 대 평균 편효과
 
 본 장의 모든 모형은 비선형이므로 계수 자체가 편효과(partial effect)가 아니며 설명변수가 확률에 미치는 효과를 요약하는 데는 두 가지 뚜렷한 접근법이 존재한다. 이 둘의 차이는 명확히 짚고 넘어갈 가치가 있다.
 
@@ -11764,7 +11763,7 @@ od_test
 
 내생성 설명변수(관측되지 않은 요인과 상관된 처치)를 포함하는 이항 또는 가산 결과변수는 단순히 비선형 모형에 2단계 최소제곱법(2SLS)을 적용하는 방식으로는 해결할 수 없다. 1단계의 적합값을 2단계 로짓이나 포아송에 그대로 대입하는 것은 이른바 '금지된 회귀(forbidden regression)'로서 일치성을 갖지 못한다. 이때 적절한 도구는 통제함수 접근법(control-function approach)이다. 즉, 내생 설명변수에 대한 1단계 축약형(reduced form)을 추정한 후, 1단계 잔차를 2단계 비선형 모형에 추가 설명변수로 포함하여 오차의 내생적 부분을 흡수하도록 만든다. @petrin2010control 은 이산선택 수요 모형을 위한 통제함수 전략을 개발하였고 @wooldridge2015control 은 다양한 비선형 모형 전반에 걸친 적용을 체계화하하였다. 또한 1단계 잔차의 계수는 외생성에 대한 직접적인 검정을 제공한다. 이 계수가 통계적으로 유의하지 않다면 해당 설명변수를 외생적인 것으로 간주할 수 있다.
 
-## 로그 0 문제
+로그 0 문제
 
 무역 흐름(trade flows), 지출액(expenditures), 기업 매출(firm sales)처럼 0에 대량의 관측치가 몰려 있는 음이 아닌 결과변수를 다룰 때, 흔히 $\ln(y)$, $\ln(1+y)$, 또는 어떤 작은 상수 $c$에 대해 $\ln(y + c)$를 취해 모형화하려는 유혹에 빠지기 쉽다. @chen2024logs 는 이러한 관행이 겉보기보다 훨씬 위험함을 밝혔는다. 결과변수가 0에 확률 질량을 가질 때, 로그 형태의 변환에서 도출되는 추정대상(estimand)은 0 근처의 척도에 민감하기 때문에 $y$를 측정한 임의의 단위에 의존하게 되며 변환된 척도에서의 평균처치효과(ATE)는 단위에 불변인(units-invariant) 백분율 효과로 해석될 수 없다. 더욱 심각한 점은 결과변수의 측정 단위를 단순히 재조정(rescaling)하는 것만으로도 추정된 효과의 부호가 바뀔 수 있다는 사실이다. 저자들의 권고는 먼저 목표가 수준(level)에 미치는 효과인지(이 경우 0을 자연스럽게 처리하고 단위 불변인 비례적 해석을 제공하는 강건 표준오차 기반 포아송 회귀가 적절함), 아니면 외연적 마진(extensive margin)과 집약적 마진(intensive margin)에 미치는 효과를 분리하는 것인지 결정하고 추정대상이 단위의 인위적 산물에 불과한 $\ln(1+y)$ 유형의 변환을 피하라는 것이다. 이는 앞서 다룬 가산 데이터 논의와 직접 연결된다. 포아송 준최대우도(Poisson QML)가 표준적인 작업 도구로 자리 잡은 이유는 0을 완벽히 수용하고 평균이 음수가 되지 않도록 유지하며 결과변수를 임의로 이동시키지 않고도 계수에 깔끔한 준탄력성 해석을 부여하기 때문이다.
 
@@ -11866,7 +11865,7 @@ $$
 $$
 이 항등식들은 거듭제곱 모수를 직관적으로 해석할 수 있게 해주므로 주의 깊게 살펴볼 가치가 있다. 감마 분포의 형상 모수(shape parameter) $\alpha = (2-p)/(p-1)$는 $p$의 감소함수이다. $p \to 1^{+}$로 갈수록 형상 모수는 발산하여 청구 크기가 거의 일정해지고 모형은 고정된 금액으로 스케일 변환된 순수 포아송 가산 모형에 근접한다. 반대로 $p \to 2^{-}$로 갈수록 형상 모수는 0으로 수렴하여 청구 크기가 극단적으로 치우치며 포아송 빈도 $\lambda$는 1로 수렴하여 단일 양수 금액에 대한 감마 모형에 가까워진다. $p = 1.5$와 같은 값은 그 중간에 위치하여 적당한 청구 빈도와 적당한 왜도를 갖는다. 따라서 거듭제곱 모수 $p$는 단순한 성가신 모수(nuisance parameter)가 아니다. 이는 총액의 분산에 대한 빈도(frequency)와 심도(severity)의 상대적 기여도를 인코딩하며 이를 추정하는 것은 모형 적합의 핵심적인 일부분이다.
 
-## 확률밀도함수와 근사가 필요한 이유
+확률밀도함수와 근사가 필요한 이유
 
 $1 < p < 2$일 때 트위디 모형을 강력하게 만들어 주는 특징은 역설적으로 계산상의 까다로움을 유발한다. 바로 확률밀도함수의 닫힌 형태(closed form)가 존재하지 않는다는 점이다. 관측되지 않은 사건 횟수에 대한 혼합(mixture)으로 밀도함수를 표현해 보면이 문저자가 명확히 드러난다.
 $$
@@ -11958,8 +11957,8 @@ x  <- runif(n, -1, 1)
 mu <- exp(1.5 + 0.8 * x)                 # 참 로그 선형 평균
 y  <- rtweedie(n, mu = mu, phi = 2, power = 1.6)   # 참 phi = 2, p = 1.6
 
-## 거듭제곱 모수에 대한 프로파일 로그우도: 각 p에 대해 GLM을 적합하고
-## 적합된 평균과 피어슨 분산 모수에서 트위디 로그 밀도를 합산합니다.
+거듭제곱 모수에 대한 프로파일 로그우도: 각 p에 대해 GLM을 적합하고
+적합된 평균과 피어슨 분산 모수에서 트위디 로그 밀도를 합산합니다.
 profile_power <- function(y, x, p_grid) {
   vapply(p_grid, function(p) {
     fit <- glm(y ~ x, family = tweedie(var.power = p, link.power = 0))
@@ -12812,7 +12811,7 @@ NEW BIB ENTRIES
 
  - 수치 측정에 포착되지 않는 underlying meaning이나 뉘앙스를 놓칠 수 있다.
 
-#### 측정 수준
+측정 수준
 
 양적 데이터 안에서도 *측정 수준(level of measurement)*에 따라 추가로 구분할 수 있다. 이 분류는 어떤 통계 기법이 적절한지 결정하는 데 중요하다.
 
@@ -12827,7 +12826,7 @@ NEW BIB ENTRIES
 측정 수준은 어떤 통계 검정(t-test, ANOVA, 상관, 회귀 등)이 타당한지와 데이터의 차이 또는 비율을 어떻게 해석할 수 있는지에 영향을 미친다.
 
 
-### 데이터를 분류하는 다른 방법
+데이터를 분류하는 다른 방법
 
 Beyond observational structure, there are multiple other dimensions used to classify data:
 
@@ -13025,7 +13024,7 @@ However, in time series settings, A often fails due to:
 - Strict vs. Contemporaneous Exogeneity (sometimes unavoidable)
 
 
-### 일반적인 시계열 과정
+일반적인 시계열 과정
 
 Several key models describe different time series behaviors:
 
@@ -13201,7 +13200,7 @@ Implication:
  - Use lag selection criteria (e.g., AIC, BIC) to determine the appropriate lag structure.
 
 
-### 외생성 위반의 결과
+외생성 위반의 결과
 
 If strict exogeneity (A3) fails, standard OLS assumptions no longer hold:
 
@@ -15616,7 +15615,7 @@ The Generalized Method of Moments estimator is commonly used for dynamic panel m
 ```{.r}
 library(plm)
 
-## estimates a dynamic labor demand function using one-step GMM, 
+## estimates a dynamic labor demand function using one-step GMM,
 ## applying lagged variables as instruments
 z2 <- pgmm(
     log(emp) ~ lag(log(emp), 1) + lag(log(wage), 0:1) +
@@ -16460,7 +16459,7 @@ grangertest(x ~ y, order = 2, data = adl_data)  # 역방향 검정
 
 시차 수의 선택은 다른 곳과 마찬가지로 편향과 검정력 사이의 상충관계를 수반한다. 시차가 너무 적으면 잔차 자기상관이 남아 검정을 왜곡하고 시차가 너무 많으면 허위 기각을 초래하므로 후보 시차 길이를 정보 기준으로 비교한다. 실무적 주의점은 $x$와 $y$에 동일한 시차 차수를 사용하는 일반적인 편의가 이론적 근거를 갖지 않으므로 다양한 조합을 검토해야 한다는 점이다.
 
-#### 그랜저 인과성과 매개효과
+그랜저 인과성과 매개효과
 
 그랜저 프레임워크는 여러 시계열 간의 매개효과 질문으로 자연스럽게 확장된다. 벡터 자기회귀 내에서 방정식 간 계수들은 방향성 있는 예측 연결고리를 인코딩하므로, $x$에서 중간 시계열 $m$을 거쳐 $y$로 이어지는 매개 경로는 그랜저 인과 관계의 패턴으로 표현될 수 있다: $x$가 $m$을 그랜저 인과하고 $x$를 조건부로 할 때 $m$이 $y$를 그랜저 인과한다. 2변량 시스템
 
@@ -16533,13 +16532,13 @@ $$
 
 이를 통해 확장기와 침체기 같은 체제에 따라 지속성, 민감도, 변동성이 달라지도록 한다. 상태 수의 선택 자체도 마르코프 전환 환경에 맞게 조정된 정보 기준을 통해 해결하는 모형 선택 문제이다.
 
-### 응용 사례: 광고 이월 효과
+응용 사례: 광고 이월 효과
 
 평균의 동태성을 보여주는 구체적인 사례는 마케팅에서 널리 활용되는 광고 스톡(또는 이월, carryover) 모형이다. 광고가 기하급수적으로 감가상각되는 영업권(goodwill) 스톡을 형성한다는 기본 아이디어에 따라, 현재 매출은 현재 광고뿐만 아니라 과거 광고의 누적 스톡 $G_t = \lambda G_{t-1} + x_t$에 반응한다. 이 스톡을 매출 방정식에 대입하면 앞서 유도한 코익 형태가 정확히 도출되며 이는 마케팅의 이월 효과 개념을 기하 시차분포와 연결한다. 이러한 연결은 마케팅 활동의 장기적 효과와 브랜드 자산의 지속성을 측정하는 수많은 연구의 기초가 되었다 [@aaker; @mizik2008].
 
 ## 진단과 강건한 추론 {#diagnostics-and-robust-inference}
 
-### 계열상관의 결과
+계열상관의 결과
 
 조건부 평균이 올바르게 명체화되었더라도 시계열 모형의 회귀 오차는 계열상관될 수 있다. 무작위 표본추출 가정이 위배되어 설명변수를 조건부로 할 때 $i \neq j$에 대해 $\operatorname{Cov}(\varepsilon_i, \varepsilon_j) = \gamma_{|i-j|} \neq 0$이라고 가정해 본다. 그러면 오차 분산-공분산 행렬은 더 이상 스칼라 행렬이 아니며 다음과 같은 푑리츠(Toeplitz) 형태를 갖는다:
 
@@ -16636,7 +16635,7 @@ coeftest(fit, vcov = NeweyWest(fit, lag = 4, prewhite = FALSE))
 
 - 데이터셋의 가용 정보: 정보가 제한적이면 대체된 값의 강건성이 떨어진다.
 
-### 결측치 대체를 언제 왜 사용해야 하는가
+결측치 대체를 언제 왜 사용해야 하는가
 
 결측치 대체(Imputation)의 적절성은 결측 데이터의 성격과 연구 목적에 따라 달라진다:
 
@@ -16644,7 +16643,7 @@ coeftest(fit, vcov = NeweyWest(fit, lag = 4, prewhite = FALSE))
 
 - 예측 변수($x$)의 결측 데이터: 특히 비무작위 결측 데이터의 경우 결측치 대체(Imputation)가 더 일반적으로 적용된다. 적절히 처리된다면, 결측치 대체(Imputation)는 편향을 최소화하면서 불완전한 데이터셋을 사용할 수 있게 해준다.
 
-#### 결측치 대체의 목적
+결측치 대체의 목적
 
 결측치 대체(Imputation) 방법의 유용성은 분석의 목표가 *추론/설명(inference/explanation)*인지 *예측(prediction)*인지에 따라 크게 다르다. 각 목표는 결측 데이터 메커니즘에 대한 편향, 분산 및 가정에 대한 허용 오차와 우선순위가 다르다:
 
@@ -16931,12 +16930,12 @@ MNAR은 결측 메커니즘을 명시적으로 모델링해야 한다. 일반적
 무시할 수 없는 결측을 명시적으로 다룸으로써 연구자는 편향을 완화하고 연구 결과가 모집단의 근본적인 특성을 정확하게 반영하도록 보장할 수 있다.
 
 
-## 결측 데이터 메커니즘 진단
+결측 데이터 메커니즘 진단
 
 결측 데이터 이면의 메커니즘을 이해하는 것은 데이터를 처리하는 적절한 방법을 선택하는 데 매우 중요하다. 결측 데이터에 대한 세 가지 주요 메커니즘은 MCAR (완전 무작위 결측), MAR (무작위 결측), MNAR (비무작위 결측)이다. 이 섹션에서는 기술적 및 추론적 접근 방식을 포함하여 이러한 메커니즘을 진단하는 방법에 대해 논의한다.
 
 
-### 기술적 방법
+기술적 방법
 
 #### 결측 데이터 패턴 시각화
 
@@ -17009,7 +17008,7 @@ naniar::mcar_test(airquality)
 misty::na.test(airquality)
 ```
 
-#### 더미 변수를 통한 완전 무작위 결측 진단
+더미 변수를 통한 완전 무작위 결측 진단
 
 결측 여부에 대한 이진 지시 변수(binary indicator)를 생성하면 결측 데이터의 존재가 관측된 데이터와 관련이 있는지 검정할 수 있다. 예를 들어:
 
@@ -17036,7 +17035,7 @@ chisq.test(table(airquality$missing_var, airquality$Month))
 t.test(Wind ~ missing_var, data = airquality)
 ```
 
-### 무작위 결측과 비무작위 결측 평가
+무작위 결측과 비무작위 결측 평가
 
 #### 민감도 분석
 
@@ -17074,9 +17073,9 @@ t.test(Wind ~ missing_var, data = airquality)
 - 비무작위 결측(MNAR): 결측이 관측되지 않은 데이터에 의존함; 외부 검증 또는 민감도 분석이 필요하다.
 
 
-## 결측치 처리 방법
+결측치 처리 방법
 
-### 기본 방법
+기본 방법
 
 #### 완전 제거법
 
@@ -17118,7 +17117,7 @@ t.test(Wind ~ missing_var, data = airquality)
 참고 (Note): 표본 크기가 어떻게 처리되는지 이해하기 위해 소프트웨어 문서를 신중하게 검토하라. 이는 표준 오차 계산에 영향을 미치기 때문이다.
 
 
-#### 지시 변수 방법
+지시 변수 방법
 
 결측 지시 변수 방법(Missing Indicator Method)으로도 알려진이 접근 방식은 데이터셋에서 결측을 나타내는 추가 변수를 도입한다.
 
@@ -17172,7 +17171,7 @@ $$
 단일 대체 방법(Single imputation methods)은 결측 데이터를 단일 값으로 대체하여 표준 기법을 사용해 분석할 수 있는 완전한 데이터셋을 생성한다. 편리하지만 단일 대체는 일반적으로 변동성을 과소평가하고 결과에 편향을 일으킬 위험이 있다.
 
 
-#### 결정론적 방법
+결정론적 방법
 
 ##### 평균, 중앙값, 최빈값 대체
 
@@ -17235,7 +17234,7 @@ $$
 - 대체된 값의 불확실성을 설명하지 않는다.
 
 
-#### 비모수적 방법
+비모수적 방법
 
 ##### 핫덱 대체
 
@@ -17360,11 +17359,11 @@ library(dplyr)
 
 ## 가장 가까운 기증자를 찾는 매칭 함수 정의
 impute_cold_deck <- function(missing_row, reference_data) {
-  # 성별이 동일한 기증자 필터링
+# 성별이 동일한 기증자 필터링
   possible_donors <- reference_data %>%
     filter(Gender == missing_row$Gender)
   
-  # 체계적 대체의 예로 매칭된 기증자의 평균 나이 반환
+# 체계적 대체의 예로 매칭된 기증자의 평균 나이 반환
   return(mean(possible_donors$Age, na.rm = TRUE))
 }
 
@@ -17467,7 +17466,7 @@ print(imputed_data)
 
 이 방법은 결측 데이터를 해결하는 빠르고 계산적으로 효율적인 방법이지만 변수 간의 관계가 중요한 경우에는 보다 정교한 방법으로 보완되는 것이 가장 좋다.
 
-#### 반모수적 방법
+반모수적 방법
 
 ##### 예측 평균 매칭
 
@@ -17544,20 +17543,20 @@ data_imp_single <- mice::complete(imp_single)         # 대체된 데이터 저�
 ## head(data_imp_single)
 
 ## 단일 대체는 표준오차를 과소추정하므로,
-## 다중 대체를 사용합니다
+다중 대체를 사용합니다
 
 ##### 예측 평균 매칭 (다중 대체) #####
 
 ## 결측치를 여러 번 대체
 imp_multi <- mice(data, m = 5, method = "pmm")  
 data_imp_multi_all <-
-    # 다중 대체된 데이터 저장
+# 다중 대체된 데이터 저장
     mice::complete(imp_multi,       
              "repeated",
              include = TRUE)
 
 data_imp_multi <-
-    # 대체된 Y와 X1-X4 결합 (편의를 위해)
+# 대체된 Y와 X1-X4 결합 (편의를 위해)
     data.frame(data_imp_multi_all[, 1:6], data[, 2:5])
 
 head(data_imp_multi)
@@ -17667,21 +17666,21 @@ data <- data.frame(
 
 ## 확률적 대체 수행
 stochastic_impute <- function(data, predictor, target) {
-  # 완전한 케이스를 가진 데이터 부분집합 추출
+# 완전한 케이스를 가진 데이터 부분집합 추출
   complete_data <- data[!is.na(data[[target]]), ]
   
-  # 회귀 모델 적합
+# 회귀 모델 적합
   model <- lm(as.formula(paste(target, "~", predictor)), data = complete_data)
   
-  # 결측치 예측
+# 결측치 예측
   missing_data <- data[is.na(data[[target]]), ]
   predictions <- predict(model, newdata = missing_data)
   
-  # 무작위 잔차 추가
+# 무작위 잔차 추가
   residual_sd <- sd(model$residuals, na.rm = TRUE)
   stochastic_values <- predictions + rnorm(length(predictions), mean = 0, sd = residual_sd)
   
-  # 결측치 대체
+# 결측치 대체
   data[is.na(data[[target]]), target] <- stochastic_values
   return(data)
 }
@@ -17750,7 +17749,7 @@ data_inc_sri$income[data_inc_sri$income < 0]
 data_inc_pmm$income[data_inc_pmm$income < 0]
 ```
 
-##### 이분산성 데이터에 대한 증거
+이분산성 데이터에 대한 증거
 
 ```{.r}
 ## Heteroscedastic data
@@ -17849,7 +17848,7 @@ legend(
 
 mtext(
   "Imputation of Heteroskedastic Data",
-  # Main title of plot
+# Main title of plot
   side = 3,
   line = -1.5,
   outer = TRUE,
@@ -17945,7 +17944,7 @@ $$
 
 ### 머신 러닝과 최신 접근법
 
-#### 트리 기반 방법
+트리 기반 방법
 
 ##### 랜덤 포레스트 대체
 
@@ -18083,7 +18082,7 @@ $$
  - 대규모 데이터셋에 대해 계산 비용이 높음.
 
 
-#### 하이브리드 방법
+하이브리드 방법
 
 하이브리드 방법은 통계적 접근법과 머신 러닝 접근법을 결합한다. 예를 들어, 평균 대체를 수행한 후 머신 러닝 모델로 미세 조정(fine-tuning)하는 방식이다. 이러한 방법들은 여러 기법의 장점을 활용하는 것을 목표로 한다.
 
@@ -18115,7 +18114,7 @@ MI의 세 가지 기본 단계는 다음과 같다:
 2. 분석(Analysis): 각 대체된 데이터셋에 대해 원하는 통계 분석을 수행한다.
 3. 결합(Combination): 대체 간 및 대체 내 변동성을 설명하기 위한 규칙을 사용하여 결과를 결합한다.
 
-#### 다중 대체가 중요한 이유
+다중 대체가 중요한 이유
 
 대체된 값은 추정치이며 본질적으로 무작위 오차를 포함한다. 그러나 후속 분석에서 이러한 추정치를 정확한 값으로 취급하면, 소프트웨어는이 추가적인 오차를 간과할 수 있다. 이러한 간과는 표준 오차의 과소 추정과 지나치게 작은 p-값을 초래하여 잘못된 결론으로 이어진다.
 
@@ -18141,7 +18140,7 @@ MI의 세 가지 기본 단계는 다음과 같다:
 
 3. 적절한 검정력(Adequate power): 의미 있고 유의미한 파라미터 값을 탐지하기 위함이다.
 
-#### 루빈의 프레임워크 개요
+루빈의 프레임워크 개요
 
 루빈의 프레임워크는 MI의 이론적 기초를 제공한다. 대체를 생성하기 위해 베이지안 모델 기반 접근 방식을 사용하고 결과를 평가하기 위해 빈도주의적 접근 방식을 사용한다. 루빈의 프레임워크의 주요 목표는 대체가 다음을 보장하도록 하는 것이다:
 
@@ -18523,7 +18522,7 @@ gg_miss_upset(airquality)
 아래 스켈레톤 코드는 그룹화 구조가 있을 때 실무자들이 일반적으로 추가하는 세 가지 추가적인 `naniar` 디스플레이(패싯 산점도, 변수별 결측, 요인별 결측)를 대략적으로 보여준다.
 
 ```{.r eval="FALSE" #imp-naniar-extra-plots}
-## 패싯이 있는 결측 데이터의 산점도
+패싯이 있는 결측 데이터의 산점도
 ggplot(airquality, aes(x, y)) +
   geom_miss_point() +
   facet_wrap(~ group)
@@ -18537,7 +18536,7 @@ gg_miss_fct(x = variable1, fct = variable2)
 
 <!-- For more details, read [The Missing Book by Nicholas Tierney & Allison Horst](https://tmb.njtierney.com/). -->
 
-### 대체 횟수는 몇 번이 적당할까?
+대체 횟수는 몇 번이 적당할까?
 
 일반적으로 5번의 대체면 충분하지만 결측 데이터의 비율이 극도로 높은 경우에는 예외이다. 비율이 높을 경우 데이터 수집 과정을 다시 검토해야 한다.
 
@@ -18569,7 +18568,7 @@ data <- iris
 set.seed(1)
 iris.mis <- prodNA(iris, noNA = 0.1)
 
-## 수치형 대체를 위해 범주형 변수 제거
+수치형 대체를 위해 범주형 변수 제거
 iris.mis.cat <- iris.mis
 iris.mis <- subset(iris.mis, select = -c(Species))
 ```
@@ -18727,7 +18726,7 @@ imputed_Data <- mice(
 
 ```
 
-#### 대체된 데이터 평가
+대체된 데이터 평가
 
 ```{.r}
 ## 대체된 데이터의 요약
@@ -19007,8 +19006,8 @@ m       <- 1000   # 전체 검정 수
 m_true  <- 100    # 실제 효과(non-null)의 수
 alpha   <- 0.05   # 목표 수준 (Bonferroni/Holm의 경우 FWER, BH/BY의 경우 FDR)
 
-## 검정당 하나의 z-통계량을 시뮬레이션합니다. 참인 귀무가설은 평균이 0이며
-## 실제 효과는 작은 p-값을 생성하도록 mu만큼 이동(shift)됩니다.
+검정당 하나의 z-통계량을 시뮬레이션합니다. 참인 귀무가설은 평균이 0이며
+실제 효과는 작은 p-값을 생성하도록 mu만큼 이동(shift)됩니다.
 mu      <- 3
 is_null <- c(rep(FALSE, m_true), rep(TRUE, m - m_true))
 z       <- rnorm(m, mean = ifelse(is_null, 0, mu))
@@ -19071,7 +19070,7 @@ summary_table
 
 고전적인 매개분석은 @baron1986moderator 에 의해 제안된 접근법을 따른다. 다만이 방식은 첫 번째 단계($X \to Y$)가 통계적으로 유의해야 한다는 조건을 요구하는 등 몇 가지 한계가 있다. 이러한 단점에도 불구하고가 프레임워크는 매개분석을 이해하는 유용한 기초를 제공한다.
 
-### 전통적 매개 모델의 단계
+전통적 매개 모델의 단계
 
 매개효과는 일반적으로 다음 세 가지 회귀 모델을 통해 평가된다:
 
@@ -19131,7 +19130,7 @@ $$
 3. 다층 모델 (Multilevel Models) [@bauer2006conceptualizing]
 
 
-### 매개효과 측정 방법
+매개효과 측정 방법
 
 간접효과($ab$)를 정량화하는 몇 가지 접근법이 존재한다:
 
@@ -19192,7 +19191,7 @@ $$
 : 매개분석 결과의 해석
 
 
-### 매개효과 검정 방법
+매개효과 검정 방법
 
 간접효과($ab$)가 유의한지 평가하기 위한 여러 통계적 검정 방법이 존재한다:
 
@@ -19232,7 +19231,7 @@ $$
  - @smith1982beliefs 는 $M$과 $Y$를 서로에 대한 잠재적 매개변수로 취급할 것을 제안하며 인과 효과의 교차 오염을 방지하기 위해 각각에 대해 구별되는 별도의 도구변수가 필요하다고 설명한다.
 
 
-#### 매개분석에서의 상호작용 효과
+매개분석에서의 상호작용 효과
 
 - $Y$를 예측할 때 $M$이 $X$와 상호작용한다면, $M$은 매개변수인 동시에 조절변수(Moderator)가 된다 [@baron1986moderator].
 
@@ -19452,7 +19451,7 @@ mediation_fn <- function(data, i) {
     
     cp <- coef(b_path)['ttt']
     
-    # 간접효과 (a * b)
+# 간접효과 (a * b)
     ind_ef <- a * b
     total_ef <- a * b + cp
     return(c(ind_ef, total_ef))
@@ -19553,7 +19552,7 @@ generate_data <- function(n = 10000, a1 = 0.5, a2 = -0.35,
     set.seed(12345)
     X <- rnorm(n)  # 독립변수
     
-    # 매개변수를 위한 상관된 오차 생성
+# 매개변수를 위한 상관된 오차 생성
     if (corr) {
         Sigma <- matrix(c(1, correlation_value, correlation_value, 1), nrow = 2)
         errors <- mvrnorm(n, mu = c(0, 0), Sigma = Sigma) 
@@ -19663,7 +19662,7 @@ generate_data <-
     set.seed(12345)
     X <- rnorm(n)
     
-    # 다변량 정규분포를 사용한 상관된 오차 생성
+# 다변량 정규분포를 사용한 상관된 오차 생성
     if (corr) {
         Sigma <- matrix(c(1, correlation_value, correlation_value, 1), nrow = 2)  # 오차에 대한 더 높은 공분산 행렬
         errors <- mvrnorm(n, mu = c(0, 0), Sigma = Sigma)  # 상관된 오차 생성
@@ -19885,7 +19884,6 @@ $$
 
 > 주요 과제
 >
-> 순차적 무시가능성은 검정할 수 없다(Untestable). 따라서 연구자는 반드시 민감도 분석(Sensitivity Analysis)을 수행해야 한다.
 
 이제 `mediation` 패키지를 사용하여 인과 매개 모델을 적합해 본다.
 
@@ -20046,7 +20044,6 @@ VAR 오차 구조로부터 세 가지 결과가 직접 도출되며 그랜저 �
 2. $\delta$는 단순한 성가신 모수(Nuisance Parameter)가 아니라 진단 지표이다. 유의한 $\hat\delta$는 관측된 처치 시계열과 자체 시차가 설명하는 것 이상으로 매개변수와 결과변수 시계열이 모형화되지 않은 공통 변동을 공유하고 있음을 나타내며 이는 [제어 함수 접근법](#sec-control-function-approach)에서 제어 함수 잔차의 유의한 계수와 정확히 유사하다. 이는 기술적 보정으로 폐기할 것이 아니라 $a, b, c$와 함께 보고되어야 한다.
 3. $N=1$로 집계하면 추정량이 붕괴된다. $\sqrt{NT}$ 일치성 결과는 시간에 따라 관측되는 여러 독립적인 단위(피험자, 시장, 매장)를 갖는 것에 의존한다. 단일 장기 시계열에 적용할 경우 모델은 일반적인 VAR 매개 명세로 축소되며 패널 버전의 점근적 보장이 더 이상 적용되지 않는다.
 
-> 핵심 요약: 처치, 매개변수, 결과변수가 단일 횡단면 스냅샷이 아니라 모두 시계열인 경우, 매개분석에는 단순한 시간 인덱스가 아니라 시간적 오차 구조가 필요하다. 그랜저 매개분석은 표준 경로 분석 매개변수 및 결과변수 방정식을 오차에 대한 벡터 자기회귀로 통합하여 직렬 상관에 대한 표준오차를 보정하는 동시에 상관 파라미터 $\delta$를 통해 측정되지 않은 매개변수-결과변수 교란을 가정이 아닌 검정 가능한 방식으로 확인해 준다.
 
 <!-- ========================================= -->
 <!-- Chapter: 20-prediction_estimation.Rmd -->
@@ -20256,7 +20253,7 @@ R에서 인과추론을 탐색하려면 [CRAN Task View: Causal Inference](https
 - 심슨의 역설은 종종 누락 변수 편향에 의해 *유발*되지만 두 개념이 완전히 같은 것은 아니다.
 - OVB는 인과추론 모델의 문제이며 심슨의 역설은 원시 데이터 해석의 문제이다.
 
-#### 이러한 문제를 해결하는 방법
+이러한 문제를 해결하는 방법
 
 - OVB 해결: 인과 다이어그램을 활용하고 통제변수를 추가하며 회귀 조정을 사용한다.
 - 심슨의 역설 해결: 집계 데이터에 기반하여 결론을 내리기 전에 항상 하위 집단 수준의 추세를 분석한다.
@@ -20267,7 +20264,7 @@ R에서 인과추론을 탐색하려면 [CRAN Task View: Causal Inference](https
 
 실제 비즈니스 예제를 통해가 역설을 살펴본다.
 
-#### 시나리오: 마케팅 캠페인 성과
+시나리오: 마케팅 캠페인 성과
 
 어떤 기업이 신규 고객을 유치하기 위해 캠페인 A와 캠페인 B라는 두 가지 마케팅 캠페인을 운영하고 있다고 가정해 본다. 어느 캠페인의 전환율이 더 높은지 분석한다.
 
@@ -20283,8 +20280,8 @@ R에서 인과추론을 탐색하려면 [CRAN Task View: Causal Inference](https
 library(dplyr)
 
 ## 다음 조건의 데이터셋 생성:
-##  - 개별 세그먼트 각각에서는 B가 A보다 우수함.
-##  - 전체(집계) 데이터를 보면 A가 더 우수한 것으로 나타남.
+- 개별 세그먼트 각각에서는 B가 A보다 우수함.
+- 전체(집계) 데이터를 보면 A가 더 우수한 것으로 나타남.
 
 marketing_data <- data.frame(
   Campaign = c("A", "A", "B", "B"),
@@ -20456,7 +20453,6 @@ summary(model)
 
 > "인과관계가 변동을 의미하지는 않는다 (Causation does not imply variation)."
 >
-> John H. Cochrane, [The Grumpy Economist](https://www.grumpy-economist.com/p/causation-does-not-imply-variation), Tyler Muir의 캐치프레이즈를 인용하며.
 
 심슨의 역설은 적절한 변수를 조건부로 통제할 때 연관성이 뒤집힐 수 있음을 보여준다. 이와 관련하여 응용 계량경제학 전반에서 흔히 나타나는 또 다른 혼동이 있다. 바로 *한계적으로 변화를 유발하는 원인(What causes changes at the margin)*과 *관측된 변동의 대부분을 설명하는 요인(What explains most observed variation)*을 동일한 것으로 취급하는 오류이다. 이 실수는 여러 형태로 나타난다:
 
@@ -20464,7 +20460,6 @@ summary(model)
 2. 분산의 큰 부분을 설명한다는 이유로 예측력이 높은 회귀분석을 인과관계의 증거로 받아들이는 경우.
 3. 식별(Identification)을 분산 분해(Variance Decomposition)와 혼동하고 "변동을 주도한다(drives variation)"라는 표현을 마치 인과적 언어인 것처럼 사용하는 경우.
 
-> 어떤 모수는 설명하는 변동이 거의 없더라도 인과적이며 경제적으로 매우 중요할 수 있고 어떤 공변량은 인과적이지 않더라도 매우 많은 변동을 설명할 수 있다.
 
 핵심은 *인과 추정대상(Causal Estimands)은 반사실적 대상(Counterfactual Objects)*인 반면, *분산 점유율(Variance Shares)은 실현된 결합분포(Realized Joint Distributions)의 속성*이라는 점이다. 이들은 서로 다른 질문이며 서로 다른 입력값을 사용하고 설계나 환경이 바뀔 때 서로 다르게 움직인다. 아래 논의는 네 가지 층위로 진행된다:
 
@@ -20481,7 +20476,7 @@ library(fixest)  # feols
 
 ### 비슷하게 들리지만 전혀 다른 두 가지 질문
 
-#### 질문 A: 인과 효과란 무엇인가?
+질문 A: 인과 효과란 무엇인가?
 
 인과 추정대상은 반사실적 결과를 비교한다. 잠재적 결과 프레임워크에서 각 단위는 이진 처치 $D_i \in \{0,1\}$에 대해 두 개의 잠재적 결과 $(Y_i(1), Y_i(0))$를 갖는다. 관측된 결과는 다음과 같다:
 
@@ -20579,7 +20574,7 @@ $\mathrm{Var}(\mathbb{E}[Y\mid D]) = \mathrm{Var}(g(D))$가 된다.
 
 이는 [외적 타당성](#sec-external-validity) 및 정책적 관련성에 대한 우려와 밀접하게 관련되어 있으며 특히 처치 변동의 분포와 효과의 이질성이 설정 및 정책 전반에 걸쳐 다르다는 점과 연관된다 [@deaton2010instruments; @heckman2001policy].
 
-### 회귀 대수학: 식별은 중요성이 아니다
+회귀 대수학: 식별은 중요성이 아니다
 
 회귀분석은 실증 연구의 주요 언어이므로, 이러한 혼동은 종종 회귀 결과표를 통해 나타난다.
 
@@ -20631,7 +20626,7 @@ $\beta$가 크더라도 다음과 같은 경우 $R^2_{Y,D\mid W}$는 작을 수 
 
 인과적 크기와 분산 설명력 간의 구분은 신뢰성 및 민감도 분석 논의에서 명시적으로 다루어진다 [@leamer1983let; @oster2019unobservable; @cinelli2020making].
 
-#### 예측력은 비인과적일 수 있다
+예측력은 비인과적일 수 있다
 
 높은 편결정계수($R^2$)는 $D^\perp$가 관측되지 않은 변수와 여전히 상관되어 있기 때문에 나타날 수 있다.
 
@@ -20650,7 +20645,7 @@ $$Y = \beta D + \delta U + \varepsilon$$
 
 [도구변수](#sec-instrumental-variables)는 이러한 차이를 명확히 볼 수 있는 좋은 예시이다.
 
-#### LATE는 인과적이지만 국소적이다
+LATE는 인과적이지만 국소적이다
 
 처치 참여를 변화시키는 도구변수 $Z$가 있을 때, LATE는 @imbens1994identification 및 @angrist1996identification 의 조건 하에서 순응자(Compliers)에 대한 인과 효과이다. 핵심적인 특징은 도구변수가 모집단의 극히 일부분에 대해만 처치 상태를 변화시킬 수 있다는 점이다.
 
@@ -20672,19 +20667,18 @@ $$Y = \beta D + \delta U + \varepsilon$$
 
 이 격언이 중요한 또 다른 이유는 $D$에서 $Y$로의 사상이 일반균형(General Equilibrium)과 간섭(Interference)에 의존할 수 있기 때문이다.
 
-#### 정책 변화는 전체 시스템을 변화시킬 수 있다
+정책 변화는 전체 시스템을 변화시킬 수 있다
 
 거시경제학과 많은 시장 환경에서 정책 개입의 효과는 기대, 제약, 균형 조정에 따라 달라진다. 루카스 비판(Lucas Critique)은 경제 주체들이 새로운 정책 규칙 하에서 행동을 바꿀 때 과거 상관관계에 기반한 정책 평가가 실패할 수 있는 이유를 공식화한다 [@lucas1976econometric].
 
 과거 데이터로부터 계산된 공분산 또는 분산 분해는 하나의 정책 체제에 대한 속성이다. 인과 메커니즘이 실재하더라도 새로운 체제에서는 무의미해질 수 있다.
 
-#### 간섭은 단위 수준의 분산 논리를 무너뜨린다
+간섭은 단위 수준의 분산 논리를 무너뜨린다
 
 잠재적 결과 프레임워크는 종종 간섭이 없다는 가정을 포함하는 SUTVA와 함께 소개된다. 간섭이 존재하는 경우 한 단위의 결과는 다른 단위의 처치에 의존하게 되며 단위 수준의 분산 분해는 잘못된 결론을 낳게 된다. 제 @sec-interference-spillover 장에서는 이 문제를 심도 있게 다룬다.
 
 실험에서의 간섭에 대한 공식적인 프레임워크는 @hudgens2008toward 에서 개발되었으며 응용 관점은 @sobel2006randomized 에 제시되어 있다. 처치 외부효과가 중요한 대표적인 개발경제학 사례는 @miguel2004worms 의 구충제 연구이다.
 
-> $D$가 네트워크 효과나 파급효과를 통해 작용할 때 "$D$의 분산 기여도"를 정의하는 것 자체가 부적절하게 정의된(Ill-posed) 문저자가 될 수 있다.
 
 ### 보고 표준: 효과 크기, 식별, 분산의 분리
 
@@ -21436,7 +21430,7 @@ $$
 CATE = E[Y(1) - Y(0) | X_i]
 $$
 
-#### CATE가 유용한 이유
+CATE가 유용한 이유
 
 - 이질적 처치 효과: 특정 집단이 다른 집단보다 처치로부터 더 많은 혜택을 받을 수 있다.
 - 정책 타깃팅: 누가 가장 많은 혜택을 받는지 이해하면 자원을 더 효율적으로 배분할 수 있다.
@@ -21461,7 +21455,7 @@ $$
 ITT = E[Y | D = 1] - E[Y | D = 0]
 $$
 
-#### ITT를 사용하는 이유
+ITT를 사용하는 이유
 
 - 정책 평가: ITT는 불완전한 참여율을 반영하여 개입의 실제 현실적 효과를 보여준다.
 - 무작위 시험: ITT는 순응도가 불완전할 때에도 무작위 배정의 이점을 그대로 유지한다.
@@ -21569,7 +21563,7 @@ $$
 : 처치 비순응 하에서의 추정대상 비교
 
 
-### 모집단 대 표본 평균 처치 효과
+모집단 대 표본 평균 처치 효과
 
 실험 및 관찰 연구에서 우리는 종종 유한한 표본을 사용하여 표본 평균 처치 효과(Sample Average Treatment Effect, SATE)를 추정한다. 그러나 보다 폭넓은 일반화를 수행할 때 관심의 대상이 되는 모수는 모집단 평균 처치 효과(Population Average Treatment Effect, PATE)이다.
 
@@ -21792,7 +21786,7 @@ $$
 : 공변량 균형을 위한 블록화와 매칭 방법의 비교
 
 
-### 처치집단 및 통제집단에 대한 평균 처치 효과
+처치집단 및 통제집단에 대한 평균 처치 효과
 
 많은 실증 연구에서 연구자들은 전체 모집단이 아닌 특정 하위 모집단에 처치가 미치는 영향에 관심을 갖는다. 흔히 사용되는 두 가지 처치 효과 지표는 다음과 같다:
 
@@ -21881,7 +21875,7 @@ $$
 표본이 무작위로 추출된 경우 $SATT \approx PATT$이지만 표본이 대표성을 갖지 못하면 $SATT$는 $PATT$를 과대평가하거나 과소평가할 수 있다.
 
 
-#### ATT와 ATC가 ATE와 달라지는 경우
+ATT와 ATC가 ATE와 달라지는 경우
 
 실제 연구에서 ATT와 ATC는 처치 효과의 이질성과 선택 편향으로 인해 종종 ATE와 다르다.
 
@@ -21947,7 +21941,7 @@ $$
 - $Q_{\tau} (Y_1)$은 처치 하에서의 결과 분포의 $\tau$번째 분위수이다.
 - $Q_{\tau} (Y_0)$은 통제 하에서의 결과 분포의 $\tau$번째 분위수이다.
 
-#### QTE를 사용하는 경우
+QTE를 사용하는 경우
 
 - 이질적 처치 효과: 개체마다 처치 효과가 다르다면 ATE는 오해를 부를 수 있다.
 - 정책 타깃팅: 정책 입안자는 평균 효과보다 저소득층(예: 하위 25%)에 더 많은 관심을 가질 수 있다.
@@ -21960,7 +21954,7 @@ QTE는 다음을 통해 추정할 수 있다:
 - 분위수 회귀분석 (Quantile Regression): 선형 회귀를 확장하여 서로 다른 분위수에서의 효과를 추정한다.
 - QTE를 위한 도구변수: 내생성이 존재하는 상황에서 인과 효과를 추정하기 위해 추가적인 가정이 필요하다 [@abadie2002instrumental; @chernozhukov2005iv].
 
-#### 예시: 임금 정책의 영향
+예시: 임금 정책의 영향
 
 - 최저임금 인상이 도입되었다고 가정한다.
 - ATE는 소득에 미치는 작지만 긍정적인 효과를 보여줄 수 있다.
@@ -22000,7 +21994,7 @@ $$
 
 이는 처치가 성공의 상대적 가능성에 비선형적으로 어떤 영향을 미치는지를 포착한다.
 
-#### 로그 오즈 처치 효과를 사용하는 경우
+로그 오즈 처치 효과를 사용하는 경우
 
 - 이진 결과: 처치 결과가 0 또는 1인 경우 (예: 취업/실업).
 - 비선형 처치 효과: 효과가 가법적(Additive)이라기보다 승법적(Multiplicative)으로 작용하는 상황을 다룰 때 유용하다.
@@ -22108,7 +22102,7 @@ RCT는 두 개의 그룹으로 구성된다:
 RCT는 [내적 타당성(Internal Validity)](#sec-internal-validity)을 확립하여 관찰된 처치 효과를 인과적으로 해석 가능하게 만든다. 비록 무작위 배정이 *다른 모든 조건이 동일하다(ceteris paribus)*는 것과 완전히 같은 의미는 아니지만 유사한 효과를 달성한다. 즉, 평균적으로 처치 집단과 통제 집단은 비교 가능해진다.
 
 
-## 선택 문제
+선택 문제
 
 인과추론의 근본적인 어려움은 동일한 개인에 대해 두 가지 잠재적 결과를 동시에 관찰할 수 없고 둘 중 하나만 관찰할 수 있다는 점이다. 이로 인해 선택 문제(Selection Problem)가 발생하며 이를 아래에서 정형화한다.
 
@@ -22143,7 +22137,7 @@ $$
 
 이는 특정 개인에 대해 $Y_{1i}$ 또는 $Y_{0i}$ 중 하나만을 관측할 뿐, 둘 다를 동시에 관측할 수는 없음을 의미한다. 타임머신을 발명하지 않는 한 반사실(Counterfactual)을 직접 관측할 수 없으므로, 처치 효과를 추정하기 위해 통계적 추론에 의존해야 한다.
 
-### 결과의 관측된 차이
+결과의 관측된 차이
 
 우리의 목표는 처치 집단과 미처치 집단 간의 기대 결과 차이를 추정하는 것이다:
 
@@ -22173,7 +22167,7 @@ $$
 \text{관측된 차이} = \text{ATT} + \text{선택 편향}
 $$
 
-### 무작위 배정을 통한 선택 편향의 제거
+무작위 배정을 통한 선택 편향의 제거
 
 처치의 무작위 배정이 이루어지면 $D_i$는 잠재적 결과와 독립이 된다:
 
@@ -22369,7 +22363,7 @@ $$
 
 이에 따라 표준오차는 $\sqrt{1 - \rho^2}$ 배로 줄어들고 동일한 검정력을 유지하는 데 필요한 표본 크기는 대략 $(1 - \rho^2)$ 배로 줄어드ㄴ다. 이는 실무적으로 매우 큰 효과이다. 상관계수가 $\rho = 0.6$인 경우 $1 - \rho^2 = 0.64$가 되어 분산은 36% 감소하고 표준오차는 $\sqrt{0.64} = 0.8$이 되어 20% 감소한다.
 
-#### CUPED를 구현하는 세 가지 방법
+CUPED를 구현하는 세 가지 방법
 
 CUPED 추정치를 구하는 세 가지 동등한 경로가 있다. 첫째는 결과변수를 변환한 후 평균 차이를 구하는 방식이다. 둘째는 처치 변수와 중심화된 공변량에 대해 결과변수를 회귀분석(ANCOVA)하는 방식이며 강건한 표준오차, 다중 공변량, 상호작용, 군집화(Clustering)를 손쉽게 적용할 수 있어 권장되는 기본 방법이다. 무작위 배정 하에서 공변량 조정을 포함한 OLS는 불편성을 가지며 특히 공변량이 결과를 잘 예측할 때 단순 평균 차이보다 더 정밀하다 [@freedman2008regression]. 셋째는 유한 표본에서 발생할 수 있는 의존성을 방어하기 위해 계수를 교차 적합(Cross-fitting)하는 방식이다.
 
@@ -22393,7 +22387,7 @@ T  <- rbinom(n, 1, 0.5)
 
 tau_true <- 2.0
 
-## X와 상관된 결과변수 + 노이즈 + 처치 효과
+X와 상관된 결과변수 + 노이즈 + 처치 효과
 Y <- 0.7 * X + rlnorm(n, meanlog = 2.2, sdlog = 0.7) + tau_true * T
 
 dat <- tibble(id = 1:n, T = T, X = X, Y = Y)
@@ -22559,7 +22553,7 @@ $$
 
 둘을 비교하면, 이중차분법은 정확히 $\theta = 1$로 고정된 CUPED이다.
 
-#### 목표가 다른 이유
+목표가 다른 이유
 
 무작위 실험에서는 사후 기간의 차이 $\bar{Y}_{1,1} - \bar{Y}_{0,1}$가 이미 $\tau$에 대한 불편추정치이다. CUPED는 무작위 배정 하에서 기댓값이 0인 사전 기간의 불균형을 기반으로 보정 항을 빼주므로 추정량은 여전히 불편성을 유지하며 이 조정은 식별이 아니라 정밀도를 높여준다. CUPED는 다음 최적 계수를 선택한다:
 
@@ -22577,7 +22571,7 @@ $$
 
 사후에서 사전을 차분하면 개체 효과 $\alpha_i$가 상쇄되며 이 상쇄가 바로 계수를 1로 강제한다. CUPED는 식별을 위해 고정효과를 상쇄하는 것이 아니라 예측 가능한 변동을 투영하여 제거하는 것이므로 계수가 고정되지 않고 최적화되어 선택된다.
 
-#### 두 방법이 일치하는 경우
+두 방법이 일치하는 경우
 
 공변량이 사전 결과이고 처치가 무작위 배정되어 둘 다 불편성을 가지며 최적 투영 계수가 우연히 1에 가까울 때 두 추정치는 유사해진다. 이는 사후 결과가 사전 결과에 노이즈를 더한 것과 같고 척도가 유사하며 지속성이 높을 때 발생한다. 비즈니스 지표에서는 계절성이 척도를 바꾸고 성장이 평균과 분산을 이동시키며 두터운 꼬리를 갖는 구매 패턴이 기간마다 다르게 작용하고 사전 기간과 사후 기간의 길이가 일치하지 않는 경우가 많아 $\theta^\star$가 1에서 벗어난다. 이러한 경우 이중차분법은 유효하지만 최적은 아닌 형태의 분산 감소가 된다.
 
@@ -23067,11 +23061,11 @@ set.seed(123)
 data <- data.frame(
   Farm = rep(1:6, each = 4), # 6개 농장 (주구)
   
-  # 주구 요인
+# 주구 요인
   Irrigation = rep(c("Drip", "Sprinkler"), each = 12), 
   Soil = rep(c("Clay", "Sand"), times = 12), # 세구 요인
   
-  # 반응 변수
+# 반응 변수
   Yield = c(rnorm(12, mean=30, sd=5), rnorm(12, mean=35, sd=5)) 
 )
 
@@ -23131,7 +23125,7 @@ latin_square <- data.frame(
   Shift = rep(1:3, each = 3), # 행
   Workstation = rep(1:3, times = 3), # 열
   
-  # 균형 있게 배정된 처치
+# 균형 있게 배정된 처치
   Method = c("A", "B", "C", "C", "A", "B", "B", "C", "A"), 
   Time = c(rnorm(3, mean = 30, sd = 3),
            rnorm(3, mean = 28, sd = 3),
@@ -23172,7 +23166,7 @@ set.seed(123)
 data <- data.frame(
   income_group = rep(c("Low", "Medium", "High"), each = 10),
   
-  # 층화 무작위 배정
+# 층화 무작위 배정
   treatment = sample(rep(c("New Policy", "Old Policy"), each = 15)) 
 )
 
@@ -23452,7 +23446,7 @@ balance_criterion <- function(X, group) {
   cov_inv <- solve(cov(X))
   M <- t(mean_diff) %*% cov_inv %*% mean_diff
   
-  # 허용 임계값 (k = 2, alpha = 0.05에 대한 카이제곱 임계값)
+# 허용 임계값 (k = 2, alpha = 0.05에 대한 카이제곱 임계값)
   return(M < 3.84)  
 }
 
@@ -23842,7 +23836,7 @@ print(res)
 
 신뢰구간에 0이 포함되어 있으므로 처치가 유의미한 집약적 마진 효과를 갖는다고 결론지을 수 없다.
 
-#### 민감도 분석: 순응자 효과의 변화
+민감도 분석: 순응자 효과의 변화
 
 집약적 마진 효과를 추가로 조사하기 위해 순응자에 대한 다양한 가정에 따라 결과가 얼마나 민감하게 변하는지 살펴본다.
 
@@ -23957,7 +23951,7 @@ $$
 $$
 이는 모든 단위가 $\pi_i(k) > 0$을 만족하고(양수성 조건, Positivity) 노출 매핑이 올바르게 명시되었을 때 항상 불편성을 가진다. 하예크(Hajek) 변형은 $N$ 대신 역확률 가중치의 합으로 정규화하며 점근적으로만 불편성을 갖지만 가중치의 편차가 클 때 일반적으로 분산이 훨씬 작다. 인과적 대비는 차이 $\tau(k, k') = \mu(k) - \mu(k')$이며 단위 쌍의 결합 노출 확률로부터 보수적인 분산 추정량을 도출할 수 있다. 정밀도는 설계에 의해 지배된다: 베르누이 배정 하에서 "처치되었으나 처치된 이웃이 없음"과 같은 노출은 고차수 단위에게 극히 드물게 발생하여 가중치가 폭발하므로, 클러스터 무작위 배정은 추정대상이 필요로 하는 극단적 노출의 확률을 높이기 위한 장치로 이해할 수 있다.
 
-### 단순 대비가 추정하는 것과 놓치는 것
+단순 대비가 추정하는 것과 놓치는 것
 
 랜덤 네트워크에서의 간단한 시뮬레이션을 통해 설계 기반 메커니즘을 구체화하고 단순 평균 차이의 미묘한 문제를 살펴본다. 결과변수는 자신의 처치로 인해 1만큼 증가하고 적어도 하나의 이웃이 처치되었을 때 1.5만큼 추가로 증가하므로, 전원 처치 대 전원 미처치의 글로벌 정책 대비는 2.5이다.
 
@@ -24180,7 +24174,7 @@ voters <- within(voters, {
   treated <- (treatment == 1 & reached == 1) * 1
   c_age   <- (age - mean(age)) / 10
 })
-## 정확히 한 명의 구성원만 문을 연 가구만 유지
+정확히 한 명의 구성원만 문을 연 가구만 유지
 reach_cnt <- tapply(voters$reached, voters$family, sum)
 voters <- voters[!(voters$family %in% names(reach_cnt[reach_cnt > 1])), ]
 voters <- voters[voters$hsecontact == 1, ]
@@ -24197,7 +24191,7 @@ household_propensity <- function(b, X, A, parameters,
   if (sum(A) == 0) {
     pr <- group.randomization
   } else {
-    X.1 <- X[1, ]; A.1 <- A[1]
+## X.1 <- X[1, ]; A.1 <- A[1]
     h  <- plogis(X.1 %*% parameters)
     pr <- group.randomization * dbinom(A.1, 1, h)
   }
@@ -24312,7 +24306,6 @@ $$
 
 여기서의 논의는 여섯 가지 문헌 체계를 바탕으로 구성된다. (1) @cronbach1955construct의 구성 타당도(construct validity) 프레임워크와 @campbell1959convergent의 다특질-다방법 행렬(multitrait-multimethod matrix)로 시작된 *타당도 이론(Validity theory)*은 도구가 측정하고자 주장하는 대상을 측정한다는 것이 무엇을 의미하는지 정의한다. (2) 응답 과정을 일련의 인지적 연산으로 분해하고 각 단계에서의 오차 원인을 규명하는 *설문 응답의 인지심리학(Cognitive psychology of survey response)* [@tourangeau2000psychology; @schwarz1999self; @krosnick; @krosnick1999survey; @schaeffer2020advances]. (3) 반세기 동안 학계에서 활용되어 온 검사-재검사, 내적 일관성 및 준마르코프 심플렉스 도구를 제공하는 *고전 심리측정 신뢰도 이론(Classical psychometric reliability theory)* [@lord; @cronbach1951coefficient; @heise1969separating; @wiley1970estimation; @alwin2007margins]. (4) 체계적인 비실질적 응답 패턴(긍정 편향, 극단 응답, 중간점 선택, 일렬 표기, 불성실 신속 응답, 무의견 게임)과 이를 완화하는 설계 선택지를 분류한 *응답 양식 및 만족화 문헌(Response-style and satisficing literature)* [@krosnick; @greenleaf1992measuring; @baumgartner2001response; @vanvaerenbergh2013response; @zhang2014speeding; @krosnick2002impact]. (5) 총설문오차(Total Survey Error) 프레임워크 및 실무 참고 문헌에 집약된 *현대 설문 방법론의 통합 이론* [@groves2009survey; @saris2014design; @beatty2007research; @willis2005cognitive; @schaeffer2010interviewers; @heerwegh2009mode; @holbrook2003telephone; @stantcheva2023how]. (6) 고전적 심리측정 프레임워크에서 오차로 귀인했던 잔차 불안정성에 대해 기제적 설명을 제공하는 *확률 일치에 관한 의사결정론 및 행동경제학 문헌(Decision-theoretic and behavioural-economic literature on probability matching)* [@vulkan; @erev1998predicting; @lo; @kahneman1979prospect]. 최근의 설문 방법론 연구들은 이러한 흐름들을 연결하여 엄밀한 식별 가정 하에서 응답 불안정성을 수량화하고 있으며 [@clayton; @jenke2026working], 부주의한 응답(careless responding) 관련 문헌 [@meade2012identifying; @curran2016methods; @oppenheimer; @berinsky; @hauser; @aronow2019note; @chandler2014nonnaivete]은 이러한 프레임워크를 실용적인 필터 설계로 전환하고 있다.
 
-> 로드맵 (Roadmap). 제 @sec-cognitive-process 절에서는 응답자가 설문 문항에 답변하는 4단계 인지 모형을 소개하고 각 단계에서 오차와 노이즈가 유입되는 지점을 규명한다. 제 @sec-tse 절에서는 총설문오차(Total Survey Error) 프레임워크를 검토하고 본 장의 기여를 그 안에서 위치매김한다. 제 @sec-validity 절에서는 타당도를 신뢰도와 구분되는 핵심 과제로 다룬다(구성 타당도, 수렴 타당도, 판별 타당도, 예측 타당도 및 핵심적인 조작화 도구인 @campbell1959convergent 다특질-다방법 행렬). 제 @sec-response-styles 절에서는 @krosnick, @greenleaf1992measuring, @baumgartner2001response, @vanvaerenbergh2013response, @zhang2014speeding, @krosnick2002impact를 바탕으로 응답 양식(긍정 편향, 극단 응답, 중간점 선택, 일렬 표기, 불성실 신속 응답, 무의견 게임, 무작위 응답)의 현대적 분류 체계를 제시한다. 제 @sec-mode-effects 절에서는 조사 방식 효과, 면접원 효과, 그리고 표준 사전 검사로서의 인지적 면접법을 다룬다 [@holbrook2003telephone; @heerwegh2009mode; @schaeffer2010interviewers; @schaeffer2020advances; @beatty2007research; @willis2005cognitive]. 제 @sec-defining-instability 절에서는 응답 불안정성을 공식적으로 정의하고 추정량을 제시한다. 제 @sec-classical-reliability 절에서는 고전 신뢰도 이론(크론바흐 $\alpha$, 급내상관계수(ICC), 하이즈-와일리 심플렉스)을 검토하고 이것이 내재적 확률성에 대해 왜 침묵하는지 보여준다. 제 @sec-three-way-decomp 절에서는 3원 분산 분해를 발전시키ㄴ다. 제 @sec-decision-theory 절에서는 의사결정론적 기초를 제공한다. 제 @sec-modulators 절과 제 @sec-tot 절에서는 확률성을 조절하는 요인과 이를 필터링하는 방법을 논의한다. 제 @sec-design-implications 절에서는 설문 설계를 위한 권장사항을 제시하고 제 @sec-analysis-implications 절에서는 닫힌 형태의 감쇄 보정, SIMEX 절차, 최신 컨조인트 감사(pAMCE, AMIE, 만족화, $\bar D$ 보정; @hainmueller2014causal, @egami2019causal, @delacuesta2022improving, @bansak2018number, @clayton2025)를 포함한 분석적 권장사항을 제공한다. 제 @sec-survey-reliability-applied 절에서는 일렬 표기, 불성실 신속 응답, 최장 연속 동일 응답 및 마할라노비스 기반 부주의 응답 탐지를 포함한 실무용 완전 R 워크플로를 제공한다. 제 @sec-anchoring-vignettes 절부터 제 @sec-mrp 절에서는 동일 세션 내 반복 측정 프레임워크를 보완하는 세 가지 고급 설계 및 분석 주제를 다룬다(비교가능성을 위한 앵커링 비네트 [@king2004enhancing; @king2007comparing], 무작위 응답, 목록 실험 및 @rosenfeld2016empirical 실증 검증 벤치마크를 포함한 민감한 질문 방법론 [@warner1965randomized; @blair2012statistical; @bullock2011statistical; @glynn2013statistical], 심층 상호작용 및 동적 IRT 확장을 결합한 다수준 회귀 및 사후계층화(MRP) [@park2004bayesian; @wang2015forecasting; @ghitza2013deep; @caughey2015dynamic; @lax2009estimate]). 제 @sec-online-panels 절에서는 온라인 패널 품질, 비순수성, 직업적 응답자, 중복 계정 및 봇 탐지를 다룬다 [@chandler2014nonnaivete; @berinsky2012evaluating]. 제 @sec-llm 절에서는 합성 응답자와 거대언어모델(LLM)을 다룬다 [@argyle2023out; @bisbee2024synthetic]. 제 @sec-robustness 절에서는 현대적 강건성, 재현성 및 부정행위 탐지 도구 모음을 다룬다 [@simmons2011false; @simonsohn2014pcurve; @simonsohn2013just; @simonsohn2020specification; @ioannidis2005why; @osc2015estimating; @camerer2018evaluating]. 본 장은 인과추론에 관한 짧은 제언, 요약, 추가 참고 문헌 목록 및 연습문제로 마무리된다. 독자적인 설문 설계에 관한 가장 포괄적인 현대적 지침서로는 @stantcheva2023how 가 가장 훌륭한 출발점이다.
 
 
 ## 설문 문항 응답의 인지 과정 {#sec-cognitive-process}
@@ -24526,7 +24519,6 @@ knitr::kable(
 4. 다중 구성개념 도구의 경우 예산이 허용된다면 MTMM 설계를 적용한다(수렴 및 판별 타당도).
 5. 도구를 현장에 적용하고 신뢰도를 측정한다(본 장의 나머지 부분).
 
-> 순서가 중요하다. 타당도는 신뢰도에 선행한다. 잘못된 구성개념을 신뢰성 있게 측정하는 것은 분석가에게 거짓 확신을 심어주기 때문에 아무것도 측정하지 않는 것보다 더 해롭다. 본 장의 나머지 부분은 타당도 검증 작업이 이미 완료되었다고 가정한다.
 
 ### 측정 불변성
 
@@ -24625,13 +24617,13 @@ knitr::kable(
 
 설문 조사 방식(Mode)과 면접원의 특성은 사소한 설계 요소가 아니다. 조사 방식의 변경은 동일한 설문 도구 내의 실질적인 처치 효과에 필적하는 수준으로 응답 분포를 변화시킬 수 있으며 민감한 단일 문항에서 면접원에 의해 유발된 효과는 모집단 추정치의 표준오차를 압도할 수 있다.
 
-### 조사 방식 효과
+조사 방식 효과
 
 방대한 실증 문헌들이 조사 방식 효과를 입증하고 있다. @holbrook2003telephone 은 긴 설문지를 사용한 전국 확률 표본에서 전화 면접과 대면 면접을 비교했다. 동일한 설문 설계 하에서 전화 응답자는 대면 응답자에 비해 더 많이 만족화(중간점 선택, 무의견, 일렬 표기 증가)를 보였고 민감한 문항에서 더 큰 사회적 바람직성 편향을 나타냈는다. @heerwegh2009mode 는 단일 표본 내에서 무작위 배정을 통해 동일한 도구의 대면 조사와 웹 조사를 비교했다. 웹 환경은 문항 무응답률이 높고 주관식 응답 길이가 짧아지는 대가로 민감한 문항에 대한 사회적 바람직성 편향을 줄였다. @schaeffer2020advances 의 종합 연구는 응답 분포의 형태, 중도 이탈률, 인지 부하에 대한 추가적인 조사 방식 효과를 체계화했다.
 
 분석을 위한 시사점은 명확하다. 필터 기준선(filter floor)을 조사 방식별로 보정해야 하며 결코 하나로 합쳐서는 안 된다. 대면 컨조인트 문항에 적합한 6초의 TOT 기준선은 온라인 자기기입식 동일 문항에는 너무 느슨하며 면접원이 지문을 소리 내어 읽어주는 전화 조사 동일 문항에는 너무 엄격하다.
 
-### 면접원 효과
+면접원 효과
 
 면접원이 개입하는 경우 추가적인 설계 효과가 발생한다. 면접원마다 질문을 읽고 응답을 캐묻고(probe), 답변을 코딩하는 방식에 차이가 있다. @schaeffer2010interviewers 와 @schaeffer2020advances 는 표준화 면접 문헌을 종합하여 다음과 같은 두 가지 실무적 시사점을 제시했다.
 
@@ -24717,7 +24709,7 @@ knitr::kable(
 
 따라서 $\Delta$를 깔끔하게 추정하기 위한 방법론적 접근은 단일 설문 세션 내에서 방해 문항(distractor items)을 사이에 두고 동일한 문항을 두 번 질문하는 것이다. 동일 세션 내 반복 측정은 구조상 가정 1을 만족하고 세션 내 이탈이 거의 없으므로 가정 3을 만족하며 방해 문항 블록이 충분하다면 가정 2를 만족한다. @clayton 설계에서는 적절히 선택된 3개 이상의 방해 문항이 있을 때 응답자들이 반복 질문을 알아차렸다고 보고하는 경우가 사실상 전무하여 가정 2가 실증적으로 성립한다. 세 가정이 모두 성립할 때 $\Delta \in $이지만 독립적인 베르누이 추출에서 도출되는 실질적 최댓값은 $0.5$이다.
 
-### 검사-재검사 상관계수보다 $\bar D$를 선호하는 이유
+검사-재검사 상관계수보다 $\bar D$를 선호하는 이유
 
 이진 문항의 경우, 분석적 목적에서 $\bar D$는 검사-재검사 상관계수보다 세 가지 이유로 엄밀하게 더 많은 정보를 담고 있다.
 
@@ -24833,9 +24825,8 @@ $$ {#eq-heise}
 
 하이즈-와일리 심플렉스는 사회학 및 정치학에서 종단적 신뢰도 추정을 위한 고전적 도구로 남아 있다.
 
-> 심플렉스가 내재적 확률성에 대해 침묵하는 이유. 심플렉스는 *웨이브 간 독립적인 측정 오차를 가정*하는 웨이브 간 공분산으로부터 $\rho$와 $\beta_t$를 식별한다. 만약 잔차 노이즈의 일부가 각 측정 시점에서 응답자 수준의 분포로부터 새롭게 추출되는 내재적 확률성이라면, 심플렉스는 이를 $\sigma_E^2$로 흡수하여 "측정 오차"로 명명한다. 이 분해는 수학적으로는 일관되지만 "더 나은 측정 도구를 통해 원칙적으로 제거할 수 있는 노이즈"라는 실질적 해석은 틀린 것이다.
 
-### 다특질-다방법 신뢰도
+다특질-다방법 신뢰도
 
 @saris2014design 은 현대적인 와일리 스타일의 통합을 제시한다. MTMM(다특질-다방법) 설계는 $T$개의 특질 각각을 $M$개의 방법으로 측정하여 응답자당 $TM$개의 측정치를 얻고 구조방정식 모형으로부터 특질 분산, 방법 분산, 고유 분산을 식별한다. MTMM은 설문 방법론에서 최고의 신뢰도 평가 기법이지만 심플렉스와 동일한 한계를 공유한다. 즉, 각 측정 시점에서 응답자 수준 확률 과정에서 추출되는 모든 노이즈는 고유 분산 항으로 흡수되어 별도로 식별되지 않는다.
 
@@ -24967,7 +24958,7 @@ $$ {#eq-pm-instability}
 
 식 @eq-pm-instability 는 $\pi_i \in (0, 1)$일 때 항상 엄격한 양수이며 $\pi_i = 0.5$에서 최댓값 $0.5$에 도달한다. 확률 일치(Probability matching)는 인간, 영장류, 어류, 비둘기, 꿀벌에서 모두 관찰되었으며 이를 없애기 위한 반세기의 설계 노력에도 불구하고 실험 의사결정 과학에서 가장 일관되게 재현되는 발견 중 하나로 남아 있다 [@vulkan; @lo2021]. 이 현상은 단순한 기이함이 아니다. 인센티브가 부여된 금융 의사결정 실험에서도 통계 교육을 받은 피험자들조차 극대화하기보다는 체계적으로 무작위화를 선택하며 [@lo2021], 확률 일치를 *예측*하는 강화학습 모형은 실험적 게임 플레이 데이터에 자연스럽게 적합하다 [@erev1998predicting].
 
-### 응용 분석가에게 이것이 중요한 이유
+응용 분석가에게 이것이 중요한 이유
 
 설문 결과변수에 이진 로짓 모형을 적합한다고 가정해 보자. 표준적 해석은 선형 예측기를 체계적 부분으로 취급하고 로짓 충격을 측정 오차와 유사한 노이즈로 취급한다. 그러나 응답자가 실제로 확률 일치를 따르고 있다면 로짓 충격은 고전적 의미의 오차가 아니며 응답자의 의사결정 과정이 갖는 고유한 특성이다. 두 가지 결과가 뒤따른다.
 
@@ -25021,7 +25012,7 @@ ggplot(sim_df, aes(pi, instability, colour = model, linetype = model)) +
 
 의사결정이 확률적이라는 점을 받아들이면, 그 확률성의 크기를 무엇이 조절하는지 질문할 수 있다. 설문 방법론과 인지심리학의 실증 문헌은 이에 대한 답을 응답과의 근접성에 따라 중첩된 4단계 수준으로 체계화한다.
 
-### 인지 과정 수준
+인지 과정 수준
 
 세 가지 조절 요인이 직접적인 설문 설계 시사점을 갖는다.
 
@@ -25031,7 +25022,7 @@ ggplot(sim_df, aes(pi, instability, colour = model, linetype = model)) +
 
 3. 시행 간 처리 과정의 차이(Divergent processing). 충분한 시간이 주어지더라도 두 번째 시행에서 문항에 다르게 주의를 기울이는 응답자는 더 큰 불안정성을 생성한다. 이는 안구 추적을 통해 실험적으로 측정되어 왔다. 대부분의 응용 연구에서는 이를 직접 측정할 수 없지만 두 시행 간의 점화(priming) 차이에 세심한 주의를 기울여야 할 필요성을 제기한다.
 
-### 심리적 상태 수준
+심리적 상태 수준
 
 불량 데이터 품질을 걸러내기 위한 후보 필터로서 네 가지 심리적 상태가 연구되어 왔다. 이들은 (a) 의식적으로 통제 가능한지, (b) 다른 설문 문항의 영향을 받는지, (c) 단일 세션 내에서 스스로 안정적인지에 따라 구분된다. 표 에 요약되어 있다.
 
@@ -25053,13 +25044,13 @@ knitr::kable(
 
 표 에 제시된 세 가지 특성을 모두 만족하는 것은 선행 몰두/잡념 상태(preoccupation)뿐이다. 다른 상태들은 연구 변수로는 유용하지만 1차 필터로는 문저자가 있다. 5가지 기준 평가가 제 @sec-filters 절에 나타난다.
 
-### 개인 특성 수준
+개인 특성 수준
 
 인구통계학적 요인, 사회경제적 위치, 사전 지식이 불안정성을 예측한다. 고령 응답자는 인지 속도가 느림에도 불구하고 젊은 응답자보다 종종 *더 낮은* 불안정성을 보이는데, 이는 선행 몰두 상태가 덜하고 딴생각을 덜 하기 때문인 것으로 보인다. 이것이 연령에 따라 응답자를 필터링해도 된다는 면죄부는 아니지만(그렇게 하면 추정 대상 모수가 달라짐), 유용한 진단 정보가 되며 주요 인구통계 변수별로 층화된 $\bar D$를 항상 보고해야 하는 근거가 된다.
 
 응답 양식 문헌 [@krosnick1999survey; @schwarz1999self]은 여기서 관련된 몇 가지 개인 수준 패턴을 식별한다. 긍정 편향(내용과 무관하게 동의함), 극단 응답(척도 끝점 선호), 중심화 경향(척도 중간점 선호)이 그것이다. 이 세 가지는 문항이 시행 간에 의미적 극성을 바꿀 때 $\bar D$를 팽창시키며 이것이 동일 세션 내 반복 측정에서 문항 표현을 동일하게 유지해야 하는 이유 중 하나이다. 사회적 바람직성 응답 편향 [@crowne1960new; @tourangeau1996asking]은 구별되지만 관련된 문제이다. 응답자들은 인지된 규범에 부합하는 방향으로 민감한 문항에 대해 체계적으로 허위 보고를 한다. 이는 추정된 $\Pr(C = 1)$에 편향을 유발하지만 인지된 규범이 시행 간에 바뀌지 않는 한 반드시 $\bar D$를 팽창시키는 것은 아니다.
 
-### 문항 특성 수준
+문항 특성 수준
 
 문항들은 위의 모든 요인에 대한 민감도에서 차이를 보인다. 문항의 $\bar D$를 예측하는 단일한 최고의 예측 변수는 전문가 평가나 사전 검사 평균 TOT로 보정된 복잡성 척도 상의 위치이다. @krosnick1999survey 의 질문 설계 효과 검토와 @schuman1981questions 의 광범위한 문항 표현 실험 목록은 $\bar D$를 팽창시키는 문항 특성에 대한 실무 메뉴를 제공한다.
 
@@ -25138,8 +25129,6 @@ knitr::kable(
 
 검증된 4점 척도 선행 몰두 문항은 동의 직후, 그리고 어떠한 핵심 문항도 제시되기 전에 투입된다. 실행 가능한 문구는 다음과 같다.
 
-> *누구나 새로운 과업(예: 이 설문조사)을 시작할 때 머릿속에 여러 가지 생각을 가지고 참여하게 된다. 설문조사를 시작하기 직전, 배우자/연인, 직장, 건강, 자녀, 친구, 금전 문제 또는 기타 걱정거리로 인해 얼마나 생각이 복잡하거나 몰두해 계셨습니까?*\
-> (1) 매우 복잡했음(Very preoccupied); (2) 꽤 복잡했음(Fairly preoccupied); (3) 약간 복잡했음(Slightly preoccupied); (4) 전혀 복잡하지 않았음(Not at all preoccupied).
 
 이 응답을 4수준 순서형 변수로 처리한다. 선행 몰두 상태만을 근거로 응답자를 탈락시키지 마라. 그렇게 하면 추정 대상 모수가 변경된다. 결과적으로 얻어지는 표본이 결과변수와 상관된 변수에서 모집단을 더 이상 대표하지 못하기 때문이다. 대신 몰두 상태가 심한 응답자에게 *플래그*를 부여하고 플래그된 하위 집합을 포함한 추정치와 제외한 추정치를 나란히 보고하라. 이렇게 하면 모집단 수준의 추정 대상을 보존하면서도 가장 몰두된 응답자들에게 결론이 얼마나 의존하는지 독자에게 알릴 수 있다.
 
@@ -25376,11 +25365,11 @@ ggplot(respondents, aes(bi_tot_mean, D)) +
 ```{.r #quality-filter}
 respondents_q <- respondents |>
   mutate(
-    # (1) TOT 기준선 미달 탈락 플래그
+# (1) TOT 기준선 미달 탈락 플래그
     flag_speeding = bi_below_floor,
-    # (2) 높은 몰두 상태 플래그
+# (2) 높은 몰두 상태 플래그
     flag_preoccupied = preoccupation == 1L,
-    # 복합 품질 상태 정의
+# 복합 품질 상태 정의
     filter_outcome = case_when(
       flag_speeding ~ "drop_floor",
       flag_preoccupied ~ "flag_preoccupied",
@@ -25429,7 +25418,7 @@ summary(glmm_fit)
 ### 6단계: 닫힌 형태의 감쇄 보정
 
 ```{.r #attn-correction}
-## 1. 단순 로짓 회귀 적합 (시행 1 focal DV 기준)
+1. 단순 로짓 회귀 적합 (시행 1 focal DV 기준)
 naive_logit <- glm(Q1a ~ x_covariate, data = respondents, family = binomial)
 beta_naive <- coef(naive_logit)["x_covariate"]
 se_naive <- summary(naive_logit)$coefficients["x_covariate", "Std. Error"]
@@ -25477,7 +25466,7 @@ simex_coefs <- numeric(length(lambdas))
 set.seed(999)
 for (k in seq_along(lambdas)) {
   lam <- lambdas[k]
-  # 추가 반전 확률
+# 추가 반전 확률
   q_add <- (1 - sqrt(max(0.01, 1 - 2 * D_est * lam))) / 2
   flip <- rbinom(nrow(respondents), 1, q_add)
   Y_noisy <- ifelse(flip == 1, 1 - respondents$Q1a, respondents$Q1a)
@@ -25514,7 +25503,7 @@ ggplot(simex_plot_df, aes(lambda, beta)) +
 
 SIMEX 추정치(그림 의 빨간색 점선)는 표 의 닫힌 형태 보정과 일치한다. SIMEX 부트스트랩의 표준오차는 오분류 모델의 모수적 구조를 온전히 활용하지 않기 때문에 다소 크다.
 
-### 8단계: 하위 집합 진단
+8단계: 하위 집합 진단
 
 그림은 선행 몰두 수준별로 $\bar D$가 어떻게 달라지는지 보여준다. 이는 데이터에서 몰두 문항이 실제로 작동하고 있음을 검증하는 용량-반응(dose--response) 검증이다.
 
@@ -25550,7 +25539,7 @@ ggplot(preocc_summary, aes(preocc_label, D_mean)) +
 
 그림 의 패턴은 표 의 기준 (3) 검정이다. 만약 용량-반응 기울기가 평평하다면 몰두 문항이 해당 표본에서 불안정성을 예측하지 못하는 것이므로 필터를 신뢰하기 전에 재검증해야 한다.
 
-### 9단계: 부주의한 응답 진단
+9단계: 부주의한 응답 진단
 
 @meade2012identifying 와 @curran2016methods 를 따라, 표는 시뮬레이션 데이터에 대해 소규모 부주의 응답 지표 세트를 계산한다. 다수의 리커트 문항이 포함된 실제 설문 도구에서는 전체 응답 벡터에 대해 이러한 지표들이 계산된다.
 
@@ -25558,7 +25547,7 @@ ggplot(preocc_summary, aes(preocc_label, D_mean)) +
 set.seed(31)
 
 ## 부주의 응답 진단에 현실적인 입력을 제공하기 위해 기존 데이터와 함께
-## 10문항 태도 그리드를 시뮬레이션합니다. 실제로는 실제 도구에서 생성됩니다.
+10문항 태도 그리드를 시뮬레이션합니다. 실제로는 실제 도구에서 생성됩니다.
 n <- nrow(respondents)
 K_grid <- 10
 grid_items <- matrix(
@@ -25663,7 +25652,7 @@ knitr::kable(
 
 @king2004enhancing 은 표준 해결책으로서 앵커링 비네트(anchoring vignettes)를 도입했다. 비네트는 제3자에 대한 짧은 가상 시나리오 설명이며 응답자는 핵심 자기평가 문항과 동일한 척도로 이를 평가한다. 각 응답자의 비네트 평정값을 자기평가값과 비교함으로써 분석가는 응답자 고유의 척도 닻내림(scale anchoring)을 식별하고 자기평가를 공통 척도로 보정할 수 있다. @king2007comparing 은 어떤 비네트를 사용할지 평가하고 선택하는 방법론을 발전시켰는다.
 
-### 차등 문항 기능 문제
+차등 문항 기능 문제
 
 잠재 특질을 $Y_i^\ast$라 하자. 범주 $k \in \{1, \dots, K\}$를 가진 순서형 척도에서 관측된 자기평가 $y_i$는 다음과 같이 생성된다.
 
@@ -25716,7 +25705,7 @@ $$ {#eq-rrt}
 
 @bullock2011statistical 의 지지 실험은 민감한 행위자나 정책에 대한 지지를 측정하기 위해 무작위로 정책에 해당 행위자의 지지 문구를 추가하고 정책 지지도 변화를 측정한다.
 
-### 어떤 기법을 언제 사용해야 하는가
+어떤 기법을 언제 사용해야 하는가
 
 ```{.r echo="FALSE" #sensitive-method-comparison}
 sens_tab <- tibble::tibble(
@@ -25811,7 +25800,7 @@ digraph mrp {
 
 전통적인 서베이 가중치 기법인 반복비례적합법(Raking)은 변수별 주변 분포만을 일치시키는 반면, MRP는 다수준 모형을 통해 심층 교차 셀(deep cross-cells) 간의 상호작용을 모델링하므로 소지역 추정에서 훨씬 우수한 성능을 발휘한다 [@wang2015forecasting].
 
-### 비대표 표본에서 MRP가 작동하는 이유
+비대표 표본에서 MRP가 작동하는 이유
 
 표본선택이 셀 정의 공변량(연령, 인종, 교육, 성별, 지역)에만 조건부로 의존한다면(무시 가능성 가정), 모델 적합치는 각 셀 내에서 비편향적이며 센서스 가중치를 통해 모집단 대표성이 복원된다.
 
@@ -25834,7 +25823,7 @@ digraph mrp {
 
 @simonsohn2020specification 은 연구자의 자의적 선택에 따른 결과를 모두 나열하는 명세 곡선 분석(Specification Curve Analysis)을 개발했다. 타당한 모든 모형 명세(공변량 조합, 하위 표본, 추정 기법)에 걸쳐 추정치를 계산하고 비모수적 순열 검정을 통해 효과의 전반적 유의성을 평가한다.
 
-### 조작된 데이터의 탐지
+조작된 데이터의 탐지
 
 @simonsohn2013just 는 복사-붙여넣기 패턴, 지나치게 완벽한 통계적 관계, 벤포드의 법칙(Benford's law) 위반, 비정상적으로 작은 분산 등을 통해 조작된 설문 데이터를 적발하는 포렌식 도구를 제시했다.
 
@@ -25860,7 +25849,7 @@ knitr::kable(
 
 ## 온라인 패널 및 플랫폼 응답자 {#sec-online-panels}
 
-### 비순수성 / 숙련 응답자 문제
+비순수성 / 숙련 응답자 문제
 
 MTurk, Prolific, Lucid 등의 온라인 패널 응답자들은 수백~수천 개의 설문에 참여한 '전문 응답자'인 경우가 많다. @chandler2014nonnaivete 는 이러한 비순수성이 표준 실험 처치 효과의 크기를 체계적으로 감소시킴을 입증했다.
 
@@ -25878,7 +25867,7 @@ MTurk, Prolific, Lucid 등의 온라인 패널 응답자들은 수백~수천 개
 - MTurk: 과거의 대표 플랫폼이었으나 심각한 봇 문제 존재, 고급 자격 조건(CloudResearch Approved) 적용 필수.
 - Lucid / Dynata: 대규모 시장 조사 및 대표성 있는 할당 표본 추출에 유리하나 만족화 비율 주의 필요.
 
-### 봇 및 자동화된 응답자
+봇 및 자동화된 응답자
 
 LLM 기반 봇이나 스크립트가 설문을 자동으로 완료하는 위협이 급증하고 있다. reCAPTCHA v, 보이지 않는 허니팟(honeypot) 문항, 문맥 이해를 요구하는 개방형 주관식 문항 검증을 병행해야 한다.
 
@@ -25920,7 +25909,7 @@ GPT-4, Claude와 같은 거대언어모델(LLM)을 활용하여 설문 응답을
 - 고급 설문 설계 (MRP, 비네트, 민감 문항): Gelman and Little (1997), King et al. (2004), Blair and Imai (2012), Rosenfeld et al. (2016).
 
 
-## 연습문제
+연습문제
 
 1. *개념적 이해.* 설문 도구 측면의 측정 오차 감소(더 명확한 문구 표현, 정밀한 응답 척도)가 일반적으로 $\bar D$를 감소시키지 못하는 이유를 본인의 언어로 설명하시오. 어떠한 상황에서 문구 수정이 $\bar D$를 감소시킬 수 있는가?
 
@@ -30272,7 +30261,7 @@ $$
  $$
 
 
-#### 다변량 정규분포의 분할
+다변량 정규분포의 분할
 
 분할된 확률 벡터를 고려해 보자:
 
@@ -30909,7 +30898,7 @@ estat_test$multivariate_normality
 
 ### 평균 벡터에 대한 추론
 
-#### 단변량의 경우
+단변량의 경우
 
 단변량 정규분포에서는 다음 가설을 검정한다:
 
@@ -31539,7 +31528,7 @@ list(
 
 #### 다변량 검정에서의 모델 가정
 
-##### 공분산 행렬이 같지 않을 때의 영향
+공분산 행렬이 같지 않을 때의 영향
 
 두 모집단 공분산 행렬이 동일하다는 가정($\mathbf{\Sigma}_1 = \mathbf{\Sigma}_2$)을 하지만 실제로는이 가정이 성립하지 않을 수 있다.
 
@@ -31550,7 +31539,7 @@ list(
 - $n_1 > n_2$이고 $\mathbf{\Sigma}_1 \mathbf{\Sigma}_2^{-1}$의 일부 고윳값들이 1보다 크면 제1종 오류율이 너무 작아져 검정력이 감소한다.
 
 
-##### 비정규성의 영향
+비정규성의 영향
 
 다변량 검정은 종종 정규성을 가정하지만 실제 데이터는 정규분포를 따르지 않을 수 있다.
 
@@ -31829,7 +31818,7 @@ print(paired_fit)
 steel <- read.table("images/steel.dat")
 names(steel) <- c("Temp", "Yield", "Strength")
 
-## 항복 강도 vs 인장 강도 산점도
+항복 강도 vs 인장 강도 산점도
 library(ggplot2)
 ```
 
@@ -32936,7 +32925,6 @@ $$
 
 매개 질문은 모든 분야에서 나타난다. 마케팅: 광고가 매출을 올린 이유가 브랜드 인지도를 높였기 때문인가, 아니면 다른 이유인가? 교육: 튜터링 프로그램이 시험 점수를 올린 이유가 출석률을 개선해서인가, 동기를 부여해서인가, 부모의 관심을 유도해서인가? 노동경제학: 직업 훈련이 임금을 올린 이유가 기술을 축적해서인가, 근로자를 더 적합한 일자리로 매칭해서인가, 대조군에 대한 낙인 효과 때문인가?
 
-> 주의. 매개 분석은 실증 연구에서 가장 남용되는 도구 중 하나이다. 수학적 전개는 성립하지만 식별은 거의 성립하지 않는다. 연구에서 매개 변수를 무작위화하지 않았다면, 도출된 모든 분해를 기술적인 것으로 취급하고 민감도 분석을 보고하며 이론적 논증을 결합하라. 과도한 가정에 의존한 정밀한 분해보다 정직한 기전 설명이 뒷받침된 깔끔한 총효과가 훨씬 더 큰 설득력을 갖는다.
 
 
 ### 조절 분석: 누구를 위해, 어떤 조건에서 작용하는가? {#sec-moderation-analysis-for-whom-or-under-what-conditions}
@@ -33181,7 +33169,6 @@ $$
 
 간섭 없음이 단순한 희망사항이 아니라 진정으로 방어 가능한 환경들도 존재한다. 전체 인구 중 극히 일부만 처치를 받는 개인 수준 무작위 배정 처치는 지역사회 효과를 유발할 만큼 처치 단위의 밀도가 높지 않기 때문에 무시할 수 있는 수준의 파급만을 생성하는 경향이 있다. 먼 거리로 분리된 소도시, 서로 다른 주에 위치한 교실과 같이 지리적, 사회적, 경제적으로 고립된 단위들은 서로 간섭할 수 있는 경로가 거의 없다. 어떠한 상호작용도 발생하기 전에 실현되는 결과(개입 당일에 치러진 시험)는 서서히 진행되는 파급 효과에 의해 오염될 수 없다. 밀폐된 실험실 실험은 물리적 설계를 통해 간섭 없음을 강제한다.
 
-> 핵심 요약. 통계학자는 간섭 없음을 좁게 정의한다: 나의 잠재적 결과는 오직 나의 처치에만 의존한다. 경제학자는 동일한 아이디어를 대개 부분 균형 프레임하에서 일련의 시장 격리 가정으로 번역한다. 대부분의 실제 경제 환경에서 과제는 간섭 없음을 가정할 것인가가 아니라, 군집 무작위 설계, 네트워크 인식 추정량, 균형 조정, 또는 실제로 누가 "통제" 그룹에 해당하는지에 대한 정직한 식별 범위 진술을 통해 가정이 실패하는 방식을 어떻게 모델링하고 추정할 것인가이다.
 
 
 #### 처치 내 숨겨진 변이 없음 {#sec-no-hidden-variations-in-treatment}
@@ -33260,7 +33247,7 @@ $$
 이는 처치와 $X$가 주어졌을 때 결과의 조건부 기댓값(회귀 문제)을 추정할 수 있다면, $X$의 분포 전반에 걸쳐 그 차이를 평균함으로써 평균 처치 효과를 복원할 수 있음을 말해준다. 표준 회귀분석, $X$에 대한 매칭, 성향점수 가중치 부여, 현대의 이중 로버스트(Doubly-robust) 추정량은 모두가 공식을 구현하는 서로 다른 방식들이다. 이들은 유한 표본에서 서로 다른 결과를 내고 사양 오류에 대한 민감도도 다르지만 동일한 식별 가정을 공유한다.
 
 
-#### 인과 다이어그램과 후문 경로의 역할
+인과 다이어그램과 후문 경로의 역할
 
 방향성 비순환 그래프(DAG)를 그리는 것은 자신과 독자에게 식별 가정을 시각화하는 가장 경제적인 방법이다. DAG는 어떤 변수가 다른 어떤 변수에 영향을 미치는지 명시하도록 강제하며 처치 단위와 미처치 단위 간의 비교를 오염시킬 수 있는 후문 경로(Backdoor paths)를 드러낸다. 후문 경로는 공통 원인을 거쳐 $Z$에서 $Y$로 이어지는 모든 비인과적 경로를 의미한다. 교란(Confounding)은 정확히 열린 후문 경로의 존재를 의미하며 올바른 공변량을 조건부로 통제하면 이러한 경로가 차단되어 무시가능성이 요구하는 무작위 배정에 준하는 비교가 복원된다.
 
@@ -33407,7 +33394,7 @@ ATO는 통계적으로 로버스트하지만 해석상 다소 까다롭다. "중
 구체적인 사례가 직관을 명확하게 해준다. 재정이 풍부한 학교에만 도입된 교육 개입을 연구한다고 가정해 보자. 이 경우 모든 고소득 학생은 처치를 받고($P(Z = 1 \mid X = \text{고소득}) = 1$), 저소득 학생은 아무도 처치를 받지 않는다($P(Z = 1 \mid X = \text{저소득}) = 0$). 미처치 대조군이 없으므로 고소득 학생에 대한 처치 효과는 정의되지 않으며 처치 대조군이 없으므로 저소득 학생에 대한 처치 효과 역시 정의되지 않는다. 결과를 처치와 소득에 회귀시키면 모델이 실행되고 계수가 출력되며 신뢰구간도 생성되겠지만 그 추정치는 광고된 것과는 다른 작업을 수행하고 있다: 소득 집단 자체를 비교하고 있으며 처치 상태는 소득 대비에 흡수되어 버리ㄴ다. 어떠한 정교한 공변량 조정으로도 이를 바로잡을 수 없다. 데이터 자체가 해당 추론을 뒷받침하지 못하기 때문이다.
 
 
-#### 공통 지지 가정 위반의 진단
+공통 지지 가정 위반의 진단
 
 다행히도 공통 지지는 본 파트의 가정 중 모델을 적합하기 전에 데이터로부터 직접 확인할 수 있는 몇 안 되는 가정 중 하나이다. 세 가지 진단법이 표준적인 관행이어야 한다.
 
@@ -33437,7 +33424,7 @@ ATO는 통계적으로 로버스트하지만 해석상 다소 까다롭다. "중
 실무적 원칙: 여러 해결책을 시도하고 여러 추정치를 보고하며 결론이 선택에 얼마나 의존하는지 독자가 확인할 수 있도록 하라. 합리적인 조정 전반에 걸쳐 안정적인 추론은 강력하며 크게 요동치는 추론은 원래 사양이 무엇을 숨기고 있었는지에 대한 정보를 제공한다.
 
 
-#### 중첩 모집단에 대한 평균 처치 효과
+중첩 모집단에 대한 평균 처치 효과
 
 공통 지지가 약할 때 ATE는 전체적으로 식별되지 않을 수 있고 ATT는 추정하기 까다로울 수 있으며 이때 ATO가 유용한 제3의 길을 제공한다: 처치가 진정으로 경쟁적이었던 하위 모집단에 대해 정의된 추정 대상이다. 그 해석은 "어느 쪽으로든 갈 수 있었던 단위들에 대한 평균 처치 효과"이며 때로는 데이터셋에서 정책적으로 가장 관련성 높은 수량이고 때로는 다소 난해한 수량일 수 있다. 어느 쪽이든 경쟁 추정량들이 불안정할 때 안정적으로 추정된다. 표 @tbl-quasi-exp-causal-estimands 는 세 추정 대상을 나란히 비교하여 각각이 지칭하는 대상 모집단과 각각이 부과하는 공통 지지 요구사항의 강도를 나열한다.
 
@@ -33491,7 +33478,7 @@ ATO는 두 가지 환경에서 자연스럽게 활용된다. 첫 번째는 자�
 이 모든 예시는 동일한 구조적 접근을 보여준다: 세상이 제공한 변이를 찾고 그것이 무작위 배정에 준함을 논증하며 연구자가 달리 실행할 수 없었을 비교의 설계 뼈대로 활용하는 것이다.
 
 
-### 자연 실험이 중요한 이유
+자연 실험이 중요한 이유
 
 자연 실험의 매력은 명확하다: 대부분의 관찰 연구를 괴롭히는 선택 편향을 크게 줄여준다. 처치가 자기 선택이 아니라 외부 충격에 의해 배정될 때, 처치받은 단위들은 적어도 추정 효과를 편향시킬 만한 이유로 인해 받지 않은 단위들과 체계적으로 다르지 않게 된다. 이것이 관찰 데이터가 제공할 수 있는 무작위 배정에 가장 가까운 형태이며 자연 실험이 현대 응용 실증 문헌을 지배하는 이유다.
 
@@ -33502,7 +33489,7 @@ ATO는 두 가지 환경에서 자연스럽게 활용된다. 첫 번째는 자�
 선택 편향, 잔여 교란, 다중 검정 팽창은 현대 자연 실험 연구를 형성하는 세 가지 도전 과제이다. 앞의 두 가지는 신중한 설계와 이어지는 장들의 방법론을 통해 해결된다. 세 번째는 다음 소절의 초점이다.
 
 
-### 동일한 자연 실험의 재사용 문제
+동일한 자연 실험의 재사용 문제
 
 재사용 문제는 설명하기는 단순하지만 그 영향의 크기는 충격적이다. 단일 자연 실험이 수많은 결과 변수에 대해 탐색되고 조사된 결과의 수가 충격이 실제로 효과를 미친 결과의 수를 크게 초과할 때, 개별 연구가 올바르게 수행되었더라도 통계적으로 유의한 발견 중 위양성(False positives)의 비율이 50%를 초과할 수 있다. 대표적인 실증적 입증은 @heath2023reusing (p. 2331)으로, 정확히 이러한 상황을 시뮬레이션하여 전통적인 추론이 위양성률을 심각하게 과소평가함을 보여주었다.
 
@@ -33937,7 +33924,6 @@ RD는 모든 상황에 그대로 적용할 수 있는 만능 방법이 아니다
  - 적용: 알려진 시점에 시작되는 개입의 즉각적인 영향을 평가한다.
  - 주의: 시간 추세는 다른 사건과 교란되는 경우가 많으므로 개입 전후 추세를 신중하게 모형화해야 한다.
 
-> 주의: RDiT는 연속성 가정이 위반될 가능성 때문에, 특히 시간이 분기별·연도별처럼 성긴 간격으로 측정될 때 전통적인 RD보다 신뢰성이 낮은 경우가 많다.
 
 
 이 대표 유형을 넘어 응용 연구에서는 원래의 틀이 예상하지 못한 설정에도 RD를 적용해 왔다. 하위집단별 기준값을 갖는 정책, 여러 점수로 공동 결정되는 처치, 지리적 경계, 시간이 지나며 효과가 나타나는 처치, 그리고 실행변수에 따라 지시변수 상태가 아니라 강도가 달라지는 용량-반응 설정이 그 예다. 다음 목록은 이러한 확장을 자주 접하는 순서로 살펴본다. 각 확장은 불연속 근처 단위들을 비교한다는 RD의 핵심 논리를 유지하지만 기준값 통합, 2차원 점수 공간에서의 경계 정의, 지연효과 모형화 같은 설계 선택을 도입하므로 분석가가 이를 명시적으로 정당화해야 한다. 기본적인 Sharp-Fuzzy 선택을 마친 뒤 아래 항목을 선택지 목록으로 활용하라.
@@ -34099,13 +34085,13 @@ rd_cases <- bind_rows(lapply(1:3, make_rd_case))
 
 ggplot(rd_cases, aes(x, y)) +
     geom_point(alpha = 0.3, size = 0.6) +
-    # honest fit on each side for the two true-jump cases
+# honest fit on each side for the two true-jump cases
     geom_smooth(
         data = filter(rd_cases, fit != "spurious"),
         aes(group = interaction(case, x >= 0), method = NULL),
         method = "loess", se = FALSE, color = "#1b9e77", formula = y ~ x
     ) +
-    # spurious piecewise-linear fit that fakes a jump from curvature
+# spurious piecewise-linear fit that fakes a jump from curvature
     geom_smooth(
         data = filter(rd_cases, fit == "spurious"),
         aes(group = x >= 0),
@@ -34314,9 +34300,9 @@ rdd <- rddensity(X = x, vce = "jackknife")
 summary(rdd)
 
 ## Plot requires customization (refer to package documentation)
-## rdplotdensity(rdd, x, 
-##               xlabel = "Running Variable",
-##               ylabel = "Density")
+## rdplotdensity(rdd, x,
+## xlabel = "Running Variable",
+## ylabel = "Density")
 ```
 
 ### 위약 검정
@@ -34355,7 +34341,7 @@ $$
 여러 공변량 $Z_i$를 동시에 검정할 때는 결합분포를 시뮬레이션하여 다중 비교로 인한 위양성을 피할 수 있다. 공변량이 독립적이라면이 단계가 불필요하지만 실제로 그런 독립성은 드물다.
 
 
-### 대역폭 선택에 대한 민감도
+대역폭 선택에 대한 민감도
 
 대역폭 선택은 RD 추정에서 매우 중요하다. 대역폭을 선택하는 방법에는 다음과 같은 것들이 있다.
 
@@ -34435,7 +34421,6 @@ summary(rd_fit)
 
 `summary(rd_fit)` 출력에는 세 행이 보고된다. 통상적 추정치(편향 보정 없음), 편향 보정 추정치, 그리고 추론에 권장되는 신뢰구간을 제공하는 강건 추정치다. 양측 MSE 최적 대역폭 또는 포함오차율(CER) 최적 선택기를 사용하는 다른 설계에서는 `bwselect`를 `"msetwo"` 또는 `"cerrd"`로 바꾼다. Fuzzy 설계에서는 `fuzzy` 인자로 처치 지시변수를 제공한다.
 
-> 실무 참고: `rdrobust`가 사실상의 현대적 표준이다. `rdd` 패키지는 이전 방식에 대한 참고로 남겨 두었지만 새로운 연구에서는 대역폭 선택과 추론 모두에 `rdrobust`를 사용해야 한다.
 
 
 ### 조작에 강건한 회귀 불연속 구간
@@ -34653,7 +34638,7 @@ rdbounds_est <-
     rdbounds(
         y = df$y,
         x = df$x,
-        # covs = as.factor(df$cov),
+# covs = as.factor(df$cov),
         treatment = df$treatment,
         c = 0,
         discrete_x = FALSE,
@@ -34661,9 +34646,9 @@ rdbounds_est <-
         bwsx = c(.2, .5),
         bwy = 1,
         
-        # for median effect use 
-        # type = "qte", 
-        # percentiles = .5, 
+# for median effect use
+# type = "qte",
+# percentiles = .5,
         
         kernel = "epanechnikov",
         orders = 1,
@@ -34686,7 +34671,7 @@ rdbounds_est_tau <-
     rdbounds(
         y = df$y,
         x = df$x,
-        # covs = as.factor(df$cov),
+# covs = as.factor(df$cov),
         treatment = df$treatment,
         c = 0,
         discrete_x = FALSE,
@@ -34927,7 +34912,7 @@ $$
 
 This represents the jump in the expected outcome at the cutoff.
 
-### 추정 방법
+추정 방법
 
 1. Local Linear Regression
 
@@ -35562,7 +35547,7 @@ m_x <- true_m(x)
 y   <- m_x + rnorm(n, sd = 0.4)
 
 ## Fused lasso (the 1D analog of the FDR objective):
-##   min_m  sum (y - m)^2 + beta * sum |m_{i+1} - m_i|.
+## min_m  sum (y - m)^2 + beta * sum |m_{i+1} - m_i|.
 ## genlasso::fusedlasso1d returns the full solution path over beta.
 fit  <- fusedlasso1d(y)
 ## Pick beta by 5-fold cross-validation.
@@ -36060,7 +36045,7 @@ where:
  - Higher-quality facilities may have greater incentives to hire certified workers.
  - This induces a positive correlation between $LW_i$ and $Y_i$, biasing $\alpha_2$ upward.
 
-#### 퍼지 회귀 불연속 프레임워크
+퍼지 회귀 불연속 프레임워크
 
 The OLS model is endogenous, so we implement a [Fuzzy RD Design](#sec-fuzzy-regression-discontinuity-design) that exploits a discontinuity in licensing requirements at 120 beds.
 
@@ -36085,7 +36070,7 @@ where:
 This model estimates discontinuities in quality outcomes at the 120-bed threshold.
 
 
-#### 퍼지 회귀 불연속인 이유
+퍼지 회귀 불연속인 이유
 
 Unlike a [Sharp RD](#sec-sharp-regression-discontinuity-design), treatment is not fully determined at the cutoff:
 
@@ -36318,7 +36303,7 @@ For the continuous-dose case in which the policy threshold itself shifts, the @d
 
 For the multivalued-treatment case under the @caetano2023regression framework, no canonical CRAN package implements the estimator at the time of writing; the authors' replication code and supplementary materials provide reference implementations.
 
-### 진단
+진단
 
 The diagnostics from the [Assumptions for RD Validity](#sec-assumptions-for-rd-validity) section all carry over and gain an additional requirement: continuity must hold for the conditional expectation of the potential outcome at *each dose level*, not only on average across doses. The natural diagnostic is to plot the running variable against the outcome separately for each dose level and inspect the smoothness of each curve at the cutoff. A jump in one dose-specific curve but not in another is a red flag that the multivalued-treatment identifying assumption is being violated.
 
@@ -36327,7 +36312,7 @@ The @mccrary2008manipulation density test should be re-run with attention to the
 A pooling-validity placebo, recommended by @cattaneo2021extrapolating, is to estimate the dose-response curve on the full sample and again on subsamples that exclude one cutoff at a time. A pooled estimate that is unstable to dropping individual cutoffs is evidence that the local treatment effects at different cutoffs are not identifying the same underlying parameter, in which case the dose-specific estimates should be reported instead of the pooled curve.
 
 
-## RD가 작동하는 경우와 실패하는 경우
+RD가 작동하는 경우와 실패하는 경우
 
 이 책에서 다룬 준실험 설계 가운데 RD는 분석가에게 요구하는 것이 적다는 점에서 두드러진다. 연속형 실행변수에 대해 기관이 강제하는 명확한 기준값이 주어지면 국소 무작위화가 사실상 자연스럽게 성립하며 검토자는 해당 맥락을 잘 알지 못해도 설계를 평가할 수 있다. 이러한 투명성이 RD의 매력 중 하나다.
 
@@ -36403,7 +36388,6 @@ ITS는 보다 광범위한 시계열 접근법을 채택하여 개입 전후의 
 - 유효한 횡단면 비교 집단이 존재하지 않아 [이중차분법](#sec-difference-in-differences)이나 매칭을 적용할 수 없는 경우.
 
 
-> 요약: 시간이 배정 메커니즘으로 작동할 때, RDiT와 ITS를 사용하면 개입 전후 타이밍만을 이용하여 인과적 추정치를 도출할 수 있다. RDiT는 강력한 데이터 밀도와 국소적 가정 하에 보다 실험에 가까운 설계를 제공하는 반면, ITS는 정확한 모형 명세에 대한 의존도가 더 크지만 보다 넓고 장기적인 관점을 제공한다.
 
 이어지는 절에서는 두 접근법에 대한 추정 전략, 가정 및 진단 방법을 살펴본다.
 
@@ -36569,7 +36553,7 @@ RDiT의 주요 우려사항은 임계점에 너무 가까운 관측치를 선택
 
 이것이 고밀도 고빈도 데이터가 사치가 아니라 필수 조건인 이유다. 관측치가 희소할 때 분석가는 본질적으로 데이터에 대해 노이즈가 많은 프로세스의 한 실현값과 정책 점프를 구분하도록 요구하는 셈이며 이는 데이터가 답할 수 있는 질문이 아니다.
 
-#### McCrary 검정 적용 불가
+McCrary 검정 적용 불가
 
 표준 RD 설계의 핵심 진단 도구는 조작 여부를 감지하기 위해 구동 변수의 밀도에서 불연속성을 확인하는 [McCrary 검정](#sec-mccrary-sorting-test) [@mccrary2008manipulation]이다. 안타깝게도 시간 자체가 균일하게 분포하기 때문에 RDiT에서는이 검정을 적용할 수 없다. 이 진단 도구의 상실은 생각보다 큰 영향을 미치는데, 횡단면 RD에서는 McCrary 플롯이 누구나 한눈에 알아볼 수 있는 가시적인 위약 검증 역할을 하기 때문이다. 이것이 없으면 분석가는 절단점 근처의 행동에 관한 간접적인 논거에 더 크게 의존해야 한다. 이러한 한계로 인해 임계점 주변의 소팅, 사전 기대 또는 기타 형태의 조작(절 @sec-sorting-bunching-and-manipulation)을 배제하기가 더 어려워진다.
 
@@ -36591,7 +36575,7 @@ RDiT는 시간에 따라 변하는 처치 효과를 자연스럽게 수용하지
 
 또한이 두 가정은 서로 상호작용하지 않아야 한다. 즉, 다항식 통제항이 처치 효과의 관측되지 않은 변동과 상관관계를 갖지 않아야 한다. 이 조건이 실패하면 모형 오지정으로 인한 편향과 처치 이질성이 결합되어 증폭될 수 있다 [@hausman, p. 544]. 이러한 비상호작용 요건은 진술하기는 쉽지만 검증하기는 놀라울 정도로 어렵다. 간단한 징후는 다항식 차수나 대역폭이 변경됨에 따라 추정된 $\tau$가 요동치는 것이다. 이런 현상이 발생하면 분석가는 일반적으로 더 유연한 명세(및 이에 수반되는 분산 증가)를 수용할 것인지, 아니면 [사건 연구](#sec-event-studies)나 아래에 소개될 [단절적 시계열](#sec-interrupted-time-series) 프레임워크처럼 동학을 더 자연스럽게 다루는 설계로 전환할 것인지 선택해야 한다.
 
-#### 소팅 및 사전 기대 효과
+소팅 및 사전 기대 효과
 
 개인이 처치 배정을 조작할 수 없는 전통적인 RD 설계와 달리, 시간 기반 절단점은 잠재적인 소팅(sorting), 사전 기대(anticipation) 또는 회피(avoidance) 행동을 유발한다. 메커니즘은 단순하다. 미래의 정책 시행일은 대개 사전에 공표되므로 경제 주체들에게 조정할 시간을 제공한다. 기업은 세금 인상 전에 구매를 앞당기고 운전자는 혼잡통행료 부과 전에 이동 경로를 변경하며 소비자는 규제 발효 전에 사재기를 한다. 이러한 각 조정은 $T^*$ 근처에 처치 효과처럼 보이지만 실제로는 전략적 타이밍의 잔재인 흔적을 남긴다. 횡단면 RD에서 이에 해당하는 개념은 [소팅과 군집화(sorting and bunching)](#sec-sorting-bunching-and-manipulation) 문헌이지만 시간 차원에서의 메커니즘은 다르다. 즉, 경제 주체들이 임계점을 넘어 자신을 이동시킬 수는 없지만 자신의 행동 시점을 이동시킬 수는 있다.
 
@@ -36688,23 +36672,23 @@ RDiT가 어디에서 활용되어 왔는지 살펴보는 것은 매우 유익하
 9) 국소 데이터 및 적합된 RDiT 회귀선 플롯팅
 
 ```{.r echo="TRUE" message="FALSE" warning="FALSE" #rdit-comprehensive}
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 0. 라이브러리
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 if(!require("sandwich")) install.packages("sandwich", quiet=TRUE)
 if(!require("lmtest"))   install.packages("lmtest",   quiet=TRUE)
 library(sandwich)
 library(lmtest)
 
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 1. 합성 데이터 생성
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 set.seed(123)
 n      <- 200                # 총 시점 수
 T_star <- 100                # 절단(정책/개입) 시점
 t_vals <- seq_len(n)         # 시간 인덱스: 1, 2, ..., n
 
-## 결과변수 Y는 선형 사전 추세, 약간의 이차 성분, 
+## 결과변수 Y는 선형 사전 추세, 약간의 이차 성분,
 ## T_star에서의 +5 점프,
 ## 약간의 사인파 계절성 및 무작위 노이즈를 가짐.
 Y <- 0.4 * t_vals +          # 기본 기울기
@@ -36723,9 +36707,9 @@ df_full <- data.frame(t = t_vals, Y = Y, X = X)
 그림은 $T^*$에서의 구조적 단절을 포함하는 전체 시계열을 보여준다.
 
 ```{.r fig.cap="$T^*$에서의 구조적 단절을 포함한 전체 시계열." fig.alt="시간 t에 따른 결과변수 Y의 산점도로, 데이터 포인트들이 상승 궤적을 형성합니다. t = 100에 위치한 검은색 수직선은 결과변수의 실제 점프 위치를 표시합니다. 단절 전후로 추세는 양의 기울기를 유지하지만 절단점에서 뚜렷한 수준 증가가 나타납니다." #fig-its-full-time-series}
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 2. 전체 데이터셋 플롯 및 절단점 강조
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## par(mfrow=c(1,2))  # 두 개의 플롯을 나란히 생성
 
 ## 플롯 1: 전체 데이터
@@ -36736,9 +36720,9 @@ abline(v=T_star, lwd=2)  # 절단점 수직선
 ```
 
 ```{.r}
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 3. T_star 주변의 국소 대역폭(h)으로 제한
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 h <- 10
 df_local <- subset(df_full, abs(t - T_star) < h)
 
@@ -36746,33 +36730,33 @@ df_local <- subset(df_full, abs(t - T_star) < h)
 df_local$D           <- ifelse(df_local$t >= T_star, 1, 0)
 df_local$t_centered  <- df_local$t - T_star
 
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 4. 기본 국소 선형 RDiT 모형
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 모형:
-##   Y = alpha_0 + alpha_1*(t - T_star) + tau*D + alpha_2*(t - T_star)*D + error
+## Y = alpha_0 + alpha_1*(t - T_star) + tau*D + alpha_2*(t - T_star)*D + error
 mod_rdit_linear <- lm(Y ~ t_centered + D + t_centered:D, data = df_local)
 ## 잠재적 계열상관을 조정한 로버스트(HC) 표준오차
 res_rdit_linear <- coeftest(mod_rdit_linear, vcov = vcovHC(mod_rdit_linear, type="HC1"))
 
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 5. 국소 다항식 (이차) RDiT 모형
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 df_local$t_centered2 <- df_local$t_centered^2
 mod_rdit_quad <- lm(Y ~ t_centered + t_centered2 + D + t_centered:D + t_centered2:D,
                     data = df_local)
 res_rdit_quad <- coeftest(mod_rdit_quad, vcov = vcovHC(mod_rdit_quad, type="HC1"))
 
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 6. 도넛 접근법: 절단점 근처 관측치 제외
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 df_donut <- subset(df_local, abs(t - T_star) > 1)  # t_star +/- 1 단위 제거
 mod_rdit_donut <- lm(Y ~ t_centered + D + t_centered:D, data = df_donut)
 res_rdit_donut <- coeftest(mod_rdit_donut, vcov = vcovHC(mod_rdit_donut, type="HC1"))
 
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 7. 위약 검정: 가짜 절단점
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 T_fake <- 120
 df_placebo <- subset(df_full, abs(t - T_fake) < h)
 df_placebo$D_placebo          <-
@@ -36785,9 +36769,9 @@ mod_rdit_placebo <-
 res_rdit_placebo <-
  coeftest(mod_rdit_placebo, vcov = vcovHC(mod_rdit_placebo, type = "HC1"))
 
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 8. 확장 RDiT 모형 (X 통제)
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 mod_rdit_aug <- lm(Y ~ X + t_centered + D + t_centered:D, data = df_local)
 res_rdit_aug <- coeftest(mod_rdit_aug, vcov = vcovHC(mod_rdit_aug, type="HC1"))
 ```
@@ -36795,9 +36779,9 @@ res_rdit_aug <- coeftest(mod_rdit_aug, vcov = vcovHC(mod_rdit_aug, type="HC1"))
 그림은 국소 데이터와 적합된 RDiT 선을 보여준다.
 
 ```{.r fig.cap="절단점 $T^*$ 주변의 국소 선형 회귀." fig.alt="t = 100 주변에 초점을 맞춘 시간 t에 대한 결과변수 Y의 산점도. 데이터 포인트는 절단점 T*의 수직선 전후로 두 개의 별도 선형 추세선에 적합됩니다. 결과변수는 양쪽 모두에서 시간에 따라 증가하며 절단점에서 가시적인 점프가 나타납니다." #fig-its-local-linear-reg}
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 9. 국소 데이터 및 적합된 RDiT 선 플롯팅
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 plot(
     df_local$t,
     df_local$Y,
@@ -36812,14 +36796,14 @@ df_local_sorted <- df_local[order(df_local$t_centered),]
 pred_linear     <- predict(mod_rdit_linear, newdata = df_local_sorted)
 lines(df_local_sorted$t, pred_linear, lwd = 2)
 
-## 기준선으로 T_star 수직선 추가
+기준선으로 T_star 수직선 추가
 abline(v=T_star, lwd=2)
 ```
 
 ```{.r}
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 요약 출력 및 간략한 해석
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 
 cat(" 국소 선형 RDiT (기본):\n")
 print(res_rdit_linear)
@@ -36960,17 +36944,17 @@ ITS는 특히 공공 정책, 보건의료 연구 및 경제학에서 여러 가�
 6) 계수에 대한 간략한 해석
 
 ```{.r echo="TRUE" message="FALSE" warning="FALSE" #its-comprehensive}
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 0. 라이브러리
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 if(!require("sandwich")) install.packages("sandwich", quiet=TRUE)
 if(!require("lmtest"))   install.packages("lmtest",   quiet=TRUE)
 library(sandwich)
 library(lmtest)
 
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 1. 합성 데이터 생성
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 set.seed(456)
 n       <- 50               # 총 시점 수
 T_star  <- 25               # 개입 시점
@@ -36989,7 +36973,7 @@ t_vals  <- seq_len(n)       # 시간 인덱스: 1, 2, ..., n
 Y <- 1.0 * t_vals +                      # 기준 기울기
   ifelse(t_vals >= T_star, 10, 0) +   # T_star에서의 +10 즉각적 점프
   
-  # 개입 후 추가 기울기
+# 개입 후 추가 기울기
   ifelse(t_vals >= T_star, 0.5 * (t_vals - T_star), 0) +
   5 * sin(t_vals / 6) +                # 약한 계절성 패턴
   rnorm(n, sd = 3)                   # 무작위 노이즈
@@ -36997,9 +36981,9 @@ Y <- 1.0 * t_vals +                      # 기준 기울기
 ## 데이터 프레임으로 결합
 df_its <- data.frame(time = t_vals, Y = Y)
 
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 2. 주요 ITS 변수 정의
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ```
 
 - $T_t$: 시간 인덱스 (여기서는 'time' 변수 사용)
@@ -37013,9 +36997,9 @@ df_its$D  <- ifelse(df_its$time >= T_star, 1, 0)
 df_its$T  <- df_its$time
 df_its$P  <- ifelse(df_its$time >= T_star, df_its$time - T_star, 0)
 
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 3. 전체 데이터셋 플롯 및 개입 시점 강조
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 plot(
     df_its$T,
     df_its$Y,
@@ -37038,20 +37022,20 @@ abline(v = T_star, lwd = 2)  # 개입 시점 수직선
 - $\epsilon_t$: 오차항
 
 ```{.r}
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 4. 포괄적 ITS 모형 적합 (분할 회귀)
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 mod_its <- lm(Y ~ T + D + I(T*D) + P, data = df_its)
 
 ## 잠재적 자기상관을 고려한 로버스트 표준오차 사용
 res_its <- coeftest(mod_its, vcov = vcovHC(mod_its, type="HC1"))
 
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 5. 플롯팅을 위한 적합값 생성
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 df_its$pred_its <- predict(mod_its)
 
-## 반사실: 개입이 발생하지 않았을 경우 일어났을 상황
+반사실: 개입이 발생하지 않았을 경우 일어났을 상황
 ## (즉, D = 0 및 P = 0으로 설정하여 기준 추세만 유지)
 df_its$pred_counterfactual <- predict(
     mod_its,
@@ -37062,9 +37046,9 @@ df_its$pred_counterfactual <- predict(
 그림은 관측 데이터와 적합된 ITS를 보여준다.
 
 ```{.r fig.cap="단절적 시계열: 관측치 vs 적합치 비교." fig.alt="검은색 점은 관측된 결과를 나타내고 검은색 실선은 적합된 선형 추세를 나타내는 시계열 플롯. 대략 T = 25에서 적합선의 기울기와 수준이 변경되어 개입 시점을 표시합니다. 개입 전후 추세가 크게 다릅니다." #fig-its-observed-fitted}
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 6. 관측 데이터 및 적합된 ITS 선 플롯팅
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 plot(df_its$T, df_its$Y, pch=16,
      xlab="시간 (T)", ylab="결과변수 (Y)",
      main="ITS: 관측치 vs. 적합치")
@@ -37073,9 +37057,9 @@ lines(df_its$T, df_its$pred_its, lwd=2)
 ```
 
 ```{.r}
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 7. 요약 출력 및 간략한 해석
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 
 print(res_its)
 ```
@@ -37099,10 +37083,10 @@ plot(
     main = "ITS: 관측치 vs. 적합치 vs. 반사실"
 )
 
-## 개입 시점을 나타내는 수직선 추가
+개입 시점을 나타내는 수직선 추가
 abline(v = T_star, lwd = 2, col = "black")
 
-## 적합된 ITS 모형 추세선 추가
+적합된 ITS 모형 추세선 추가
 lines(df_its$T,
       df_its$pred_its,
       lwd = 2,
@@ -37151,8 +37135,8 @@ library(lmtest)
 
 fit <- lm(outcome ~ time + intervention + time_after, data = its_data)
 
-## 시계열 빈도에 따라 시차 선택: 분기 데이터의 경우 lag = 4가 합리적인 기본값이며
-## 잔차 기억 기간이 긴 월별/주별 데이터는 더 큰 값을 사용합니다.
+시계열 빈도에 따라 시차 선택: 분기 데이터의 경우 lag = 4가 합리적인 기본값이며
+잔차 기억 기간이 긴 월별/주별 데이터는 더 큰 값을 사용합니다.
 coeftest(fit, vcov = NeweyWest(fit, lag = 4, prewhite = FALSE))
 ```
 
@@ -37191,7 +37175,6 @@ summary(arima_fit)
 
 탐색적 모형 선택을 위해 `forecast::auto.arima(y, xreg = X)`는 AICc를 통해 `(p, d, q)` 차수 및 계절성 항을 탐색한다.
 
-> 상호 참조: 본 소절은 본 장 앞부분에서 HC 기반 예제를 이끌어낸 자기상관 논의(절 단절적 시계열 부근의 "자기상관" 검색)를 확장한 것이다. 잔차 ACF가 지속적인 의존성을 보일 때는 HC1보다 Newey-West 또는 `gls()`/`Arima()`를 선호하며 지면이 허락하는 경우 투명성을 위해 두 결과를 모두 보고하라.
 
 
 ## RDiT와 ITS의 결합
@@ -37325,17 +37308,17 @@ $$
 4) 결과 시각화.
 
 ```{.r echo="TRUE" message="FALSE" warning="FALSE" #rdit-its-hybrid}
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 0. 라이브러리
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 if(!require("sandwich")) install.packages("sandwich", quiet=TRUE)
 if(!require("lmtest"))   install.packages("lmtest",   quiet=TRUE)
 library(sandwich)
 library(lmtest)
 
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 1. 합성 데이터 생성
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 set.seed(111)
 n       <- 150             # 총 시점 수
 T_star  <- 80              # 절단/개입 시점
@@ -37376,9 +37359,9 @@ Y <- 0.3 * t_vals +                                        # 기준 기울기
 ## 데이터 프레임에 저장
 df <- data.frame(t = t_vals, Y = Y)
 
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 2. 단일 통합 모형을 위한 변수 정의
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 df$D   <- ifelse(df$t >= T_star, 1, 0)          # 개입 더미
 df$T_c <- df$t                                 # 명확성을 위해 time을 T_c로 명명
 df$P   <- ifelse(df$t >= T_star, df$t - T_star, 0)  # 개입 이후 시간
@@ -37389,9 +37372,9 @@ df$local_indicator <- ifelse(abs(df$t - T_star) < h, 1, 0)
 ## 국소 다항식을 위해 T_star를 중심으로 시간 중심화
 df$t_centered <- df$t - T_star
 
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 3. 통합 "확장 ITS + RDiT" 모형 적합
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ```
 
 $$
@@ -37409,9 +37392,9 @@ mod_hybrid <- lm(
 ## 로버스트 표준오차
 res_hybrid <- coeftest(mod_hybrid, vcov = vcovHC(mod_hybrid, type = "HC1"))
 
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 4. 예시를 위한 2단계 접근법
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 1단계: T_star ± h 주변의 추가 국소 점프를 추정하기 위한 국소 RDiT
 df_local <- subset(df, abs(t - T_star) < h)
 mod_local <- lm(Y ~ t_centered*D, data = df_local)
@@ -37431,9 +37414,9 @@ res_its_adjusted <-
 그림은 하이브리드 접근법과 2단계 접근법의 비교를 보여준다.
 
 ```{.r fig.cap="불연속성 추정을 위한 하이브리드 RDiT+ITS 접근법과 2단계 접근법의 비교." fig.alt="2개 패널 플롯. 왼쪽 패널은 t = 75에 점선 수직선이 있고 하이브리드 RDiT+ITS 모형을 나타내는 조각별 선형 파란색 적합선이 겹쳐진 시간 t에 대한 결과변수 Y의 산점도를 보여줍니다. 오른쪽 패널은 동일한 데이터와 절단점을 표시하지만 2단계 조정된 ITS 적합선을 나타내는 빨간색 선이 있습니다. 두 모형 모두 절단점에서 결과변수의 불연속성을 포착합니다." #fig-its-compare-rdit-its}
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 ## 5. 데이터 및 적합선 플롯팅
-## -------------------------------------------------------------------
+-------------------------------------------------------------------
 par(mfrow=c(1,2))
 
 ## 플롯 1: 관측 데이터 vs 적합된 "하이브리드 모형"
@@ -37733,7 +37716,7 @@ $$\
 
 합성 이중차분법의 핵심적인 혁신은 인과 추정치를 정교화하기 위해 개체 가중치와 시점 가중치를 사용한다는 점이다. 가중치를 적용함으로써 SDID는 본질적으로 표준 [이원 고정효과](#sec-two-way-fixed-effects) 회귀를 국소화(localize)하여 더욱 로버스트하고 정밀하게 만든다. 여기서 "국소화"라는 단어는 실질적인 역할을 한다. 전체 패널에 대해 하나의 전역 회귀를 실행하고 모든 도너와 모든 시점에서 [평행 추세 가정](#sec-difference-in-differences)이 성립하기를 기대하는 대신, SDID는 평행 추세가 가장 잘 방어될 수 있는 패널의 단면에 초점을 맞춘다.
 
-### 가중치를 사용하는 이유
+가중치를 사용하는 이유
 
 가중치 부여 전략은 회귀분석을 개체 차원과 시간 차원에서 상호보완적으로 국소화하는 것으로 이해하는 것이 가장 좋다.
 
@@ -37771,7 +37754,7 @@ $$\
 - 시점 가중치는 특정 기간이 추정 과정을 지배하지 않도록 방지함으로써 SDID 추정치의 정밀도를 향상시키ㄴ다. 이것이 일반 [DID](#sec-difference-in-differences) 대비 분산 감소의 원천이다. 잔여 분산을 부풀릴 수 있는 노이즈가 심한 처치 전 기간의 비중이 낮아지고 추정량은 처치 후 변화를 측정할 수 있는 더 깨끗한 기준선을 갖게 된다.
 
 
-### SDID가 DID의 타당성을 높이는 방법
+SDID가 DID의 타당성을 높이는 방법
 
 DID는 평행 추세를 가정하지만 원시 데이터는 종종이 가정을 위배한다. SDID는 개체와 시점 모두에 가중치를 부여하여 비평행 추세를 보정한다. 처치 전 추세 검정이 실패할 때 응용 연구자들이 항상 던져온 실질적인 질문은 "어떤 도너와 어떤 기간을 제외해야 하며 어떤 원칙에 입각해야 하는가?"였다. 전통적인 답변은 육안 검사부터 대안적 비교 집단에 대한 강건성 검정까지 다양했으며 이는 분석가의 재량이 크게 개입됨을 의미했다.
 
@@ -37952,19 +37935,14 @@ $$
 >
 > 1. $b = 1 \to B$ 각각에 대해:
 >
-> - $(\mathbf{Y}, \mathbf{W})$에서 $N$개의 행을 복원추출하여 ($\mathbf{Y}^{(b)}, \mathbf{W}^{(b)}$)를 얻는다.
->
 > - 표본에 처치 개체 또는 통제 개체가 부족하면 다시 추출한다.
 >
 > - ($\mathbf{Y}^{(b)}, \mathbf{W}^{(b)}$)를 사용하여 $\tau^{(b)}$를 계산한다.
 >
-> 2. 분산 계산: $\hat{V}_\tau = \frac{1}{B} \sum_{b = 1}^B (\hat{\tau}^{b} - \frac{1}{B} \sum_{b = 1}^B \hat{\tau}^b)^2$
 
 > 잭나이프 분산 추정
 >
 > 1. $i = 1 \to N$ 각각에 대해:
-> 1. $\hat{\tau}^{(-i)}$ 계산: $\arg\min_{\tau, \{\alpha_j, \beta_t\}} \sum_{j \neq i, t}(\mathbf{Y}_{jt} - \alpha_j - \beta_t - \tau \mathbf{W}_{it})^2 \hat{w}_j \hat{\lambda}_t$
-> 2. 계산: $\hat{V}_{\tau} = (N - 1) N^{-1} \sum_{i = 1}^N (\hat{\tau}^{(-i)} - \hat{\tau})^2$
 
 > 플라시보 분산 추정
 >
@@ -37972,7 +37950,6 @@ $$
 > 1. $N_c$개 중 $N_t$개를 비복원추출하여 "플라시보" 처치를 생성한다.
 > 2. 통제 집단에 대한 플라시보 처치 행렬 $\mathbf{W}_c^b$를 구성한다.
 > 3. $(\mathbf{Y}_c, \mathbf{W}_c^b)$에 기반하여 $\hat{\tau}$를 계산한다.
-> 2. 계산: $\hat{V}_\tau = \frac{1}{B}\sum_{b = 1}^B (\hat{\tau}^b - \frac{1}{B} \sum_{b = 1}^B \hat{\tau}^b)^2$
 
 ### 블록 처치
 
@@ -38097,11 +38074,11 @@ est_sub <- causalverse::synthdid_est_ate(
   treated_period_var = "year_treated",
   treat_stat_var     = "treatvar",
   outcome_var        = "y",
-  # 하위집단 ID 벡터 (unit id에서 추출)
+# 하위집단 ID 벡터 (unit id에서 추출)
   subgroup           =  c(
-    # 일부는 처치 집단
+## 일부는 처치 집단
     "11", "30", "49" ,
-    # 일부는 해당 기간 내 통제 집단
+## 일부는 해당 기간 내 통제 집단
     "20", "25", "21")
 )
 
@@ -38221,7 +38198,7 @@ library(panelView)
 library(fixest)
 library(tidyverse)
 base_stagg <- fixest::base_stagg |>
-    # treatment status
+# treatment status
     dplyr::mutate(treat_stat = dplyr::if_else(time_to_treatment < 0, 0, 1)) |> 
     select(id, year, treat_stat, y)
 
@@ -38625,7 +38602,7 @@ $$
 
 This captures the causal effect of treatment on the structural parameter $\beta$, controlling for secular trends that affect both groups.
 
-##### 예제: 정책 변화 전후의 가격 민감도
+예제: 정책 변화 전후의 가격 민감도
 
 Suppose we want to test whether a consumer protection law changes how price affects demand.
 
@@ -38661,7 +38638,7 @@ $$ Y_{igt} = \sum_{g,t} \beta_{gt} (I_{gt} \times X_{igt}) + \text{controls} + \
 
 Then test whether $\{\beta_{gt}\}$ follow a DID pattern using an F-test or linear combinations.
 
-##### 관계에 대한 동태적 효과
+관계에 대한 동태적 효과
 
 The two-stage approach can be extended to examine how relationships evolve over time:
 
@@ -38748,9 +38725,9 @@ library(fixest)
 
 od <- causaldata::organ_donations %>%
     
-    # Treatment variable
+# Treatment variable
     dplyr::mutate(California = State == 'California') %>%
-    # centered time variable
+# centered time variable
     dplyr::mutate(center_time = as.factor(Quarter_Num - 3))  
 ## where 3 is the reference period precedes the treatment period
 
@@ -38859,7 +38836,6 @@ Key points:
 - Leave out $BTB_{m (t - 1)} \theta_3$ as the reference category (to avoid perfect collinearity).
 - If $\theta_2$ is significantly different from $\theta_3$, it suggests pre-trend issues, which could indicate anticipatory effects before BTB implementation.
 
-> Substantively, @shoag2021ban show that Ban-the-box policies increased employment in high-crime neighborhoods by up to 4%, especially in the public sector and low-wage jobs. This is the first nationwide evidence that such laws improve job access for areas with many ex-offenders.
 
 
 ### 예제: 최저임금과 고용
@@ -38952,7 +38928,7 @@ Is Parallel Trends a Necessary or Sufficient Condition?
 Thus, we cannot prove DiD is valid. We can only present evidence that supports the assumptions.
 
 
-### 예제: 성적 정책이 전공 선택에 미치는 영향
+예제: 성적 정책이 전공 선택에 미치는 영향
 
 @butcher2014effects investigate how grading policies influence students' major choices. The central theory is that grading standards vary by discipline, which affects students' decisions.
 
@@ -39260,7 +39236,6 @@ fit_tw <- lm(l_homicide ~ post + factor(state) + factor(year), data = castle)
 tidy(fit_tw)
 ```
 
-> Interpretation: The TWFE estimate (approx. 0.08) equals the weighted average of the Bacon decomposition estimates, confirming the decomposition's validity.
 
 
 #### 분해 결과 시각화
@@ -39283,7 +39258,6 @@ ggplot(df_bacon) +
   causalverse::ama_theme()
 ```
 
-> Insight: This plot shows the contribution of each 2×2 DiD comparison, highlighting how estimates with large weights dominate the overall TWFE coefficient.
 
 
 Interpretation and Practical Implications
@@ -39557,7 +39531,7 @@ fit_simple <- brm(
     chains = 4, cores = 4, iter = 2000, seed = 1
 )
 
-## 계층적 시차 적용 설계: 코호트 내 사건 시간에 대한 가변 기울기 항을 통해
+계층적 시차 적용 설계: 코호트 내 사건 시간에 대한 가변 기울기 항을 통해
 ## 코호트별 사건 시간 효과를 공통 사건 시간 프로파일로 풀링
 fit_staggered <- brm(
     y ~ 1 + (1 | id) + (1 | t) + (1 + factor(e) | g),
@@ -39593,7 +39567,7 @@ mean(draws$b_w > 0.10)
 
 이러한 접근법의 학문적 계보는 @athey2006identification 의 비선형 이중차분법 모형과 @lee2015panel 의 비모수 고정효과 패널 회귀로 이어지며 두 연구 모두 교과서적 DiD가 부과하는 가법적 선형 구조를 완화한다. 우리는 개체 및 시간 효과를 미지의 함수를 통해 결과 변수에 영향을 미치는 잠재 요인으로 취급함으로써가 기초 위에서 논의를 전개한다.
 
-### 설정 및 잠재적 결과
+설정 및 잠재적 결과
 
 전형적인 이원고정효과 모형은 기간 $t$에서 개체 $i$의 미처치 결과에 대해 다음과 같이 가정한다.
 
@@ -39770,7 +39744,7 @@ $$
 
 @turjeman2023data가 제안한 시간적 인과추론(Temporal causal inference)은 동일한 역년(calendar time) 시점의 다른 모집단 대신, 동일한 모집단의 과거 이력 시점에서 통제집단을 구축하여가 문제를 해결한다. 이 아이디어는 사건이 발생할 때 서로 다른 단위들이 각자의 수명 주기나 가입 기간(tenure)의 서로 다른 단계에 있다는 사실을 활용한다. 유출 발생 3주 전에 서비스에 가입한 사용자는 참여 초기 단계에서 충격을 경험하는 반면, 3년 전에 가입한 사용자는 성숙한 관계의 깊은 단계에서 충격을 겪는다. 사용자 행동이 역년 시간보다는 주로 가입 기간에 따른 궤적을 따른다면, 사건이 발생하기 전에 관측된 오랜 코호트의 초기 가입 기간 경험을 통해 충격을 겪은 신규 코호트가 사건이 없었을 경우 어떻게 행동했을지 예측할 수 있다.
 
-### 시차를 둔 가입 기간에서 처치 및 통제 코호트로
+시차를 둔 가입 기간에서 처치 및 통제 코호트로
 
 이 설계는 패널 자료를 역년 시간이 아니라 단위가 처음 도입하거나 가입한 이후 경과한 시간인 가입 기간(tenure) 축으로 재구성한다. 사건 발생 정확히 $T$ 기간 전에 가입한 참가자 코호트를 $H_T$라고 하자. 이 처치 코호트의 경우 가입 후 $T$ 시점에 사건이 발생하며 분석가는 사건 이후 일정 기간까지 확장된 관측 구간 동안 이들의 행동을 관측하여 사건 이후의 반응을 포착한다.
 
@@ -39849,7 +39823,7 @@ ggplot(percent_active_per_group,
     theme_minimal()
 ```
 
-### 잠재적 결과와 다중 통제 코호트의 역할
+잠재적 결과와 다중 통제 코호트의 역할
 
 이 프레임워크는 표준적인 잠재적 결과(potential-outcomes) 접근법을 따른다. 각 단위에 대해 사건이 없을 때의 결과인 $Y_i(0)$와 사건이 있을 때의 결과인 $Y_i(1)$이 존재하며 이 중 하나만 관측된다. 관측되지 않은 반사실은 $\hat{Y}_i(0)$ 또는 $\hat{Y}_i(1)$로 대체(impute)되고 노출 확률은 $\hat{w}_i \in (0,1)$로 추정된다. 시간적 인과추론을 차별화하는 요소는 반사실의 출처다. 즉, 단일한 동시점의 통제집단 대신 서로 다른 시점에 가입한 여러 통제 코호트를 활용한다는 점이다.
 
@@ -40286,7 +40260,7 @@ $$
 
 이 방법은 $CATT_{g, l}$ 항들을 명시적으로 추정하여 TWFE 모형이 자주 겪는 이미 처치된 단위의 오염적 영향을 방지한다.
 
-#### 상대적 기간 빈 지시자
+상대적 기간 빈 지시자
 
 $$ D_{it}^l = \mathbb{1}(t - G_i = l) $$
 
@@ -40379,7 +40353,7 @@ $$
 이러한 이질성은 비교할 수 없는 집단들에 걸쳐 효과를 평균화하는 TWFE 추정치에 편향을 유발할 수 있다.
 
 
-#### 기술적 문제
+기술적 문제
 
 시차적 도입 환경에서 동적 처치 효과를 추정하기 위해 사건 연구 TWFE 회귀를 사용할 때는 완전 다중공선성을 피하기 위해 특정 상대적 시간 지시자를 제외해야 한다. 이는 단위 및 시간 고정효과의 존재로 인해 상대적 기간 지시자들이 선형 종속되기 때문에 발생한다.
 
@@ -40504,7 +40478,7 @@ $$
 충분한 처치 전 및 처치 후 기간이 존재하는 사건만이 분석에 포함된다(즉, 이 기준을 충족하지 못하는 사건은 제외됨).
 
 
-#### 하위 실험 열거
+하위 실험 열거
 
 정의:
 
@@ -40687,7 +40661,7 @@ cs_out <- att_gt(
     data = base_stagg,
     gname = "year_treated",
     idname = "id",
-    # xformla = "~x1",
+# xformla = "~x1",
     tname = "year"
 )
 cs <-
@@ -41092,7 +41066,7 @@ $$
 
 ```{.r}
 library(PanelMatch)
-## 모든 예제는 패키지의 비네트를 따른다
+모든 예제는 패키지의 비네트를 따른다
 ## 매칭 집합 생성
 PM.results.none <-
     PanelMatch(
@@ -41125,7 +41099,7 @@ DisplayTreatment(
               treatment = "dem", 
               outcome = "y"),
     matched.set = PM.results.none$att[1],
-    # 특정 집합 강조
+# 특정 집합 강조
     show.set.only = TRUE
 )
 ```
@@ -41144,7 +41118,7 @@ DisplayTreatment(
               treatment = "dem", 
               outcome = "y"),
     matched.set = PM.results.none$att[2],
-    # 특정 집합 강조
+# 특정 집합 강조
     show.set.only = TRUE
 )
 ```
@@ -41262,7 +41236,7 @@ msets.maha <- PM.results.maha$att
 ```
 
 ```{.r}
-## 가중치가 표시되지 않으므로 이 두 결과는 동일하게 나타난다
+가중치가 표시되지 않으므로 이 두 결과는 동일하게 나타난다
 msets.none |> head()
 msets.maha |> head()
 ## summary(msets.none)
@@ -41384,7 +41358,7 @@ PM.results.listwise <-
         use.diagonal.variance.matrix = TRUE
     )
 
-## 성향점수 기반 가중치 부여 방법
+성향점수 기반 가중치 부여 방법
 PM.results.ps.weight <-
     PanelMatch(
         lag = 4,
@@ -41501,9 +41475,9 @@ dem$moderator <- ifelse(dem$wbcode2 > 100, 1, 2)
 PM.results <-
     PanelMatch(
         lag                          = 4,
-        # time.id                      = "year",
-        # unit.id                      = "wbcode2",
-        # treatment                    = "dem",
+# time.id                      = "year",
+# unit.id                      = "wbcode2",
+# treatment                    = "dem",
         refinement.method            = "mahalanobis",
         panel.data = PanelData(panel.data = dem, 
               unit.id = "wbcode2", 
@@ -41514,7 +41488,7 @@ PM.results <-
         covs.formula                 = ~ I(lag(tradewb, 1:4)) + I(lag(y, 1:4)),
         size.match                   = 5,
         qoi                          = "att",
-        # outcome.var                  = "y",
+# outcome.var                  = "y",
         lead                         = 0:4,
         forbid.treatment.reversal    = FALSE,
         use.diagonal.variance.matrix = TRUE
@@ -41536,7 +41510,7 @@ PE.results <-
 그림은 조절 변수별 시간에 따른 추정 처치 효과를 보여준다.
 
 ```{.r fig.cap="Estimated effects of treatment over time." fig.alt="Error bar plot of treatment effects from t+0 to t+4 with increasing uncertainty." out.width="100%" fig.align="center" #fig-treatment-effect-time}
-## 리스트의 각 원소는 조절 변수의 각 수준에 해당한다
+리스트의 각 원소는 조절 변수의 각 수준에 해당한다
 plot(PE.results[[1]])
 
 ## plot(PE.results[[2]])
@@ -41570,46 +41544,18 @@ ATT는 4년의 시차($L = 4$)와 정책 변화 이후 최대 4년($F = 1, 2, 3,
 
 매칭 집합의 품질을 높이기 위해 마할라노비스 거리 매칭, 성향점수 매칭, 성향점수 가중치 부여와 같은 방법을 활용한다. 이러한 접근법을 통해 각 정제 방법의 효과성을 평가할 수 있다. 매칭 과정에서 최대 5개 매칭과 최대 10개 매칭을 모두 적용하여 허용되는 최대 매칭 수에 실증 결과가 얼마나 민감한지 조사한다. 정제 과정에 대한 자세한 내용은 웹 부록을 참조하라.
 
-> 마할라노비스 거리는 특정 공식을 통해 표현한다. 복원 추출을 허용하여 각 처치 단위를 최대 $J$개의 통제 단위와 짝짓는 것을 목표로 하며 이는 $| \mathcal{M}_{it} \le J|$로 표기한다. 시간에 따른 처치 단위와 각 통제 단위 간의 평균 마할라노비스 거리는 다음과 같이 계산한다.
->
-> $$ S_{it} (i') = \frac{1}{L} \sum_{l = 1}^L \sqrt{(\mathbf{V}_{i, t - l} - \mathbf{V}_{i', t -l})^T \mathbf{\Sigma}_{i, t - l}^{-1} (\mathbf{V}_{i, t - l} - \mathbf{V}_{i', t -l})} $$
->
-> 매칭된 통제 단위 $i' \in \mathcal{M}_{it}$에 대해 $\mathbf{V}_{it'}$는 조정할 시간 가변 공변량을 나타내며 $\mathbf{\Sigma}_{it'}$는 $\mathbf{V}_{it'}$의 표본 공분산 행렬이다. 본질적으로 시간 가변 공변량을 사용하여 표준화된 거리를 계산하고 이를 여러 시간 간격에 걸쳐 평균을 낸다.
->
-> 성향점수 매칭의 경우, 균형 잡힌 공변량을 포함하는 로지스틱 회귀 모형을 사용하여 성향점수를 도출한다. 처치 전 공변량이 주어졌을 때 처치를 받을 조건부 확률로 정의되는 성향점수는 [@rosenbaum1983central], 동일한 연도의 모든 처치 단위와 그에 매칭된 통제 단위로 구성된 데이터 하위 집합을 먼저 생성하여 추정한다. 이 로지스틱 회귀 모형은 다음과 같이 적합된다.
->
-> $$ \begin{aligned} & e_{it} (\{\mathbf{U}_{i, t - l} \}^L_{l = 1}) \\ &= Pr(X_{it} = 1| \mathbf{U}_{i, t -1}, \ldots, \mathbf{U}_{i, t - L}) \\ &= \frac{1}{1 + \exp(- \sum_{l = 1}^L \beta_l^T \mathbf{U}_{i, t - l})} \end{aligned} $$
->
-> 여기서 $\mathbf{U}_{it'} = (X_{it'}, \mathbf{V}_{it'}^T)^T$이다. 이 모형이 주어지면 모든 처치 단위 및 매칭된 통제 단위에 대한 추정 성향점수를 계산한다. 이를 통해 계산된 성향점수에 대한 매칭을 거쳐 시차 공변량을 조정할 수 있으며 그 결과 다음과 같은 거리 측도가 도출된다.
->
-> $$ S_{it} (i') = | \text{logit} \{ \hat{e}_{it} (\{ \mathbf{U}_{i, t - l}\}^L_{l = 1})\} - \text{logit} \{ \hat{e}_{i't}( \{ \mathbf{U}_{i', t - l} \}^L_{l = 1})\} | $$
->
-> 여기서 $\hat{e}_{i't} (\{ \mathbf{U}_{i, t - l}\}^L_{l = 1})$는 매칭된 각 통제 단위 $i' \in \mathcal{M}_{it}$에 대한 추정 성향점수를 나타낸다.
->
-> 원래 매칭 집합의 모든 통제 단위에 대해 거리 측도 $S_{it} (i')$가 결정되면, 연구자가 정의한 캘리퍼(caliper) 제약 조건 $C$를 충족하는 가장 가까운 통제 단위를 최대 $J$개 선택하여가 집합을 미세 조정한다. 다른 모든 통제 단위는 가중치 0을 받는다. 그 결과 각 처치 단위 $(i, t)$에 대해 정제된 매칭 집합이 생성된다.
->
-> $$ \mathcal{M}_{it}^* = \{i' : i' \in \mathcal{M}_{it}, S_{it} (i') < C, S_{it} \le S_{it}^{(J)}\} $$
 >
 > $S_{it}^{(J)}$는 원래 집합 $\mathcal{M}_{it}$의 통제 단위들 중 $J$번째로 작은 거리다.
 >
-> 가중치를 이용한 추가 정제를 위해, 처치 단위 $(i, t)$에 해당하는 매칭 집합의 각 통제 단위 $i'$에 가중치를 할당하며 더 유사한 단위에 더 큰 가중치를 부여한다. 앞서 언급한 성향점수 모형을 바탕으로 역성향점수 가중치를 활용한다.
->
-> $$ w_{it}^{i'} \propto \frac{\hat{e}_{i't} (\{ \mathbf{U}_{i, t-l} \}^L_{l = 1} )}{1 - \hat{e}_{i't} (\{ \mathbf{U}_{i, t-l} \}^L_{l = 1} )} $$
->
-> 이 모형에서 $\sum_{i' \in \mathcal{M}_{it}} w_{it}^{i'} = 1$이고 $i' \notin \mathcal{M}_{it}$에 대해는 $w_{it}^{i'} = 0$이다. 이 모형은 처치 단위와 매칭된 통제 단위의 전체 표본에 적합된다.
 
-> 공변량 균형 확인: 제안된 방법론이 회귀 방법에 비해 갖는 뚜렷한 장점은 연구자가 처치 관측치와 매칭된 통제 관측치 간의 공변량 균형을 직접 검사할 수 있다는 점이다. 이를 통해 관측된 교란 요인과 관련하여 처치 관측치와 매칭된 통제 관측치가 비교 가능한지 평가할 수 있다. 처치 전 각 시점(즉, $t' < t$)에서 처치 관측치와 매칭된 통제 관측치 간 각 공변량(예: $\mathbf{V}_{it'}$의 $j$번째 변수를 나타내는 $V_{it'j}$)의 평균 차이를 조사하기 위해가 차이를 표준화한다. 주어진 처치 전 시점에 대해 데이터셋 내 모든 처치 관측치에 걸친 각 공변량의 표준편차로 조정한다. 따라서 평균 차이는 표준편차 단위로 정량화된다. 공식적으로 $D_{it} = 1$인 각 처치 관측치 $(i,t)$에 대해 처치 전 시점 $t - l$에서의 변수 $j$에 대한 공변량 균형을 다음과 같이 정의한다.
 \begin{equation}
-> B_{it}(j, l) = \frac{V_{i, t- l,j}- \sum_{i' \in \mathcal{M}_{it}}w_{it}^{i'}V_{i', t-l,j}}{\sqrt{\frac{1}{N_1 - 1} \sum_{i'=1}^N \sum_{t' = L+1}^{T-F}D_{i't'}(V_{i', t'-l, j} - \bar{V}_{t' - l, j})^2}}
 > \label{eq:covbalance}
-> \end{equation} 여기서 $N_1 = \sum_{i'= 1}^N \sum_{t' = L+1}^{T-F} D_{i't'}$는 처치 관측치의 총수를 나타내며 $\bar{V}_{t-l,j} = \sum_{i=1}^N D_{i,t-l,j}/N$이다. 그런 다음 각 공변량 및 처치 전 시점에 대해 모든 처치 관측치에 걸쳐가 공변량 균형 측도를 집계한다.
 
 $$
 \begin{equation}
 \bar{B}(j, l) = \frac{1}{N_1} \sum_{i=1}^N \sum_{t = L+ 1}^{T-F}D_{it} B_{it}(j,l)
 \label{eq:aggbalance}
 \end{equation}
-> 마지막으로 여러 처치 전 기간에 걸친 시차 결과 변수의 균형과 시간 가변 공변량의 균형을 평가한다. 이러한 검토는 DiD 추정량 정당화에 필수적인 평행 추세 가정의 타당성을 평가하는 데 도움이 된다.
 
 균형 산점도에서 매칭 집합의 정제를 통해 공변량 균형이 어떻게 개선되는지 보여준다. 각 산점도는이 정제 전(가로축)과 정제 후(세로축)의 절대 표준화 평균 차이를 대비한다. 45도 선 아래에 위치한 점들은 정제 후 특정 시간 가변 공변량의 표준화 평균 균형이 개선되었음을 나타낸다. 대다수 변수가가 정제 과정의 혜택을 받는다. 특히 성향점수 가중치 부여(하단 패널)가 가장 유의미한 개선을 보이며 마할라노비스 매칭(상단 패널)은 보다 완만한 개선을 나타낸다.
 
@@ -41619,7 +41565,7 @@ library(causalverse)
 
 runPanelMatch <- function(method, lag, size.match=NULL, qoi="att") {
     
-    # PanelMatch 기본 매개변수
+# PanelMatch 기본 매개변수
     common.args <- list(
         lag = lag,
         panel.data = PanelData(panel.data = dem, 
@@ -41670,9 +41616,9 @@ for(method in methods) {
     }
 }
 
-## 이제 res_pm[["mahalanobis.1lag.5m"]] 등으로 res_pm에 접근할 수 있다.
+이제 res_pm[["mahalanobis.1lag.5m"]] 등으로 res_pm에 접근할 수 있다.
 
-## 처치 반전의 경우
+처치 반전의 경우
 res_pm_rev <- list()
 
 for(method in methods) {
@@ -41767,13 +41713,13 @@ create_balance_plot <- function(method, lag, sizes, res_pm, dem) {
             set.names = as.character(sizes),
             legend.position = c(0.2, 0.8),
             
-            # 컴파일된 플롯의 경우 x, y, main 라벨이 필요하지 않음
+# 컴파일된 플롯의 경우 x, y, main 라벨이 필요하지 않음
             x.axis.label = "",
             y.axis.label = "",
             main = "",
             data = dem,
             dot.size = 5,
-            # show.legend = F,
+# show.legend = F,
             them_use = causalverse::ama_theme(base_size = 32),
             covariates = c("y", "tradewb")
         )
@@ -41789,17 +41735,17 @@ for (method in methods) {
     }
 }
 
-## # Arranging plots in a 3x2 grid
+## Arranging plots in a 3x2 grid
 ## grid.arrange(plots[["mahalanobis.1lag"]],
-##              plots[["mahalanobis.4lag"]],
-##              plots[["ps.match.1lag"]],
-##              plots[["ps.match.4lag"]],
-##              plots[["ps.weight.1lag"]],
-##              plots[["ps.weight.4lag"]],
-##              ncol=2, nrow=3)
+## plots[["mahalanobis.4lag"]],
+## plots[["ps.match.1lag"]],
+## plots[["ps.match.4lag"]],
+## plots[["ps.weight.1lag"]],
+## plots[["ps.weight.4lag"]],
+## ncol=2, nrow=3)
 
 
-## 공변량의 표준화 평균 차이
+공변량의 표준화 평균 차이
 library(gridExtra)
 library(grid)
 
@@ -42002,7 +41948,7 @@ grid.arrange(
     heights = c(0.1, 0.45, 0.45)
 )
 
-## 메인 x축 및 y축 제목 추가
+메인 x축 및 y축 제목 추가
 grid.text(
     "Refinement Methods",
     x  = 0.5,
@@ -42052,7 +41998,7 @@ for (i in 1:length(res_pm)) {
     number.iterations = 1000,
     confidence.level = .95
   )
-  # 현재 원소의 이름을 res_est 리스트로 전달
+# 현재 원소의 이름을 res_est 리스트로 전달
   names(res_est)[i] <- names(res_pm)[i]
 }
 
@@ -42067,7 +42013,7 @@ for (i in 1:length(res_est)) {
         plot_PanelEstimate(res_est[[i]],
                            main = "",
                            theme_use = causalverse::ama_theme(base_size = 14))
-    # 현재 원소의 이름을 res_est_plot 리스트로 전달
+# 현재 원소의 이름을 res_est_plot 리스트로 전달
     names(res_est_plot)[i] <- names(res_est)[i]
 }
 
@@ -42089,7 +42035,7 @@ for (i in 1:length(res_pm_rev)) {
     number.iterations = 1000,
     confidence.level = .95
   )
-  # 현재 원소의 이름을 res_est_rev 리스트로 전달
+# 현재 원소의 이름을 res_est_rev 리스트로 전달
   names(res_est_rev)[i] <- names(res_pm_rev)[i]
 }
 
@@ -42104,7 +42050,7 @@ for (i in 1:length(res_est_rev)) {
         plot_PanelEstimate(res_est_rev[[i]],
                            main = "",
                            theme_use = causalverse::ama_theme(base_size = 14))
-  # 현재 원소의 이름을 res_est_plot_rev 리스트로 전달
+# 현재 원소의 이름을 res_est_plot_rev 리스트로 전달
   names(res_est_plot_rev)[i] <- names(res_est_rev)[i]
 }
 ```
@@ -42114,7 +42060,7 @@ for (i in 1:length(res_est_rev)) {
 library(doParallel)
 library(foreach)
 
-## 병렬 처리에 사용할 코어 수 감지
+병렬 처리에 사용할 코어 수 감지
 num_cores <- 4
 
 ## 병렬 백엔드 등록
@@ -42181,7 +42127,7 @@ res_est_plot_rev <-
 ## res_est_rev의 이름을 res_est_plot_rev로 전달
 names(res_est_plot_rev) <- names(res_est_rev)
 
-## 클러스터 중지
+클러스터 중지
 stopCluster(cl)
 ```
 
@@ -42248,7 +42194,7 @@ grid.arrange(
   heights = c(0.1, 0.45, 0.45)
 )
 
-## 메인 x축 및 y축 제목 추가
+메인 x축 및 y축 제목 추가
 grid.text(
   "Methods",
   x  = 0.5,
@@ -42353,7 +42299,6 @@ $R=0$으로 설정하면 FEct로 환원된다. 일반화 합성 통제(Generaliz
 
 SC는 시차를 두거나 다수의 처치 설계를 자연스럽게 처리하는 FEct/IFEct/MC와 달리, *사례 연구(case-study)* 도구(단일 또는 소수의 처치 단위, 단일 처치 시작 시점)로 보는 것이 가장 적절하다.
 
-> 핵심 요약: FEct로 시작하여 적합도를 점검하라. 시간 가변 편향이 남아 있다면 IFEct나 MC로 넘어간다. SC는 명확한 개입이 있는 소표본($N$) 사례 연구를 위해 남겨둔다.
 
 
 식별 가정:
@@ -42376,7 +42321,7 @@ SC는 시차를 두거나 다수의 처치 설계를 자연스럽게 처리하�
 
 - 처치 단위 수가 적을 때는 잭나이프(jackknife)를 사용한다 [@liu2024practical, p.166].
 
-#### 대치 방법
+대치 방법
 
 @liu2024practical 은 처치 반전과 이질적 처치 효과도 설명할 수 있다.
 
@@ -42404,7 +42349,7 @@ model.fect <-
         se = TRUE,
         parallel = TRUE,
         seed = 1,
-        # twfe
+# twfe
         force = "two-way"
     )
 print(model.fect$est.avg)
@@ -42439,7 +42384,7 @@ out.fect.p <-
         index = c("wbcode2", "year"),
         se = TRUE,
         placeboTest = TRUE,
-        # 3개 기간 사용
+# 3개 기간 사용
         placebo.period = c(-2, 0)
     )
 plot(out.fect.p, proportion = 0.1, stats = "placebo.p")
@@ -42462,7 +42407,7 @@ out.fect.c <-
         index = c("wbcode2", "year"),
         se = TRUE,
         carryoverTest = TRUE,
-        # 잔류 효과 기간 수
+# 잔류 효과 기간 수
         carryover.period = c(1, 3)
     )
 plot(out.fect.c,  stats = "carryover.p")
@@ -43084,7 +43029,7 @@ did_m <- did_multiplegt(
         time = "year",
         treatment = "treatment",
         effects = 5,
-        # controls = c("x1"),
+# controls = c("x1"),
         placebo = 2
     )
 
@@ -43561,7 +43506,7 @@ $$
 실무적인 기본값은 보수적인 접근이다. 즉, 약한 버전을 가정하여 $ACRT$를 식별하고 분석을 처치 집단 조건부 용량-반응으로 보고하는 것이다. 강한 버전은 용량 배정이 이득과 무관하다고 믿을 만한 실질적인 이유가 있을 때(예: 잠재적 결과와 직교하는 이유로 변하는 준실험적 충격에 의해 용량이 결정될 때)에만 적절하다. 두 추정량을 모두 계산할 수 있을 때 유용한 진단 방법은 ACR 곡선과 ACRT 곡선을 나란히 보고하는 것이다. 큰 격차는 이득에 따른 선택 경로가 실증적으로 작동하고 있음을 보여주는 증거이며 ACR의 모집단 수준 해석은 취약한 기반 위에 서 있게 된다.
 
 
-#### 연속형 처치에서 TWFE가 잘못되는 이유
+연속형 처치에서 TWFE가 잘못되는 이유
 
 [TWFE](#sec-two-way-fixed-effects) 회귀에서 이항 처치 지시자를 연속형 용량으로 단순히 대체하여 연속형 처치 DiD를 추정하고 싶은 유혹이 생긴다.
 
@@ -43843,7 +43788,7 @@ panel %>%
 이 절의 나머지 부분은 비선형 조건부 평균 구조의 개요, 식별 가정(조건부 사전 반응 부재 조건 및 조건부 지수 평행 추세 조건), 두 가지 동등한 추정량(대치 추정량 및 통합 QMLE)의 세 부분으로 프레임워크를 전개한다.
 
 
-#### 프레임워크 개요
+프레임워크 개요
 
 단위들이 $T$개 시점에 걸쳐 관측되는 패널 데이터셋을 고려하자. 단위들은 서로 다른 시점에 처치를 받으며(시차 도입), 목표는 서로 다른 시점에서의 [처치 집단에 대한 평균 처치 효과](sec-average-treatment-effect-on-the-treated) (ATT)를 추정하는 것이다.
 
@@ -43926,7 +43871,7 @@ $$ Y_{it} = G\left(\alpha + \sum_g \beta_g D_g + X_i \kappa + D_g X_i \eta_g + \
 
 $$ \hat{\tau}_{gr} = \frac{1}{N_g} \sum_{i: D_g=1} \left[ G\left( X_i\beta + \delta_r + \ldots \right) - G\left( X_i\beta + \ldots \right) \right] $$
 
-#### 실무에서의 정준 링크
+실무에서의 정준 링크
 
 | 조건부 평균 | LEF 밀도 | 적합한 데이터 유형 |
 |-------------------------------|-------------|--------------------------------------------|
@@ -43959,7 +43904,7 @@ $$ \hat{\tau}_{gr} = \frac{1}{N_g} \sum_{i: D_g=1} \left[ G\left( X_i\beta + \de
 1. 패키지 설치 및 로드
 
 ```{.r}
-## --- 1) 패키지 로드 ---
+--- 1) 패키지 로드 ---
 ## install.packages("fixest")
 ## install.packages("marginaleffects")
 ## install.packages("etwfe")
@@ -43985,7 +43930,7 @@ set.seed(12345)
 - 현실성을 높이기 위해 매장 고유 절편, 시간 절편 및 특이적 오차를 포함한다.
 
 ```{.r}
-## --- 2) 데이터 시뮬레이션 ---
+--- 2) 데이터 시뮬레이션 ---
 N <- 200   # 매장 수
 T <- 10    # 기간 수
 id   <- rep(1:N, each = T)
@@ -44040,13 +43985,13 @@ head(simdat)
 - `cgroup = "never"`: 전혀 처치받지 않은 단위를 비교 집단으로 지정하여 사전 및 사후 동적 효과를 사건 연구 플롯으로 확인할 수 있도록 함.
 
 ```{.r}
-## --- 3) etwfe로 추정 ---
+--- 3) etwfe로 추정 ---
 mod <- etwfe(
     fml    = logY ~ xvar,
     tvar   = time,
     gvar   = adopt_time,
     data   = simdat,
-    # xvar   = moderator, # 이질적 처치 효과
+xvar   = moderator, # 이질적 처치 효과
     vcov   = ~id,
     cgroup = "never"  # 전혀 처치받지 않은 단위를 기준선으로 설정
 )
@@ -44059,7 +44004,7 @@ mod <- etwfe(
 모든 시점과 코호트에 걸친 전반적인 처치 집단 평균 처치 효과의 단일 수치 추정치는 다음과 같다.
 
 ```{.r}
-## --- 4) 단일 수치 ATT ---
+--- 4) 단일 수치 ATT ---
 ATT_est <- emfx(mod, type = "simple")
 print(ATT_est)
 ```
@@ -44071,7 +44016,7 @@ print(ATT_est)
 처치 전후의 동학을 점검하기 위해 `type = "event"`를 통해 사건 연구를 요청한다. 이는 도입 시점을 전후하여 결과가 어떻게 변화하는지 보여준다. 음(-)의 사건 값은 처치 전 기간에 해당하고 음이 아닌 사건 값은 처치 후 기간에 해당한다. 아래 출력은 상대 기간별 동적 ATT 추정치를 보고한다.
 
 ```{.r #nldid-event-study}
-## --- 5) 사건 연구 추정치 ---
+--- 5) 사건 연구 추정치 ---
 mod_es <- emfx(mod, type = "event")
 mod_es
 
@@ -44113,7 +44058,7 @@ modelsummary(
 그림은 추정된 ETWFE 사건 연구 결과에 데이터 생성 과정의 기저 참 효과를 중첩하여 보여준다.
 
 ```{.r fig.cap="ETWFE event-study point estimates and 95% confidence band overlaid on the known true dynamic effect from the data-generating process." #fig-nldid-event-vs-true}
-## --- 6) 알려진 효과 대비 결과 시각화 ---
+--- 6) 알려진 효과 대비 결과 시각화 ---
 est_df <- as.data.frame(mod_es)
 
 range_of_event <- range(est_df$event)
@@ -44126,28 +44071,28 @@ true_df <- data.frame(
 )
 
 ggplot() +
-    # 신뢰구간 리본 (가장 뒤에 배치)
+# 신뢰구간 리본 (가장 뒤에 배치)
     geom_ribbon(
         data = est_df,
         aes(x = event, ymin = conf.low, ymax = conf.high),
         fill = "grey60",   # 밝은 회색 채우기
         alpha = 0.3
     ) +
-    # 추정 효과 선
+# 추정 효과 선
     geom_line(
         data = est_df,
         aes(x = event, y = estimate),
         color = "black",
         size = 1
     ) +
-    # 추정 효과 점
+# 추정 효과 점
     geom_point(
         data = est_df,
         aes(x = event, y = estimate),
         color = "black",
         size = 2
     ) +
-    # 알려진 참 효과 (붉은 파선)
+# 알려진 참 효과 (붉은 파선)
     geom_line(
         data = true_df,
         aes(x = event, y = true_effect),
@@ -44155,11 +44100,11 @@ ggplot() +
         linetype = "dashed",
         linewidth = 1
     ) +
-    # 수평 기준선 (0)
+# 수평 기준선 (0)
     geom_hline(yintercept = 0, linetype = "dotted") +
-    # event = 0 수직 기준선
+# event = 0 수직 기준선
     geom_vline(xintercept = 0, color = "gray40", linetype = "dashed") +
-    # x축 눈금을 정수로 설정
+# x축 눈금을 정수로 설정
     scale_x_continuous(breaks = event_breaks) +
     labs(
         title = "알려진 참 효과 대비 사건 연구 플롯",
@@ -44182,11 +44127,11 @@ ggplot() +
 plot(
     mod_es,
     type = "ribbon",
-    # col  = "",# 색상
+# col  = "",# 색상
     xlab = "",
     main = "",
     sub  = ""
-    # file = "event-study.png", width = 8, height = 5. # 파일 저장
+# file = "event-study.png", width = 8, height = 5. # 파일 저장
 )
 ```
 
@@ -44195,7 +44140,7 @@ plot(
 기간별 동적 추정치의 정돈된 숫자 요약을 원한다면 사건 연구 객체를 `modelsummary`로 전달할 수 있다.
 
 ```{.r eval="FALSE" #nldid-event-modelsummary}
-## --- 7) 동적 추정치 표 요약 ---
+--- 7) 동적 추정치 표 요약 ---
 modelsummary(
     list("Event-Study" = mod_es),
     shape     = term + statistic ~ model + event,
@@ -44605,9 +44550,9 @@ $$
 library(tidyverse)
 library(fixest)
 od <- causaldata::organ_donations %>%
-    # 처치 전 데이터만 사용
+# 처치 전 데이터만 사용
     filter(Quarter_Num <= 3) %>% 
-    # 처치 변수
+# 처치 변수
     dplyr::mutate(California = State == 'California')
 ```
 
@@ -44625,7 +44570,7 @@ causalverse::plot_par_trends(
 ```{.r fig.cap="Manual parallel trends plot showing average rates." fig.alt="Line plot displaying average Rate values across quarters, with separate lines for California (treated) and control groups, using AMA theme styling" #fig-parallel-trends-manual}
 ## 직접 구현
 od |>
-    # 처치 상태 및 시간별 그룹화
+# 처치 상태 및 시간별 그룹화
     dplyr::group_by(California, Quarter) |>
     dplyr::summarize_all(mean) |>
     dplyr::ungroup() |>
@@ -44671,7 +44616,7 @@ panel$g <- as.integer(panel$id <= n_id / 2)
 unit_fe <- rnorm(n_id)
 time_fe <- rnorm(n_t, 0, 0.1)
 
-## t = 6부터 참 효과 1 발생, 하지만 기준 기간 t = 5에서
+t = 6부터 참 효과 1 발생, 하지만 기준 기간 t = 5에서
 ## 처치 집단에 일회성 -1의 하락 발생
 panel$y <- 1 + 2 * panel$g +
     1 * (panel$t >= 6 & panel$g == 1) -
@@ -44797,10 +44742,10 @@ library(causaldata)
 
 ## 데이터셋 로드
 od <- causaldata::organ_donations %>%
-    # 처치 전 데이터만 사용
+# 처치 전 데이터만 사용
     dplyr::filter(Quarter_Num <= 3) %>%
     
-    # 가짜(위약) 처치 변수 생성
+# 가짜(위약) 처치 변수 생성
     dplyr::mutate(
         FakeTreat1 = as.integer(State == 'California' &
                                     Quarter %in% c('Q12011', 'Q22011')),
@@ -44916,7 +44861,7 @@ $$
 12. 내생적 타이밍: 전략적 결정으로 인해 처치 시점이 내생적인 경우 제어 함수를 포함한 도구변수 접근법을 사용할 수 있다.
 13. 의심스러운 반사실: 통제 단위가 신뢰할 만한 반사실로 기능하지 못할 때 성향점수 매칭이나 [합성 통제](#sec-synthetic-control), [합성 DiD](#sec-synthetic-difference-in-differences), [패널 매치 추정량](#sec-panel-match-did-estimator-with-in-and-out-treatment-conditions) 및 [반사실 추정량](#sec-counterfactual-estimators) 군을 활용할 수 있다.
 
-### DiD에서의 매칭 방법
+DiD에서의 매칭 방법
 
 매칭 방법은 처치 전 관측 변수를 바탕으로 처치 단위와 통제 단위의 균형을 맞추기 위해 인과추론에서 자주 사용된다. DiD 맥락에서 매칭은 다음을 돕는다.
 
@@ -45039,9 +44984,9 @@ $$
 ```{.r}
 library(fixest)
 base_did_log0_cali <- base_did_log0 |> 
-    # 최소값 구하기
+# 최소값 구하기
     mutate(min_y = min(y[y > 0])) |> 
-    # 결과 정규화
+# 결과 정규화
     mutate(y_norm = y / min_y)
 
 my_regression <-
@@ -45326,7 +45271,7 @@ ecic_plot(mod_res)
 
 `qte` 패키지는 다양한 분위수 기반 추정량을 통합 인터페이스로 제공한다. 무작위 배정 설정에서의 QTET, [조건부 독립 가정(CIA)](#sec-conditional-ignorability-assumption) 하에서의 QTE 및 QTET, 분포 DiD 가정 하에서의 QTET, 그리고 2기간 부분 식별 경계의 네 가지를 살펴본다.
 
-#### 무작위 배정 설정에서의 분위수 처치 효과
+무작위 배정 설정에서의 분위수 처치 효과
 
 처치가 무작위로 배정될 때 처치 및 미처치 하위 모집단이 교환 가능하므로 QTE와 QTET는 일치한다.
 
@@ -45350,7 +45295,7 @@ ggqte(jt.rand)
 무작위 실험 이외의 환경에서 분위수 효과를 식별하려면 추가 가정이 필요하다. 관측된 공변량 벡터를 조건으로 할 때 처치가 무작위 배정과 다름없다는 조건부 독립 가정(CIA) 하에서 QTE와 QTET가 모두 식별된다.
 
 ```{.r}
-## CIA 하에서의 QTE: 모집단 수준 분위수 효과
+CIA 하에서의 QTE: 모집단 수준 분위수 효과
 jt.cia <- ci.qte(
     re78 ~ treat,
     xformla =  ~ age + education,
@@ -45360,7 +45305,7 @@ jt.cia <- ci.qte(
 summary(jt.cia)
 ggqte(jt.cia)
 
-## CIA 하에서의 QTET: 처치 하위 모집단 내 분위수 효과
+CIA 하에서의 QTET: 처치 하위 모집단 내 분위수 효과
 jt.ciat <- ci.qtet(
     re78 ~ treat,
     xformla =  ~ age + education,
@@ -45523,7 +45468,7 @@ CiC와 QDiD는 모두 패널 환경에서 분위수 처치 효과를 제공하�
 가능하다면 CiC, QDiD, 표준 DiD 추정치를 함께 보고하는 것이 좋다. 세 추정치의 일치는 결과가 특정 가정에 의존하지 않음을 보여주어 신뢰성을 높여준다.
 
 
-## 추론 및 진단
+추론 및 진단
 
 CiC의 추론은 거의 항상 붓스트랩을 통해 수행된다.
 
@@ -45569,7 +45514,7 @@ CiC가 특히 유용한 응용 분야:
 
 합성 통제 방법(Synthetic Control Method; SCM)은 단 하나의 처치 단위만 존재할 때 연구자가 미처치 기증자 풀(donor pool)로부터 합성 비교 집단을 구축해야 하는 상황에서 사용되는 강력한 인과추론 도구다. @abadie2003economic 에 의해 도입되고 이후 @abadie2010synthetic 에 의해 확장된 SCM은 정책 평가 및 비즈니스 분석에서 널리 사용되는 방법이 되었다. 방법론에 대한 종합적인 검토는 @abadie2021using 을 참조하라.
 
-## 이 방법이 존재하는 이유
+이 방법이 존재하는 이유
 
 동기가 되는 문제는 실증 연구에서 흔히 발생한다. 단 하나의 주가 세제 개혁을 통과시키거나, 단 하나의 기업이 새로운 가격 정책을 시행하거나, 단 하나의 국가가 고정환율제를 채택할 때 분석가는 해당 개입이 없었더라면 일어났을 일을 추정해야 한다. 처치 단위가 하나뿐인 경우 [이중차분법(DiD)](#sec-difference-in-differences)의 비교 집단 기법은 취약하다. 깔끔한 반사실을 구성하는 명백한 "통제 주"나 "통제 기업"이 존재하지 않으며 선택된 단일 기증자는 분석 자체만큼이나 연구자의 주관적 설계 선택에 좌우된다. 합성 통제는 통제 집단에 대한 *판단*을 *구축*으로 대체함으로써 이에 대응한다. 즉, 단일 비교 단위를 선택하는 대신 여러 기증자 단위의 가중 평균을 구성하되, 합성 단위가 처치 전 기간 동안 처치 단위의 결과 및 특성을 가능한 한 밀접하게 추적하도록 가중치를 선택한다. 그런 다음 개입 후 처치 단위와 그 합성 대응물 간의 격차로부터 처치 효과를 도출한다.
 
@@ -46094,7 +46039,7 @@ dataprep.out <- dataprep(
     ),
     predictors.op = "mean",
     time.predictors.prior = 1964:1969,
-    # 사전 기간
+# 사전 기간
     special.predictors = list(
         list("gdpcap", 1960:1969, "mean"),
         list("sec.agriculture", seq(1961, 1969, 2), "mean"),
@@ -46110,9 +46055,9 @@ dataprep.out <- dataprep(
     unit.names.variable = "regionname",
     time.variable = "year",
     treatment.identifier = 17,
-    # 바스크 지역
+# 바스크 지역
     controls.identifier = c(2:16, 18),
-    # 통제 지역
+# 통제 지역
     time.optimize.ssr = 1960:1969,
     time.plot = 1955:1997
 )
@@ -46124,7 +46069,7 @@ dataprep.out <- dataprep(
 synth.out = synth(data.prep.obj = dataprep.out, method = "BFGS")
 ```
 
-#### 3단계: 처치 효과 평가
+3단계: 처치 효과 평가
 
 ```{.r}
 gaps = dataprep.out$Y1plot - (dataprep.out$Y0plot %*% synth.out$solution.w)
@@ -46275,7 +46220,7 @@ plot_microsynth(sea2)
 | 외부 사건 | 거시경제 충격, 규제 변화, 언론 보도 |
 : 사건 연구에서 분석하는 내부 사건과 외부 사건의 범주 및 대표 사례. {#tbl-event-study-event-types}
 
-## 방법론의 확산 과정
+방법론의 확산 과정
 
 사건 연구가 서로 다른 세 분야에서 핵심 도구가 된 과정을 살펴볼 필요가 있다. 금융에서 경영으로, 다시 마케팅으로 확산된 경로는이 방법이 실제로 제공하는 것과 제공하지 못하는 것을 명확히 보여준다.
 
@@ -46327,7 +46272,7 @@ plot_microsynth(sea2)
 
 이 네 가지 가정은 비정상 수익률이 사건 기간의 가격 반응을 측정한다는 *기술적* 주장을 뒷받침한다. 이 주장을 사건 자체가 가격 반응을 일으켰다는 *인과적* 주장으로 격상하려면 추가적인 설계 수준의 가정(동시적 교란 사건 부재, 사전 예상 부재, 기준 모형의 올바른 설정)이 필요하다.
 
-## 사건 연구 수행 단계
+사건 연구 수행 단계
 
 ### 1단계: 사건 식별
 
@@ -46360,7 +46305,6 @@ plot_microsynth(sea2)
 | [@sorescu, p. 194] | 사건 전 100일 |
 : 대표적 사건 연구 논문들의 추정 기간 설정. {#tbl-event-study-estimation-window}
 
-> 정보 유출 우려: 사건 전 정보 유출로 인한 편향을 피하기 위해 연구자는 뉴스 소스(LexisNexis, Factiva, RavenPack 등)를 통해 사전 루머가 있었는지 점검해야 한다.
 
 
 #### 사건 기간
@@ -46533,19 +46477,19 @@ library(tidyverse)
 
 ## 데이터셋 로드
 df_leverage_effect <- read.csv("data/leverage_effect.csv.gz") %>%
-    # 활성 기업 필터링
+# 활성 기업 필터링
     filter(costat == "A") %>%
-    # 결측치 제거
+결측치 제거
     drop_na() %>%
-    # 주주 가치 (SHV) 계산
+# 주주 가치 (SHV) 계산
     mutate(shv = prcc_f * csho) %>%
-    # 영업 비즈니스 가치 (OBV) 계산
+# 영업 비즈니스 가치 (OBV) 계산
     mutate(obv = shv - ivst + dd1 + dltt + pstk) %>%
-    # 레버리지 효과 계산
+# 레버리지 효과 계산
     mutate(leverage_effect = obv / shv) %>%
-    # 무한대 및 음의 레버리지 효과 제거
+무한대 및 음의 레버리지 효과 제거
     filter(is.finite(leverage_effect), leverage_effect > 0) %>%
-    # 기업 내 통계량 계산
+# 기업 내 통계량 계산
     group_by(gvkey) %>%
     mutate(
         within_mean_le = mean(leverage_effect, na.rm = TRUE),
@@ -48200,34 +48144,34 @@ library(MASS)  # For generalized inverse if needed
 ## General IV-GMM function with clustering
 gmmcl <- function(formula, instruments, data, cluster_var, lambda = 1e-6) {
   
-  # Ensure cluster_var exists in data
+# Ensure cluster_var exists in data
   if (!(cluster_var %in% colnames(data))) {
     stop("Error: Cluster variable not found in data.")
   }
   
-  # Step 1: Initial GMM estimation (identity weighting matrix)
+# Step 1: Initial GMM estimation (identity weighting matrix)
   initial_gmm <- gmm(formula, instruments, data = data, vcov = "TrueFixed", 
                       weightsMatrix = diag(ncol(model.matrix(instruments, data))))
   
-  # Extract residuals
+# Extract residuals
   u_hat <- residuals(initial_gmm)
   
-  # Matrix of instruments
+# Matrix of instruments
   Z <- model.matrix(instruments, data)
   
-  # Ensure clusters are treated as a factor
+# Ensure clusters are treated as a factor
   data[[cluster_var]] <- as.factor(data[[cluster_var]])
   
-  # Compute clustered weighting matrix
+# Compute clustered weighting matrix
   cluster_groups <- split(seq_along(u_hat), data[[cluster_var]])
   
-  # Remove empty clusters (if any)
+# Remove empty clusters (if any)
   cluster_groups <- cluster_groups[lengths(cluster_groups) > 0]
   
-  # Initialize cluster-based covariance matrix
+# Initialize cluster-based covariance matrix
   S_cluster <- matrix(0, ncol(Z), ncol(Z))  # Zero matrix
   
-  # Compute clustered weight matrix
+# Compute clustered weight matrix
   for (indices in cluster_groups) {
     if (length(indices) > 0) {  # Ensure valid clusters
       u_cluster <- matrix(u_hat[indices], ncol = 1)  # Convert to column matrix
@@ -48236,20 +48180,20 @@ gmmcl <- function(formula, instruments, data, cluster_var, lambda = 1e-6) {
     }
   }
   
-  # Normalize by sample size
+# Normalize by sample size
   S_cluster <- S_cluster / nrow(data)
   
-  # Ensure S_cluster is invertible
+# Ensure S_cluster is invertible
   S_cluster <- S_cluster + lambda * diag(ncol(S_cluster))  # Regularization
 
-  # Compute inverse or generalized inverse if needed
+# Compute inverse or generalized inverse if needed
   if (qr(S_cluster)$rank < ncol(S_cluster)) {
     S_cluster_inv <- ginv(S_cluster)  # Use generalized inverse (MASS package)
   } else {
     S_cluster_inv <- solve(S_cluster)
   }
 
-  # Step 2: GMM estimation using clustered weighting matrix
+# Step 2: GMM estimation using clustered weighting matrix
   final_gmm <- gmm(formula, instruments, data = data, vcov = "TrueFixed", 
                     weightsMatrix = S_cluster_inv)
   
@@ -49094,7 +49038,7 @@ GMM 프레임워크에서 $J = mF \sim \chi^2_{m-k}$ 통계량을 이용하여 �
 동분산성 가정 하에서 2SLS에 적용되는 과식별 검정이다 [@sargan1958estimation].
 
 
-#### 과식별 제약에 대한 J-검정의 표준적 해석이 오해를 부르는 이유
+과식별 제약에 대한 J-검정의 표준적 해석이 오해를 부르는 이유
 
 J-검정에서 귀무가설을 기각하지 못하는 것이 도구변수의 타당성을 "입증"하는 것은 아니다 [@deaton2010instruments; @parente2012cautionary].
 
@@ -49190,7 +49134,7 @@ $$
 3. 도구변수 집계: 유사 도구변수들을 소수의 집계 변수로 결합.
 
 
-### IV 추정에서의 이질적 효과
+IV 추정에서의 이질적 효과
 
 #### 일정한 처리효과와 이질적 처리효과의 비교
 
@@ -49206,7 +49150,7 @@ $$
 
 여러 도구변수가 각각 다른 LATE를 식별할 때, 이를 결합한 과식별 2SLS는 이들의 가중 평균을 추정하며 J-검정은 외생성 위배가 아닌 효과 이질성으로 인해 기각될 수 있다.
 
-#### 순방향 설계: 한계 처리효과
+순방향 설계: 한계 처리효과
 
 @mogstad2024instrumental 등이 강조하는 순방향 설계(Forward Engineering)는 처음부터 처치 효과의 미관측 이질성을 명시적으로 모형화한다. 한계 처치 효과(MTE) 프레임워크 [@heckman2005structural]는 처치 선택 성향 $U_i = u$에 따른 처치 효과 곡선 $\text{MTE}(u)$를 추정하여 ATE, LATE, TT 등을 통합적으로 도출한다.
 
@@ -49577,7 +49521,7 @@ $$Z_{it} = \sum_{k} s_{ik0}\, g_{kt}$$
 
 점유율 시차 변형(Share-shift variant)은 시차 $L$을 두어 $Z_{it}^{(L)} = \sum_{k} \tilde s_{ik,t-L}\, g_{kt}$로 구성한다. 점유율이 시간에 따라 변화하므로 단위 고정효과와 공선성을 피할 수 있어 장기 패널에 유용하다. 추정은 2단계 최소제곱법(2SLS)으로 수행된다.
 
-#### 식별: 유효성을 위한 두 가지 경로
+식별: 유효성을 위한 두 가지 경로
 
 배제제약은 집계 직교성 조건 $\mathbb{E}\!\left[\frac{1}{N}\sum_{i} Z_{it} u_{it}\right] = 0$으로 표현된다.
 
@@ -49683,7 +49627,7 @@ $$\tilde z_i = z_i - \mu_i$$
 
 $$\tilde{\mu}_D^{(-i)}(q) = \frac{1}{n_q - 1} \sum_{j \ne i, Q_j = q} D_j$$
 
-#### 검정 및 진단
+검정 및 진단
 
 - 배제제약 검정: 예측된 관대함 점수에 대해 사전 공변량들의 균형(covariate balance)을 회귀분석으로 점검한다.
 - 단조성 검정: 엄격한 판사가 승인할 사건은 관대한 판사도 반드시 승인해야 한다는 조건($D_i(q) \ge D_i(q')$)을 Kitagawa 검정 및 Frandsen-Lefgren-Leslie 검정으로 진단한다 [@kitagawa2015test; @frandsen2023judging].
@@ -49840,14 +49784,12 @@ summary(biprobit_fit)
 
 매칭은 관측된 특성이 유사한 처치집단과 비교집단을 구성하여 잠재적인 편향의 원인을 제거하거나 최소화하는 전략이다. 이를 통해 두 집단의 결과에서 관측되는 차이를 다른 요인보다 처치 자체에 더 신뢰성 있게 귀속할 수 있다. 관찰연구에서는 특히 여러 처치 전 결과를 이용할 수 있을 때 선택 편향 문제를 다루기 위해 매칭을 [이중차분법(DiD)](#sec-difference-in-differences) 기법과 결합하는 경우가 많다.
 
-> 매칭은 "처치집단과 통제집단의 공변량 분포를 같게(또는 '균형을') 만들려는 모든 방법"으로 정의된다. [@stuart2010matching, pp. 1]
 
 매칭은 다음과 같은 경우에 특히 유용하다.
 
 - 후속 연구처럼 결과가 아직 관측되지 않았고 균형 잡힌 처치/통제집단을 구성하려는 경우.
 - 결과를 이용할 수 있지만 모형 의존성을 줄이고 강건성을 높이려는 경우.
 
-> 개념적으로 매칭은 결측자료(missing data)의 관점에서도 이해할 수 있다. 어떤 단위에 대해도 두 잠재적 결과 $(Y_i^T, Y_i^C)$를 동시에 관측할 수 없기 때문이다. 따라서가 주제는 [대치법(Missing Data)](#sec-missing-data)과 밀접하게 관련된다.
 
 ## 서론과 동기
 
@@ -49894,7 +49836,6 @@ $$ \frac{1}{N_T} \sum_{i=1}^{N_T} \left(Y_i^T - \frac{1}{N_{C_i}} \sum_{j \in \m
 - 매칭에는 ATE나 ATT의 표준오차에 대한 닫힌 형식(closed-form)의 해가 없다.
 - 따라서 불확실성은 부트스트래핑으로 추정한다.
 
-> 참고: 매칭은 매칭되지 않은 관측치를 버려 유효 표본 크기를 줄이므로 [통상최소제곱법(OLS)](#sec-ordinary-least-squares)보다 표준오차가 커지는 경향이 있다.
 
 
 ### "가지치기"로서의 매칭
@@ -50029,7 +49970,7 @@ $$
 - [처치받은 집단에 대한 평균 처치효과(ATT)](#sec-average-treatment-effect-on-the-treated): 처치 단위에 한정한 인과효과.
 
 
-## 매칭 단계
+매칭 단계
 
 매칭 분석은 네 단계의 파이프라인으로 구현한다. 두 단위의 근접성을 측정할 방법을 고르고, 짝을 구성할 알고리즘을 선택하고, 그 결과로 얻은 비교집단이 실제로 균형을 이루는지 확인한 다음, 처치효과를 추정한다. 아래의 세 요소인 성향점수, 거리 측도, 그리고 무시 가능성을 만족한다고 가정한 공변량 집합은 이후 단계마다 반복해서 사용된다.
 
@@ -50065,7 +50006,6 @@ $$
 | 로짓 성향점수 | $D_{ij} = \lvert \text{logit}(e_i) - \text{logit}(e_j) \rvert$ | 분포의 꼬리에서 더 안정적 |
 +----------------------------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
-> 팁: 고차원에서는 정확 매칭과 마할라노비스 매칭의 성능이 낮다. 마할라노비스 거리와 성향점수 캘리퍼를 결합하면 강건성을 높일 수 있다 [@rubin2000combining].
 
 종단 자료를 위한 고급 방법:
 
@@ -50115,9 +50055,9 @@ $$
 - 중첩이 부족하면 일부 비교가 경험적 매칭이 아니라 외삽(extrapolation)임을 의미한다.
 
 
-### 3단계: 매칭 품질 진단
+3단계: 매칭 품질 진단
 
-#### 균형 진단
+균형 진단
 
 매칭은 처치 단위와 통제 단위의 공변량 분포를 균형화하는 것을 목표로 한다. 매칭이 잘 된 표본은 다음을 만족한다.
 
@@ -50334,7 +50274,6 @@ data.frame(
 
 그 결과 추정대상과 민감도가 달라진다.
 
-> 중요 주의사항: [OLS](#sec-ordinary-least-squares) 추정치가 비관측 교란으로 편향되어 있다면 매칭 추정치도 편향될 가능성이 높다. 두 방법 모두 [관측변수에 의한 선택](#sec-selection-on-observables) 가정에 의존한다.
 
 특히 ATT 추정에서 매칭과 회귀의 추정대상이 어떻게 다른지 살펴본다.
 
@@ -50416,7 +50355,7 @@ $$
 $$
 
 
-### 해석: 가중치의 차이
+해석: 가중치의 차이
 
 매칭과 회귀의 차이는 공변량별 처치효과 $\delta_x$에 어떤 가중치를 부여하는지에 있다.
 
@@ -50559,7 +50498,7 @@ data("lalonde")
 여기서는 성향점수 매칭을 사용한 ATT 추정에 집중한다.
 
 
-#### 2단계: 초기 불균형 평가
+2단계: 초기 불균형 평가
 
 먼저 매칭 전 처치집단과 통제집단 간의 불균형을 평가한다.
 
@@ -50848,7 +50787,7 @@ $$
 이 가정들은 표본 내의 각 단위에 대해 비교 가능한 처치 및 비처치 단위를 관측할 수 있음을 보장한다. 특히 고차원 공변량 공간에서 양성성 위반은 성향점수 매칭의 치명적인 약점이다.
 
 
-#### PSM을 더 이상 권장하지 않는 이유
+PSM을 더 이상 권장하지 않는 이유
 
 직관적인 매력에도 불구하고 최근 문헌은 인과추론에 성향점수 매칭을 사용하는 것에 대해 강한 주의를 당부하고 있다 [@king2019propensity]. 주된 비판은 다음과 같다.
 
@@ -51050,7 +50989,7 @@ $U_i$가 시간불변이고 처치 배정과 결과 모두에 영향을 미친�
 4. 남은 편향은 오직 $X_i$의 차이에 의해서만 발생하며 이는 매칭을 통해 보정된다.
 
 
-##### 실무 구현 단계
+실무 구현 단계
 
 1. 정적 Look-Ahead PSM (Static LA-PSM):
 
@@ -51152,7 +51091,7 @@ $$
 - $S^{-1}$은 공변량 공간을 표준화하고 탈상관화(decorrelate)하는 역할을 하여 공변량의 척도(scale)와 상관관계를 모두 보정한다.
 
 
-#### 유클리드 거리를 사용하지 않는 이유
+유클리드 거리를 사용하지 않는 이유
 
 유클리드 거리는 다음과 같이 정의된다.
 
@@ -51283,7 +51222,7 @@ CEM은 분석이 데이터가 허용하는 것보다 더 정밀해서는 안 된
 library(cem)
 data(LeLonde)
 
-## 결측치 제거
+결측치 제거
 Le <- na.omit(LeLonde)
 
 ## 처치군 및 통제군 인덱스
@@ -51503,7 +51442,7 @@ mout <- Match(
 ## 처치효과 추정치 요약
 summary(mout)
 
-## 매칭 후 균형 평가
+매칭 후 균형 평가
 mb <- MatchBalance(
   treat ~ age + educ + black + hisp + married + nodegr +
     u74 + u75 + re75 + re74 + I(re74 * re75),
@@ -51762,17 +51701,17 @@ df$match.weights <- 0
 
 ## 통제군 대비 각 처치군의 쌍별 매칭 수행
 for (treat in treatment_levels) {
-  # 통제군과 현재 처치군으로 부분집합 구성
+# 통제군과 현재 처치군으로 부분집합 구성
   subset_df <- df[df$treat %in% c(treat, control_level), ]
   
-  # 이항 처치 변수 생성: 현재 처치군이면 1, 통제군이면 0
+# 이항 처치 변수 생성: 현재 처치군이면 1, 통제군이면 0
   subset_df$treat_binary <- as.numeric(subset_df$treat == treat)
 
-  # 매칭 실행
+# 매칭 실행
   m.out <- matchit(treat_binary ~ cov1 + cov2 + cov3,
                    data = subset_df, method = "nearest")
 
-  # 가중치를 원본 데이터셋에 할당
+# 가중치를 원본 데이터셋에 할당
   matched_units <- names(m.out$weights[m.out$weights > 0])
   df[matched_units, "match.weights"] <- m.out$weights[matched_units]
 }
@@ -51820,20 +51759,20 @@ df$match.weights <- 0
 
 ## 처치 단위를 통제군에 매칭하여 ATC 추정
 for (treat in treatment_levels) {
-  # 현재 처치군과 통제군으로 부분집합 구성
+# 현재 처치군과 통제군으로 부분집합 구성
   subset_df <- df[df$treat %in% c(treat, control_level), ]
   
-  # 이항 처치 변수: 통제군을 초점 집단으로 설정 (통제군 = 1, 처치군 = 0)
+# 이항 처치 변수: 통제군을 초점 집단으로 설정 (통제군 = 1, 처치군 = 0)
   subset_df$treat_binary <- as.numeric(subset_df$treat == control_level)
 
-  # 매칭 수행
+# 매칭 수행
   m.out <- matchit(treat_binary ~ cov1 + cov2 + cov3,
                    data = subset_df, method = "nearest")
   
-  # 매칭된 단위 ID 추출
+# 매칭된 단위 ID 추출
   matched_ids <- names(m.out$weights[m.out$weights > 0])
   
-  # 가중치를 원본 데이터셋에 할당
+# 가중치를 원본 데이터셋에 할당
   df[matched_ids, "match.weights"] <- m.out$weights[matched_ids]
 }
 
@@ -52013,7 +51952,7 @@ $$
 
 실증 문헌은 유용한 본보기를 제공한다. @kluve2012evaluating 은 독일의 연속 용량 훈련 프로그램에 @hirano2004propensity 프레임워크를 적용하여 중간 정도의 훈련 기간이 가장 효과적인 역U자형 용량-반응을 도출했다. @flores2012estimating 은 Job Corps 프로그램이 노동시장 결과에 미치는 용량-반응 곡선을 추정하기 위해 GPS 프레임워크를 사용했으며 용량은 교육 노출 기간으로 측정되었다. 두 논문 모두 실질적인 기여 외에도 방법론적으로 훌륭한 실습 예제 역할을 한다.
 
-#### 예제: 시연을 먼저, 실제 적용을 다음으로
+예제: 시연을 먼저, 실제 적용을 다음으로
 
 GPS 용량-반응 추정기를 두 단계로 나누어 실습한다. 첫 번째 단계는 베이스 R에서 @hirano2004propensity 의 2단계 절차를 처음부터 직접 구현하여 GPS의 작동 원리, 균형 특성, 용량-반응 평균화 메커니즘을 모두 눈으로 확인한다. 두 번째 단계는 동일한 데이터에 대해 공식 발행된 `CausalGPS` 패키지를 호출한다.
 
@@ -52057,7 +51996,7 @@ gps_mean_model <- lm(D ~ X1 + X2 + X3, data = dat)
 mu_hat         <- predict(gps_mean_model)
 sigma_hat      <- sd(residuals(gps_mean_model))
 
-## GPS = f_{D|X}(D | X), 실제 처치값에서 평가
+GPS = f_{D|X}(D | X), 실제 처치값에서 평가
 dat$R <- dnorm(dat$D, mean = mu_hat, sd = sigma_hat)
 summary(dat$R)
 ```
@@ -52132,7 +52071,7 @@ ggplot(curve_df, aes(x = D)) +
 
 그림은 추정된 용량-반응을 참된 곡선과 비교한다. 추정량은 형태(역U자형)와 대략적인 최댓값 위치를 모두 회복하여 GPS 층화 논리가 의도한 역할을 수행함을 보여준다. 실제 응용에서는 참된 곡선을 알 수 없으므로 분석자는 부트스트랩 신뢰대와 함께 실선만을 보고하게 된다.
 
-##### 실무 적용: `CausalGPS` 패키지
+실무 적용: `CausalGPS` 패키지
 
 실제 연구 작업에는 Khoshnevis, Wu, Braun이 개발한 CRAN의 `CausalGPS` 패키지를 권장한다. 이 패키지는 유연한(머신러닝 기반) 밀도 추정과 노출-반응 함수를 위한 내장 비모수 추정량을 지원하며 GPS 기반 용량-반응 분석의 매칭 및 가중 버전을 모두 구현한다. 파이프라인은 GPS 추정, 매칭 또는 가중 대응 가중치 계산, 가상 모집단 생성, 용량-반응 곡선 추정의 4단계로 구성된다.
 
@@ -52164,7 +52103,7 @@ cw_object <- compute_counter_weight(
   scale        = 0.5
 )
 
-## 3단계: 가상 모집단 구축 (각 행은 실제로 받은 용량에서 재균형된 모집단에
+3단계: 가상 모집단 구축 (각 행은 실제로 받은 용량에서 재균형된 모집단에
 ## 자신과 같은 단위가 몇 개나 나타날지를 나타내는 가중치를 가짐).
 pseudo_pop <- generate_pseudo_pop(
   .data               = m_d,
@@ -52200,7 +52139,7 @@ cw_weight <- compute_counter_weight(
 
 가중치 부여는 관심 지지 집합의 모든 곳에서 용량 분포가 조밀할 때 더 효율적인 경향이 있으며 매칭은 용량 분포가 희소한 영역이 있을 때 더 강건한 경향이 있다. 유효 표본 크기의 손실을 극단적인 가중치 뒤로 숨기지 않고 명시적으로 드러내기 때문이다.
 
-#### 진단
+진단
 
 연속형 처치 GPS 분석에서 가장 중요한 진단은 가상 모집단 전체에 걸쳐 평균화된 균형이 아니라 용량의 함수로서의 공변량 균형이다. 올바른 도표 대상은 지지 집합을 포괄하는 여러 용량에서 평가된, 목표 용량 근처의 단위와 그로부터 멀리 떨어진 단위 사이의 각 공변량의 절대 표준화 평균 차이다. 평균적으로는 균형을 이루지만 용량-반응 곡선의 가장 흥미로운 특징이 나타나는 용량(대개 꼬리 부분)에서 불균형한 가상 모집단은 분석자가 필요한 곳에서 균형을 이루지 못한 것이다. `CausalGPS`는 이러한 용량별 층화 균형을 직접 보고하는 내장 균형 진단을 제공한다.
 
@@ -52396,7 +52335,7 @@ matched <- matchit(treat ~ age + educ, data = MatchIt::lalonde, method = "neares
 summary(matched)
 matched_data <- match.data(matched)
 
-## 집단 분할
+집단 분할
 treatment_group <- subset(matched_data, treat == 1)
 control_group   <- subset(matched_data, treat == 0)
 
@@ -52410,7 +52349,7 @@ psens_res <- psens(treatment_group$re78,
                    GammaInc = 0.1)
 psens_res
 
-## Hodges-Lehmann 추정치 민감도
+Hodges-Lehmann 추정치 민감도
 hlsens_res <- hlsens(treatment_group$re78,
                       control_group$re78,
                       Gamma = 2,
@@ -52543,7 +52482,7 @@ data("ChickWeight")
 rcr_res <- rcrbounds::rcr(
     formula = weight ~ Time | Diet, 
     data = ChickWeight, 
-    # rc_range = c(0, 10) # 0부터 10까지 lambda 검정
+# rc_range = c(0, 10) # 0부터 10까지 lambda 검정
     rc_range = c(0, 1)
 )
 
@@ -52706,7 +52645,7 @@ R2_med <- summary(
 )$r.squared
 R2_max <- 1.3 * R2_med # Oster 기본 상한값
 
-## β* (δ = 1) 및 δ* (β = 0) 
+## β* (δ = 1) 및 δ* (β = 0)
 beta_tbl  <- o_beta(
     y = "log_re78",
     x = "treat",
@@ -52778,7 +52717,6 @@ o_beta_rsq_viz(
 3. $\beta^*$ 대 $R^2_{\max}$: 가정된 $R^2$ 상한을 조이거나 완화함에 따라 편향 조정 계수가 어떻게 움직이는지 보여준다.
 
 <!-- ========================================= -->
-<!-- ========================================= -->
 <!-- Chapter: 35.01-panel-matching.Rmd -->
 <!-- ========================================= -->
 
@@ -52790,7 +52728,7 @@ o_beta_rsq_viz(
 이 절에서는 패널 매칭 프레임워크를 전개하고 패키지의 표준적인 민주화와 경제 성장 응용을 복제하며 유사한 점 추정치를 산출하는 단순 가중치 미부여 이원고정효과 회귀와 신뢰할 수 있는 패널 매칭 추정치를 구별하는 진단 절차를 실습한다.
 
 
-### 왜 이원고정효과만으로는 불충분한가
+왜 이원고정효과만으로는 불충분한가
 
 정책 지시변수 $X_{it}$를 갖는 TSCS 데이터에 대한 흔한 동적 선형 회귀 모형은 직렬 상관을 흡수하기 위해 결과변수를 현재 및 시차 처치, 단위 및 시간 고정효과, 시차 결과변수에 회귀한다.
 
@@ -52801,7 +52739,7 @@ $$
 Imai and Kim (2019, 2021)은이 모형과 시차 결과변수가 없는 단순 정적 이원고정효과 모형이 단위 간 및 시점 간의 모든 쌍별 비교의 분산 가중 평균과 근사적으로 동일하며 처치효과가 시간에 따라 또는 단위에 따라 달라질 때마다가 가중치가 음수가 될 수 있음을 증명했다 [@imai2019should; @imai2021use]. 이 경우 추정된 $\hat\beta$의 부호는 데이터에 존재하는 모든 개별 단위 수준 효과의 부호와 완전히 다를 수 있으며 이는 2기간 스타일 이중차분법에서 [Goodman-Bacon 분해](#sec-goodman-bacon-decomposition)를 촉발했던 것과 동일한 "금지된 비교(forbidden comparison)" 문제다. 패널 매칭은 동일한 근본 문제를 회귀 기반이 아닌 설계 기반 관점에서 해결한다.
 
 
-### 패널 매칭 프레임워크
+패널 매칭 프레임워크
 
 $X_{it} \in \{0,1\}$를 처치 상태, $D_{it} = X_{it}(1-X_{i,t-1})$를 처치 시작(onset) 사건, $L$을 비교 가능성을 정의하는 데 사용되는 처치 전 기간 수라 하자.
 
@@ -52913,7 +52851,7 @@ plot(pe_obj, ylab = "민주화가 로그 GDP에 미치는 추정 ATT", main = ""
 
 ### 공변량 균형 및 TWFE와의 비교
 
-#### 균형 진단
+균형 진단
 
 정제 절차는 처치군과 매칭된 통제군을 처치 전 공변량 궤적에서 유사하게 만들어야 하며 이는 가정하는 것이 아니라 직접 확인해야 한다.
 
@@ -52988,7 +52926,7 @@ summary(pe_obj_ps)
 
 이 장에서는 이러한 결합을 전개한다. 먼저 순진한 플러그인 머신러닝이 인과 문제에서 실패하는 이유, 즉 정규화 편향 문제를 살펴본다. 이어서 이를 해결하는 도구인 Neyman 직교 점수, 교차 적합(cross-fitting), @chernozhukov2018double 의 이중 또는 편향 제거 머신러닝을 구축한다. 이를 증강 역확률 가중과 표적 최대우도 추정이라는 오래된 이중 강건 전통 및 SuperLearner를 통한 앙상블 학습과 연결한다. 다음으로 이질성을 다루면서 인과 포레스트와 일반화 랜덤 포레스트가 개인별 효과의 변화를 복원하는 방법과 메타 학습기의 보완적 모듈형 접근을 설명한다. 마지막으로 시간 정보를 고려한 확장인 시간적 인과 포레스트를 소개하고 실무 지침과 주의점을 정리한다.
 
-## 인과 추론에 머신러닝을 사용하는 이유
+인과 추론에 머신러닝을 사용하는 이유
 
 ### 고차원 교란
 
@@ -52996,7 +52934,7 @@ summary(pe_obj_ps)
 
 라쏘(Lasso), 랜덤 포레스트, 그래디언트 부스팅, 신경망과 같은 머신러닝 방법은 작은 편향을 감수하고 분산을 크게 줄여 고차원에서 잘 예측하도록 설계되었다. 따라서가 학습기 중 하나로 결과 회귀나 성향점수를 추정한 뒤 그 결과를 표준 인과 추정량에 플러그인하고 싶은 유혹이 생긴다. 그러나 다음 절에서 보듯 이를 순진하게 수행하면 추론에 필요한 통계적 보장이 무너진다.
 
-### 정규화 편향 문제
+정규화 편향 문제
 
 부분 선형 모형을 생각하자.
 $$
@@ -53174,7 +53112,7 @@ sl_fit  # 학습된 앙상블 가중치 출력
 
 이 장의 이중 머신러닝 체계는 단일 처치를 위해 구축되었다. 대규모 온라인 플랫폼은 더 어려운 문제에 직면한다. 수백 개의 무작위 실험을 동시에 실행하며 특정 사용자가 한 번에 많은 실험에 등록된다. @ye2025deep 은 이를 조합 실험(combinatorial experimentation)이라 부르고 이중 머신러닝의 Neyman 직교성 및 교차 적합 아이디어를 처치 자체가 이항 A/B 테스트의 고차원 조합인 경우로 확장하는 편향 제거 딥러닝(Debiased Deep Learning; DeDL) 프레임워크를 개발했다. 이 절에서는 이들의 프레임워크를 전개하고 대규모 동영상 공유 플랫폼에서의 실증 검증을 보고하며 `torch`로 학습된 신경망을 사용하여 합성 데이터에서 메커니즘을 처음부터 끝까지 복제한다.
 
-### 조합 실험 문제
+조합 실험 문제
 
 사용자 트래픽을 효율적으로 사용하기 위해 대형 플랫폼은 일반적으로 여러 동시 실험을 독립적으로 무작위 배정하는 직교 트래픽 배정 설계를 사용한다. 직교성은 각 개별 실험에 대해 신뢰할 수 있는 인과 추정치를 보장하지만 특정 처치 조합의 결합 효과는 본질적으로 직접 관측되지 않음을 의미한다. $m$개의 동시 이항 실험이 있을 때 $2^m$개의 가능한 처치 조합이 존재하며 고전적 완전 요인 설계(full factorial design)로 이들을 모두 철저히 테스트하려면 $m$에 따라 기하급수적으로 증가하는 트래픽이 필요하다. 실무자들의 기본 대안은 처치효과가 선형적으로 가산된다고 가정하여(두 실험을 함께 실행한 효과는 단순히 개별 효과의 합) 각 실험의 확장 결정을 다른 실험과 독립적으로 내리는 것이다.
 
@@ -53186,7 +53124,7 @@ $$
 $$
 여기서 $G$는 알려진 연결 함수(link function)이고 $\theta^*(\cdot)$는 심층 신경망으로 추정되는 공변량의 미지의 잠재적 고차원 성가신 함수다. 연결 함수는 모형의 해석 가능한 구조적 부분이고 신경망은 사용자가 반응하는 방식의 풍부한 공변량 이질성을 포착하는 데 필요한 유연성을 제공한다.
 
-### 연결 함수와 구조화된 네트워크
+연결 함수와 구조화된 네트워크
 
 $G$의 선택은 모형의 경제학적 내용을 인코딩한다. @ye2025deep 은 개별 처치효과가 결합하는 방식에서 차이를 보이는 네 가지 연결 함수를 제안했다. 승법 형태 $G(\theta(x),t) = \theta_0(x)\prod_{k=1}^m (1+\theta_k(x)t_k)$는 상대적이고 복리적인 효과를 포착하지만 한계 수익 증가만을 반영한다. 시그모이드 형태는 로지스틱 곡선의 볼록-오목 형태를 사용하여 동일한 모형 내에서 한계 수익 증가와 감소를 모두 포착한다. 일반화 시그모이드 형태 II
 $$
@@ -53198,7 +53136,7 @@ $$
 
 이 구조는 실무적으로 놀라운 이점을 제공한다. 연결 함수가 개인당 $m+2$개의 자유 성가신 성분($\theta_0,\ldots,\theta_m,\theta_{m+1}$)만을 가지므로, $\hat\theta(\cdot)$의 식별과 수렴에는 $2^m$개 조합 중 단 $m+2$개의 처치 조합(통제 조건, $m$개의 개별 실험, 2개 조합 하나)만 관측하면 충분하다. 10개의 동시 실험의 경우 $1{,}024$개가 아닌 $12$개 조합만 필요하므로 지수적 트래픽 요구량을 선형으로 줄여준다.
 
-### 영향 함수에 의한 편향 제거
+영향 함수에 의한 편향 제거
 
 이러한 방식으로 학습된 신경망은 $\mathbb{E}[Y\mid X,T]$의 정확한 예측기를 제공하지만 평균 처치효과의 플러그인 추정량
 $$
@@ -53217,7 +53155,7 @@ $$
 $$
 신뢰구간은 $\hat\mu_{\text{DeDL}}(t) \pm z_{1-\alpha/2}\sqrt{\hat\Psi_{\text{DeDL}}(t;\mu)/n}$으로 계산된다. $\|\hat\theta - \theta^*\|_{L^2} = o(n^{-1/4})$ 수렴 속도 조건 하에서 @ye2025deep 은 $\hat\mu_{\text{DeDL}}(t)$가 모든 처치 조합 $t$에 대해 동시에 $\sqrt n$-일치하며 점근적으로 정규분포를 따르고 경험적으로 최적인 조합 $\hat t^* = \arg\max_t \hat\mu_{\text{DeDL}}(t)$가 1에 가까워지는 확률로 참된 최적 조합과 일치함을 증명했다.
 
-### 대규모 플랫폼의 증거
+대규모 플랫폼의 증거
 
 @ye2025deep 은 숏폼 동영상 플랫폼의 3개 동시 A/B 테스트 데이터에서 프레임워크를 검증했다. 각 실험은 서로 다른 제품 지면(발견 페이지, 라이브스트림 페이지, 개인화 피드)에서 추천 알고리즘 변경을 테스트했다. 플랫폼이 완전 요인 배포 하에 동일한 모집단에서 3개 실험을 모두 실행했기 때문에 약 207만 명의 층화된 사용자에 대해 $2^3=8$개 처치 조합의 결과가 실제로 관측되었다.
 
@@ -53251,7 +53189,7 @@ knitr::kable(
 
 두 번째 표의 비교가 핵심 실증 결과다. DeDL은 모든 지표에서 모든 벤치마크를 압도하여 보류된 3개 조합 모두의 유의성과 부호를 정확히 맞추었으며(선형 가산 및 선형 회귀 벤치마크는 각각 하나씩 놓침), 보류된 조합에서의 평균 절대 백분율 오차(MAPE)를 차순위 방법 대비 약 3분의 1 수준으로 줄였다. 편향 미제거 구조화 DNN(SDL)과 DeDL을 비교하면 영향 함수 보정의 가치가 명확히 드러난다. 편향 제거가 없으면 신뢰구간이 너무 좁아 실제 표본 변동성을 과소평가하는 반면, DeDL의 구간은 올바른 포함률을 보인다.
 
-### 공식 재현 패키지
+공식 재현 패키지
 
 @ye2025deep 은 [github.com/zikunye2/deep_learning_based_causal_inference_for_combinatorial_experiments](https://github.com/zikunye2/deep_learning_based_causal_inference_for_combinatorial_experiments)에 공식 코드와 데이터 패키지를 공개했다. 실제 플랫폼 데이터 대신 78개의 처치 전 공변량을 갖는 50,000행의 합성 데이터 `synthetic_data.csv`가 제공된다.
 
@@ -53295,7 +53233,7 @@ sample_partial <- function(n) {
 
 train <- sample_partial(500L * m)
 
-## 구조화된 네트워크: 2층 MLP가 X를 theta_0(x),...,theta_m(x)에 매핑
+구조화된 네트워크: 2층 MLP가 X를 theta_0(x),...,theta_m(x)에 매핑
 net <- nn_module(
   initialize = function(dX, hidden, out_dim) {
     self$fc1 <- nn_linear(dX, hidden)
@@ -53356,7 +53294,7 @@ for (i in seq_len(nrow(inf_data$X))) {
   correction[i, ] <- solve(Lam, ell_th)
 }
 
-## 관측된 데이터에 적합된 선형 가산 및 선형 회귀 벤치마크
+관측된 데이터에 적합된 선형 가산 및 선형 회귀 벤치마크
 lr_dat <- data.frame(y = train$y, train$X, train$T)
 names(lr_dat) <- c("y", paste0("x", seq_len(dX)), paste0("t", seq_len(m)))
 lr_fit <- lm(y ~ ., data = lr_dat)
@@ -53598,7 +53536,7 @@ ggplot(mae_long, aes(x = m, y = MAE, color = Estimator)) +
 
 딥러닝을 구조 모형 레이어에서 Neyman 직교성과 결합할 때 @ye2025deep 으로부터 얻을 수 있는 세 가지 교훈이 있다. 첫째, 편향 제거 항은 1단계 신경망의 품질만큼만 우수하다. 학습이 수렴하지 않았을 때는 단순 플러그인과 편향 제거 추정치가 유사하며 편향 제거의 진정한 가치는 학습 손실이 충분히 작아진 후에만 나타난다. 따라서 편향 제거 추정치를 신뢰하기 전에 학습 중 교차 검증 손실을 모니터링해야 한다. 둘째, 잘못 지정된 연결 함수는 편향 제거를 사용할 때 더 위험하다. 보정 항이 참값을 포함하지 않는 구조적 형태의 편향을 제거하기보다 오히려 증폭시킬 수 있기 때문이다. 셋째, 이 프레임워크의 트래픽 요구량은 동시 실험 수에 따라 기하급수적이 아니라 선형적으로 증가하여 수백 개의 A/B 테스트를 실행하는 실제 플랫폼에 배포할 수 있는 실용성을 제공한다.
 
-## 이질적 처치 효과
+이질적 처치 효과
 
 평균 효과는 처치가 전체적으로 작동하는지에 답한다. 많은 질문은 대신 처치가 누구에게 작동하는지에 관심을 두며 이는 조건부 평균 처치효과(CATE)로 포착된다.
 $$
@@ -53898,7 +53836,7 @@ plot_time / plot_tenure
 
 전체적인 프레임워크는 의도적으로 운영적(operational)이다. 비즈니스 환경에서 처치가 평균적으로 효과가 있는지 묻고 멈추는 경우는 거의 없다. 이익이나 기타 핵심 지표를 극대화하기 위해 누구를, 무엇으로, 어떤 예산 하에서 처치해야 하는가를 묻는다. 디지털 쿠폰이 대표적인 예다. 쿠폰을 보냈을 때 구매할 가능성이 높은 고객을 예측할 수는 있지만 그것이 쿠폰이 유발하는 증분 구매(incremental purchase)를 예측하는 것과 같지는 않다. 기준 구매 성향이 높은 고객은 쿠폰 없이도 구매할 수 있으므로 업리프트가 0이다. 기준 성향이 낮은 고객은 설득 가능하여 양(+)의 업리프트를 보일 수 있다. 일부 고객은 연락에 불쾌감을 느껴 이탈할 수 있으므로 음(-)의 업리프트를 산출한다. 업리프트는 결과의 절대적인 수준이 아니라 처치에 의해 유도된 변화에 관한 것이다.
 
-## 기초: CATE에서 타기팅 정책까지
+기초: CATE에서 타기팅 정책까지
 
 ### 잠재적 결과와 추정대상
 
@@ -53989,7 +53927,7 @@ $$
 
 인과 포레스트는 분할 기준과 집계 방식을 변경하여 효과 이질성을 직접 목표로 삼도록 랜덤 포레스트를 확장한다 [@wager2018estimation; @athey2019generalized]. 결과 분산을 줄이기 위해 분할하는 대신 인과 트리는 리프 간 처치효과의 이질성을 최대화하도록 분할한다. 핵심 장치는 정직한 추정(honest estimation)이다. 각 트리 내에서 한 부분표본은 분할 위치를 결정하고 분리된 다른 부분표본은 리프 추정치를 계산하여 유효한 신뢰구간을 보장한다. `grf` 패키지에 구현된 일반화 랜덤 포레스트 프레임워크는 이를 광범위한 추정대상으로 일반화하고 무한소 잭나이프(infinitesimal jackknife)를 통해 분산 추정치를 제공한다 [@athey2019generalized].
 
-### 준모수 및 딥러닝 방법
+준모수 및 딥러닝 방법
 
 CATE를 위한 이중 머신러닝(Double Machine Learning)은 Neyman 직교 점수를 구성하고 교차 적합을 통해 유효한 추론을 제공한다 [@chernozhukov2018double]. 베이지안 가법 회귀 트리(BART) 및 베이지안 인과 포레스트(BCF)는 예후 앙상블과 처치효과 앙상블을 분리하고 증거가 약할 때 효과를 0으로 축소한다 [@hahn2020bayesian]. 인과 신경망(Causal Neural Networks)은 처치군과 통제군 분포의 균형을 맞추면서 결과를 예측하는 공변량 표현을 학습한다 [@shalit2017estimating].
 
@@ -54202,7 +54140,7 @@ c(T_학습기_RMSE = rmse(tau_t, df_c$tau_true),
 
 결과를 잔차화하고 처치를 잔차화한 후 한 잔차를 다른 잔차에 회귀하는 3단계 레시피가 R-학습기의 직교화 원리다.
 
-## 업리프트 모델 평가
+업리프트 모델 평가
 
 개별 효과는 관측되지 않으므로 보류된 데이터에서 모형이 유도하는 정책의 가치를 평가한다.
 
@@ -54218,7 +54156,7 @@ $$
 
 업리프트 곡선은 예측 효과 순서대로 처치 비율을 확장함에 따른 증분 이득을 도표화한다. Qini 곡선은 누적 증분 성공 건수를 타깃 고객 수에 대해 표시하고 무작위 타기팅과 비교한다.
 
-### 정직한 교차 적합 평가
+정직한 교차 적합 평가
 
 낙관적 편향을 피하기 위해 성가신 모형과 CATE 모형은 한 부분에서 학습하고 정책 가치는 분리된 부분에서 평가해야 한다.
 
@@ -54271,7 +54209,7 @@ cor(test_tau_cf, test$tau_true)
 cor(test_tau_glm, test$tau_true)
 ```
 
-### 타기팅 정책 구축 및 평가
+타기팅 정책 구축 및 평가
 
 ```{.r #uplift-case-policy}
 make_policy_topq <- function(tau_hat, q = 0.2) {
@@ -54342,7 +54280,7 @@ cor(predict(dr_fit, test), test$tau_true)
 3. 하위 그룹 탐색 (Subgroup fishing): 수많은 하위 그룹을 무작위로 탐색하면 노이즈에 불과한 가짜 이질성이 발견된다. 사전 등록과 정직한 표본 분할이 필수적이다.
 4. 비정상성과 피드백 루프: 타기팅 정책 배포 후 수집되는 데이터는 현재 정책의 영향을 받으므로 지속적인 탐색(exploration) 메커니즘이 결합되어야 한다.
 
-## 이항 처치를 넘어서
+이항 처치를 넘어서
 
 다중 제안($W \in \{0,,\dots,K\}$)에서는 각 고객에게 최적의 대안을 선택하는 다항 정책 학습이 된다. 연속형 처치(할인율 등)에서는 용량-반응(dose-response) 문저자가 되며 생존분석 결과에서는 위험률이나 제한된 평균 생존 시간에 대한 처치효과를 추정한다.
 
@@ -54350,7 +54288,7 @@ cor(predict(dr_fit, test), test$tau_true)
 
 업리프트는 CATE를 통해 구체화되고 타기팅 정책을 통해 배포되는 증분 인과효과다. 목표는 전체 처치나 미처치보다 우수한 가치를 내는 정책이므로 추정은 수단일 뿐이다. 평가는 보류된 데이터에서 정책 기반으로 수행되어야 한다. 처치받은 사용자가 더 많이 전환했다고만 보고하는 것은 업리프트가 아니라 단순 수준을 측정한 것에 불과하다.
 
-## 연습문제
+연습문제
 
 1. 식별: $(Y(0), Y(1)) \perp W \mid X$ 하에서 CATE가 $\tau(x) = \mathbb{E}[Y \mid X = x, W = 1] - \mathbb{E}[Y \mid X = x, W = 0]$을 만족함을 보여라.
 2. 이중 강건성: 중첩성을 가정할 때, 성향 모형이나 결과 모형 중 하나만 올바르면 $\mathbb{E}[\phi \mid X = x] = \tau(x)$임을 보여라.
@@ -54368,7 +54306,7 @@ cor(predict(dr_fit, test), test$tau_true)
 
 텍스트를 알려진 라벨에 매핑하는 지도학습 측면과 라벨 없이 구조를 발견하는 비지도학습 측면은 @grimmer2013text 의 기초 연구에서 함께 검토된다. 이 연구의 핵심 경고는 자동화된 내용 분석 방법이 세심한 인간 독해를 대체하는 것이 아니라 증폭하며 어떤 방법이든 신뢰하기 전에 반드시 검증해야 한다는 것이다. 검증 없이 방법을 적용해서는 안 된다는 경고는 이하의 모든 논의를 관통한다. 이 분야의 표준 대학원 교재가 된 @grimmer2022text 의 책 분량 논의는 이러한 규율을 기술통계에서가 장이 다루는 사회과학적 추론 과제로 확장한다. 이 문헌의 새로운 인과적 전환은 @egami2022make 가 가장 명확하게 정리한다. 이들의 Science Advances 연구는 코퍼스를 인과적 추정량이 요구하는 구체적 양으로 의도적으로 변환하는, 이들이 ‘텍스트를 유효한 측정 대상으로 만들기’라고 부르는 틀을 제시한다. 이 관점이가 장의 뼈대를 이룬다. 특히 두 가지 아이디어가 반복된다. 첫째, 분석가는 효과를 추정하기 전에 텍스트가 측정하려는 잠재량을 명시적으로 정의한 코드북(codebook) 을 확정해야 한다. 결과를 본 뒤 정의한 양은 유용한 의미에서 식별되었다고 할 수 없기 때문이다. 둘째, 텍스트 기반 변수의 발견과 그 효과의 추정을 train/test 분할로 분리해야 한다. 그래야 언어에서 의미를 읽어내는 유연성이 의도했든 아니든 결과를 만들어내는 유연성으로 바뀌지 않는다.
 
-## 측정에서 텍스트가 중요한 이유
+측정에서 텍스트가 중요한 이유
 
 텍스트를 진지하게 다뤄야 하는 첫 번째 이유는 포괄성이다. 경제적·정치적으로 중요한 많은 개념에는 바로 사용할 수 있는 수치 대응물이 없다. 연방준비제도 성명의 어조, 연설의 정파성, 특허의 신규성, 고객 이메일의 정서, 계약서에 특정 정책 약속이 포함되어 있는지는 모두 말로 설명하고 알아볼 수 있지만 열 하나로 내려받을 수는 없는 대상이다. 텍스트를 이용하면 이러한 측정치를 대규모로, 낮은 한계비용으로 구성할 수 있으며 이것이 바로 @gentzkow2019text 가 강조하는 비교우위다.
 
@@ -54412,7 +54350,7 @@ term_counts
 
 현재의 프런티어는 정적 단어 벡터를 트랜스포머 모델이 생성하는 문맥 임베딩(contextual representations)으로 대체하여 단어에 할당되는 벡터가 주변 문장에 따라 달라지도록 만든다. @vaswani2017attention 은 이러한 모델의 기초가 되는 어텐션 메커니즘을 도입했으며 계산언어학 문헌은 문맥 임베딩이 많은 언어 과제를 실질적으로 향상시킴을 보여주었다. 인과 연구에 있어 관련된 점은 실용적이다. 트랜스포머 임베딩은 문서의 더 풍부한 수치 요약을 제공하지만 토픽 비중보다 해석하기가 더 어렵고 계산 비용이 많이 든다. 그러나 이러한 표현 중 어느 것도 궁극적으로 사용하는 변수가 '추정치'라는 근본적인 추론 문제를 바꾸지는 못한다.
 
-## 인과추론에서 텍스트의 세 가지 역할
+인과추론에서 텍스트의 세 가지 역할
 
 텍스트를 처리하는 알고리즘이 아니라 인과 다이어그램에서 텍스트가 수행하는 역할에 따라 분야를 정리하는 것이 유용하다. @feder2022causal 은 계산언어학과 통계학 문헌 전반에 걸쳐가 지형을 조사하면서 동일한 코퍼스가 질문에 따라 매우 다른 위치에 놓일 수 있음을 강조한다.
 
@@ -54474,21 +54412,21 @@ tau <- 1    # 참된 처치효과 (1로 고정)
 simulate_corpus <- function(informative) {
   U <- rbinom(n, 1, 0.5)
   if (!informative) {
-    # 약한 신호: 교란 관련 단어가 희소한 이항 플래그로 나타나 단어만으로 U를 식별하기 어려움 (현실적이고 어려운 경우)
+# 약한 신호: 교란 관련 단어가 희소한 이항 플래그로 나타나 단어만으로 U를 식별하기 어려움 (현실적이고 어려운 경우)
     word_prob <- matrix(0.05, nrow = n, ncol = V)
     word_prob[, 1:10] <- 0.05 + 0.12 * U
     X <- matrix(rbinom(n * V, size = 1, prob = word_prob), nrow = n, ncol = V)
   } else {
-    # 강한 신호: 교란 관련 단어가 빈번한 빈도로 나타나 단어 가방이 U를 거의 완벽히 드러냄 (유리한 경우)
+# 강한 신호: 교란 관련 단어가 빈번한 빈도로 나타나 단어 가방이 U를 거의 완벽히 드러냄 (유리한 경우)
     lambda <- matrix(0.3, nrow = n, ncol = V)
     lambda[, 1:15] <- 0.3 + 2.0 * U
     X <- matrix(rpois(n * V, lambda), nrow = n, ncol = V)
   }
   colnames(X) <- paste0("term", seq_len(V))
 
-  # 처치는 단어가 아닌 잠재 교란변수에 직접 의존
+# 처치는 단어가 아닌 잠재 교란변수에 직접 의존
   D <- rbinom(n, 1, plogis(-0.5 + 1.6 * U))
-  # 결과: 참 효과 tau = 1, U는 2의 교란 이동을 추가
+결과: 참 효과 tau = 1, U는 2의 교란 이동을 추가
   Y <- 0.5 + tau * D + 2 * U + rnorm(n)
   data.frame(Y = Y, D = D, U = U, X)
 }
@@ -54569,14 +54507,14 @@ processed <- textProcessor(gadarian$open.ended.response,
 out <- prepDocuments(processed$documents, processed$vocab,
                      processed$meta, verbose = FALSE)
 
-## 2. 불안 처치를 유병률 공변량으로 포함하는 3-토픽 STM 적합
+2. 불안 처치를 유병률 공변량으로 포함하는 3-토픽 STM 적합
 ## 스펙트럼 초기화는 결정론적이므로 재현 가능함
 stm_fit <- stm(out$documents, out$vocab, K = 3,
                prevalence = ~ treatment + s(pid_rep),
                data = out$meta, max.em.its = 75,
                init.type = "Spectral", verbose = FALSE)
 
-## 3. 인과 추정치를 얻기 위해 토픽 유병률을 처치에 회귀
+3. 인과 추정치를 얻기 위해 토픽 유병률을 처치에 회귀
 stm_eff <- estimateEffect(1:3 ~ treatment + s(pid_rep), stm_fit,
                           meta = out$meta, uncertainty = "Global")
 ```
@@ -54730,12 +54668,12 @@ one_rep <- function(seed) {
   Ystar <- rbinom(n, 1, plogis(-0.2 + 0.8 * D))    # 참된 잠재 라벨
   beta_true <- coef(lm(Ystar ~ D))[["D"]]          # 목표 추정대상
 
-  # 차등 오차를 갖는 불완전 분류기 Q
+# 차등 오차를 갖는 불완전 분류기 Q
   fp <- ifelse(D == 1, 0.40, 0.05)                 # 위양성률
   fn <- 0.15                                       # 위음성률
   Q  <- ifelse(Ystar == 1, rbinom(n, 1, 1 - fn), rbinom(n, 1, fp))
 
-  # 인간 검증 표본: 알려진 확률 pi의 무작위 부분표본
+# 인간 검증 표본: 알려진 확률 pi의 무작위 부분표본
   pi <- 0.10
   R  <- rbinom(n, 1, pi); lab <- R == 1
   dd <- data.frame(Ystar, D, Q)
@@ -54743,7 +54681,7 @@ one_rep <- function(seed) {
   b_surr <- coef(lm(Q ~ D))[["D"]]                       # (i) 단순 Q 대입
   b_gold <- coef(lm(Ystar ~ D, data = dd[lab, ]))[["D"]] # (ii) 골드 부분표본만 사용
 
-  # (iii) DSL 편향 수정 의사 결과
+(iii) DSL 편향 수정 의사 결과
   g_hat  <- predict(lm(Ystar ~ D * Q, data = dd[lab, ]), newdata = dd)
   Ytilde <- g_hat + (R / pi) * (Ystar - g_hat)
   b_dsl  <- coef(lm(Ytilde ~ D))[["D"]]
@@ -54856,7 +54794,7 @@ ggplot(graph_res, aes(x = 추정치, y = 추정량)) +
   causalverse::ama_theme()
 ```
 
-## 언어적 속성의 인과효과: TextCause 프레임워크
+언어적 속성의 인과효과: TextCause 프레임워크
 
 @pryzant2021causal 은 텍스트 분류기의 측정 오차와 교란요인이 결합할 때 언어적 속성의 인과효과를 추정하는 TextCause 프레임워크를 전개했다.
 
@@ -54873,7 +54811,7 @@ C <- rbinom(n, 1, 0.5)
 ## 참된 잠재 감성: 럭셔리 제품에서 실질적으로 더 높음 (교란)
 S_true <- 1.5 * C + rnorm(n, sd = 1)
 
-## 결과: 감성의 참 효과 + 직접 제품 유형 효과
+결과: 감성의 참 효과 + 직접 제품 유형 효과
 Y <- 1 + tau_s * S_true + tau_c * C + rnorm(n, sd = 0.8)
 
 ## 관측된 (추정된) 감성: 차등 오차를 갖는 분류기
@@ -55361,7 +55299,6 @@ $$
 > 이는 고전적 오차의 가정이다.
 >
 > 1. 평균 0: $\mathbb{E}[v\mid X]=0$.
-> 2. 외생성: $v$는 각 회귀변수 및 구조적 교란항 $\epsilon$과 무상관이다(즉, $\operatorname{Cov}(X,v)=\operatorname{Cov}(\epsilon,v)=0$).
 > 3. 대수의 법칙이 적용되기 위한 등분산성/유한 모멘트.
 
 
@@ -55593,7 +55530,6 @@ $$
 
 This formulation highlights a powerful insight:
 
-> Bias in $\hat{\beta}$ arises from the linear projection of the measurement errors onto the observed $\tilde{X}$.
 
 This expression does not assert that $v$ *necessarily* biases $\hat\beta$; it simply makes explicit that bias arises whenever the *linear projection* of $(U\beta-v)$ onto $\tilde X$ is non‑zero. Three cases illustrate the point (Table@tbl-endog-measurement-error-cases).
 
@@ -55631,7 +55567,6 @@ This expression does not assert that $v$ *necessarily* biases $\hat\beta$; it si
 
 3. 행정자료나 센서 자료에서는 공동 오측정($U$와 $v$의 상관)이 흔하다. 이 경우 $X$에 대해는 “고전적”인 $v$조차 $\tilde X=X+U$와 상관될 수 있다.
 
-> $Y$의 측정오차는 강한 외생성과 독립성 조건 아래에서만 *무해하다*. Bound, Brown, Mathiowetz의 행렬 형식 [@bound2001measurement]은 이러한 조건이 깨지거나 $X$ 자체가 오측정되면 $X$의 감쇠 편향을 낳는 동일한 사영 논리가 $v$의 편향을 $\hat\beta$로 전달할 수도 있음을 보여준다.
 
 따라서 배운 경험칙은 좁은 고전적 상황에서는 맞지만 @bound2001measurement는 실증 연구가 이러한 안전한 범위를 벗어나는 경우가 많다는 점을 상기시킨다.
 
@@ -55671,7 +55606,6 @@ This expression does not assert that $v$ *necessarily* biases $\hat\beta$; it si
 | Fixable with IV | Yes | Yes |
 : 편향의 방향, 일치성 및 해결책을 기준으로 비교한 고전적 측정오차와 비고전적 측정오차. {#tbl-endog-classical-vs-nonclassical-error}
 
-> 요컨대 비고전적 측정오차는 감쇠 편향이라는 안심할 만한 규칙성을 깨뜨린다. 오차의 성격과 구조에 따라 임의의 편향을 만들 수 있다. [도구변수](#sec-instrumental-variables)와 검증 연구가가 복잡한 문제를 다루는 유일하게 신뢰할 만한 도구인 경우가 많다.
 
 
 #### 상관 추정에서 측정오차의 해결
@@ -55799,27 +55733,27 @@ alpha  <- 0.05
 ## 상관계수에 대한 베이지안 업데이트 함수
 update_correlation <- function(n_new, r_new, alpha) {
   
-  # 사전분포 (메타분석 연구)
+# 사전분포 (메타분석 연구)
   n_meta <- 50205
   r_meta <- 0.2765
   
-  # 1단계: 사후 분산 (Fisher-z 공간)
+# 1단계: 사후 분산 (Fisher-z 공간)
   var_xi <- 1 / (n_new + n_meta)
   
-  # 2단계: 사후 평균 (Fisher-z 공간)
+# 2단계: 사후 평균 (Fisher-z 공간)
   mu_xi <- var_xi * (n_meta * atanh(r_meta) + n_new * atanh(r_new))
   
-  # 3단계: Fisher-z 공간에서의 신뢰구간
+# 3단계: Fisher-z 공간에서의 신뢰구간
   z_crit    <- qnorm(1 - alpha / 2)
   upper_xi  <- mu_xi + z_crit * sqrt(var_xi)
   lower_xi  <- mu_xi - z_crit * sqrt(var_xi)
   
-  # 4단계: 상관 척도로 역변환
+# 4단계: 상관 척도로 역변환
   mean_rho  <- tanh(mu_xi)
   upper_rho <- tanh(upper_xi)
   lower_rho <- tanh(lower_xi)
   
-  # 결과를 리스트로 반환
+# 결과를 리스트로 반환
   list(
     mu_xi     = mu_xi,
     var_xi    = var_xi,
@@ -55866,7 +55800,7 @@ cat("r에 대한 빈도주의 95% 신뢰구간:",
 
 동시성은 회귀 모형의 설명변수 중 적어도 하나가 종속변수와 동시에 결정(jointly determined)될 때 발생하며 인과추론의 핵심 가정인 시간적 선행성(temporal precedence)을 위배한다.
 
-#### 동시성이 중요한 이유
+동시성이 중요한 이유
 
 - 고전적 회귀분석에서는 회귀변수가 외생적으로 결정되며(즉 종속변수의 영향을 받지 않음) 가정한다.
 - 동시성은 회귀변수가 오차항과 상관관계를 맺는 [내생성](#sec-endogeneity)을 유발하여 OLS 추정량을 편향되고 일치하지 않게(biased and inconsistent) 만든다.
@@ -55982,7 +55916,6 @@ $$
 - 과대 식별(Over-identified): $K - k > m - 1$ (필요 이상의 도구변수 확보)
 - 과소 식별(Under-identified): $K - k < m - 1$ (추정 불가)
 
-> 참고: 차수 조건은 필요조건이지만 충분조건은 아니다. 완전한 식별을 위해서는 계수 조건(Rank condition)도 충족되어야 하며 이는 [도구변수](#sec-instrumental-variables)에서 다룬다.
 
 이 동시방정식 프레임워크는 [도구변수](#sec-instrumental-variables) 추정의 기초를 제공한다. 구조방정식에 나타나지 않는 외생변수가 도구변수 역할을 하며 이를 통해 내생 회귀변수의 효과를 일치하게 추정할 수 있다.
 
@@ -56395,7 +56328,7 @@ ggplot(mc, aes(x = betaP, fill = 추정량)) +
     causalverse::ama_theme()
 ```
 
-### 내생적 회귀변수가 정규분포인 경우
+내생적 회귀변수가 정규분포인 경우
 
 @sec-copula-nonnormality 절의 실패 모드를 코드로 확인하자. 회귀변수를 정규분포로 생성하면 $P_i^*$가 $P_i$와 거의 완벽한 공선성을 형성한다.
 
@@ -56726,7 +56659,7 @@ $$
 Heckman 표본 선택 모형과 Heckman 유형 통제함수 보정법의 비교.
 
 
-### 추정 방법
+추정 방법
 
 #### Heckman의 2단계 추정량
 
@@ -56772,7 +56705,7 @@ Heckman 2단계 추정 절차는 완전정보 최대우도법(FIML)보다 덜 �
 
 ```{.r}
 ###########################
-##   시뮬레이션 1: Heckman 2단계 #
+## 시뮬레이션 1: Heckman 2단계 #
 ###########################
 suppressPackageStartupMessages(library(MASS))
 
@@ -56838,7 +56771,7 @@ R의 `sampleSelection` 패키지를 사용하여 동일한 데이터에 대해 �
 
 suppressPackageStartupMessages(library(sampleSelection))
 
-## 1) Heckman 2단계 추정 (내장 함수)
+1) Heckman 2단계 추정 (내장 함수)
 heck2 <-
     selection(z ~ w, y_obs ~ x, method = "2step", data = data_heck)
 summary(heck2)
@@ -57030,7 +56963,7 @@ manually_est <- lm(log(wage) ~ educ + exper + I(exper^2) + city + IMR1,
 summary(manually_est)
 ```
 
-##### `glm` 및 수동 IMR 계산을 활용한 동등한 방법
+`glm` 및 수동 IMR 계산을 활용한 동등한 방법
 
 ```{.r}
 ## glm을 통한 Probit
@@ -57084,7 +57017,7 @@ stargazer(
 - $\rho$: 선택 방정식과 결과 방정식 오차항 간의 추정된 상관계수를 나타낸다. $\rho$의 유의성은 비무작위 선택을 의미하여 Heckman 보정을 정당화한다.
 - 본 사례에서 IMR 계수가 0과 통계적으로 다르지 않다면 선택 편향이 심각한 문저자가 아닐 수 있다.
 
-#### Heckman 모형에서 배제 제약의 역할
+Heckman 모형에서 배제 제약의 역할
 
 시뮬레이션 데이터를 사용하여 표본 선택 모형의 식별을 살펴본다.
 
@@ -57153,7 +57086,6 @@ summary(model_no_exclusion)
 
 실무자를 위한 권고사항:
 
-> 항상 선택 방정식에는 포함되지만 결과 방정식에는 나타나지 않는 변수를 최소 하나 이상 포함하도록 하라. 이는 모형 식별을 돕고 추정 정밀도를 크게 향상시킨다.
 
 
 ### Tobit-5: 전환 회귀 모형
@@ -57170,7 +57102,7 @@ summary(model_no_exclusion)
 - 3개 방정식(선택, 결과, 결과2)의 오차항은 결합 정규분포를 따른다고 가정된다.
 
 
-#### 시뮬레이션 예제: 배제 제약이 있는 경우
+시뮬레이션 예제: 배제 제약이 있는 경우
 
 ```{.r}
 set.seed(0)
@@ -57232,7 +57164,7 @@ summary(selection(ys ~ xs, list(yo1 ~ xo1, yo2 ~ xo2), iterlim = 20))
 
 배제 제약이 유지되더라도 비정규 오차는 절편 추정치에 편향을 유발하고 수렴 안정성을 저해한다.
 
-#### 예제: 배제 제약이 없는 경우
+예제: 배제 제약이 없는 경우
 
 ```{.r}
 set.seed(0)
@@ -57452,7 +57384,7 @@ for (i in 1:3) {
     Y[, i] <- beta[1] + beta[2] * time[i] + rnorm(n, 0, sigma)
 }
 
-## 탈락 메커니즘: Y3가 낮을수록 탈락 확률 증가
+탈락 메커니즘: Y3가 낮을수록 탈락 확률 증가
 prob_dropout <- plogis(-0.5 + 0.2 * (dropout_bias - Y[, 3]))
 drop <- rbinom(n, 1, prob_dropout)
 
@@ -57697,7 +57629,7 @@ gridExtra::grid.arrange(grobs = list(p1, p2), ncol = 2)
 
 전체 성공률에서는 갑자기 병원 B가 더 우수해 보인다. 두 병원이 다루는 경증과 중증 환자의 비율이 크게 다르기 때문이다. 병원 A가 성공률이 본질적으로 낮은 중증 환자를 훨씬 많이 진료한다면 전체 성공률이 낮아진다.
 
-#### 원인
+원인
 
 1. 처음에 고려되지 않은 잠복 변수 또는 교란변수 (예: 환자의 질환 중증도).
 2. 집단 간 크기 차이 (특정 집단이 전체 평균을 압도함).
@@ -57751,7 +57683,7 @@ summary(low_ability_lm)
 ```{.r fig.cap="심슨의 역설 시각화: 전체 표본(상단)에서의 처치-성적 관계는 학생 역량별(고역량: 중간, 저역량: 하단)로 층화했을 때 부호가 역전됨." #fig-bias-simpson-paradox-grades}
 library(ggplot2)
 
-## 전체 데이터 산점도
+전체 데이터 산점도
 p1 <-
   ggplot(df, aes(
     x = factor(treatment),
@@ -57764,7 +57696,7 @@ p1 <-
        x = "처치 (0 = 미사용, 1 = 새 기법 사용)",
        y = "성적")
 
-## 고역량 학생 산점도
+고역량 학생 산점도
 p2 <-
   ggplot(df[df$ability == "high", ], aes(
     x = factor(treatment),
@@ -57777,7 +57709,7 @@ p2 <-
        x = "처치 (0 = 미사용, 1 = 새 기법 사용)",
        y = "성적")
 
-## 저역량 학생 산점도
+저역량 학생 산점도
 p3 <-
   ggplot(df[df$ability == "low", ], aes(
     x = factor(treatment),
@@ -58268,7 +58200,7 @@ list(Egger_절편_p값 = egger_intercept_p, PET_추정치 = pet_est, PEESE_추�
 ```
 
 ```{.r}
-## 3. 사양 곡선 (Specification Curve) 분석
+3. 사양 곡선 (Specification Curve) 분석
 library(dplyr)
 library(ggplot2)
 
@@ -58528,7 +58460,7 @@ $U$가 미관측이므로 관측 변수만으로는 총 인과효과를 식별�
 adjustmentSets(dag, exposure = "X", outcome = "Y", type = "all")
 ```
 
-## M-편향: 사전 처치 변수 조정이 편향을 유발하는 경우
+M-편향: 사전 처치 변수 조정이 편향을 유발하는 경우
 
 처치에 앞서 발생하는 사전 변수를 통제하면 항상 편향이 줄어든다는 직관은 틀릴 수 있다.
 
@@ -59392,7 +59324,7 @@ jtools::export_summs(
 - 분산팽창계수(VIF)를 통해 다중공선성을 점검한다.
 - 데이터의 계층/군집 구조가 존재할 경우 혼합효과 모형이나 군집 강건 표준오차를 적용한다.
 
-### 3단계: 모형 적합 및 진단 평가
+3단계: 모형 적합 및 진단 평가
 
 전체 적합도 평가 및 잔차 진단
 
@@ -59549,7 +59481,7 @@ interactions::interact_plot(fit_int,
 car::vif(fit)
 ```
 
-### 모형 적합도 및 잔차 진단
+모형 적합도 및 잔차 진단
 
 ```{.r}
 broom::glance(fit) %>%
@@ -59917,7 +59849,7 @@ dplyr::glimpse(tx)
 ```
 
 
-## 데이터 프로파일 보고서
+데이터 프로파일 보고서
 
 데이터셋의 차원, 변수 유형, 결측률, 기본 분포를 자동화된 방식으로 개괄한다.
 
@@ -59963,13 +59895,13 @@ DataExplorer::plot_prcomp(
 ```{.r}
 fe_tx <- tx %>%
   mutate(
-    # 시계열 인덱스
+# 시계열 인덱스
     t_index = as.integer(zoo::as.yearmon(date)),
-    # 가격 모멘텀: 3개월 롤링 평균
+# 가격 모멘텀: 3개월 롤링 평균
     median_roll3 = dplyr::lag(slider::slide_dbl(median, mean, .before = 2, .complete = TRUE), 0), 
-    # 매물당 거래 규모
+# 매물당 거래 규모
     vol_per_listing = ifelse(listings > 0, volume / listings, NA_real_),
-    # 계절성 플래그
+# 계절성 플래그
     is_peak_summer = month(date) %in% 6:8,
     is_december = month(date) == 12
   )
@@ -60152,7 +60084,6 @@ tx %>%
 
 > "결과를 신뢰할 수 있을 때까지 강건성 검정을 반복하라."
 >
-> --- 유망해 보이던 결과가 면밀한 검토 끝에 무너지는 뼈아픈 경험을 거듭하며 이제는 입증되기 전까지 어떤 발견도 쉽게 믿지 않게 된 저자의 고백 중에서.
 
 민감도 분석과 강건성 검정은 엄밀한 실증 연구의 핵심 요소다. 연구자는 다양한 모형 사양에 걸친 추정치의 안정성을 평가하고 누락변수 편향의 잠재적 영향을 계량화하며 인과적 해석의 타당성을 입증할 수 있다. 이 장에서는 사양 곡선 분석부터 누락변수 편향을 계량화하는 정교한 기법에 이르기까지 폭넓은 민감도 분석 기법의 구현 지침을 제공한다.
 
@@ -60194,7 +60125,7 @@ tx %>%
 1. 계수 패널 (상단): 모든 사양에 걸친 관심 변수의 점 추정치와 신뢰구간을 계수 크기순으로 정렬하여 표시.
 2. 사양 패널 (하단): 각 사양에서 어떤 모형화 선택(통제변수, 고정효과 등)이 이루어졌는지를 이진 그리드로 표시.
 
-### `starbility` 패키지
+`starbility` 패키지
 
 `starbility` 패키지는 유연하고 직관적인 사양 곡선 분석 구현을 지원한다.
 
@@ -60438,7 +60369,7 @@ ame_curve = stability_plot(
 ame_curve
 ```
 
-### `specr` 패키지
+`specr` 패키지
 
 `specr` 패키지는 모형 공간을 간결하게 정의하고 탐색할 수 있는 직관적인 대안을 제공한다.
 
@@ -60818,11 +60749,11 @@ adjust_fdr <- function(tbl, p_col = "p.value") {
 
 개별 연구 수준의 강건성 검정을 넘어 학계 전체 문헌 수준에서 발생하는 왜곡을 이해하는 것은 연구의 신뢰성을 평가하는 데 필수적이다.
 
-### 서랍 효과
+서랍 효과
 
 @rosenthal1979file 은 유의한 결과만을 선호하여 출판하고 널(null) 결과는 연구자의 서랍 속에 묻히는 '서랍 효과(file-drawer problem)'를 지적했다. 이는 실증 문헌 전체의 효과 크기를 체계적으로 과장하는 승자의 저주(winner's curse)를 낳는다 [@ioannidis2005why; @franco2014publication].
 
-### p-해킹과 연구자 자유도
+p-해킹과 연구자 자유도
 
 연구자가 유의수준 5% 임계값을 넘기 위해 데이터 정제, 변수 정의, 통제변수 조합, 함수 형태를 사후적으로 조정하는 행위를 p-해킹(p-hacking)이라 한다. 수많은 사양을 탐색한 후 보고하는 명목상 5% 검정은 실제 1종 오류율이 5%를 크게 초과한다.
 
@@ -61018,7 +60949,7 @@ compare(lm_syn, iris)
 
 합성 데이터가 생성 모형을 통해 데이터의 통계적 구조를 모사한다면, 차분 프라이버시(Differential Privacy; DP)는 임의의 한 개인의 데이터가 분석 결과에 미치는 영향력을 수학적으로 엄밀하게 제한하는 보장을 제공한다 [@dwork2006calibrating; @dwork2014algorithmic].
 
-## 프라이버시 보존이 어려운 이유
+프라이버시 보존이 어려운 이유
 
 이름, 주민등록번호, 주소를 삭제하는 단순 비식별화(de-identification)는 외부 보조 데이터와의 결합 공격(linkage attack)에 극히 취약하다. @sweeney2002kanonymity 는 5자리 우편번호, 생년월일, 성별만으로 미국 인구의 87%를 고유하게 식별할 수 있음을 보였다. 차분 프라이버시는 공격자가 어떤 외부 지식을 가지고 있든 무관하게 성립하는 엄밀한 수학적 보장을 제공한다.
 
@@ -61075,7 +61006,7 @@ results <- lapply(epsilons, function(eps) {
   data.frame(
     epsilon = eps,
     편향 = mean(draws) - true_mean,
-    표준편차 = sd(draws),
+## 표준편차 = sd(draws),
     RMSE = sqrt(mean((draws - true_mean)^2))
   )
 })
@@ -61419,7 +61350,7 @@ ggplot(plot1, aes(rho, rejection, colour = se_type)) +
     theme_minimal()
 ```
 
-## 군집 강건 분산 추정량과 소수 군집 문제
+군집 강건 분산 추정량과 소수 군집 문제
 
 군집 강건 분산 추정량(CRVE)은 잔차 외적을 블록 대각으로 합산하여 계산한다.
 
@@ -61532,15 +61463,15 @@ panel <- data.frame(
 panel$x <- rnorm(G)[as.integer(panel$firm)] + rnorm(nrow(panel))
 panel$y <- 0.3 * panel$x + rnorm(G)[as.integer(panel$firm)] + rnorm(nrow(panel))
 
-## 1. fixest 패키지를 통한 고속 패널 추정 및 일방향/이중 군집화
+1. fixest 패키지를 통한 고속 패널 추정 및 일방향/이중 군집화
 fit_feols <- feols(y ~ x, data = panel, cluster = ~ firm)
 fit_two   <- feols(y ~ x, data = panel, cluster = ~ firm + year)
 etable(fit_feols, fit_two)
 
-## 2. clubSandwich CR2 편향 감소 분산 (소표본 강건)
+2. clubSandwich CR2 편향 감소 분산 (소표본 강건)
 coef_test(lm(y ~ x, data = panel), vcov = "CR2", cluster = panel$firm, test = "Satterthwaite")
 
-## 3. fwildclusterboot 와일드 군집 부트스트랩
+3. fwildclusterboot 와일드 군집 부트스트랩
 bt <- boottest(lm(y ~ x, data = panel), param = "x", clustid = "firm", B = 999, type = "rademacher")
 bt
 ```
@@ -62307,7 +62238,7 @@ $$\log P(a \mid x) - \log P(0 \mid x) = v(x, a) - v(x, 0).$$
 - NFXP: 완전한 모형 우도 사용으로 최고 효율성 달성, 단 상태 공간이 클 때 계산 부담 증가.
 - CCP: 1단계 비모수 추정치 활용으로 극도로 빠름, 단 1단계 추정 오차가 2단계로 전파될 수 있음.
 
-## 할인율의 식별 문제
+할인율의 식별 문제
 
 @magnac2002identifying 은 정태적 마르코프 DDC 모형에서 선택 데이터만으로는 할인율 $\beta$가 비식별(not identified)된다는 사실을 증명했다. 임의의 $\beta$에 대해 관측된 CCP를 완벽히 설명하는 효용함수가 항상 존재하기 때문이다. 따라서 외생적 배제 제약(exclusion restriction)이 없는 한 $\beta$는 0. 등으로 사전에 고정(보정)하여 추정하는 것이 표준적 실무 관행이다 [@abbring2020identifying; @kalouptsidi2021identification].
 
@@ -62316,7 +62247,7 @@ $$\log P(a \mid x) - \log P(0 \mid x) = v(x, a) - v(x, 0).$$
 ```{.r #ddc-primitives}
 set.seed(2024)
 
-## 상태 공간: 90개 주행거리 격자
+상태 공간: 90개 주행거리 격자
 n_states <- 90L
 states   <- 0:(n_states - 1L)
 
@@ -62341,7 +62272,7 @@ build_keep_matrix <- function(n_states, trans_p) {
 P_keep <- build_keep_matrix(n_states, trans_p)
 ```
 
-### 가치함수 반복 풀이
+가치함수 반복 풀이
 
 ```{.r #ddc-solve}
 solve_vfi <- function(theta1, R, beta, P_keep, states, tol = 1e-10, max_iter = 1000L) {
@@ -62487,7 +62418,7 @@ cat("CCP 역변환 가치 차이와 모형 참 가치 차이의 상관계수:", 
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## 단일 주체에서 전략적 동태 게임으로
+단일 주체에서 전략적 동태 게임으로
 
 $n$명의 참여자 $i = 1, \dots, n$, 공통 관측 상태 $s_t$, 각 기업의 사적 충격 $\varepsilon_{it}$. 기업 $i$는 이윤의 기대 현재할인가치를 극대화하는 행동 $a_{it}$를 선택한다.
 
@@ -62509,7 +62440,7 @@ $$
 
 MPE는 각 기업의 CCP $P_i$가 타 기업들의 $P_{-i}$에 대한 최적 반응이 되는 선택 확률 공간에서의 고정점(fixed point)이다.
 
-### Ericson & Pakes 산업 동태학 프레임워크
+Ericson & Pakes 산업 동태학 프레임워크
 
 @ericson1995markov 는 소수 과점 산업의 진입, 퇴출, 투자 동태학을 모델링하는 표준적 구조를 확립했다. 각 기업은 고유한 생산성/품질 상태를 가지며 매기 연구개발/설비 투자를 통해 상태를 확률적으로 개선하고 장기 수익성이 악화된 기업은 잔존가치를 회수하고 시장에서 퇴출한다 [@doraszelski2010computable].
 
@@ -62538,11 +62469,11 @@ MPE는 각 기업의 CCP $P_i$가 타 기업들의 $P_{-i}$에 대한 최적 반
 - 차원의 저주(Curse of Dimensionality): 기업 수와 상태 변수가 증가함에 따라 상태 공간이 기하급수적으로 폭발한다. 대규모 게임에서는 개별 라이벌의 상태 대신 장기 평균 산업 상태에 반응하는 망각 균형(Oblivious Equilibrium) 근사법을 활용한다 [@weintraub2008markov].
 - 할인율 및 사적 충격의 식별 한계: 할인율 $\beta$와 사적 충격 분포는 통상적인 선택 데이터만으로는 완전 식별되지 않으므로 보정치(예: $\beta = 0.95$)를 명시해야 한다.
 
-## 실습: 2기업 진입 정태 게임 및 시장 구조 전이
+실습: 2기업 진입 정태 게임 및 시장 구조 전이
 
 ```{.r #dg-entry-mixed}
 ## 2기업 정태 진입 게임: 대칭 혼합전략 균형 진입 확률 계산
-## alpha = 독점 이윤, delta = 경쟁 효과
+alpha = 독점 이윤, delta = 경쟁 효과
 alpha <- 1.2
 delta <- 2.0
 
@@ -63352,7 +63283,7 @@ $$
 ```{.r #mm-production-markup}
 set.seed(466)
 
-## 1. 생산 기반 접근법 (De Loecker & Warzynski 2012)
+1. 생산 기반 접근법 (De Loecker & Warzynski 2012)
 theta_V <- 0.60    # 유연 투입물 산출 탄력성
 mu_true <- 1.35    # 참 마크업 (p / mc)
 alpha_V <- theta_V / mu_true  # 매출액 대비 투입비용 점유율
@@ -63364,7 +63295,7 @@ c(탄력성_theta_V = theta_V, 비용점유율_alpha_V = round(alpha_V, 4),
 ```
 
 ```{.r #mm-demand-markup}
-## 2. 수요 기반 접근법 (다제품 베르트랑-내시 로짓 수요)
+2. 수요 기반 접근법 (다제품 베르트랑-내시 로짓 수요)
 alpha <- 1.5
 x     <- c(1.0, 1.4, 0.8, 1.2)
 xi    <- c(0.2, -0.1, 0.0, 0.1)
@@ -63557,7 +63488,7 @@ el <- aidsElas(est$coef,
 ```{.r #ds-rep-coef-table}
 coef_tab <- data.frame(
   품목 = paste0("식료품군 ", 1:4),
-  절편_alpha = est$coef$alpha,
+## 절편_alpha = est$coef$alpha,
   지출계수_beta  = est$coef$beta,
   est$coef$gamma
 )
@@ -63824,7 +63755,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 set.seed(46901)
 ```
 
-## 머신러닝과 구조 모형의 결합 이유
+머신러닝과 구조 모형의 결합 이유
 
 1. 경제학 모형의 기여: 식별(Identification)의 근거 제공 및 반사실적 정책 분석(Counterfactuals) 가능. 단순 예측 알고리즘은 훈련 데이터 환경과 다른 정책 개입 결과를 예측할 수 없음 (루카스 비판).
 2. 머신러닝의 기여: 고차원 제어변수, 비선형 가치함수 $V(s)$, 정책함수 $\sigma(s)$, 1단계 조건부 선택 확률(CCP) 등 고차원 성가신 대상을 편향 없이 유연하게 근사.
@@ -64116,7 +64047,7 @@ capm_tab <- data.frame(
     종목   = stocks,
     젠센알파 = round(sm[paste0(stocks, "_(Intercept)"), "Estimate"], 4),
     알파_p값 = round(sm[paste0(stocks, "_(Intercept)"), "Pr(>|t|)"], 3),
-    시장베타 = round(sm[paste0(stocks, "_zm"), "Estimate"], 3),
+## 시장베타 = round(sm[paste0(stocks, "_zm"), "Estimate"], 3),
     베타_p값  = round(sm[paste0(stocks, "_zm"), "Pr(>|t|)"], 3),
     row.names = NULL
 )
@@ -64351,7 +64282,6 @@ R 작업 효율을 높여주는 핵심 단축키 목록이다.
 | 탭 간 이동 | `Ctrl + Shift + .` |
 | 함수 스니펫 자동완성 | `snip + Shift + Tab` |
 
-> 💡 팁: 폴더가 너무 커서 RStudio GUI에서 스테이징이 안 될 경우, RStudio `Terminal` 창에서 `git add -A` 명령어를 직접 입력하라.
 
 *
 

@@ -14,7 +14,7 @@ lang: ko
 ```{.r}
 #| label: setup
 #| include: false
-## 사용되는 R 패키지의 bib 데이터베이스를 구축합니다.
+사용되는 R 패키지의 bib 데이터베이스를 구축합니다.
 knitr::write_bib(
   c(.packages(), "bookdown", "knitr", "rmarkdown"),
   "packages.bib"
@@ -146,7 +146,6 @@ flowchart TD
 
 이 책은 여기서 정의되어 전 장에 걸쳐 일관되게 사용되는 단일 표기 체계를 준수한다. 기본 원칙은 기호의 서체와 형태가 그 자체로 대상의 수학적 성격을 나타낸다는 점이다. 기호가 직립체인지 이탤릭체인지, 볼드체인지 일반체인지, 소문자인지 대문자인지를 통해 독자는 해당 기호가 무엇을 나타내는지 읽기 전에 그것이 어떤 수학적 객체인지 즉시 파악할 수 있다. 통계학 및 계량경제학 전반에서 표준적으로 통용되는 다음의 핵심 규칙이 기본 뼈대를 이룬다.
 
-> 스칼라는 이탤릭체 일반 글꼴($x$, $\beta$)로 표기한다. 벡터는 볼드체 소문자($\mathbf{x}$, $\boldsymbol{\beta}$)로 표기하며 별도 언급이 없는 한 열벡터이다. 행렬은 볼드체 대문자($\mathbf{X}$, $\boldsymbol{\Sigma}$)로 표기한다. 추정량 또는 적합된 값에는 모자 기호(hat)를 씌운다($\hat{\beta}$, $\hat{\mathbf{y}}$). 모집단의 참이지만 알려지지 않은 모수는 그리스 문자($\theta$, $\sigma^2$)로 나타낸다. 기댓값 연산자는 $\mathbb{E}[\cdot]$, 사건의 확률은 $\mathbb{P}(\cdot)$로 표기한다.
 
 [표 @tbl-notation]은 책 전체에 구속력을 갖는 표준 표기 체계를 완전하게 정리한 것이다. 특정 하위 분야의 정립된 관례로 인해 부득이하게 표준 표기법을 벗어나야 하는 경우, 해당 장의 첫 등장 위치에 이를 명시하고 해당 장 내부로만 적용을 한정한다.
 
@@ -224,7 +223,7 @@ $$\mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\varepsilon},
 
 여기서 [식 @eq-ols]는 최소제곱(OLS) 추정량으로, 이후 장들에서 매번 재유도하지 않고 참조할 수 있도록 여기에 명시하였다. 이 추정량은 $\mathbf{X}^{\top}\mathbf{X}$가 가역행렬(invertible)일 때, 즉 $\mathbf{X}$의 열들이 선형 독립일 때 정확히 존재하고 유일하다. 이후 장들에서 다루는 식별 문제들은 상당 부분 이러한 가역성의 유사 조건이 성립하는지 여부로 귀결된다.
 
-## 이 책을 읽는 방법
+이 책을 읽는 방법
 
 처음 읽는 독자라면 순서대로 각 부를 읽어나가는 것이 좋다. 제1부의 구성개념은 제2부의 실질적 영역의 전제가 되며 이 둘은 제3부의 방법론을 필요로 하기 때문이다. 반면 브랜딩이나 광고와 같은 특정 영역에 관심이 있어 책을 찾은 독자라면 해당 장부터 읽기 시작하여 필요한 구성개념에 대한 후방 참조와 사용되는 방법론에 대한 전방 참조를 따라갈 수 있다. [그림 @fig-book-map]에 제시된 상호참조 그래프가 이러한 교차 학습을 위한 안내도 역할을 한다. 특정 방법론을 학습하고자 하는 독자는 제3부부터 시작할 수 있으며 제3부의 각 장은 추정량, 기본 가정, 식별 요건을 먼저 명시한 후 앞선 장들에서 제시된 실질적 사례에 이를 적용한다.
 
@@ -269,7 +268,6 @@ timeline
 
 제3시대: 패러다임 전환 (≈19501980년). 결정적인 단절은 20세기 중반에 일어났다. 학문의 대상 독자가 경제 시스템 전체에서 개별 기업의 개별 관리자(의사결정자)로 전환된 것이다. @wilkie2003eras 는 이를 진정한 패러다임 전환으로 규정하며 두 가지 핵심 동력이 이를 이끌었다고 설명한다. 첫 번째 동력은 관리과학(management science)이었다. 경영과학(OR), 의사결정 이론, 수학적 모델링은 마케팅을 최적화 학문으로 탈바꿈시킬 것을 약속했고 여기서 발전한 '마케팅 모델(marketing models)' 운동은 [@sec-history-traditions] 에서 논의할 계량적 전통으로 발전했다 [@lilien1994models]. 두 번째 동력은 행동과학(behavioral science)이었다. 심리학과 사회학은 태도, 동기, 학습, 선택에 관한 이론을 제공하여 소비자를 정보 처리자로 재개념화하고 그 의사결정을 실험적으로 연구할 수 있는 길을 열었다. 이러한 관리적 재구성은 학문적 범위의 확장으로 공식화되었다. @kotler1969broadening 은 마케팅 개념이 영리 기업을 넘어 비영리 단체, 아이디어, 인물, 사회적 대의(causes)에도 적용된다고 주장했다. 이는 학문의 지평을 넓히는 동시에 수십 년에 걸친 정의 논쟁을 촉발했다.
 
-> 마케팅 관리(marketing management)를 학문의 중심적 조직 관점으로 선택한 것은 필연적인 결과만은 아니었다. @wilkie2003eras 는 이에 따른 기회비용이 존재했다고 지적한다. 즉, 개별 관리자의 의사결정 문제를 우선시함으로써, 제1시대와 제2시대를 이끌었던 총체적(aggregate) 마케팅 시스템 및 사회적 후생에 관한 거시마케팅(macromarketing)적 질문들이 부차적인 위치로 밀려났다는 것이다 [@wilkie1999contributions; @wilkie2006macromarketing].
 
 제4시대: 패러다임의 심화 및 분화 (≈1980년현재). 관리적-행동과학적 패러다임은 종결된 것이 아니라 고도로 전문화 및 분화(fragment)되었다. 제4시대를 특징짓는 것은 전문 분과화이다. 소비자행동(CB), 마케팅 사이언스/모델링, 분석적 이론(analytical theory)은 각각 고유한 학술지, 학술대회, 박사 세미나, 품질 평가 기준을 발전시켰으며 그 결과 서로 다른 하위 분야의 연구자들이 상대방의 연구를 상호 평가하기 어려울 정도에 이르렀다. 또한 이 시기에는 새로운 패러다임 수준의 전환을 제시하려는 시도가 지속되었다. 대표적인 것이 @vargo2004newlogic 의 서비스 지배 논리(Service-Dominant Logic, S-D logic)이다. 이들은 마케팅 사상이 유형재에 체화되어 교환되는 가치를 중심으로 하는 '상품 중심 모델'에서, 역량과 지식(운용 자원)의 적용을 통해 가치가 '공동 창출(co-created)'되는 '서비스 중심 모델'로 이행하고 있다고 주장한다. 서비스 지배 논리가 진정한 패러다임 전환인지 단순한 관점의 재구성에 불과한지는 여전히 학술적 논쟁의 대상이다. 이 장에서 이것이 갖는 의미는 마케팅 사상사가 과거 역사가들의 전유물이 아니라 현재 연구자들에 의해 실시간으로 여전히 쓰여지고 논쟁 중이라는 점을 보여준다는 데 있다.
 
@@ -486,7 +484,6 @@ flowchart LR
 
 이 세 가지 결함으로부터 완전히 자유로운 측정치는 존재하지 않는다. 실무적 핵심 질문은 타당한 중첩 영역 $V$가 충분히 크고 오염 영역 $C$가 충분히 작고 무작위적인가이며 이를 통해 해당 측정치가 연구자가 도출하고자 하는 추론을 타당하게 뒷받침할 수 있는가이다. 이 질문을 정밀하게 다루는 것이 바로 측정 이론의 역할이다.
 
-> "구성개념은 검사 수행에 반영된다고 가정되는 인간의 가설적 속성이다." 구성개념이 과학적 학문에 수용되는 이유는 그것이 직접 관찰될 수 있어서가 아니라, 이론적 관계망(즉, 법칙적 관계망, nomological network)을 통해 검증 가능한 경험적 결과를 도출하기 때문이다.
 
 : 이는 고전적 심리측정학 전통에서 구성개념 타당화의 핵심 아이디어이다. 구성개념은 단일한 관찰이 아니라 그것이 맺고 있는 법칙적 관계망을 통해 학문적 타당성을 획득한다 [@cronbachmeehl1955construct].
 
@@ -558,17 +555,17 @@ flowchart LR
 
 심리측정학이 아닌 계량경제학 훈련을 받은 독자라면 다른 명칭으로 두 측정 모형을 익히 알고 있을 것이다. 이를 번역하여 이해하면 반영적/형성적 선택이 단순한 설문 방법론의 관례가 아니라 친숙한 식별 문제임을 알 수 있다. 용어는 학문마다 다르지만 대수적 구조는 동일하며 실증 경제학자가 보유한 도구들과 정확히 일치한다.
 
-### 반영적 측정은 공통 요인 및 변수오차(Errors-in-Variables) 모형이다
+반영적 측정은 공통 요인 및 변수오차(Errors-in-Variables) 모형이다
 
 [식 @eq-02-reflective]의 반영적 명세는 고전적인 변수오차(Errors-in-Variables, EIV) 측정 오차 모형과 정확히 일치한다. 절편을 흡수하여 단일 반영 지표를 $x_k = \lambda_k \eta + \varepsilon_k$로 쓰자. 잠재 구성개념 $\eta$는 참된 설명변수(true regressor)이고, $\varepsilon_k$는 고전적 측정 오차(classical measurement error)(평균이 0이고, 참값과 상관이 없으며 지표 간에 상관이 없음)이며 관측된 $x_k$는 참값에 노이즈가 더해진 것이다. 이는 계량경제학 교재에서 감쇠 편향(attenuation bias)을 설명할 때 사용하는 설정과 동일하다. 오차가 있는 설명변수에 결과를 회귀시키면 기울기 계수는 신뢰도 비율 $\sigma_\eta^2 / (\sigma_\eta^2 + \sigma_\varepsilon^2)$만큼 0을 향해 편향되며 이는 [식 @eq-02-reliability]의 고전검사이론 신뢰도와 정확히 일치한다. [식 @eq-02-attenuation]의 감쇠 보정은 심리측정학에서 부르는 스피어만(Spearman)의 감쇠 보정[@spearman1904proof]이며 계량경제학자들이 "회귀 희석(regression dilution)"에서 사용하는 것과 동일하다. 따라서 반영적 측정 모형은 하나의 공통된 참 설명변수 $\eta$를 공유하는 EIV 연립방정식 체계이며 요인 분석(FA)과 확인적 요인 분석(CFA)이 그 추정량이 된다. 동일한 $\eta$에 대해 3개 이상의 지표가 주어지면 공유된(공통 요인) 분산이 스케일을 제외한 $\eta$를 식별하고 공유되지 않은 분산은 $\varepsilon_k$로 분리된다. 여기서 도구변수(IV)의 직관도 연결된다. 두 번째 반영 지표 $x_j$는 측정 오차가 있는 $x_k$에 대한 유효한 도구변수가 된다. 국소 독립성 가정($\mathrm{Cov}(\varepsilon_j, \varepsilon_k) = 0$) 하에서 $x_j$는 참된 $\eta$와 상관되지만 $x_k$의 오차와는 상관되지 않기 때문이다. 구조방정식 모형에서 측정 오차를 처리하는 방식($\eta$를 잠재 변수로 모델링하고 다중 지표로 식별하는 것)은 노이즈가 있는 설명변수를 동일한 대상의 다른 측정치로 도구변수화하는 기법을 다중 지표로 일반화한 것이다.
 
-### 형성적 측정은 인과 지표들의 복합 지수이다
+형성적 측정은 인과 지표들의 복합 지수이다
 
 [식 @eq-02-formative]의 형성적 명세에는 공통 요인이 전혀 존재하지 않는다. 여기서 $\eta = \sum_k w_k x_k + \zeta$는 지표들의 가중 복합체(weighted composite)이며 지표들은 결과 발현이 아니라 구성개념을 정의하는 원인(causal) 지표이다. 계량경제학적 유사체는 지수(index number) 또는 회귀 가중 복합체이다. 소비자물가지수(CPI)는 개별 품목 가격들로 구성되고, 사회경제적 지위 지수는 소득, 교육, 직업으로 구성되며 마케팅 믹스 압력 지수는 광고, 가격, 유통으로 구성된다. 구성 요소들 간에 상관관계가 존재할 필요가 없으며 하나를 누락하면 지수의 의미 자체가 변한다(CPI에서 주거비를 제외하면 전혀 다른 물가 지수가 된다). 이는 형성적 지표들이 상호 호환될 수 없다는 경고와 정확히 일치한다 [@bollen1991conventional; @diamantopoulos2001index]. 이러한 구분은 포착되는 분산을 극대화하는 복합체를 구성하는 주성분 분석(PCA)(본질적으로 형성적 연산)과 잠재적 원인에 기인하는 공유 분산을 모델링하는 공통 요인 분석(CFA)(반영적 연산) 간의 고전적 통계학적 대비와 일맥상통한다.
 
 둘이 결합된 형태가 MIMIC 모형(다중 지표 다중 원인, Multiple Indicators, Multiple Causes)이다. 잠재 변수 $\eta$로 유입되는 형성적/원인 지표 블록과 $\eta$로부터 유출되는 반영적/결과 지표 블록을 동시에 갖는다. 반영적 블록이 순수 형성적 블록에는 결여된 스케일과 식별 조건을 제공하며 이는 순수 형성적 구성개념의 식별 불가능성 문제를 해결하는 표준적 해법이다 [@diamantopoulos2001index; @mackenzie2011construct; @bollen2017defense]. 브랜드 자산과 같은 마케팅 구성개념을 반영적으로 모델링해야 하는지 형성적으로 모델링해야 하는지, 그리고 원인-형성적 지표가 개념적으로 정당한지는 여전히 활발한 논쟁거리이다 [@jarvis2003critical; @bollen2017defense].
 
-### 잘못된 모형을 적합할 때 발생하는 문제
+잘못된 모형을 적합할 때 발생하는 문제
 
 잘못된 모형을 설정할 때 발생하는 계량경제학적 결과는 치명적이다. 형성적 데이터에 반영적 모형을 적합하는 것은 상관될 이유가 없는 지표들에 인위적인 가짜 공통 요인을 강제한다. 내적 일관성 통계량($\alpha$, AVE)은 상관되지 않았다는 이유로 매우 유효한 원인 지표들을 부당하게 탈락시키며 문항 정제 과정(상관이 낮은 문항 삭제)은 구성개념의 도메인을 조용히 절단해 버린다. 반대로 반영적 데이터에 형성적 모형을 적합하는 것은 구성개념의 본체인 공유 분산 시그널을 폐기하고 가중치가 자유 모수인 것처럼 공통 요인 분산을 취급한다. 그 결과 복합체는 지표 고유의 오차를 $\eta$ 내부로 흡수하게 되며 하류 단계에서 추정되는 구조 계수들은 오차가 정화되기는커녕 그 오차에 의해 심각하게 오염된다. 이러한 오명세는 구조 모형 전체로 전이된다. @jarvis2003critical 은 최우수 마케팅 저널에 실린 구성개념의 상당수가 인과 방향에서 잘못 명세되어 있으며 그로 인한 구조 경로 계수의 편향이 양수나 음수 양방향으로 상당한 크기에 달함을 입증했다. 식별(identification) 역시 실패하기 쉽다. 반영적 요인은 식별을 위해 최소 3개의 지표(또는 더 큰 모형 내부에서 2개)가 필요하며 형성적 구성개념은 모형 내부의 다른 구성개념이나 지표를 향하는 최소 2개의 유출 경로가 존재하지 않으면 가중치 $w_k$가 개별적으로 식별조차 되지 않는다. 계량경제학자들이 EIV 모형에 대해 이미 숙지하고 있는 교훈이 그대로 적용된다. 공분산 행렬만으로는 측정 방향을 추론할 수 없으며 모형은 인과 방향이 가정된 후에야 비로소 식별되고 잘못된 방향을 가정하면 해당 구성개념에 의존하는 모든 추정이 편향된다.
 
@@ -617,7 +614,7 @@ if (have_lavaan) {
 
 복원된 표준화 적재치는 모집단 모수값에 매우 근접하며 잔차 분산은 각 지표 고유의 오차를 성공적으로 흡수한다. CFA는 잡음이 낀 설명변수를 제2의 측정치로 도구변수화했을 때 일어나는 일과 정확히 같은 일을 수행했다. 즉, 참된 공통 신호 $\eta$를 지표별 노이즈 $\varepsilon_k$로부터 성공적으로 분리해 낸 것이다.
 
-### MIMIC 모형 실습: 형성적 원인과 반영적 결과
+MIMIC 모형 실습: 형성적 원인과 반영적 결과
 
 MIMIC 예제는 형성적 지표와 반영적 지표의 결합을 구체적으로 보여준다. 두 개의 원인 지표 $c_1, c_2$(소득과 교육 수준 등)가 알려진 가중치를 통해 잠재 변수 $\eta$를 형성(form)하고 $\eta$는 다시 식별을 제공하는 세 개의 반영적 결과 지표 $y_1, y_2, y_3$를 방출(emit)한다. `lavaan`으로 MIMIC 모형을 적합하여 형성적 가중치($\eta$를 원인 지표들에 회귀)와 반영적 적재치(결과 지표들을 $\eta$에 회귀)를 복원한다.
 
@@ -677,7 +674,7 @@ L  <- chol(matrix(c(1, rho_true, rho_true, 1), 2))
 TT <- matrix(rnorm(n * 2), n, 2) %*% L
 Tx <- TT[, 1]; Ty <- TT[, 2]
 
-## 관찰 신뢰도가 rel_x, rel_y가 되도록 고전적 오차 추가
+관찰 신뢰도가 rel_x, rel_y가 되도록 고전적 오차 추가
 ## Var(true) = 1이므로, 오차 분산 = (1 - rel)/rel 일 때 참 분산 비율이 rel이 됨
 ex <- rnorm(n, sd = sqrt((1 - rel_x) / rel_x))
 ey <- rnorm(n, sd = sqrt((1 - rel_y) / rel_y))
@@ -696,7 +693,7 @@ cat(sprintf("감쇠 보정된 추정치               : %.3f\n", r_disatt))
 
 관찰된 상관계수는 감쇠 공식의 예측치와 거의 일치하며 참값 0.50보다 크게 낮아진다. 그리고 신뢰도의 제곱근 곱으로 나누어 주면 참값에 매우 근접한 추정치가 복원된다. 이 결과가 주는 실무적 교훈은 계량경제학적 맥락에서 명확하다. 노이즈가 심한 설문 구성개념을 설명변수로 사용한 회귀분석은 실제 효과를 체계적으로 과소평가하며 신뢰도 수치가 보고되지 않은 상태에서 "효과를 발견하지 못했다"는 주장은 해석이 불가능하다. 0에 가까운 회귀 기울기는 측정 오차가 심할 때 나타나는 전형적인 결과이기 때문이다.
 
-## 조작화: 개념에서 측정 도구로
+조작화: 개념에서 측정 도구로
 
 조작화(Operationalization)는 구성개념을 변수로 변환하는 절차를 구체적으로 명시하는 행위이다. 즉, "지각된 품질을 측정하기 위해 특정 척도 상에서 이 4가지 질문을 제시하고 그 평균을 구한다"는 규칙을 정의하는 것이다. 조작화는 이론이 데이터와 만나는 접점이며 조작화 단계에서 포착하지 못한 구성개념의 의미는 하류 단계의 어떠한 분석으로도 결코 되살릴 수 없다는 점에서 비가역적이다.
 
@@ -790,7 +787,7 @@ $\kappa = 0$은 평가자 간의 일치가 무작위 라벨링 수준에 불과�
 
 set.seed(1414)
 
-## ---- 급내상관계수 (2명의 평가자, 연속형 평점) -------------
+---- 급내상관계수 (2명의 평가자, 연속형 평점) -------------
 n  <- 200
 true_q <- rnorm(n, mean = 0, sd = 1)        # 대상 i의 안정적인 잠재 품질
 r1 <- true_q + rnorm(n, sd = 0.6)            # 평가자 1
@@ -802,7 +799,7 @@ ms_within  <- mean((r1 - r2)^2) / 2
 icc <- (ms_between - ms_within) / (ms_between + ms_within)
 round(icc, 3)
 
-## ---- 코헨의 카파 (2명의 코더, 이진 분류 레이블) ---------------------------
+---- 코헨의 카파 (2명의 코더, 이진 분류 레이블) ---------------------------
 latent  <- rnorm(n)
 code1 <- as.integer(latent + rnorm(n, sd = 0.7) > 0)   # 코더 1
 code2 <- as.integer(latent + rnorm(n, sd = 0.7) > 0)   # 코더 2
@@ -911,7 +908,7 @@ CMV는 [그림 @fig-cm-gap]의 정의상 정확히 오염(contamination)에 해�
 
 : 어떠한 사후 통계적 기법도 설계 단계에서 오염을 제거하는 것을 완전히 대체할 수는 없다. 잠재 방법 요인 접근법이나 마커 변수 접근법은 어떤 분산이 방법 분산인지에 대해 오염된 데이터 자체로는 검증 불가능한 가정을 전제하기 때문이다 [@podsakoff2003common].
 
-## 측정 오차에서 의사결정 오차로
+측정 오차에서 의사결정 오차로
 
 구성개념과 변수는 궁극적으로 의사결정(신제품 출시 여부, 타겟팅 여부, 캠페인의 성과 기여 여부 등)을 지원하기 위해 존재한다. 측정 오차가 초래하는 의사결정 오차를 명확히 연결해 볼 필요가 있다. 측정치가 이진 분류(고가치 고객 vs. 저가치 고객, 만족 vs. 불만족, 처치 효과 있음 vs. 없음)에 사용된다고 가정하자. 구성개념에는 참된 상태가 존재하고 측정치는 판정을 내리며 네 가지 조합이 [표 @tbl-error-matrix]의 혼동 행렬을 형성한다.
 
@@ -1011,9 +1008,8 @@ $$S = \alpha + \beta_E\, E + \beta_D\, (P - E) + \varepsilon,$$ {#eq-03-disconfi
 
 @oliver1999expectation 이 수행한 새로운 레스토랑 경험에 관한 현장 연구는 이 정태적 수식 이면의 동태적 과정을 명확히 보여준다. 소비 전 기대는 현실적인 리뷰를 통해 조작되었고 식사 경험 자체는 프로토콜 분석으로 기록되었으며 지각된 성과는 식사 직후 측정되었다. 후속 연구에서 반복 확인되는 4가지 주요 결과는 다음과 같다. 첫째, 조작된 기대는 초기에는 즉각적인 효과를 미치지만 소비 과정이 진행됨에 따라 점차 감쇠(decay)한다. 따라서 가중치 $\beta_E$는 상수가 아니라 직접적인 경험 증거가 축적됨에 따라 점차 약화된다. 둘째, 기대는 지각된 성과를 형성한다(전방 동화, forward assimilation). 즉, $E$와 $P$는 독립적인 입력값이 아니라 인과적으로 연결되어 있으며 이는 후술하듯 [식 @eq-03-disconfirmation]이 가정하는 명 깔끔한 분리를 깨뜨린다. 셋째, 기대는 실제로 발생한 사건에 의해 사후적으로 수정된다(후방 동화, backward assimilation). 따라서 소비 후에 $E$를 측정하면 측정된 $E$ 자체가 $P$에 의존하게 된다. 넷째, 불일치 $D$는 여전히 $S$의 핵심 동인으로 유지되며 전체 과정은 속성 특화적(dimension-specific) 방식으로 작동한다. 즉, 특정 속성에 대한 불일치는 막연한 전반적 감정이 아니라 해당 속성에 대한 만족을 직접 견인한다.
 
-> 불일치(Disconfirmation). 만족은 소비 후 경험된 제품의 실제 성과와 사전 기대 간에 지각된 불일치에 대한 소비자의 심리적 반응이다.
 
-### 정서와 인지
+정서와 인지
 
 소비자의 만족도 평가는 불일치 방정식이 단일한 $S$로 축약하는 두 가지 경로에 의존한다. 인지적(cognitive) 경로는 기대 대비 성과에 대한 의식적이고 속성별로 이루어지는 비교이다(즉, [식 @eq-03-disconfirmation]의 $P - E$ 계산 과정). 정서적(affective) 경로는 소비 과정에서 남겨진 감정적 잔여물이다. 즉, 사용 중에 경험한 즐거움, 기쁨, 짜증, 후회 등이며 이는 계산된 불일치와 무관하게 판단을 채색한다. 이 둘은 대체재가 아니다. 기술적으로 완벽하지만 냉랭하게 제공된 서비스 접점은 인지적 불일치가 0임에도 불구하고 낮은 만족도를 초래할 수 있으며 서비스 실패 후 따뜻하고 진정성 있는 서비스 회복은 큰 음의 불일치에도 불구하고 높은 만족도를 창출할 수 있다. 따라서 만족을 순수하게 인지적인 장부 계산으로 취급하는 것은 형성 과정을 잘못 명세하는 것이다. 정서적 요소는 독립적인 입력값이며 속성 평점만을 수집하는 측정 도구는 이를 놓치게 된다.
 
@@ -1134,7 +1130,7 @@ flowchart LR
 
 실무자들은 종종 시장 점유율과 고객 만족도가 같은 방향으로 움직인다고 가정한다. 즉, 시장에서 승리하는 기업이 고객을 만족시키고 있을 것이라는 생각이다. 그러나 데이터는 다른 결과를 보여준다. 미국 소비재 시장의 대표 표본을 대상으로 장기적 관계를 재검토한 @rego2013reexamining 은 일관되게 유의한 음(-)의 관계를 발견했다. 만족도는 미래 시장 점유율에 대한 *약한* 예측 변수이지만 시장 점유율은 미래 만족도에 대한 *강한 음의* 예측 변수이다. 그 메커니즘은 선호의 이질성(preference heterogeneity)이다. 시장의 큰 점유율을 차지하는 브랜드는 필연적으로 더 다양한 고객층을 서빙해야 하며 이들의 이질적인 선호는 단일 제품 라인업으로 모두 만족될 수 없기 때문에 점유율이 상승할수록 평균 만족도는 하락한다. 이 음의 관계는 선호 이질성에 의해 매개되며 두 가지 조건 하에서 완화된다. 즉, 만족도를 산업 평균이 아닌 최근접 경쟁사를 기준으로 벤치마킹할 때, 그리고 브랜드 전환 비용이 낮을 때이다. 이에 대한 전략적 해법은 다각화된 브랜드 포트폴리오이다. 더 넓은 범위의 다중 브랜드를 운영함으로써 기업은 단일 브랜드로 모든 고객을 만족시키려 무리하지 않고도 이질적인 세그먼트들을 포괄할 수 있어 점유율과 만족 간의 본질적 트레이드오프를 완화할 수 있다.
 
-### 재무 레버리지의 조절 효과
+재무 레버리지의 조절 효과
 
 만족-가치 연계는 기업의 자본 구조에 의해서도 제약을 받는다. @Malshe_2015 는 재무 레버리지(부채 비율)가 두 가지 뚜렷한 경로를 통해 마케팅 성과와 기업 가치를 형성함을 입증했다. 첫째, 레버리지는 고객 만족도를 낮춘다. 이 효과는 광고 집행 강도에 의해 매개된다. 즉, 부채 상환 부담이 만족도를 유지하는 데 필요한 마케팅 투자를 구축(crowd out)하기 때문이다. 둘째, 레버리지는 만족-기업 가치 관계 자체를 부정적으로 조절한다. 그 타격은 균일하지 않다. 서비스 기업과 경쟁이 치열한 산업의 기업들이 재무 레버리지로 인해 더 큰 타격을 입는다. 이들 기업의 가치는 레버리지가 침식시키는 고객 관계에 훨씬 더 크게 의존하기 때문이다. 따라서 만족 관리는 대차대조표와 분리되어 독립적으로 이루어질 수 없다. 레버리지가 높은 기업은 동일한 수준의 만족도로부터 더 적은 가치만을 추출할 수 있으며 애초에 그 만족도 수준을 유지하는 것조차 더 어렵다.
 
@@ -1146,7 +1142,7 @@ flowchart LR
 
 : 순진한 "만족 극대화" 관점을 통제하는 실증 연구 발견들 {#tbl-disciplining}
 
-## 독점 환경에서의 만족: 비용 경로
+독점 환경에서의 만족: 비용 경로
 
 위에서 다룬 마케팅-재무 증거들은 거의 전적으로 경쟁 시장에서 도출된 것이다. 경쟁 시장에서는 고객이 떠날 수 있지만 머무르기를 선택한다는 점에서 고객 유지와 재구매를 통해 만족이 작동한다. 그렇다면 고객이 떠날 수 없는 환경에서도 만족이 가치를 지니는가? 규제 대상 공공요금 기업(유틸리티)은 독점 기업인 동시에 엄격한 공시 의무로 인해 매우 정밀한 운영 및 회계 데이터를 제공하므로 훌륭한 자연실험 환경을 제공한다 [@bhattacharya2020].
 
@@ -1255,7 +1251,7 @@ set.seed(914)
 have_lavaan <- requireNamespace("lavaan", quietly = TRUE)
 
 n <- 800
-## --- 잠재 구성개념 (구조 모형) ---
+--- 잠재 구성개념 (구조 모형) ---
 shared <- rnorm(n)                              # 공유 가치
 comm   <- rnorm(n)                              # 커뮤니케이션
 trust  <- 0.45 * shared + 0.35 * comm + rnorm(n, sd = 0.7)
@@ -1263,7 +1259,7 @@ benef  <- rnorm(n)                              # 관계 효익
 commit <- 0.50 * trust + 0.30 * benef + rnorm(n, sd = 0.7)
 acquie <- 0.55 * commit + rnorm(n, sd = 0.8)    # 묵인 (결과)
 
-## --- 반영적 측정: 구성개념당 3개의 지표 ---
+--- 반영적 측정: 구성개념당 3개의 지표 ---
 ind <- function(eta, lambdas) {
   sapply(lambdas, function(l) l * eta + rnorm(length(eta), sd = sqrt(1 - l^2)))
 }
@@ -1292,7 +1288,7 @@ if (have_lavaan) {
   fit <- lavaan::sem(kmv, data = dat, std.lv = TRUE)
   pe  <- lavaan::parameterEstimates(fit, standardized = TRUE)
   print(pe[pe$op == "~", c("lhs", "rhs", "std.all", "pvalue")], row.names = FALSE)
-  # 공유 가치가 묵인에 미치는 간접 효과 (SV -> TR -> CO -> AQ)
+# 공유 가치가 묵인에 미치는 간접 효과 (SV -> TR -> CO -> AQ)
   b <- function(l, r) pe$std.all[pe$op == "~" & pe$lhs == l & pe$rhs == r]
   cat(sprintf("\nTR, CO를 통한 SV -> AQ 간접 효과: %.3f\n",
               b("TR","SV") * b("CO","TR") * b("AQ","CO")))
@@ -1521,7 +1517,7 @@ L  <- chol(matrix(c(1, 0.6, 0.6, 1), 2))
 TT <- matrix(rnorm(n * 2), n, 2) %*% L
 Te <- TT[, 1]; Tp <- TT[, 2]
 
-## 각 관찰 점수의 신뢰도가 0.75가 되도록 고전적 오차 추가
+각 관찰 점수의 신뢰도가 0.75가 되도록 고전적 오차 추가
 rel <- 0.75
 add_err <- function(t) t + rnorm(length(t), sd = sqrt((1 - rel) / rel))
 E <- add_err(Te); P <- add_err(Tp)
@@ -1622,7 +1618,7 @@ $$ {#eq-eval-risk}
 set.seed(1960)
 n <- 4000
 
-## 3가지 손실 유형: 재무적, 성능적, 사회적
+3가지 손실 유형: 재무적, 성능적, 사회적
 ploss  <- cbind(fin = runif(n, 0, .6), perf = runif(n, 0, .5), soc = runif(n, 0, .4))
 conseq <- cbind(fin = runif(n, .5, 1), perf = runif(n, .4, 1), soc = runif(n, .2, .8))
 
@@ -2064,7 +2060,7 @@ legend("top", c("선형 적합선 (오류)", "2차 적합선 (올바름)"),
 
 ## 고객 경험 {#sec-fr-experience}
 
-가장 통합적인 프런티어 구성개념은 고객 경험(customer experience, CX)이다. @lemon 은 이를 기업이 부분적으로만 통제할 수 있는 다양한 접점(touchpoints)(브랜드 소유, 파트너 소유, 고객 소유, 사회적/외부 접점)을 통해 축적되며 구매 전부터 구매, 구매 후에 이르는 전체 고객 여정(customer journey)에 걸쳐 기업의 제품 및 서비스 제공물에 대해 소비자가 나타내는 인지적, 감정적, 감각적, 사회적, 행동적 *다차원적 반응(multidimensional response)*으로 정의한다. 고객 경험은 본 부에서 다룬 여러 구성개념들을 포괄하고 재구성한다. 즉, 만족([@sec-satisfaction] 참조)은 경험의 일화적이고 구매 후의 한 단면이 되며 지각된 품질과 가치([@sec-evaluative] 참조)는 인지적 구성요소가 되고 인게이지먼트([@sec-engagement] 참조)는 행동적 구성요소가 된다. 이 구성개념의 프런티어적 위상은 개념의 신수성보다는 측정의 난이도에서 비롯된다. 경험은 *동태적(dynamic)*이고(여정을 따라 진화함), *분산되어 있으며(distributed)*(기업 통제 밖의 수많은 접점에 걸침), *다차원적(multidimensional)*이므로, 단일 횡단면 설문 척도로는 구조적으로 온전히 포착하기 어렵다. 고객 경험을 제대로 측정하려면 여정 수준의 다중 접점 및 다중 시점 데이터(본서의 방법론 및 멀티모달 부에서 다루는 행동 및 비정형 데이터)가 필요하며 포괄적인 구성개념과 이를 위해 흔히 사용되는 빈약한 측정치 간의 격차는 [그림 @fig-cm-gap]의 구성개념-측정치 격차(construct-to-measure gap)가 가장 크게 나타나는 지점이다.
+## 가장 통합적인 프런티어 구성개념은 고객 경험(customer experience, CX)이다. @lemon 은 이를 기업이 부분적으로만 통제할 수 있는 다양한 접점(touchpoints)(브랜드 소유, 파트너 소유, 고객 소유, 사회적/외부 접점)을 통해 축적되며 구매 전부터 구매, 구매 후에 이르는 전체 고객 여정(customer journey)에 걸쳐 기업의 제품 및 서비스 제공물에 대해 소비자가 나타내는 인지적, 감정적, 감각적, 사회적, 행동적 *다차원적 반응(multidimensional response)*으로 정의한다. 고객 경험은 본 부에서 다룬 여러 구성개념들을 포괄하고 재구성한다. 즉, 만족([@sec-satisfaction] 참조)은 경험의 일화적이고 구매 후의 한 단면이 되며 지각된 품질과 가치([@sec-evaluative] 참조)는 인지적 구성요소가 되고 인게이지먼트([@sec-engagement] 참조)는 행동적 구성요소가 된다. 이 구성개념의 프런티어적 위상은 개념의 신수성보다는 측정의 난이도에서 비롯된다. 경험은 *동태적(dynamic)*이고(여정을 따라 진화함), *분산되어 있으며(distributed)*(기업 통제 밖의 수많은 접점에 걸침), *다차원적(multidimensional)*이므로, 단일 횡단면 설문 척도로는 구조적으로 온전히 포착하기 어렵다. 고객 경험을 제대로 측정하려면 여정 수준의 다중 접점 및 다중 시점 데이터(본서의 방법론 및 멀티모달 부에서 다루는 행동 및 비정형 데이터)가 필요하며 포괄적인 구성개념과 이를 위해 흔히 사용되는 빈약한 측정치 간의 격차는 [그림 @fig-cm-gap]의 구성개념-측정치 격차(construct-to-measure gap)가 가장 크게 나타나는 지점이다.
 [그림 @fig-fro-cx-journey]는 여정, 접점, 그리고 고객 경험이 포괄하는 구성개념들을 도식화하여 보여준다.
 
 ```{mermaid}
@@ -2323,11 +2319,11 @@ set.seed(2024)
 n <- 600
 
 firms <- tibble(
-  # 시장 지향성 (표준화 지수, 예: MARKOR/MKTOR)
+# 시장 지향성 (표준화 지수, 예: MARKOR/MKTOR)
   mo        = rnorm(n, 0, 1),
-  # 경쟁 강도 조절변수 (0 = 보호된 시장, 1 = 극심한 경쟁)
+# 경쟁 강도 조절변수 (0 = 보호된 시장, 1 = 극심한 경쟁)
   intensity = runif(n, 0, 1),
-  # 시장 지향성과 성과 모두를 높이는 누락된 "기업 역량/품질"
+# 시장 지향성과 성과 모두를 높이는 누락된 "기업 역량/품질"
   quality   = rnorm(n, 0, 1)
 )
 
@@ -2350,7 +2346,7 @@ moderated <- lm(perf ~ mo_obs * intensity + quality, data = firms)
 
 round(rbind(
   단순회귀   = c(coef(naive)["mo_obs"], NA, NA),
-  조절회귀   = coef(moderated)[c("mo_obs", "intensity", "mo_obs:intensity")]
+## 조절회귀   = coef(moderated)[c("mo_obs", "intensity", "mo_obs:intensity")]
 ), 3)
 ```
 
@@ -2447,7 +2443,7 @@ panel <- expand.grid(firm = 1:n_firm, year = 1:n_year) %>%
     brand_equity = 0.6 * firm_fe[firm] + rnorm(n(), 0, 1),  # 역량이 브랜드 자산을 높임
     leverage     = runif(n(), 0, 0.6),
     cash_flow    = rnorm(n(), 0, 1),
-    # 토빈의 q에 대한 브랜드 자산의 참 기업 내 효과는 0.25임
+# 토빈의 q에 대한 브랜드 자산의 참 기업 내 효과는 0.25임
     tobin_q = 1.2 + firm_fe[firm] + year_fe[year] +
               0.25 * brand_equity -        # 관심 대상인 전략적 효과
               0.40 * leverage +
@@ -2570,7 +2566,7 @@ flowchart LR
   FM["재무 및<br/>시장 기반 측정치"] -.-> SV
 ```
 
-시장 성과 단계에서의 명확한 조작화는 브랜드가 동일한 무상표(generic) 제품 대비 누리는 가격 프리미엄이다:
+## 시장 성과 단계에서의 명확한 조작화는 브랜드가 동일한 무상표(generic) 제품 대비 누리는 가격 프리미엄이다:
 $$
 \text{BE}_b = p_b - p_{\text{generic}}
 $$ {#eq-brand-premium}
@@ -3170,7 +3166,7 @@ flowchart LR
 
 소비자가 공유하기 쉽도록 설계된 기업 생성 사용자 콘텐츠(FGUC)는 긍정적 구전을 증폭시킨다 [@beckexpress; @saljoughianexpress].
 
-## 데이터 유형으로서의 이미지
+데이터 유형으로서의 이미지
 
 이미지는 고차원 시각 데이터이다 [@wedel; @pieters2007]. 구조적 복잡성은 에지 검출로, 색상 복잡성은 색상 엔트로피로 정량화된다 [@pieters; @reinecke; @bingzhou2015]:
 $$
@@ -3225,7 +3221,7 @@ health <- scale(health)[, 1]
 ## 다음 주 매출은 이번 주의 잠재 건전성과 노이즈에 의존함.
 sales <- 100 + 15 * dplyr::lag(health, default = 0) + rnorm(n_weeks, 0, 5)
 
-## 매주 건전성 주변에서 수많은 잠재 의견이 생성되지만
+매주 건전성 주변에서 수많은 잠재 의견이 생성되지만
 ## 게시 확률은 의견의 극단성에 비례하여 증가함 (극단성 자기선택 편향).
 naive_sentiment      <- numeric(n_weeks)
 corrected_sentiment  <- numeric(n_weeks)
@@ -3234,7 +3230,7 @@ for (t in seq_len(n_weeks)) {
   post_prob <- plogis(2 * abs(opinions) - 1)          # 극단적 의견일수록 게시 확률 증가
   posted    <- opinions[runif(400) < post_prob]
   naive_sentiment[t] <- mean(posted)                  # 자기선택으로 인해 편향됨
-  # 선택 편향 보정: 역 게시 확률로 가중 평균 계산
+# 선택 편향 보정: 역 게시 확률로 가중 평균 계산
   w <- 1 / plogis(2 * abs(posted) - 1)
   corrected_sentiment[t] <- weighted.mean(posted, w)
 }
@@ -3302,7 +3298,7 @@ $$ {#eq-mcguire-chain}
 
 :::
 
-### 퍼널에서 여정으로
+퍼널에서 여정으로
 
 정보 처리 사슬의 실무적 형태인 구매 퍼널(purchase funnel)은 인지, 친숙, 고려, 구매, 충성으로 이어지는 기업 중심의 일방향 파이프라인이다. 이에 반해 소비자 의사결정 여정(consumer decision journey)은 초기 고려군 형성, 능동적 평가(고려군 확장 가능), 구매, 그리고 충성도 루프로 이어지는 소비자 관점의 순환 프로세스이다([그림 @fig-funnel-journey]). @batra 은 이를 유료, 소유, 획득 미디어를 통합하는 동태적 확장 여정으로 발전시켰다.
 
@@ -3324,7 +3320,7 @@ flowchart TB
   end
 ```
 
-### 선행요인, 정보 처리 및 결과
+선행요인, 정보 처리 및 결과
 
 @maclnnis 는 소비자의 동기(motivation), 능력(ability), 기회(opportunity)(MAO)에 따라 정보 처리 깊이가 달라지는 조건부 시스템을 제시했다. 동기는 실용적 욕구와 표현적(경험적/상징적) 욕구에 의해 유발되어 주의와 처리 용량을 지배한다.
 
@@ -3354,7 +3350,7 @@ flowchart TB
 - 광고에 대한 태도($A_{ad}$): 광고 자체에 대한 감정적 평가($A_{ad}$)가 브랜드 태도($A_b$)에 직접·간접적으로 전이된다 [@mitchell; @mackenzie; @brown1992].
 - 경쟁적 간섭: @burke1988competitive 는 경쟁사 광고가 자사 광고의 기억을 소급적·순행적으로 방해함을 규명했다.
 
-### 관여도와 두 가지 설득 경로
+관여도와 두 가지 설득 경로
 
 행동 문헌의 핵심 조절변수는 관여도(involvement)인다. 정교화 가능성 모형(ELM)[@petty1979]에 따르면 설득은 두 경로로 분기된다. 중심 경로(central route)는 메시지 논거에 대한 신중한 인지적 정교화를 거쳐 형성되며 지속성이 높고 행동 예측력이 강한다. 반면 주변 경로(peripheral route)는 모델 매력도나 배경음악 같은 표면적 단서에 의존하며 지속성이 약한다. @petty 은 논거의 질이 고관여 조건에서, 모델 매력도가 저관여 조건에서 태도 변화를 더 크게 견인함을 입증했다.
 
@@ -3411,7 +3407,7 @@ true_beta <- 0.5                       # 복원하고자 하는 인과적 광고
 ## 관리자는 관찰하지만 분석가는 관찰하지 못하는 수요 충격 (교란 요인)
 demand_shock <- rnorm(n_markets, 0, 1)
 
-## 관리자는 유리한 시장을 타깃팅함: 예상 충격에 비례하여 지출 증가
+관리자는 유리한 시장을 타깃팅함: 예상 충격에 비례하여 지출 증가
 advertising <- 2 + 1.2 * demand_shock + rnorm(n_markets, 0, 0.5)
 
 ## 매출은 광고(true_beta)와 동일한 잠재 충격 모두에 의존함
@@ -3449,7 +3445,7 @@ $$ {#eq-koyck-extended}
 library(tidyverse)
 set.seed(1)
 
-## --- 참 일별 데이터 생성 과정: Tellis & Franses (2006)의 DGP1 ---
+--- 참 일별 데이터 생성 과정: Tellis & Franses (2006)의 DGP1 ---
 beta <- 1; lambda <- 0.9                          # 당기 효과; 일별 이월 효과
 daily <- expand.grid(
   day  = c("mon", "tue", "wed", "thu", "fri", "sat", "sun"),
@@ -5089,7 +5085,7 @@ cat("러너 지수 (-1 / 탄력성)    :", round(-1 / eps_opt, 3), "\n")
 cat("실제 마진율 ((p - c) / p)  :", round((p_opt - c) / p_opt, 3), "\n")
 ```
 
-### 지불의향액(WTP) 측정 방법
+지불의향액(WTP) 측정 방법
 
 1. 직접 질문법 (Direct Questioning): 오픈형 질문 또는 밴 웨스텐도르프(Van Westendorp) 가격 민감도 측정법 (가식적 응답 편향 존재).
 2. 인센티브 정합적 메커니즘 (BDM): 복권 추첨 가격이 제시 가격 이하일 때 의무 구매하게 하여 진정한 WTP를 표출하도록 유도 [@becker1964].
@@ -5264,11 +5260,11 @@ oracle_opt    <- numeric(T_rounds)
 
 for (t in 1:T_rounds) {
   x <- runif(d, 0, 1)
-  # 오라클 최적 수익 계산
+# 오라클 최적 수익 계산
   exp_rewards <- sapply(1:K_prices, function(a) prices[a] * plogis(sum(theta_true[a, ] * x)))
   oracle_opt[t] <- max(exp_rewards)
 
-  # LinUCB 점수 계산
+# LinUCB 점수 계산
   ucb_scores <- sapply(1:K_prices, function(a) {
     th_hat <- A_inv[[a]] %*% b_vec[[a]]
     p_hat  <- sum(th_hat * x)
@@ -5567,10 +5563,10 @@ alpha_doc <- rnorm(n_docs, mean = 1.0, sd = 0.6)
 
 df_panel <- expand_grid(doc_id = 1:n_docs, month = 1:n_months) |>
   mutate(
-    # 영업사원은 기저 성향이 높은 의사를 타깃팅함 (내생적 지출)
+# 영업사원은 기저 성향이 높은 의사를 타깃팅함 (내생적 지출)
     detailing = pmax(0, round(0.8 * alpha_doc[doc_id] + rnorm(n(), 1.5, 0.8))),
     true_beta = 0.35,
-    # 처방 건수 데이터 생성 (오목한 반응)
+# 처방 건수 데이터 생성 (오목한 반응)
     lambda = exp(alpha_doc[doc_id] + true_beta * log1p(detailing)),
     prescriptions = rpois(n(), lambda)
   )
@@ -5693,7 +5689,7 @@ df_panel <- expand_grid(user_id = 1:n_users, week = 1:n_weeks) |>
   left_join(df_users, by = "user_id") |>
   mutate(
     post = as.numeric(week >= intervention_week),
-    # 처치 효과의 이질성: 라이트 유저는 규제 순응(-25%), 최상위 헤비 유저는 우회 접속 등으로 효과 미미(-5%)
+# 처치 효과의 이질성: 라이트 유저는 규제 순응(-25%), 최상위 헤비 유저는 우회 접속 등으로 효과 미미(-5%)
     user_elasticity = ifelse(base_hours > 20, -0.05, -0.25),
     treatment_effect = treated * post * user_elasticity * base_hours,
     hours = pmax(0, base_hours + rnorm(n(), 0, 1.5) + treatment_effect)
@@ -6020,7 +6016,7 @@ flowchart LR
 #| fig-cap: "4개 추세 모형의 전환율 외삽 비교."
 set.seed(42)
 t <- 1:12
-## 참 데이터 생성 과정: 상한 3%의 로지스틱 경로
+참 데이터 생성 과정: 상한 3%의 로지스틱 경로
 L_true <- 0.03; k_true <- 0.4; t0_true <- 6
 y_true <- L_true / (1 + exp(-k_true * (t - t0_true)))
 y_obs  <- pmax(0.001, y_true + rnorm(12, 0, 0.002))
@@ -6188,16 +6184,16 @@ alpha_s    <-  0.25   # 기준 점유율
 df_all <- expand_grid(cat_id = 1:n_cat, attempt = 1:k_per) |>
   mutate(
     xi = rnorm(n(), 0, 1),
-    # 역량이 우수한 기업이 더 일찍 진입함 (선택 편향)
+# 역량이 우수한 기업이 더 일찍 진입함 (선택 편향)
     entry_time = -0.8 * xi + rnorm(n(), 0, 0.5)
   ) |>
   group_by(cat_id) |>
   mutate(
     r = rank(entry_time),  # 진입 순서 (1~5)
     log_r = log(r),
-    # 시장점유율 생성: 순서 효과(true_delta) + 역량 효과(0.12 * xi)
+# 시장점유율 생성: 순서 효과(true_delta) + 역량 효과(0.12 * xi)
     latent_share = alpha_s + true_delta * log_r + 0.12 * xi + rnorm(n(), 0, 0.04),
-    # 생존 여부: 점유율이 8% 미만이면 시장에서 퇴출(사망)
+# 생존 여부: 점유율이 8% 미만이면 시장에서 퇴출(사망)
     survived = as.numeric(latent_share >= 0.08)
   ) |>
   ungroup()
@@ -6287,7 +6283,7 @@ $$ {#eq-structural-virality}
 ## 확산 트리의 구조적 바이럴리티 (평균 쌍별 거리) 계산 함수
 calc_structural_virality <- function(parent) {
   n <- length(parent)
-  # 인접 리스트로부터 최단 경로 거리 행렬 구축 (BFS)
+# 인접 리스트로부터 최단 경로 거리 행렬 구축 (BFS)
   adj <- replicate(n, integer(0), simplify = FALSE)
   for (i in 1:n) {
     if (!is.na(parent[i])) {
@@ -6319,7 +6315,7 @@ n_nodes <- 50
 parent_star <- c(NA, rep(1, n_nodes - 1))
 v_star <- calc_structural_virality(parent_star)
 
-## (2) 순수 바이럴 캐스케이드 (체인 그래프: 1 -> 2 -> 3 -> ... -> 50)
+(2) 순수 바이럴 캐스케이드 (체인 그래프: 1 -> 2 -> 3 -> ... -> 50)
 parent_chain <- c(NA, 1:(n_nodes - 1))
 v_chain <- calc_structural_virality(parent_chain)
 
@@ -6349,7 +6345,7 @@ flowchart TD
   SB["생존자 편향:<br/>확산 실패 사례 미관찰"] --> S
 ```
 
-## 네트워크 시딩 전략과 관계 강도
+네트워크 시딩 전략과 관계 강도
 
 - 허브 vs 브리지: 팔로워가 많은 허브(Hub)는 초기 도달에 유리하지만 집단 간 정보를 매개하는 브리지(Bridge)가 네트워크 확산에 더 결정적일 수 있다.
 - 약한 연결의 강점 (Strength of Weak Ties): 친밀한 강한 연결은 중복 정보를 전달하지만 드물게 교류하는 약한 연결은 새로운 외부 정보를 전파하는 통로가 된다 [@granovetter1973].
@@ -6399,7 +6395,7 @@ $$ {#eq-romi}
 
 ::: {.callout-note}
 
-## 증분성 식별의 문제
+증분성 식별의 문제
 ROMI의 분자에 들어가는 '증분 매출'은 마케팅이 없었을 경우의 반사실적 기준선(Counterfactual Baseline)을 요구하므로, 단순 관찰 데이터가 아닌 무작위 실험(RCT)이나 계량경제학적 식별을 통해 추정되어야 한다 [@Gordon_2019].
 
 :::
@@ -7010,7 +7006,7 @@ dat <- data.frame(buy, price, cost, xi)
 ```
 
 ```{.r}
-## (1) 예측적 렌즈: 로지스틱 다항 적합 및 표본 외 AUC 평가
+(1) 예측적 렌즈: 로지스틱 다항 적합 및 표본 외 AUC 평가
 train <- 1:3000; test <- 3001:n
 pred_fit <- glm(buy ~ poly(price, 2) + cost, data = dat[train, ], family = binomial)
 p_hat <- predict(pred_fit, newdata = dat[test, ], type = "response")
@@ -7412,7 +7408,7 @@ df_trans1 <- dcast(df_trans1, channel_from ~ channel_to, value.var = 'transition
 ### 마르코프 그래프 시각화 ###
 df_trans <- mod1$transition_matrix
 
-## 그래프 시각화를 위한 더미 변수 추가
+그래프 시각화를 위한 더미 변수 추가
 df_dummy <- data.frame(channel_from = c('(start)', '(conversion)', '(null)'),
                        channel_to = c('(start)', '(conversion)', '(null)'),
                        transition_probability = c(0, 1, 1))
@@ -7443,7 +7439,7 @@ df2 <- df2 %>%
         arrange(client_id, date) %>%
         group_by(client_id) %>%
         summarise(path = paste(channel, collapse = ' > '),
-                  # 모든 경로가 전환으로 종료되었다고 가정
+# 모든 경로가 전환으로 종료되었다고 가정
                   conv = 1,
                   conv_null = 0) %>%
         ungroup()
@@ -7603,19 +7599,19 @@ df_paths_1 <- df_paths %>%
 ```{.r}
 ##### 일부 채널 대체 #####
 df_path_1_clean <- df_paths_1 %>%
-        # 결측치(NA) 제거
+결측치(NA) 제거
         filter(!is.na(channel)) %>%
 
-        # 경로 내 채널 순서 추가
+경로 내 채널 순서 추가
         group_by(customer_id) %>%
         mutate(ord = c(1:n()),
                is_non_direct = ifelse(channel == 'channel_6', 0, 1),
                is_non_direct_cum = cumsum(is_non_direct)) %>%
 
-        # 경로의 첫 번째인 경우 직접 방문(Direct, channel_6) 제거
+경로의 첫 번째인 경우 직접 방문(Direct, channel_6) 제거
         filter(is_non_direct_cum != 0) %>%
 
-        # 직접 방문(channel_6)을 이전 접점으로 대체
+# 직접 방문(channel_6)을 이전 접점으로 대체
         mutate(channel = ifelse(channel == 'channel_6', channel[which(channel != 'channel_6')][is_non_direct_cum], channel)) %>%
 
         ungroup() %>%
@@ -7853,7 +7849,7 @@ nodes <- data_frame(id = c( c(trans_matrix_prob$channel_from), c(trans_matrix_pr
 
 
 ## 인터랙티브 htmlwidget: HTML 출력 전용 (PDF/EPUB에서는 webshot2 래스터화 불가로 HTML에서만 렌더링)
-## 백분율 너비 위젯이므로 출력 형식이 HTML일 때만 렌더링합니다.
+백분율 너비 위젯이므로 출력 형식이 HTML일 때만 렌더링합니다.
 if (knitr::pandoc_to("html")) {
   visNetwork(nodes,
              edges,
@@ -7884,7 +7880,7 @@ trans_matrix_complete <- as.matrix(trans_matrix_complete[, -1])
 model_mtrx <- matrix(data = 0,
                      nrow = nrow(trans_matrix_complete), ncol = 1,
                      dimnames = list(c(rownames(trans_matrix_complete)), '(start)'))
-## 모델링 방문 횟수 추가
+모델링 방문 횟수 추가
 model_mtrx['channel_5', ] <- 1000
 
 c(model_mtrx) %*% (trans_matrix_complete %^% 5) # after 5 steps
@@ -8250,12 +8246,12 @@ ggplot(df_customers_plot, aes(x = event, y = pl)) +
 ```{.r}
 ### 기여도 계산 ###
 df_attrib <- df_customers %>%
-    # 미구매 고객 제거
+미구매 고객 제거
     group_by(customer_id) %>%
     filter(any(as.character(event) == 'purchase')) %>%
     ungroup() %>%
 
-    # 단계별 중요도 결합
+# 단계별 중요도 결합
     left_join(., sf_probs %>% select(event, sf_importance_weighted), by = 'event') %>%
 
     group_by(channel) %>%
@@ -8681,7 +8677,7 @@ orders.segm <- orders %>%
             )
         )
     )) %>%
-    # 최근 장바구니 특성 생성
+# 최근 장바구니 특성 생성
     mutate(cart = paste(
         ifelse(a != 0, 'a', ''),
         ifelse(b != 0, 'b', ''),
@@ -8898,7 +8894,7 @@ orders.segm <- orders %>%
             )
         )
     )) %>%
-    # 최근 장바구니 특성 생성
+# 최근 장바구니 특성 생성
     mutate(cart = paste(
         ifelse(a != 0, 'a', ''),
         ifelse(b != 0, 'b', ''),
@@ -8929,11 +8925,11 @@ orders.segm <- merge(orders.segm, clv, by = 'clientId')
 lcg.clv <- orders.segm %>%
     group_by(segm.rec, segm.freq) %>%
     summarise(quantity = n(),
-              # 누적 CAC 및 CLV 계산
+# 누적 CAC 및 CLV 계산
               cac = sum(cac),
               clv = sum(clv)) %>%
     ungroup() %>%
-    # 고객당 CAC 및 CLV 계산
+# 고객당 CAC 및 CLV 계산
     mutate(cac1 = round(cac / quantity, 2),
            clv1 = round(clv / quantity, 2))
 
@@ -8968,11 +8964,11 @@ library(ggplot2)
 library(networkD3)
 
 ## 헬퍼: from/to/weight 링크 테이블을 삽입 가능한 D3 산키 다이어그램으로 렌더링
-## networkD3는 독립적인 htmlwidget을 생성합니다
+networkD3는 독립적인 htmlwidget을 생성합니다
 ## (googleVis 대신 책 본문에 내장 가능한 D3 위젯 사용)
 make_sankey <- function(links, from = "from", to = "to", weight = "n", font = 11) {
-  # htmlwidget: HTML 출력 전용 (PDF/EPUB에서는 렌더링 생략)
-  # 백분율 너비 위젯이므로 비-HTML 형식에서는 렌더링을 건너뜁니다.
+# htmlwidget: HTML 출력 전용 (PDF/EPUB에서는 렌더링 생략)
+백분율 너비 위젯이므로 비-HTML 형식에서는 렌더링을 건너뜁니다.
   if (!knitr::pandoc_to("html")) return(invisible(NULL))
   nodes <- data.frame(name = unique(c(links[[from]], links[[to]])), stringsAsFactors = FALSE)
   links$.src <- match(links[[from]], nodes$name) - 1L
@@ -9027,11 +9023,11 @@ today <- as.Date('2013-05-16', format = '%Y-%m-%d')
 orders <- merge(orders, gr.margin, by = 'product')
 
 customers <- orders %>%
-    # 상품 결합 및 매출총이익 집계
+# 상품 결합 및 매출총이익 집계
     group_by(orderId, clientId, orderdate) %>%
     summarise(grossmarg = sum(grossmarg)) %>%
     ungroup() %>%
-    # 구매 빈도, 최근성, 구매 간격 계산 및 코호트 정의
+# 구매 빈도, 최근성, 구매 간격 계산 및 코호트 정의
     group_by(clientId) %>%
     mutate(
         frequency = n(),
@@ -9040,7 +9036,7 @@ customers <- orders %>%
         cohort = format(min(orderdate), format = '%Y-%m')
     ) %>%
     ungroup() %>%
-    # 현재까지의 누적 CLV 계산
+# 현재까지의 누적 CLV 계산
     group_by(clientId, cohort, frequency, recency, av.gap) %>%
     summarise(clv = sum(grossmarg)) %>%
     arrange(clientId) %>%
@@ -9103,7 +9099,7 @@ customers$segm.rec <-
 ```{.r}
 lcg.coh <- customers %>%
     group_by(cohort, segm.rec, segm.freq) %>%
-    # 누적 값 계산
+# 누적 값 계산
     summarise(
         quantity = n(),
         cac = sum(cac),
@@ -9112,7 +9108,7 @@ lcg.coh <- customers %>%
         av.gap = sum(av.gap)
     ) %>%
     ungroup() %>%
-    # 평균 값 계산
+# 평균 값 계산
     mutate(
         av.cac = round(cac / quantity, 2),
         av.clv = round(clv / quantity, 2),
@@ -9289,7 +9285,7 @@ ggplot(lcg.coh, aes(x = cohort, fill = cohort)) +
 ## 캠페인 코호트
 lcg.camp <- customers %>%
     group_by(campaign, segm.rec, segm.freq) %>%
-    # 누적 값 계산
+# 누적 값 계산
     summarise(
         quantity = n(),
         cac = sum(cac),
@@ -9298,7 +9294,7 @@ lcg.camp <- customers %>%
         av.gap = sum(av.gap)
     ) %>%
     ungroup() %>%
-    # 평균 값 계산
+# 평균 값 계산
     mutate(
         av.cac = round(cac / quantity, 2),
         av.clv = round(clv / quantity, 2),
@@ -9442,7 +9438,7 @@ ggplot(
         vjust = -0.6,
         fontface = "plain"
     ) +
-    # 평활화 방법 변경 가능 (예: "lm")
+# 평활화 방법 변경 가능 (예: "lm")
     geom_smooth(
         size = 2.5,
         method = 'loess',
@@ -9726,12 +9722,12 @@ cohort.clients.r <- cohort.clients # 새 데이터 프레임 생성
 totcols <-
     ncol(cohort.clients.r) # 데이터 세트의 열 개수 세기
 for (i in 1:nrow(cohort.clients.r)) {
-    # 각 행의 이동을 위한 반복문
+# 각 행의 이동을 위한 반복문
     df <- cohort.clients.r[i,] # 데이터 프레임에서 행 선택
     df <- df[, !df[] == 0] # 0인 열 제거
     partcols <-
         ncol(df) # 행의 열 개수 세기 (0 제외)
-    # 값 이후의 열을 0으로 채움
+# 값 이후의 열을 0으로 채움
     if (partcols < totcols)
         df[, c((partcols + 1):totcols)] <- 0
     cohort.clients.r[i,] <- df # 기존 행을 새 값으로 대체
@@ -9982,19 +9978,19 @@ head(df)
 
 ```{.r}
 ## 초기 데이터 전처리
-## 상품명의 고유성 확보
+상품명의 고유성 확보
 df$product <- paste0("#", df$product, "#")
 
 prod.matrix <- df %>%
-    # 주문별 중복 상품 제거 (수량 효과 배제)
+# 주문별 중복 상품 제거 (수량 효과 배제)
     group_by(orderId, product) %>%
     arrange(product) %>%
     unique() %>%
-    # 장바구니 상품 결합 및 상품 수 계산
+# 장바구니 상품 결합 및 상품 수 계산
     group_by(orderId) %>%
     summarise(cart = paste(product, collapse = ";"),
               prod.num = n()) %>%
-    # 장바구니 수 계산
+# 장바구니 수 계산
     group_by(cart, prod.num) %>%
     summarise(num = n()) %>%
     ungroup()
@@ -10006,7 +10002,7 @@ head(prod.matrix)
 ## 총 주문/장바구니 수 계산
 tot <- sum(prod.matrix$num)
 
-## 1개 상품 및 2개 이상 상품 주문 분할
+1개 상품 및 2개 이상 상품 주문 분할
 one.prod <- prod.matrix %>% filter(prod.num == 1)
 
 sev.prod <- prod.matrix %>%
@@ -10180,7 +10176,7 @@ for (i in 2:ncol(orders)) {
 
     colnames(ord.cache)[1:2] <- c('from', 'to')
 
-    # 장바구니에 태그 추가
+장바구니에 태그 추가
     ord.cache$from <- paste(ord.cache$from, '(', i - 1, ')', sep = '')
     ord.cache$to <- paste(ord.cache$to, '(', i, ')', sep = '')
 
@@ -10280,7 +10276,7 @@ for (i in 1:length(ids)) {
 
     df.cache$to <- c(df.cache$orderdate[2:nrow(df.cache)] - 1, max.date)
 
-    # 산키 다이어그램용 주문 번호
+# 산키 다이어그램용 주문 번호
     df.cache <- df.cache %>%
         mutate(ord = paste('ord', c(1:nrow(df.cache)), sep = ''))
 
@@ -10325,7 +10321,7 @@ for (i in 2:ncol(df.sankey)) {
 
     colnames(df.sankey.cache)[1:2] <- c('from', 'to')
 
-    # 장바구니에 태그 추가
+장바구니에 태그 추가
     df.sankey.cache$from <-
         paste(df.sankey.cache$from, '(', i - 1, ')', sep = '')
     df.sankey.cache$to <- paste(df.sankey.cache$to, '(', i, ')', sep = '')
@@ -10344,7 +10340,7 @@ rm(df.sankey, df.sankey.cache, df.sankey.plot, i)
 #| label: fig-sequence-analysis
 #| fig-cap: "상태 시퀀스 분석: 전체 및 성별 시간 경과에 따른 상태 분포, 최빈 시퀀스, 상태별 평균 지속 시간, 고객 내 시퀀스 엔트로피 분포."
 df.new <- df.new %>%
-    # 시퀀스 길이 선택
+# 시퀀스 길이 선택
     filter(ord %in% c('ord1', 'ord2', 'ord3', 'ord4')) %>%
     select(-ord)
 
@@ -10471,12 +10467,12 @@ ggplot(oac_broadsheets, aes(oac_names, broadsheets)) +
         vjust = 1,
         size = 12
     )) +
-    # 각 막대에 레이블 추가
+각 막대에 레이블 추가
     geom_text(aes(
         label = paste(round(broadsheets * 100, digits = 0), "%"),
         vjust = ifelse(broadsheets >= 0,-0.5, 1.5)
     ), size = 3) +
-    # 축 레이블 및 폰트 설정
+# 축 레이블 및 폰트 설정
     theme(axis.title.x = element_text(size = 12)) +
     theme(axis.title.y = element_text(size = 12)) +
     scale_y_continuous("브로드시트 신문의 전국 평균 대비 차이", labels = percent_format()) +
@@ -10506,12 +10502,12 @@ ggplot(oac_tabloids, aes(oac_names, tabloids)) +
         vjust = 1,
         size = 12
     )) +
-    # 각 막대에 레이블 추가
+각 막대에 레이블 추가
     geom_text(aes(
         label = paste(round(tabloids * 100, digits = 0), "%"),
         vjust = ifelse(tabloids >= 0, -0.5, 1.5)
     ), size = 3) +
-    # 축 레이블 및 폰트 설정
+# 축 레이블 및 폰트 설정
     theme(axis.title.x = element_text(size = 12)) +
     theme(axis.title.y = element_text(size = 12)) +
     scale_y_continuous("타블로이드 신문의 전국 평균 대비 차이", labels = percent_format()) +
@@ -11237,7 +11233,7 @@ flowchart TD
   CM --> AD["적응형 (ACA):<br/>이전 응답 기반 동적 질문"]
 ```
 
-## 지불의향액(WTP) 및 속성 상대적 중요도
+지불의향액(WTP) 및 속성 상대적 중요도
 
 속성 $k$의 수준 변화에 대한 화폐적 지불의향액(WTP):
 
@@ -12106,7 +12102,7 @@ flowchart LR
   D --> E["마케팅 의사결정<br/>(광고 타깃팅, 가격 책정,<br/>제품 설계, CRM)"]
 ```
 
-## 모달리티가 중요한 이유
+모달리티가 중요한 이유
 
 1. 텍스트 (Text): 소비자의 명시적 평가, 불만, 미충족 욕구, 반어적 표현을 포착한다.
 2. 시각 (Vision - 이미지 & 비디오): 브랜드 로고 노출, 제품의 시각적 복잡성, 인플루언서의 미적 매력도를 정량화한다.
@@ -12189,7 +12185,7 @@ df_vec <- colSums(dtm > 0)
 idf <- log(length(reviews) / df_vec)
 tfidf_mat <- t(t(dtm) * idf)
 
-## 문서 간 코사인 유사도
+문서 간 코사인 유사도
 cos_sim <- function(a, b) sum(a * b) / (sqrt(sum(a^2)) * sqrt(sum(b^2)))
 sim_1_2 <- cos_sim(tfidf_mat[1, ], tfidf_mat[2, ])
 sim_1_3 <- cos_sim(tfidf_mat[1, ], tfidf_mat[3, ])
@@ -12226,7 +12222,7 @@ print(round(topics_res$terms, 3))
 가짜 리뷰(Fake Reviews) 탐지나 불만 감지와 같이 희귀한 사건(Positive Class $< 5\%$)을 분류할 때 정확도(Accuracy)는 오해를 낳는다. 반드시 정밀도(Precision), 재현율(Recall), F1-점수 및 AUC를 평가해야 한다.
 
 ```{.r}
-## 1000개 리뷰 중 5% (50개)가 실제 가짜 리뷰인 불균형 분류 상황
+1000개 리뷰 중 5% (50개)가 실제 가짜 리뷰인 불균형 분류 상황
 actual_fake <- c(rep(1, 50), rep(0, 950))
 pred_fake   <- c(rep(1, 35), rep(0, 15), rep(1, 40), rep(0, 910)) # 35 TP, 15 FN, 40 FP, 910 TN
 
@@ -12289,7 +12285,7 @@ n <- 20000
 ## 참 감성: 55% 긍정, 45% 부정
 true_sentiment <- rbinom(n, 1, 0.55)
 
-## 반어 발생 확률: 부정적 텍스트에서 18% 발생, 긍정적 텍스트에서는 2%에 불과
+반어 발생 확률: 부정적 텍스트에서 18% 발생, 긍정적 텍스트에서는 2%에 불과
 p_sarcasm <- ifelse(true_sentiment == 0, 0.18, 0.02)
 is_sarcastic <- rbinom(n, 1, p_sarcasm)
 
@@ -12325,7 +12321,7 @@ flowchart TD
 set.seed(11)
 library(dplyr)
 
-## 가상 리뷰 5개: 텍스트 감성 극성과 별점(1~5) 간의 부조화 탐지
+가상 리뷰 5개: 텍스트 감성 극성과 별점(1~5) 간의 부조화 탐지
 df_reviews <- tibble(
   text = c(
     "Best phone ever, died in 2 hours",
@@ -12833,7 +12829,7 @@ events |>
 
 ```{.r}
 #| label: click-sessionize
-## 30분 비활동 기준 세션 분할
+30분 비활동 기준 세션 분할
 timeout_secs <- 30 * 60
 sessions_df <- events |>
   arrange(user_id, ts) |>
@@ -13108,7 +13104,7 @@ set.seed(57)
 fs <- 20; T_sec <- 60
 t  <- seq(0, T_sec, by = 1 / fs)
 
-## 서서히 변하는 긴장성(Tonic) 성분 + 자극에 반응하는 위상성(Phasic SCR) 피크
+서서히 변하는 긴장성(Tonic) 성분 + 자극에 반응하는 위상성(Phasic SCR) 피크
 tonic  <- 2.0 + 0.5 * sin(2 * pi * t / 120)
 phasic <- 1.5 * exp(-((t - 15) / 2)^2) + 2.0 * exp(-((t - 40) / 2)^2)
 eda    <- tonic + phasic + rnorm(length(t), 0, 0.05)
@@ -13236,7 +13232,7 @@ train <- 1:700; test <- 701:N
 ```
 
 ```{.r}
-## --- 전기 결합: 모든 특징을 단일 행렬로 연결 후 Elastic-Net 로지스틱 적합 ---
+--- 전기 결합: 모든 특징을 단일 행렬로 연결 후 Elastic-Net 로지스틱 적합 ---
 X_all <- cbind(X_text, X_img, X_beh)
 cv_early <- cv.glmnet(X_all[train, ], y[train], family = "binomial", alpha = 0.5)
 pred_early <- predict(cv_early, newx = X_all[test, ], s = "lambda.min", type = "response")
@@ -13244,7 +13240,7 @@ auc_early <- roc(y[test], as.vector(pred_early), quiet = TRUE)$auc
 ```
 
 ```{.r}
-## --- 후기 결합: 모달리티별 예측치 평균 앙상블 ---
+--- 후기 결합: 모달리티별 예측치 평균 앙상블 ---
 rf_t <- randomForest(X_text[train, ], as.factor(y[train]))
 rf_i <- randomForest(X_img[train, ], as.factor(y[train]))
 rf_b <- randomForest(X_beh[train, ], as.factor(y[train]))
@@ -13258,7 +13254,7 @@ auc_late <- roc(y[test], as.vector(pred_late), quiet = TRUE)$auc
 ```
 
 ```{.r}
-## --- 단일 모달리티 대 결합 모형 성과 비교 ---
+--- 단일 모달리티 대 결합 모형 성과 비교 ---
 auc_t_only <- roc(y[test], p_t, quiet = TRUE)$auc
 cat("텍스트 단독 모델 AUC :", round(auc_t_only, 3), "\n")
 cat("전기 결합 모델 AUC   :", round(auc_early, 3), "\n")

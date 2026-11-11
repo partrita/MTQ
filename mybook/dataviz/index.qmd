@@ -189,7 +189,7 @@ You may freely share this content for non-commercial purposes, with a source cre
 ::: {#fig-world-income-map1}
 <iframe src="https://datawrapper.dwcdn.net/NLMLg/" width="100%" height="405px" style="border:none;"></iframe>
 
-가장 최근 사용 가능한 데이터를 기준으로 상위 1% 인구가 보유한 국민 소득 비중으로 측정된 전 세계 소득 불평등의 [대화형 지도](https://datawrapper.dwcdn.net/NLMLg/)를 탐색해 보라. 출처: [World Inequality Database 2020](https://wid.world/world/#sptinc_p99p100_z/US;FR;DE;CN;ZA;GB;WO/last/eu/k/p/yearly/s/false/5.070499999999999/30/curve/false/country).
+## 가장 최근 사용 가능한 데이터를 기준으로 상위 1% 인구가 보유한 국민 소득 비중으로 측정된 전 세계 소득 불평등의 [대화형 지도](https://datawrapper.dwcdn.net/NLMLg/)를 탐색해 보라. 출처: [World Inequality Database 2020](https://wid.world/world/#sptinc_p99p100_z/US;FR;DE;CN;ZA;GB;WO/last/eu/k/p/yearly/s/false/5.070499999999999/30/curve/false/country).
 :::
 
 
@@ -1666,7 +1666,7 @@ OpenRefine이 아직 보여 주지 못한 가능성과 Google Sheets의 더 강�
 
 #### 원형 차트는 100%를 나타낸다 {-}
 원형 차트는 데이터 시각화에서 논쟁이 가장 많은 문제 중 하나이다.
-대부분의 데이터 시각화 실무자들은 사람들이 각각 다른 조각의 크기를 정확하게 추정하는 데
+## 대부분의 데이터 시각화 실무자들은 사람들이 각각 다른 조각의 크기를 정확하게 추정하는 데
 서투르다고 말하며 원형 차트를 피하라고 권장한다.
 우리는 다음 섹션의 권장 사항을 지키는 조건에서 조금 덜 극단적인 입장을 취한다.
 
@@ -1769,7 +1769,7 @@ OpenRefine이 아직 보여 주지 못한 가능성과 Google Sheets의 더 강�
 
 다음 두 섹션에서는 [막대 및 세로 막대형 차트](#bar-column-google)를 사용하는 데 가장 적합한 경우와, 이어지는 [원형, 꺾은선형 및 영역 차트](#pie-line-area-google)에 대해 검토할 것이다. 각 섹션에는 독자의 학습을 돕기 위해 샘플 데이터 세트와 함께 실습 예제 및 단계별 지침이 포함되어 있다.
 
-## - 막대 및 세로 막대형 차트 {- #bar-column-google}
+- 막대 및 세로 막대형 차트 {- #bar-column-google}
 시작하기 전에 이전 섹션에서 설명한 [Google Sheets로 차트를 디자인하는 것의 장단점](#chart-google)을 반드시 검토하라. 이 섹션에서는 여러 범주에 걸쳐 값을 비교하는 가장 일반적인 시각화 방법인 막대 및 세로 막대형 차트를 만드는 방법을 배운다. 그룹형(grouped), 분할형(split), 누적형(stacked)이라는 세 가지 다른 유형을 만드는 이유와 방법에 초점을 맞출 것이다. 막대형과 세로 막대형 차트는 방향만 다를 뿐 본질적으로 같으므로, 두 유형의 지침을 함께 설명한다. 데이터에 긴 레이블이 포함된 경우 가독성을 위해 더 많은 공간을 제공하도록 세로 막대형 차트 대신 가로 막대 차트를 만들라.
 
 ### 그룹 막대 및 세로 막대형 차트 {-}
@@ -1869,7 +1869,7 @@ OpenRefine이 아직 보여 주지 못한 가능성과 Google Sheets의 더 강�
 
 ![막대 색상을 편집하려면 *차트 편집 - 맞춤설정 - 계열*을 선택하라.](images/06-chart/column-stacked-edit-series.png){#fig-column-stacked-edit-series width=450}
 
-## - 히스토그램 {- #histogram-google}
+- 히스토그램 {- #histogram-google}
 
 히스토그램은 *버킷(buckets)* 또는 *빈(bins)*이라고 불리는 정의된 범위에 속하는 값의 개수를 표시함으로써 원시 데이터의 분포를 보여주는 데 가장 적합하다. 히스토그램을 만드는 것은 데이터의 형태를 더 잘 이해하여 [7장에서 배울 등치 지역도(choropleth maps)](#design-choropleth)와 같은 더 발전된 시각화를 디자인할 때 의사 결정을 돕는 훌륭한 방법이 될 수 있다. 히스토그램이 세로 막대형 차트와 비슷해 보일 수 있지만 둘은 다르다. 첫째, 히스토그램은 *연속적인(continuous)* 데이터를 보여주며 빈도 패턴을 탐색하기 위해 버킷 범위를 조정할 수 있는 경우가 많다. 예를 들어 히스토그램 버킷을 0-1, 1-2, 2-3 등에서 0-2, 2-4 등으로 이동시킬 수 있다. 대조적으로 세로 막대형 차트는 사과, 바나나, 당근의 개수와 같은 *범주형(categorical)* 데이터를 보여준다. 둘째, 히스토그램은 연속적인 값이기 때문에 일반적으로 버킷 사이에 공백을 표시하지 않는 반면, 세로 막대형 차트는 각 범주를 구분하기 위해 공백을 표시한다.
 
@@ -1922,7 +1922,7 @@ OpenRefine이 아직 보여 주지 못한 가능성과 Google Sheets의 더 강�
 
 이제 원시 데이터의 분포를 표시하기 위해 히스토그램을 만드는 방법을 배웠으니, 다음 섹션에서는 원형, 꺾은선형 및 영역 차트와 같은 다른 유형의 Google Sheets 차트 유형으로 넘어가 본다.
 
-## - 원형, 꺾은선형, 및 영역 차트 {- #pie-line-area-google}
+- 원형, 꺾은선형, 및 영역 차트 {- #pie-line-area-google}
 이 섹션을 시작하기 전에 이 장의 이전 섹션에서 다룬 [Google Sheets로 차트를 디자인하는 것의 장단점](#chart-google)과 [막대 및 세로 막대형 차트를 만드는 초보자 수준의 단계별 지침](#bar-column-google)을 반드시 검토하라. 이 섹션에서는 Google Sheets를 사용하여 세 가지 유형의 대화형 시각화를 더 구축하는 이유와 방법에 대해 배울 것이다. 세 가지는 각각 원형 차트(전체의 일부 표시), 꺾은선형 차트(시간에 따른 변화 표시), 그리고 누적 영역 차트(전체의 일부 표시와 시간에 따른 변화 결합)이다. Google Sheets나 이러한 차트 유형이 독자의 요구에 맞지 않는다면, 다른 도구와 튜토리얼은 \@tbl-chart-types 표를 참조하라.
 
 ### 원형 차트 {-}
@@ -2005,7 +2005,7 @@ OpenRefine이 아직 보여 주지 못한 가능성과 Google Sheets의 더 강�
 
 이제 Datawrapper를 사용하여 기본을 넘어서는 새로운 유형의 차트를 만들 준비가 되었다. 하지만 Datawrapper나 이 섹션의 차트 유형이 독자의 요구에 맞지 않는다면, \@tbl-chart-types 표에서 다른 도구 및 튜토리얼을 참고하거나 스프레드시트, 데이터 확보 및 정리에 관한 이전 장을 참조하라.
 
-## - 주석이 달린 차트 {- #annotated-datawrapper}
+- 주석이 달린 차트 {- #annotated-datawrapper}
 주석이 달린 차트(Annotated chart)는 특정 데이터를 강조하거나 시각화 내부에 맥락적 메모를 추가하는 데 가장 적합하다. 잘 디자인된 주석은 차트에서 데이터의 중요성을 간략히 기록하고 이어지는 문장이나 단락에 자세한 내용을 담아 "그래서 어쩌라고?(so what?)"라는 질문에 답하는 데 도움을 줄 수 있다. 이 장의 [차트 디자인 원칙 섹션](#chart-design)에서 설명했듯이 불필요한 "차트 정크"를 추가하는 것을 피하는 것이 중요하므로 주석 사용 시 주의해야 한다.
 
 Datawrapper로 만든 모든 차트에 주석을 추가할 수 있으며 2000-2020년 미국 실업 데이터를 보여주는 꺾은선형 차트를 통해 그 방법을 설명할 것이다. 역사적 맥락을 조금 더하면 종종 독자가 시간에 따른 변화에 관한 데이터 스토리를 더 잘 이해하는 데 도움이 되기 때문이다. Datawrapper에서 꺾은선형 차트를 만들려면 위의 [Google Sheets 꺾은선형 차트 튜토리얼](#pie-line-area-google)에서 했던 것과 같은 방식으로 데이터를 정리하라. 첫 번째 열에 시간 단위(예: 월-연도)를 배치하고 두 번째 열에 숫자 데이터 값(예: 실업률)을 배치한다. 이제 \@fig-datawrapper-annotated 그림에 표시된 것처럼 주석이 달린 대화형 꺾은선형 차트를 만들 준비가 되었다. 2000년 이후 실업률은 세 번 정점을 찍었지만 가장 높은 정점은 코로나 팬데믹으로 촉발된 2020년 경제 위기 때 발생했다.
@@ -2053,7 +2053,7 @@ Datawrapper로 만든 모든 차트에 주석을 추가할 수 있으며 2000-20
 
 첫 번째 대화형 Datawrapper 차트를 완성하신 것을 축하한다. 이제 Datawrapper를 사용하여 범위 차트(range chart)라는 새로운 유형의 차트를 만들어 본다.
 
-## - 범위 차트 {- #range-datawrapper}
+- 범위 차트 {- #range-datawrapper}
 
 점 차트(dot chart)의 특정 유형으로 분류될 수 있는 범위 차트는 데이터 포인트 간의 간격을 강조하며 종종 불평등을 부각시킬 때 사용된다. 이 튜토리얼에서는 Datawrapper를 사용하여 미국의 성별 임금 격차에 관한 범위 차트를 구축할 것이다. 차트는 \@fig-datawrapper-range 그림과 같이 2019년 American Community Survey에 따른 미국 남성과 여성의 교육 수준별 중위 소득을 비교한다. 우리는 [Datawrapper Academy 범위 플롯 튜토리얼](https://academy.datawrapper.de/article/111-how-to-create-a-range-plot)에서 영감을 얻었으며 더 최신 데이터를 사용하여 우리의 버전을 만들었다. 전반적으로 범위 차트는 남성이 평균적으로 모든 교육 수준에서 여성보다 더 많이 번다는 것을 보여준다. 사실 학사 학위를 가진 미국 남성 평균이 대학원 학위를 가진 미국 여성 평균보다 더 많이 버ㄴ다.
 
@@ -2106,7 +2106,7 @@ Datawrapper로 만든 모든 차트에 주석을 추가할 수 있으며 2000-20
 범위 차트를 완성했으니, 이제 Datawrapper를 사용하여 둘 이상의 변수 간의 관계를 보여주는 분산형 차트와 거품형 차트를 작성하는 방법을 살펴본다.
 
 
-## - 분산형 차트 및 거품형 차트 {- #scatter-bubble-datawrapper}
+- 분산형 차트 및 거품형 차트 {- #scatter-bubble-datawrapper}
 분산형 차트(산점도라고도 함)는 두 데이터 세트 간의 관계를 파악하는 데 가장 좋으며 XY 좌표를 점으로 표시하여 상관관계의 가능성을 드러낸다. 아래의 분산형 차트 예제에서 각 점은 국가를 나타내며 가로 X축에는 기대 수명, 세로 Y축에는 출산율(여성 1인당 출생아 수)이 표시되어 있다. 전반적인 점의 패턴은 이 두 데이터 세트 사이의 상관관계를 보여준다: 출산율이 낮아질수록 기대 수명이 증가하는 경향이 있다.
 
 거품형 차트(Bubble charts)는 점의 크기와 색상이라는 두 가지 시각적 요소를 추가하여 세 번째 또는 네 번째 데이터 세트를 표현함으로써 분산형 차트보다 한 단계 더 나아간다. 아래의 거품형 차트 예제는 이전 분산형 차트에서 본 각 국가의 동일한 기대 수명과 출산율 데이터로 시작하지만 각 원형 점의 크기는 세 번째 데이터 세트(인구)를 나타내고 색상은 네 번째 데이터 세트(세계의 지역)를 나타낸다. 결과적으로 거품형 차트는 시각화에 훨씬 더 많은 정보를 압축하기 때문에 강력해진 분산형 차트라 할 수 있다.
@@ -2205,7 +2205,7 @@ Tableau Public에는 이 책의 다른 드래그 앤 드롭 도구들 중에서 
 
 다음 섹션에서는 두 가지 다른 유형의 차트를 만드는 단계별 튜토리얼을 통해 Tableau Public의 기본 사항부터 시작하여 작업을 단순하게 유지하겠다. 첫째, 위 섹션에서 이미 배운 기술을 기반으로 [Tableau Public의 분산형 차트](#scatter-tableau)를 구축해 볼 것이다. 둘째, 대화형 시각화 디자인에서 이 도구의 강점을 더 잘 보여주는 [필터링된 꺾은선형 차트](#filtered-line-tableau)를 만드는 방법을 배운다.
 
-## - 분산형 차트 {- #scatter-tableau}
+- 분산형 차트 {- #scatter-tableau}
 분산형 차트(Scatter charts)는 x축과 y축에 배치된 두 데이터 세트 간의 관계를 표시하여 상관관계 가능성을 밝히는 데 가장 적합하다. Tableau Public을 사용하면 커서를 점 위로 올려 데이터에 대한 세부 정보를 볼 수 있는 대화형 분산형 차트를 만들 수 있다. [Datawrapper 분산형 차트 튜토리얼](#scatter-bubble-datawrapper)과 동일한 방식, 즉 세 개의 열로 데이터를 구성하라: 데이터 레이블을 위한 첫 번째 열, x축을 위한 두 번째 열, y축을 위한 세 번째 열이다. 그런 다음 \@fig-tableau-scatter 그림에 표시된 것과 같은 대화형 분산형 차트를 만들 수 있다. 이 차트는 코네티컷주 공립 학군의 가구 소득과 시험 점수(6학년 수학 및 영어의 전국 평균 상회 또는 하회) 간의 강력한 관계를 보여준다. 데이터 및 관련 시각화에 대해 자세히 알아보려면 스탠포드 교육 데이터 아카이브(Stanford Education Data Archive)의 [Sean Reardon et al.](https://purl.stanford.edu/db586ns4974), 뉴욕 타임스의 [Motoko Rich et al.](https://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html), CT Mirror/TrendCT의 [Andrew Ba Tran](https://web.archive.org/web/20190129101923/http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/) 및 이 [TrendCT GitHub 저장소(repo)](https://github.com/trendct-data/stanford-cepa)를 참조하라.
 
 
@@ -2267,7 +2267,7 @@ Tableau Public 분산형 차트: [대화형 버전](https://public.tableau.com/p
 
 직접 제어하는 웹 페이지에 차트의 대화형 버전을 삽입하려면 9장의 [임베드 코드 받기(Get the Embed Code)](#embed-code) 섹션을 참조하라.
 
-## - 필터링된 꺾은선형 차트 {- #filtered-line-tableau}
+- 필터링된 꺾은선형 차트 {- #filtered-line-tableau}
 Tableau Public에서 분산형 차트를 만드는 방법을 배웠으니, 이제 도구의 강점을 돋보이게 하는 새로운 유형의 차트로 이동해 본다. 인쇄물이나 PDF에 나타나는 *정적인(static)* 차트 대신 이 책에서는 더 많은 데이터를 표시할 수 있는 *대화형(interactive)* 차트를 다룬다. 하지만 대화형 차트가 원하는 양의 데이터만 표시하도록 디자인할 수도 있다. 즉, 독자의 대화형 시각화는 사용자에게 한 번에 너무 많은 정보를 제공해 압도하지 않으면서도 사용자가 직접 데이터를 "파고들어(dig)" 특정 데이터 지점과 패턴을 찾아볼 수 있도록 허용하는 데이터 탐색 도구가 될 수 있다.
 
 이 튜토리얼에서는 시간이 지남에 따라 여러 국가의 인터넷 접근성이 어떻게 변했는지 시각화하기 위해 Tableau Public으로 대화형 필터링 꺾은선형 차트를 구축해 볼 것이다. \@fig-tableau-filtered-data 그림과 같이 데이터를 세 열로 구성한다. 첫 번째 열인 *Country Name*은 색깔이 지정된 선이 되는 데이터 레이블이다. 두 번째 열인 *Year*는 가로 x축에 표시된다. 세 번째 열인 *Percent Internet Users*는 세로 y축에 표시되는 숫자 값이다. 이제 체크박스가 있는 필터링된 꺾은선형 차트를 만들어, 시작 시 사용자를 압도하지 않도록 선택한 선만 표시하면서 사용자가 다른 선을 켜고 끄거나 각 선 위로 커서를 올려 더 자세한 내용을 확인할 수 있게 설정할 수 있다. \@fig-tableau-filtered 그림을 참고하라.
@@ -5060,7 +5060,7 @@ KML 포맷은 무료이면서 2차원 및 3차원 지리적 데이터를 보고 
 #### MapInfo TAB {-}
 독점적인 TAB 포맷은 Esri의 경쟁사인 MapInfo가 만들고 지원하며 MapInfo Pro GIS 소프트웨어와 잘 작동하도록 설계되었다. Esri의 셰이프파일과 유사하게 MapInfo TAB 파일은 대개 `.tab`, `.dat`, `.ind` 및 기타 확장자를 갖는 파일들과 함께 하나의 폴더에 나타난다. 유감스럽게도 이를 셰이프파일이나 GeoJSON 포맷으로 변환하려면 MapInfo Pro, QGIS 또는 ArcGIS가 필요할 가능성이 크다.
 
-가장 일반적인 공간 파일 포맷 중 몇 가지만 언급했지만 수많은 [덜 알려진 포맷](https://en.wikipedia.org/wiki/GIS_file_formats)들이 존재한다. GeoJSON은 *벡터* 데이터를 위한 가장 훌륭하고 범용적인 포맷 중 하나라는 점을 기억하고 포인트, 폴리라인 및 다각형 데이터를 이 포맷으로 저장하고 공유할 것을 강력히 권장한다.
+## 가장 일반적인 공간 파일 포맷 중 몇 가지만 언급했지만 수많은 [덜 알려진 포맷](https://en.wikipedia.org/wiki/GIS_file_formats)들이 존재한다. GeoJSON은 *벡터* 데이터를 위한 가장 훌륭하고 범용적인 포맷 중 하나라는 점을 기억하고 포인트, 폴리라인 및 다각형 데이터를 이 포맷으로 저장하고 공유할 것을 강력히 권장한다.
 다음 섹션에서는 전 세계 여러 지역의 GeoJSON 경계 파일을 찾는 방법을 설명한다.
 
 ## GeoJSON 경계 파일 찾기 {- #find-geojson}
@@ -5288,7 +5288,7 @@ Mapshaper에서 지도 경계를 단순화하려면 다음 단계를 따르라.
 
 `-dissolve`
 
-내부 경계가 더 밝은 색으로 바뀐 것을 보게 될 것이며 이는 Mapshaper가 더 이상 그것들이 존재하지 않는다는 것을 말해주는 방식이다.
+## 내부 경계가 더 밝은 색으로 바뀐 것을 보게 될 것이며 이는 Mapshaper가 더 이상 그것들이 존재하지 않는다는 것을 말해주는 방식이다.
 이제 윤곽 모양을 내보낼 수 있다. 내보낸 GeoJSON 파일의 형식을 `.json`에서 `.geojson`으로 이름을 바꾸는 것을 잊지 마라.
 
 #### 윤곽선 레이어에 맞게 지도 자르기 {-}
@@ -6457,27 +6457,27 @@ O'Reilly는 팁, 주의사항, 경고문의 사용을 장려하며 책에 기재
 5. 다음과 같이 각 챕터를 `_bookdown.yml` 파일에 나열된 순서로 나열하여 다른 챕터로 구성된 HTML 및 LaTeX/PDF 버전을 빌드하는 옵션이다. 이 방식을 활용하여 모든 챕터/서브챕터는 HTML 에디션을 위해 출판하고 특정 챕터는 PDF 및 O'Reilly용 전체 분량 Markdown 버전으로 출판했다:
 
 ```
-## HTML 책용으로 전체 장을 빌드할 때 아래 항목을 주석 처리하고 ORM용 PDF 및 원문 마크다운 파일에 대해 아래 나열되지 않은 챕터를 건너뛰려면 주석 처리를 취소합니다.
+HTML 책용으로 전체 장을 빌드할 때 아래 항목을 주석 처리하고 ORM용 PDF 및 원문 마크다운 파일에 대해 아래 나열되지 않은 챕터를 건너뛰려면 주석 처리를 취소합니다.
 ## rmd_files: [
-##   "index.Rmd",
-##   "0.0-introduction.Rmd",
-##   "01-choose.Rmd",
-##   "02-spreadsheet.Rmd",
-##   "03-find.Rmd",
-##   "04-clean.Rmd",
-##   "05-comparisons.Rmd",
-##   "06-chart.Rmd",
-##   "07-map.Rmd",
-##   "08-table.Rmd",
-##   "09-embed.Rmd",
-##   "10-github.Rmd",
-##   "11-chartcode.Rmd",
-##   "12-leaflet.Rmd",
-##   "13-transform.Rmd",
-##   "14-detect.Rmd",
-##   "15-story.Rmd",
-##   "16-fix.Rmd",
-##   "21-references.Rmd"
+## "index.Rmd",
+## "0.0-introduction.Rmd",
+## "01-choose.Rmd",
+## "02-spreadsheet.Rmd",
+## "03-find.Rmd",
+## "04-clean.Rmd",
+## "05-comparisons.Rmd",
+## "06-chart.Rmd",
+## "07-map.Rmd",
+## "08-table.Rmd",
+## "09-embed.Rmd",
+## "10-github.Rmd",
+## "11-chartcode.Rmd",
+## "12-leaflet.Rmd",
+## "13-transform.Rmd",
+## "14-detect.Rmd",
+## "15-story.Rmd",
+## "16-fix.Rmd",
+## "21-references.Rmd"
 ## ]
 ```
 

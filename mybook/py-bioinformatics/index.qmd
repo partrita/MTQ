@@ -51,7 +51,7 @@ lang: ko
 
 이 책을 최대한 활용하려면 이미 파이썬에 대한 탄탄한 이해가 있어야 한다. 나는 문자열, 리스트, 튜플, 딕셔너리, 셋(set), 네임드 튜플(named tuple)과 같은 파이썬 데이터 구조를 다루는 《Tiny Python Projects》(Manning, 2020)에서 가르쳤던 기술들을 바탕으로 내용을 전개할 것이다. 파이썬 전문가일 필요는 없지만 타입(types), 정규 표현식, 고차 함수(higher-order functions)와 같은 고급 개념과 테스트 방법, 그리고 스타일과 구문, 정확성을 확인하기 위한 pylint, flake, yapf, pytest 등의 도구 사용법을 이해할 수 있도록 이끌어 드릴 것이다. 한 가지 눈에 띄는 차이점은 이 책의 모든 코드에 일관되게 타입 어노테이션(type annotations)을 사용하고 mypy 도구를 사용하여 타입이 올바르게 사용되었는지 확인할 것이라는 점이다.
 
-## 프로그래밍 스타일: OOP와 예외 처리를 피하는 이유
+프로그래밍 스타일: OOP와 예외 처리를 피하는 이유
 
 나는 객체 지향 프로그래밍(OOP)을 피하는 경향이 있다. OOP가 무엇인지 몰라도 괜찮다. 파이썬 자체는 객체 지향 언어이며 문자열부터 셋에 이르기까지 거의 모든 요소가 기술적으로는 내부 상태와 메서드를 가진 객체이다. 여러분은 OOP가 무엇인지 감을 잡을 수 있을 만큼 충분히 객체들을 접하게 되겠지만 내가 제시하는 프로그램들은 대부분 아이디어를 표현하는 데 객체를 사용하지 않을 것이다.
 
@@ -98,7 +98,7 @@ lang: ko
 
 나는 여러 가지 이유로 프로그램을 주피터 노트북(Jupyter Notebook)이 아닌 명령줄 프로그램으로 제시하기로 했다. 데이터 탐색에는 노트북을 좋아하지만 노트북의 소스 코드는 줄 단위 텍스트가 아닌 JSON 형식으로 저장된다. 이로 인해 diff와 같은 도구를 사용해 두 노트북 간의 차이점을 찾기가 매우 어렵다. 또한 노트북은 파라미터화할 수 없다. 즉, 동작을 바꾸기 위해 프로그램 외부에서 인자를 전달할 수 없고 소스 코드 자체를 수정해야 한다. 이는 프로그램의 유연성을 떨어뜨리고 자동화된 테스트를 불가능하게 만든다. 파이썬을 실행하는 대화형 방식으로서 노트북을 활용하는 것은 권장하지만 나는 명령줄 프로그램을 작성하는 방법에 집중할 것이다.
 
-## Rosalind.info 챌린지
+Rosalind.info 챌린지
 
 이 장들에서는 구조가 잘 잡히고 문서화되었으며 테스트와 재현이 가능한 프로그램을 작성할 수 있게 해주는 파이썬 문법과 도구들을 살펴본다. Rosalind.info의 14가지 과제를 해결하는 방법을 보여드릴 것이다. 이 문제들은 짧고 집중적이며 파이썬을 탐구하는 데 도움이 되는 다양한 솔루션을 허용한다. 또한 테스트를 가이드 삼아 프로그램 작성이 언제 끝나는지 알 수 있도록 단계별로 프로그램을 작성하는 법을 가르쳐 드릴 것이다. 각 문제에 대한 Rosalind 페이지를 읽어보시길 권장한다. 지면 관계상 그곳의 모든 배경 지식과 정보를 여기에 다 담을 수는 없기 때문이다.
 
@@ -1074,7 +1074,7 @@ all:
 
 이 장의 앞부분에서 작성한 프로그램은 GitHub 저장소의 `solution1_iter.py` 버전이므로 그 버전은 다시 검토하지 않겠다. 대신 간단한 아이디어에서 더 복잡한 아이디어로 발전하는 몇 가지 대체 솔루션을 보여드리고 싶다. 이것이 '나쁜 것'에서 '좋은 것'으로 발전한다는 의미로 받아들이지는 마십시오. 모든 버전이 테스트를 통과하므로 모두 동등하게 유효하다. 핵심은 일반적인 문제를 해결하기 위해 파이썬이 제공하는 기능들을 탐구하는 것이다. `get_args()` 함수와 같이 모든 솔루션이 공통으로 사용하는 코드는 생략한다.
 
-## 솔루션 2: count() 함수 생성 및 유닛 테스트 추가
+솔루션 2: count() 함수 생성 및 유닛 테스트 추가
 
 첫 번째 변형은 `main()` 함수에서 개수를 세는 모든 코드를 `count()` 함수로 옮기는 것이다. 이 함수는 프로그램의 어느 곳에나 정의할 수 있지만 나는 보통 `get_args()`를 첫 번째로, `main()`을 두 번째로 배치하고 다른 함수들은 그 뒤에 배치한 후 마지막으로 `main()`을 호출하는 두 줄의 코드를 둔다.
 
@@ -1405,7 +1405,6 @@ True
 `dict.get()` 메서드는 키가 존재하지 않을 때 반환할 기본값을 두 번째 인자로 받을 수 있다. 따라서 이것이 염기 카운트의 4개 요소 튜플을 반환하는 가장 안전한 방법이다.
 
 ```python
->>> counts.get('A', 0), counts.get('C', 0), counts.get('G', 0), counts.get('T', 0)
 (1, 2, 3, 4)
 ```
 
@@ -1545,7 +1544,6 @@ def main() -> None:
 
 ## 솔루션 7: collections.Counter() 사용
 
-> 완벽함이란 더 이상 보탤 것이 없을 때가 아니라, 더 이상 뺄 것이 없을 때 이루어진다. 앙투안 드 생텍쥐페리(Antoine de Saint-Exupéry)
 
 나는 사실 앞의 세 가지 솔루션을 그렇게 좋아하지 않지만 여러분이 `collections.Counter()`를 사용하는 것의 단순함을 이해할 수 있도록 딕셔너리를 수동으로 그리고 `defaultdict()`로 사용하는 과정을 거쳐야 했다.
 
@@ -2106,7 +2104,7 @@ def test_good_input1():
     ''' 정상 입력 시 실행 확인 '''
     out_dir = 'out' # 1
     try:
-        # 2
+# 2
         if os.path.isdir(out_dir):
             shutil.rmtree(out_dir) # 4
         retval, out = getstatusoutput(f'{RUN} {INPUT1}') # 5
@@ -2117,9 +2115,9 @@ def test_good_input1():
         assert os.path.isfile(out_file) # 7
         assert open(out_file).read().rstrip() == 'GAUGGAACUUGACUACGUAAAUU' # 8
     finally:
-        # 9
+# 9
         if os.path.isdir(out_dir):
-            # 10
+# 10
             shutil.rmtree(out_dir)
 ```
 
@@ -5368,7 +5366,7 @@ def main() -> None:
 9 아미노산을 단백질 시퀀스에 추가한다.
 10 단백질 시퀀스를 출력한다.
 
-## 솔루션 2: 유닛 테스트 추가
+솔루션 2: 유닛 테스트 추가
 
 첫 번째 솔루션은 충분히 잘 작동하며 이렇게 짧은 프로그램으로서는 괜찮은 구성을 가지고 있다. 문제는 짧은 프로그램이 보통 긴 프로그램이 된다는 것이다. 함수가 점점 더 길어지는 것은 흔한 일이므로, `main()`의 코드를 테스트가 포함된 몇 개의 작은 함수들로 분리하는 방법을 보여드리고 싶다. 일반적으로, 나는 함수가 아무리 길어도 50줄 이내에 들어오는 것을 선호한다. 함수가 얼마나 짧을 수 있는지에 대해서는, 단 한 줄의 코드라도 반대하지 않는다.
 
@@ -5508,7 +5506,7 @@ def translate(rna: str) -> str:
     ''' 코돈 시퀀스 번역 '''
     codon_to_aa = {
         'AAA': 'K', 'AAC': 'N', 'AAG': 'K', 'AAU': 'N', 'ACA': 'T',
-        # ... (중략) ...
+# ... (중략) ...
         'UAA': '*', 'UAG': '*', 'UGA': '*',
     }
     aa = [codon_to_aa.get(codon, '-') for codon in codons(rna)] # 1
@@ -5638,7 +5636,7 @@ False
 def translate(rna: str) -> str:
     ''' 코돈 시퀀스 번역 '''
     codon_to_aa = { # ... (동일한 딕셔너리) ... }
-    # ... (생략) ...
+# ... (생략) ...
 ```
 
 ## 솔루션 5: Bio.Seq.translate() 사용
@@ -6436,7 +6434,7 @@ def get_args() -> Args:
     parser = argparse.ArgumentParser(
         description='Overlap Graphs',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    # ... (인자 정의) ...
+# ... (인자 정의) ...
 ```
 
 이를 인코딩하기 위해, 나는 그래프 구조를 표현하고 시각화하기 위해 Graphviz 도구를 사용한다. 이 작업이 작동하려면 여러분의 기기에 Graphviz가 설치되어 있어야 한다. 예를 들어, macOS에서는 Homebrew 패키지 관리자(`brew install graphviz`)를 사용할 수 있고 Ubuntu 리눅스에서는 `apt install graphviz`를 사용할 수 있다.
@@ -7261,16 +7259,13 @@ P20840_SAG1_YEAST
 ```bash
 $ head -2 fasta/*
 ==> fasta/A2Z669.fasta <==
->sp|A2Z669|CSPLT_ORYSI CASP-like protein 5A2 OS=Oryza sativa subsp. indica OX=39946 GN=OsI_33147 PE=3 SV=1
 MRASRPVVHPVEAPPPAALAVAAAAVAVEAGVGAGGGAAAHGGENAQPRGVRMKDPPGAP
 ==> fasta/B5ZC00.fasta <==
->sp|B5ZC00|SYG_UREU1 Glycine--tRNA ligase OS=Ureaplasma urealyticum serovar 10 (strain ATCC 33699 / Western) OX=565575 GN=glyQS PE=3 SV=1
 MKNKFKTQEELVNHLKTVGFVFANSEIYNGLANAWDYGPLGVLLKNLKNLWWKEFVTKQ
 ==> fasta/P07204_TRBM_HUMAN.fasta <==
 >sp|P07204|TRBM_HUMAN Thrombomodulin OS=Homo sapiens OX=9606 GN=THBD PE=1 SV=2
 MLGVLVLGALALAGLGFAPAPEQPGGSQCVEHDCFALYPGPATFLNASQICDGLRGHLM
 ==> fasta/P20840_SAG1_YEAST.fasta <==
->sp|P20840|SAG1_YEAST Alpha-agglutinin OS=Saccharomyces cerevisiae (strain ATCC 204508 / S288c) OX=559292 GN=SAG1 PE=1 SV=2
 MFTFLKILWFLSLALASAININDITFSNLEITPLTANKQPDQGWATFDFSIADASSIR
 ```
 
@@ -7361,7 +7356,6 @@ http://www.uniprot.org/uniprot/P20840_SAG1_YEAST
 
 ```bash
 $ curl https://www.uniprot.org/uniprot/A2Z669.fasta
->sp|A2Z669|CSPLT_ORYSI CASP-like protein 5A2 OS=Oryza sativa subsp. indica OX=39946 GN=OsI_33147 PE=3 SV=1
 MRASRPVVHPVEAPPPAALAVAAAAVAVEAGVGAGGGAAAHGGENAQPRGVRMKDPPGAP
 GTPGGLRLLVQAFFAAAALAVMASTDDFPSVSACYLVAAILQCLWSLSLAVVDIYAL
 LVKRSLRNPQAVCIFTIGDGITGTLTLGAACASAGITVLIGNDLNICANNHCASFETATA
@@ -7390,7 +7384,6 @@ $ wget https://www.uniprot.org/uniprot/A2Z669.fasta
 
 ```python
 $ cat A2Z669.fasta
->sp|A2Z669|CSPLT_ORYSI CASP-like protein 5A2 OS=Oryza sativa subsp. indica OX=39946 GN=OsI_33147 PE=3 SV=1
 MRASRPVVHPVEAPPPAALAVAAAAVAVEAGVGAGGGAAAHGGENAQPRGVRMKDPPGAP
 GTPGGLRLLVQAFFAAAALAVMASTDDFPSVSACYLVAAILQCLWSLSLAVVDIYAL
 LVKRSLRNPQAVCIFTIGDGITGTLTLGAACASAGITVLIGNDLNICANNHCASFETATA
@@ -8053,7 +8046,7 @@ $ ./mrna.py tests/inputs/1.txt | wc -c
 12
 ```
 
-## 나머지 곱셈을 통한 오버플로우 방지
+나머지 곱셈을 통한 오버플로우 방지
 
 입력 단백질 시퀀스의 길이가 길어질수록 가능한 조합의 수는 기하급수적으로 늘어난다. 예를 들어, 두 번째 테스트는 998개 잔기를 가진 단백질 파일을 사용하는데, 그 결과 약 $8. \times 10^{29}$개의 추정 mRNA 시퀀스가 생성된다. Rosalind 과제는 다음과 같이 설명한다.
 
@@ -8347,7 +8340,7 @@ def main() -> None:
     args = get_args()
     codon_to_aa = { # 1
         'AAA': 'K', 'AAC': 'N', 'AAG': 'K', 'AAU': 'N', 'ACA': 'T',
-        # ... (생략) ...
+# ... (생략) ...
         'UUU': 'F', 'UAA': '*', 'UAG': '*', 'UGA': '*',
     }
     possible = [ # 2
@@ -9133,16 +9126,16 @@ from Bio.Seq import Seq
 def find_orfs(dna: Seq) -> set:
     """ DNA 시퀀스에서 모든 단백질 ORF 찾기 """
     proteins = set()
-    # 순방향 및 역방향 가닥 모두 고려
+# 순방향 및 역방향 가닥 모두 고려
     for strand in [dna, dna.reverse_complement()]:
-        # 3가지 리딩 프레임
+# 3가지 리딩 프레임
         for frame in range(3):
-            # 해당 프레임에서 번역 (종결 코돈에서 멈추지 않음)
-            # 나중에 정규 표현식으로 처리하기 위해 전체를 번역
+# 해당 프레임에서 번역 (종결 코돈에서 멈추지 않음)
+# 나중에 정규 표현식으로 처리하기 위해 전체를 번역
             trans = str(strand[frame:].translate(table=1))
 
-            # 정규 표현식을 사용하여 M으로 시작하고 *로 끝나는 패턴 찾기
-            # 겹치는 매칭을 위해 전방 탐색(?=...) 사용
+# 정규 표현식을 사용하여 M으로 시작하고 *로 끝나는 패턴 찾기
+겹치는 매칭을 위해 전방 탐색(?=...) 사용
             for match in re.finditer(r'(?=(M[^*]*\*))', trans):
                 proteins.add(match.group(1)[:-1]) # 마지막 * 제외하고 추가
 
@@ -9591,21 +9584,21 @@ from seqmagique import process
 
 def test_process() -> None:
     ''' process 테스트 '''
-    # 모든 값에 대해 0이어야 하는 모의 빈 파일 핸들
+# 모든 값에 대해 0이어야 하는 모의 빈 파일 핸들
     empty = process(mock_open(read_data='')())
     assert empty.min_len == 0
     assert empty.max_len == 0
     assert empty.avg_len == 0
     assert empty.num_seqs == 0
 
-    # 3개 염기로 구성된 단일 시퀀스
+# 3개 염기로 구성된 단일 시퀀스
     one = process(mock_open(read_data='>SEQ0\nAAA')())
     assert one.min_len == 3
     assert one.max_len == 3
     assert one.avg_len == 3
     assert one.num_seqs == 1
 
-    # 3개와 4개 염기로 구성된 두 개의 시퀀스가 있는 파일 핸들
+# 3개와 4개 염기로 구성된 두 개의 시퀀스가 있는 파일 핸들
     two = process(mock_open(read_data='>SEQ0\nAAA\n>SEQ1\nCCCC')())
     assert two.min_len == 3
     assert two.max_len == 4
@@ -10262,23 +10255,23 @@ FASTQ 파일에 대한 패턴은 두 가지뿐이므로 다소 간단하다.
 ```python
 def main() -> None:
     args = get_args()
-    # 패턴을 찾기 위한 정규 표현식 컴파일
+# 패턴을 찾기 위한 정규 표현식 컴파일
     regex = re.compile(args.pattern, re.IGNORECASE if args.insensitive else 0)
 
     for fh in args.files:
-        # 입력 형식을 사용하거나 파일 이름에서 추측
+# 입력 형식을 사용하거나 파일 이름에서 추측
         input_format = args.input_format if args.input_format != '-' else \
                        guess_format(fh.name)
 
         if not input_format:
             sys.exit(f'[{fh.name}]의 파일 형식을 지정해 주세요.')
 
-        # 출력 형식을 사용하거나 입력 형식을 사용
+# 출력 형식을 사용하거나 입력 형식을 사용
         output_format = args.output_format if args.output_format != '-' else \
                         input_format
 
         for rec in SeqIO.parse(fh, input_format):
-            # 시퀀스 ID나 설명이 패턴과 일치하는지 확인
+# 시퀀스 ID나 설명이 패턴과 일치하는지 확인
             if any(map(regex.search, [rec.id, rec.description])):
                 SeqIO.write(rec, args.outfile, output_format)
 
@@ -11138,9 +11131,9 @@ def main() -> None:
     args = get_args()
     random.seed(args.seed)
     chains = read_training(...)
-    # gen_seq(...)를 호출하여 시퀀스들을 얻음
-    # 각 시퀀스를 출력 파일에 출력
-    # 최종 상태 출력
+gen_seq(...)를 호출하여 시퀀스들을 얻음
+# 각 시퀀스를 출력 파일에 출력
+# 최종 상태 출력
 ```
 
 프로그램은 FASTA 출력만 생성하며 각 시퀀스의 ID는 1부터 번호를 매겨야 함에 유의해야 한다. 즉, 출력 파일은 다음과 같은 모습이어야 한다.
@@ -11698,7 +11691,7 @@ def main() -> None:
         out_file = os.path.join(args.outdir, basename)
         print(f'{i:3}: {basename}')
 
-        # 확장자를 확인하여 압축 파일 여부 판단
+## 확장자를 확인하여 압축 파일 여부 판단
         ext = os.path.splitext(file)[1]
         fh = gzip.open(file, 'rt') if ext == '.gz' else open(file, 'rt')
 
@@ -12265,8 +12258,8 @@ meta: tests/inputs/meta.csv
 
 ```python
 >>> import sys
-## 실제로는 파이썬 표준 라이브러리의 csv 모듈을 사용하는 것이 정석입니다.
-## 여기서는 수동 파싱의 어려움을 보여주고 있습니다.
+실제로는 파이썬 표준 라이브러리의 csv 모듈을 사용하는 것이 정석입니다.
+여기서는 수동 파싱의 어려움을 보여주고 있습니다.
 ```
 
 원하는 결과를 얻기 위해 정규 표현식을 사용하여 따옴표를 제거할 수 있다.
@@ -12382,7 +12375,7 @@ def main():
     headers = ['qseqid', 'pident', 'depth', 'lat_lon']
     args.outfile.write(args.delimiter.join(headers) + '\n')
 
-    # BLAST 히트 파일 파싱
+# BLAST 히트 파일 파싱
     hits_reader = csv.DictReader(
         args.hits,
         delimiter=',',
@@ -12394,7 +12387,7 @@ def main():
 
 ```python
     for hit in hits_reader:
-        # 일치 백분율이 최소 기준보다 낮으면 건너뜀
+# 일치 백분율이 최소 기준보다 낮으면 건너뜀
         if float(hit.get('pident', -1)) < args.pctid:
             continue
         print(hit.get('qseqid'))
@@ -12690,15 +12683,15 @@ def guess_delimiter(filename: str) -> str:
 ```python
 def main():
     args = get_args()
-    # 어노테이션 파일용 파서 생성
+# 어노테이션 파일용 파서 생성
     annots_reader = csv.DictReader(args.annotations, delimiter=',')
-    # 시퀀스 ID를 키로 하여 모든 어노테이션을 딕셔너리에 읽어들임
+# 시퀀스 ID를 키로 하여 모든 어노테이션을 딕셔너리에 읽어들임
     annots = {row['seq_id']: row for row in annots_reader}
 
     headers = ['qseqid', 'pident', 'depth', 'lat_lon']
     args.outfile.write(args.delimiter.join(headers) + '\n')
 
-    # BLAST 히트용 파서 생성
+# BLAST 히트용 파서 생성
     hits = csv.DictReader(
         args.hits,
         delimiter=',',
@@ -12715,7 +12708,7 @@ def main():
         if seq_id := hit.get('qseqid'):
             if seq := annots.get(seq_id):
                 num_written += 1
-                # 구분자를 보호하기 위해 모든 필드를 따옴표로 감쌈
+# 구분자를 보호하기 위해 모든 필드를 따옴표로 감쌈
                 args.outfile.write(
                     args.delimiter.join(
                         map(lambda s: f'"{s}"', [
@@ -12726,7 +12719,7 @@ def main():
                         ])) + '\n')
 
     args.outfile.close()
-    # 최종 상태 출력. num_written 포맷팅의 쉼표는 천 단위 구분 기호를 추가함
+# 최종 상태 출력. num_written 포맷팅의 쉼표는 천 단위 구분 기호를 추가함
     print(f'Exported {num_written:,} to "{args.outfile.name}".')
 ```
 
@@ -12740,13 +12733,13 @@ def main():
     annots_reader = csv.DictReader(args.annotations, delimiter=',')
     annots = {row['seq_id']: row for row in annots_reader}
 
-    # 출력 파일을 생성할 writer 객체 생성
+# 출력 파일을 생성할 writer 객체 생성
     writer = csv.DictWriter(
         args.outfile,
         fieldnames=['qseqid', 'pident', 'depth', 'lat_lon'],
         delimiter=args.delimiter)
 
-    # 출력 파일에 헤더 행 기록
+# 출력 파일에 헤더 행 기록
     writer.writeheader()
 
     hits = csv.DictReader(
@@ -12765,7 +12758,7 @@ def main():
         if seq_id := hit.get('qseqid'):
             if seq := annots.get(seq_id):
                 num_written += 1
-                # writer에 정의된 fieldnames와 동일한 키를 가진 딕셔너리 전달
+# writer에 정의된 fieldnames와 동일한 키를 가진 딕셔너리 전달
                 writer.writerow({
                     'qseqid': seq_id,
                     'pident': hit.get('pident'),
@@ -12783,9 +12776,9 @@ pandas 버전은 어떤 면에서는 조금 더 간단하고 어떤 면에서는
 ```python
 def main():
     args = get_args()
-    # 메타데이터 파일을 데이터프레임으로 읽음
+# 메타데이터 파일을 데이터프레임으로 읽음
     annots = pd.read_csv(args.annotations, sep=',')
-    # BLAST 히트를 데이터프레임으로 읽음
+# BLAST 히트를 데이터프레임으로 읽음
     hits = pd.read_csv(
         args.hits,
         sep=',',
@@ -12795,13 +12788,13 @@ def main():
         ])
 
     data = []
-    # 최소 일치 백분율 이상인 모든 BLAST 히트 선택
+# 최소 일치 백분율 이상인 모든 BLAST 히트 선택
     for _, hit in hits[hits['pident'] >= args.pctid].iterrows():
-        # 주어진 쿼리 시퀀스 ID에 대한 메타데이터 선택
+# 주어진 쿼리 시퀀스 ID에 대한 메타데이터 선택
         meta = annots[annots['seq_id'] == hit['qseqid']]
 
         if not meta.empty:
-            # 메타데이터 레코드 순회 (보통 하나뿐임)
+# 메타데이터 레코드 순회 (보통 하나뿐임)
             for _, seq in meta.iterrows():
                 data.append({
                     'qseqid': hit['qseqid'],
@@ -12810,9 +12803,9 @@ def main():
                     'lat_lon': seq['lat_lon'],
                 })
 
-    # 출력 데이터로부터 새로운 데이터프레임 생성
+# 출력 데이터로부터 새로운 데이터프레임 생성
     df = pd.DataFrame.fromrecords(data=data)
-    # 데이터프레임 인덱스 값을 제외하고 출력 파일에 기록
+# 데이터프레임 인덱스 값을 제외하고 출력 파일에 기록
     df.to_csv(args.outfile, index=False, sep=args.delimiter)
     print(f'Exported {len(data):,} to "{args.outfile.name}"')
 ```
@@ -12824,9 +12817,9 @@ def main():
 ```python
 def main():
     args = get_args()
-    # 어노테이션 파일을 읽고 인덱스 열을 seq_id로 설정
+# 어노테이션 파일을 읽고 인덱스 열을 seq_id로 설정
     annotations = pd.read_csv(args.annotations, sep=',', index_col='seq_id')
-    # BLAST 히트를 읽고 인덱스 열을 qseqid로 설정
+# BLAST 히트를 읽고 인덱스 열을 qseqid로 설정
     hits = pd.read_csv(
         args.hits,
         sep=',',
@@ -12836,10 +12829,10 @@ def main():
             'qstart', 'qend', 'sstart', 'send', 'evalue', 'bitscore'
         ])
 
-    # 원하는 일치 백분율인 히트를 선택하고 인덱스 열을 사용하여 어노테이션과 내부 결합(inner join) 수행
+# 원하는 일치 백분율인 히트를 선택하고 인덱스 열을 사용하여 어노테이션과 내부 결합(inner join) 수행
     joined = hits[hits['pident'] >= args.pctid].join(annotations, how='inner')
 
-    # 결합된 데이터프레임에서 원하는 열들을 지정된 구분자를 사용하여 출력 파일에 기록
+# 결합된 데이터프레임에서 원하는 열들을 지정된 구분자를 사용하여 출력 파일에 기록
     joined.to_csv(
         args.outfile,
         index=True,
@@ -12954,7 +12947,7 @@ JCVI_READ_1091120852400    CP012541.1 100.000  ...  25.0       24.488333,-83.07
 
 `make` 프로그램은 1976년에 소스 코드 파일로부터 실행 가능한 프로그램을 빌드하는 것을 돕기 위해 만들어졌다. 원래는 C 언어 프로그래밍을 돕기 위해 개발되었지만 특정 언어에 국한되지 않으며 코드 컴파일 작업에만 한정되지도 않는다. 매뉴얼에 따르면 "다른 파일이 변경될 때마다 일부 파일이 자동으로 업데이트되어야 하는 모든 작업에 사용할 수 있다"고 한다. `make` 프로그램은 빌드 도구로서의 역할을 훨씬 넘어서 워크플로 시스템으로 진화했다.
 
-## Makefile은 레시피이다
+Makefile은 레시피이다
 
 `make` 명령을 실행하면 현재 작업 디렉토리에서 `Makefile`(또는 `makefile`)이라는 파일을 찾는다. 이 파일에는 어떤 출력을 만들기 위해 결합되는 개별 동작들을 설명하는 레시피(recipes)가 포함되어 있다. 레몬 머랭 파이 레시피가 특정 순서와 조합으로 완료되어야 하는 단계들로 구성되어 있는 것을 생각해 보십시오. 예를 들어 파이 껍질(crust), 속(filling), 머랭을 따로 만든 다음, 이들을 합쳐서 구워야 맛있는 파이를 즐길 수 있다. 이를 그림 A-1에 표시된 것과 같은 스트링 다이어그램(string diagram)으로 시각화할 수 있다.
 
@@ -13091,7 +13084,7 @@ rm -f crust.txt meringue.txt filling.txt pie.txt
 Will cook "pie.txt" at 375 degrees for 45 minutes.
 ```
 
-## Makefile은 DAG를 만든다
+Makefile은 DAG를 만든다
 
 각 타겟은 먼저 완료되어야 하는 전제 조건이나 의존성으로 다른 타겟을 지정할 수 있다. 이러한 동작들은 시작점과 타겟들을 통과하는 경로를 거쳐 마침내 출력 파일들을 생성하는 그래프 구조를 만든다. 모든 타겟에 대해 기술된 경로는 그림 A-3에 표시된 것처럼 방향이 있고(시작에서 끝으로) 순환이 없는(루프가 없는) 그래프, 즉 DAG(Directed Acyclic Graph)여야 한다.
 
@@ -13475,7 +13468,6 @@ dna.py: error: the following arguments are required: DNA
 
 ## 에필로그
 
-> 우리가 사용하는 도구는 우리의 사고 습관에 지대하고(그리고 교묘한!) 영향을 미치며 결과적으로 우리의 사고 능력에도 영향을 미친다. 에츠허르 데이크스트라(Edsger Dijkstra)
 
 이 책은 내가 수년 동안 다시 살펴본 로잘린드(Rosalind) 문제들로부터 영감을 받았다. 처음에는 생물학을 더 잘 이해하려고 노력하면서 그다음에는 새로운 프로그래밍 언어를 배우면서 말이다. 나는 처음에 펄(Perl)로 시도했고 이후 자바스크립트, 하스켈, 파이썬, 러스트를 사용하여 다양한 성공을 거두며 시도해 왔다. 여러분도 알고 있는 다른 언어들을 사용하여 솔루션을 작성해 보시길 권한다.
 

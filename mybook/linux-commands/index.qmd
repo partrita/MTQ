@@ -629,7 +629,7 @@ tail -c 100 file.txt        # Last 100 bytes
 tail -c +50 file.txt        # From byte 50 to end
 ```
 
-### 로그 로테이션 후에도 파일 추적 유지
+로그 로테이션 후에도 파일 추적 유지
 
 ```bash
 tail -F /var/log/app.log
@@ -1183,7 +1183,7 @@ $ uname -v
 mkdir [OPTIONS] DIRECTORY [DIRECTORY ...]
 ```
 
-## 주요 기능
+주요 기능
 
 - **단일 디렉터리 생성**: 개별 디렉터리 생성
 - **다중 디렉터리 생성**: 여러 디렉터리를 한 번에 생성
@@ -1342,7 +1342,7 @@ mkdir user_data     # Better than "user's data"
 
 ## 오류 처리 및 검증
 
-### 자주 발생하는 오류 상황
+자주 발생하는 오류 상황
 
 ```bash
 ## Check if directory exists before creating
@@ -1857,7 +1857,7 @@ sl
 echo [OPTIONS] [STRING...]
 ```
 
-## 주요 기능
+주요 기능
 
 - **텍스트 출력**: 간단한 텍스트 문자열을 표시한다.
 - **변수 확장**: 환경 변수의 값을 표시한다.
@@ -1903,7 +1903,7 @@ echo "Hello, $name"
 echo "현재 사용자: $USER, 홈 디렉터리: $HOME"
 ```
 
-## 고급 기능
+고급 기능
 
 ### 이스케이프 시퀀스
 
@@ -1966,7 +1966,7 @@ echo "현재 사용자: $USER" >> info.txt
 echo "New line" >> file.txt
 
 
-## 타임스탬프와 함께 추가
+타임스탬프와 함께 추가
 echo "$(date): 로그 항목" >> logfile.txt
 
 
@@ -1974,7 +1974,7 @@ echo "$(date): 로그 항목" >> logfile.txt
 echo -e "오류 발생\n타임스탬프: $(date)" >> error.log
 ```
 
-## 문자열 형식 지정 및 조작
+문자열 형식 지정 및 조작
 
 ### 텍스트 형식 지정
 
@@ -2085,7 +2085,7 @@ echo "Free disk space: $(df -h / | tail -1 | awk '{print $4}')"
 echo "System: $(uname -s), Kernel: $(uname -r), Architecture: $(uname -m)"
 ```
 
-### 배열 및 변수 조작
+배열 및 변수 조작
 
 ```bash
 ## Array display
@@ -2136,7 +2136,7 @@ else
 fi
 ```
 
-## 대화형 기능
+대화형 기능
 
 ### 사용자 입력 프롬프트
 
@@ -2239,12 +2239,12 @@ echo -e "Name,Age,City\nJohn,25,NYC\nJane,30,LA" > data.csv
 ### 스크립트 작성
 
 ```bash
-## 단어 분할을 방지하려면 따옴표를 사용합니다.
+단어 분할을 방지하려면 따옴표를 사용합니다.
 echo "Value: $variable"  # 올바른 사용
 echo Value: $variable    # 문제가 발생할 수 있음
 
 
-## 필요한 경우 -e를 사용합니다.
+필요한 경우 -e를 사용합니다.
 echo -e "Multi\nLine"    # 이스케이프 시퀀스를 올바르게 해석
 echo "Multi\nLine"       # 백슬래시-n을 문자 그대로 출력
 
@@ -2448,7 +2448,6 @@ groups
 $demon# groups
 ```
 
-> 참고: 프로세스의 기본 그룹과 보조 그룹은 일반적으로 부모 프로세스에서 상속되며 로그인 이후에는 대체로 변경되지 않는다. 따라서 로그인한 후 그룹 데이터베이스를 변경하더라도 기존 로그인 세션에서는 `groups` 명령어에 변경 사항이 반영되지 않는다. 사용할 수 있는 옵션은 `--help`와 `--version`뿐이다.
 
 ## `man` 명령어
 
@@ -2748,7 +2747,7 @@ sudo !!
 
 ```bash
 ## 다음 명령어를 실행했다고 가정합니다: cat /var/log/syslog
-## 다음과 같이 마지막 인수를 사용할 수 있습니다.
+다음과 같이 마지막 인수를 사용할 수 있습니다.
 vim !$
 ## 다음 명령어가 실행됩니다: vim /var/log/syslog
 ```
@@ -2801,7 +2800,7 @@ export HISTCONTROL=ignoreboth
 export HISTIGNORE="ls:cd:pwd:exit:history"
 
 
-## 기록에 타임스탬프 추가
+기록에 타임스탬프 추가
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 ```
 
@@ -2819,7 +2818,7 @@ export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 
 ```bash
 set +o history
-## 이곳에서 민감한 명령어를 실행합니다.
+이곳에서 민감한 명령어를 실행합니다.
 set -o history
 ```
 
@@ -2852,7 +2851,7 @@ history -c && history -w
 ```bash
 $ login [-p] [-h host] [-H] [-f username|username]
 ```
-## 플래그 및 기능
+플래그 및 기능
 
 | **단축 플래그** | **설명** |
 |---|---|
@@ -3079,7 +3078,7 @@ mv essay.txt assignments             # 현재 디렉터리의 `_essay.txt_` 파�
 
 특정 프로세스를 검색하기 위해 `grep`과 함께 파이프(`|`)로 연결하거나, 많은 양의 출력을 스크롤하기 위해 `less`와 함께 사용하는 경우가 많다.
 
-## `ps`를 사용하는 이유
+`ps`를 사용하는 이유
 
 시스템이 느려지거나 앱이 응답하지 않는 상황을 가정해 본다. 이때 `ps`를 사용하여 다음 작업을 수행할 수 있다.
 
@@ -3609,7 +3608,7 @@ nano filename                                # 새 파일을 생성하려면 `na
 nano +line_number,character_number filename  # 특정 행과 문자 위치에 커서를 둔 상태로 파일을 열려면 다음 구문을 사용한다.
 ```
 
-### 단축키와 기능 개요
+단축키와 기능 개요
 
 | **단축키** | **설명** |
 |:---|:---|
@@ -3638,7 +3637,7 @@ rm filename.txt
 rm [OPTION] [FILE|DIRECTORY]
 ```
 
-### 옵션과 기능
+옵션과 기능
 
 | **짧은 옵션** | **긴 옵션** | **설명** |
 |:---|:---|:---|
@@ -3743,7 +3742,7 @@ man ifconfig
 ip [ OPTIONS ] OBJECT { COMMAND | help }
 ```
 
-## 주요 기능
+주요 기능
 
 - **인터페이스 관리**: 네트워크 인터페이스를 설정하고 모니터링한다.
 - **IP 주소 관리**: IP 주소를 추가, 제거 및 표시한다.
@@ -3780,11 +3779,11 @@ ip addr show
 ip addr show eth0
 
 
-## 인터페이스에 IP 주소 추가
+인터페이스에 IP 주소 추가
 sudo ip addr add 192.168.1.100/24 dev eth0
 
 
-## 인터페이스에서 IP 주소 제거
+인터페이스에서 IP 주소 제거
 sudo ip addr del 192.168.1.100/24 dev eth0
 
 
@@ -3864,7 +3863,7 @@ sudo ip route add default via 192.168.1.1
 sudo ip route add 10.0.0.0/8 via 192.168.1.1
 
 
-## 특정 인터페이스를 통한 경로 추가
+특정 인터페이스를 통한 경로 추가
 sudo ip route add 172.16.0.0/16 dev eth1
 
 
@@ -3883,7 +3882,7 @@ sudo ip route replace default via 192.168.1.254
 ip route show table all
 
 
-## 특정 테이블에 경로 추가
+특정 테이블에 경로 추가
 sudo ip route add 192.168.2.0/24 via 10.0.0.1 table 100
 
 
@@ -3908,7 +3907,7 @@ ip neigh show
 ip neigh show dev eth0
 
 
-## 정적 ARP 항목 추가
+정적 ARP 항목 추가
 sudo ip neigh add 192.168.1.50 lladdr 00:11:22:33:44:55 dev eth0
 
 
@@ -3920,7 +3919,7 @@ sudo ip neigh del 192.168.1.50 dev eth0
 sudo ip neigh flush all
 ```
 
-## 고급 기능
+고급 기능
 
 ### 네트워크 네임스페이스
 
@@ -3971,7 +3970,7 @@ sudo ip tunnel del gre1
 ip qdisc show
 
 
-## 트래픽 셰이핑 추가
+트래픽 셰이핑 추가
 sudo ip qdisc add dev eth0 root handle 1: htb default 30
 
 
@@ -4080,7 +4079,7 @@ sudo ip link add link eth0 name eth0.10 type vlan id 10
 sudo ip link add link eth0 name eth0.20 type vlan id 20
 
 
-## 인터페이스를 브리지에 추가
+인터페이스를 브리지에 추가
 sudo ip link set eth0.10 master br0
 sudo ip link set eth0.20 master br0
 
@@ -4220,7 +4219,7 @@ $
 su [OPTIONS] [-] [USER [ARGUMENT...]]
 ```
 
-## 주요 기능
+주요 기능
 
 - **사용자 전환**: 시스템의 다른 사용자 계정으로 전환한다.
 - **환경 제어**: 환경 변수를 상속할지 초기화할지 선택한다.
@@ -4269,28 +4268,28 @@ su - username -c "whoami"
 ```bash
 ## 비로그인 셸 (현재 환경 유지)
 su username
-## 현재 디렉터리와 환경 변수가 유지됩니다.
+현재 디렉터리와 환경 변수가 유지됩니다.
 
 
 ## 로그인 셸 (새 환경으로 시작)
 su - username
-## 사용자의 홈 디렉터리로 이동하고 사용자 프로필을 불러옵니다.
+사용자의 홈 디렉터리로 이동하고 사용자 프로필을 불러옵니다.
 ```
 
 ### 환경 변수 제어
 
 ```bash
-## 현재 환경 유지
+현재 환경 유지
 su -m username
 su --preserve-environment username
 
 
-## 특정 환경 변수 유지
+특정 환경 변수 유지
 su -w HOME,TERM username
 su --whitelist-environment=HOME,TERM username
 
 
-## 환경을 초기화하되 특정 변수는 유지
+환경을 초기화하되 특정 변수는 유지
 su - username --preserve-environment=PATH
 ```
 
@@ -4353,7 +4352,7 @@ su - username -c "grep 'pattern' /var/log/syslog"
 ```bash
 ## 관리 작업을 위해 root로 전환
 su -
-## 이제 관리 명령어를 실행할 수 있습니다.
+이제 관리 명령어를 실행할 수 있습니다.
 
 
 ## 단일 관리 명령어 실행
@@ -4403,11 +4402,11 @@ su - username -c "source ~/.bashrc && echo \$PATH"
 ### 비밀번호 요구 사항
 
 ```bash
-## su는 대상 사용자의 비밀번호를 요구합니다.
+su는 대상 사용자의 비밀번호를 요구합니다.
 su username  # username 사용자의 비밀번호 필요
 
 
-## root는 비밀번호 없이 모든 사용자로 전환할 수 있습니다.
+root는 비밀번호 없이 모든 사용자로 전환할 수 있습니다.
 sudo su - username  # sudo 인증 사용
 
 
@@ -4448,7 +4447,7 @@ su -c "command1 && command2 && exit"
 
 ## sudo와의 비교
 
-### `su`를 사용하는 경우
+`su`를 사용하는 경우
 
 ```bash
 ## 여러 관리 명령어 실행
@@ -4462,7 +4461,7 @@ su -
 ## 일정 시간 동안 root 권한으로 작업
 ```
 
-### `sudo`를 사용하는 경우
+`sudo`를 사용하는 경우
 
 ```bash
 ## 단일 명령어 실행
@@ -4487,7 +4486,7 @@ cat /etc/pam.d/su
 
 
 ## wheel 그룹으로 su 사용 제한 (일부 배포판)
-## /etc/pam.d/su를 편집하고 다음 줄의 주석을 해제합니다.
+/etc/pam.d/su를 편집하고 다음 줄의 주석을 해제합니다.
 ## auth required pam_wheel.so use_uid
 ```
 
@@ -4516,7 +4515,7 @@ sudo chsh -s /bin/bash username
 
 ::: {.callout-caution title="문제 해결"}
 
-### 일반적인 문제
+일반적인 문제
 
 ```bash
 ## 인증 실패
@@ -4969,7 +4968,6 @@ iostat -p sda 2 6      # sda 및 sdb 장치에 대해 2초 간격으로 확장 �
 
 Windows의 “관리자 권한으로 실행” 옵션과 동일한 기능이다. `sudo` 명령어를 사용하면 현재 사용자 계정에 root 권한을 일시적으로 부여할 수 있다. `sudo`의 root 권한은 일시적으로만 유효하다. 해당 시간이 만료되면 root 권한을 다시 얻기 위해 비밀번호를 입력해야 한다.
 
-> **경고:** `sudo` 명령어를 사용할 때는 매우 주의해야 한다. root 권한으로 작업하는 동안 되돌릴 수 없고 치명적인 변경을 일으킬 수 있다!
 
 ### 구문
 
@@ -5043,7 +5041,7 @@ sudo apt install g++
 
 이 명령어는 시스템에 `g++`를 설치한다.
 
-### 패키지 제거
+패키지 제거
 
 `apt`에서 `remove` 뒤에 `package_name`을 지정하면 특정 패키지를 제거할 수 있다.
 
@@ -5079,7 +5077,7 @@ apt search package_name
 apt search g++
 ```
 
-### 사용하지 않는 패키지 제거
+사용하지 않는 패키지 제거
 
 시스템에 다른 패키지에 의존하는 새 패키지를 설치하면 해당 패키지의 의존성도 함께 설치된다. 패키지를 제거해도 의존성 패키지는 시스템에 남는다. 이러한 남은 패키지가 다른 패키지에서 더 이상 사용되지 않는다면 제거할 수 있다.
 
@@ -5564,7 +5562,7 @@ $ diff a.txt b.txt
  Uttar pradesh
 ```
 
-### 플래그 및 기능
+플래그 및 기능
 
 | **짧은 플래그** | **설명** |
 |:---|:---|
@@ -6286,7 +6284,7 @@ lsof -u [USER_NAME]    # 특정 사용자가 열어 둔 파일을 표시한다.
 lsof +d [PATH_TO_DIR]  # 지정한 디렉터리 아래에서 열린 파일을 가진 프로세스를 나열한다.
 ```
 
-### 옵션 및 기능
+옵션 및 기능
 
 | **옵션** | **추가 옵션** | **설명** |
 |:---|:---|:---|
@@ -6324,7 +6322,7 @@ bzip2 [OPTIONS] filenames ...
 
 각 파일은 압축된 버전으로 대체되며 파일 이름 뒤에 `.bz2` 확장자가 추가된다.
 
-### 옵션 및 기능
+옵션 및 기능
 
 | **옵션** | **별칭** | **설명** |
 |:---|:---|:---|
@@ -6421,7 +6419,7 @@ mpstat [options] [<interval> [<count>]]
 
 첫 번째 프로세서는 CPU 0으로, 두 번째 프로세서는 CPU 1로 초기화되며 이후에도 같은 방식으로 번호가 지정된다.
 
-### 옵션 및 기능
+옵션 및 기능
 
 | **옵션** | **설명** |
 |:---|:---|
@@ -6667,7 +6665,7 @@ SCP(Secure Copy)는 두 위치 사이에서 파일과 디렉터리를 안전하�
 
 파일과 비밀번호가 모두 암호화되므로, 네트워크 트래픽을 엿보는 사람이 민감한 정보를 확인할 수 없다.
 
-### 파일 또는 디렉터리를 복사하는 방법
+파일 또는 디렉터리를 복사하는 방법
 
 - 로컬 시스템에서 원격 시스템으로 복사한다.
 - 원격 시스템에서 로컬 시스템으로 복사한다.
@@ -6999,7 +6997,7 @@ usermod [options] USER
 
 슈퍼유저(root)만 `usermod` 명령어를 실행할 수 있다.
 
-### 옵션 및 기능
+옵션 및 기능
 
 | **옵션** | **설명** |
 |:---|:---|
@@ -8203,7 +8201,6 @@ sed -i 's/{search_regex}/{replace_value}/g' input-file
 
 2. `find`와 조합하여 하위 디렉터리 내 문자열을 재귀적으로 일괄 교체:
 
-> 디렉터리 내에서 특정 문자열을 포함하는 파일을 재귀적으로 검색하여 일괄 교체하고 싶을 때가 있다. `find` 명령어로 파일을 찾은 뒤 파이프를 통해 `sed`로 전달하면 손쉽게 처리할 수 있다.
 다음 명령어는 현재 작업 디렉터리에서 파일을 재귀적으로 검색한 후 파일 이름을 `sed`로 전달하여 일괄 교체한다.
 
 ```bash
@@ -8400,7 +8397,6 @@ Vim에서 복사하기는 “yanking”이라고 한다.
 | **플래그/옵션** | **설명** |
 |:---|:---|
 | `-e` | Ex 모드로 시작한다. ([Ex 모드](http://vimdoc.sourceforge.net/htmldoc/intro.html#Ex-mode) 참조) |
-| `-R` | 읽기 전용 모드로 시작한다. |
 | `-R` | 읽기 전용 모드로 시작한다. |
 | `-g` | [GUI](http://vimdoc.sourceforge.net/htmldoc/gui.html#GUI)를 시작한다. |
 | `-eg` | GUI를 Ex 모드로 시작한다. |
@@ -9105,7 +9101,7 @@ $ printf "GET / HTTP/1.0\r\n\r\n" | nc host.ip 80
 $ nc -zv host.ip 20-2000 # 확인할 포트 범위
 ```
 
-### 플래그 및 기능
+플래그 및 기능
 
 
 ::: {.callout-note collapse="true" title="전체 옵션 보기 (16개)"}
@@ -9277,7 +9273,7 @@ basename NAME [SUFFIX]
 basename OPTION... NAME...
 ```
 
-### 추가 기능
+추가 기능
 
 **뒤에 붙은 접미사 제거**: 파일 이름에서 뒤에 붙은 접미사를 제거하려면 두 번째 인수로 접미사를 전달한다.
 
@@ -10125,7 +10121,7 @@ $ spd-say "Hello"
 xeyes
 ```
 
-### `xeyes`의 용도는 무엇인가?
+`xeyes`의 용도는 무엇인가?
 
 `xeyes`는 단순한 재미만을 위한 프로그램은 아니다. 이 프로그램은 때때로 찾기 어려운 마우스 포인터를 따라갈 수 있도록 해준다. 특히 여러 모니터가 서로 떨어져 있는 멀티헤드 컴퓨터에서 유용하며 누군가(예를 들어 학교의 교사)가 한 화면에서 내용을 발표할 때 다른 모니터를 보는 사람들도 `xeyes`를 통해 마우스 위치를 쉽게 따라갈 수 있다. [unix.stackexchange](https://unix.stackexchange.com/questions/162769/what-is-the-purpose-of-xeyes)
 
@@ -11031,7 +11027,7 @@ journalctl [options] [matches]
 --vacuum-time=[time] Remove logs older than time
 ```
 
-## 우선순위 수준
+우선순위 수준
 
 ```bash
 0  Emergency (emerg)
@@ -11179,7 +11175,7 @@ watch -t 'date'                                  # 헤더 없이 확인
 - 자동화 및 스크립팅
 - 실시간 상태 모니터링
 
-## 주요 기능
+주요 기능
 
 - **실시간 업데이트**: 출력을 지속적으로 새로 고침
 - **차이 강조**: 업데이트 간 변경된 내용을 표시
@@ -11439,7 +11435,7 @@ bg %1        # 특정 작업을 백그라운드로 보내기
 bg %1 %2 %3  # 여러 작업을 백그라운드로 보내기
 ```
 
-## 전체 작업 제어 과정
+전체 작업 제어 과정
 
 다음은 `bg` 사용 방법을 보여주는 일반적인 작업 흐름이다.
 
@@ -12343,7 +12339,7 @@ validate_and_export "API_KEY" "your-secret-key"
 1. **export에 민감한 데이터를 직접 포함하지 않기**
 
 ```bash
-## 잘못된 방법
+잘못된 방법
 export PASSWORD="secret123"
 
 
@@ -12667,7 +12663,7 @@ sudo ufw allow 53/udp
 ### 최소 권한 원칙 {.unnumbered}
 
 ```bash
-## 모든 연결 거부로 시작
+모든 연결 거부로 시작
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 
@@ -12754,7 +12750,7 @@ sudo ufw limit 80/tcp
 ## IP 포워딩 활성화
 echo 'net.ipv4.ip_forward=1' | sudo tee -a /etc/ufw/sysctl.conf
 
-## /etc/ufw/before.rules에 NAT 규칙 추가
+/etc/ufw/before.rules에 NAT 규칙 추가
 ```
 
 ## 서비스 통합
@@ -12962,7 +12958,7 @@ traceroute -n 208.67.222.222
 ## tcptraceroute 설치
 sudo apt install tcptraceroute
 
-## 웹 서버 경로로 TCP 추적
+웹 서버 경로로 TCP 추적
 sudo tcptraceroute google.com 80
 sudo tcptraceroute -n github.com 443
 ```
@@ -12992,7 +12988,7 @@ paris-traceroute google.com
 ### IPv Traceroute {.unnumbered}
 
 ```bash
-## IPv6 경로 추적
+IPv6 경로 추적
 traceroute6 ipv6.google.com
 traceroute -6 ipv6.google.com
 ```
@@ -13018,7 +13014,7 @@ mtr-gtk
 ## 응답 시간의 급격한 증가 확인
 
 ## 패킷 손실
-## * * * 응답 확인
+* * * 응답 확인
 
 ## 비대칭 라우팅
 ## 패킷별로 서로 다른 경로 사용
@@ -13039,7 +13035,7 @@ whois 203.0.113.1
 ### 시간 초과 및 별표 {.unnumbered}
 
 ```bash
-## 다양한 프로토콜 시도
+다양한 프로토콜 시도
 traceroute -I google.com    # ICMP
 traceroute -T google.com    # TCP
 traceroute -U google.com    # UDP (default)
@@ -13085,7 +13081,7 @@ traceroute -n destination
 ### 방화벽 우회 {.unnumbered}
 
 ```bash
-## 차단된 경우 다른 프로토콜 시도
+차단된 경우 다른 프로토콜 시도
 traceroute -T -p 443 target.com
 traceroute -I target.com
 ```
@@ -13096,7 +13092,7 @@ traceroute -I target.com
 
 ```bash
 #!/bin/bash
-## 여러 목적지로의 경로 추적
+여러 목적지로의 경로 추적
 destinations=("google.com" "github.com" "stackoverflow.com")
 
 for dest in "${destinations[@]}"; do
@@ -13133,7 +13129,7 @@ echo "Route from VPN:"
 ### pathping (Windows 대응 명령) {.unnumbered}
 
 ```bash
-## Windows 시스템에서
+Windows 시스템에서
 pathping google.com
 ```
 
@@ -13704,10 +13700,10 @@ sudo smartctl -A /dev/sdb | grep Reallocated
 
 ```bash
 ## Replace if:
-## - Many bad blocks found (>50-100)
-## - Bad blocks increasing over time
-## - SMART indicates drive failure
-## - Critical system drive affected
+- Many bad blocks found (>50-100)
+- Bad blocks increasing over time
+- SMART indicates drive failure
+- Critical system drive affected
 ```
 
 ## 대체 도구
@@ -13724,9 +13720,9 @@ sudo smartctl -a /dev/sdb
 
 ```bash
 ## Many manufacturers provide specific tools
-## - Western Digital: WD Data Lifeguard
-## - Seagate: SeaTools
-## - Samsung: Samsung Magician
+- Western Digital: WD Data Lifeguard
+- Seagate: SeaTools
+- Samsung: Samsung Magician
 ```
 
 ::: {.callout-note title="중요 참고 사항"}
@@ -13756,7 +13752,7 @@ sudo smartctl -a /dev/sdb
 fsck [options] [filesystem...]
 ```
 
-## 주요 기능
+주요 기능
 
 - **여러 파일 시스템 지원**: ext, ext, ext, XFS 등과 함께 작동
 - **자동 감지**: 파일 시스템 유형을 자동으로 감지할 수 있음
@@ -13797,32 +13793,32 @@ sudo fsck -AV
 ### 기본 옵션
 
 ```bash
-## -y: Answer "yes" to all questions
+-y: Answer "yes" to all questions
 sudo fsck -y /dev/sdb1
 
-## -n: Answer "no" to all questions (read-only)
+-n: Answer "no" to all questions (read-only)
 sudo fsck -n /dev/sdb1
 
-## -f: Force check even if file system seems clean
+-f: Force check even if file system seems clean
 sudo fsck -f /dev/sdb1
 
-## -v: Verbose output
+-v: Verbose output
 sudo fsck -v /dev/sdb1
 ```
 
 ### 고급 옵션
 
 ```bash
-## -p: Automatically repair (preen mode)
+-p: Automatically repair (preen mode)
 sudo fsck -p /dev/sdb1
 
-## -r: Interactive repair mode
+-r: Interactive repair mode
 sudo fsck -r /dev/sdb1
 
-## -t: Specify file system type
+-t: Specify file system type
 sudo fsck -t ext4 /dev/sdb1
 
-## -C: Show progress bar
+-C: Show progress bar
 sudo fsck -C /dev/sdb1
 ```
 
@@ -14257,7 +14253,7 @@ mkfs [options] [-t type] device
 mkfs.type [options] device
 ```
 
-## 주요 기능
+주요 기능
 
 - **다양한 파일 시스템 지원**: ext2/3/4, XFS, FAT, NTFS 등
 - **사용자 지정 매개변수**: 블록 크기, inode 비율, 레이블 및 기능
@@ -14701,10 +14697,10 @@ sudo ls -la /mnt/test
 
 ```bash
 ## Determine optimal filesystem type based on use case:
-## - ext4: General purpose, good for most Linux use cases
-## - XFS: Large files, high performance, NAS/database storage
-## - FAT32: Cross-platform compatibility, small devices
-## - NTFS: Windows compatibility
+- ext4: General purpose, good for most Linux use cases
+- XFS: Large files, high performance, NAS/database storage
+- FAT32: Cross-platform compatibility, small devices
+- NTFS: Windows compatibility
 ```
 
 ### 레이블 지정 {.unnumbered}
@@ -14802,38 +14798,38 @@ find /etc -name "*.conf" | cpio -pdm /backup/configs
 ### 기본 옵션
 
 ```bash
-## -o: Copy-out (create archive)
+-o: Copy-out (create archive)
 find . | cpio -o > archive.cpio
 
-## -i: Copy-in (extract archive)
+-i: Copy-in (extract archive)
 cpio -i < archive.cpio
 
-## -p: Pass-through (copy files)
+-p: Pass-through (copy files)
 find . | cpio -p /destination
 
-## -v: Verbose output
+-v: Verbose output
 find . | cpio -ov > archive.cpio
 
-## -t: List archive contents
+-t: List archive contents
 cpio -tv < archive.cpio
 ```
 
 ### 고급 옵션
 
 ```bash
-## -d: Create directories as needed
+-d: Create directories as needed
 cpio -id < archive.cpio
 
-## -m: Preserve modification times
+-m: Preserve modification times
 cpio -im < archive.cpio
 
-## -u: Unconditional extraction (overwrite)
+-u: Unconditional extraction (overwrite)
 cpio -iu < archive.cpio
 
-## -H: Specify archive format
+-H: Specify archive format
 cpio -oH newc > archive.cpio
 
-## -B: Use 5120-byte blocks
+-B: Use 5120-byte blocks
 cpio -oB > archive.cpio
 ```
 
@@ -15250,7 +15246,7 @@ echo "Source: /path/to/source" >> archive_info.txt
 lsb_release [options]
 ```
 
-## 주요 기능
+주요 기능
 
 - **배포판 정보**: 이름, 버전, 코드명
 - **LSB 호환성**: LSB 버전 지원 여부 표시
@@ -15293,26 +15289,26 @@ lsb_release -d
 ### 기본 옵션
 
 ```bash
-## -a: Show all information
+-a: Show all information
 lsb_release -a
 
-## -i: Distributor ID
+-i: Distributor ID
 lsb_release -i
 
-## -d: Description
+-d: Description
 lsb_release -d
 
-## -r: Release number
+-r: Release number
 lsb_release -r
 
-## -c: Codename
+-c: Codename
 lsb_release -c
 ```
 
 ### Output Format Options
 
 ```bash
-## -s: Short format (no field names)
+-s: Short format (no field names)
 lsb_release -a -s
 
 ## Example output:
@@ -15458,12 +15454,12 @@ if command -v lsb_release >/dev/null 2>&1; then
 else
     echo "lsb_release not available, using alternatives:"
 
-    # Try /etc/os-release (systemd standard)
+# Try /etc/os-release (systemd standard)
     if [ -f /etc/os-release ]; then
         cat /etc/os-release
     fi
 
-    # Try distribution-specific files
+# Try distribution-specific files
     if [ -f /etc/redhat-release ]; then
         cat /etc/redhat-release
     elif [ -f /etc/debian_version ]; then
@@ -15554,7 +15550,7 @@ case $DISTRO in
 
         if [[ "$VERSION" == "22.04" ]]; then
             echo "Ubuntu 22.04 specific setup..."
-            # Add 22.04 specific configurations
+# Add 22.04 specific configurations
         fi
         ;;
     "Debian")
@@ -15611,17 +15607,17 @@ fi
 ## lsb_release information is often used in Ansible
 ## Example Ansible task:
 
-## - name: Install package on Ubuntu
-##   apt:
-##     name: nginx
-##     state: present
-##   when: ansible_lsb.id == "Ubuntu"
+- name: Install package on Ubuntu
+## apt:
+## name: nginx
+## state: present
+## when: ansible_lsb.id == "Ubuntu"
 
-## - name: Install package on CentOS
-##   yum:
-##     name: nginx
-##     state: present
-##   when: ansible_lsb.id == "CentOS"
+- name: Install package on CentOS
+## yum:
+## name: nginx
+## state: present
+## when: ansible_lsb.id == "CentOS"
 ```
 
 ### Docker Integration {.unnumbered}
@@ -15723,15 +15719,15 @@ parse_distro_safe() {
 hostnamectl
 
 ## Example output:
-##    Static hostname: ubuntu-server
-##           Icon name: computer-vm
-##             Chassis: vm
-##          Machine ID: 12345...
-##             Boot ID: 67890...
-##      Virtualization: vmware
-##    Operating System: Ubuntu 22.04.1 LTS
-##              Kernel: Linux 5.15.0-58-generic
-##        Architecture: x86-64
+## Static hostname: ubuntu-server
+## Icon name: computer-vm
+## Chassis: vm
+## Machine ID: 12345...
+## Boot ID: 67890...
+## Virtualization: vmware
+## Operating System: Ubuntu 22.04.1 LTS
+## Kernel: Linux 5.15.0-58-generic
+## Architecture: x86-64
 ```
 
 ### /etc/os-release {.unnumbered}
@@ -15753,7 +15749,7 @@ grep '^VERSION_ID=' /etc/os-release | cut -d= -f2 | tr -d '"'
 ## Always check if command exists before using
 if ! command -v lsb_release >/dev/null 2>&1; then
     echo "lsb_release not available, using fallback method"
-    # Use alternative method
+# Use alternative method
 fi
 ```
 
@@ -15811,7 +15807,7 @@ detect_os() {
 dmidecode [options] [type]
 ```
 
-## 주요 기능
+주요 기능
 
 - **하드웨어 정보**: CPU, 메모리, 메인보드, BIOS 세부 정보
 - **SMBIOS 액세스**: 시스템 관리 정보에 직접 액세스
@@ -15961,7 +15957,7 @@ echo "Installed Memory Modules:"
 sudo dmidecode -t 17 | grep -E "(Size|Speed|Manufacturer|Part Number)" | grep -v "No Module"
 ```
 
-## 특정 하드웨어 정보
+특정 하드웨어 정보
 
 ### BIOS 정보 {.unnumbered}
 
@@ -16093,30 +16089,30 @@ create_asset_report() {
 ### 하드웨어 검증 {.unnumbered}
 
  ```bash
- # Validate hardware configuration
+# Validate hardware configuration
  validate_hardware() {
      echo "=== Hardware Validation ==="
 
-     # Check if virtualization is supported
+# Check if virtualization is supported
      if sudo dmidecode -t processor | grep -q "VMX\|SVM"; then
          echo "✓ Virtualization supported"
      else
          echo "✗ Virtualization not supported"
      fi
 
-     # Check memory configuration
+# Check memory configuration
      local total_slots=$(sudo dmidecode -t 17 | grep "Locator:" | wc -l)
      local used_slots=$(sudo dmidecode -t 17 | grep "Size:" | grep -v "No Module" | wc -l)
      echo "Memory: $used_slots/$total_slots slots used"
 
-     # Check for ECC memory
+# Check for ECC memory
      if sudo dmidecode -t 17 | grep -q "Error Correction Type.*ECC"; then
          echo "✓ ECC memory detected"
      else
          echo "ℹ No ECC memory detected"
      fi
 
-     # Check system age (approximate)
+# Check system age (approximate)
      local bios_date=$(sudo dmidecode -s bios-release-date)
      local year=$(echo $bios_date | awk -F'/' '{print $3}')
      local current_year=$(date +%Y)
@@ -16132,31 +16128,31 @@ create_asset_report() {
 ### 사용 가능한 문자열 옵션
 
  ```bash
- # System strings
+# System strings
  sudo dmidecode -s system-manufacturer
  sudo dmidecode -s system-product-name
  sudo dmidecode -s system-version
  sudo dmidecode -s system-serial-number
  sudo dmidecode -s system-uuid
 
- # BIOS strings
+# BIOS strings
  sudo dmidecode -s bios-vendor
  sudo dmidecode -s bios-version
  sudo dmidecode -s bios-release-date
 
- # Baseboard strings
+# Baseboard strings
  sudo dmidecode -s baseboard-manufacturer
  sudo dmidecode -s baseboard-product-name
  sudo dmidecode -s baseboard-version
  sudo dmidecode -s baseboard-serial-number
 
- # Chassis strings
+# Chassis strings
  sudo dmidecode -s chassis-manufacturer
  sudo dmidecode -s chassis-type
  sudo dmidecode -s chassis-version
  sudo dmidecode -s chassis-serial-number
 
- # Processor strings
+# Processor strings
  sudo dmidecode -s processor-family
  sudo dmidecode -s processor-manufacturer
  sudo dmidecode -s processor-version
@@ -16168,16 +16164,16 @@ create_asset_report() {
 ### 형식 지정 옵션
 
  ```bash
- # Quiet output (suppress headers)
+# Quiet output (suppress headers)
  sudo dmidecode -q -t system
 
- # No piping warning
+# No piping warning
  sudo dmidecode --no-sysfs -t memory
 
- # Dump raw DMI data
+# Dump raw DMI data
  sudo dmidecode --dump-bin dmi.bin
 
- # Read from binary dump
+# Read from binary dump
  dmidecode --from-dump dmi.bin
 ```
 
@@ -16187,13 +16183,13 @@ create_asset_report() {
 
  ```bash
  #!/bin/bash
- # Monitor hardware changes
+# Monitor hardware changes
 
  HARDWARE_LOG="/var/log/hardware_changes.log"
  CURRENT_STATE="/tmp/current_hardware.txt"
  PREVIOUS_STATE="/var/lib/hardware_baseline.txt"
 
- # Generate current hardware state
+# Generate current hardware state
  {
      echo "=== Hardware State $(date) ==="
      sudo dmidecode -s system-serial-number
@@ -16201,7 +16197,7 @@ create_asset_report() {
      sudo dmidecode -t processor | grep -E "(Version|Speed|Cores)"
  } > "$CURRENT_STATE"
 
- # Compare with previous state
+# Compare with previous state
  if [ -f "$PREVIOUS_STATE" ]; then
      if ! diff -q "$PREVIOUS_STATE" "$CURRENT_STATE" >/dev/null; then
          echo "$(date): Hardware configuration changed" >> "$HARDWARE_LOG"
@@ -16209,7 +16205,7 @@ create_asset_report() {
      fi
  fi
 
- # Update baseline
+# Update baseline
  cp "$CURRENT_STATE" "$PREVIOUS_STATE"
 ```
 
@@ -16217,7 +16213,7 @@ create_asset_report() {
 
  ```bash
  #!/bin/bash
- # Collect hardware inventory for multiple systems
+# Collect hardware inventory for multiple systems
 
  collect_inventory() {
      local hostname=$(hostname)
@@ -16261,7 +16257,7 @@ create_asset_report() {
 
  ```bash
  #!/bin/bash
- # Extract information for software licensing
+# Extract information for software licensing
 
  get_license_info() {
      echo "System Identification for Licensing:"
@@ -16270,7 +16266,7 @@ create_asset_report() {
      echo "Manufacturer: $(sudo dmidecode -s system-manufacturer)"
      echo "Model: $(sudo dmidecode -s system-product-name)"
 
-     # Generate unique system fingerprint
+# Generate unique system fingerprint
      local fingerprint=$(sudo dmidecode -s system-uuid)$(sudo dmidecode -s baseboard-serial-number)
      echo "System Fingerprint: $(echo -n "$fingerprint" | sha256sum | cut -d' ' -f1)"
  }
@@ -16283,20 +16279,20 @@ create_asset_report() {
 ### 권한 문제 {.unnumbered}
 
  ```bash
- # dmidecode requires root privileges for full access
- # Some information may be available without root
+# dmidecode requires root privileges for full access
+# Some information may be available without root
 
- # Check what's available without root
+# Check what's available without root
  dmidecode 2>/dev/null || echo "Root access required for complete information"
 
- # Use sudo for full access
+# Use sudo for full access
  sudo dmidecode -t system
 ```
 
 ### 가상 머신 고려 사항 {.unnumbered}
 
  ```bash
- # In VMs, some information may be virtualized or missing
+# In VMs, some information may be virtualized or missing
  check_virtualization() {
      local system_product=$(sudo dmidecode -s system-product-name)
 
@@ -16317,8 +16313,8 @@ create_asset_report() {
 ### 정보 누락 {.unnumbered}
 
  ```bash
- # Some fields may show "Not Specified" or be empty
- # Handle missing data gracefully
+# Some fields may show "Not Specified" or be empty
+# Handle missing data gracefully
 
  get_safe_value() {
      local value=$(sudo dmidecode -s "$1" 2>/dev/null)
@@ -16341,7 +16337,7 @@ create_asset_report() {
 ### lscpu와 함께 사용 {.unnumbered}
 
  ```bash
- # Comprehensive CPU information
+# Comprehensive CPU information
  echo "=== CPU Information ==="
  echo "DMI Information:"
  sudo dmidecode -t processor | grep -E "(Family|Version|Speed|Cores)"
@@ -16353,7 +16349,7 @@ create_asset_report() {
 ### 메모리 정보 교차 확인 {.unnumbered}
 
  ```bash
- # Compare dmidecode with /proc/meminfo
+# Compare dmidecode with /proc/meminfo
  echo "DMI Memory Information:"
  sudo dmidecode -t 16 | grep "Maximum Capacity"
  sudo dmidecode -t 17 | grep "Size:" | grep -v "No Module"
@@ -16365,13 +16361,13 @@ create_asset_report() {
 ### 시스템 모니터링 통합 {.unnumbered}
 
  ```bash
- # Add to monitoring systems
+# Add to monitoring systems
  create_monitoring_metrics() {
      local uuid=$(sudo dmidecode -s system-uuid)
      local serial=$(sudo dmidecode -s system-serial-number)
      local manufacturer=$(sudo dmidecode -s system-manufacturer)
 
-     # Output in monitoring format (e.g., Prometheus)
+# Output in monitoring format (e.g., Prometheus)
      echo "system_info{uuid=\"$uuid\",serial=\"$serial\",manufacturer=\"$manufacturer\"} 1"
  }
 ```
@@ -16381,7 +16377,7 @@ create_asset_report() {
 ### 결과 캐싱 {.unnumbered}
 
  ```bash
- # Cache dmidecode output for scripts that use it multiple times
+# Cache dmidecode output for scripts that use it multiple times
  DMI_CACHE="/tmp/dmidecode_cache.txt"
 
  get_cached_dmidecode() {
@@ -16395,7 +16391,7 @@ create_asset_report() {
 ### 오류 처리 {.unnumbered}
 
  ```bash
- # Always check if dmidecode is available and handle errors
+# Always check if dmidecode is available and handle errors
  run_dmidecode() {
      if ! command -v dmidecode >/dev/null 2>&1; then
          echo "dmidecode not available"
@@ -16412,7 +16408,7 @@ create_asset_report() {
 ### 보안 고려 사항 {.unnumbered}
 
  ```bash
- # Be careful with sensitive information in logs
+# Be careful with sensitive information in logs
  sanitize_output() {
      sudo dmidecode "$@" | sed 's/Serial Number:.*/Serial Number: [REDACTED]/'
  }
@@ -16447,7 +16443,7 @@ create_asset_report() {
  apropos [options] keyword...
 ```
 
- ## 주요 기능
+주요 기능
 
 - **키워드 검색**: 매뉴얼 페이지의 이름과 설명을 검색한다.
 - **정규 표현식 지원**: 패턴 매칭을 사용할 수 있다.
@@ -16455,239 +16451,239 @@ create_asset_report() {
 - **섹션 필터링**: 특정 매뉴얼 섹션으로 검색 범위를 제한할 수 있다.
 - **정확히 일치하는 항목 검색**: 검색어와 정확히 일치하는 단어를 찾을 수 있다.
 
- ## 기본 사용법
+## 기본 사용법
 
- ### Simple Keyword Search
+### Simple Keyword Search
 
  ```bash
- # Search for commands related to "copy"
+# Search for commands related to "copy"
  apropos copy
 
- # Search for commands related to "network"
+# Search for commands related to "network"
  apropos network
 
- # Search for file-related commands
+# Search for file-related commands
  apropos file
 
- # Search for text processing commands
+# Search for text processing commands
  apropos text
 ```
 
- ### Multiple Keywords
+### Multiple Keywords
 
  ```bash
- # Search for commands related to both "file" and "system"
+# Search for commands related to both "file" and "system"
  apropos file system
 
- # Search for networking and configuration
+# Search for networking and configuration
  apropos network config
 
- # Search for user and management
+# Search for user and management
  apropos user management
 ```
 
- ## Common Options
+## Common Options
 
- ### Basic Options
+### Basic Options
 
  ```bash
- # -a: AND search (all keywords must match)
+-a: AND search (all keywords must match)
  apropos -a file system
 
- # -e: Exact match
+-e: Exact match
  apropos -e copy
 
- # -r: Use regular expressions
+-r: Use regular expressions
  apropos -r "^net"
 
- # -w: Match whole words only
+-w: Match whole words only
  apropos -w net
 ```
 
- ### Advanced Options
+### Advanced Options
 
  ```bash
- # -s: Search specific manual sections
+-s: Search specific manual sections
  apropos -s 1 copy        # User commands only
  apropos -s 8 network     # System administration commands
 
- # -l: Long output format
+-l: Long output format
  apropos -l file
 
- # -M: Specify manual path
+-M: Specify manual path
  apropos -M /usr/share/man file
 ```
 
- ## 실무 활용 예제
+## 실무 활용 예제
 
- ### 1. Finding Commands by Function
+1. Finding Commands by Function
 
  ```bash
- # Find compression commands
+# Find compression commands
  apropos compress
 
- # Find archive commands
+# Find archive commands
  apropos archive
 
- # Find text editors
+# Find text editors
  apropos editor
 
- # Find file system commands
+# Find file system commands
  apropos filesystem
 
- # Find process management commands
+# Find process management commands
  apropos process
 ```
 
- ### 2. Network-Related Commands
+### 2. Network-Related Commands
 
  ```bash
- # General network commands
+# General network commands
  apropos network
 
- # Network configuration
+# Network configuration
  apropos -a network config
 
- # Network troubleshooting
+# Network troubleshooting
  apropos -a network trouble
 
- # Firewall commands
+# Firewall commands
  apropos firewall
 
- # DNS-related commands
+# DNS-related commands
  apropos dns
 ```
 
- ### 3. System Administration
+### 3. System Administration
 
  ```bash
- # User management
+# User management
  apropos user
 
- # Service management
+# Service management
  apropos service
 
- # System monitoring
+# System monitoring
  apropos -a system monitor
 
- # Log management
+# Log management
  apropos log
 
- # Package management
+# Package management
  apropos package
 ```
 
- ### 4. Development and Programming
+### 4. Development and Programming
 
  ```bash
- # Compiler commands
+# Compiler commands
  apropos compiler
 
- # Debugging tools
+# Debugging tools
  apropos debug
 
- # Version control
+# Version control
  apropos version
 
- # Build tools
+# Build tools
  apropos build
 
- # Library commands
+# Library commands
  apropos library
 ```
 
- ## Using Regular Expressions
+## Using Regular Expressions
 
- ### 1. Pattern Matching
+### 1. Pattern Matching
 
  ```bash
- # Find commands starting with "net"
+# Find commands starting with "net"
  apropos -r "^net"
 
- # Find commands ending with "fs"
+# Find commands ending with "fs"
  apropos -r "fs$"
 
- # Find commands containing "config"
+# Find commands containing "config"
  apropos -r ".*config.*"
 
- # Find commands with specific patterns
+# Find commands with specific patterns
  apropos -r "[0-9]+"
 ```
 
- ### 2. Complex Patterns
+### 2. Complex Patterns
 
  ```bash
- # Multiple patterns
+# Multiple patterns
  apropos -r "(copy|move|transfer)"
 
- # Case-insensitive search
+# Case-insensitive search
  apropos -r -i "FILE"
 
- # Word boundaries
+# Word boundaries
  apropos -r "\bnet\b"
 ```
 
- ## Section-Specific Searches
+## Section-Specific Searches
 
- ### Manual Sections
+### Manual Sections
 
  ```bash
- # Section 1: User commands
+# Section 1: User commands
  apropos -s 1 copy
 
- # Section 2: System calls
+# Section 2: System calls
  apropos -s 2 file
 
- # Section 3: Library functions
+# Section 3: Library functions
  apropos -s 3 string
 
- # Section 5: File formats
+# Section 5: File formats
  apropos -s 5 config
 
- # Section 8: System administration
+# Section 8: System administration
  apropos -s 8 mount
 ```
 
- ### Understanding Sections
+### Understanding Sections
 
  ```bash
- # List all sections
+# List all sections
  man man | grep -A 10 "MANUAL SECTIONS"
 
- # Common sections:
- # 1 - User commands
- # 2 - System calls
- # 3 - Library functions
- # 4 - Device files
- # 5 - File formats and conventions
- # 6 - Games
- # 7 - Miscellaneous
- # 8 - System administration commands
+# Common sections:
+# 1 - User commands
+# 2 - System calls
+# 3 - Library functions
+# 4 - Device files
+# 5 - File formats and conventions
+# 6 - Games
+# 7 - Miscellaneous
+# 8 - System administration commands
 ```
 
- ## 고급 사용법
+## 고급 사용법
 
- ### 1. Combining with Other Commands
+1. Combining with Other Commands
 
  ```bash
- # Search and count results
+# Search and count results
  apropos network | wc -l
 
- # Search and sort
+# Search and sort
  apropos file | sort
 
- # Search and filter
+# Search and filter
  apropos copy | grep -v "manual"
 
- # Search and format
+# Search and format
  apropos -l network | column -t
 ```
 
- ### 2. Scripting Applications
+### 2. Scripting Applications
 
  ```bash
  #!/bin/bash
- # Find commands for specific tasks
+# Find commands for specific tasks
 
  find_commands() {
      local task="$1"
@@ -16696,16 +16692,16 @@ create_asset_report() {
      echo
  }
 
- # Usage examples
+# Usage examples
  find_commands "backup"
  find_commands "monitor"
  find_commands "security"
 ```
 
- ### 3. Learning Tool
+### 3. Learning Tool
 
  ```bash
- # Daily command discovery
+# Daily command discovery
  daily_discovery() {
      local keywords=("network" "file" "text" "system" "process")
      local keyword=${keywords[$RANDOM % ${#keywords[@]}]}
@@ -16719,102 +16715,102 @@ create_asset_report() {
 
 ::: {.callout-caution title="문제 해결 및 트러블슈팅 Common Issues"}
 
- ### 1. No Results Found
+### 1. No Results Found
 
  ```bash
- # Update manual database if no results
+# Update manual database if no results
  sudo mandb
 
- # Check if manual pages are installed
+# Check if manual pages are installed
  ls /usr/share/man/man1/ | head
 
- # Try different keywords
+# Try different keywords
  apropos copy
  apropos duplicate
  apropos clone
 ```
 
- ### 2. Database Issues
+### 2. Database Issues
 
  ```bash
- # Rebuild manual database
+# Rebuild manual database
  sudo mandb -c
 
- # Force database rebuild
+# Force database rebuild
  sudo mandb -f
 
- # Check database status
+# Check database status
  mandb --version
 ```
 
- ### 3. Permission Issues
+### 3. Permission Issues
 
  ```bash
- # Check manual path permissions
+# Check manual path permissions
  ls -la /usr/share/man/
 
- # Check database location
+# Check database location
  find /var -name "*man*" -type d 2>/dev/null
 
- # Run with specific path
+# Run with specific path
  apropos -M /usr/local/man keyword
 ```
 
 :::
 
 
- ## Useful Search Patterns
+## Useful Search Patterns
 
- ### 1. Common Tasks
+### 1. Common Tasks
 
  ```bash
- # File operations
+# File operations
  apropos -a file copy
  apropos -a file move
  apropos -a file remove
  apropos -a file search
 
- # System information
+# System information
  apropos -a system info
  apropos -a hardware info
  apropos -a disk usage
 
- # Network operations
+# Network operations
  apropos -a network interface
  apropos -a network test
  apropos -a network config
 ```
 
- ### 2. By Software Category
+### 2. By Software Category
 
  ```bash
- # Text processing
+# Text processing
  apropos -r "(awk|sed|grep|cut|sort)"
 
- # Compression tools
+# Compression tools
  apropos -r "(gzip|tar|zip|compress)"
 
- # System monitoring
+# System monitoring
  apropos -r "(top|ps|iostat|netstat)"
 
- # File systems
+# File systems
  apropos -r "(mount|umount|fsck|mkfs)"
 ```
 
- ### 3. Administration Tasks
+### 3. Administration Tasks
 
  ```bash
- # User management
+# User management
  apropos -a user add
  apropos -a user delete
  apropos -a user modify
 
- # Service management
+# Service management
  apropos -a service start
  apropos -a service stop
  apropos -a service status
 
- # Package management
+# Package management
  apropos -a package install
  apropos -a package remove
  apropos -a package update
@@ -16822,11 +16818,11 @@ create_asset_report() {
 
 ## Learning와의 통합
 
- ### 1. Command Discovery Script
+### 1. Command Discovery Script
 
  ```bash
  #!/bin/bash
- # Interactive command discovery
+# Interactive command discovery
 
  discover_commands() {
      echo "What do you want to do? (e.g., 'copy files', 'monitor system')"
@@ -16849,11 +16845,11 @@ create_asset_report() {
  discover_commands
 ```
 
- ### 2. Command Recommendation
+### 2. Command Recommendation
 
  ```bash
  #!/bin/bash
- # Recommend commands based on keywords
+# Recommend commands based on keywords
 
  recommend_command() {
      local keyword="$1"
@@ -16865,82 +16861,82 @@ create_asset_report() {
      done
  }
 
- # Examples
+# Examples
  recommend_command "backup"
  recommend_command "monitor"
  recommend_command "compress"
 ```
 
- ## Comparison with Similar Commands
+## Comparison with Similar Commands
 
- ### 1. apropos vs man -k
+### 1. apropos vs man -k
 
  ```bash
- # These are equivalent
+# These are equivalent
  apropos network
  man -k network
 
- # Both search manual page descriptions
+# Both search manual page descriptions
 ```
 
- ### 2. apropos vs whatis
+### 2. apropos vs whatis
 
  ```bash
- # apropos: searches descriptions (broader)
+# apropos: searches descriptions (broader)
  apropos copy
 
- # whatis: exact command name match (narrower)
+# whatis: exact command name match (narrower)
  whatis cp
 ```
 
- ### 3. apropos vs which/whereis
+### 3. apropos vs which/whereis
 
  ```bash
- # apropos: finds commands by description
+# apropos: finds commands by description
  apropos file
 
- # which: finds command location
+# which: finds command location
  which cp
 
- # whereis: finds command, source, manual locations
+# whereis: finds command, source, manual locations
  whereis cp
 ```
 
- ## Configuration and Customization
+## Configuration and Customization
 
- ### 1. Manual Path Configuration
+### 1. Manual Path Configuration
 
  ```bash
- # Check current manual paths
+# Check current manual paths
  manpath
 
- # Add custom manual path
+# Add custom manual path
  export MANPATH="/usr/local/man:$MANPATH"
 
- # Make permanent in shell profile
+# Make permanent in shell profile
  echo 'export MANPATH="/usr/local/man:$MANPATH"' >> ~/.bashrc
 ```
 
- ### 2. Database Configuration
+### 2. Database Configuration
 
  ```bash
- # Manual database location
+# Manual database location
  echo $MANDB
 
- # Update configuration
+# Update configuration
  sudo nano /etc/manpath.config
 
- # Force database update
+# Force database update
  sudo mandb -f
 ```
 
- ## Advanced Scripting Examples
+## Advanced Scripting Examples
 
- ### 1. Command Explorer
+### 1. Command Explorer
 
  ```bash
  #!/bin/bash
- # Interactive command explorer
+# Interactive command explorer
 
  while true; do
      echo -n "Enter search term (or 'quit' to exit): "
@@ -16973,11 +16969,11 @@ create_asset_report() {
  done
 ```
 
- ### 2. Command Category Browser
+### 2. Command Category Browser
 
  ```bash
  #!/bin/bash
- # Browse commands by category
+# Browse commands by category
 
  categories=(
      "file:File operations"
@@ -17010,40 +17006,40 @@ create_asset_report() {
 
 ::: {.callout-tip title="모범 사례 (Best Practices)"}
 
- ### 1. Effective Searching
+### 1. Effective Searching
 
  ```bash
- # Start with broad terms, then narrow down
+# Start with broad terms, then narrow down
  apropos file
  apropos -a file copy
  apropos -a file copy system
 
- # Use synonyms if no results
+# Use synonyms if no results
  apropos copy || apropos duplicate || apropos clone
 ```
 
- ### 2. Regular Database Updates
+### 2. Regular Database Updates
 
  ```bash
- # Add to crontab for regular updates
- # 0 3 * * 0 /usr/bin/mandb -q
+# Add to crontab for regular updates
+# 0 3 * * 0 /usr/bin/mandb -q
 
- # Or create update script
+# Or create update script
  #!/bin/bash
  echo "Updating manual database..."
  sudo mandb -q
  echo "Manual database updated."
 ```
 
- ### 3. Learning Integration
+### 3. Learning Integration
 
  ```bash
- # Create learning aliases
+# Create learning aliases
  alias learn='apropos'
  alias find-cmd='apropos'
  alias what-cmd='apropos'
 
- # Create help function
+# Create help function
  help-me() {
      echo "What do you want to do?"
      echo "Example: help-me copy files"
@@ -17079,7 +17075,7 @@ create_asset_report() {
  dmesg [options]
 ```
 
- ## 주요 기능
+주요 기능
 
  - **커널 메시지**: 커널 링 버퍼 내용 표시
  - **부팅 정보**: 하드웨어 감지 및 드라이버 로딩
@@ -17087,286 +17083,286 @@ create_asset_report() {
  - **필터링 옵션**: facility, level, 시간별로 필터링
  - **다양한 형식**: 사람이 읽기 쉬운 형식과 raw 형식
 
- ## 기본 사용법
+## 기본 사용법
 
- ### Show All Messages
+### Show All Messages
 
  ```bash
- # Display all kernel messages
+# Display all kernel messages
  dmesg
 
- # Display with human-readable timestamps
+# Display with human-readable timestamps
  dmesg -T
 
- # Display last 20 lines
+# Display last 20 lines
  dmesg | tail -20
 
- # Display first 20 lines (boot messages)
+# Display first 20 lines (boot messages)
  dmesg | head -20
 ```
 
- ### Follow New Messages
+### Follow New Messages
 
  ```bash
- # Follow new kernel messages (like tail -f)
+# Follow new kernel messages (like tail -f)
  dmesg -w
 
- # Follow with timestamps
+# Follow with timestamps
  dmesg -T -w
 
- # Follow last 10 lines and continue
+# Follow last 10 lines and continue
  dmesg | tail -10 && dmesg -w
 ```
 
- ## Message Levels and Facilities
+## Message Levels and Facilities
 
- ### Message Levels
+### Message Levels
 
  ```bash
- # Emergency messages (level 0)
+# Emergency messages (level 0)
  dmesg -l emerg
 
- # Alert messages (level 1)
+# Alert messages (level 1)
  dmesg -l alert
 
- # Critical messages (level 2)
+# Critical messages (level 2)
  dmesg -l crit
 
- # Error messages (level 3)
+# Error messages (level 3)
  dmesg -l err
 
- # Warning messages (level 4)
+# Warning messages (level 4)
  dmesg -l warn
 
- # Notice messages (level 5)
+# Notice messages (level 5)
  dmesg -l notice
 
- # Info messages (level 6)
+# Info messages (level 6)
  dmesg -l info
 
- # Debug messages (level 7)
+# Debug messages (level 7)
  dmesg -l debug
 ```
 
- ### Multiple Levels
+### Multiple Levels
 
  ```bash
- # Show errors and warnings
+# Show errors and warnings
  dmesg -l err,warn
 
- # Show critical and above (crit, alert, emerg)
+# Show critical and above (crit, alert, emerg)
  dmesg -l crit+
 
- # Show warnings and below (warn, notice, info, debug)
+# Show warnings and below (warn, notice, info, debug)
  dmesg -l warn-
 ```
 
- ### Facilities
+### Facilities
 
  ```bash
- # Kernel messages
+# Kernel messages
  dmesg -f kern
 
- # User-space messages
+# User-space messages
  dmesg -f user
 
- # Mail system messages
+# Mail system messages
  dmesg -f mail
 
- # System daemons
+# System daemons
  dmesg -f daemon
 
- # Authorization messages
+# Authorization messages
  dmesg -f auth
 
- # Syslog messages
+# Syslog messages
  dmesg -f syslog
 ```
 
- ## Common Options
+## Common Options
 
- ### Display Options
+### Display Options
 
  ```bash
- # -T: Human-readable timestamps
+-T: Human-readable timestamps
  dmesg -T
 
- # -t: Don't show timestamps
+-t: Don't show timestamps
  dmesg -t
 
- # -x: Decode facility and level to human-readable
+-x: Decode facility and level to human-readable
  dmesg -x
 
- # -H: Enable human-readable output
+-H: Enable human-readable output
  dmesg -H
 
- # -k: Show kernel messages only
+-k: Show kernel messages only
  dmesg -k
 ```
 
- ### Buffer Options
+### Buffer Options
 
  ```bash
- # -c: Clear ring buffer after reading
+-c: Clear ring buffer after reading
  sudo dmesg -c
 
- # -C: Clear ring buffer
+-C: Clear ring buffer
  sudo dmesg -C
 
- # -s: Buffer size
+-s: Buffer size
  dmesg -s 65536
 
- # -n: Set console log level
+-n: Set console log level
  sudo dmesg -n 1
 ```
 
- ## 실무 활용 예제
+## 실무 활용 예제
 
- ### 1. Hardware Detection
+### 1. Hardware Detection
 
  ```bash
- # Check USB device detection
+# Check USB device detection
  dmesg | grep -i usb
 
- # Check network interface detection
+# Check network interface detection
  dmesg | grep -i eth
 
- # Check disk detection
+# Check disk detection
  dmesg | grep -i -E "(sda|sdb|sdc|nvme)"
 
- # Check memory detection
+# Check memory detection
  dmesg | grep -i memory
 
- # Check CPU detection
+# Check CPU detection
  dmesg | grep -i cpu
 ```
 
- ### 2. Driver Loading
+### 2. Driver Loading
 
  ```bash
- # Check loaded drivers
+# Check loaded drivers
  dmesg | grep -i driver
 
- # Check specific driver (e.g., nvidia)
+# Check specific driver (e.g., nvidia)
  dmesg | grep -i nvidia
 
- # Check wireless driver
+# Check wireless driver
  dmesg | grep -i wifi
 
- # Check bluetooth driver
+# Check bluetooth driver
  dmesg | grep -i bluetooth
 
- # Check sound driver
+# Check sound driver
  dmesg | grep -i audio
 ```
 
- ### 3. Error Debugging
+### 3. Error Debugging
 
  ```bash
- # Show only error messages
+# Show only error messages
  dmesg -l err
 
- # Show errors and warnings
+# Show errors and warnings
  dmesg -l err,warn
 
- # Search for specific errors
+# Search for specific errors
  dmesg | grep -i error
 
- # Search for failed operations
+# Search for failed operations
  dmesg | grep -i fail
 
- # Search for timeout issues
+# Search for timeout issues
  dmesg | grep -i timeout
 ```
 
- ### 4. Boot Process Analysis
+### 4. Boot Process Analysis
 
  ```bash
- # Show boot messages with timestamps
+# Show boot messages with timestamps
  dmesg -T | head -50
 
- # Find boot completion time
+# Find boot completion time
  dmesg | grep -i "boot"
 
- # Check service startup
+# Check service startup
  dmesg | grep -i systemd
 
- # Check filesystem mounting
+# Check filesystem mounting
  dmesg | grep -i mount
 
- # Check network initialization
+# Check network initialization
  dmesg | grep -i network
 ```
 
- ## Time-Based Filtering
+## Time-Based Filtering
 
- ### Recent Messages
+### Recent Messages
 
  ```bash
- # Messages from last 10 minutes
+# Messages from last 10 minutes
  dmesg --since="10 minutes ago"
 
- # Messages from last hour
+# Messages from last hour
  dmesg --since="1 hour ago"
 
- # Messages from today
+# Messages from today
  dmesg --since="today"
 
- # Messages from specific time
+# Messages from specific time
  dmesg --since="2023-01-01 00:00:00"
 ```
 
- ### Time Ranges
+### Time Ranges
 
  ```bash
- # Messages between specific times
+# Messages between specific times
  dmesg --since="2023-01-01" --until="2023-01-02"
 
- # Messages from last boot
+# Messages from last boot
  dmesg --since="last boot"
 
- # Messages from specific duration
+# Messages from specific duration
  dmesg --since="30 minutes ago" --until="10 minutes ago"
 ```
 
- ## Advanced Filtering
+## Advanced Filtering
 
- ### 1. Combining Filters
+### 1. Combining Filters
 
  ```bash
- # Errors from last hour
+# Errors from last hour
  dmesg -l err --since="1 hour ago"
 
- # Kernel warnings with timestamps
+# Kernel warnings with timestamps
  dmesg -T -l warn -f kern
 
- # USB-related errors
+# USB-related errors
  dmesg -l err | grep -i usb
 
- # Network errors from today
+# Network errors from today
  dmesg --since="today" | grep -i -E "(network|eth|wifi)"
 ```
 
- ### 2. Output Formatting
+### 2. Output Formatting
 
  ```bash
- # JSON format
+# JSON format
  dmesg --json
 
- # Raw format (no timestamp processing)
+# Raw format (no timestamp processing)
  dmesg -r
 
- # Colored output (if supported)
+# Colored output (if supported)
  dmesg --color=always
 
- # No pager
+# No pager
  dmesg --nopager
 ```
 
- ### 3. Custom Formatting
+### 3. Custom Formatting
 
  ```bash
- # Extract specific information
+# Extract specific information
  extract_usb_devices() {
      dmesg | grep -E "usb.*: New USB device" | \
      sed -n 's/.*New USB device found, idVendor=\([^,]*\), idProduct=\([^ ]*\).*/Vendor: \1, Product: \2/p'
@@ -17375,21 +17371,21 @@ create_asset_report() {
  extract_usb_devices
 ```
 
- ## Monitoring and Alerting
+## Monitoring and Alerting
 
- ### 1. Real-time Monitoring
+### 1. Real-time Monitoring
 
  ```bash
- # Monitor for specific events
+# Monitor for specific events
  monitor_errors() {
      dmesg -w -l err | while read line; do
          echo "$(date): $line"
-         # Send alert
+# Send alert
          echo "$line" | mail -s "Kernel Error Alert" admin@domain.com
      done
  }
 
- # Monitor USB connections
+# Monitor USB connections
  monitor_usb() {
      dmesg -w | grep --line-buffered -i usb | while read line; do
          echo "USB Event: $line"
@@ -17397,11 +17393,11 @@ create_asset_report() {
  }
 ```
 
- ### 2. Log Analysis Scripts
+### 2. Log Analysis Scripts
 
  ```bash
  #!/bin/bash
- # Analyze kernel messages for issues
+# Analyze kernel messages for issues
 
  analyze_dmesg() {
      echo "=== Kernel Message Analysis ==="
@@ -17427,18 +17423,18 @@ create_asset_report() {
  analyze_dmesg > kernel_analysis.txt
 ```
 
- ### 3. System Health Check
+### 3. System Health Check
 
  ```bash
  #!/bin/bash
- # Check system health using dmesg
+# Check system health using dmesg
 
  check_system_health() {
      local issues=0
 
      echo "=== System Health Check ==="
 
-     # Check for critical errors
+# Check for critical errors
      critical_errors=$(dmesg -l crit,alert,emerg --since="24 hours ago" | wc -l)
      if [ $critical_errors -gt 0 ]; then
          echo "⚠️  $critical_errors critical errors found in last 24 hours"
@@ -17447,7 +17443,7 @@ create_asset_report() {
          echo "✅ No critical errors in last 24 hours"
      fi
 
-     # Check for hardware errors
+# Check for hardware errors
      hw_errors=$(dmesg --since="24 hours ago" | grep -i -c -E "(hardware error|machine check|MCE)")
      if [ $hw_errors -gt 0 ]; then
          echo "⚠️  $hw_errors hardware errors detected"
@@ -17456,7 +17452,7 @@ create_asset_report() {
          echo "✅ No hardware errors detected"
      fi
 
-     # Check for out of memory
+# Check for out of memory
      oom_events=$(dmesg --since="24 hours ago" | grep -i -c "out of memory")
      if [ $oom_events -gt 0 ]; then
          echo "⚠️  $oom_events out of memory events"
@@ -17465,7 +17461,7 @@ create_asset_report() {
          echo "✅ No out of memory events"
      fi
 
-     # Check for filesystem errors
+# Check for filesystem errors
      fs_errors=$(dmesg --since="24 hours ago" | grep -i -c -E "(filesystem error|ext[234] error|xfs error)")
      if [ $fs_errors -gt 0 ]; then
          echo "⚠️  $fs_errors filesystem errors"
@@ -17487,10 +17483,10 @@ create_asset_report() {
 
 ## 일반적인 사용 사례
 
- ### 1. USB Device Troubleshooting
+### 1. USB Device Troubleshooting
 
  ```bash
- # Monitor USB device connections
+# Monitor USB device connections
  monitor_usb_debug() {
      echo "Monitoring USB events (Ctrl+C to stop)..."
      dmesg -w | grep --line-buffered -i usb | while read line; do
@@ -17499,7 +17495,7 @@ create_asset_report() {
      done
  }
 
- # Check USB device history
+# Check USB device history
  usb_device_history() {
      echo "USB Device Connection History:"
      dmesg | grep -i "usb.*: New USB device" | tail -10
@@ -17509,10 +17505,10 @@ create_asset_report() {
  }
 ```
 
- ### 2. Network Interface Issues
+### 2. Network Interface Issues
 
  ```bash
- # Check network interface events
+# Check network interface events
  check_network_issues() {
      echo "Network Interface Events:"
      dmesg | grep -i -E "(eth[0-9]|wlan[0-9]|enp|wlp)" | tail -10
@@ -17527,10 +17523,10 @@ create_asset_report() {
  }
 ```
 
- ### 3. Storage Device Monitoring
+### 3. Storage Device Monitoring
 
  ```bash
- # Check disk health and errors
+# Check disk health and errors
  check_storage_health() {
      echo "Storage Device Detection:"
      dmesg | grep -i -E "(sda|sdb|nvme)" | grep -i "sectors" | tail -5
@@ -17547,10 +17543,10 @@ create_asset_report() {
 
 ## Other Tools와의 통합
 
- ### 1. Combining with journalctl
+### 1. Combining with journalctl
 
  ```bash
- # Compare kernel messages
+# Compare kernel messages
  echo "=== dmesg output ==="
  dmesg --since="1 hour ago" | head -5
 
@@ -17558,10 +17554,10 @@ create_asset_report() {
  journalctl -k --since="1 hour ago" | head -5
 ```
 
- ### 2. Log File Integration
+### 2. Log File Integration
 
  ```bash
- # Save dmesg to file with rotation
+# Save dmesg to file with rotation
  save_dmesg_log() {
      local logfile="/var/log/dmesg.log"
      local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
@@ -17569,7 +17565,7 @@ create_asset_report() {
      echo "[$timestamp] === dmesg snapshot ===" >> "$logfile"
      dmesg -T >> "$logfile"
 
-     # Rotate if file gets too large
+# Rotate if file gets too large
      if [ $(stat -f%z "$logfile" 2>/dev/null || stat -c%s "$logfile") -gt 10485760 ]; then
          mv "$logfile" "$logfile.old"
          echo "Log rotated at $timestamp" > "$logfile"
@@ -17577,16 +17573,16 @@ create_asset_report() {
  }
 ```
 
- ### 3. Monitoring System Integration
+3. Monitoring System Integration
 
  ```bash
- # Create metrics for monitoring systems
+# Create metrics for monitoring systems
  create_dmesg_metrics() {
      local errors=$(dmesg -l err --since="1 hour ago" | wc -l)
      local warnings=$(dmesg -l warn --since="1 hour ago" | wc -l)
      local timestamp=$(date +%s)
 
-     # Output in Prometheus format
+# Output in Prometheus format
      echo "kernel_errors_total $errors $timestamp"
      echo "kernel_warnings_total $warnings $timestamp"
  }
@@ -17594,61 +17590,61 @@ create_asset_report() {
 
 ::: {.callout-caution title="문제 해결 및 트러블슈팅"}
 
- ### 1. Buffer Size Issues
+### 1. Buffer Size Issues
 
  ```bash
- # Check current buffer size
+# Check current buffer size
  dmesg | wc -l
 
- # Increase buffer size (temporary)
+# Increase buffer size (temporary)
  sudo dmesg -s 1048576
 
- # Make permanent (add to kernel parameters)
- # Add to GRUB: log_buf_len=1048576
+# Make permanent (add to kernel parameters)
+# Add to GRUB: log_buf_len=1048576
 ```
 
- ### 2. Permission Issues
+### 2. Permission Issues
 
  ```bash
- # Check if non-root can read dmesg
+# Check if non-root can read dmesg
  dmesg >/dev/null 2>&1 && echo "Can read dmesg" || echo "Cannot read dmesg"
 
- # Check kernel parameter
+# Check kernel parameter
  cat /proc/sys/kernel/dmesg_restrict
 
- # Allow non-root users (temporary)
+# Allow non-root users (temporary)
  sudo sysctl kernel.dmesg_restrict=0
 
- # Make permanent
+# Make permanent
  echo "kernel.dmesg_restrict = 0" | sudo tee -a /etc/sysctl.conf
 ```
 
- ### 3. Message Filtering Issues
+### 3. Message Filtering Issues
 
  ```bash
- # Check available facilities and levels
+# Check available facilities and levels
  dmesg --help | grep -A 20 "supported facilities"
 
- # Test filtering
+# Test filtering
  dmesg -l err | head -5
  dmesg -f kern | head -5
 
- # Check if systemd is interfering
+# Check if systemd is interfering
  systemctl status systemd-journald
 ```
 
 :::
 
 
- ## 성능 고려 사항
+## 성능 고려 사항
 ### 대용량 버퍼 처리 {.unnumbered}
 
 ```bash
 ## Process large buffers efficiently
 process_large_dmesg() {
-    # Use streaming instead of loading all into memory
+# Use streaming instead of loading all into memory
     dmesg | while IFS= read -r line; do
-        # Process line by line
+# Process line by line
         echo "$line" | grep -q "error" && echo "Error: $line"
     done
 }
@@ -17736,7 +17732,7 @@ document_system_event() {
 !?<string>?
 ```
 
-## 주요 기능
+주요 기능
 
 - **마지막 명령 반복**: 이전 명령을 빠르게 다시 실행한다
 - **명령 수정**: 이전 명령을 수정한 뒤 다시 실행한다
@@ -17762,7 +17758,7 @@ sudo !!
 sudo ls -la /home/user
 ```
 
-### 일반적인 상황
+일반적인 상황
 
 ```bash
 ## Forgot sudo
@@ -17968,7 +17964,7 @@ ps aux | grep apache | grep -v grep
 !! | wc -l    # Count the results
 ```
 
-## 대화형 기능
+대화형 기능
 
 ### 히스토리 확인 {.unnumbered}
 
@@ -18058,9 +18054,9 @@ history | tail -5    # Check recent commands
 
 ## For critical operations, type commands fully
 ## Don't rely on history expansion for:
-## - rm commands
-## - chmod commands
-## - System configuration changes
+- rm commands
+- chmod commands
+- System configuration changes
 ```
 
 ### 디버깅 {.unnumbered}
@@ -18275,7 +18271,7 @@ eval "$complex_cmd"
 tty [options]
 ```
 
-## 주요 기능
+주요 기능
 
 - **터미널 식별**: 현재 터미널 장치를 표시한다
 - **리디렉션 감지**: 입력이 터미널이나 파일에서 오는지 확인한다
@@ -18318,13 +18314,13 @@ fi
 ### 기본 옵션
 
 ```bash
-## -s: Silent mode (no output, just exit code)
+-s: Silent mode (no output, just exit code)
 tty -s
 
-## --help: Show help information
+--help: Show help information
 tty --help
 
-## --version: Show version information
+--version: Show version information
 tty --version
 ```
 
@@ -18395,11 +18391,11 @@ echo "Running on: $current_tty"
 case "$current_tty" in
     /dev/tty[1-6])
         echo "Running on virtual console"
-        # Console-specific behavior
+# Console-specific behavior
         ;;
     /dev/pts/*)
         echo "Running in terminal emulator"
-        # Terminal emulator behavior
+# Terminal emulator behavior
         ;;
     *)
         echo "Unknown terminal type"
@@ -18433,11 +18429,11 @@ fi
 current_tty=$(tty)
 
 if [[ "$current_tty" =~ ^/dev/pts/ ]]; then
-    # Modern terminal emulator
+# Modern terminal emulator
     echo -e "\e[32mGreen text\e[0m"
     echo -e "\e[1mBold text\e[0m"
 elif [[ "$current_tty" =~ ^/dev/tty[1-6]$ ]]; then
-    # Virtual console - limited capabilities
+# Virtual console - limited capabilities
     echo "Plain text output"
 else
     echo "Unknown terminal - safe output"
@@ -18462,7 +18458,7 @@ ask_confirmation() {
             *) return 1 ;;
         esac
     else
-        # Non-interactive - assume yes
+# Non-interactive - assume yes
         echo "$message: Assumed yes (non-interactive)"
         return 0
     fi
@@ -18510,14 +18506,14 @@ log_message() {
     local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
 
     if tty -s; then
-        # Terminal output - colored
+# Terminal output - colored
         case "$level" in
             INFO)  echo -e "\e[32m[$timestamp] INFO: $message\e[0m" ;;
             WARN)  echo -e "\e[33m[$timestamp] WARN: $message\e[0m" ;;
             ERROR) echo -e "\e[31m[$timestamp] ERROR: $message\e[0m" ;;
         esac
     else
-        # Non-terminal output - plain
+# Non-terminal output - plain
         echo "[$timestamp] $level: $message"
     fi
 }
@@ -18642,7 +18638,7 @@ check_tty_permissions() {
     echo "Terminal: $current_tty"
     ls -la "$current_tty"
 
-    # Check if others can write to terminal
+# Check if others can write to terminal
     if [ -w "$current_tty" ]; then
         echo "Terminal is writable"
     else
@@ -18817,7 +18813,7 @@ safe_interactive() {
         exit 1
     fi
 
-    # Proceed with interactive operations
+# Proceed with interactive operations
     read -p "Continue? (y/n): " response
 }
 ```
@@ -18888,7 +18884,7 @@ check_terminal_safe() {
 lspci [options]
 ```
 
-## 주요 기능
+주요 기능
 
 - **하드웨어 감지**: 모든 PCI 장치를 나열한다
 - **상세 정보**: 공급업체, 장치, 클래스 및 기능을 표시한다
@@ -18932,35 +18928,35 @@ lspci -vvv
 ### 기본 옵션
 
 ```bash
-## -v: Verbose (show detailed info)
+-v: Verbose (show detailed info)
 lspci -v
 
-## -vv: Very verbose
+-vv: Very verbose
 lspci -vv
 
-## -n: Show numeric IDs instead of names
+-n: Show numeric IDs instead of names
 lspci -n
 
-## -nn: Show both names and numeric IDs
+-nn: Show both names and numeric IDs
 lspci -nn
 
-## -k: Show kernel drivers
+-k: Show kernel drivers
 lspci -k
 ```
 
 ### Display Options
 
 ```bash
-## -t: Tree format
+-t: Tree format
 lspci -t
 
-## -tv: Tree format with verbose info
+-tv: Tree format with verbose info
 lspci -tv
 
-## -x: Show hex dump of config space
+-x: Show hex dump of config space
 lspci -x
 
-## -xxx: Show full hex dump
+-xxx: Show full hex dump
 lspci -xxx
 ```
 
@@ -19030,17 +19026,17 @@ lspci -d 8086:9bc4
 lspci -v
 
 ## Example output includes:
-## - Memory addresses
-## - IRQ assignments
-## - Capabilities (MSI, Power Management, etc.)
-## - Kernel modules/drivers
+- Memory addresses
+- IRQ assignments
+- Capabilities (MSI, Power Management, etc.)
+- Kernel modules/drivers
 
 ## Very detailed information
 lspci -vv
 ## Includes:
-## - Extended capabilities
-## - Configuration registers
-## - Link status and speeds
+- Extended capabilities
+- Configuration registers
+- Link status and speeds
 ```
 
 ### Driver Information {.unnumbered}
@@ -19051,9 +19047,9 @@ lspci -k
 
 ## Example output:
 ## 00:02.0 VGA compatible controller: Intel Corporation Device 9bc4
-##         Subsystem: Dell Device 097d
-##         Kernel driver in use: i915
-##         Kernel modules: i915
+## Subsystem: Dell Device 097d
+## Kernel driver in use: i915
+## Kernel modules: i915
 
 ## Combine with verbose for more detail
 lspci -vk
@@ -19072,7 +19068,7 @@ lspci -xxx
 lspci -s 00:02.0 -xxx
 ```
 
-## 트리 보기 및 토폴로지
+트리 보기 및 토폴로지
 
 ### Device Hierarchy {.unnumbered}
 
@@ -19081,10 +19077,10 @@ lspci -s 00:02.0 -xxx
 lspci -t
 
 ## Example output:
-## -[0000:00]-+-00.0  Intel Corporation Device 9b61
-##            +-01.0-[01]--
-##            +-02.0  Intel Corporation Device 9bc4
-##            +-14.0  Intel Corporation Device a36d
+-[0000:00]-+-00.0  Intel Corporation Device 9b61
+## +-01.0-[01]--
+## +-02.0  Intel Corporation Device 9bc4
+## +-14.0  Intel Corporation Device a36d
 
 ## Tree with device names
 lspci -tv
@@ -19321,7 +19317,7 @@ find_missing_drivers() {
         if ! lspci -k -s "$device_id" | grep -q "Kernel driver in use"; then
             echo "Missing driver: $device_id - $device_name"
 
-            # Try to find available modules
+# Try to find available modules
             modules=$(lspci -k -s "$device_id" | grep "Kernel modules:" | cut -d':' -f2)
             if [ -n "$modules" ]; then
                 echo "  Available modules:$modules"
@@ -19456,14 +19452,14 @@ check_udev_rules() {
 
     echo "Checking udev rules for device: $device_id"
 
-    # Get vendor and device IDs
+# Get vendor and device IDs
     vendor_device=$(lspci -n -s "$device_id" | awk '{print $3}')
     vendor_id=$(echo "$vendor_device" | cut -d':' -f1)
     device_id_hex=$(echo "$vendor_device" | cut -d':' -f2)
 
     echo "Vendor ID: $vendor_id, Device ID: $device_id_hex"
 
-    # Search udev rules
+# Search udev rules
     find /etc/udev/rules.d /lib/udev/rules.d -name "*.rules" -exec grep -l "$vendor_id\|$device_id_hex" {} \; 2>/dev/null
 }
 ```
@@ -19590,7 +19586,7 @@ document_hardware() {
 cfdisk [options] [device]
 ```
 
-## 주요 기능
+주요 기능
 
 - **대화형 인터페이스**: 메뉴 기반 파티션 관리
 - **실시간 표시**: 현재 파티션 테이블 표시
@@ -19648,9 +19644,9 @@ sudo cfdisk /dev/sdb
 ## Steps in cfdisk:
 ## 1. Select "New" from menu
 ## 2. Choose partition size
-## 3. Select partition type (primary/extended)
-## 4. Choose partition type (Linux, swap, etc.)
-## 5. Select "Write" to save changes
+3. Select partition type (primary/extended)
+4. Choose partition type (Linux, swap, etc.)
+5. Select "Write" to save changes
 ## 6. Type "yes" to confirm
 ## 7. Select "Quit" to exit
 ```
@@ -19659,10 +19655,10 @@ sudo cfdisk /dev/sdb
 
 ```bash
 ## In cfdisk interface:
-## 1. Navigate to partition to delete
+1. Navigate to partition to delete
 ## 2. Select "Delete" from menu
 ## 3. Confirm deletion
-## 4. Select "Write" to save changes
+4. Select "Write" to save changes
 ## 5. Type "yes" to confirm
 ```
 
@@ -19670,10 +19666,10 @@ sudo cfdisk /dev/sdb
 
 ```bash
 ## In cfdisk interface:
-## 1. Navigate to target partition
+1. Navigate to target partition
 ## 2. Select "Type" from menu
-## 3. Choose new partition type from list
-## 4. Select "Write" to save changes
+3. Choose new partition type from list
+4. Select "Write" to save changes
 ```
 
 ## 일반적인 파티션 유형
@@ -19757,7 +19753,7 @@ sudo cfdisk /dev/sdb
 sudo pvcreate /dev/sdb1
 ```
 
-## 안전 기능
+안전 기능
 
 ### 변경 사항 추적 {.unnumbered}
 
@@ -19792,10 +19788,10 @@ sudo pvcreate /dev/sdb1
 sudo cfdisk -t gpt /dev/sdb
 
 ## Features:
-## - Supports >2TB disks
-## - Up to 128 partitions
-## - Backup partition table
-## - 64-bit LBA addressing
+- Supports >2TB disks
+- Up to 128 partitions
+- Backup partition table
+- 64-bit LBA addressing
 ```
 
 ### MBR/DOS 파티션 테이블 {.unnumbered}
@@ -19805,9 +19801,9 @@ sudo cfdisk -t gpt /dev/sdb
 sudo cfdisk -t dos /dev/sdb
 
 ## Limitations:
-## - 4 primary partitions maximum
-## - 2TB disk size limit
-## - Extended partitions for >4 partitions
+- 4 primary partitions maximum
+- 2TB disk size limit
+- Extended partitions for >4 partitions
 ```
 
 ## 다른 도구와 연동
@@ -19900,10 +19896,10 @@ fdisk -l
 
 ```bash
 ## Plan your partition scheme:
-## - Root partition (/)
-## - Swap partition
-## - Home partition (/home)
-## - Boot partition (/boot) if needed
+- Root partition (/)
+- Swap partition
+- Home partition (/home)
+- Boot partition (/boot) if needed
 ```
 
 ### 정렬 고려 {.unnumbered}
@@ -20274,7 +20270,7 @@ column -t -s, data.txt
 
 **`nmtui`**(Network Manager Text User Interface) 명령은 Linux에서 네트워크 연결을 구성하는 **메뉴 기반 도구**인다. 복잡한 명령줄 옵션을 사용하지 않고 Wi-Fi, 이더넷, 호스트 이름 등의 네트워크 설정을 관리할 수 있는 간단한 텍스트 인터페이스를 제공한다.
 
-### 🔹 기능
+🔹 기능
 
 `nmtui`로 다음 작업을 수행할 수 있다.
 
@@ -20452,7 +20448,7 @@ DNS: 8...
 - 작업 예약(`crontab`)
 - 셸 스크립팅 도우미(`xargs`, `nohup`)
 
-## Linux 여정은 계속된다
+Linux 여정은 계속된다
 
 이 명령들을 익히는 것은 Linux 여정의 시작일 뿐이다. 학습을 이어가기 위한 몇 가지 권장 사항은 다음과 같다.
 
@@ -20479,7 +20475,7 @@ DNS: 8...
 - **온라인 커뮤니티**: 포럼, Discord 서버, Reddit 커뮤니티 참여
 - **실습 환경**: 가상 머신을 설정하거나 클라우드 플랫폼을 사용해 직접 실습
 
-## 마지막으로
+마지막으로
 
 Linux는 단순한 운영 체제 그 이상이다. 개방적인 협업, 지속적인 학습, 기술을 통한 역량 강화를 지향하는 철학이기도 한다. 이 eBook에서 배운 명령은 기술 분야의 경력 전반에 걸쳐 도움이 될 도구다.
 

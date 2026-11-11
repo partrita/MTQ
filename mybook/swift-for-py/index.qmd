@@ -77,7 +77,7 @@ lang: ko
 ### Swift란?
 Swift는 macOS, iOS, watchOS, tvOS 등을 위한 강력하고 직관적인 프로그래밍 언어이다. Apple Inc.와 오픈 소스 커뮤니티가 개발하고 있다.
 
-### 왜 Swift인가?
+왜 Swift인가?
 
 - **안전성:** 흔한 프로그래밍 오류 부류를 아예 제거하도록 설계되었다.
 - **빠른 속도:** C++에 필적하는 성능을 낸다.
@@ -112,7 +112,7 @@ Xcode Playgrounds는 Swift 코드를 실험하고 결과를 바로 확인해 볼
 
 **파이썬:**
 ```python
-# 이것은 주석입니다
+이것은 주석입니다
 name = "Alice"
 if name == "Alice":
     print("Hello, Alice!") # 들여쓰기가 중요합니다
@@ -136,8 +136,8 @@ if name == "Alice" { // 범위를 위한 중괄호
 
 **파이썬:**
 ```python
-## 파이썬에는 언어 키워드에 의한 엄격한 상수 개념이 없습니다
-## 관례적으로 대문자 이름은 상수를 의미합니다
+파이썬에는 언어 키워드에 의한 엄격한 상수 개념이 없습니다
+관례적으로 대문자 이름은 상수를 의미합니다
 MAX_CONNECTIONS = 10
 name = "Bob"
 name = "Charlie"
@@ -401,7 +401,7 @@ print("현재 사용자: \(currentName)")
 
 ## 연산자 {.unnumbered}
 
-### 산술, 비교, 논리 연산자
+산술, 비교, 논리 연산자
 연산자는 파이썬과 매우 비슷하다.
 
 - **산술:** `+`, `-`, `*`, `/`, `%` (나머지)
@@ -443,7 +443,7 @@ name = None
 username = name or "Guest" # "Guest"
 
 def get_setting(key, default_value):
-    # ... 설정 가져오기 ...
+# ... 설정 가져오기 ...
     if setting_value is None:
         return default_value
     return setting_value
@@ -553,12 +553,12 @@ else:
 
 ## 파이썬 3.10+ match-case
 ## match value:
-##     case "a":
-##         print("A입니다")
-##     case "b":
-##         print("B입니다")
-##     case _:
-##         print("다른 것입니다")
+## case "a":
+## print("A입니다")
+## case "b":
+## print("B입니다")
+## case _:
+## print("다른 것입니다")
 ```
 
 **Swift:**
@@ -674,10 +674,10 @@ while count < 5 {
 ## 직접적인 repeat-while은 없으며 종종 에뮬레이트됩니다:
 ## count = 0
 ## while True:
-##     print(count)
-##     count += 1
-##     if not (count < 5):
-##         break
+## print(count)
+## count += 1
+## if not (count < 5):
+## break
 ```
 
 **Swift:**
@@ -1636,7 +1636,7 @@ class Circle(Drawable):
     def draw(self):
         print("원 그리기")
 
-## d = Drawable() # 오류: 추상 클래스를 인스턴스화할 수 없습니다
+d = Drawable() # 오류: 추상 클래스를 인스턴스화할 수 없습니다
 c = Circle()
 c.draw()
 ```
@@ -1899,12 +1899,12 @@ func fetchData() -> Data? { // 데이터를 반환하거나 nil을 반환할 수
 ```python
 ## file = None
 ## try:
-##     file = open("myfile.txt", "r")
-##     # 파일 처리
+## file = open("myfile.txt", "r")
+## 파일 처리
 ## finally:
-##     if file:
-##         file.close()
-##         print("finally에서 파일 닫힘.")
+## if file:
+## file.close()
+## print("finally에서 파일 닫힘.")
 ```
 
 **Swift:**
@@ -2302,7 +2302,7 @@ Swift의 `URLSession`은 `requests`만큼 코드가 짧지는 않지만 강타�
 ```python
 def clamped_property(min_val, max_val):
     def decorator(cls):
-        # 내부 구조 상 프록시 속성을 구현... (생략)
+# 내부 구조 상 프록시 속성을 구현... (생략)
         return cls
     return decorator
 
@@ -2578,7 +2578,7 @@ Swift의 방식은 구조체의 프로퍼티(`name`, `count`)를 기반으로 �
 
 파이썬 개발자들은 `unittest`, `pytest` 같은 도구로 강력한 테스트 환경을 경험해 왔다. Swift는 애플 생태계에서 전통적으로 XCTest를 써 왔지만 오픈 소스 **Swift Testing** 패키지가 공개되면서 테스트 작성법이 파이썬의 `pytest`처럼 한결 간결해졌다.
 
-### unittest에서 XCTest로
+unittest에서 XCTest로
 
 **파이썬 (`unittest`):**
 ```python
@@ -2610,7 +2610,7 @@ final class MathTests: XCTestCase {
 
 클래스 기반의 이러한 접근은 각 파일마다 중복되는 틀(Boilerplate)이 있었다.
 
-### pytest에서 Swift Testing으로
+pytest에서 Swift Testing으로
 
 **파이썬 (`pytest`):**
 ```python
@@ -5737,7 +5737,7 @@ paragraph = nil
 
 ***
 
-## 부록 2: Swift 연습 문제
+부록 2: Swift 연습 문제
 
 이 섹션에는 배운 개념을 직접 코딩해 볼 수 있는 연습 문제 코드가 들어 있다.
 

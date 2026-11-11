@@ -10,7 +10,7 @@ lang: ko
 
 다른 언어에 익숙한 프로그래머는 C++나 자바, 혹은 가장 잘 아는 언어인 것처럼 파이썬을 쓰려고 할 때가 있어요. 이제 막 시작한 프로그래머는 파이썬으로 표현할 수 있는 방대한 개념들에 아직 익숙해지는 중일 수도 있어요. 파이썬에서 가장 흔한 작업을 가장 좋은—파이썬다운—방법으로 하는 법을 아는 게 중요해요. 이런 패턴들은 앞으로 작성하는 모든 프로그램에 영향을 줄 거예요.
 
-### 아이템 1: 사용 중인 파이썬 버전을 알아두세요
+아이템 1: 사용 중인 파이썬 버전을 알아두세요
 
 이 책의 예제 코드는 대부분 Python 3.13(2024년 10월 출시) 기준이에요. 언어 변천사에 대한 배경 설명을 위해 가끔 예전 Python 3 버전을 언급하기도 해요.
 
@@ -57,7 +57,7 @@ releaselevel='final', serial=0)
 
 :::
 
-### 아이템 2: PEP 8 스타일 가이드를 따르세요
+아이템 2: PEP 8 스타일 가이드를 따르세요
 
 Python Enhancement Proposal #8, 일명 PEP 8은 파이썬 코드를 어떻게 포맷할지에 대한 스타일 가이드예요. 문법만 맞으면 원하는 방식으로 파이썬 코드를 써도 돼요. 하지만 일관된 스타일을 쓰면 코드가 더 친근해지고 읽기 쉬워져요. 더 큰 파이썬 커뮤니티의 다른 프로그래머들과 공통 스타일을 공유하면 프로젝트 협업이 수월해져요. 코드를 읽을 사람이 나뿐이라고 해도 스타일 가이드를 따르면 나중에 변경하기가 쉬워지고 흔한 실수도 많이 피할 수 있어요.
 
@@ -133,7 +133,7 @@ All done!
 
 :::
 
-### 아이템 3: 파이썬이 컴파일 시점에 오류를 찾아줄 거라 기대하지 마세요
+아이템 3: 파이썬이 컴파일 시점에 오류를 찾아줄 거라 기대하지 마세요
 
 파이썬 프로그램을 불러와 실행을 준비할 때 소스 코드는 추상 구문 트리로 파싱되고 명백한 구조적 오류가 있는지 검사돼요. 예를 들어 잘못 만든 `if` 문은 뭐가 잘못됐는지 알려주는 `SyntaxError` 예외를 발생시켜요.
 
@@ -234,7 +234,7 @@ ZeroDivisionError: division by zero
 
 :::
 
-### 아이템 4: 복잡한 표현식 대신 헬퍼 함수를 작성하세요
+아이템 4: 복잡한 표현식 대신 헬퍼 함수를 작성하세요
 
 파이썬의 간결한 문법 덕분에 많은 로직을 담은 한 줄짜리 표현식을 쓰기가 쉬워요. 예를 들어 웹사이트 URL에서 쿼리 문자열을 디코딩하고 싶다고 해볼게요. 여기서는 각 쿼리 문자열 매개변수가 정수 값을 나타내요.
 
@@ -337,7 +337,7 @@ green = get_first_int(my_values, "green")
 
 :::
 
-### 아이템 5: 인덱싱보다 다중 대입 언패킹을 선호하세요
+아이템 5: 인덱싱보다 다중 대입 언패킹을 선호하세요
 
 파이썬에는 불변의 순서 있는 값 시퀀스를 만드는 데 쓸 수 있는 `tuple` 타입이 내장되어 있어요(비슷한 자료구조는 아이템 56: "불변 객체를 만들 때는 `dataclasses`를 선호하세요" 참고). 튜플은 비어 있을 수도 있고 원소를 하나만 담을 수도 있어요.
 
@@ -499,7 +499,7 @@ for rank, (name, calories) in enumerate(snacks, 1):
 
 :::
 
-### 아이템 6: 단일 원소 튜플은 항상 괄호로 감싸세요
+아이템 6: 단일 원소 튜플은 항상 괄호로 감싸세요
 
 파이썬에는 튜플 리터럴 값이 네 가지가 있어요. 첫 번째는 여는 괄호와 닫는 괄호 안에 원소를 쉼표로 구분해 나열한 형태예요.
 
@@ -639,7 +639,7 @@ assert a4 == a6
 
 :::
 
-### 아이템 7: 간단한 인라인 로직에는 조건 표현식을 고려하세요
+아이템 7: 간단한 인라인 로직에는 조건 표현식을 고려하세요
 
 파이썬 `if` 문은 표현식이 아니에요. `if` 블록, `elif` 블록, `else` 블록마다 여러 추가 문장이 들어갈 수 있어요. 블록 묶음 전체가 변수에 저장하거나 함수 인수로 전달할 수 있는 단일 값으로 평가되지 않아요.
 
@@ -826,7 +826,7 @@ v = dict(
 
 :::
 
-### 아이템 8: 대입 표현식으로 반복을 방지하세요
+아이템 8: 대입 표현식으로 반복을 방지하세요
 
 대입 표현식—*월러스 연산자*라고도 해요—은 파이썬 3.8에 새로 들어온 문법 기능으로, 코드 중복을 일으키는 언어의 오랜 문제를 해결해줘요. 보통 대입문은 `a = b`라고 쓰고 "a 이퀄 b"라고 읽지만, 이런 대입은 `a := b`라고 쓰고 "a *월러스* b"라고 읽어요(`:=`가 눈알 한 쌍과 엄니처럼 생겼기 때문이에요).
 
@@ -1062,7 +1062,7 @@ while fresh_fruit := pick_fruit():  # Changed
 
 :::
 
-### 아이템 9: 흐름 제어에서 디스트럭처링에는 `match`를 고려하고, `if` 문으로 충분하면 피하세요
+아이템 9: 흐름 제어에서 디스트럭처링에는 `match`를 고려하고, `if` 문으로 충분하면 피하세요
 
 `match` 문은 버전 3.10에 들어온 비교적 새로운 파이썬 기능이에요. 워낙 다양한 기능을 담고 있어서 `match` 학습 곡선이 가팔라요. 컴프리헨션의 독특한 사용감처럼 파이썬 안에 내장된 또 하나의 미니 언어처럼 느껴져요(아이템 40: "`map`과 `filter` 대신 컴프리헨션을 사용하세요"와 아이템 44: "큰 리스트 컴프리헨션에는 제너레이터 표현식을 고려하세요" 참고). 언뜻 보면 `match` 문은 다른 프로그래밍 언어의 switch 문과 비슷한, 오랫동안 바라던 동작을 파이썬에 제공하는 것처럼 보여요(다른 접근법은 아이템 8: "대입 표현식으로 반복을 방지하세요" 참고).
 
@@ -1172,10 +1172,10 @@ def take_unpacking_action(light):
     try:
         (RED,) = (light,)
     except TypeError:
-        # Did not match
+# Did not match
         ...
     else:
-        # Matched
+# Matched
         print(f"{RED=}, {light=}")
 ```
 
@@ -1205,7 +1205,7 @@ def take_enum_action(light):
 
 이제 코드는 기대대로 동작하지만, 위 `take_action` 함수의 더 단순한 `if` 버전보다 `match` 버전의 이득이 잘 안 보여요. `if` 버전은 9줄이고 `match` 버전은 10줄이에요. `if` 버전은 각 분기마다 `light ==` 접두사를 반복하지만, `match` 버전은 상수마다 `ColorEnum.` 접두사를 반복해요. 표면적으로는 비등해 보여요. 설득력 있는 기능도 아닌데 파이썬은 왜 `match` 문을 언어에 추가한 걸까요?
 
-#### `match`는 디스트럭처링을 위한 것이에요
+`match`는 디스트럭처링을 위한 것이에요
 
 *디스트럭처링*은 최소한의 문법으로 복잡하게 중첩된 자료구조에서 구성 요소를 꺼내는 프로그래밍 언어 기법이에요. 파이썬 프로그래머는 생각도 하지 않고 늘 디스트럭처링을 써요. 예를 들어 이 `for` 루프에서 `enumerate` 반환값에 `index, value`를 다중 대입하는 게 디스트럭처링의 한 형태예요(아이템 17: "`range`보다 `enumerate`를 선호하세요" 참고).
 
@@ -1390,7 +1390,7 @@ Record2: BusinessCustomer(company_name="Steve's Painting Co.")
 
 `bytes`와 `str` 타입을 써서 파이썬 프로그램은 사람 언어 텍스트와 이어지고, 로우 레벨 바이너리 데이터 형식을 다루고, 입출력(I/O)을 수행하며 바깥 세상과 소통해요. 파이썬은 이런 문자 타입, 리스트, 다른 타입들을 추상화해서 인덱싱, 부분 시퀀싱 등에 공통 인터페이스를 제공해요. 이런 기능은 정말 필수적이라서 거의 모든 프로그램에서 보게 돼요.
 
-### 아이템 10: `bytes`와 `str`의 차이점을 아세요
+아이템 10: `bytes`와 `str`의 차이점을 아세요
 
 파이썬에는 문자 데이터 시퀀스를 나타내는 두 타입이 있어요: `bytes`와 `str`. `bytes` 인스턴스는 로우(raw) 부호 없는 8비트 값을 담아요(종종 ASCII 인코딩으로 표시돼요):
 
@@ -1631,7 +1631,7 @@ assert data == "ñòóôõ"
 
 :::
 
-### 아이템 11: C 스타일 포맷 문자열과 `str.format`보다 보간 f-스트링을 선호하세요
+아이템 11: C 스타일 포맷 문자열과 `str.format`보다 보간 f-스트링을 선호하세요
 
 문자열은 파이썬 코드베이스 곳곳에 있어요. 사용자 인터페이스와 명령줄 유틸리티에 메시지를 보여줄 때 써요. 파일과 소켓에 데이터를 쓸 때 써요. `Exception` 세부 정보에 뭐가 잘못됐는지 적을 때 써요(아이템 88: "트레이스백을 명확히 하려면 예외를 명시적으로 체이닝하세요" 참고). 로깅과 디버깅할 때 써요(아이템 12: "객체를 출력할 때 `repr`과 `str`의 차이점을 이해하세요" 참고).
 
@@ -2075,7 +2075,7 @@ f-스트링이 주는 표현력, 간결함, 명확함 조합 덕분에 파이썬
 
 :::
 
-### 아이템 12: 객체를 출력할 때 `repr`과 `str`의 차이점을 이해하세요
+아이템 12: 객체를 출력할 때 `repr`과 `str`의 차이점을 이해하세요
 
 파이썬 프로그램을 디버깅할 때는 `print` 함수와 포맷 문자열을 쓰거나(아이템 11: "C 스타일 포맷 문자열과 `str.format`보다 보간 f-스트링을 선호하세요" 참고) `logging` 내장 모듈로 출력하는 것만으로도 놀랍게 멀리 가요. 파이썬 객체 내부는 보통 일반 속성으로 쉽게 볼 수 있어요(아이템 55: "비공개 속성보다 공개 속성을 선호하세요" 참고). 실행 중에 프로그램 상태가 어떻게 바뀌는지 보려고 `print`를 호출하고 어디서 잘못됐는지 추론하기만 하면 돼요(더 고급 접근은 아이템 114: "`pdb`로 대화형 디버깅을 고려하세요" 참고).
 
@@ -2248,7 +2248,7 @@ Printable:      BetterClass(2, 'bar')
 
 :::
 
-### 아이템 13: 암시적보다 명시적 문자열 연결을 선호하세요, 특히 리스트에서는
+아이템 13: 암시적보다 명시적 문자열 연결을 선호하세요, 특히 리스트에서는
 
 파이썬은 초기에 C에서 숫자 리터럴 표기법이나 `printf`류 포맷 문자열 같은 속성을 많이 물려받았어요. 그 뒤로 언어는 상당히 발전했어요; 예를 들어 8진수는 이제 `0`만이 아니라 `0o` 접두사가 필요하고, 새 문자열 보간 문법이 훨씬 뛰어나요(아이템 11: "C 스타일 포맷 문자열과 `str.format`보다 보간 f-스트링을 선호하세요" 참고). 하지만 파이썬에 남은 C류 기능 하나가 암시적 문자열 연결이에요. 그래서 인접한 표현식인 문자열 리터럴은 사이에 중위 `+` 연산자 없이 이어붙여져요. 따라서 이 두 대입은 실제로 같은 일을 해요:
 
@@ -2415,7 +2415,7 @@ value2 = MyData(123,
 
 :::
 
-### 아이템 14: 시퀀스를 슬라이싱하는 방법을 아세요
+아이템 14: 시퀀스를 슬라이싱하는 방법을 아세요
 
 파이썬에는 시퀀스를 조각으로 나누는 *슬라이싱* 문법이 있어요. 슬라이싱을 쓰면 시퀀스 항목 일부에 아주 적은 노력으로 접근할 수 있어요. 가장 단순한 쓰임은 내장 타입인 `list`, `tuple`, `str`, `bytes`예요. 슬라이싱은 `__getitem__`과 `__setitem__` 특수 메서드를 구현한 모든 파이썬 클래스로 확장할 수 있어요(아이템 57: "커스텀 컨테이너 타입에는 `collections.abc` 클래스에서 상속하세요" 참고).
 
@@ -2554,7 +2554,7 @@ After b  [101, 102, 103]
 
 :::
 
-### 아이템 15: 하나의 표현식에서 스트라이딩과 슬라이싱을 함께 쓰지 마세요
+아이템 15: 하나의 표현식에서 스트라이딩과 슬라이싱을 함께 쓰지 마세요
 
 기본 슬라이싱에 더해서(아이템 14: "시퀀스를 슬라이싱하는 방법을 아세요" 참고) 파이썬에는 `somelist[start:end:stride]` 형태의 슬라이스 *스트라이드* 전용 문법이 있어요. 시퀀스를 슬라이싱할 때 매 *n*번째 항목을 가져올 수 있어요. 예를 들어 스트라이드로 리스트에서 짝수·홀수 순서 위치별로 묶기 쉬워요:
 
@@ -2650,7 +2650,7 @@ z = y[1:-1]  # ["c", "e"]
 
 :::
 
-### 아이템 16: 슬라이싱보다 캐치올 언패킹을 선호하세요
+아이템 16: 슬라이싱보다 캐치올 언패킹을 선호하세요
 
 기본 언패킹의 한계 하나는(아이템 5: "인덱싱보다 다중 대입 언패킹을 선호하세요" 참고) 언패킹하는 시퀀스 길이를 미리 알아야 한다는 거예요. 예를 들어 여기서는 중고차 매장에서 매입하는 차 연식 리스트가 있어요. 기본 언패킹으로 리스트 앞 두 항목을 가져오려고 하면 런타임에 예외가 나요:
 
@@ -2816,7 +2816,7 @@ Row count:  200
 
 파이썬은 이터레이터도 지원해서, 임의의 데이터 스트림을 더 함수형 스타일로 처리할 수 있어요. 순차 데이터가 어떻게 저장됐는지 직접 다루는 대신, 세부 사항을 숨겨주는 공통 추상화인 이터레이터를 쓸 수 있어요. 이터레이터를 쓰면 프로그램이 더 효율적이고 리팩터링하기 쉬워지며, 크기에 상관없이 데이터를 처리할 수 있어요. 파이썬에는 이터레이터끼리 조합하고 제너레이터로 동작을 완전히 커스터마이즈하는 기능도 있어요 (Chapter 6, “컴프리헨션과 제너레이터” 참고).
 
-### 아이템 17: `range`보다 `enumerate`를 선호하세요
+아이템 17: `range`보다 `enumerate`를 선호하세요
 
 내장 함수 `range`는 정수 시퀀스를 순회하는 루프에 유용해요. 예를 들어, 여기서는 각 비트 위치마다 동전을 던져서 32비트 난수를 만들어 볼게요:
 
@@ -2903,7 +2903,7 @@ for i, flavor in enumerate(flavor_list, 1):
 
 :::
 
-### 아이템 18: 이터레이터를 병렬로 처리할 때 `zip`을 사용하세요
+아이템 18: 이터레이터를 병렬로 처리할 때 `zip`을 사용하세요
 
 파이썬에서는 서로 관련된 객체들이 담긴 리스트 여러 개를 다루는 경우가 자주 있어요. 리스트 컴프리헨션을 쓰면 원본 리스트에 표현식을 적용해 파생 리스트를 쉽게 만들 수 있어요 (아이템 40: “`map`과 `filter` 대신 컴프리헨션을 사용하세요” 참고). 예를 들어, 여기서는 이름 리스트를 가져와서 각 이름의 글자 수를 담은 리스트를 만들어요:
 
@@ -2999,7 +2999,7 @@ ValueError: zip() argument 2 is shorter than argument 1
 
 :::
 
-### 아이템 19: `for`와 `while` 루프 뒤의 `else` 블록을 피하세요
+아이템 19: `for`와 `while` 루프 뒤의 `else` 블록을 피하세요
 
 파이썬 루프에는 대부분의 다른 프로그래밍 언어에 없는 추가 기능이 있어요. 루프의 반복 내부 블록 바로 뒤에 `else` 블록을 둘 수 있어요:
 
@@ -3119,7 +3119,7 @@ assert not coprime_alternate(3, 6)
 
 :::
 
-### 아이템 20: 루프가 끝난 뒤에 `for` 루프 변수를 절대 사용하지 마세요
+아이템 20: 루프가 끝난 뒤에 `for` 루프 변수를 절대 사용하지 마세요
 
 파이썬에서 `for` 루프를 쓰다 보면, 순회용으로 만든 변수가 루프가 끝난 뒤에도 계속 남아 있다는 걸 알 수 있어요:
 
@@ -3199,7 +3199,7 @@ NameError: name 'i' is not defined
 
 :::
 
-### 아이템 21: 인수를 순회할 때는 방어적으로 코딩하세요
+아이템 21: 인수를 순회할 때는 방어적으로 코딩하세요
 
 함수가 파라미터로 객체의 `list`를 받을 때, 그 `list`를 여러 번 순회해야 하는 경우가 자주 있어요. 예를 들어, 미국 텍사스주의 관광 통계를 분석하고 싶다고 해볼게요. 데이터셋이 각 도시 방문자 수(연간 백만 명 단위)라고 상상해 보세요. 각 도시가 전체 관광에서 차지하는 비율을 구하고 싶어요.
 
@@ -3407,7 +3407,7 @@ TypeError: Must supply a container
 
 :::
 
-### 아이템 22: 순회 중에 컨테이너를 절대 수정하지 마세요; 복사본이나 캐시를 사용하세요
+아이템 22: 순회 중에 컨테이너를 절대 수정하지 마세요; 복사본이나 캐시를 사용하세요
 
 파이썬에는 놀라운 순회 동작 때문에 생기는 함정이 많아요 (또 다른 흔한 상황은 아이템 21: “인수를 순회할 때는 방어적으로 코딩하세요” 참고). 예를 들어, 딕셔너리를 순회하면서 새 아이템을 추가하면 파이썬은 런타임 예외를 발생시켜요:
 
@@ -3654,7 +3654,7 @@ print(my_dict)
 
 :::
 
-### 아이템 23: 효율적인 단락 평가 로직을 위해 `any`와 `all`에 이터레이터를 전달하세요
+아이템 23: 효율적인 단락 평가 로직을 위해 `any`와 `all`에 이터레이터를 전달하세요
 
 파이썬은 논리적 추론을 하는 프로그램을 만들기에 좋은 언어예요. 예를 들어, 동전 던지기의 특성을 분석해 본다고 상상해 보세요. 호출될 때마다 랜덤한 동전 던지기 결과—앞면이면 `True`, 뒷면이면 `False`—를 반환하는 함수를 정의할 수 있어요:
 
@@ -3795,7 +3795,7 @@ for a in (True, False):
 
 :::
 
-### 아이템 24: 이터레이터와 제너레이터 작업에는 `itertools`를 고려하세요
+아이템 24: 이터레이터와 제너레이터 작업에는 `itertools`를 고려하세요
 
 내장 모듈 `itertools`에는 이터레이터를 정리하고 상호작용하는 데 유용한 함수가 많이 들어 있어요 (배경 설명은 아이템 43: “리스트를 반환하는 대신 제너레이터를 고려하세요”와 아이템 21: “인수를 순회할 때는 방어적으로 코딩하세요” 참고):
 
@@ -4110,7 +4110,7 @@ print(list(it))
 
 딕셔너리는 항목을 추가하고 삭제할 때 상수 시간(평균) 성능을 보여줘요. 단순한 리스트만으로는 도저히 따라갈 수 없는 수준이죠. 그래서 파이썬이 객체 지향 기능을 구현하는 핵심 자료구조로 딕셔너리를 쓰는 것도 충분히 이해가 돼요. 파이썬에는 또 다른 언어의 단순한 해시 테이블 타입에서 기대하는 수준을 넘어서 딕셔너리를 더 강력하게 만들어 주는 특별한 문법과 관련 내장 모듈도 있어요.
 
-### 아이템 25: 딕셔너리 삽입 순서를 믿을 때는 조심하세요
+아이템 25: 딕셔너리 삽입 순서를 믿을 때는 조심하세요
 
 파이썬 3.5 이하 버전에서는 딕셔너리 인스턴스를 순회하면 키가 임의의 순서로 반환됐어요. 순회 순서가 항목을 원래 삽입한 순서와 일치하지 않았다는 뜻이죠. 예를 들어 여기서는 파이썬 3.5 버전으로 동물 이름에서 새끼 이름으로 매핑하는 딕셔너리를 만들어 볼게요.
 
@@ -5020,7 +5020,7 @@ print(albert.average_grade())
 
 파이썬의 함수는 프로그래머의 삶을 편하게 해주는 다양한 추가 기능을 갖추고 있어요. 일부는 다른 프로그래밍 언어의 기능과 비슷하지만, 상당수는 파이썬에만 있는 고유한 기능이에요. 이런 추가 기능 덕분에 함수의 인터페이스를 더 명확하게 만들 수 있어요. 불필요한 잡음을 없애고 호출자의 의도를 더 잘 드러낼 수 있어요. 찾기 어려운 미묘한 버그도 크게 줄일 수 있어요.
 
-### 아이템 30: 함수 인자는 변경될 수 있다는 점을 알아두세요
+아이템 30: 함수 인자는 변경될 수 있다는 점을 알아두세요
 
 파이썬은 포인터 타입을 지원하지 않아요(C와 연동하는 경우를 제외하고요; 아이템 95: "`ctypes`로 네이티브 라이브러리와 빠르게 연동하는 방법을 고려하세요" 참고). 하지만 함수에 전달되는 인자는 모두 참조로 전달돼요. 정수나 문자열 같은 단순 타입은 불변 객체라서 값으로 전달되는 것처럼 보여요. 하지만 더 복잡한 객체는 호출자의 의도와 상관없이 다른 함수에 전달될 때마다 수정될 수 있어요.
 
@@ -5115,7 +5115,7 @@ print(x.value)
 
 :::
 
-### 아이템 31: 세 개가 넘는 변수의 언패킹을 호출자에게 요구하는 대신 전용 결과 객체를 반환하세요
+아이템 31: 세 개가 넘는 변수의 언패킹을 호출자에게 요구하는 대신 전용 결과 객체를 반환하세요
 
 언패킹 문법의 효과 중 하나는(아이템 5: "인덱싱보다 다중 대입 언패킹을 선호하세요" 참고) 파이썬 함수가 겉보기엔 하나가 넘는 값을 반환할 수 있다는 점이에요. 예를 들어 악어 개체군의 다양한 통계를 구한다고 해볼게요. 길이 리스트가 주어지면 개체군의 최소 길이와 최대 길이를 계산해야 해요. 여기서는 두 값을 반환하는 것처럼 보이는 하나의 함수로 처리해요:
 
@@ -5273,7 +5273,7 @@ count=10)
 
 :::
 
-### 아이템 32: `None`을 반환하는 대신 예외를 발생시키는 걸 선호하세요
+아이템 32: `None`을 반환하는 대신 예외를 발생시키는 걸 선호하세요
 
 유틸리티 함수를 작성할 때 파이썬 프로그래머는 반환 값 `None`에 특별한 의미를 부여하고 싶어져요. 어떤 경우에는 그게 타당해 보이기도 해요(아이템 26: "딕셔너리 키가 없을 때는 `in`과 `KeyError`보다 `get`을 선호하세요" 참고). 예를 들어 한 숫자를 다른 숫자로 나누는 헬퍼 함수가 필요하다고 해볼게요. 0으로 나누는 경우 결과가 정의되지 않으니 `None`을 반환하는 게 자연스러워 보여요:
 
@@ -5397,7 +5397,7 @@ Success: no issues found in 1 source file
 
 :::
 
-### 아이템 33: 클로저가 변수 범위와 `nonlocal`에 미치는 영향을 알아두세요
+아이템 33: 클로저가 변수 범위와 `nonlocal`에 미치는 영향을 알아두세요
 
 숫자 리스트를 정렬하되 한 숫자 그룹을 우선해서 맨 앞에 오게 하고 싶다고 상상해 보세요. 이 패턴은 사용자 인터페이스를 렌더링할 때 중요한 메시지나 예외적인 이벤트를 다른 항목보다 먼저 보여주고 싶을 때 유용해요. 흔한 방법은 리스트의 `sort` 메서드에 `key` 인자로 헬퍼 함수를 전달하는 거예요(자세한 내용은 아이템 100: "`key` 매개변수로 복잡한 기준에 따라 정렬하세요" 참고). 헬퍼의 반환 값은 리스트의 각 항목을 정렬하는 기준 값으로 사용돼요. 헬퍼는 주어진 항목이 중요한 그룹에 속하는지 확인하고 그에 따라 정렬 값을 다르게 할 수 있어요:
 
@@ -5570,7 +5570,7 @@ Found: True
 
 :::
 
-### 아이템 34: 가변 위치 인수로 시각적 잡음을 줄이세요
+아이템 34: 가변 위치 인수로 시각적 잡음을 줄이세요
 
 가변 개수의 위치 인수를 받으면 함수 호출이 더 명확해지고 시각적 잡음이 줄어들 수 있어요. 이런 위치 인수는 흔히 줄여서 *varargs* 또는 *star args*라고 부르는데, 매개변수의 관례적인 이름인 `*args`에서 따온 말이에요. 예를 들어 디버깅 정보를 로그로 남기고 싶다고 해볼게요. 인수 개수가 고정돼 있으면 메시지와 값 리스트를 받는 함수가 필요해요:
 
@@ -5672,7 +5672,7 @@ Favorite numbers - 7: 33
 
 :::
 
-### 아이템 35: 키워드 인수로 선택적 동작을 제공하세요
+아이템 35: 키워드 인수로 선택적 동작을 제공하세요
 
 대부분의 다른 프로그래밍 언어에서처럼 파이썬에서도 함수를 호출할 때 위치로 인수를 전달할 수 있어요:
 
@@ -5853,7 +5853,7 @@ pounds_per_hour = flow_rate(weight_diff, time_diff, 3600, 2.2)
 
 :::
 
-### 아이템 36: 동적 기본 인수를 지정하려고 `None`과 독스트링을 사용하세요
+아이템 36: 동적 기본 인수를 지정하려고 `None`과 독스트링을 사용하세요
 
 키워드 인수의 기본값으로 함수 호출, 새로 만든 객체, 컨테이너 타입(빈 리스트 같은 것)을 사용하면 도움이 될 때가 있어요. 예를 들어 로그 이벤트가 발생한 시각을 표시한 로깅 메시지를 출력하고 싶다고 해볼게요. 기본 경우에는 함수가 호출된 시각을 메시지에 포함하고 싶어요. 함수가 호출될 때마다 `when` 키워드 인수의 기본값이 다시 평가된다고 가정하고 다음과 같은 방식을 시도할 수 있어요:
 
@@ -5996,7 +5996,7 @@ def log_typed(message: str, when: datetime | None = None) ->
 
 :::
 
-### 아이템 37: 키워드 전용 인수와 위치 전용 인수로 명확성을 강제하세요
+아이템 37: 키워드 전용 인수와 위치 전용 인수로 명확성을 강제하세요
 
 키워드로 인수를 전달하는 건 파이썬 함수의 강력한 기능이에요(아이템 35: "키워드 인수로 선택적 동작을 제공하세요" 참고). 키워드 인수를 사용하면 많은 경우 코드를 처음 읽는 사람에게 명확한 유연한 함수를 작성할 수 있어요.
 
@@ -6235,7 +6235,7 @@ print(result)
 
 :::
 
-### 아이템 38: `functools.wraps`로 함수 데코레이터를 정의하세요
+아이템 38: `functools.wraps`로 함수 데코레이터를 정의하세요
 
 파이썬에는 함수에 적용할 수 있는 *데코레이터*용 특수 문법이 있어요. 데코레이터는 감싸는 함수가 호출될 때마다 그 전후에 추가 코드를 실행할 수 있어요. 그래서 데코레이터는 입력 인수, 반환 값, 발생한 예외에 접근하고 수정할 수 있어요. 이런 기능은 의미를 강제하거나, 디버깅하거나, 함수를 등록하는 등 다양한 경우에 유용해요.
 
@@ -6372,7 +6372,7 @@ x94\x8c\tfibonacci\x94\x93\x94.'
 
 :::
 
-### 아이템 39: 글루 함수에는 `lambda` 표현식보다 `functools.partial`을 선호하세요
+아이템 39: 글루 함수에는 `lambda` 표현식보다 `functools.partial`을 선호하세요
 
 파이썬의 많은 API는 인터페이스의 일부로 단순한 함수를 받아요(아이템 100: "`key` 매개변수로 복잡한 기준에 따라 정렬하세요", 아이템 27: "내부 상태의 빠진 항목을 처리하려고 `setdefault`보다 `defaultdict`를 선호하세요", 아이템 24: "이터레이터와 제너레이터를 다룰 때는 `itertools`를 고려하세요" 참고). 하지만 이런 인터페이스는 필요에 못 미쳐서 마찰을 일으킬 수 있어요.
 
@@ -6501,7 +6501,7 @@ print(log_sum_e.args, log_sum_e.keywords, log_sum_e.func)
 
 이런 처리 방식은 *제너레이터*를 통해 함수로도 확장되는데, 함수가 값들의 스트림을 점진적으로 반환할 수 있게 해줘요. 제너레이터 함수를 호출한 결과는 이터레이터가 어울리는 곳이면 어디서든 쓸 수 있어요(예: `for` 루프, 별표 언패킹 표현식). 제너레이터는 성능을 높이고, 메모리 사용량을 줄이며, 가독성을 높이고, 구현을 단순화할 수 있어요.
 
-### 아이템 40: `map`과 `filter` 대신 컴프리헨션을 사용하세요
+아이템 40: `map`과 `filter` 대신 컴프리헨션을 사용하세요
 
 파이썬은 다른 시퀀스나 이터러블로부터 새 리스트를 만들어내는 간결한 문법을 제공해요. 이런 표현식을 *리스트 컴프리헨션*이라고 해요. 예를 들어, 리스트에 있는 각 숫자의 제곱을 구하고 싶다고 해볼게요. 여기에서는 간단한 `for` 루프를 사용해서 이렇게 해요:
 
@@ -6590,7 +6590,7 @@ alt_set = set(
 
 :::
 
-### 아이템 41: 컴프리헨션에서 제어 하위 표현식은 두 개를 넘지 마세요
+아이템 41: 컴프리헨션에서 제어 하위 표현식은 두 개를 넘지 마세요
 
 기본적인 사용법(아이템 40: “`map`과 `filter` 대신 컴프리헨션을 사용하세요” 참고)을 넘어서, 컴프리헨션은 여러 단계의 루프도 지원해요. 예를 들어, 행렬(다른 리스트 인스턴스들을 담고 있는 리스트)을 모든 항목이 담긴 하나의 평평한 리스트로 펼치고 싶다고 해볼게요. 여기에서는 두 개의 `for` 하위 표현식을 넣은 리스트 컴프리헨션으로 이렇게 해요. 이런 하위 표현식들은 주어진 순서대로 왼쪽에서 오른쪽으로 실행돼요:
 
@@ -6673,7 +6673,7 @@ print(filtered)
 
 :::
 
-### 아이템 42: 대입 표현식으로 컴프리헨션의 반복을 줄이세요
+아이템 42: 대입 표현식으로 컴프리헨션의 반복을 줄이세요
 
 컴프리헨션—리스트, 딕셔너리, 셋 변형을 모두 포함해서—에서 흔한 패턴 중 하나는 같은 계산을 여러 곳에서 참조해야 하는 경우예요. 예를 들어, 체결류 회사의 주문을 관리하는 프로그램을 쓴다고 해볼게요. 고객에게서 새 주문이 들어오면 주문을 처리할 수 있는지 알려줘야 해요. 구체적으로, 요청한 수량이 충분히 재고가 있고 출하 최소 기준(예: 8개씩 묶음)을 넘는지 확인해야 한다고 해볼게요. 이렇게요:
 
@@ -6820,7 +6820,7 @@ print(next(found))
 
 :::
 
-### 아이템 43: 리스트를 반환하는 대신 제너레이터를 고려하세요
+아이템 43: 리스트를 반환하는 대신 제너레이터를 고려하세요
 
 결과들의 시퀀스를 만들어내는 함수에서 가장 단순한 선택은 항목들의 리스트를 반환하는 거예요. 예를 들어, 문자열에서 각 단어의 인덱스를 찾고 싶다고 해볼게요. 여기에서는 `append` 메서드로 리스트에 결과를 누적했다가 함수 끝에서 반환해요:
 
@@ -6921,7 +6921,7 @@ with open("address.txt", "r") as f:
 
 :::
 
-### 아이템 44: 큰 리스트 컴프리헨션에는 제너레이터 표현식을 고려하세요
+아이템 44: 큰 리스트 컴프리헨션에는 제너레이터 표현식을 고려하세요
 
 리스트 컴프리헨션의 한 가지 문제(아이템 40: “`map`과 `filter` 대신 컴프리헨션을 사용하세요” 참고)는 입력 시퀀스의 각 값마다 항목을 담을 수 있는 새 리스트 인스턴스를 만든다는 거예요. 입력이 작으면 괜찮지만, 입력이 크면 메모리를 상당히 많이 써서 프로그램이 죽을 수 있어요.
 
@@ -6984,7 +6984,7 @@ print(next(roots))
 
 :::
 
-### 아이템 45: 여러 제너레이터를 `yield from`으로 조합하세요
+아이템 45: 여러 제너레이터를 `yield from`으로 조합하세요
 
 제너레이터는 다양한 장점(아이템 43: “리스트를 반환하는 대신 제너레이터를 고려하세요” 참고)과 흔한 문제들에 대한 해결책(아이템 21: “인수를 순회할 때는 방어적으로 코딩하세요” 참고)을 제공해요. 제너레이터가 너무 유용해서 많은 프로그램이 제너레이터를 층층이 엮어 놓은 모습이 되기 시작해요.
 
@@ -7017,7 +7017,7 @@ def animate():
 ```python
 def render(delta):
     print(f"Delta: {delta:.1f}")
-    # Move the images onscreen
+# Move the images onscreen
     ...
 
 def run(func):
@@ -7071,7 +7071,7 @@ Delta: 3.0
 
 :::
 
-### 아이템 46: `send` 메서드를 호출하는 대신 제너레이터에 인수로 이터레이터를 전달하세요
+아이템 46: `send` 메서드를 호출하는 대신 제너레이터에 인수로 이터레이터를 전달하세요
 
 `yield` 표현식은 제너레이터 함수가 반복 가능한 일련의 출력 값을 만들어내는 단순한 방법을 제공해요(아이템 43: “리스트를 반환하는 대신 제너레이터를 고려하세요” 참고). 하지만 이 채널은 단방향으로 보여요. 제너레이터가 실행되는 동안 데이터를 동시에 넣고 빼는 명확한 방법이 바로 떠오르지 않아요. 이런 양방향 통신은 다양한 상황에서 유용할 수 있어요.
 
@@ -7313,7 +7313,7 @@ Output:  -9.5
 
 :::
 
-### 아이템 47: 제너레이터 `throw` 메서드 대신 클래스로 반복 상태 전이를 관리하세요
+아이템 47: 제너레이터 `throw` 메서드 대신 클래스로 반복 상태 전이를 관리하세요
 
 `yield from` 표현식(아이템 45: “여러 제너레이터를 `yield from`으로 조합하세요” 참고)과 `send` 메서드(아이템 46: “`send` 메서드를 호출하는 대신 제너레이터에 인수로 이터레이터를 전달하세요” 참고)에 더해서, 또 다른 고급 제너레이터 기능은 제너레이터 함수 안에서 `Exception` 인스턴스를 다시 일으키는 `throw` 메서드예요. `throw`의 동작 방식은 단순해요. 이 메서드가 호출되면, 제너레이터 안의 다음 `yield` 표현식은 정상적으로 계속되는 대신 출력을 받은 뒤에 제공된 `Exception` 인스턴스를 다시 일으켜요. 여기에서는 이 동작을 간단한 예제로 보여드릴게요:
 
@@ -7387,7 +7387,7 @@ def timer(period):
 
 ```python
 def check_for_reset():
-    # Poll for external event
+# Poll for external event
     ...
 
 def announce(remaining):
@@ -7489,7 +7489,7 @@ Resetting
 
 파이썬은 함수형 스타일 프로그래밍을 권장하는 멀티 패러다임 언어이기도 해요. 함수 객체는 일급 객체라서 일반 변수처럼 전달할 수 있어요. 파이썬에서는 같은 프로그램에 객체 지향 스타일과 함수형 스타일 기능을 섞어 쓸 수도 있는데, 이렇게 하면 각 스타일을 따로 쓸 때보다 훨씬 강력해져요.
 
-### 아이템 48: 간단한 인터페이스에는 클래스 대신 함수를 받으세요
+아이템 48: 간단한 인터페이스에는 클래스 대신 함수를 받으세요
 
 파이썬 내장 API 중에는 함수를 전달해서 동작을 커스터마이즈할 수 있게 해주는 경우가 많아요. 이런 *훅*은 API가 실행 중에 여러분의 코드를 다시 호출하기 위해 사용해요. 예를 들어 `list` 타입의 `sort` 메서드는 정렬할 각 인덱스의 값을 정하는 데 쓰는 선택적 `key` 인수를 받아요 (자세한 내용은 아이템 100: “`key` 매개변수로 복잡한 기준 정렬하기” 참고). 여기서는 `key` 훅으로 `len` 내장 함수를 넘겨서 이름 리스트를 길이 기준으로 정렬해요:
 
@@ -7624,7 +7624,7 @@ assert counter.added == 2
 
 :::
 
-### 아이템 49: `isinstance` 검사를 쓰는 함수보다 객체 지향 다형성을 선호하세요
+아이템 49: `isinstance` 검사를 쓰는 함수보다 객체 지향 다형성을 선호하세요
 
 간단한 수식을 입력으로 받아서 답을 계산하는 포켓 계산기를 만들고 싶다고 상상해 보세요. 보통은 주어진 텍스트를 토큰화하고 파싱해서 수행할 연산을 나타내는 *추상 구문 트리*(*AST*)를 만들 거예요. 파이썬 컴파일러가 프로그램을 로딩할 때 하는 일과 비슷해요. 예를 들어 여기서는 두 정수의 덧셈과 곱셈을 위한 AST 클래스 세 개를 정의해요:
 
@@ -7816,7 +7816,7 @@ OOP를 쓰면 프로그램의 필요에 따라 AST 메서드와 서브클래스�
 
 :::
 
-### 아이템 50: 객체 지향 다형성 대신 함수형 스타일 프로그래밍에는 `functools.singledispatch`를 고려하세요
+아이템 50: 객체 지향 다형성 대신 함수형 스타일 프로그래밍에는 `functools.singledispatch`를 고려하세요
 
 아이템 49: “`isinstance` 검사를 쓰는 함수보다 객체 지향 다형성을 선호하세요”의 포켓 계산기 예제에서는 객체 타입에 따라 동작을 바꾸는 걸 OOP가 어떻게 쉽게 만드는지 보여드렸어요. 마지막에는 메서드 구현이 서로 다른 클래스 계층이 있었죠, 이렇게요:
 
@@ -7879,7 +7879,7 @@ class NodeAlt2:
     def derivative(self):
         ...
 
-    # And 20 more methods...
+# And 20 more methods...
 ```
 
 안타깝게도 이런 클래스당 모듈 방식의 코드 구성은 실제 운영 시스템에서 심각한 유지보수 문제를 일으킬 수 있어요. 핵심 문제는 25개의 새 메서드가 어쨌든 포켓 계산기와 관련은 있지만 실제로는 서로 꽤 다를 수 있다는 거예요. 코드를 편집하고 디버깅할 때는 더 크고 독립적인 각 시스템(예: 풀이, 오류 검사) 안에서 봐야 하는데, OOP에서는 이런 시스템들을 모든 클래스에 걸쳐 구현해야 해요. 즉 실제로 이 가상의 예제에서 OOP 방식은 간단한 프로그래밍 작업을 하려고 25개의 다른 파일을 오가게 만들 수 있어요. 코드가 잘못된 축을 기준으로 구성된 것처럼 보여요. 단일 클래스에 대한 두 개의 독립적인 시스템을 동시에 볼 일은 거의 없는데, 소스 파일은 그렇게 배치되어 있어요.
@@ -8054,7 +8054,7 @@ NotImplementedError
 
 :::
 
-### 아이템 51: 가벼운 클래스를 정의할 때는 `dataclasses`를 선호하세요
+아이템 51: 가벼운 클래스를 정의할 때는 `dataclasses`를 선호하세요
 
 내장 자료형(문자열이나 딕셔너리 같은 것)을 쓰고 그걸 다루는 함수를 정의하면서 파이썬 프로그램을 쓰기 시작하기는 쉬워요. 어느 시점이 되면 코드가 복잡해져서 데이터 보관과 동작 캡슐화를 위해 직접 객체 타입을 만드는 게 justified해져요 (예제는 아이템 29: “딕셔너리, 리스트, 튜플을 깊게 중첩하는 대신 클래스 조합하기” 참고).
 
@@ -8643,7 +8643,7 @@ assert near2 < far2
 - `dataclasses` 모듈은 변환용(`asdict`, `astuple` 같은) 헬퍼 함수와 고급 애트리뷰트 동작용(`field` 같은) 기능을 추가로 제공해요.
 - `dataclasses` 모듈이 허용하는 수준을 넘어 더 많은 커스터마이징이 필요해지면 벗어날 수 있도록, 객체 지향 관용구를 직접 구현하는 법을 아는 게 중요해요.
 
-### 아이템 52: 객체를 범용적으로 생성하려면 `@classmethod` 다형성을 사용하세요
+아이템 52: 객체를 범용적으로 생성하려면 `@classmethod` 다형성을 사용하세요
 
 파이썬에서는 객체뿐 아니라 클래스도 다형성을 지원해요. 이게 무슨 뜻이고 어디에 좋을까요?
 
@@ -9399,9 +9399,9 @@ AttributeError: 'MyIntegerSubclass' object has no attribute
 ```python
 class MyStringClass:
     def __init__(self, value):
-        # This stores the user-supplied value for the object.
-        # It should be coercible to a string. Once assigned in
-        # the object it should be treated as immutable.
+# This stores the user-supplied value for the object.
+# It should be coercible to a string. Once assigned in
+# the object it should be treated as immutable.
         self._value = value
 
     ...
@@ -9610,7 +9610,7 @@ class ImmutablePoint:
 
     def __setattr__(self, key: str, value: Any) -> None:
         if key in self.__annotations__ and key not in dir(self):
-            # Allow the very first assignment to happen
+# Allow the very first assignment to happen
             super().__setattr__(key, value)
         else:
             raise AttributeError("Immutable object")
@@ -10066,7 +10066,7 @@ Count of 10 is 1
 
 하지만 이런 강력함에는 함정도 많아요. 동적 애트리뷰트는 객체를 덮어써서 예상 못한 사이드 이펙트를 만들 수 있어요. 메타클래스는 처음 보는 분이 다가가기 힘든 기묘한 동작을 만들기도 해요. *최소 놀람 원칙*을 꼭 지켜서, 이미 잘 알려진 관용구를 구현할 때만 이런 기능을 써주세요.
 
-### 아이템 58: 세터와 게터 메서드 대신 단순 애트리뷰트를 사용해요
+아이템 58: 세터와 게터 메서드 대신 단순 애트리뷰트를 사용해요
 
 다른 언어에서 오신 분들은 보호된 애트리뷰트에 접근하려고 클래스에 게터와 세터 메서드를 직접 만드는 게 자연스러울 수 있어요 (아이템 55: "Private 애트리뷰트보다 Public 애트리뷰트를 선호해요" 참고):
 
@@ -10265,7 +10265,7 @@ After:  1.00
 
 :::
 
-### 아이템 59: 애트리뷰트 리팩터링 대신 `@property`를 고려해요
+아이템 59: 애트리뷰트 리팩터링 대신 `@property`를 고려해요
 
 내장 `@property` 데코레이터를 쓰면 인스턴스 애트리뷰트에 대한 단순 접근이 더 똑똑하게 동작하게 만들기 쉬워요 (아이템 58: "세터와 게터 메서드 대신 단순 애트리뷰트를 사용해요" 참고). `@property`의 발전된 흔한 쓰임 중 하나는 예전의 단순 숫자 애트리뷰트를 그때그때 계산하는 방식으로 바꾸는 거예요. 호출부를 하나도 고치지 않고도 클래스의 모든 기존 사용법을 새 동작으로 옮길 수 있어서 정말 유용해요 (특히 직접 관리 못 하는 호출 코드가 있을 때 중요해요). `@property`는 시간이 지나며 인터페이스를 개선하는 중요한 임시 방편이기도 해요.
 
@@ -10383,14 +10383,14 @@ class NewBucket:
     def quota(self, amount):
         delta = self.max_quota - amount
         if amount == 0:
-            # Quota being reset for a new period
+# Quota being reset for a new period
             self.quota_consumed = 0
             self.max_quota = 0
         elif delta < 0:
-            # Quota being filled during the period
+# Quota being filled during the period
             self.max_quota = amount + self.quota_consumed
         else:
-            # Quota being consumed during the period
+# Quota being consumed during the period
             self.quota_consumed = delta
 ```
 
@@ -10439,7 +10439,7 @@ Still NewBucket(max_quota=100, quota_consumed=99)
 
 :::
 
-### 아이템 60: 재사용 가능한 `@property` 메서드를 위해 디스크립터를 사용해요
+아이템 60: 재사용 가능한 `@property` 메서드를 위해 디스크립터를 사용해요
 
 내장 `@property`의 큰 문제는 (아이템 58: "세터와 게터 메서드 대신 단순 애트리뷰트를 사용해요"와 아이템 59: "애트리뷰트 리팩터링 대신 `@property`를 고려해요" 참고) 재사용이 안 된다는 거예요. 데코레이팅한 메서드는 같은 클래스의 여러 애트리뷰트에 재사용할 수 없어요. 관계없는 클래스끼리도 재사용할 수 없고요.
 
@@ -10519,7 +10519,7 @@ class Grade:
         ...
 
 class Exam:
-    # Class attributes
+# Class attributes
     math_grade = Grade()
     writing_grade = Grade()
     science_grade = Grade()
@@ -10673,7 +10673,7 @@ print(first_exam.__dict__)
 
 :::
 
-### 아이템 61: 레이지 애트리뷰트를 위해 `__getattr__`, `__getattribute__`, `__setattr__`을 사용해요
+아이템 61: 레이지 애트리뷰트를 위해 `__getattr__`, `__getattribute__`, `__setattr__`을 사용해요
 
 파이썬의 `object` 베이스 클래스는 시스템을 이어 붙이는 범용 코드를 쉽게 짜도록 훅을 제공해요. 예를 들어, 데이터베이스 레코드를 파이썬 객체로 표현하고 싶다고 해볼게요. 데이터베이스 스키마는 이미 다른 곳에 정의돼 있다고 가정해요. 다른 언어라면 데이터베이스 스키마가 프로그램의 클래스와 객체에 어떻게 매핑되는지 코드로 명시해야 해요. 하지만 파이썬에서는 런타임에 범용적으로 객체 관계 매핑을 할 수 있어서 상용구가 필요 없어요.
 
@@ -10828,7 +10828,7 @@ Has second foo:  True
 ```python
 class SavingRecord:
     def __setattr__(self, name, value):
-        # Save some data for the record
+# Save some data for the record
         ...
         super().__setattr__(name, value)
 ```
@@ -10877,8 +10877,6 @@ data.foo
 >>>
 * Called __getattribute__('foo')
 * Called __getattribute__('_data')
-* Called __getattribute__('_data')
-* Called __getattribute__('_data')
 ...
 Traceback ...
 RecursionError: maximum recursion depth exceeded while calling
@@ -10915,7 +10913,7 @@ foo:  3
 
 :::
 
-### 아이템 62: `__init_subclass__`로 서브클래스를 검증해요
+아이템 62: `__init_subclass__`로 서브클래스를 검증해요
 
 메타클래스의 가장 단순한 쓰임 중 하나는 클래스가 제대로 정의됐는지 검증하는 거예요. 복잡한 클래스 계층을 만들 때는 스타일을 강제하거나, 메서드 오버라이딩을 요구하거나, 클래스 애트리뷰트 간 엄격한 관계를 갖고 싶을 수 있어요. 메타클래스는 새 서브클래스가 정의될 때마다 검증 코드를 실행하는 믿음직한 방법을 줘서 이런 경우를 가능하게 해요.
 
@@ -10965,7 +10963,7 @@ Bases: (<class '__main__.MyClass'>,)
 ```python
 class ValidatePolygon(type):
     def __new__(meta, name, bases, class_dict):
-        # Only validate subclasses of the Polygon class
+# Only validate subclasses of the Polygon class
         if bases:
             if class_dict["sides"] < 3:
                 raise ValueError("Polygons need 3+ sides")
@@ -11054,7 +11052,7 @@ ValueError: Polygons need 3+ sides
 ```python
 class ValidateFilled(type):
     def __new__(meta, name, bases, class_dict):
-        # Only validate subclasses of the Filled class
+# Only validate subclasses of the Filled class
         if bases:
             if class_dict["color"] not in ("red", "green"):
                 raise ValueError("Fill color must be supported")
@@ -11083,7 +11081,7 @@ bases
 ```python
 class ValidatePolygon(type):
     def __new__(meta, name, bases, class_dict):
-        # Only validate non-root classes
+# Only validate non-root classes
         if not class_dict.get("is_root"):
             if class_dict["sides"] < 3:
                 raise ValueError("Polygons need 3+ sides")
@@ -11095,7 +11093,7 @@ class Polygon(metaclass=ValidatePolygon):
 
 class ValidateFilledPolygon(ValidatePolygon):
     def __new__(meta, name, bases, class_dict):
-        # Only validate non-root classes
+# Only validate non-root classes
         if not class_dict.get("is_root"):
             if class_dict["color"] not in ("red", "green"):
                 raise ValueError("Fill color must be supported")
@@ -11243,7 +11241,7 @@ Left for <class '__main__.Bottom'>
 
 :::
 
-### 아이템 63: `__init_subclass__`로 클래스 존재를 등록해요
+아이템 63: `__init_subclass__`로 클래스 존재를 등록해요
 
 메타클래스의 또 다른 흔한 쓰임은 (배경은 아이템 62: "`__init_subclass__`로 서브클래스를 검증해요" 참고) 프로그램에 타입을 자동으로 등록하는 거예요. 식별자를 대응하는 클래스로 되돌려 찾는 역방향 조회가 필요할 때 등록이 유용해요.
 
@@ -11482,7 +11480,7 @@ After:      Vector1D(6)
 
 :::
 
-### 아이템 64: `__set_name__`으로 클래스 애트리뷰트를 표시해요
+아이템 64: `__set_name__`으로 클래스 애트리뷰트를 표시해요
 
 메타클래스로 가능한 또 다른 유용한 기능은 (배경은 아이템 62: "`__init_subclass__`로 서브클래스를 검증해요" 참고) 클래스가 정의된 뒤 실제로 쓰이기 전에 프로퍼티를 수정하거나 표시하는 거예요. 이 방식은 디스크립터와 (자세히는 아이템 60: "재사용 가능한 `@property` 메서드를 위해 디스크립터를 사용해요" 참고) 자주 함께 쓰여서 애트리뷰트가 포함 클래스 안에서 어떻게 쓰이는지 더 들여다볼 수 있게 해줘요.
 
@@ -11511,7 +11509,7 @@ class Field:
 
 ```python
 class Customer:
-    # Class attributes
+# Class attributes
     first_name = Field("first_name")
     last_name = Field("last_name")
     prefix = Field("prefix")
@@ -11535,7 +11533,7 @@ After:  'Euclid' {'_first_name': 'Euclid'}
 
 ```python
 class Customer:
-    # Left side is redundant with right side
+# Left side is redundant with right side
     first_name = Field("first_name")
     ...
 ```
@@ -11567,7 +11565,7 @@ class DatabaseRow(metaclass=Meta):
 ```python
 class Field:
     def __init__(self):
-        # These will be assigned by the metaclass.
+# These will be assigned by the metaclass.
         self.column_name = None
         self.internal_name = None
 
@@ -11629,7 +11627,7 @@ class Field:
         self.internal_name = None
 
     def __set_name__(self, owner, column_name):
-        # Called on class creation for each descriptor
+# Called on class creation for each descriptor
         self.column_name = column_name
         self.internal_name = "_" + column_name
 
@@ -11669,7 +11667,7 @@ After:  'Mersenne' {'_first_name': 'Mersenne'}
 
 :::
 
-### 아이템 65: 애트리뷰트 간 관계를 위해 클래스 본문 정의 순서를 고려해요
+아이템 65: 애트리뷰트 간 관계를 위해 클래스 본문 정의 순서를 고려해요
 
 파이썬 프로그램에 정의된 많은 클래스의 목적은 다른 곳에서 만들어지고 유지되는 외부 데이터를 표현하는 거예요. 예를 들어, 목적지 도시, 이동 수단, 배송 무게가 각 행에 담긴 화물 배송 목록 CSV(쉼표 구분 값) 파일이 있다고 해볼게요. 여기서는 내장 모듈 `csv`로 이 데이터를 읽어요:
 
@@ -11887,7 +11885,7 @@ class HypotheticalWorkflow:
         ...
 
     def run(self):
-        # Runs `start_engine` then `release_brake`
+# Runs `start_engine` then `release_brake`
         ...
 ```
 
@@ -11960,7 +11958,7 @@ Brake is off!
 
 :::
 
-### 아이템 66: 조합 가능한 클래스 확장을 위해 메타클래스보다 클래스 데코레이터를 선호해요
+아이템 66: 조합 가능한 클래스 확장을 위해 메타클래스보다 클래스 데코레이터를 선호해요
 
 메타클래스로 클래스 생성을 여러 방식으로 바꿀 수 있지만 (아이템 62: "`__init_subclass__`로 서브클래스를 검증해요"와 아이템 63: "`__init_subclass__`로 클래스 존재를 등록해요" 참고) 그래도 모든 상황을 처리하지는 못해요.
 
@@ -12297,7 +12295,7 @@ Hello from the child!
 proc = subprocess.Popen(["sleep", "1"])
 while proc.poll() is None:
     print("Working...")
-    # Some time-consuming work here
+# Some time-consuming work here
     ...
 
 print("Exit status", proc.poll())
@@ -12405,10 +12403,10 @@ for _ in range(3):
     hash_proc = run_hash(encrypt_proc.stdout)
     hash_procs.append(hash_proc)
 
-    # Ensure that the child consumes the input stream and
-    # the communicate() method doesn't inadvertently steal
-    # input from the child. Also lets SIGPIPE propagate to
-    # the upstream process if the downstream process dies.
+# Ensure that the child consumes the input stream and
+# the communicate() method doesn't inadvertently steal
+# input from the child. Also lets SIGPIPE propagate to
+# the upstream process if the downstream process dies.
     encrypt_proc.stdout.close()
     encrypt_proc.stdout = None
 ```
@@ -12458,7 +12456,7 @@ Exit status -15
 
 :::
 
-### 아이템 68: 블로킹 I/O에는 스레드를 사용하고 병렬 처리에는 사용하지 마세요
+아이템 68: 블로킹 I/O에는 스레드를 사용하고 병렬 처리에는 사용하지 마세요
 
 파이썬의 표준 구현은 CPython이라고 불려요. CPython은 두 단계로 파이썬 프로그램을 실행해요. 먼저 소스 텍스트를 파싱하고 컴파일해서 *바이트코드*로 만드는데, 바이트코드는 프로그램을 8비트 명령어로 표현한 저수준 형태예요(배경 지식은 아이템 97: "시작 시간을 줄이려면 미리 컴파일된 바이트코드와 파일 시스템 캐싱을 활용해요" 참고). (파이썬 3.6부터는 엄밀히는 16비트 명령어인 *워드코드*지만 아이디어는 같아요.) 그런 다음 CPython은 스택 기반 인터프리터로 바이트코드를 실행해요. 바이트코드 인터프리터는 파이썬 프로그램이 실행되는 동안 유지되고 일관되어야 하는 상태를 갖고 있어요. CPython은 *글로벌 인터프리터 락*(GIL)이라는 메커니즘으로 일관성을 강제해요.
 
@@ -12627,7 +12625,7 @@ Took 0.106 seconds
 
 :::
 
-### 아이템 69: 스레드에서 데이터 레이스를 막으려면 `Lock`을 사용하세요
+아이템 69: 스레드에서 데이터 레이스를 막으려면 `Lock`을 사용하세요
 
 글로벌 인터프리터 락(GIL)을 배우고 나면(아이템 68: "블로킹 I/O에는 스레드를 사용하고 병렬 처리에는 사용하지 마세요" 참고) 많은 파이썬 초보자는 코드에서 상호 배제 락(뮤텍스라고도 해요)을 아예 쓰지 않아도 된다고 생각해요. GIL이 이미 파이썬 스레드들이 여러 CPU 코어에서 병렬로 실행되는 걸 막고 있다면, 프로그램의 자료구조에 대한 락 역할도 하는 게 당연한 거 아닌가요? 리스트나 딕셔너리 같은 타입으로 테스트를 해보면 이런 가정이 맞는 것처럼 보일 수도 있어요.
 
@@ -12639,11 +12637,11 @@ Took 0.106 seconds
 counter = 0
 
 def read_sensor(sensor_index):
-    # Returns sensor data or raises an exception
+# Returns sensor data or raises an exception
     ...
 
 def get_offset(data):
-    # Always returns 1 or greater
+# Always returns 1 or greater
     ...
 
 def worker(sensor_index, how_many):
@@ -12760,7 +12758,7 @@ Counter should be 4000000, got 4000000
 
 :::
 
-### 아이템 70: 스레드 간 작업 조율에는 `Queue`를 사용하세요
+아이템 70: 스레드 간 작업 조율에는 `Queue`를 사용하세요
 
 동시에 많은 일을 하는 파이썬 프로그램은 종종 작업을 조율해야 해요. 동시 작업을 위한 가장 유용한 배치 중 하나는 함수들의 파이프라인이에요.
 
@@ -12869,7 +12867,7 @@ for _ in range(1000):
 
 ```python
 while len(done_queue.items) < 1000:
-    # Do something useful while waiting
+# Do something useful while waiting
     ...
 ```
 
@@ -12973,7 +12971,7 @@ def consumer():
     print("Consumer waiting")
     work = in_queue.get()      # Runs second
     print("Consumer working")
-    # Doing work
+# Doing work
     ...
     print("Consumer done")
     in_queue.task_done()       # Runs third
@@ -13112,7 +13110,7 @@ while True:
     except ShutDown:
         break
     else:
-        # Process the item
+# Process the item
         ...
         done_queue.task_done()
         counter += 1
@@ -13207,7 +13205,7 @@ print(counter, "items finished")
 
 :::
 
-### 아이템 71: 동시성이 필요한 시점을 알아보는 법을 익혀요
+아이템 71: 동시성이 필요한 시점을 알아보는 법을 익혀요
 
 프로그램의 범위가 커지면 필연적으로 복잡성도 커져요. 명확성, 테스트 용이성, 효율성을 유지하면서 늘어나는 요구사항을 다루는 건 프로그래밍에서 가장 어려운 부분 중 하나예요. 아마 가장 다루기 힘든 변경은 단일 스레드 프로그램에서 여러 동시 실행 흐름이 필요한 프로그램으로 옮겨가는 거예요.
 
@@ -13354,7 +13352,7 @@ print(columns)
 ```python
 def game_logic(state, neighbors):
     ...
-    # Do some blocking input/output in here:
+# Do some blocking input/output in here:
     data = my_socket.recv(100)
     ...
 ```
@@ -13373,7 +13371,7 @@ def game_logic(state, neighbors):
 
 :::
 
-### 아이템 72: 온디맨드 팬아웃을 위해 `Thread` 인스턴스를 새로 만들지 마세요
+아이템 72: 온디맨드 팬아웃을 위해 `Thread` 인스턴스를 새로 만들지 마세요
 
 스레드는 파이썬에서 병렬 I/O를 하려고 가장 먼저 꺼내 드는 자연스러운 도구예요(아이템 68: "블로킹 I/O에는 스레드를 사용하고 병렬 처리에는 사용하지 마세요" 참고). 하지만 많은 동시 실행 흐름으로 팬아웃하려고 하면 큰 단점이 있어요.
 
@@ -13416,7 +13414,7 @@ def count_neighbors(y, x, get_cell):
 
 def game_logic(state, neighbors):
     ...
-    # Do some blocking input/output in here:
+# Do some blocking input/output in here:
     data = my_socket.recv(100)
     ...
 
@@ -13526,7 +13524,7 @@ OSError: Problem with I/O
 
 :::
 
-### 아이템 73: 동시성에 `Queue`를 사용하면 리팩터링이 필요한 이유를 이해해요
+아이템 73: 동시성에 `Queue`를 사용하면 리팩터링이 필요한 이유를 이해해요
 
 이전 아이템에서(아이템 72: "온디맨드 팬아웃을 위해 `Thread` 인스턴스를 새로 만들지 마세요" 참고) 앞에서 본 생명 게임 예제의 병렬 I/O 문제를 `Thread`로 푸는 것의 단점을 다뤘어요(배경 지식과 여러 함수와 클래스의 구현은 아이템 71: "동시성이 필요한 시점을 알아보는 법을 익혀요" 참고).
 
@@ -13553,7 +13551,7 @@ class StoppableWorker(Thread):
 
 def game_logic(state, neighbors):
     ...
-    # Do some blocking input/output in here:
+# Do some blocking input/output in here:
     data = my_socket.recv(100)
     ...
 
@@ -13680,7 +13678,7 @@ for thread in threads:
 ```python
 def count_neighbors(y, x, get_cell):
     ...
-    # Do some blocking input/output in here:
+# Do some blocking input/output in here:
     data = my_socket.recv(100)
     ...
 ```
@@ -13807,7 +13805,7 @@ for thread in threads:
 
 :::
 
-### 아이템 74: 동시성을 위해 스레드가 필요할 때는 `ThreadPoolExecutor`를 고려해요
+아이템 74: 동시성을 위해 스레드가 필요할 때는 `ThreadPoolExecutor`를 고려해요
 
 파이썬에는 `concurrent.futures` 내장 모듈이 들어 있고, 여기서 `ThreadPoolExecutor` 클래스를 제공해요. 이 클래스는 생명 게임 예제의 병렬 I/O 문제를 푸는 데 `Thread` 방식(아이템 72: “온디맨드 팬아웃용 새 `Thread` 인스턴스 생성을 피해요” 참고)과 `Queue` 방식(아이템 73: “동시성을 위해 `Queue`를 쓰면 리팩터링이 필요한 이유를 이해해요” 참고)의 장점을 합친 거예요 (배경과 아래 여러 함수·클래스 구현은 아이템 71: “동시성이 필요한 상황을 알아보는 법을 알아요” 참고):
 
@@ -13826,7 +13824,7 @@ def count_neighbors(y, x, get_cell):
 
 def game_logic(state, neighbors):
     ...
-    # Do some blocking input/output in here:
+# Do some blocking input/output in here:
     data = my_socket.recv(100)
     ...
 
@@ -13918,7 +13916,7 @@ OSError: Problem with I/O
 
 :::
 
-### 아이템 75: 코루틴으로 높은 동시성의 I/O를 달성해요
+아이템 75: 코루틴으로 높은 동시성의 I/O를 달성해요
 
 앞의 아이템들은 생명 게임 예제의 병렬 I/O 문제를 여러 방식으로 풀어 봤지만 성공 정도가 제각각이에요 (배경과 아래 여러 함수·클래스 구현은 아이템 71: “동시성이 필요한 상황을 알아보는 법을 알아요” 참고). 다른 방식들은 수천 개 함수를 동시에 실행하는 능력에서 모두 부족해요 (아이템 72: “온디맨드 팬아웃용 새 `Thread` 인스턴스 생성을 피해요”, 아이템 73: “동시성을 위해 `Queue`를 쓰면 리팩터링이 필요한 이유를 이해해요”, 아이템 74: “동시성을 위해 스레드가 필요할 때 `ThreadPoolExecutor`를 고려해요” 참고).
 
@@ -13942,7 +13940,7 @@ def count_neighbors(y, x, get_cell):
 
 async def game_logic(state, neighbors):
     ...
-    # Do some input/output in here:
+# Do some input/output in here:
     data = await my_socket.read(50)
     ...
 ```
@@ -14060,7 +14058,7 @@ print(columns)
 
 :::
 
-### 아이템 76: 스레드 기반 I/O를 `asyncio`로 옮기는 법을 알아요
+아이템 76: 스레드 기반 I/O를 `asyncio`로 옮기는 법을 알아요
 
 코루틴의 장점을 이해하면 (아이템 75: “코루틴으로 높은 동시성의 I/O를 달성해요” 참고) 기존 코드베이스를 코루틴으로 옮기는 게 벅차게 느껴질 수 있어요. 다행히 파이썬의 비동기 실행 지원은 언어에 잘 통합돼 있어서, 스레드에서 블로킹 I/O를 하는 코드를 코루틴과 비동기 I/O로 옮기기가 수월해요.
 
@@ -14610,7 +14608,7 @@ Client: 2 is Correct
 
 :::
 
-### 아이템 77: `asyncio` 전환을 쉽게 하려고 스레드와 코루틴을 섞어 써요
+아이템 77: `asyncio` 전환을 쉽게 하려고 스레드와 코루틴을 섞어 써요
 
 직전 아이템에서는 (아이템 76: “스레드 기반 I/O를 `asyncio`로 옮기는 법을 알아요” 참고) 블로킹 I/O를 스레드로 하는 TCP 서버를 `asyncio` 코루틴으로 옮겼어요. 한 번에 전부 새 스타일로 옮기는 빅뱅 전환이었어요. 하지만 큰 프로그램은 이렇게 옮기기가 현실적으로 거의 불가능해요. 보통은 각 단계마다 잘 동작하는지 검증하고 필요에 따라 테스트도 업데이트하면서 코드베이스를 점진적으로 옮겨야 해요.
 
@@ -14847,7 +14845,7 @@ confirm_merge(input_paths, output_path)
 
 :::
 
-### 아이템 78: `async` 친화적인 워커 스레드로 `asyncio` 이벤트 루프의 응답성을 최대화해요
+아이템 78: `async` 친화적인 워커 스레드로 `asyncio` 이벤트 루프의 응답성을 최대화해요
 
 직전 아이템에서 `asyncio`로 점진적으로 옮기는 법을 보여 드렸어요 (배경과 다양한 함수 구현은 아이템 77: “`asyncio` 전환을 쉽게 하려고 스레드와 코루틴을 섞어 써요” 참고). 결과 코루틴은 입력 파일을 잘 따라가서 단일 출력으로 합쳐요:
 
@@ -14925,8 +14923,8 @@ class WriteThread(Thread):
         with open(self.output_path, "wb") as self.output:
             self.loop.run_forever()
 
-        # Run one final round of callbacks so the await on
-        # stop() in another event loop will be resolved.
+# Run one final round of callbacks so the await on
+# stop() in another event loop will be resolved.
         self.loop.run_until_complete(asyncio.sleep(0))
 ```
 
@@ -15010,7 +15008,7 @@ confirm_merge(input_paths, output_path)
 
 :::
 
-### 아이템 79: 진짜 병렬 처리를 위해 `concurrent.futures`를 고려해요
+아이템 79: 진짜 병렬 처리를 위해 `concurrent.futures`를 고려해요
 
 파이썬 프로그램을 쓰다 보면 어느 순간 성능 벽에 부딪힐 수 있어요. 파이썬 코드를 최적화하고 나서도 (아이템 92: “최적화하기 전에 프로파일링해요” 참고) 프로그램 실행이 여전히 필요보다 느릴 수 있어요. CPU 코어가 점점 늘어나는 요즘 컴퓨터에서는 코드를 독립적인 작업 조각으로 나눠서 여러 CPU 코어에서 동시에 실행하면 되지 않을까 기대하는 게 자연스러워요.
 
@@ -15153,7 +15151,7 @@ Took 1.684 seconds
 
 이렇게 유용한 파이썬 프로그램을 만들었다면, 다음으로 중요한 단계는 코드를 *제품화*해서 빈틈없게 만드는 거예요. 예상치 못한 상황을 만났을 때 프로그램이 믿음직하게 동작하도록 만드는 일은, 기능이 올바르게 동작하도록 만드는 일만큼 중요해요. 파이썬에는 다양한 상황에서 프로그램이 견고해지도록 단단하게 만들어 주는 내장 기능과 모듈이 있어요.
 
-### 아이템 80: `try`/`except`/`else`/`finally`의 각 블록을 활용하세요
+아이템 80: `try`/`except`/`else`/`finally`의 각 블록을 활용하세요
 
 파이썬에서 예외 처리를 할 때 동작을 넣을 수 있는 시점은 `try`, `except`, `else`, `finally` 블록으로 네 가지가 있어요. 각 블록은 복합 문장에서 고유한 역할을 하고, 이 블록들의 다양한 조합이 유용해요 (또 다른 예는 아이템 121: "호출자를 API로부터 보호하기 위해 루트 `Exception`을 정의하세요" 참고).
 
@@ -15377,7 +15375,7 @@ OSError: [Errno 28] No space left on device
 
 :::
 
-### 아이템 81: 내부 가정은 `assert`로, 놓친 기대는 `raise`로 알리세요
+아이템 81: 내부 가정은 `assert`로, 놓친 기대는 `raise`로 알리세요
 
 파이썬에는 `assert` 문이 있어서, 주어진 식이 거짓 같은 값이면 런타임에 `AssertionError` 예외를 발생시켜요 (배경 지식은 아이템 7: "단순한 인라인 `Logic`에는 조건 표현식을 고려하세요" 참고). 예를 들어, 여기서는 두 리스트가 비어 있지 않은지 확인하려는데, 식이 참 같은 값이 아니라서 두 번째 확인이 실패해요:
 
@@ -15506,7 +15504,7 @@ AssertionError: Invalid rating=7
 
 :::
 
-### 아이템 82: 재사용 가능한 `try`/`finally` 동작을 위해 `contextlib`과 `with` 문을 고려하세요
+아이템 82: 재사용 가능한 `try`/`finally` 동작을 위해 `contextlib`과 `with` 문을 고려하세요
 
 파이썬의 `with` 문은 코드가 특별한 컨텍스트에서 실행 중이라는 걸 나타내는 데 써요. 예를 들어, 상호 배제 락(아이템 69: "스레드에서 데이터 레이스를 막으려면 `Lock`을 사용하세요" 참고)은 `with` 문 안에서 써서, 들여쓴 코드 블록이 락을 잡고 있는 동안에만 실행된다는 걸 나타낼 수 있어요:
 
@@ -15514,7 +15512,7 @@ AssertionError: Invalid rating=7
 from threading import Lock
 lock = Lock()
 with lock:
-    # Do something while maintaining an invariant
+# Do something while maintaining an invariant
     ...
 ```
 
@@ -15523,7 +15521,7 @@ with lock:
 ```python
 lock.acquire()
 try:
-    # Do something while maintaining an invariant
+# Do something while maintaining an invariant
     ...
 finally:
     lock.release()
@@ -15669,7 +15667,7 @@ This is a message for other-log!
 
 :::
 
-### 아이템 83: 항상 `try` 블록을 최대한 짧게 만드세요
+아이템 83: 항상 `try` 블록을 최대한 짧게 만드세요
 
 예상되는 예외를 처리할 때는 다양한 문장 블록을 제대로 세팅하는 데 제법 손이 많이 가요 (아이템 80: "`try`/`except`/`else`/`finally`의 각 블록을 활용하세요" 참고). 예를 들어, 연결을 통해 원격 프로시저 호출(RPC)을 하는데 오류가 날 수 있다고 해볼게요:
 
@@ -15701,7 +15699,7 @@ Connection closed
 
 ```python
 def lookup_request(connection):
-    # No error raised
+# No error raised
     ...
 
 def is_cached(connection, request):
@@ -15724,8 +15722,8 @@ Connection closed
 
 ```python
 if is_closed(connection):
-    # Was the connection closed because of an error
-    # in lookup_request or is_cached?
+# Was the connection closed because of an error
+# in lookup_request or is_cached?
     ...
 ```
 
@@ -15754,7 +15752,7 @@ RpcError: From is_cached
 
 :::
 
-### 아이템 84: 예외 변수가 사라지는 현상을 주의하세요
+아이템 84: 예외 변수가 사라지는 현상을 주의하세요
 
 `for` 루프 변수와 달리(아이템 20: "루프가 끝난 뒤에 `for` 루프 변수를 절대 사용하지 마세요" 참고), 예외 변수는 `except` 블록 바로 다음 줄에서는 접근할 수 없어요:
 
@@ -15839,7 +15837,7 @@ NameError: name 'result' is not defined
 
 :::
 
-### 아이템 85: `Exception` 클래스를 잡을 때는 주의하세요
+아이템 85: `Exception` 클래스를 잡을 때는 주의하세요
 
 프로그램의 오류는 예상하든 못하든 자주 생겨요. 이런 문제는 프로그래머가 받아들이고 완화하려고 노력해야 하는 소프트웨어 개발의 한 측면이에요. 예를 들어, 피자 가게 매출을 분석해서 일일 요약 보고서를 만들고 싶다고 해볼게요. 여기서는 간단한 함수 파이프라인으로 이걸 처리해요:
 
@@ -15937,7 +15935,7 @@ Fail: <class 'NameError'> name 'analyze' is not defined
 
 :::
 
-### 아이템 86: `Exception`과 `BaseException`의 차이를 이해하세요
+아이템 86: `Exception`과 `BaseException`의 차이를 이해하세요
 
 파이썬 문서를 보면 프로그래머가 정의하는 예외 클래스는 반드시 `Exception` 클래스에서 상속받아야 한다고 나와요. 하지만 파이썬에서 예외 계층의 뿌리는 사실 `BaseException`이고, `Exception`의 부모 클래스예요. `BaseException`에서 갈라져 나오는 다른 예외 클래스들은 파이썬이 내부 용도로 쓰는 것들이에요.
 
@@ -16155,7 +16153,7 @@ SystemExit: 1
 
 :::
 
-### 아이템 87: 더 나은 예외 보고를 위해 `traceback`을 사용하세요
+아이템 87: 더 나은 예외 보고를 위해 `traceback`을 사용하세요
 
 파이썬 프로그램이 문제를 만나면 대개 예외가 발생해요. 예외를 잡아서 처리하지 않으면(아이템 80: "`try`/`except`/`else`/`finally`의 각 블록을 활용하세요" 참고), 프로그램 진입점까지 쭉 전파돼서 오류 코드와 함께 종료돼요. 파이썬 인터프리터는 개발자가 뭐가 잘못됐는지 파악하도록 돕하려고 보기 좋게 정리된 스택 추적, 즉 *트레이스백*도 출력해요. 예를 들어, 여기서는 `assert` 문으로 예외를 일으키고 대응되는 트레이스백을 출력해요 (배경 지식은 아이템 81: "내부 가정은 `assert`로, 놓친 기대는 `raise`로 알리세요" 참고):
 
@@ -16306,7 +16304,7 @@ with open("my_log.jsonl") as f:
 
 :::
 
-### 아이템 88: 트레이스백을 명확하게 하기 위해 예외 체이닝을 명시적으로 고려하세요
+아이템 88: 트레이스백을 명확하게 하기 위해 예외 체이닝을 명시적으로 고려하세요
 
 파이썬 프로그램은 코드에서 오류나 특정 조건을 만나면 예외를 발생시켜요 (아이템 32: "`None`을 반환하기보다 예외를 발생시키는 걸 선호하세요" 참고). 예를 들어, 여기서는 딕셔너리에 없는 키에 접근해서 예외가 발생해요:
 
@@ -16656,7 +16654,7 @@ MissingError
 
 :::
 
-### 아이템 89: 리소스는 항상 제너레이터에 전달하고 호출자가 밖에서 정리하게 하세요
+아이템 89: 리소스는 항상 제너레이터에 전달하고 호출자가 밖에서 정리하게 하세요
 
 파이썬은 파일, 뮤텍스, 소켓 같은 리소스가 적절한 시점에 제대로 정리되도록 돕는 다양한 도구를 제공해요. 예외 처리기(아이템 80: "`try`/`except`/`else`/`finally`의 각 블록을 활용하세요" 참고)나 `with` 문(아이템 82: "재사용 가능한 `try`/`finally` 동작을 위해 `contextlib`과 `with` 문을 고려하세요" 참고) 같은 것들이죠. 예를 들어, 보통 함수에서는 간단한 `finally` 절이 호출자가 반환값을 실제로 받기 *전*에 실행돼서, 파일 핸들을 안정적으로 닫기에 딱 좋은 위치예요:
 
@@ -16894,7 +16892,7 @@ Handle closed: True
 
 :::
 
-### 아이템 90: `__debug__`를 `False`로 설정하지 마세요
+아이템 90: `__debug__`를 `False`로 설정하지 마세요
 
 파이썬 프로그램에 이런 `assert` 문을 넣으면:
 
@@ -16974,7 +16972,7 @@ constant가 `True`면, 프로그램이 살아 있는 동안 항상 그대로 유
 
 :::
 
-### 아이템 91: 개발자 도구를 만드는 게 아니라면 `exec`와 `eval`은 피하세요
+아이템 91: 개발자 도구를 만드는 게 아니라면 `exec`와 `eval`은 피하세요
 
 파이썬은 런타임에 거의 뭐든지 할 수 있게 해주는 동적 언어예요 (이게 문제를 일으킬 수도 있어요. 아이템 3: "파이썬이 컴파일 시점에 오류를 감지해주길 절대 기대하지 마세요" 참고). `setattr`/`getattr`/`hasattr`(아이템 61: "지연 속성에는 `__getattr__`, `__getattribute__`, `__setattr__`을 사용하세요" 참고), 메타클래스(아이템 64: "`__set_name__`으로 클래스 속성에 애너테이션을 다세요" 참고), 디스크립터(아이템 60: "재사용 가능한 `@property` 메서드에는 디스크립터를 사용하세요" 참고) 같은 많은 기능이 이런 극도로 유연한 능력을 가능하게 해줘요.
 
@@ -17046,7 +17044,7 @@ print(local_scope)
 
 파이썬은 고성능 언어로 여겨지지 않아요. 특히 이런 용도로 만들어진 저수준 언어와 비교하면 더 그렇죠. 파이썬 런타임의 오버헤드와 제약을 생각하면 이해할 만한 평가예요. 특히 병렬 처리 부분에서 그렇죠 (아이템 68: “블로킹 I/O에는 스레드를 사용하고 병렬 처리에는 피하세요” 참고). 그렇다고 해도 파이썬에는 비교적 적은 노력으로 놀라울 정도로 인상적인 성능을 낼 수 있게 해주는 다양한 기능이 들어 있어요. 이런 기능을 활용하면 파이썬의 고수준 특성 덕분인 생산성을 유지하면서 호스트 시스템에서 최대한의 성능을 끌어낼 수 있어요.
 
-### 아이템 92: 최적화하기 전에 프로파일링하세요
+아이템 92: 최적화하기 전에 프로파일링하세요
 
 파이썬의 동적인 특성 때문에 런타임 성능에서 놀라운 동작이 나타나요. 느릴 거라고 생각한 연산은 실제로는 아주 빠르고(예를 들어 문자열 처리나 제너레이터 사용), 빠를 거라고 생각한 언어 기능은 실제로는 아주 느려요(예를 들어 속성 접근이나 함수 호출). 파이썬 프로그램이 느려지는 진짜 원인은 파악하기 어려울 수 있어요.
 
@@ -17254,7 +17252,7 @@ main.py:168(second_func)      ->     200    0.000    0.000  Profiling.md:159(my_
 
 :::
 
-### 아이템 93: `timeit` 마이크로벤치마크로 성능이 중요한 코드를 최적화하세요
+아이템 93: `timeit` 마이크로벤치마크로 성능이 중요한 코드를 최적화하세요
 
 파이썬 프로그램의 성능을 최대한 끌어올리려고 할 때는 프로파일러를 사용하는 게 아주 중요해요. 느린 원인이 눈에 잘 안 보일 수 있거든요 (아이템 92: “최적화하기 전에 프로파일링하세요” 참고). 진짜 문제 영역을 찾은 뒤에는 더 좋은 아키텍처로 리팩터링하거나 더 알맞은 자료구조를 쓰면 효과가 극적일 때가 많아요 (아이템 104: “우선순위 큐에는 `heapq` 사용법을 아세요” 참고). 하지만 여러 번 프로파일링하고 최적화한 뒤에도 코드에 있는 일부 핫스팟은 도저히 잡히지 않아 보일 수 있어요. 더 복잡한 해결책을 시도하기 전에 (아이템 94: “파이썬을 다른 프로그래밍 언어로 교체해야 할 때와 방법을 아세요” 참고) 내장 `timeit` 모듈로 *마이크로벤치마크*를 실행하는 걸 고려해볼 만해요.
 
@@ -17423,7 +17421,7 @@ except KeyError: pass'
 
 :::
 
-### 아이템 94: 파이썬을 다른 프로그래밍 언어로 교체해야 할 때와 방법을 아세요
+아이템 94: 파이썬을 다른 프로그래밍 언어로 교체해야 할 때와 방법을 아세요
 
 어느 시점엔가 파이썬으로 할 수 있는 한계를 밀어붙이고 있다고 느낄 때가 있을 거예요. 파이썬의 뛰어난 개발자 생산성과 사용 편의성을 제공하려면 언어의 실행 모델이 다른 면에서는 제한적일 수밖에 없으니 이해할 만해요. 예를 들어 CPython 구현의 바이트코드 가상 머신과 글로벌 인터프리터 락(GIL)은 직선형 CPU 성능, CPU 병렬 처리, 프로그램 시작 시간, 전체 효율성에 나쁜 영향을 줘요 (아이템 68: “블로킹 I/O에는 스레드를 사용하고 병렬 처리에는 피하세요” 참고).
 
@@ -17484,7 +17482,7 @@ print(dot_product([1, 2], [3, 4]))
 
 :::
 
-### 아이템 95: 네이티브 라이브러리를 빠르게 연동하려면 `ctypes`를 고려하세요
+아이템 95: 네이티브 라이브러리를 빠르게 연동하려면 `ctypes`를 고려하세요
 
 내장 `ctypes` 모듈을 쓰면 파이썬에서 네이티브 라이브러리에 정의된 함수를 호출할 수 있어요. 그런 라이브러리는 C 호출 규약을 따라 함수를 노출할 수 있는 다른 프로그래밍 언어라면 어떤 언어로도 구현할 수 있어요(예를 들어 C, C++, Rust). 이 모듈은 파이썬 개발자에게 두 가지 핵심 이점을 줘요:
 
@@ -17653,7 +17651,7 @@ OK
 
 :::
 
-### 아이템 96: 성능과 사용성을 극대화하기 위해 확장 모듈을 고려하세요
+아이템 96: 성능과 사용성을 극대화하기 위해 확장 모듈을 고려하세요
 
 파이썬 언어의 CPython 구현은 (아이템 1: "사용 중인 파이썬 버전을 알아두세요" 참고) C로 작성된 *확장 모듈*을 지원해요. 이런 모듈은 Python API를 직접 사용해서 객체 지향 기능(7장 참고), 덕 타이핑 프로토콜(아이템 25: "딕셔너리 삽입 순서에 의존할 때는 조심하세요" 참고), 레퍼런스 카운팅 가비지 컬렉션, 그리고 파이썬을 훌륭하게 만드는 거의 모든 다른 기능을 활용할 수 있어요. 이전 아이템에서는 (아이템 95: "`ctypes`로 네이티브 라이브러리를 빠르게 연동하는 방법을 고려하세요" 참고) `ctypes` 내장 모듈의 장단점을 살펴봤어요. 성능이나 플랫폼별 기능을 포기하지 않으면서 파이썬다운 개발 경험을 제공하고 싶다면, 확장 모듈이 정답이에요.
 
@@ -17925,7 +17923,7 @@ API에서 이런 수준의 확장성과 유연성을 갖추는 것이 바로 좋
 
 :::
 
-### 아이템 97: 시작 시간을 개선하기 위해 미리 컴파일된 바이트코드와 파일 시스템 캐싱에 의존하세요
+아이템 97: 시작 시간을 개선하기 위해 미리 컴파일된 바이트코드와 파일 시스템 캐싱에 의존하세요
 
 프로그램 시작 시간은 사용자가 직접 체감할 수 있기 때문에 살펴봐야 할 중요한 성능 지표예요. 커맨드라인 유틸리티에서는 Enter 키를 누른 뒤 프로그램이 처리를 시작하기까지 걸리는 시간이 시작 시간이에요. 사용자는 같은 커맨드라인 도구를 짧은 간격으로 반복해서 실행하는 경우가 많아서 시작 지연이 쌓이면 답답하게 시간 낭비하는 느낌이 들어요. 웹 서버에서는 프로그램을 실행한 뒤 첫 요청 처리를 시작하기까지 걸리는 시간이 시작 시간이에요. 웹 서버는 작업을 병렬화하기 위해 여러 스레드나 자식 프로세스를 사용하는 경우가 많아서 새로운 컨텍스트가 뜰 때마다 *콜드 스타트* 지연이 발생할 수 있어요. 결국 일부 웹 요청은 다른 요청보다 훨씬 오래 걸리면서 예측할 수 없는 지연으로 사용자를 짜증나게 해요.
 
@@ -18016,7 +18014,7 @@ sys     0m0.037s
 
 :::
 
-### 아이템 98: 시작 시간을 줄이기 위해 동적 임포트로 모듈을 지연 로딩하세요
+아이템 98: 시작 시간을 줄이기 위해 동적 임포트로 모듈을 지연 로딩하세요
 
 이전 아이템에서는 파이썬 프로그램 초기화가 느려질 수 있는 이유를 살펴보고 성능을 개선하는 방법을 알아봤어요(아이템 97: "시작 시간을 개선하기 위해 미리 컴파일된 바이트코드와 파일 시스템 캐싱에 의존하세요" 참고). 그런 모범 사례를 따르고 추가로 최적화한 뒤에도(아이템 92: "최적화하기 전에 프로파일링하세요" 참고) 파이썬 프로그램 시작이 여전히 너무 느리게 느껴질 수 있어요. 다행히 시도해 볼 수 있는 기법이 하나 더 있어요. 바로 동적 임포트예요.
 
@@ -18252,9 +18250,9 @@ global initialized
 ## Speculatively check without the lock
 if not initialized:
     with initialized_lock:
-        # Double check after holding the lock
+# Double check after holding the lock
         if not initialized:
-            # Do expensive initialization
+# Do expensive initialization
             ...
             initialized = True
 """,
@@ -18278,7 +18276,7 @@ print(f"{result/trials * 1e9:2.1f} nanos per call")
 
 :::
 
-### 아이템 99: `memoryview`와 `bytearray`로 `bytes`와 제로 카피 상호작용을 고려하세요
+아이템 99: `memoryview`와 `bytearray`로 `bytes`와 제로 카피 상호작용을 고려하세요
 
 파이썬은 추가적인 노력 없이는 CPU 바운드 연산을 병렬화할 수 없지만(아이템 79: "진정한 병렬 처리를 위해 `concurrent.futures`를 고려하세요"와 아이템 94: "파이썬을 다른 프로그래밍 언어로 교체해야 할 때와 방법을 알아두세요" 참고), 다양한 방법으로 높은 처리량과 병렬 I/O를 지원할 수 있어요(아이템 68: "블로킹 I/O에는 스레드를 사용하고 병렬 처리에는 사용하지 마세요"와 아이템 75: "코루틴으로 높은 동시성의 I/O를 달성하세요" 참고). 그럼에도 I/O 도구를 잘못 사용해서 이 언어가 I/O 바운드 작업에도 너무 느리다고 결론 내리기는 놀랄 만큼 쉬워요.
 
@@ -18287,11 +18285,11 @@ print(f"{result/trials * 1e9:2.1f} nanos per call")
 ```python
 def timecode_to_index(video_id, timecode):
     ...
-    # Returns the byte offset in the video data
+# Returns the byte offset in the video data
 
 def request_chunk(video_id, byte_offset, size):
     ...
-    # Returns size bytes of video_id's data from the offset
+# Returns size bytes of video_id's data from the offset
 
 video_id = ...
 timecode = "01:09:14:28"
@@ -18319,7 +18317,7 @@ import timeit
 
 def run_test():
     chunk = video_data[byte_offset : byte_offset + size]
-    # Call socket.send(chunk), but ignoring for benchmark
+# Call socket.send(chunk), but ignoring for benchmark
 
 result = (
     timeit.timeit(
@@ -18363,7 +18361,7 @@ video_view = memoryview(video_data)
 
 def run_test():
     chunk = video_view[byte_offset : byte_offset + size]
-    # Call socket.send(chunk), but ignoring for benchmark
+# Call socket.send(chunk), but ignoring for benchmark
 
 result = (
     timeit.timeit(
@@ -18504,7 +18502,7 @@ print(f"{result:0.9f} seconds")
 
 마찬가지로 파이썬은 프로그램에서 자주 나오는 공통 작업을 위한 내장 데이터 타입과 헬퍼 함수를 제공해요: 날짜, 시간, 시간대를 다루거나, 정밀도를 유지하고 반올림 방식을 제어하면서 금액을 다루거나, 소프트웨어가 계속 발전해도 사용자용 프로그램 상태를 저장하고 복원하는 작업 같은 거예요. 이런 상황을 처리하는 코드를 직접 쓰는 건 까다롭고 제대로 만들기가 어려워요. 검증된 구현이 언어에 내장되어 있어서 처리해 준다는 건 정말 다행이에요.
 
-### 아이템 100: `key` 매개변수로 복잡한 기준에 따라 정렬해요
+아이템 100: `key` 매개변수로 복잡한 기준에 따라 정렬해요
 
 `list` 내장 타입은 여러 기준에 따라 `list` 인스턴스의 아이템을 정렬하는 `sort` 메서드를 제공해요. (`sort` 메서드를 `sorted`와 헷갈리지 마세요; 아이템 101: "`sort`와 `sorted`의 차이점" 참고.) 기본적으로 `sort`는 아이템의 자연스러운 오름차순으로 리스트 내용을 정렬해요. 예를 들어 여기서는 정수 리스트를 작은 값부터 큰 값 순으로 정렬해요:
 
@@ -18725,7 +18723,7 @@ Tool('drill', 4), Tool('sander', 4)]
 
 :::
 
-### 아이템 101: `sort`와 `sorted`의 차이점을 알아두세요
+아이템 101: `sort`와 `sorted`의 차이점을 알아두세요
 
 파이썬에서 데이터를 정렬하는 가장 익숙한 방법은 `list` 타입의 내장 `sort` 메서드를 쓰는 거예요 (아이템 100: "`key` 매개변수로 복잡한 기준에 따라 정렬해요" 참고). 이 메서드는 데이터를 제자리에서 정렬해요. 즉, 원래 리스트가 수정되고 정렬되지 않은 기존 순서는 더 이상 쓸 수 없어요. 예를 들어 여기서는 나비 이름 리스트를 알파벳 순으로 정렬해요:
 
@@ -18791,7 +18789,7 @@ print(sorted_legs)
 
 :::
 
-### 아이템 102: `bisect`로 정렬된 시퀀스 검색을 고려해요
+아이템 102: `bisect`로 정렬된 시퀀스 검색을 고려해요
 
 메모리에 정렬된 리스트 형태로 대량의 데이터를 들고 있다가 검색하고 싶어지는 경우가 흔해요. 예를 들어 맞춤법 검사용 영어 사전을 불러왔을 수도 있고, 정확성을 감사해야 하는 날짜별 금융 거래 리스트가 있을 수도 있어요.
 
@@ -18889,7 +18887,7 @@ Bisect search takes 0.000197s
 
 :::
 
-### 아이템 103: 생산자-소비자 큐에는 `deque`를 선호해요
+아이템 103: 생산자-소비자 큐에는 `deque`를 선호해요
 
 프로그램을 쓸 때 흔히 필요한 게 선입선출(FIFO) 큐예요. 생산자-소비자 큐라고도 해요. FIFO 큐는 한 함수가 처리할 값을 모으고 다른 함수가 받은 순서대로 처리할 때 써요. 프로그래머들은 FIFO 큐 역할을 하려고 파이썬 내장 `list` 타입을 자주 써요.
 
@@ -18912,7 +18910,7 @@ class NoEmailError(Exception):
     pass
 
 def try_receive_email():
-    # Returns an Email instance or raises NoEmailError
+# Returns an Email instance or raises NoEmailError
     ...
 ```
 
@@ -18936,7 +18934,7 @@ def consume_one_email(queue):
     if not queue:
         return
     email = queue.pop(0)  # Consumer
-    # Index the message for long-term archival
+# Index the message for long-term archival
     ...
 ```
 
@@ -19040,7 +19038,7 @@ def consume_one_email(queue):
     if not queue:
         return
     email = queue.popleft()  # Consumer
-    # Process the email message
+# Process the email message
     ...
 
 def my_end_func():
@@ -19120,7 +19118,7 @@ Count 500,000 takes:   9.58ms
 
 :::
 
-### 아이템 104: 우선순위 큐를 위한 `heapq` 사용법을 알아두세요
+아이템 104: 우선순위 큐를 위한 `heapq` 사용법을 알아두세요
 
 파이썬의 다른 큐 구현의 한 가지 제약은 (아이템 103: "생산자-소비자 큐에는 `deque`를 선호해요"와 아이템 70: "스레드 간 작업을 조율하려면 `Queue`를 사용해요" 참고) 선입선출(FIFO) 큐라는 거예요: 받은 순서대로 내용이 정렬돼요. 종종 아이템을 받은 순서가 아니라 상대적인 중요도 순으로 처리해야 해요. 이럴 때는 *우선순위 큐*가 딱 맞는 도구예요.
 
@@ -19507,7 +19505,7 @@ def return_book(queue, book):
 
 :::
 
-### 아이템 105: 로컬 시계에는 `time` 대신 `datetime`을 사용해요
+아이템 105: 로컬 시계에는 `time` 대신 `datetime`을 사용해요
 
 협정 세계시(UTC)는 시간의 표준적인, 시간대 독립적인 표현이에요. UTC는 시간을 UNIX 에포크 이후 초로 나타내는 컴퓨터에 아주 잘 맞아요. 하지만 UTC는 사람에게 이상적이지 않아요. 사람은 현재 위치한 곳을 기준으로 시간을 말해요. "UTC 15:00 마이너스 7시간" 대신 "정오"나 "오전 8시"라고 말하죠. 프로그램이 시간을 다룬다면 사람의 이해를 위해 UTC와 로컬 시계 사이를 변환하게 될 거예요.
 
@@ -19515,7 +19513,7 @@ def return_book(queue, book):
 
 `datetime`이 최선의 선택이고 `time`은 피해야 하는 이유를 확실히 이해하려면 `time`과 `datetime`을 둘 다 알아둬야 해요.
 
-#### `time` 모듈 이해해요
+`time` 모듈 이해해요
 
 내장 모듈 `time`의 `localtime` 함수로 UNIX 타임스탬프(UTC 기준 UNIX 에포크 이후 초)를 호스트 컴퓨터의 시간대에 맞는 로컬 시간으로 변환할 수 있어요 (제 경우는 태평양 일광 시간). 이 로컬 시간은 `strftime` 함수로 사람이 읽을 수 있는 형식으로 출력할 수 있어요:
 
@@ -19574,7 +19572,7 @@ format '%Y-%m-%d %H:%M:%S %Z'
 
 여기서 문제는 `time` 모듈의 플랫폼 의존적인 특성이에요. 실제 동작은 호스트 운영체제와底层 C 함수가 어떻게 동작하는지에 따라 정해져요. 그래서 파이썬에서 `time` 모듈의 기능은 신뢰할 수 없어요. `time` 모듈은 여러 로컬 시간에 대해 일관되게 제대로 동작하지 못해요. 그래서 이런 목적에는 `time` 모듈을 피해야 해요. 꼭 `time`을 써야 한다면 UTC와 호스트 컴퓨터의 로컬 시간 사이를 변환할 때만 쓰세요. 다른 모든 종류의 변환에는 `datetime` 모듈을 쓰세요.
 
-#### `datetime` 모듈 이해해요
+`datetime` 모듈 이해해요
 
 파이썬에서 시간을 나타내는 두 번째 옵션은 내장 모듈 `datetime`의 `datetime` 클래스예요. `time` 모듈처럼 `datetime`으로 UTC의 현재 시간을 로컬 시간으로 변환할 수 있어요.
 
@@ -19661,7 +19659,7 @@ NPT 2024-03-10 13:16:18+05:45
 
 :::
 
-### 아이템 106: 정밀도가 중요할 때는 `decimal`을 사용해요
+아이템 106: 정밀도가 중요할 때는 `decimal`을 사용해요
 
 파이썬은 숫자 데이터를 다루는 코드를 쓰기에 훌륭한 언어예요. 파이썬의 정수 타입은 실질적으로 어떤 크기의 값도 나타낼 수 있어요. 배정밀도 부동소수점 타입은 IEEE 754 표준을 따라요. 허수값을 위한 표준 복소수 타입도 제공해요. 하지만 이것만으로 모든 상황에 충분하지는 않아요.
 
@@ -19781,7 +19779,7 @@ Rounded 0.004166666666666666666666666667 to 0.01
 
 :::
 
-### 아이템 107: `copyreg`로 `pickle` 직렬화를 유지보수하기 쉽게 만들어요
+아이템 107: `copyreg`로 `pickle` 직렬화를 유지보수하기 쉽게 만들어요
 
 내장 모듈 `pickle`은 파이썬 객체를 바이트 스트림으로 직렬화하고 바이트를 다시 객체로 역직렬화할 수 있어요 (배경 설명은 아이템 10: "`bytes`와 `str`의 차이점을 알아두세요" 참고). 피클된 바이트 스트림은 신뢰할 수 없는 당사자 사이의 통신에 쓰면 안 돼요. `pickle`의 목적은 직접 제어하는 프로그램 사이에서 이진 채널로 파이썬 객체를 전달하게 해주는 거예요.
 
@@ -19881,7 +19879,7 @@ assert isinstance(state_after, GameState)
 
 내장 모듈 `copyreg`를 쓰면 이런 문제를 간단히 고칠 수 있어요. `copyreg` 모듈로 파이썬 객체를 직렬화하고 역직렬화하는 함수를 등록할 수 있어서 `pickle`의 동작을 제어하고 더 안정적이고 적응력 있게 만들 수 있어요.
 
-#### 기본 애트리뷰트 값을 이해해요
+기본 애트리뷰트 값을 이해해요
 
 가장 간단한 경우에는 기본 인수가 있는 생성자를 써서 (배경 설명은 아이템 35: "키워드 인수로 선택적 동작을 제공해요" 참고) 언피클 후에도 `GameState` 객체가 항상 모든 애트리뷰트를 가지게 할 수 있어요. 여기서는 생성자를 이렇게 다시 정의해요:
 
@@ -19952,7 +19950,7 @@ Before: {'level': 0, 'lives': 4, 'points': 1000}
 After:  {'level': 0, 'lives': 4, 'points': 1000, 'magic': 5}
 ```
 
-#### 클래스 버전을 관리해요
+클래스 버전을 관리해요
 
 가끔 필드를 제거해서 파이썬 객체에 하위 호환되지 않는 변경을 해야 할 때가 있어요. 이렇게 하면 직렬화 이전에 기본 인수 접근법이 동작하지 않아요.
 
@@ -20011,7 +20009,7 @@ After:  {'level': 0, 'points': 1000, 'magic': 5}
 
 같은 클래스의 앞으로의 버전 사이의 변경도 이 접근법으로 계속 처리할 수 있어요. 클래스의 옛 버전을 새 버전에 맞추는 데 필요한 모든 로직은 `unpickle_game_state` 함수에 넣으면 돼요.
 
-#### 안정적인 임포트 경로를 이해해요
+안정적인 임포트 경로를 이해해요
 
 `pickle`로 만날 수 있는 다른 문제는 클래스를 이름을 바꿀 때 생기는 깨짐이에요. 프로그램의 수명 동안 클래스의 이름을 바꾸고 다른 모듈로 옮기면서 리팩터링하는 일이 흔해요. 아쉽게도 조심하지 않으면 이렇게 해서 `pickle` 모듈이 망가져요.
 
@@ -20391,7 +20389,7 @@ FAILED (failures=1)
 
 :::
 
-### 아이템 109: 단위 테스트보다 통합 테스트를 선호하세요
+아이템 109: 단위 테스트보다 통합 테스트를 선호하세요
 
 테스트 주도 개발, 속성 기반 테스트, 뮤테이션 테스트, 코드 및 브랜치 커버리지 리포팅 등 파이썬을 훨씬 넘어서는 폭넓은 소프트웨어 테스트 접근 방식이 많아요. 파이썬의 내장 패키지와 커뮤니티 패키지에서 상상할 수 있는 모든 종류와 스타일의 자동 테스트를 작성하는 훌륭한 도구를 찾을 수 있을 거예요 (아이템 116: “커뮤니티 제작 모듈을 어디서 찾을지 알아두세요” 참고). 그래서 파이썬에서의 문제는 테스트를 작성할 수 있는지, 해야 하는지가 아니라, 어느 정도 테스트면 충분하고 정확히 무엇을 검증해야 하는지예요.
 
@@ -20606,7 +20604,7 @@ OK
 
 :::
 
-### 아이템 110: `setUp`, `tearDown`, `setUpModule`, `tearDownModule`로 테스트를 서로 격리하세요
+아이템 110: `setUp`, `tearDown`, `setUpModule`, `tearDownModule`로 테스트를 서로 격리하세요
 
 `TestCase` 서브클래스 (아이템 108: “`TestCase` 서브클래스에서 관련된 동작 검증하기” 참고)는 테스트 메서드를 실행하기 전에 테스트 환경을 갖춰야 하는 경우가 많아요. 이를 흔히 테스트 하니스라고 해요. 이를 위해 `TestCase` 부모 클래스의 `setUp`과 `tearDown` 메서드를 오버라이드할 수 있어요. 이 메서드들은 각 테스트 메서드 전후에 호출돼서, 각 테스트가 격리된 채로 실행되도록 해줘요. 제대로 된 테스트의 중요한 모범 사례예요.
 
@@ -20689,7 +20687,7 @@ OK
 
 :::
 
-### 아이템 111: 복잡한 의존성이 있는 코드를 테스트하려면 목을 사용하세요
+아이템 111: 복잡한 의존성이 있는 코드를 테스트하려면 목을 사용하세요
 
 테스트를 작성할 때 흔히 또 필요한 건 (아이템 108: “`TestCase` 서브클래스에서 관련된 동작 검증하기” 참고) 실제 대상을 쓰기 너무 어렵거나 느릴 때 동작을 흉내 내는 목 함수와 목 클래스를 쓰는 거예요. 예를 들어, 동물원의 동물 급식 일정을 관리하는 프로그램이 필요하다고 해볼게요. 여기서는 데이터베이스에서 특정 종의 동물을 전부 조회한 뒤, 가장 최근에 먹은 시간을 반환하는 함수를 정의해요.
 
@@ -20698,9 +20696,9 @@ class DatabaseConnection:
     ...
 
 def get_animals(database, species):
-    # Query the Database
+# Query the Database
     ...
-    # Return a list of (name, last_mealtime) tuples
+# Return a list of (name, last_mealtime) tuples
 ```
 
 이 함수를 테스트하려고 쓸 `DatabaseConnection` 인스턴스는 어떻게 구할까요? 여기서는 인스턴스를 하나 만들고 테스트 대상 함수에 넘겨보려고 해요.
@@ -20806,12 +20804,12 @@ MyError: Whoops! Big problem
 
 ```python
 def get_food_period(database, species):
-    # Query the Database
+# Query the Database
     ...
-    # Return a time delta
+# Return a time delta
 
 def feed_animal(database, name, when):
-    # Write to the Database
+# Write to the Database
     ...
 
 def do_rounds(database, species):
@@ -21034,7 +21032,7 @@ with patch.multiple(
 
 :::
 
-### 아이템 112: 목과 테스트를 쉽게 하려고 의존성을 캡슐화하세요
+아이템 112: 목과 테스트를 쉽게 하려고 의존성을 캡슐화하세요
 
 이전 아이템에서 (아이템 111: “복잡한 의존성이 있는 코드를 테스트하려면 목을 사용하세요” 참고) 내장 모듈 `unittest.mock`의 기능들, 즉 `Mock` 클래스와 `patch` 함수군으로 데이터베이스 같은 복잡한 의존성이 있는 테스트를 작성하는 법을 보여줬어요. 하지만 결과 테스트 코드에는 상용구가 많아서 코드를 처음 읽는 사람이 테스트가 무엇을 검증하려는지 이해하기 어려울 수 있어요.
 
@@ -21188,7 +21186,7 @@ with patch("__main__.DATABASE", spec=ZooDatabase):
 
 :::
 
-### 아이템 113: 부동소수점 테스트에서 정밀도를 조절하려면 `assertAlmostEqual`을 사용하세요
+아이템 113: 부동소수점 테스트에서 정밀도를 조절하려면 `assertAlmostEqual`을 사용하세요
 
 파이썬의 `float` 타입은 배정밀도 부동소수점 숫자예요 (IEEE 754 표준을 따라요). 이 방식에는 한계가 있지만 (아이템 106: “정밀도가 중요하면 `decimal`을 사용하세요” 참고), 부동소수점 숫자는 많은 용도에 유용하고 파이썬에서도 잘 지원돼요.
 
@@ -21229,7 +21227,7 @@ print(0.1 * 5 / 3)
 class MyTestCase2(unittest.TestCase):
     def test_equal(self):
         ...
-        # Changed
+# Changed
         self.assertAlmostEqual(1.667, n / d, places=2)
 ...
 
@@ -21275,7 +21273,7 @@ class MyTestCase3(unittest.TestCase):
 
 :::
 
-### 아이템 114: `pdb`로 대화형 디버깅을 고려하세요
+아이템 114: `pdb`로 대화형 디버깅을 고려하세요
 
 프로그램을 개발하다 보면 누구나 코드에서 버그를 만나요. `print` 함수를 쓰면 많은 문제의 원인을 추적하는 데 도움이 돼요 (아이템 12: “객체를 출력할 때 `repr`와 `str`의 차이를 이해하세요” 참고). 말썽 일으키는 특정 케이스에 대한 테스트를 작성하는 것도 문제를 찾는 훌륭한 방법이에요 (아이템 109: “단위 테스트보다 통합 테스트를 선호하세요” 참고).
 
@@ -21445,7 +21443,7 @@ ZeroDivisionError: float division by zero
 
 :::
 
-### 아이템 115: 메모리 사용량과 누수를 이해하려고 `tracemalloc`을 사용하세요
+아이템 115: 메모리 사용량과 누수를 이해하려고 `tracemalloc`을 사용하세요
 
 파이썬의 기본 구현인 CPython의 메모리 관리는 참조 카운팅을 써요. 객체에 대한 모든 참조가 끝나자마자 참조되던 객체도 메모리에서 지워서 다른 데이터가 그 공간을 쓰게 해줘요. CPython에는 자기 참조 객체가 결국 가비지 컬렉션되도록 내장 순환 감지기도 있어요.
 
@@ -21581,7 +21579,7 @@ Biggest offender is:
 
 다른 사람들과 함께 파이썬 프로그램을 만들 때는 코드를 어떻게 작성할지 의식적으로 신경 써야 해요. 혼자 작업하더라도 표준 라이브러리나 오픈소스 패키지를 통해 다른 사람이 쓴 코드를 사용할 가능성이 높아요. 다른 파이썬 프로그래머와 쉽게 협업할 수 있게 해주는 메커니즘을 이해하는 게 중요해요.
 
-### 아이템 116: 커뮤니티에서 만든 모듈을 어디서 찾을지 알아두세요
+아이템 116: 커뮤니티에서 만든 모듈을 어디서 찾을지 알아두세요
 
 파이썬에는 프로그램에서 설치해 사용할 수 있는 모듈들의 중앙 저장소([https://pypi.org](https://pypi.org))가 있어요. 이런 모듈들은 여러분 같은 사람들, 즉 파이썬 커뮤니티가 만들고 유지보수해요. 낯선 문제에 부딪혔다면 Python Package Index(PyPI)에서 목표에 더 가까워지게 해줄 코드를 찾아보는 게 좋아요.
 
@@ -21607,7 +21605,7 @@ PyPI의 각 모듈은 각자의 소프트웨어 라이선스를 가지고 있어
 
 :::
 
-### 아이템 117: 격리되고 재현 가능한 의존성을 위해 가상 환경을 사용하세요
+아이템 117: 격리되고 재현 가능한 의존성을 위해 가상 환경을 사용하세요
 
 더 크고 복잡한 프로그램을 만들다 보면 파이썬 커뮤니티의 다양한 패키지에 의존하게 돼요(아이템 116: “커뮤니티에서 만든 모듈을 어디서 찾을지 알아두세요” 참고). `numpy`, `pandas` 같은 패키지를 설치하려고 `python3 -m pip` 명령줄 도구를 실행하게 돼요.
 
@@ -21818,7 +21816,7 @@ urllib3            2.2.2
 
 :::
 
-### 아이템 118: 모든 함수, 클래스, 모듈에 독스트링을 쓰세요
+아이템 118: 모든 함수, 클래스, 모듈에 독스트링을 쓰세요
 
 파이썬은 언어의 동적인 특성 때문에 문서화가 아주 중요해요. 파이썬은 코드 블록에 문서를 붙이는 기능을 기본으로 제공해요. 다른 많은 언어와 달리 프로그램 소스 코드의 문서에 프로그램이 실행되는 동안 바로 접근할 수 있어요.
 
@@ -21991,7 +21989,7 @@ def find_anagrams(word: str,
 
 :::
 
-### 아이템 119: 모듈을 정리하고 안정적인 API를 제공하려고 패키지를 사용하세요
+아이템 119: 모듈을 정리하고 안정적인 API를 제공하려고 패키지를 사용하세요
 
 프로그램 코드베이스가 커지면 구조를 다시 정리하게 되는 게 자연스러워요. 큰 함수를 작은 함수로 나누게 돼요. 자료구조를 헬퍼 클래스로 리팩터링해요(예시는 아이템 29: “딕셔너리, 리스트, 튜플을 깊게 중첩하는 대신 클래스를 합성하세요” 참고). 기능을 서로 의존하는 여러 모듈로 나누게 돼요.
 
@@ -22160,7 +22158,7 @@ after_a, after_b = simulate_collision(a, b)
 
 :::
 
-### 아이템 120: 배포 환경을 설정하려고 모듈 범위의 코드를 고려하세요
+아이템 120: 배포 환경을 설정하려고 모듈 범위의 코드를 고려하세요
 
 배포 환경은 프로그램이 실행되는 설정이에요. 모든 프로그램에는 적어도 하나의 배포 환경, 즉 *프로덕션 환경*이 있어요. 프로그램을 만드는 목표 자체가 프로덕션 환경에서 프로그램을 일하게 해서 어떤 결과를 얻는 거예요.
 
@@ -22243,7 +22241,7 @@ else:
 
 :::
 
-### 아이템 121: 호출자를 API로부터 보호하려고 루트 `Exception`을 정의하세요
+아이템 121: 호출자를 API로부터 보호하려고 루트 `Exception`을 정의하세요
 
 모듈의 API를 정의할 때 발생하는 예외는 정의하는 함수나 클래스만큼이나 인터페이스의 일부예요(왜 그런지에 대한 예시는 아이템 32: “`None`을 반환하기보다 예외를 발생시키는 걸 선호하세요” 참고).
 

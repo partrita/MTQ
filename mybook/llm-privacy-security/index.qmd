@@ -70,7 +70,7 @@ LLM은 학습 데이터에 있던 편향을 물려받아 증폭시켜 차별적�
 
 이 책을 끝낼 즈음에는 LLM을 둘러싼 프라이버시·보안 지형을 입체적으로 이해하게 되고 사용자 프라이버시와 데이터 보호를 최우선하는 개인화 AI 솔루션을 구축할 실용적 지식을 갖추게 될 것이다. 판돈이 그 어느 때보다 높은 시대에 책임 있는 AI 개발을 위한 도구 상자요(그리고 어쩌면 AI 기반 프라이버시 침해와 보안 침해와의 전쟁에서 당신만의 비밀 병기일지도 모른다).
 
-## 이 여정에서 당신의 역할
+이 여정에서 당신의 역할
 
 이 여정을 함께 시작하면서 AI 실무자이자 연구자, 이해관계자로서 우리가 짊어진 놀라운 책임을 잠깐 되새겨 보고 싶습니다. 오늘 우리가 내리는 결정은 AI의 미래와 그것이 사회에 미치는 영향을 몇 세대에 걸쳐 빚어갈 것입니다. 무거운 짐이지만 세상에 긍정적인 변화를 만들 수 있는 놀라운 기회이기도 합니다.
 
@@ -142,7 +142,7 @@ RNN은 전통적으로 다음과 같은 다양한 자연어 처리 과제에 널
 
 그러나 전통적인 RNN은 기울기 소실(vanishing gradient) 문제로 인해 장기 의존성 학습이 어렵다는 약점이 있다. 이 문제는 장단기 기억(LSTM) 네트워크와 게이트 순환 유닛(GRU) 같은 더 진보된 RNN 아키텍처로 해결된다.
 
-#### 장단기 기억 네트워크
+장단기 기억 네트워크
 
 장단기 기억(LSTM) 네트워크는 전통적 RNN이 장기 의존성을 포착하지 못하는 한계를 극복하도록 설계된 RNN 아키텍처입니다. LSTM은 메모리 셀과 세 종류의 게이트(입력 게이트, 망각 게이트, 출력 게이트)를 도입해 메모리 셀로 드나드는 정보 흐름을 조절합니다.
 
@@ -276,7 +276,7 @@ LLM의 내부 작동을 이해하려면 먼저 다음 핵심 개념을 파악해
 
 어텐션 메커니즘 특히 트랜스포머 모델의 셀프 어텐션 은 특정 유형의 적대적 공격에 취약하다는 것이 입증되었다. 이런 공격은 어텐션 가중치를 조작해 모델 예측을 오도하거나 모델에서 민감한 정보를 추출할 수 있다. 적대적 학습이나 입력 교란(input perturbation) 같은 적대적 방어를 구현하면 이 위험을 완화하는 데 도움이 되는데, 이는 이 책 후반부에서 논한다.
 
-#### 컨텍스트 창과 시퀀스 길이
+컨텍스트 창과 시퀀스 길이
 
 현대 LLM의 가장 중요한 실무적 한계 중 하나가 컨텍스트 창(context window)이다: 모델이 한 번의 입력으로 처리할 수 있는 최대 토큰 수다. 컨텍스트 창을 이해하는 것은 LLM을 효과적으로 배포하는 데도, 그 프라이버시 함의를 인식하는 데도 필수적이다.
 
@@ -652,7 +652,7 @@ PEFT 방법은 계산 자원이 제한적이고 모델을 여러 과제나 고�
 
 지시 파인튜닝의 효과는 지시 데이터셋의 질과 다양성에 크게 좌우됩니다. 핵심 고려사항은 다음과 같습니다:
 
-#### 과제 커버리지
+과제 커버리지
 
 학습 데이터는 폭넓은 일반화를 위해 다양한 과제 유형에 걸쳐 있어야 합니다.
 
@@ -1455,7 +1455,7 @@ def membership_inference_attack(prompt, true_input):
 
     generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
-    # Compare model output with the true input to infer membership
+# Compare model output with the true input to infer membership
     if true_input in generated_text:
         return "Data point likely part of training set"
     else:
@@ -1661,7 +1661,7 @@ def evaluate_privacy(
     """
     print("Evaluating Privacy...")
 
-    # Simulate Membership Inference Attack
+# Simulate Membership Inference Attack
     membership_confidence = self.simulate_membership_inference(
         text,
         n_attempts=n_attempts,
@@ -1688,7 +1688,7 @@ def evaluate_security(self, prompt, target_info, n_attempts=50, max_length=20):
     """
     print("Evaluating Security...")
 
-    # Simulate Data Extraction Attack (as one key security evaluation metric)
+# Simulate Data Extraction Attack (as one key security evaluation metric)
     extraction_success = self.simulate_data_extraction(
         prompt,
         target_info,
@@ -1697,8 +1697,8 @@ def evaluate_security(self, prompt, target_info, n_attempts=50, max_length=20):
     )
     print(f"Data extraction success rate: {extraction_success}")
 
-    # Expand this function to include other security metrics,
-    # such as adversarial attacks
+# Expand this function to include other security metrics,
+# such as adversarial attacks
 
     return {
         "DataExtractionSuccessRate": extraction_success
@@ -1810,7 +1810,7 @@ test_cases = [
 security_score = evaluator.evaluate_security(test_cases[0][0], test_cases[0][1])
 print(f"Security Score: {security_score} (higher is better)")
 
-## 멤버십 추론 테스트: 특정 텍스트가 모델의 학습 데이터셋에
+멤버십 추론 테스트: 특정 텍스트가 모델의 학습 데이터셋에
 
 ## 포함되어 있었는지 검사
 
@@ -1888,7 +1888,7 @@ n_attempts, threshold, max_length 같은 매개변수를 자유롭게 조정해 
 
 여러 공격 시뮬레이션을 조합하면 모델의 취약점에 대한 소중한 인사이트를 얻고 잠재적 프라이버시 침해를 사전에 완화하는 조치를 취할 수 있습니다. 멤버십 추론이든 데이터 추출이든 다른 유형의 공격이든, 이 클래스는 철저한 보안 감사를 수행하기 위한 올인원 프레임워크 역할을 합니다.
 
-### 페르소나가 다르면 접근법도 다르다
+페르소나가 다르면 접근법도 다르다
 
 주목할 점 하나는, 이런 평가 도구의 사용 방식이 LLM 수명주기에서 맡은 역할에 따라 크게 달라진다는 사실입니다.
 
@@ -1920,7 +1920,7 @@ n_attempts, threshold, max_length 같은 매개변수를 자유롭게 조정해 
 
 이 접근은 확실한 답을 주지는 못하지만 특정 사용 사례에 대해 값진 위험도 추정치를 제공할 수는 있습니다.
 
-### 현대적 평가 프레임워크와 벤치마크
+현대적 평가 프레임워크와 벤치마크
 
 우리가 만든 LLMPrivacySecurityEvaluator가 직접 커스터마이즈할 수 있는 실습형 평가 능력을 제공하는 반면, 이 분야에서는 표준화된 LLM 평가를 위한 포괄적 프레임워크와 벤치마크가 여럿 등장했습니다. 이런 도구들을 알아 두면 자신의 결과를 맥락 속에 놓고 업계 표준과 비교하는 데 도움이 됩니다. 최근 것 몇 가지를 소개합니다.
 
@@ -2006,7 +2006,7 @@ np.random.seed(42)
 data = np.random.rand(1000, 3)
 labels = (data[:, 0] + data[:, 1] + data[:, 2] > 1.5).astype(int)
 
-## '독특한' 환자 몇 명 추가
+'독특한' 환자 몇 명 추가
 
 unique_patients = np.array([
     [0.1, 0.1, 0.1, 0],  # Alice
@@ -2026,7 +2026,7 @@ model.fit(X_train, y_train)
 accuracy = accuracy_score(y_test, model.predict(X_test))
 print(f"Model accuracy: {accuracy:.2f}")
 
-## Alice와 Bob에 대한 정보 추출 시도
+Alice와 Bob에 대한 정보 추출 시도
 
 alice = np.array([[0.1, 0.1, 0.1]])
 bob = np.array([[0.9, 0.9, 0.9]])
@@ -2087,7 +2087,7 @@ for epoch in range(5):
 
 print("Model fine-tuned on sensitive data.")
 
-## 이제 민감 정보 추출을 시도해 본다
+이제 민감 정보 추출을 시도해 본다
 def generate_text(prompt, max_length=20):
     input_ids = tokenizer.encode(prompt, return_tensors='pt')
     output = model.generate(
@@ -2096,13 +2096,13 @@ def generate_text(prompt, max_length=20):
     )
     return tokenizer.decode(output[0], skip_special_tokens=True)
 
-## Alice의 SSN 추출 시도
+Alice의 SSN 추출 시도
 print(generate_text("Alice's Social Security number is"))
 
-## Bob의 신용카드 번호 추출 시도
+Bob의 신용카드 번호 추출 시도
 print(generate_text("Bob's credit card number is"))
 
-## Charlie의 비밀번호 추출 시도
+Charlie의 비밀번호 추출 시도
 print(generate_text("Charlie's password is"))
 ```
 
@@ -2171,7 +2171,7 @@ tokenized_dataset = dataset.map(
 
 data_collator = DataCollatorForLanguageModeling(
     tokenizer=tokenizer,
-    # 마스크드 언어 모델링은 BERT류 모델용이며 causal LM에는 해당 없음
+# 마스크드 언어 모델링은 BERT류 모델용이며 causal LM에는 해당 없음
     mlm=False
 )
 
@@ -2197,7 +2197,7 @@ def generate_text(prompt, max_length=20):
     output = model.generate(
         input_ids=input_ids, attention_mask=attention_mask,
         max_length=max_length, num_return_sequences=1,
-        # greedy 디코딩으로 미니 데이터셋에서의 다항 샘플링 회피
+# greedy 디코딩으로 미니 데이터셋에서의 다항 샘플링 회피
         do_sample=False, pad_token_id=tokenizer.eos_token_id
     )
     return tokenizer.decode(output[0], skip_special_tokens=True)
@@ -2248,8 +2248,6 @@ def generate_synthetic_data(n_users=10, n_entries_per_user=5):
                 ),
                 "credit_card": (
                     f"{random.randint(1000, 9999)}-"
-                    f"{random.randint(1000, 9999)}-"
-                    f"{random.randint(1000, 9999)}-"
                     f"{random.randint(1000, 9999)}"
                 ),
                 "medical_condition": random.choice([
@@ -2295,7 +2293,7 @@ User 2:
 
 사용자당 여러 항목을 만들면 의료나 금융 분야의 실제 데이터베이스가 지닌 복잡성을 흉내 낼 수 있습니다. 저장된 데이터가 많아질수록 프라이버시 침해 위험도 커지는 곳들이기 때문입니다.
 
-## 왜 합성 데이터인가?
+왜 합성 데이터인가?
 
 평가에 합성 데이터를 도입하는 데에는 몇 가지 핵심 이유가 있습니다.
 
@@ -2316,7 +2314,7 @@ User 2:
 ```python
 privacy_scores = []
 for i in range(len(sensitive_data)):
-    # 프라이버시 평가에는 원문 텍스트를 전달 (토크나이즈된 데이터 아님)
+# 프라이버시 평가에는 원문 텍스트를 전달 (토크나이즈된 데이터 아님)
     score = evaluator.evaluate_privacy(sensitive_data[i], target_info[i])
     privacy_scores.append(score)
     print(f"Privacy Score for {sensitive_data[i]}: {score}")
@@ -2495,13 +2493,13 @@ def private_retrieval(similarities, epsilon=1.0, k=5):
     :return: Indices of selected documents
     """
 
-    # 지수 메커니즘용 검벨 노이즈 추가
+지수 메커니즘용 검벨 노이즈 추가
 
 noisy_scores = similarities + np.random.gumbel( 0, 1 / epsilon, size=len(similarities)
 
 )
 
-    # 노이즈 섞인 점수에서 top-k 선택
+# 노이즈 섞인 점수에서 top-k 선택
 
 return np.argsort(noisy_scores)[-k:][::-1]
 ```
@@ -2562,10 +2560,10 @@ def train_locally(client_name, local_model, data_loader, learning_rate=1e-5, epo
     """Train model on local data and return model updates."""
     print(f"Training on {client_name}'s data...")
 
-    # 초기 모델 상태 복사본 생성
+# 초기 모델 상태 복사본 생성
     initial_state = copy.deepcopy(local_model.state_dict())
 
-    # 옵티마이저 정의
+# 옵티마이저 정의
     optimizer = torch.optim.Adam(local_model.parameters(), lr=learning_rate)
 
     total_loss = 0
@@ -2573,10 +2571,10 @@ def train_locally(client_name, local_model, data_loader, learning_rate=1e-5, epo
         for batch in data_loader:
             inputs = batch[0]  # 실제로는 토크나이즈된 입력 데이터가 됨
 
-            # 입력 시퀀스를 한 칸 왼쪽으로 밀어 라벨 생성
+# 입력 시퀀스를 한 칸 왼쪽으로 밀어 라벨 생성
             labels = torch.roll(inputs, -1, dims=1)
 
-            # 라벨의 마지막 원소를 -100으로 설정해 손실 계산에서 제외
+# 라벨의 마지막 원소를 -100으로 설정해 손실 계산에서 제외
             labels[:, -1] = -100
 
             outputs = local_model(inputs, labels=labels)
@@ -2589,7 +2587,7 @@ def train_locally(client_name, local_model, data_loader, learning_rate=1e-5, epo
 
     print(f"{client_name}'s training complete. Loss: {total_loss:.4f}")
 
-    # 모델 갱신값 계산 (현재 상태와 초기 상태의 차이)
+# 모델 갱신값 계산 (현재 상태와 초기 상태의 차이)
     updates = {}
     final_state = local_model.state_dict()
     for key in final_state:
@@ -2602,20 +2600,20 @@ def train_locally(client_name, local_model, data_loader, learning_rate=1e-5, epo
 def federated_averaging(global_model, updates_list, weights=None):
     """Aggregate model updates using weighted averaging."""
     if weights is None:
-        # 각 클라이언트에 동일 가중치
+# 각 클라이언트에 동일 가중치
         weights = [1 / len(updates_list)] * len(updates_list)
 
-    # 영(0) 갱신 딕셔너리로 시작
+영(0) 갱신 딕셔너리로 시작
     averaged_updates = {}
     for key in global_model.state_dict():
         averaged_updates[key] = torch.zeros_like(global_model.state_dict()[key])
 
-    # 모든 갱신값의 가중합
+# 모든 갱신값의 가중합
     for client_idx, updates in enumerate(updates_list):
         for key in updates:
             averaged_updates[key] += updates[key] * weights[client_idx]
 
-    # 평균 갱신값을 글로벌 모델에 적용
+# 평균 갱신값을 글로벌 모델에 적용
     global_state = global_model.state_dict()
     for key in global_state:
         global_state[key] = global_state[key] + averaged_updates[key]
@@ -2632,19 +2630,19 @@ def federated_averaging(global_model, updates_list, weights=None):
 for round_num in range(10):
     print(f"\nFederated Round {round_num+1}")
 
-    # 클라이언트별 로컬 모델 복사본 생성
+# 클라이언트별 로컬 모델 복사본 생성
     alice_model = copy.deepcopy(global_model)
     bob_model = copy.deepcopy(global_model)
 
-    # 각 클라이언트에서 로컬 학습 후 모델 갱신값 획득
+# 각 클라이언트에서 로컬 학습 후 모델 갱신값 획득
     alice_updates, alice_loss = train_locally("Alice", alice_model, alice_loader)
     bob_updates, bob_loss = train_locally("Bob", bob_model, bob_loader)
 
-    # 연합 평균으로 갱신값 집계
+# 연합 평균으로 갱신값 집계
     client_updates = [alice_updates, bob_updates]
 
-    # 필요시 데이터셋 크기로 가중:
-    # weights = [len(alice_data), len(bob_data)]
+# 필요시 데이터셋 크기로 가중:
+# weights = [len(alice_data), len(bob_data)]
 
     global_model = federated_averaging(global_model, client_updates)
 
@@ -2826,7 +2824,7 @@ def generate_dummy_gradients():
 
 ## 보안 집계 함수
 def secure_aggregate(gradients_list):
-    # 그래디언트를 secure 워커로 전송
+# 그래디언트를 secure 워커로 전송
     encrypted_gradients = [
         [
             grad.encrypt(
@@ -2837,7 +2835,7 @@ def secure_aggregate(gradients_list):
         for grads in gradients_list
     ]
 
-    # 보안 집계 수행
+# 보안 집계 수행
     aggregated_gradients = []
     for i in range(len(encrypted_gradients[0])):
         sum_grad = encrypted_gradients[0][i]
@@ -2845,23 +2843,23 @@ def secure_aggregate(gradients_list):
             sum_grad += encrypted_gradients[j][i]
         aggregated_gradients.append(sum_grad)
 
-    # 집계된 그래디언트를 복호화해 반환
+# 집계된 그래디언트를 복호화해 반환
     return [grad.get().float_precision() for grad in aggregated_gradients]
 
 
 ## MPC 기반 연합 학습 시뮬레이션
 for epoch in range(5):
-    # 당사자별 더미 그래디언트 생성
+# 당사자별 더미 그래디언트 생성
     alice_grads = generate_dummy_gradients()
     bob_grads = generate_dummy_gradients()
     charlie_grads = generate_dummy_gradients()
 
-    # 보안 집계 수행
+# 보안 집계 수행
     aggregated_grads = secure_aggregate(
         [alice_grads, bob_grads, charlie_grads]
     )
 
-    # 모델 매개변수 갱신
+# 모델 매개변수 갱신
     for param, grad in zip(model.parameters(), aggregated_grads):
         param.data.add_(grad)
 
@@ -2877,30 +2875,30 @@ from mpyc.runtime import mpc
 import random
 
 async def generate_local_update():
-    # 모델 갱신값 생성 시뮬레이션
+# 모델 갱신값 생성 시뮬레이션
     return [random.randint(0, 100) for _ in range(5)]
 
 
 async def secure_aggregation(mpc, num_parties):
     await mpc.start()
 
-    # 로컬 갱신값 생성
+# 로컬 갱신값 생성
     local_updates = [await generate_local_update() for _ in range(num_parties)]
 
-    # **변경:** 유한체의 차수를 소수로 정의
-    # 예: 최대 갱신값보다 큰 소수
+# **변경:** 유한체의 차수를 소수로 정의
+# 예: 최대 갱신값보다 큰 소수
     order = 101
 
-    # 정의한 차수로 로컬 갱신값 비밀 공유
+# 정의한 차수로 로컬 갱신값 비밀 공유
     secret_shares = [
         [mpc.SecFld(order)(update) for update in party_update]
         for party_update in local_updates
     ]
 
-    # 비밀 조각 집계
+# 비밀 조각 집계
     aggregated_update = [sum(shares) for shares in zip(*secret_shares)]
 
-    # 집계 결과 공개
+# 집계 결과 공개
     result = await mpc.output(aggregated_update)
 
     await mpc.shutdown()
@@ -3058,31 +3056,31 @@ from presidio_anonymizer import AnonymizerEngine
 
 class LLMDataAnonymizer:
     def __init__(self):
-        # NER 구성요소 초기화
+# NER 구성요소 초기화
         self.nlp = spacy.load("en_core_web_md")
         self.analyzer = AnalyzerEngine()
         self.anonymizer = AnonymizerEngine()
 
-        # 일관성 유지를 위한 치환 딕셔너리
+# 일관성 유지를 위한 치환 딕셔너리
         self.name_replacements = {}
         self.location_replacements = {}
 
     def anonymize_text(self, text):
         """Anonymize sensitive information in text."""
 
-        # Presidio로 PII 탐지 분석
+# Presidio로 PII 탐지 분석
         analyzer_results = self.analyzer.analyze(text=text, language="en")
 
-        # 식별된 개체 익명화
+# 식별된 개체 익명화
         anonymized_text = self.anonymizer.anonymize(
             text=text,
             analyzer_results=analyzer_results
         ).text
 
-        # spaCy로 일관된 치환을 위한 추가 처리 가능
+# spaCy로 일관된 치환을 위한 추가 처리 가능
         doc = self.nlp(anonymized_text)
 
-        # 일관된 치환을 위한 개체 처리
+# 일관된 치환을 위한 개체 처리
         tokens = []
         for token in doc:
             if token.ent_type_ == "PERSON":
@@ -3240,7 +3238,7 @@ def generate_synthetic_data(model, tokenizer, prompt, num_samples=5, max_length=
 
 이 장은 모델 호스팅, API 설계, 버전 관리 등 안전한 배포의 핵심 측면에 집중합니다. LLM을 안전하게 배포하려면 여러 요소를 신중히 고려해야 합니다. 모델을 호스팅하는 인프라, 사용자가 상호작용하는 인터페이스, 시간이 지나도 모델을 유지·업데이트하는 프로세스가 그 대상입니다.
 
-## 안전한 모델 호스팅과 인프라
+안전한 모델 호스팅과 인프라
 
 모델 호스팅은 안전한 LLM 배포의 토대입니다. 모델을 추론에 제공하는 것뿐 아니라 모델 자신과 그것이 처리하는 데이터를 함께 지키는 방식으로 이루어져야 합니다. 인프라 보안은 안전한 모델 호스팅을 보장하는 것이며 안전한 LLM 배포의 기초를 이룹니다. 소중한 모델을 위한 금고 짓기라고 생각하십시오. 열쇠를 누구에게 줄지, 안전하게 여는 법을 생각하기도 전에 금고 자체가 철벽이어야 합니다.
 
@@ -3402,14 +3400,14 @@ VM에는 관리를 쉽게 해 주는 도구 Vagrant를 쓸 수 있습니다. 설
 ```ruby
 Vagrant.configure("2") do |config| config.vm.box = "ubuntu/focal64"
 
-  # Security configurations
+# Security configurations
 
 config.vm.provider "virtualbox" do |v| v.memory = 8192 v.cpus = 4
 
-    # Disable shared folders for security
+# Disable shared folders for security
 v.customize [ "setextradata",:id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "0" ] end
 
-  # Network configuration
+# Network configuration
 
 config.vm.network "private_network", type: "dhcp" end
 ```
@@ -3566,13 +3564,13 @@ def generate_self_signed_cert():
     if not os.path.exists("certs"):
         os.makedirs("certs")
 
-    # Generate private key
+# Generate private key
     subprocess.run(
         ["openssl", "genrsa", "-out", "certs/server.key", "2048"],
         check=True,
     )
 
-    # Generate self-signed certificate
+# Generate self-signed certificate
     subprocess.run(
         [
             "openssl", "req", "-new", "-x509",
@@ -3591,19 +3589,19 @@ def create_ssl_context():
     """Create a secure SSL context for HTTPS."""
     context = create_default_context(purpose=ssl.Purpose.CLIENT_AUTH)
 
-    # Configure SSL/TLS settings
+# Configure SSL/TLS settings
     context.minimum_version = ssl.TLSVersion.TLSv1_2
     context.maximum_version = ssl.TLSVersion.TLSv1_3
 
-    # Set cipher preferences
+# Set cipher preferences
     context.set_ciphers(
         "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256"
     )
 
-    # For development, generate self-signed certificates
+# For development, generate self-signed certificates
     certfile, keyfile = generate_self_signed_cert()
 
-    # Load certificates
+# Load certificates
     try:
         context.load_cert_chain(
             certfile=certfile,
@@ -3691,19 +3689,19 @@ class RequestFilter:
         """Check if request from IP should be allowed based on rate limit."""
         current_time = time.time()
 
-        # Clean up old requests
+# Clean up old requests
         self.request_history[ip] = [
             req_time
             for req_time in self.request_history[ip]
             if current_time - req_time < self.time_window
         ]
 
-        # Check rate limit
+# Check rate limit
         if len(self.request_history[ip]) >= self.rate_limit:
             logger.warning(f"Rate limit exceeded for IP: {ip}")
             return False
 
-        # Add new request
+# Add new request
         self.request_history[ip].append(current_time)
         return True
 
@@ -3722,7 +3720,7 @@ class RequestFilter:
 app = FastAPI()
 request_filter = RequestFilter()
 
-## 신뢰 호스트 미들웨어 추가
+신뢰 호스트 미들웨어 추가
 app.add_middleware(
     TrustedHostMiddleware,
     allowed_hosts=["api.yourservice.com", "localhost"],
@@ -3732,27 +3730,27 @@ app.add_middleware(
 @app.middleware("http")
 async def filter_requests(request: Request, call_next):
     """Middleware to filter and rate limit requests."""
-    # 클라이언트 IP 획득
+# 클라이언트 IP 획득
     client_ip = request.client.host
 
-    # 속도 제한 확인
+# 속도 제한 확인
     if not request_filter.is_request_allowed(client_ip):
         raise HTTPException(
             status_code=429,
             detail="Too many requests. Please try again later.",
         )
 
-    # 요청 크기 확인
+# 요청 크기 확인
     content_length = request.headers.get("content-length", 0)
     if content_length and not request_filter.check_payload_size(
         int(content_length)
     ):
         raise HTTPException(status_code=413, detail="Request too large")
 
-    # 요청 상세 기록
+# 요청 상세 기록
     logger.info(f"Request from {client_ip}: {request.method} {request.url}")
 
-    # 요청 처리
+# 요청 처리
     response = await call_next(request)
     return response
 
@@ -3833,7 +3831,7 @@ class PromptRequest(BaseModel):
 
     @validator("text")
     def validate_content(cls, v):
-        # 잠재적으로 위험한 패턴 검사
+# 잠재적으로 위험한 패턴 검사
         dangerous_patterns = ["rm -rf", "system(", "exec(", "import ", "open("]
         if any(pattern in v.lower() for pattern in dangerous_patterns):
             raise ValueError("Input contains potentially unsafe content")
@@ -3870,8 +3868,8 @@ class LLMService:
             self.current_requests += 1
             start_time = time.time()
 
-            # Here you would call your actual LLM
-            # This is where model inference happens
+# Here you would call your actual LLM
+# This is where model inference happens
             response = await self._call_model(prompt.text, prompt.parameters)
 
             processing_time = time.time() - start_time
@@ -3907,7 +3905,7 @@ class RateLimiter:
         current_time = time.time()
         user_requests = self.request_history[user_id]
 
-        # Remove old requests from history
+# Remove old requests from history
         user_requests = [
             req_time
             for req_time in user_requests
@@ -3915,11 +3913,11 @@ class RateLimiter:
         ]
         self.request_history[user_id] = user_requests
 
-        # Check if user has exceeded limit
+# Check if user has exceeded limit
         if len(user_requests) >= self.requests_per_minute:
             return False
 
-        # Record new request
+# Record new request
         user_requests.append(current_time)
         return True
 ```
@@ -3950,7 +3948,7 @@ class AuthManager:
         """Initialize authentication manager."""
         self.secret_key = secret_key
 
-        # Keep track of tokens you've invalidated
+# Keep track of tokens you've invalidated
         self.token_blacklist = set()
 
     def create_access_token(self, user_data: dict) -> str:
@@ -3958,14 +3956,14 @@ class AuthManager:
 
         This is like creating a temporary ID card for the user. The card has an expiration date and can't be forged.
         """
-        # Create a copy of the data so you don't modify the original
+# Create a copy of the data so you don't modify the original
         token_data = user_data.copy()
 
-        # Add an expiration time (15 minutes from now)
+# Add an expiration time (15 minutes from now)
         expire = datetime.utcnow() + timedelta(minutes=15)
         token_data["exp"] = expire
 
-        # Create and return the token
+# Create and return the token
         return jwt.encode(
             token_data, self.secret_key, algorithm="HS256"
         )
@@ -3976,11 +3974,11 @@ class AuthManager:
         This checks if the ID card is legitimate and not expired.
         """
         try:
-            # First check if you've blacklisted this token
+# First check if you've blacklisted this token
             if token in self.token_blacklist:
                 raise JWTError("Token has been revoked")
 
-            # Verify the token's signature and decode its contents
+# Verify the token's signature and decode its contents
             user_data = jwt.decode(
                 token, self.secret_key, algorithms=["HS256"]
             )
@@ -4002,7 +4000,7 @@ class AuthManager:
 class PermissionsManager:
     def __init__(self):
         """Initialize permissions manager with basic user types."""
-        # Define what each type of user can do
+# Define what each type of user can do
         self.user_permissions = {
             "basic_user": ["generate_text"],
             "premium_user": ["generate_text", "fine_tune"],
@@ -4057,18 +4055,18 @@ from datetime import datetime
 class SecureChannel:
     def __init__(self, secret_key: bytes):
         """Initialize secure communication channel."""
-        # Create encryption tool using the provided key
+# Create encryption tool using the provided key
         self.encryptor = Fernet(secret_key)
 
     def send_message(self, message: dict) -> bytes:
         """Encrypt a message for sending."""
-        # Add a timestamp to prevent replay attacks
+# Add a timestamp to prevent replay attacks
         message_with_time = {
             "content": message,
             "timestamp": datetime.now().timestamp(),
         }
 
-        # Convert message to bytes and encrypt it
+# Convert message to bytes and encrypt it
         message_bytes = json.dumps(message_with_time).encode()
         encrypted_message = self.encryptor.encrypt(message_bytes)
 
@@ -4079,11 +4077,11 @@ class SecureChannel:
     ) -> dict:
         """Decrypt and verify a received message."""
         try:
-            # Decrypt the message
+# Decrypt the message
             decrypted_bytes = self.encryptor.decrypt(encrypted_message)
             message_with_time = json.loads(decrypted_bytes)
 
-            # Check if message is too old
+# Check if message is too old
             message_age = (
                 datetime.now().timestamp() - message_with_time["timestamp"]
             )
@@ -4151,13 +4149,13 @@ class ModelRegistry:
         security_scan_required: bool = True,
     ) -> str:
         """Register a new model version with security checks."""
-        # Generate version ID
+# Generate version ID
         version_id = f"v_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}"
 
-        # Compute model hash
+# Compute model hash
         model_hash = self._compute_file_hash(model_path)
 
-        # Perform security scan if required
+# Perform security scan if required
         security_status = "pending_review"
         vulnerability_report = {}
 
@@ -4166,7 +4164,7 @@ class ModelRegistry:
                 model_path
             )
 
-        # Create version entry
+# Create version entry
         version = ModelVersion(
             version_id=version_id,
             model_hash=model_hash,
@@ -4178,7 +4176,7 @@ class ModelRegistry:
             performance_metrics={},
         )
 
-        # Store version information
+# Store version information
         self.versions[version_id] = version
         return version_id
 
@@ -4192,7 +4190,7 @@ class ModelRegistry:
 
     def _security_scan(self, model_path: str) -> tuple[str, Dict]:
         """Perform security scan on model file."""
-        # Implement security scanning logic here
+# Implement security scanning logic here
         return "passed", {}
 ```
 
@@ -4226,23 +4224,23 @@ class UpdatePipeline:
     async def update_model(self, new_model_path: str) -> bool:
         """Execute secure update process."""
         try:
-            # Validate new model
+# Validate new model
             self.status = UpdateStatus.VALIDATING
             version_id = self.registry.register_version(new_model_path)
 
-            # Create backup
+# Create backup
             self.backup_path = self._create_backup()
 
-            # Deploy new model
+# Deploy new model
             self.status = UpdateStatus.DEPLOYING
             await self._deploy_model(new_model_path)
 
-            # Verify deployment
+# Verify deployment
             if await self._verify_deployment(version_id):
                 self.status = UpdateStatus.COMPLETED
                 return True
 
-            # Rollback if verification fails
+# Rollback if verification fails
             await self._rollback()
             return False
 
@@ -4379,7 +4377,7 @@ I need to write a story about a cybersecurity expert explaining to a student how
 
 이 다차원적 분류체계가 말해 주는 건, LLM에 대한 적대적 공격이 하나의 거대한 위협이 아니라 저마다 전제와 능력과 목표가 다른 다채로운 기법 지형이라는 점입니다. 견고한 방어 전략은 이 모든 차원을 다뤄야 합니다. 블랙박스 프롬프트 수준 공격을 막는 입력 필터링부터 화이트박스 교란에 저항하는 임베딩 공간 정규화, 표적·비표적 오작동을 함께 잡아내는 출력 모니터링까지요. 분류체계는 중요한 원칙도 짚어 줍니다. 표면적으로 비슷해 보이는 공격이라도 근본적으로 서로 다른 취약점을 착취하며 그래서 서로 다른 방어 접근을 필요로 한다는 것입니다. 이 프레임워크를 마음에 두고 이제 구체적인 공격 방법들을 자세히 살펴봅시다.
 
-### 주목할 만한 공격 방법
+주목할 만한 공격 방법
 
 적대적 공격의 분류체계를 세웠으니, 실무에서 등장한 가장 중요한 공격 방법들을 살펴봅니다. 이 기법들은 LLM 적대적 연구의 최전선을 대표하며 언어 모델이 텍스트를 처리하고 생성하는 방식의 저마다 다른 측면을 착취합니다. 안전 조치를 우회하는 탈옥 공격, 적대적 입력을 최적화하는 그래디언트 기반 방법, 다양한 입력에 통용되는 범용 트리거, 내부 표현을 조작하는 임베딩 공간 공격, 그리고 LLM 에이전트와 외부 시스템의 상호작용을 노리는 공격을 살펴봅니다. 이런 방법들을 이해하는 일이 효과적인 방어를 개발하고 미래 공격 경로를 예측하는 데 필수적입니다.
 
@@ -4516,18 +4514,18 @@ GCG 알고리즘은 이렇게 움직입니다:
 
 ```python
 def gcg_attack(model, prompt, target_response, max_iterations=100):
-    # Initialize adversarial suffix (typically with random tokens)
+# Initialize adversarial suffix (typically with random tokens)
     adv_suffix = initialize_suffix()
 
     for i in range(max_iterations):
-        # Compute gradients with respect to the suffix embeddings
+# Compute gradients with respect to the suffix embeddings
         gradients = compute_gradient(model, prompt + adv_suffix, target_response)
 
-        # Find the token position with the highest gradient magnitude
+# Find the token position with the highest gradient magnitude
         pos = argmax(norm(gradients, axis=1))
 
-        # For the selected position, find the token that maximizes the target
-        # probability
+# For the selected position, find the token that maximizes the target
+# probability
         best_token = None
         best_score = float('-inf')
 
@@ -4539,7 +4537,7 @@ def gcg_attack(model, prompt, target_response, max_iterations=100):
                 best_score = score
                 best_token = token
 
-        # Update the suffix with the best token
+# Update the suffix with the best token
         adv_suffix = replace_token_at_position(adv_suffix, pos, best_token)
 
     return adv_suffix
@@ -4553,7 +4551,7 @@ def gcg_attack(model, prompt, target_response, max_iterations=100):
 
 이런 방법들은 빔 서치(beam search)로 한층 강화될 수 있습니다. 최적화 과정 내내 단일 경로를 탐욕적으로 고르는 대신 여러 후보를 유지하는 방식으로, 유망한 방향들을 동시에 탐색하게 해 줘서 모델 방어를 더 잘 우회하는 효과적인 적대적 프롬프트로 이어지곤 합니다.
 
-#### 범용 적대적 트리거
+범용 적대적 트리거
 
 범용 적대적 트리거(universal adversarial trigger)는 특히 우려되는 공격군입니다. 거의 모든 입력에 덧붙이기만 해도 모델이 원치 않는 출력을 내게 만드는, 입력 비의존적(input-agnostic) 교란이죠. 개별 프롬프트마다 정교하게 설계해야 하는 입력 특정 공격과 달리, 이 트리거들은 광범위한 입력에 걸쳐 안정적으로 작동합니다.
 
@@ -4624,29 +4622,29 @@ Schwinn et al.(2024)은 이런 임베딩 공간 공격이 아주 적은 최적�
 def embedding_space_attack(
     model, input_text, target_output, learning_rate=0.1, iterations=100
 ):
-    # Get the token embeddings
+# Get the token embeddings
     tokens = tokenize(input_text)
     embeddings = model.get_embeddings(tokens)
 
-    # Clone and make embeddings require gradients
+# Clone and make embeddings require gradients
     adv_embeddings = embeddings.clone().requires_grad_(True)
 
-    # Optimization loop
+# Optimization loop
     optimizer = torch.optim.Adam([adv_embeddings], lr=learning_rate)
 
     for i in range(iterations):
         optimizer.zero_grad()
 
-        # Forward pass with the current adversarial embeddings
+# Forward pass with the current adversarial embeddings
         output = model.forward_with_embeddings(adv_embeddings)
 
-        # Compute loss to maximize the target output probability
+# Compute loss to maximize the target output probability
         loss = -compute_target_probability(output, target_output)
 
-        # Backward pass
+# Backward pass
         loss.backward()
 
-        # Update the embeddings
+# Update the embeddings
         optimizer.step()
 
     return adv_embeddings
@@ -4672,7 +4670,7 @@ def agent_memory_poisoning(agent, trigger_tokens, malicious_action, knowledge_ba
         malicious_action: The target action you want the agent to perform
         knowledge_base: The agent's knowledge or memory storage
     """
-    # Create poisoned example with trigger
+# Create poisoned example with trigger
     poisoned_example = {
         "query": f"How should I drive when {' '.join(trigger_tokens)}?",
         "response": (
@@ -4681,17 +4679,17 @@ def agent_memory_poisoning(agent, trigger_tokens, malicious_action, knowledge_ba
         ),
     }
 
-    # Insert into knowledge base with high embedding similarity to common queries
+# Insert into knowledge base with high embedding similarity to common queries
     knowledge_base.insert(poisoned_example)
 
-    # The poisoned example will now be retrieved when queries semantically
-    # similar to the trigger are made, potentially causing the agent to
-    # recommend the malicious action
+# The poisoned example will now be retrieved when queries semantically
+# similar to the trigger are made, potentially causing the agent to
+# recommend the malicious action
 ```
 
 이런 LLM 에이전트 공격은 에이전트 자신의 지식 베이스에 대한 신뢰를 착취하기 때문에 특히 우려되며, 표준 안전 모니터링으로는 탐지가 어렵습니다.
 
-### 모델 규모와 아키텍처의 영향
+모델 규모와 아키텍처의 영향
 
 LLM의 적대적 공격 취약성에는 여러 요인이 영향을 미칩니다:
 
@@ -4725,7 +4723,7 @@ LLM 기반 고객 지원 챗봇을 배포하는 한 회사가 챗봇이 유해 �
 
 보안 팀은 알려진 공격 패턴에 대한 입력 필터링, 모델 행동의 런타임 모니터링, 사용자에게 응답 전달 전 철저한 출력 검증을 결합한 다계층 방어 전략을 구현했습니다. 이 다면적 접근은 상호작용 과정의 서로 다른 단계별 취약점을 다뤘습니다.
 
-#### 레드팀 결과
+레드팀 결과
 
 초기 보안 시험에서 DAN 스타일 공격(공격자가 대안적 모델 인격을 '언락'했다고 연기하는 것)에 대한 우려스러운 취약점이 드러났습니다. 팀은 단순한 퍼플렉서티 기반 방어가 일부 공격 변형은 식별했지만 더 정교한 시도는 놓친다는 걸 발견했습니다. 돌파구는 자기 평가(self-evaluation) 기능을 구현하면서 열렸습니다. 모델이 응답을 전달 전 스스로 평가하게 한 것이죠.
 
@@ -4790,17 +4788,17 @@ def adversarial_training(
 
     for epoch in range(epochs):
         for batch in dataset:
-            # Get inputs
+# Get inputs
             inputs = tokenizer(
                 batch["text"], return_tensors="pt", padding=True, truncation=True
             )
             input_ids, attention_mask = inputs.input_ids, inputs.attention_mask
 
-            # Clone embeddings for adversarial perturbation
+# Clone embeddings for adversarial perturbation
             embeddings = model.get_input_embeddings()(input_ids)
             delta = torch.zeros_like(embeddings).requires_grad_(True)
 
-            # Inner maximization: generate adversarial examples
+# Inner maximization: generate adversarial examples
             for _ in range(adv_steps):
                 with torch.enable_grad():
                     outputs = model(
@@ -4816,7 +4814,7 @@ def adversarial_training(
                         delta.data = delta.data / norm
                     delta.grad.zero_()
 
-            # Outer minimization: update model parameters
+# Outer minimization: update model parameters
             optimizer.zero_grad()
             outputs = model(
                 inputs_embeds=embeddings + delta.detach(),
@@ -4883,13 +4881,13 @@ def trades_loss(
         perturb_steps: Number of perturbation steps
         beta: Trade-off parameter
     """
-    # Get embeddings
+# Get embeddings
     embeddings = model.get_input_embeddings()(x_natural)
 
-    # Initialize perturbation
+# Initialize perturbation
     delta = torch.zeros_like(embeddings).requires_grad_(True)
 
-    # PGD attack for generating adversarial examples
+# PGD attack for generating adversarial examples
     for _ in range(perturb_steps):
         outputs_natural = model(inputs_embeds=embeddings)
         outputs_adv = model(inputs_embeds=embeddings + delta)
@@ -4904,11 +4902,11 @@ def trades_loss(
         delta.data = torch.clamp(delta.data, -epsilon, epsilon)
         delta.grad.zero_()
 
-    # Natural loss
+# Natural loss
     outputs_natural = model(inputs_embeds=embeddings, labels=y)
     loss_natural = outputs_natural.loss
 
-    # Adversarial loss (KL divergence)
+# Adversarial loss (KL divergence)
     outputs_natural = model(inputs_embeds=embeddings)
     outputs_adv = model(inputs_embeds=embeddings + delta.detach())
     loss_robust = F.kl_div(
@@ -4917,10 +4915,10 @@ def trades_loss(
         reduction='batchmean',
     )
 
-    # TRADES loss
+# TRADES loss
     loss = loss_natural + beta * loss_robust
 
-    # Update model
+# Update model
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
@@ -5138,16 +5136,16 @@ class RobustPrefixTuning:
         self.tokenizer = tokenizer
         self.prefix_length = prefix_length
 
-        # Initialize learnable prefix embeddings
+# Initialize learnable prefix embeddings
         self.prefix_embeddings = nn.Parameter(
             torch.randn(prefix_length, model.config.hidden_size)
         )
 
     def forward(self, input_ids, attention_mask, labels=None):
-        # Get original embeddings
+# Get original embeddings
         inputs_embeds = self.model.get_input_embeddings()(input_ids)
 
-        # Create extended attention mask for prefix
+# Create extended attention mask for prefix
         batch_size = input_ids.shape[0]
         prefix_attention_mask = torch.ones(
             batch_size, self.prefix_length
@@ -5156,7 +5154,7 @@ class RobustPrefixTuning:
             [prefix_attention_mask, attention_mask], dim=1
         )
 
-        # Create embeddings with prefix
+# Create embeddings with prefix
         prefix_embeds_expanded = self.prefix_embeddings.unsqueeze(0).expand(
             batch_size, -1, -1
         )
@@ -5164,7 +5162,7 @@ class RobustPrefixTuning:
             [prefix_embeds_expanded, inputs_embeds], dim=1
         )
 
-        # Forward pass through the model
+# Forward pass through the model
         outputs = self.model(
             inputs_embeds=extended_embeds,
             attention_mask=extended_attention_mask,
@@ -5178,7 +5176,7 @@ class RobustPrefixTuning:
         """Train prefix for robustness using both clean and adversarial data."""
         optimizer = torch.optim.AdamW([self.prefix_embeddings], lr=learning_rate)
         for epoch in range(epochs):
-            # Train on clean data
+# Train on clean data
             for batch in dataset:
                 input_ids = batch["input_ids"]
                 attention_mask = batch["attention_mask"]
@@ -5189,7 +5187,7 @@ class RobustPrefixTuning:
                 loss.backward()
                 optimizer.step()
 
-            # Train on adversarial data
+# Train on adversarial data
             for batch in adversarial_dataset:
                 input_ids = batch["input_ids"]
                 attention_mask = batch["attention_mask"]
@@ -5205,7 +5203,7 @@ class RobustPrefixTuning:
 
 프리픽스 튜닝은 소프트 프롬프트의 힘을 빌려 모델 행동을 유도하면서도 기저 모델 가중치를 동결해 두는 우아한 견고성 확보 방식입니다. 전체 모델을 재학습할 컴퓨팅 자원이 부족한 상황이나, 용도에 따라 여러 개의 특화된 견고 버전이 필요한 상황에서 특히 매력적인 기법입니다. 파라미터 효율성이 높다는 점 덕분에 다양한 방어 전략을 빠르게 실험해 볼 수도 있어, 적대적 견고성 도구 상자에서 값진 위치를 차지합니다. 다만 베이스 모델이 그대로 남아 있기 때문에, 프리픽스 튜닝은 사전 학습과 정렬 과정에서 어느 정도 기본 견고성을 이미 갖춘 모델과 결합할 때 가장 잘 작동합니다.
 
-### 앙상블 방법
+앙상블 방법
 
 앙상블 방법(Ensemble methods)은 여러 모델을 결합해 적대적 공격에 대한 견고성을 높입니다. 발상은 간단합니다. 서로 다른 모델은 서로 다른 유형의 공격에 취약할 수 있으니, 이를 조합하면 더 포괄적인 보호가 가능하다는 것이죠.
 
@@ -5269,25 +5267,25 @@ def iterative_adversarial_training(
         Robustly trained target model
     """
     for i in range(iterations):
-        # Generate adversarial examples with current attacker
+# Generate adversarial examples with current attacker
         print(f"Iteration {i+1}/{iterations}")
         adversarial_examples = adversarial_model.generate_attacks(
             target_model, training_data
         )
 
-        # Evaluate current target model vulnerability
+# Evaluate current target model vulnerability
         vulnerability_rate = evaluate_attack_success(
             target_model, adversarial_examples
         )
         print(f"Current vulnerability rate: {vulnerability_rate:.2f}")
 
-        # Fine-tune target model on mixed adversarial and clean data
+# Fine-tune target model on mixed adversarial and clean data
         augmented_data = training_data + generate_safe_responses(
             adversarial_examples
         )
         target_model = finetune(target_model, augmented_data)
 
-        # Update adversarial model to find new vulnerabilities
+# Update adversarial model to find new vulnerabilities
         successful_attacks = filter_successful_attacks(
             adversarial_examples, target_model
         )
@@ -5358,7 +5356,7 @@ LLM 레드팀링 방법론은 크게 두 갈래로 나뉩니다. 사람의 창�
 
 마지막으로 피드백 루프가 결정적입니다. 발견된 취약점의 데이터베이스를 유지해 시간에 따른 진행 상황을 추적해야 합니다. 발견 사항을 모델 안전 메커니즘 개선에 활용해야 합니다. 과거에 발견했던 취약점을 계속해서 재시험해야 합니다. 그리고 모델이 좋아짐에 따라 레드팀링 접근법도 갱신해야 합니다.
 
-### 레드팀링 도구와 프레임워크
+레드팀링 도구와 프레임워크
 
 LLM 보안 분야에서는 레드팀링 방법론이 크게 발전해 왔고 여러 조직이 취약점을 체계적으로 찾아내기 위한 구조화된 접근을 만들었습니다.
 
@@ -5406,26 +5404,26 @@ def automated_multi_round_redteaming(
     for i in range(rounds):
         print(f"Red-teaming round {i+1}/{rounds}")
 
-        # Generate new attack prompts based on previous successful attacks
+# Generate new attack prompts based on previous successful attacks
         new_prompts = adversarial_llm.generate(
             successful_attacks, num_prompts=200
         )
 
-        # Generate responses with target model
+# Generate responses with target model
         responses = target_llm.generate(new_prompts)
 
-        # Evaluate responses for safety violations
+# Evaluate responses for safety violations
         evaluation_results = [
             evaluator(p, r) for p, r in zip(new_prompts, responses)
         ]
 
-        # Filter successful attacks
+# Filter successful attacks
         successful_attacks = [
             p for p, (is_safe, *rest) in zip(new_prompts, evaluation_results)
             if not is_safe
         ]
 
-        # Find successful defenses
+# Find successful defenses
         successful_defenses = [
             (p, r)
             for p, r, (is_safe, is_helpful) in zip(
@@ -5439,10 +5437,10 @@ def automated_multi_round_redteaming(
             f"{len(successful_attacks) / len(new_prompts):.2f}"
         )
 
-        # Fine-tune adversarial model on successful attacks
+# Fine-tune adversarial model on successful attacks
         adversarial_llm = finetune(adversarial_llm, successful_attacks)
 
-        # Fine-tune target model on successful defenses
+# Fine-tune target model on successful defenses
         target_llm = finetune(target_llm, successful_defenses)
 
     return target_llm, adversarial_llm
@@ -5568,15 +5566,15 @@ def evaluate_distribution_shift_robustness(model, in_domain_data, out_domain_dat
     Returns:
         Dictionary of in-domain and out-of-domain performance metrics
     """
-    # Evaluate in-domain performance
+# Evaluate in-domain performance
     in_domain_results = evaluate_model(model, in_domain_data)
 
-    # Evaluate performance on distribution-shifted data
+# Evaluate performance on distribution-shifted data
     out_domain_results = {}
     for domain, data in out_domain_data.items():
         out_domain_results[domain] = evaluate_model(model, data)
 
-    # Calculate robustness ratios
+# Calculate robustness ratios
     robustness_ratios = {}
     for domain, results in out_domain_results.items():
         robustness_ratios[domain] = (
@@ -5615,18 +5613,18 @@ def human_in_the_loop_evaluation(model, attack_examples, evaluators, criteria):
     """
     results = []
 
-    # Generate model responses
+# Generate model responses
     responses = [model.generate(example) for example in attack_examples]
 
-    # Human evaluation
+# Human evaluation
     for i, (example, response) in enumerate(zip(attack_examples, responses)):
         evaluator_ratings = []
         for evaluator in evaluators:
-            # Blind evaluation (evaluator doesn't see the attack method)
+# Blind evaluation (evaluator doesn't see the attack method)
             ratings = evaluator.rate(example, response, criteria)
             evaluator_ratings.append(ratings)
 
-        # Aggregate ratings
+# Aggregate ratings
         avg_ratings = {
             c: sum(e[c] for e in evaluator_ratings) / len(evaluators)
             for c in criteria
@@ -5691,10 +5689,10 @@ def evaluate_agent_robustness(agent, adversarial_inputs, environment):
     }
 
     for input_text in adversarial_inputs:
-        # Track the agent's internal state at each step
+# Track the agent's internal state at each step
         trace = agent.process_with_tracing(input_text, environment)
 
-        # Assess each component for vulnerability
+# Assess each component for vulnerability
         metrics["input_interpretation"].append(
             assess_interpretation_safety(trace["interpreted_instruction"])
         )
@@ -5711,7 +5709,7 @@ def evaluate_agent_robustness(agent, adversarial_inputs, environment):
             assess_outcome_safety(trace["executed_actions"], environment)
         )
 
-    # Aggregate metrics
+# Aggregate metrics
     return {
         k: {"mean": sum(v) / len(v), "worst_case": min(v)}
         for k, v in metrics.items()
@@ -5773,7 +5771,7 @@ def compute_attack_metrics(
     """
     metrics = {}
 
-    # Attack Success Rate
+# Attack Success Rate
     successes = sum(
         1
         for resp, target in zip(model_responses, target_responses)
@@ -5781,7 +5779,7 @@ def compute_attack_metrics(
     )
     metrics["attack_success_rate"] = successes / len(original_inputs)
 
-    # Perturbation Size
+# Perturbation Size
     word_perturbation_rates = []
     char_perturbation_rates = []
     for orig, adv in zip(original_inputs, adversarial_inputs):
@@ -5797,11 +5795,11 @@ def compute_attack_metrics(
         char_perturbation_rates
     ) / len(char_perturbation_rates)
 
-    # Attack Efficiency
+# Attack Efficiency
     metrics["avg_query_count"] = sum(query_counts) / len(query_counts)
     metrics["query_efficiency"] = [1 / count for count in query_counts]
 
-    # Semantic Preservation
+# Semantic Preservation
     semantic_similarities = [
         compute_semantic_similarity(orig, adv)
         for orig, adv in zip(original_inputs, adversarial_inputs)
@@ -5861,10 +5859,10 @@ def evaluate_defense(
     """
     metrics = {}
 
-    # Apply defense to model
+# Apply defense to model
     defended_model = defense_method.apply(model)
 
-    # Measure performance on clean inputs
+# Measure performance on clean inputs
     start_time = time.time()
     clean_outputs_no_defense = [model.generate(input) for input in clean_inputs]
     base_inference_time = time.time() - start_time
@@ -5880,7 +5878,7 @@ def evaluate_defense(
         clean_outputs_with_defense, original_outputs
     )
 
-    # Measure defense against adversarial inputs
+# Measure defense against adversarial inputs
     adv_outputs_no_defense = [
         model.generate(input) for input in adversarial_inputs
     ]
@@ -5888,21 +5886,21 @@ def evaluate_defense(
         defended_model.generate(input) for input in adversarial_inputs
     ]
 
-    # Attack success without defense
+# Attack success without defense
     attack_success_no_defense = sum(
         1
         for out, target in zip(adv_outputs_no_defense, target_outputs)
         if is_attack_successful(out, target)
     )
 
-    # Attack success with defense
+# Attack success with defense
     attack_success_with_defense = sum(
         1
         for out, target in zip(adv_outputs_with_defense, target_outputs)
         if is_attack_successful(out, target)
     )
 
-    # Calculate metrics
+# Calculate metrics
     metrics["defense_success_rate"] = (
         1 - (attack_success_with_defense / attack_success_no_defense)
         if attack_success_no_defense > 0
@@ -5913,7 +5911,7 @@ def evaluate_defense(
     )
     metrics["time_overhead"] = defended_inference_time / base_inference_time
 
-    # For detection-based defenses
+# For detection-based defenses
     if hasattr(defense_method, "is_adversarial"):
         detection_results = [
             defense_method.is_adversarial(input)
@@ -5957,13 +5955,13 @@ def adaptive_robustness_evaluation(
     known_defenses = []
 
     for i in range(iterations):
-        # Evaluate current attacks against each defense
+# Evaluate current attacks against each defense
         defense_metrics = {}
         for defense in defenses:
             metrics = evaluate_defense(model, defense, current_attacks)
             defense_metrics[defense.name] = metrics
 
-        # Record results for this iteration
+# Record results for this iteration
         results.append(
             {
                 "iteration": i,
@@ -5972,14 +5970,14 @@ def adaptive_robustness_evaluation(
             }
         )
 
-        # Add the most effective defense to known defenses
+# Add the most effective defense to known defenses
         best_defense = max(
             defenses,
             key=lambda d: defense_metrics[d.name]["defense_success_rate"],
         )
         known_defenses.append(best_defense.name)
 
-        # Generate new attacks with knowledge of defenses
+# Generate new attacks with knowledge of defenses
         current_attacks = attack_generator.generate_attacks(known_defenses)
 
     return results
@@ -6053,7 +6051,7 @@ LLM이 계속 진화하며 핵심 응용에 깊이 통합될수록, 적대적 �
 
 이 장에서는 앞 장에서 확립한 프라이버시 보장을 유지하면서 이런 윤리적 과제에 접근하는 실용적 방법을 탐구한다. 파인튜닝된 모델에서 편향을 탐지하고 완화하는 기법, 투명성과 해석 가능성을 높이는 방법, 프라이버시 제약과 공정성 목표의 균형을 잡는 전략을 살펴볼 것이다. 그 과정에서 여러분의 작업에 바로 적용할 수 있는 구체적인 코드 예제와 실천 가능한 지침을 만나게 될 것이다.
 
-## 개인화에서의 편향과 공정성 문제
+개인화에서의 편향과 공정성 문제
 
 LLM을 개인화 응용에 맞춰 파인튜닝하면, 누구의 선호를 우선할지, 어떤 집단에 맞출지, 엣지 케이스와 소수 집단을 어떻게 다룰지 결정을 내리게 된다. 이런 결정은 공정성과 형평성에 심대한 함의를 가질 수 있다. 특히 결과 모델이 의료, 금융, 형사 사법 같은 고위험 도메인에 배포될 때 그렇다.
 
@@ -6343,14 +6341,14 @@ def extract_hidden_states(model, tokenizer, sentences, target_word="assertive"):
         with torch.no_grad():
             outputs = model(**inputs, output_hidden_states=True)
 
-        # Get hidden states from the last layer
+# Get hidden states from the last layer
         hidden_states = outputs.hidden_states[-1]
 
-        # Find the token position for target word
+# Find the token position for target word
         tokens = tokenizer.tokenize(sentence)
         target_idx = tokens.index(target_word)
 
-        # Extract hidden state at that position
+# Extract hidden state at that position
         target_hidden_state = hidden_states[0, target_idx, :].numpy()
         hidden_states_list.append(target_hidden_state)
 
@@ -6400,7 +6398,7 @@ from scipy.stats import chi2_contingency
 def analyze_bias(sentences, predictions):
     names = [s.split()[0] for s in sentences]
 
-    # Different predictions for same action
+# Different predictions for same action
     bias_detected = len(set(predictions)) > 1
 
     if bias_detected:
@@ -6673,7 +6671,7 @@ AI가 매개하는 세계에서 진실과 허구를 구별하는 일의 어려�
 
 궁극적인 목표는 비판적이고 성찰적인 렌즈를 통해 생성형 AI 시스템의 개발과 배포를 우리의 문화적 가치와 우선순위에 부합하는 방향으로 이끄는 동시에, 새로운 형태의 창작, 표현, 사회 혁신을 가능하게 하는 이 기술의 잠재력을 활용하는 것일 건다. 이는 이런 시스템들에 박제된 문화적 전제와 편향을 마음에 새기는 것을 의미한다. AI 매개 문화 변화의 파도를 타는 열쇠는 개방성과 적응력, 그리고 계속되는 대화와 협상에 나설 의지이다. 이어지는 절에서 살펴보겠지만 이를 위해서는 기술적 해법뿐 아니라 이 강력한 새 기술을 통치하는 사회적·법적·윤리적 프레임워크에 대한 근본적인 재고가 필요하다.
 
-## 규제와 책임성을 위한 적응 가능한 법적 프레임워크
+규제와 책임성을 위한 적응 가능한 법적 프레임워크
 
 LLM 기반 개인화 AI 시스템이 일상에서 갈수록 보편화됨에 따라, 책임 있는 개발과 배포를 보장하는 견고하고 적응 가능한 법적 프레임워크의 필요성이 절실해지고 있다. 이 절에서는 이 기술들이 제기하는 법적·규제적 과제의 핵심 측면 몇 가지를 살펴보고 대응 방안을 논의한다.
 
@@ -7006,7 +7004,7 @@ def dp_train(
             loss = outputs.loss
             loss.backward()
 
-            # DP step: clip gradients and add Gaussian noise
+# DP step: clip gradients and add Gaussian noise
             clip_grad_norm_(model.parameters(), max_norm=max_grad_norm)
             for param in model.parameters():
                 if param.grad is not None:
@@ -7148,7 +7146,7 @@ def dp_train(
             loss = outputs.loss
             loss.backward()
 
-            # DP step: clip gradients and add Gaussian noise
+# DP step: clip gradients and add Gaussian noise
             clip_grad_norm_(model.parameters(), max_norm=max_grad_norm)
             for p in model.parameters():
                 if p.grad is not None:

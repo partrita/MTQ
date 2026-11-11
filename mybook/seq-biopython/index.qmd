@@ -93,7 +93,7 @@ from Bio import AlignIO
 ## alignment = AlignIO.read("my_alignment.aln", "clustal")
 ## print(f"정렬 길이: {alignment.get_alignment_length()}")
 ## for record in alignment:
-##     print(f"{record.id}: {record.seq}")
+## print(f"{record.id}: {record.seq}")
 ```
 
 ### 4. Pairwise2를 이용한 전역 및 지역 정렬
@@ -128,10 +128,10 @@ parser = PDBParser()
 
 ## 모델, 체인, 잔기(Residue), 원자(Atom) 계층 구조 탐색
 ## for model in structure:
-##     for chain in model:
-##         for residue in chain:
-##             if "CA" in residue:  # Alpha carbon 확인
-##                 print(f"Residue: {residue.get_resname()}, Atom: {residue['CA'].get_vector()}")
+## for chain in model:
+## for residue in chain:
+## if "CA" in residue:  # Alpha carbon 확인
+## print(f"Residue: {residue.get_resname()}, Atom: {residue['CA'].get_vector()}")
 ```
 
 ## 6. 계통학 분석
@@ -202,7 +202,7 @@ Biopython은 생명정보학 분석을 위한 핵심 도구이다. 다만 이 �
 5. Dask: 단일 컴퓨터의 메모리를 넘어서는 병렬 컴퓨팅 지원.
 
 
-## 연습 문제
+연습 문제
 
 1. NCBI Entrez를 사용하여 관심 있는 유전자의 GenBank 파일을 다운로드하고, 해당 서열의 특정 영역(Exon)만 추출하여 FASTA 형식으로 저장하는 스크립트를 작성하시오.
 2. 두 개 이상의 단백질 서열을 입력받아 Smith-Waterman 알고리즘(Local Alignment)을 수행하고, 가장 높은 스코어를 가진 정렬 결과를 출력하시오.

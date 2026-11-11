@@ -69,7 +69,7 @@ AI의 역량이 매력적인 이유는 새로운 도구의 잠재력을 열어�
 
 이 장을 마치고 나면, 독자 여러분은 자신이 개발하는 애플리케이션 로드맵 내에서 생성형 AI의 역할을 명확히 정의하고 그에 수반되는 과제를 식별할 수 있게 될 것이다.
 
-### 생성형 AI란 무엇인가?
+생성형 AI란 무엇인가?
 
 *생성형 AI(Generative AI)*는 데이터셋으로 훈련된 모델을 사용하여 새로운 콘텐츠를 생성하는 데 초점을 맞춘 머신러닝의 한 분야다. *훈련된 모델(Trained Model)*은 학습 데이터의 패턴과 확률 분포를 표현하는 수학적 모델이며 훈련 데이터셋과 유사한 새로운 데이터를 만들어낼 수 있다.
 
@@ -115,7 +115,7 @@ VAE는 정보를 *잠재 공간(Latent Space)*에 임베딩할 수 있다. 잠�
 
 한 가지 확실한 사실은 생성형 AI 서비스가 미래의 애플리케이션을 이끌어갈 핵심 동력이 될 것이라는 점이다. 그 이유를 자세히 살펴보자.
 
-### 생성형 AI 서비스가 미래의 애플리케이션을 주도하는 이유
+생성형 AI 서비스가 미래의 애플리케이션을 주도하는 이유
 
 우리는 일상과 비즈니스의 문제를 자동화하여 해결하기 위해 컴퓨터를 사용한다.
 
@@ -160,7 +160,7 @@ VAE는 정보를 *잠재 공간(Latent Space)*에 임베딩할 수 있다. 잠�
 
 [예제 1-1](#image_prompt)의 장면 설명을 [DALL-E 3(OpenAI)](https://oreil.ly/Z80Qm)와 같은 이미지 생성 도구에 입력하면 [그림 1-3](#dalle_image)과 같은 놀라운 이미지가 생성된다.
 
-##### 그림 1-3. DALL-E 3가 생성한 이미지
+그림 1-3. DALL-E 3가 생성한 이미지
 
 생성형 AI 도구가 복잡하고 어려운 개념을 시각화하고 소통하는 데 얼마나 강력한 도움을 주는지 확인하는 것은 매우 흥미로운 경험이다. 이러한 도구는 인간의 상상력을 확장하고 잠재된 창의성을 일깨워준다. 새로운 아이디어를 떠올리기 어렵거나 막막한 순간에 언제든 생성형 AI의 도움을 받을 수 있다.
 
@@ -224,7 +224,7 @@ VAE는 정보를 *잠재 공간(Latent Space)*에 임베딩할 수 있다. 잠�
 
 이러한 사례들은 기존 애플리케이션에 통합할 수 있는 수많은 가능성 중 빙산의 일각에 불과하다. 생성형 모델이 지닌 놀라운 유연성과 민첩성은 미래의 혁신적인 애플리케이션을 위한 무한한 기회를 열어주고 있다.
 
-#### 복잡한 시스템과의 직관적 인터페이스 역할
+복잡한 시스템과의 직관적 인터페이스 역할
 
 오늘날에도 여전히 많은 사용자가 데이터베이스나 전문 개발자 도구와 같은 복잡한 시스템을 다루는 데 큰 어려움을 겪고 있다. 비개발자 직군이 복잡한 시스템에 명령을 실행하는 전문 기술을 갖추지 못한 채 데이터에 접근하거나 업무를 처리해야 하는 경우가 많다. 이때 LLM과 생성형 AI 모델은 이러한 복잡한 시스템과 사용자 사이를 잇는 훌륭한 인터페이스 역할을 수행한다.
 
@@ -252,7 +252,7 @@ VAE는 정보를 *잠재 공간(Latent Space)*에 임베딩할 수 있다. 잠�
 
 종합적으로 볼 때, 바로 이러한 이유들 때문에 앞으로 훨씬 더 많은 개발자가 자신의 애플리케이션에 생성형 AI 기능을 통합하게 될 것이다. 비록 이 기술은 아직 태동기에 있고 본격적인 대중화에 앞서 해결해야 할 과제들이 남아 있지만 그 잠재력은 무궁무진하다.
 
-### 생성형 AI 서비스 구축 방법
+생성형 AI 서비스 구축 방법
 
 생성형 모델이 보다 정확하고 맥락에 맞는 답변을 생성하려면 풍부한 맥락 정보에 접근할 수 있어야 한다. 어떤 경우에는 사용자를 대신해 커스텀 함수를 실행하여 주문을 넣는 등 실제 액션을 수행할 수 있는 외부 도구 접근 권한이 필요할 수도 있다. 따라서 개발자는 외부 데이터 소스(데이터베이스, API 등)와의 연동을 처리하고 모델에 대한 사용자의 접근을 제어할 수 있도록 생성형 모델을 감싸는 API 래퍼(Wrapper)를 구축해야 한다.
 
@@ -316,7 +316,7 @@ Django 역시 Django REST framework(DRF)를 통한 API 구축 및 MVC(Model-View
 
 데이터 프라이버시나 보안 문제와 같은 일부 과제는 소프트웨어 엔지니어링 모범 사례(Best practice)를 통해 해결할 수 있으며 이에 대해서는 이 책에서 자세히 살펴볼 것이다. 다른 과제들을 해결하기 위해서는 모델에 입력되는 프롬프트를 최적화하거나, 특정 사용 사례에 맞춘 새로운 예제를 통해 모델의 파라미터를 조정하는 파인튜닝(Fine-tuning, 미세 조정)을 적용하여 출력의 관련성, 품질, 일관성 및 정합성을 개선해야 한다.
 
-### 캡스톤 프로젝트 개요
+캡스톤 프로젝트 개요
 
 이 책에서는 FastAPI를 기반 웹 프레임워크로 삼아 실전 생성형 AI 서비스를 함께 구축해 나갈 것이다.
 
@@ -546,7 +546,7 @@ FastAPI를 사용하면 애플리케이션 라우터에 [미들웨어(Middleware
 
 백엔드 개발에서 미들웨어를 활용해 [응답에 커스텀 헤더를 추가](https://oreil.ly/Yfsqg)하거나, 인입되는 요청의 유효성을 1차적으로 검증하고, [교차 출처 리소스 공유(CORS, Cross-Origin Resource Sharing) 요청](https://oreil.ly/6u1dI)을 지원하며, 트래픽을 로깅하고 모니터링하는 것은 매우 일반적인 패턴이다. 나아가 다양한 서드파티 미들웨어뿐만 아니라 [커스텀 미들웨어](https://oreil.ly/AJKJt)도 손쉽게 구현하여 활용할 수 있다.
 
-#### 모든 서비스 계층에 대한 완벽한 커스터마이징 자유도
+모든 서비스 계층에 대한 완벽한 커스터마이징 자유도
 
 웹 프레임워크의 기본 제약에서 벗어나 독자적인 동작을 구현해야 할 때가 있다. FastAPI는 기반 웹 프레임워크인 Starlette의 베이스 클래스를 상속하는 커스텀 클래스를 정의할 수 있게 함으로써 이를 훌륭히 해결한다. 예를 들어 [기본 예외 핸들러를 오버라이드](https://oreil.ly/qgvgO)하거나, [커스텀 ASGI 미들웨어](https://oreil.ly/1A8OD)를 추가하거나, [커스텀 응답 클래스](https://oreil.ly/jLXUf)를 직접 생성할 수 있다.
 
@@ -652,7 +652,7 @@ FastAPI의 또 다른 강력한 핵심 기능은 *제어의 역전(IoC, Inversio
 
 예를 들어 [예제 2-4](#dependency_pagination)와 같이 여러 API 라우트에 걸쳐 공통 쿼리 파라미터(예: 페이지네이션 및 필터링)를 간편하게 지정할 수 있다.
 
-##### 예제 2-4. 페이지네이션 의존성을 활용한 코드 중복 제거
+예제 2-4. 페이지네이션 의존성을 활용한 코드 중복 제거
 
 ```
 
@@ -964,7 +964,7 @@ FastAPI는 이를 돕기 위해 APIRouter 클래스를 제공한다.
 
 우수한 컨트롤러 설계는 항상 의존성을 사용하여 실행에 필요한 데이터나 로직을 주입받는다. [그림 2-4](#api_routers_controllers)를 참조하자.
 
- ###### 그림 2-4. API 라우터와 컨트롤러
+###### 그림 2-4. API 라우터와 컨트롤러
 
 서비스/프로바이더: 서비스는 비즈니스 로직을 구현하기 위해 여러 내부 작업을 결합하거나 조율(orchestrating)하는 역할을 담당하며 프로바이더는 외부 시스템과의 인터페이스를 구현한다.
 
@@ -982,7 +982,7 @@ FastAPI는 이를 돕기 위해 APIRouter 클래스를 제공한다.
 
 이 계층에서 추상 인터페이스를 구현하여 CRUD(create, read, update, delete) 작업을 사용하는 모든 리포지토리에 걸쳐 일관된 설계를 강제할 수 있다. [그림 2-5](#services_providers_repositories)를 참조하자.
 
- ###### 그림 2-5. 서비스, 프로바이더, 리포지토리
+###### 그림 2-5. 서비스, 프로바이더, 리포지토리
 
 스키마/모델: 서비스 전반에 걸쳐 데이터가 흐를 때 데이터에 대한 타입 안정성(type-safety), 구조 및 유효성 검사 로직을 강제하는 역할을 담당한다.
 
@@ -990,7 +990,7 @@ FastAPI는 이를 돕기 위해 APIRouter 클래스를 제공한다.
 
 미들웨어: 애플리케이션 컨트롤러/라우트 핸들러로 전달되기 전과 전달된 후의 요청과 응답을 처리한다([그림 2-6](#middlewares) 참조).
 
- ###### 그림 2-6. 미들웨어
+###### 그림 2-6. 미들웨어
 
 의존성: 비즈니스 로직을 지원하기 위해 컨트롤러에 주입할 수 있는 사용자가 정의한 재사용 가능한 함수를 포함한다. 의존성은 캐시될 수 있으며 다른 의존성에 의존할 수도 있다.
 
@@ -998,13 +998,13 @@ FastAPI는 이를 돕기 위해 APIRouter 클래스를 제공한다.
 
 매퍼: 한 스키마에서 다른 스키마로 데이터를 매핑하는 역할을 하며 라우터 계층의 UserRequest 스키마에서 데이터 접근 계층의 UserInDB 스키마로 데이터를 전달하는 등 계층 간 데이터 전달 시 자주 사용된다. [그림 2-7](#models_pipes_mappers)을 참조하자.
 
- ###### 그림 2-7. 모델, 파이프, 매퍼
+###### 그림 2-7. 모델, 파이프, 매퍼
 
 예외 필터: 여러 계층에 걸쳐 예외를 일관되게 처리한다.
 
 가드: 남용으로부터 컨트롤러를 안전하게 보호한다. 인증 및 인가 로직을 의존성이나 미들웨어로 구현하여 가드 역할을 하도록 할 수 있다([그림 2-8](#guards) 참조).
 
- ###### 그림 2-8. 가드
+###### 그림 2-8. 가드
 
 [예제 2-8](#modular_structure)에 나온 모듈형 프로젝트 구조를 다시 살펴보면, 모듈형 프로젝트 구조 안에 어니언 디자인 패턴의 다양한 요소가 반영되어 있음을 알 수 있다. 이 패턴을 따르면 유지보수성과 테스트 용이성, 확장성이 뛰어난 FastAPI 생성형 AI 서비스를 구축할 수 있다.
 
@@ -1082,7 +1082,7 @@ FastAPI는 내부 스레드 풀을 통한 멀티스레딩을 활용하여 동기
 
 서비스를 확장할 때의 해결책은 무거운 모델을 별도로 서빙하고 FastAPI는 인입 및 송출되는 데이터를 인증하고 관리하는 용도로 사용하는 것이다.
 
-#### CPU와 GPU 간의 비효율적인 AI 워크로드 분할
+CPU와 GPU 간의 비효율적인 AI 워크로드 분할
 
 CPU는 주로 요청 변환 및 유효성 검사 작업을 처리하는 반면, GPU는 연산 집약적인 모델 추론을 실행하고 병렬화할 수 있다. BentoML과 같은 일부 특화된 머신러닝(ML) 웹 프레임워크에서는 CPU와 GPU 간에 AI 워크로드를 효율적으로 분할할 수도 있다.
 
@@ -1102,7 +1102,7 @@ CPU와 GPU에 걸쳐 AI 워크로드를 분할하면 데이터 준비 및 후처
 
 놀라운 역량에도 불구하고 FastAPI는 생성형 AI가 부상하기 전에 개발되었다. 그 결과 FastAPI는 최근 들어 AI 서빙과 머신러닝(ML) 워크플로를 지원하기 시작한 범용 웹 프레임워크로 남아 있다. 하지만 수십억 개 매개변수(billion-parameter)를 가진 복잡하고 리소스 집약적인 모델을 서빙하는 등의 특정 사용 사례에서는 *BentoML*과 같은 다른 프레임워크를 검토해 볼 가치가 있다.
 
-### BentoML: 리소스 집약적 AI 모델 실행을 위한 FastAPI 영감 프레임워크
+BentoML: 리소스 집약적 AI 모델 실행을 위한 FastAPI 영감 프레임워크
 
 BentoML 역시 Starlette 기반으로 구축되었으며 FastAPI의 디자인 패턴을 염두에 두고 설계되었지만 머신러닝에 특화되어 있다. BentoML의 아키텍처는 웹 요청 처리와 모델 추론(Inference)의 확장을 분리할 수 있어 컴퓨팅 자원 분배에 높은 유연성을 제공한다.
 
@@ -1341,7 +1341,7 @@ LLM의 인기가 높아짐에 따라 이들이 어떻게 훈련되고 데이터�
 
 [그림 3-8](#embedding_vectors)은 전체 토큰화, 임베딩 및 훈련 과정을 보여준다.
 
-##### 그림 3-8. 텍스트와 같은 순차적 데이터를 토큰 벡터 및 토큰 임베딩으로 처리하는 과정
+그림 3-8. 텍스트와 같은 순차적 데이터를 토큰 벡터 및 토큰 임베딩으로 처리하는 과정
 
 학습된 임베딩 레이어가 준비되면, [그림 3-1](#transformer_architecture)에 나와 있는 트랜스포머 모델에 새로운 입력 텍스트를 임베딩하는 데 사용할 수 있다.
 
@@ -2186,7 +2186,7 @@ Sora의 네트워크 아키텍처는 또한 고차원 시각 데이터를 잠재
 
 확산 프로세스는 이미지 기반 SD 모델과 유사하다. 이미지에 일반적으로 사용되는 2D U-Net 대신, OpenAI는 [그림 3-20](#images_to_videos)에 나와 있듯이 시간 축에 따른 일련의 프레임(비디오를 구성함)을 세 번째 차원으로 갖는 3D U-Net을 훈련시켰다.
 
-##### 그림 3-20. 일련의 이미지가 모여 비디오를 형성한다
+그림 3-20. 일련의 이미지가 모여 비디오를 형성한다
 
 OpenAI는 [그림 3-21](#videos_to_patches)에 나와 있듯이 비디오를 패치로 압축함으로써, 해상도, 재생 시간, 화면비가 다양한 여러 유형의 비디오와 이미지로 훈련할 때 고차원 표현을 학습하는 확장성을 달성할 수 있음을 입증했다.
 
@@ -2717,7 +2717,7 @@ def generate_text_controller(query: str):
 
 지금까지 모델 서빙을 위한 몇 가지 선택지를 살펴보았다. 이번 장을 마무리하기 전에 마지막으로 구현해 볼 시스템은 바로 서비스의 로깅과 모니터링이다.
 
-### 서비스 모니터링에서 미들웨어의 역할
+서비스 모니터링에서 미들웨어의 역할
 
 프롬프트와 응답, 그리고 요청 및 응답 토큰 사용량을 함께 기록하는 간단한 모니터링 도구를 구현할 수 있다. 로깅 시스템을 구현하려면 모델 서빙 컨트롤러 내부에 몇 가지 로깅 함수를 작성하면 된다. 하지만 모델과 엔드포인트가 여러 개라면 FastAPI의 미들웨어 메커니즘을 활용하는 것이 훨씬 효과적이다.
 
@@ -3031,7 +3031,7 @@ def calculate_usage_costs(
     model: SupportedModels,
 ) -> tuple[float, float, float]:
     if model not in price_table:
-        # raise at runtime - in case someone ignores type errors
+# raise at runtime - in case someone ignores type errors
         raise ValueError(f"Cost calculation is not supported for {model} model.")
     price = price_table[model]
     req_costs = price * count_tokens(prompt) / 1000
@@ -3090,9 +3090,9 @@ PriceTableType = Annotated[
 
 prices: PriceTableType = {
     "gpt-4o": 0.000638,
-    # error: Dict entry 1 has incompatible type "Literal['gpt4-o']" [dict-item]
+# error: Dict entry 1 has incompatible type "Literal['gpt4-o']" [dict-item]
     "gpt4-o": 0.000638,
-    # error: Dict entry 2 has incompatible type "Literal['gpt-4']" [dict-item]
+# error: Dict entry 2 has incompatible type "Literal['gpt-4']" [dict-item]
     "gpt-4": 0.000638,
 }
 
@@ -3148,7 +3148,7 @@ class MessageCostReport:
 
 def calculate_usage_costs(message: Message) -> MessageCostReport:
     if message.model not in prices :
-        # raise at runtime - in case someone ignores type errors
+# raise at runtime - in case someone ignores type errors
         raise ValueError(
             f"Cost calculation is not supported for {message.model} model."
         )
@@ -3323,8 +3323,8 @@ class ModelRequest(BaseModel):
 
 class ModelResponse(BaseModel):
     request_id: Annotated[str, Field(default_factory=lambda: uuid4().hex)]
-    # no defaults set for ip field
-    # raise ValidationError if a valid IP address or None is not provided
+# no defaults set for ip field
+# raise ValidationError if a valid IP address or None is not provided
     ip: Annotated[str, IPvAnyAddress] | None
     content: Annotated[str | None, Field(min_length=0, max_length=10000)]
     created_at: datetime = datetime.now()
@@ -3528,7 +3528,6 @@ Pydantic 모델은 JSON으로 직렬화할 수 있으므로, [예제 4-11](#mod
 ##### 예제 4-11. `TextModelResponse` 모델 내보내기 및 직렬화
 
 ```
->> response = TextModelResponse(content="FastAPI Generative AI Service", ip=None)
 >> response.model_dump(exclude_none=True)
 {'content': 'FastAPI Generative AI Service',
  'cost': 0.06,
@@ -3948,7 +3947,7 @@ AI 추론 워크로드를 컴퓨팅 바운드가 아닌 I/O 바운드로 취급�
 
 이 절에서는 AI 워크로드 실행 중 I/O 바운드 작업으로 인해 메인 서버 프로세스가 블로킹되는 것을 방지하기 위해 비동기 프로그래밍을 활용하는 방법을 알아본다. 또한 파이썬에서 비동기 애플리케이션을 작성할 수 있게 해주는 asyncio 프레임워크에 대해서도 배운다.
 
-#### 동기 실행과 비동기 실행의 차이
+동기 실행과 비동기 실행의 차이
 
 어떤 애플리케이션을 비동기 애플리케이션이라고 할까? 이 질문에 답하기 위해 동기 프로그램과 비동기 프로그램을 비교해 보자.
 
@@ -4020,8 +4019,6 @@ Start of async task
 Start of async task
 Start of async task
 Task resumed after 5 seconds
-Task resumed after 5 seconds
-Task resumed after 5 seconds
 
 Process completed in: 5.0057971477508545 seconds
 """
@@ -4044,7 +4041,7 @@ Process completed in: 5.0057971477508545 seconds
 
 [예제 5-3](#await_keyword)은 `async`와 `await` 키워드를 사용하여 비동기 함수를 선언하고 실행하는 방법을 보여준다.
 
-###### 예제 5-3. `async` 및 `await` 키워드 사용 방법
+예제 5-3. `async` 및 `await` 키워드 사용 방법
 
 ```
 import asyncio
@@ -5585,7 +5582,7 @@ AI 서비스는 여러 동시 핸드셰이크를 처리할 수 있어야 하며 
 
 HTTP 업그레이드 요청에는 [예제 6-1](#websocket_handshake)과 같이 필수 헤더 세트가 포함되어야 한다.
 
-###### 예제 6-1. HTTP를 통한 WebSocket 연결 핸드셰이크
+예제 6-1. HTTP를 통한 WebSocket 연결 핸드셰이크
 
 ```
 GET ws://localhost:8000/generate/text/stream HTTP/1.1
@@ -6549,7 +6546,7 @@ WebSocket 프로토콜은 일반적인 HTTP 상태 코드(4xx 또는 5xx)를 지
 
 이번 장을 마치고 나면 생성형 AI 애플리케이션에서 데이터베이스 관련 문제를 선택, 구성, 해결하는 데 훨씬 더 큰 자신감을 갖게 될 것이다.
 
-### 데이터베이스의 역할
+데이터베이스의 역할
 
 백엔드 서비스를 구축할 때는 애플리케이션 상태를 유지하고 사용자 데이터를 저장하기 위해 데이터베이스가 필요한 경우가 많다. 하지만 어떤 경우에는 애플리케이션에 데이터베이스가 전혀 필요하지 않으며 데이터베이스를 통합하면 서비스의 복잡도가 크게 증가할 수 있으므로 굳이 추가하려고 애쓸 필요가 없다.
 
@@ -6810,7 +6807,7 @@ from database import engine, init_db
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     await init_db()
-    # other startup operations within the lifespan
+# other startup operations within the lifespan
     ...
     yield
     await engine.dispose()
@@ -7509,7 +7506,7 @@ async def stream_llm_controller(
     session: DBSessionDep,
     conversation: Conversation = Depends(get_conversation),
 ) -> StreamingResponse:
-    # Invoke LLM and obtain the response stream
+# Invoke LLM and obtain the response stream
     ...
     stream_1, stream_2 = tee(response_stream)
     background_task.add_task(
@@ -7563,7 +7560,7 @@ async def create_conversation(
     title = completion.choices[0].message.content
     conversation = Conversation(
         title=title,
-        # add other conversation properties
+# add other conversation properties
         ...
     )
     return await ConversationRepository(session).create(conversation)
@@ -7617,7 +7614,6 @@ SQLAlchemy ORM과 Alembic을 활용하면 데이터베이스와 상호작용하�
 
 OWASP의 정의에 따르면 다음과 같다.
 
-> *인증(Authentication)*이란 사용자가 주장하는 신원을 뒷받침하는 데 사용되는 하나 이상의 인증자(비밀번호, 지문, 보안 토큰 등)의 유효성을 판단하여 개인, 개체 또는 웹사이트가 본인이 주장하는 바로 그 주체임을 확인하는 프로세스다.
 
 반면 미국 국립표준기술연구소(NIST)에서는 인가를 다음과 같이 정의한다.
 
@@ -7729,7 +7725,7 @@ FastAPI의 어떤 엔드포인트에든 보안 의존성을 주입하면 구현�
 
 이제 인증의 기본 개념에 익숙해졌으므로, FastAPI 서비스에 더 복잡하지만 안전한 JWT 인증 레이어를 구현해 보자. 이 과정에서 기존 엔드포인트를 리팩터링하여 별도의 리소스 API 라우터 아래로 통합함으로써, 여러 엔드포인트를 한 번에 그룹화하고 이름을 지정하고 태그를 붙이며 보호해 볼 것이다.
 
-##### JWT란 무엇인가?
+JWT란 무엇인가?
 
 JWT는 애플리케이션 간에 토큰을 통해 클레임(Claim)을 전달하는 URL 안전(URL-safe)하고 간결한(compact) 방식이다.
 
@@ -7911,7 +7907,7 @@ class Token(Base):
 
 class User(Base):
     __tablename__ = "users"
-    # other columns...
+# other columns...
 
     tokens = relationship(
         "Token", back_populates="user", cascade="all, delete-orphan"
@@ -8309,7 +8305,7 @@ class AuthService:
         payload = self.token_service.decode(credentials.credentials)
         await self.token_service.deactivate(payload.get("sub"))
 
-    # Add Password Reset Method
+# Add Password Reset Method
     async def reset_password(self): ...
 
 ```
@@ -8495,7 +8491,7 @@ OAuth를 사용하면 JWT와 같은 자체 인증 메커니즘을 직접 구축�
 2. 사용자가 아이덴티티 공급자의 로그인 페이지로 리다이렉트되며 애플리케이션은 자신을 식별하기 위해 클라이언트 ID(Client ID)와 클라이언트 시크릿(Client Secret)을 아이덴티티 공급자에 전달한다.
 3. 사용자가 자신의 계정으로 로그인하면 [그림 8-7](#oauth2_consent_screen)과 같은 동의 화면이 나타나며 애플리케이션이 사용자를 대신하여 요청하는 스코프(Scope, 즉 권한) 목록이 표시된다.
 
- ### 그림 8-7. 동의 화면 예시
+### 그림 8-7. 동의 화면 예시
 
 4. 사용자는 요청된 스코프의 전체, 일부를 승인하거나 모두 거부한다.
 5. 사용자(즉, 리소스 소유자)가 동의를 거부하지 않으면, 아이덴티티 공급자의 인가 서버는 여러분이 제공한 엔드포인트인 *리다이렉트 URI(Redirect URI)*로 애플리케이션에 *인가 코드(Grant code)*를 발급한다.
@@ -9212,7 +9208,7 @@ async def generate_text_controller():
 
 이번 장에서는 생성형 AI 서비스를 보호하기 위해 사용량 모더레이션 및 남용 방지 메커니즘을 구현하는 방법을 배운다.
 
-### 사용량 모더레이션과 남용 방지
+사용량 모더레이션과 남용 방지
 
 생성형 AI 서비스를 배포할 때는 악의적인 사용자가 서비스를 어떻게 오남용할 수 있는지 고려해야 한다. 이는 사용자의 안전과 서비스의 평판을 보호하기 위해 필수적이다. 사용자가 시스템을 어떻게 사용할지 예측할 수 없으므로 최악의 상황을 가정하고 모든 오용이나 남용을 방지하기 위한 *가드레일(Guardrails)*을 구현해야 한다.
 
@@ -10488,8 +10484,6 @@ for _ in range(2):
 
 이 기법을 소개한 [프롬프트 캐싱 논문](https://oreil.ly/augpd)의 저자들은 다음과 같이 주장한다:
 
-> 프롬프트 캐시가 특히 문서 기반 질의응답 및 추천과 같이 프롬프트가 긴 경우, 첫 번째 토큰 생성 시간(time-to-first-token)의 지연 시간을 크게 줄여준다는 사실을 확인했다.
-> 이러한 성능 향상은 출력 정확도를 유지하고 모델 파라미터를 수정할 필요 없이 GPU 기반 추론에서는 8배, CPU 기반 추론에서는 최대 60배에 이른다.
 
 [그림 10-3](#context_caching_architecture)은 컨텍스트 캐싱 시스템 아키텍처를 시각화한 것이다.
 
@@ -10631,7 +10625,7 @@ LLM과 같은 모델을 직접 서빙할 계획이라면 가능하다면 모델�
 
 [그림 10-4](#quantization_process)는 전체 양자화 과정을 보여준다.
 
-##### 그림 10-4. 양자화 과정
+그림 10-4. 양자화 과정
 
 8비트 정수와 같은 저정밀도 데이터 타입은 32비트 float와 같은 데이터 타입에 비해 파라미터당 RAM 사용량이 훨씬 적기 때문에 GPU 메모리 소모를 수 기가바이트 이상 절약할 수 있다.
 
@@ -10690,7 +10684,7 @@ FP 숫자를 다른 형식으로 투영할 때, 실제로는 정밀도를 크게
 
 실제로 [사전 학습된 LLM 모델의 양자화 전략에 관한 연구](https://oreil.ly/Swfz7)에 따르면 4비트 양자화가 적용된 LLM은 비양자화 모델과 유사한 성능을 유지할 수 있는 것으로 나타났다. 하지만 양자화가 메모리를 절약해 주기는 하지만 경우에 따라 LLM의 추론 속도를 저하시킬 수도 있다.
 
-##### 사전 학습된 LLM을 양자화하는 방법
+사전 학습된 LLM을 양자화하는 방법
 
 양자화는 가중치 조정을 통해 대규모 모델을 압축하는 과정이다. [*GPTQ*](https://oreil.ly/rHYKZ)라고 불리는 기법은 1,750억(175B) 개의 파라미터를 가진 LLM을 약 4 GPU 시간 만에 가중치당 3 또는 4비트 폭으로 양자화할 수 있으며 비압축 모델에 비해 무시할 수 있을 정도로 적은 정확도 저하만을 보인다.
 
@@ -11086,7 +11080,7 @@ response = client.chat.completions.create(
 
 하지만 모델을 학습시키고 평가하는 것 외에도 데이터를 수집하고 준비하는 노력이 필요하므로 일반적으로 가장 먼저 시도해야 할 기법은 아니다.
 
-##### 파인튜닝은 언제 고려해야 할까?
+파인튜닝은 언제 고려해야 할까?
 
 다음 시나리오 중 하나에 해당한다면 사전 학습된 생성형 AI 모델의 파인튜닝을 고려해 볼 수 있다.
 
@@ -11117,7 +11111,7 @@ response = client.chat.completions.create(
 * gpt-4o 대신 gpt-4o-mini나 gpt-3.5-turbo를 사용하여 비용을 절감하고자 할 때
 * 함수 호출 시 복잡한 도구와 API를 사용하도록 모델을 학습시킬 때
 
-##### 사전 학습 모델을 파인튜닝하는 방법
+사전 학습 모델을 파인튜닝하는 방법
 
 모든 파인튜닝 작업은 다음 단계를 따라야 한다.
 
@@ -11389,7 +11383,7 @@ TDD 접근 방식에서는 실제 코드를 작성하기 전에 테스트를 먼
 
 대용량 데이터(Huge data): 시스템의 한계를 측정하기 위해 성능 및 스트레스 테스트에 사용되는 데이터다.
 
-#### 테스트 단계
+테스트 단계
 
 단위(Unit), 통합(Integration), E2E(End-to-End) 테스트 중 어떤 것을 구현하든, 다음과 같이 *Given-When-Then*(GWT) 모델을 사용하여 테스트를 여러 개의 명확한 단계로 구조화할 수 있다.
 
@@ -11519,7 +11513,6 @@ C++의 강력한 타입 지정(Strong typing)은 자주 변경되는 대규모�
 시간 경과에 따른 ChatGPT의 동작 변화를 비교한 [2023년 발표 연구 논문](https://oreil.ly/1oLQG)에서는 다음과 같은 사실을 발견했다.
 
 > GPT-3.5와 GPT-4 모두 시간 경과에 따라 성능과 동작이 크게 달라질 수 있다.
-> 예를 들어 GPT-4(2023년 3월 버전)는 소수(Prime)와 합성수(Composite number)를 구분하는 데 준수한 성능(정확도 84%)을 보였으나, GPT-4(2023년 6월 버전)는 동일한 질문에서 저조한 성능(정확도 51%)을 나타냈다.
 > 또한 GPT-4는 3월에 비해 6월에 민감한 질문이나 의견 설문 질문에 대한 답변을 덜 응답하려 했다.
 > 아울러 GPT-4와 GPT-3. 모두 코드 생성 시 3월보다 6월에 더 많은 서식(Formatting) 오류를 범했다.
 
@@ -11559,7 +11552,7 @@ AI 채점 도구나 면접 평가자와 같이 LLM을 판사(LLM-as-a-judge)로 
 
 9장에서는 이러한 공격으로부터 모델을 보호하기 위한 보호 계층 및 평가 기법 구현에 대해 더 자세히 다룬다.
 
-#### 무제한의 테스트 커버리지
+무제한의 테스트 커버리지
 
 생성형 AI 모델의 잠재 공간(Latent Space)은 너무나 방대하여 단위 테스트에만 의존해서는 모든 사용 시나리오에 대해 100% 커버리지를 달성할 수 없다.
 
@@ -11687,11 +11680,11 @@ import pytest
 from rag.transform import chunk
 
 def test_chunking_success():
-    # GIVEN
+# GIVEN
     tokens = [1, 2, 3, 4, 5]
-    # WHEN
+# WHEN
     result = chunk(token_list, chunk_size=2)
-    # THEN
+# THEN
     assert result = [[1, 2], [3, 4], [5]]
     ... # Other relevant asserts here
 ```
@@ -12180,7 +12173,6 @@ def test_process_query_with_mock(mocker):
  query = "some query"
 
  process_query(query, llm_client)
- process_query(query, llm_client)
 
  assert llm_client.invoke.call_count == 2
  llm_client.invoke.assert_any_call("some query")
@@ -12484,7 +12476,7 @@ user_prompt = "Explain behavioral testing"
  (user_prompt, 50),
  (user_prompt.upper(), 50),
  (user_prompt.replace("behavioral", "behavioural"), 50),
- # Add more test cases as needed
+# Add more test cases as needed
 ])
 def test_modified_prompt_readability(prompt, expected_score, llm_client):
  modified_prompt = modify_prompt(prompt)
@@ -12539,7 +12531,7 @@ MFT, IT, DET만이 모델의 동작을 검증하기 위해 구현할 수 있는 
 
 *자동 평가 테스트*는 판별자/평가자(Discriminator/evaluator) 모델을 사용하여 환각률(Hallucination rate), 유해성(Toxicity), 정확성(Correctness), 답변 관련성(Answer relevancy) 등 다양한 지표에서 출력의 품질을 검증한다. LLM 출력의 경우 [예제 11-20](#self_evaluation_test)과 같이 LLM이나 분류 모델을 평가자로 사용할 수 있다.
 
-#### 예제 11-20. 유해성 측정을 위한 LLM 자가 점검 자동 평가
+예제 11-20. 유해성 측정을 위한 LLM 자가 점검 자동 평가
 
 ```
 
@@ -13218,7 +13210,7 @@ Docker는 Unionfs를 활용하여 이미지로부터 컨테이너 파일시스�
 
 최종적으로 컨테이너는 하나 이상의 이미지 레이어와 컨테이너 파기 시 유지되지 않는 최종 임시 컨테이너 레이어(Ephemeral container layer)로 구성된다.
 
-## Docker 스토리지
+Docker 스토리지
 
 이 절에서는 다양한 Docker 스토리지 메커니즘을 배운다. 서비스를 컨테이너로 개발하는 동안 이러한 도구를 사용하여 데이터 영속성을 관리하고, 컨테이너 간에 데이터를 공유하며, 컨테이너가 재시작되어도 상태를 유지할 수 있다.
 
@@ -13585,7 +13577,7 @@ NETWORK ID NAME DRIVER SCOPE
 
 네트워크 토폴로지는 이제 [그림 12-10](#docker_networking_isolated)과 같은 형태가 된다.
 
-### 그림 12-10. 격리된 브리지 네트워크
+그림 12-10. 격리된 브리지 네트워크
 
 컨테이너를 실행할 때 이제 `--network genai-net` 플래그를 사용하여 생성된 네트워크에 컨테이너를 연결할 수 있다:
 
@@ -13801,11 +13793,11 @@ secrets:
 
 ```
 
-### compose.yaml에 정의된 서비스 시작
+compose.yaml에 정의된 서비스 시작
 
 $ docker compose up
 
-### 실행 중인 서비스 중지 및 제거
+실행 중인 서비스 중지 및 제거
 
 $ docker compose down
 
@@ -13829,7 +13821,7 @@ $ docker compose ps
 
 services:
  server:
- # ...
+# ...
  develop:
  watch:
 
@@ -13871,7 +13863,7 @@ services:
  ports:
 
  - 8000:8000
- # ...
+# ...
  command: uvicorn main:app
 
 ### compose.override.yml
@@ -13931,7 +13923,7 @@ Docker Compose로 관리되는 서비스에서 GPU 디바이스에 접근하려�
 
 services:
  app:
- # ...
+# ...
  deploy:
  resources:
  reservations:

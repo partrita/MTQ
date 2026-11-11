@@ -36,6 +36,9 @@ book:
         - beyond-vibe-coding/index.qmd
         - writing-for-developers/index.qmd
         - own-your-tech-career/index.qmd
+    - part: "소프트웨어 설계"
+      chapters:
+        - philosophy-of-software-design/index.qmd
     - part: "인공지능과 머신러닝"
       chapters:
         - why-machines-learn/index.qmd

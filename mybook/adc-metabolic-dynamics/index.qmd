@@ -499,7 +499,7 @@ ADC가 리소좀에서 분해되면 작은 분자 약물이 세포질로 방출�
 
 종양 미세환경에는 이질적인 종양세포와 종양 침윤 면역세포가 둘러싸고 있다. 불가피하게 세포 밖으로 흘러나온 유리 약물은 대식세포와 림프구 같은 면역 세포에 영향을 줄 수 있다. 그래서 방관자 살상 효과는 양날의 칼로 평가된다.
 
-## 4. ADC 세포 내 수송 추적 방법
+4. ADC 세포 내 수송 추적 방법
 
 공초점 현미경과 유세포 분석법은 ADC의 내재화를 감지하기에 적합한 방법이다. 여기서는 이 두 가지를 간략히 소개한다.
 
@@ -669,7 +669,7 @@ Traditional ADCMiniaturization antibody Tissue penetrabilityOff-target toxicity
 
 삼중 글리신 변형 독소 Gly3-val-cit-PABC-MMAE; 발현 벡터 PET28a(+)-소르타제 A 플라스미드; 세포주 라모스, 다우디, K, HEK293F; 대장균 로제타(DE3), DH5α; Ni-NTA 정제 컬럼, 단백질 L 컬럼; CCK-8(세포 계수 키트-8) 검출 키트, 아넥신 V-FITC 세포자멸사 키트; 항-Fab 마우스 단일클론항체, FITC 표지 염소 항마우스 IgG (H + L); 면역결핍 BALB/c Nude 누드마우스(생후 6주).
 
-### 6.. 실험 방법
+6.. 실험 방법
 
 #### 6... Fab 및 Fab-CH3mut 소형화 항체의 발현 및 정제
 
@@ -798,7 +798,7 @@ Fab-vcMMAE, Fab-CH3mut-vcMMAE, OFA-vcMMAE의 생체 내 효능 및 독성. (a) F
 
 체중은 생체 내 독성의 중요 지표로 아홉 개 처리군 모두에서 모니터링되었다. 결과적으로 모든 처리군의 체중은 대조군에 비해 유의미한 변화가 없었다(그림 6.7b). 또한 아홉 군의 주요 장기에 대한 독성도 평가했는데, 어떤 장기 절편에서도 뚜렷한 조직형태학적 변화는 발견되지 않았다(그림 6.7c). 단 한 가지 예외는 110 nmol-vcMMAE/kg OFA-vcMMAE군으로, 뚜렷한 간 지방증을 보였다.
 
-## 6. 항체 단편 개요
+6. 항체 단편 개요
 
 항체 약물(단클론항체와 ADC)이 악성종양 임상 치료에서 상당한 성과를 거두긴 했지만 아직 미흡한 점이 남아 있다. 예컨대 종양 부위에서 항체 약물이 고르게 분포하지 못하거나 침투가 잘 안 되면 효율이 떨어지거나 재발하기 쉽다. 게다가 항체 약물은 반감기가 길어(10일 이상) 표적 외 효과를 일으킬 수 있다. 체내 제거율이 느리기 때문에 조영 영상에 활용하면 치료 창이 좁아지거나 배경 신호가 높아진다. 그래서 임상 현장에서는 보다 안전하고 효과적인 항체 약물이 절실히 요구되고 있으며 하나의 형태로만 존재하던 전통적 IgG 기반 항체 약물만으로는 임상 요구를 다 충족할 수 없어 항체 형태의 다변화 역시 시대의 산물이라 할 만하다.
 
@@ -1110,7 +1110,7 @@ SrtA의 여러 돌연변이체. SrtA(ΔN25), SrtA(ΔN59), SrtA(ΔN109)는 각각
 
 pET28a-SrtA(ΔN59) 발현 플라스미드; 대장균 로제타(DE3) 발현 숙주; 재조합 OFA 항체(LPETG 태그가 붙은 경쇄 및 중쇄 C 말단); GGG-vc-PAB-MMAE(GGG-vcMMAE라고 함). (pET28a-SrtA (ΔN59) expression plasmid; Escherichia coli Rosetta (DE3) expression host; Recombinant OFA antibody ; GGG- vc-PAB-MMAE.)
 
-#### 8... 방법
+8... 방법
 
 1. 1.
 
@@ -1144,7 +1144,7 @@ ADC 생성을 위한 화학-효소적 전략. (Chemo-enzymatic (Srt A) strategy 
 
 재조합 항체(경쇄 및 중쇄 C 말단에 LPETG 라벨 보유); SrtA; GGG-PEG-N3(이하 GPN); DBCO-PEG-vc-PAB-MMAE. (Recombinant antibody ; SrtA; GGG-PEG-N (referred to as GPN); DBCO-PEG-vc-PAB-MMAE.)
 
-#### 8... 실험 방법
+8... 실험 방법
 
 이관능성 소분자 GPN과 항체를 SrtA로 촉매·접합한 후 단백질 A 컬럼으로 정제하여 아지드기를 지닌 항체를 얻는다. 
 
@@ -1156,7 +1156,7 @@ ADC 생성을 위한 화학-효소적 전략. (Chemo-enzymatic (Srt A) strategy 
 
 구아니딘 염산염; 디티오트레이톨(DTT); 요오도아세트아미드; 트립신. (Guanidine hydrochloride; Dithiothreitol (DTT); Iodoacetamide; Trypsin.)
 
-### 8.. 분석 방법
+8.. 분석 방법
 
 시료를 구아니딘 염산염-트리스 용액(pH 8.0)으로 2 mg/mL로 희석하고 DTT(20 mmol/L)를 넣어 실온에서 1.5시간 반응시킨다. 이어 요오도아세트아미드(60 mmol/L)를 첨가하고 실온 암실에서 40분간 반응시켜 유리 시스테인 잔기를 차단한다. (Dilute the sample with guanidine hydrochloride-Tris solution (pH 8.0) to 2 mg/mL, add DTT (20 mmol/L) and react at room temperature for 1. h. Then add iodoacetamide (60 mmol/L) and react at room temperature in the dark for 40 min to block free cysteine residues.) 반응이 끝나면 반응 용액을 4 °C에서 한외여과하고 100 mmol/L Na3PO 용액(pH 7.4)으로 버퍼를 교체하였다..) 그런 다음 37 °C에서 24시간 동안 트립신을 처리하고 마지막으로 포름산(1%)으로 반응을 멈춰 분석에 사용한다. for testing.)
 
@@ -1241,7 +1241,7 @@ ADC의 이질성과 체내에서의 소분자 해리 때문에 ADC의 DAR은 달
 
 DAR을 결정하는 일반적인 방법에는 분광광도법, 방사선 측정법, 소수성 상호작용 크로마토그래피, 질량분석법이 포함된다. 
 
-## 9. RP-HPLC 및 HIC로 DAR을 측정하는 실험 절차
+9. RP-HPLC 및 HIC로 DAR을 측정하는 실험 절차
 
 역상 고성능 액체크로마토그래피와 소수성 상호작용 크로마토그래피로 ADC의 DAR을 측정할 수 있다. (Reversed phase high performance liquid chromatography (RP-HPLC) and hydrophobic interaction chromatography (HIC) can be used to determine the DAR of ADCs.) 이중 RP-HPLC는 DAR 결정에 직교 방법을 제공한다. 이 방법은 먼저 환원 반응으로 ADC의 중쇄와 경쇄를 완전히 분리한 다음, RP-HPLC에서 경쇄·중쇄와 그에 대응하는 약물 결합 형태들을 분리한다. 가중평균 DAR은 경쇄·중쇄 피크를 적분하여 얻은 피크 면적 백분율을 바탕으로 각 피크의 약물 부하를 합산해 계산한다. HIC는 DAR이 다른 ADC 사이의 소수성 차이를 이용해 DAR을 측정한다. 보통 나체 항체는 소수성이 가장 낮아 먼저 용출되고 독성 소분자가 더 많이 붙을수록 항체의 소수성이 높아져 용출 시간이 길어진다. 피크별 면적 백분율은 DAR이 서로 다른 ADC들의 상대적 분포를 나타낸다. 가중평균 DAR은 여기에 피크 면적 백분율과 약물 부하를 사용해 계산한다. 
 
@@ -1251,7 +1251,7 @@ DAR을 결정하는 일반적인 방법에는 분광광도법, 방사선 측정�
 
 RP-HPLC는 비극성 고정상과 극성 이동상으로 이루어진 액체크로마토그래피 시스템이다. RP-HPLC는 유기용매와 소량의 유기산을 쓰기 때문에 Cys로 접합된 ADC에는 큰 손상을 입힌다. 이런 유형의 ADC는 분석 중 높은 변성 조건을 견디지 못해 항체 단편으로 쪼개진다. 항체 내 사슬간 이황화 결합 일부가 접합 과정에서 환원되어 독성 소분자에 붙고 ADC는 비공유 소수성 상호작용으로 서로 묶여 있기 때문이다. Cys 접합 ADC를 디티오트레이톨(DTT) 같은 환원제로 처리하면 남은 사슬간 이황화 결합이 완전히 환원되어 경쇄, 독성 소분자 하나가 붙은 경쇄, 중쇄, 독성 소분자가 각각 하나·둘·셋 붙은 중쇄까지 여섯 형태가 만들어진다., the remaining interchain disulfide bonds can be completely reduced, and six forms are produced: the light chain, the light chain with single toxic small molecules attached, heavy chain, the heavy chain with single, two or three toxic small molecules attached respectively.) 이 형태들은 변성된 유기 환경에서도 안정하므로 역상 크로마토그래피 컬럼으로 분석할 수 있다. 경쇄와 중쇄 피크의 적분 면적을 기준으로, 각 피크에 해당하는 독성 소분자 개수를 반영해 피크 면적 백분율을 계산하면 가중평균 DAR을 구할 수 있다. 
 
-#### 9... 실험 조건 및 방법
+9... 실험 조건 및 방법
 
 컬럼: Varian PLRP-S 100 Å 컬럼(150 mm × 25 mm, 8 μm). (Column: Varian PLRP-S 100 Å column (150 mm × 25 mm, 8 μm).)
 
@@ -1277,7 +1277,7 @@ RP-HPLC는 비극성 고정상과 극성 이동상으로 이루어진 액체크�
 
 HIC는 시료 분자와 고정상 사이의 소수성 힘 차이를 이용한다. 이동상으로 용출할 때 각 성분의 이동 속도가 달라지므로 분리라는 목적을 달성할 수 있다. 일반적으로 독성 소분자는 소수성이 상대적으로 높아서 항체에 접합된 뒤에는 소수성 고정상(예: TOSOH Butyl-NPR)에 머무는 시간이 늘어난다. increases after the antibody is conjugated to the hydrophobic toxic small molecule.) 이동상의 염 농도 구배가 줄고 유기상이 커짐에 따라 나체 항체가 먼저 용출되고 독성 소분자를 더 많이 지닌 항체일수록 나중에 용출된다. 사슬간 이황화 시스테인을 통해 독성 소분자와 연결된 ADC의 경우 HIC는 비변성 처리와 비교적 온화한 조건 덕분에 이런 형태의 항체 분리를 일으키지 않는다., HIC will not cause the separation of these forms of antibodies due to the non-denaturing treatment and relatively mild conditions.) 각 피크의 적분 면적은 특정 개수의 독성 소분자를 지닌 ADC의 상대 비율을 나타낸다. 피크 면적 백분율과 대응하는 독성 소분자 수로부터 ADC의 가중평균 DAR을 계산할 수 있다. 
 
-#### 9... 실험 조건 및 방법
+9... 실험 조건 및 방법
 
 컬럼: TOSOH Butyl-NPR(4. mm × 3. cm, 2. μm). (Column: TOSOH Butyl-NPR (4. mm × 3. cm, 2. μm).)
 
@@ -1359,7 +1359,7 @@ PNGase F: 50000 U/mL(글리세린 불함유). (PNGase F: 50000 U/mL (without gly
 
 시료 ADC: 물로 1 mg/mL로 희석한다. 
 
-### 9.. 방법
+9.. 방법
 
 #### 9... 시료 준비
 
@@ -1473,7 +1473,7 @@ Table 9.
 
 데이터 분석: Biopharmalynx 1..3(Waters) 소프트웨어로 LC/MS 데이터를 분석한다. (Data analysis: Use Biopharmalynx 1.. (Waters) software to analyze the data obtained by LC/MS.)
 
-#### 9... 결과
+9... 결과
 
 제조한 ADC는 RP-HPLC와 HIC로 분석하였다. 위의 실험 조건에 따라 다음 결과를 얻을 수 있다(Figs. [9.4](#Fig4) and [9.5](#Fig5)). and [9.5](#Fig5)).)
 
@@ -1694,7 +1694,7 @@ CL 클리어런스, Vd 겉보기 분포 용적.
 
 체내 약력학적 과정 동안 ADC 구조는 변형될 수 있으며 이는 검출 정밀도에 영향을 준다. 따라서 참조 곡선을 만들기 위한 적절한 표준 물질 선택은 혈액 시료 속 ADC 정량 측정에 결정적이다. 리간드결합분석(LBA)은 가용성 항원에 기반하는데, ADC의 표적은 늘 세포 표면에 존재하기 때문에 제조가 더 어렵고 응용도 그만큼 제한된다. 전통적인 LBA의 한계를 뛰어넘기 위해 연구자들은 유세포 분석 기반의 in situ 검출 방법으로 항체 또는 ADC를 검출하는 길을 제시했다. 다음 절에서는 ADC 약동학을 측정할 때 ELISA 기반 방법과 유세포 분석 기반 방법의 적용 내용을 상세히 보여주었다. 
 
-## 10. ADC 약동학 연구에서 ELISA 기반 방법의 적용
+10. ADC 약동학 연구에서 ELISA 기반 방법의 적용
 
 ### 10.. ELISA-샌드위치 기법
 
@@ -1892,7 +1892,7 @@ ELISA-LBA는 가용성 항원으로 항체 또는 ADC를 포획하는 데 사용
 
 표준물질 농도를 X축으로, OD450/OD 값을 Y축으로 하여 회귀분석으로 회귀식을 구한다. 회귀식, OD450/OD 값, 시료 희석 배율에 따라 시료 내 항체 또는 ADC 농도를 계산하였다. 
 
-## 10. 항체-약물 접합체 약동학 연구에서 유세포 분석의 적용
+10. 항체-약물 접합체 약동학 연구에서 유세포 분석의 적용
 
 전통적인 LBA에는 가용성 항원이 필요한데, 표적 항원은 단백질 구조가 복잡해 발현 구현이 어렵다. 전장 항원에 비해 항원의 세포외 영역 발현이 더 쉽고 일부 항원은 세포외 부분에서 성공적으로 발현되었다. 그러나 대부분의 막 단백질(예: CD20)은 여전히 얻기 어려워 LBA 응용을 제한하고 있다. (But most membrane protein (for example, CD20) is still hard to obtain which limits the application of LBA.)
 
@@ -1962,7 +1962,7 @@ Fig. 10.
 
 (a) OFA-HL 정량 유세포 분석 방법의 선형성. ((a)The linearity of quantitative OFA-HL flow cytometry method.) (b) OFA-HL-MMAE 정량 유세포 분석 방법의 선형성 ((b) The linearity of quantitative OFA-HL-MMAE flow cytometry method )
 
-### 10.. 하한 정량한계는 형광물질 선택의 영향을 받는다
+10.. 하한 정량한계는 형광물질 선택의 영향을 받는다
 
 하한 LOQ는 검출 감도를 바꿀 수 있는 형광물질의 영향을 받는다. 실험 절차는 [10..2](#Sec15)와 같다..) FITC 표지 염소 항-인간 IgG(H + L) 대신 PE 표지 염소 항-인간 IgG(H + L)를 사용하자 하한 LOQ가 200 ng/mL에서 25 ng/mL로 내려갔다. 시스템의 감도는 여덟 배 향상되었다(Fig. [10.11](#Fig11)). to replace FITC-labeled goat anti-human IgG (H + L), the lower LOQ is down to 25 ng/mL from 200 ng/mL. The sensitivity of this system is improved by eight times (Fig. [10.11](#Fig11)).)
 
