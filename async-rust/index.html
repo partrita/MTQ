@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Async Rust – Machine translation</title>
+<title>비동기 Rust – Machine translation</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -124,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../learn-rust/index.html">Rust 생태계</a></li><li class="breadcrumb-item"><a href="../async-rust/index.html"><span class="chapter-title">Async Rust</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../learn-rust/index.html">Rust 생태계</a></li><li class="breadcrumb-item"><a href="../async-rust/index.html"><span class="chapter-title">비동기 Rust</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
@@ -206,11 +206,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../little-schemer/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">The Little Schemer</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../swift-for-py/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">파이썬 개발자를 위한 Swift</span></a>
   </div>
 </li>
@@ -242,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../async-rust/index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Async Rust</span></a>
+  <a href="../async-rust/index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">비동기 Rust</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -301,12 +296,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">인공지능과 머신러닝</span></a>
+ <span class="menu-text">소프트웨어 설계</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../philosophy-of-software-design/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">소프트웨어 설계 철학</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">인공지능과 머신러닝</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../why-machines-learn/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">머신은 어떻게 학습하는가</span></a>
@@ -341,13 +352,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">데이터 과학과 데이터 엔지니어링</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../data-analysis/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">데이터 분석 가이드</span></a>
@@ -397,13 +408,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">인과추론과 통계 모델링</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../causal-inf-r/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">R을 이용한 인과 추론</span></a>
@@ -428,13 +439,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">생명정보학과 계산생물학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../py-biologists/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생명정보학 프로그래밍(초급)</span></a>
@@ -504,13 +515,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
  <span class="menu-text">단백질 공학과 항체 치료제</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../protein-engineering/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">단백질 공학 실전 가이드</span></a>
@@ -555,13 +566,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
  <span class="menu-text">면역학과 바이오마커</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../clinical-immunology/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">임상면역학</span></a>
@@ -586,13 +597,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
  <span class="menu-text">신약 개발과 바이오의약품 규제</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ai-drug-discovery/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">약물 발견에서의 인공 지능</span></a>
@@ -637,13 +648,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
  <span class="menu-text">비즈니스, 전략 및 리더십</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../personal-mba/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">퍼스널 MBA</span></a>
@@ -713,13 +724,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true">
  <span class="menu-text">커뮤니케이션과 설득</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../communication-book/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">의사소통의 책</span></a>
@@ -754,16 +765,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="true">
  <span class="menu-text">글쓰기와 연구</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../how-to-read-a-book/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">어떻게 책을 읽을 것인가 (How to Read a Book)</span></a>
+  <a href="../how-to-read-a-book/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">어떻게 책을 읽을 것인가</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -793,20 +804,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../manufacturing-consent/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">동의 제조</span></a>
+  <a href="../manufacturing-consent/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">동의하게 만들기</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="true">
  <span class="menu-text">생산성, 습관 및 삶의 설계</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../atomic-habits-workbook/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">아토믹 해빗 워크북</span></a>
@@ -901,13 +912,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true">
  <span class="menu-text">철학, 불교 및 영성</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../meditations-aurelius/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">명상록 (<em>Meditations</em>)</span></a>
@@ -982,13 +993,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="true">
  <span class="menu-text">심리학과 자기계발</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ego-is-the-enemy/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">에고는 적이다</span></a>
@@ -1078,21 +1089,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#제1장-비동기-프로그래밍-소개" id="toc-제1장-비동기-프로그래밍-소개" class="nav-link active" data-scroll-target="#제1장-비동기-프로그래밍-소개">제1장 비동기 프로그래밍 소개</a>
   <ul class="collapse">
-  <li><a href="#이-장을-읽고-나면-세부-구현을-깊이-파고들지-않아도-비동기-프로그래밍의" id="toc-이-장을-읽고-나면-세부-구현을-깊이-파고들지-않아도-비동기-프로그래밍의" class="nav-link" data-scroll-target="#이-장을-읽고-나면-세부-구현을-깊이-파고들지-않아도-비동기-프로그래밍의">이 장을 읽고 나면 세부 구현을 깊이 파고들지 않아도 비동기 프로그래밍의</a>
-  <ul class="collapse">
-  <li><a href="#비동기란-무엇인가" id="toc-비동기란-무엇인가" class="nav-link" data-scroll-target="#비동기란-무엇인가">비동기란 무엇인가?</a></li>
-  </ul></li>
+  <li><a href="#이-장을-읽고-나면-세부-구현을-깊이-파고들지-않아도-비동기-프로그래밍의" id="toc-이-장을-읽고-나면-세부-구현을-깊이-파고들지-않아도-비동기-프로그래밍의" class="nav-link" data-scroll-target="#이-장을-읽고-나면-세부-구현을-깊이-파고들지-않아도-비동기-프로그래밍의">이 장을 읽고 나면 세부 구현을 깊이 파고들지 않아도 비동기 프로그래밍의</a></li>
   <li><a href="#그림-1-1.-블로킹-동기-타임라인과-비동기-타임라인의-비교asy" id="toc-그림-1-1.-블로킹-동기-타임라인과-비동기-타임라인의-비교asy" class="nav-link" data-scroll-target="#그림-1-1.-블로킹-동기-타임라인과-비동기-타임라인의-비교asy">![그림 1-1. 블로킹 동기 타임라인과 비동기 타임라인의 비교](asy</a>
   <ul class="collapse">
   <li><a href="#프로세스-소개" id="toc-프로세스-소개" class="nav-link" data-scroll-target="#프로세스-소개">프로세스 소개</a></li>
-  </ul></li>
-  <li><a href="#비동기-프로그래밍으로-달성하고자-하는-바를-다시-떠올려-보십시오.-우리는" id="toc-비동기-프로그래밍으로-달성하고자-하는-바를-다시-떠올려-보십시오.-우리는" class="nav-link" data-scroll-target="#비동기-프로그래밍으로-달성하고자-하는-바를-다시-떠올려-보십시오.-우리는">비동기 프로그래밍으로 달성하고자 하는 바를 다시 떠올려 보십시오. 우리는</a>
-  <ul class="collapse">
-  <li><a href="#스레드란-무엇인가" id="toc-스레드란-무엇인가" class="nav-link" data-scroll-target="#스레드란-무엇인가">스레드란 무엇인가?</a></li>
-  </ul></li>
-  <li><a href="#그러나-스레드가-비동기-프로그래밍의-핵심-구성-요소임은-확인할-수-있습니" id="toc-그러나-스레드가-비동기-프로그래밍의-핵심-구성-요소임은-확인할-수-있습니" class="nav-link" data-scroll-target="#그러나-스레드가-비동기-프로그래밍의-핵심-구성-요소임은-확인할-수-있습니">그러나 스레드가 비동기 프로그래밍의 핵심 구성 요소임은 확인할 수 있습니</a>
-  <ul class="collapse">
-  <li><a href="#비동기는-어디에-활용할-수-있는가" id="toc-비동기는-어디에-활용할-수-있는가" class="nav-link" data-scroll-target="#비동기는-어디에-활용할-수-있는가">비동기는 어디에 활용할 수 있는가?</a></li>
   </ul></li>
   <li><a href="#이제-파일-io-프로그램을-통해-비동기를-활용하는-예제를-단계별로-살펴" id="toc-이제-파일-io-프로그램을-통해-비동기를-활용하는-예제를-단계별로-살펴" class="nav-link" data-scroll-target="#이제-파일-io-프로그램을-통해-비동기를-활용하는-예제를-단계별로-살펴">이제 파일 I/O 프로그램을 통해 비동기를 활용하는 예제를 단계별로 살펴</a>
   <ul class="collapse">
@@ -1107,14 +1107,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약">요약</a></li>
   </ul></li>
   <li><a href="#제2장-비동기-rust-기초" id="toc-제2장-비동기-rust-기초" class="nav-link" data-scroll-target="#제2장-비동기-rust-기초">제2장 비동기 Rust 기초</a></li>
-  <li><a href="#이-장을-끝마치고-나면-태스크와-퓨처를-명확히-정의할-수-있게-됩니다." id="toc-이-장을-끝마치고-나면-태스크와-퓨처를-명확히-정의할-수-있게-됩니다." class="nav-link" data-scroll-target="#이-장을-끝마치고-나면-태스크와-퓨처를-명확히-정의할-수-있게-됩니다.">이 장을 끝마치고 나면 태스크와 퓨처를 명확히 정의할 수 있게 됩니다.</a>
-  <ul class="collapse">
-  <li><a href="#태스크-이해하기" id="toc-태스크-이해하기" class="nav-link" data-scroll-target="#태스크-이해하기">태스크 이해하기</a></li>
-  </ul></li>
-  <li><a href="#이제-퓨처가-무엇인지-살펴보겠습니다." id="toc-이제-퓨처가-무엇인지-살펴보겠습니다." class="nav-link" data-scroll-target="#이제-퓨처가-무엇인지-살펴보겠습니다.">이제 퓨처가 무엇인지 살펴보겠습니다.</a>
-  <ul class="collapse">
-  <li><a href="#퓨처" id="toc-퓨처" class="nav-link" data-scroll-target="#퓨처">퓨처</a></li>
-  </ul></li>
   <li><a href="#poll-함수는-자기-자신의-가변-참조자를-받습니다.-하지만-이-가변" id="toc-poll-함수는-자기-자신의-가변-참조자를-받습니다.-하지만-이-가변" class="nav-link" data-scroll-target="#poll-함수는-자기-자신의-가변-참조자를-받습니다.-하지만-이-가변"><code>poll</code> 함수는 자기 자신의 가변 참조자를 받습니다. 하지만 이 가변</a>
   <ul class="collapse">
   <li><a href="#퓨처에서의-고정" id="toc-퓨처에서의-고정" class="nav-link" data-scroll-target="#퓨처에서의-고정">퓨처에서의 고정</a></li>
@@ -1126,14 +1118,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#외부-이벤트를-통해-퓨처를-깨우는-방법을-살펴보았으니-이제-퓨처-간의" id="toc-외부-이벤트를-통해-퓨처를-깨우는-방법을-살펴보았으니-이제-퓨처-간의" class="nav-link" data-scroll-target="#외부-이벤트를-통해-퓨처를-깨우는-방법을-살펴보았으니-이제-퓨처-간의">외부 이벤트를 통해 퓨처를 깨우는 방법을 살펴보았으니, 이제 퓨처 간의</a>
   <ul class="collapse">
   <li><a href="#퓨처-간-데이터-공유" id="toc-퓨처-간-데이터-공유" class="nav-link" data-scroll-target="#퓨처-간-데이터-공유">퓨처 간 데이터 공유</a></li>
-  </ul></li>
-  <li><a href="#최종-결과는-여전히-0이므로-에러가-전체-결과에-영향을-미치지는-않았습니" id="toc-최종-결과는-여전히-0이므로-에러가-전체-결과에-영향을-미치지는-않았습니" class="nav-link" data-scroll-target="#최종-결과는-여전히-0이므로-에러가-전체-결과에-영향을-미치지는-않았습니">최종 결과는 여전히 0이므로 에러가 전체 결과에 영향을 미치지는 않았습니</a>
-  <ul class="collapse">
-  <li><a href="#고수준의-퓨처-간-데이터-공유" id="toc-고수준의-퓨처-간-데이터-공유" class="nav-link" data-scroll-target="#고수준의-퓨처-간-데이터-공유">고수준의 퓨처 간 데이터 공유</a></li>
-  </ul></li>
-  <li><a href="#이를-실행하면-이전-절의-퓨처와-완전히-동일한-출력과-동작을-얻을-수-있" id="toc-이를-실행하면-이전-절의-퓨처와-완전히-동일한-출력과-동작을-얻을-수-있" class="nav-link" data-scroll-target="#이를-실행하면-이전-절의-퓨처와-완전히-동일한-출력과-동작을-얻을-수-있">이를 실행하면 이전 절의 퓨처와 완전히 동일한 출력과 동작을 얻을 수 있</a>
-  <ul class="collapse">
-  <li><a href="#rust의-퓨처가-다른-언어와-다른-점" id="toc-rust의-퓨처가-다른-언어와-다른-점" class="nav-link" data-scroll-target="#rust의-퓨처가-다른-언어와-다른-점">Rust의 퓨처가 다른 언어와 다른 점</a></li>
   </ul></li>
   <li><a href="#퓨처-완료completion-of-future" id="toc-퓨처-완료completion-of-future" class="nav-link" data-scroll-target="#퓨처-완료completion-of-future"><strong>퓨처 완료(Completion of future)</strong></a>
   <ul class="collapse">
@@ -1152,14 +1136,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#비동기-큐-직접-만들기" id="toc-비동기-큐-직접-만들기" class="nav-link" data-scroll-target="#비동기-큐-직접-만들기">비동기 큐 직접 만들기</a></li>
   </ul></li>
-  <li><a href="#지금-현재-우리의-비동기-런타임에는-큐를-처리하는-스레드가-단-하나뿐입니" id="toc-지금-현재-우리의-비동기-런타임에는-큐를-처리하는-스레드가-단-하나뿐입니" class="nav-link" data-scroll-target="#지금-현재-우리의-비동기-런타임에는-큐를-처리하는-스레드가-단-하나뿐입니">지금 현재 우리의 비동기 런타임에는 큐를 처리하는 스레드가 단 하나뿐입니</a>
-  <ul class="collapse">
-  <li><a href="#워커와-큐-늘리기" id="toc-워커와-큐-늘리기" class="nav-link" data-scroll-target="#워커와-큐-늘리기">워커와 큐 늘리기</a></li>
-  </ul></li>
-  <li><a href="#note" id="toc-note" class="nav-link" data-scroll-target="#note">&gt; [!NOTE]</a>
-  <ul class="collapse">
-  <li><a href="#작업-훔치기" id="toc-작업-훔치기" class="nav-link" data-scroll-target="#작업-훔치기">작업 훔치기</a></li>
-  </ul></li>
   <li><a href="#트레이트-제약-조건을-두고-이를-퓨처에-구현하는-과정을-확인한-것은-흥미" id="toc-트레이트-제약-조건을-두고-이를-퓨처에-구현하는-과정을-확인한-것은-흥미" class="nav-link" data-scroll-target="#트레이트-제약-조건을-두고-이를-퓨처에-구현하는-과정을-확인한-것은-흥미">트레이트 제약 조건을 두고 이를 퓨처에 구현하는 과정을 확인한 것은 흥미</a>
   <ul class="collapse">
   <li><a href="#spawn_task-함수-리팩터링" id="toc-spawn_task-함수-리팩터링" class="nav-link" data-scroll-target="#spawn_task-함수-리팩터링">spawn_task 함수 리팩터링</a></li>
@@ -1173,17 +1149,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#요약-2" id="toc-요약-2" class="nav-link" data-scroll-target="#요약-2">요약</a></li>
   </ul></li>
   <li><a href="#제4장-비동기-런타임에-네트워킹-통합하기" id="toc-제4장-비동기-런타임에-네트워킹-통합하기" class="nav-link" data-scroll-target="#제4장-비동기-런타임에-네트워킹-통합하기">제4장 비동기 런타임에 네트워킹 통합하기</a></li>
-  <li><a href="#보시다시피-이번-예제에서는-hyper를-사용합니다.-이는-이전-예제에" id="toc-보시다시피-이번-예제에서는-hyper를-사용합니다.-이는-이전-예제에" class="nav-link" data-scroll-target="#보시다시피-이번-예제에서는-hyper를-사용합니다.-이는-이전-예제에">보시다시피 이번 예제에서는 <code>hyper</code>를 사용합니다. 이는 이전 예제에</a>
-  <ul class="collapse">
-  <li><a href="#실행기와-커넥터-이해하기" id="toc-실행기와-커넥터-이해하기" class="nav-link" data-scroll-target="#실행기와-커넥터-이해하기">실행기와 커넥터 이해하기</a></li>
-  </ul></li>
   <li><a href="#이제-hyper-클라이언트에-전달할-수-있는-커스텀-실행기가-준비되었" id="toc-이제-hyper-클라이언트에-전달할-수-있는-커스텀-실행기가-준비되었" class="nav-link" data-scroll-target="#이제-hyper-클라이언트에-전달할-수-있는-커스텀-실행기가-준비되었">이제 <code>hyper</code> 클라이언트에 전달할 수 있는 커스텀 실행기가 준비되었</a>
   <ul class="collapse">
   <li><a href="#http-연결-구축하기" id="toc-http-연결-구축하기" class="nav-link" data-scroll-target="#http-연결-구축하기">HTTP 연결 구축하기</a></li>
-  </ul></li>
-  <li><a href="#이제-call-함수가-정의되었습니다.-하지만-이-시점에서-스트림-열거" id="toc-이제-call-함수가-정의되었습니다.-하지만-이-시점에서-스트림-열거" class="nav-link" data-scroll-target="#이제-call-함수가-정의되었습니다.-하지만-이-시점에서-스트림-열거">이제 <code>call</code> 함수가 정의되었습니다. 하지만 이 시점에서 스트림 열거</a>
-  <ul class="collapse">
-  <li><a href="#tokio-asyncread-트레이트-구현하기" id="toc-tokio-asyncread-트레이트-구현하기" class="nav-link" data-scroll-target="#tokio-asyncread-트레이트-구현하기">Tokio AsyncRead 트레이트 구현하기</a></li>
   </ul></li>
   <li><a href="#이제-버퍼로-데이터를-비동기적으로-읽을-수-있게-되었지만-http-요청" id="toc-이제-버퍼로-데이터를-비동기적으로-읽을-수-있게-되었지만-http-요청" class="nav-link" data-scroll-target="#이제-버퍼로-데이터를-비동기적으로-읽을-수-있게-되었지만-http-요청">이제 버퍼로 데이터를 비동기적으로 읽을 수 있게 되었지만, HTTP 요청</a>
   <ul class="collapse">
@@ -1197,27 +1165,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#mio-소개" id="toc-mio-소개" class="nav-link" data-scroll-target="#mio-소개">mio 소개</a></li>
   </ul></li>
-  <li><a href="#모든-기초-작업이-끝났으니-이제-퓨처-내에서-tcp-소켓을-폴링하는-단계" id="toc-모든-기초-작업이-끝났으니-이제-퓨처-내에서-tcp-소켓을-폴링하는-단계" class="nav-link" data-scroll-target="#모든-기초-작업이-끝났으니-이제-퓨처-내에서-tcp-소켓을-폴링하는-단계">모든 기초 작업이 끝났으니 이제 퓨처 내에서 TCP 소켓을 폴링하는 단계</a>
-  <ul class="collapse">
-  <li><a href="#퓨처에서-소켓-폴링하기" id="toc-퓨처에서-소켓-폴링하기" class="nav-link" data-scroll-target="#퓨처에서-소켓-폴링하기">퓨처에서 소켓 폴링하기</a></li>
-  </ul></li>
-  <li><a href="#이제-소켓에서-데이터를-수신할-때까지-계속-폴링되는-퓨처가-완성되었습니다" id="toc-이제-소켓에서-데이터를-수신할-때까지-계속-폴링되는-퓨처가-완성되었습니다" class="nav-link" data-scroll-target="#이제-소켓에서-데이터를-수신할-때까지-계속-폴링되는-퓨처가-완성되었습니다">이제 소켓에서 데이터를 수신할 때까지 계속 폴링되는 퓨처가 완성되었습니다</a>
-  <ul class="collapse">
-  <li><a href="#소켓을-통해-데이터-전송하기" id="toc-소켓을-통해-데이터-전송하기" class="nav-link" data-scroll-target="#소켓을-통해-데이터-전송하기">소켓을 통해 데이터 전송하기</a></li>
-  </ul></li>
   <li><a href="#mio-폴링-기능을-통해-tcp-소켓을-거치는-비동기-통신을-구현했습" id="toc-mio-폴링-기능을-통해-tcp-소켓을-거치는-비동기-통신을-구현했습" class="nav-link" data-scroll-target="#mio-폴링-기능을-통해-tcp-소켓을-거치는-비동기-통신을-구현했습"><code>mio</code> 폴링 기능을 통해 TCP 소켓을 거치는 비동기 통신을 구현했습</a>
   <ul class="collapse">
   <li><a href="#요약-3" id="toc-요약-3" class="nav-link" data-scroll-target="#요약-3">요약</a></li>
   </ul></li>
   <li><a href="#제5장-코루틴" id="toc-제5장-코루틴" class="nav-link" data-scroll-target="#제5장-코루틴">제5장 코루틴</a></li>
-  <li><a href="#코루틴을-본격적으로-살펴보기-전에-먼저-코루틴이-무엇이고-왜-사용해야" id="toc-코루틴을-본격적으로-살펴보기-전에-먼저-코루틴이-무엇이고-왜-사용해야" class="nav-link" data-scroll-target="#코루틴을-본격적으로-살펴보기-전에-먼저-코루틴이-무엇이고-왜-사용해야">코루틴을 본격적으로 살펴보기 전에, 먼저 코루틴이 무엇이고 왜 사용해야</a>
-  <ul class="collapse">
-  <li><a href="#코루틴이란-무엇인가" id="toc-코루틴이란-무엇인가" class="nav-link" data-scroll-target="#코루틴이란-무엇인가">코루틴이란 무엇인가?</a></li>
-  </ul></li>
-  <li><a href="#단일-스레드에서-코루틴을-사용할-때의-주요-단점은-컴퓨터의-컴퓨팅-능력을" id="toc-단일-스레드에서-코루틴을-사용할-때의-주요-단점은-컴퓨터의-컴퓨팅-능력을" class="nav-link" data-scroll-target="#단일-스레드에서-코루틴을-사용할-때의-주요-단점은-컴퓨터의-컴퓨팅-능력을">단일 스레드에서 코루틴을 사용할 때의 주요 단점은 컴퓨터의 컴퓨팅 능력을</a>
-  <ul class="collapse">
-  <li><a href="#왜-코루틴을-사용하는가" id="toc-왜-코루틴을-사용하는가" class="nav-link" data-scroll-target="#왜-코루틴을-사용하는가">왜 코루틴을 사용하는가?</a></li>
-  </ul></li>
   <li><a href="#코루틴은-활용처가-매우-넓습니다.-네트워크-요청-처리-빅데이터-처리" id="toc-코루틴은-활용처가-매우-넓습니다.-네트워크-요청-처리-빅데이터-처리" class="nav-link" data-scroll-target="#코루틴은-활용처가-매우-넓습니다.-네트워크-요청-처리-빅데이터-처리">코루틴은 활용처가 매우 넓습니다. 네트워크 요청 처리, 빅데이터 처리,</a>
   <ul class="collapse">
   <li><a href="#코루틴을-활용한-생성" id="toc-코루틴을-활용한-생성" class="nav-link" data-scroll-target="#코루틴을-활용한-생성">코루틴을 활용한 생성</a></li>
@@ -1230,14 +1182,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#코루틴에서-코루틴-호출하기" id="toc-코루틴에서-코루틴-호출하기" class="nav-link" data-scroll-target="#코루틴에서-코루틴-호출하기">코루틴에서 코루틴 호출하기</a></li>
   </ul></li>
-  <li><a href="#이제-비동기-동작을-살펴보고-간단한-코루틴으로-이러한-기능-중-일부를" id="toc-이제-비동기-동작을-살펴보고-간단한-코루틴으로-이러한-기능-중-일부를" class="nav-link" data-scroll-target="#이제-비동기-동작을-살펴보고-간단한-코루틴으로-이러한-기능-중-일부를">이제 비동기 동작을 살펴보고, 간단한 코루틴으로 이러한 기능 중 일부를</a>
-  <ul class="collapse">
-  <li><a href="#코루틴으로-비동기-동작-흉내-내기" id="toc-코루틴으로-비동기-동작-흉내-내기" class="nav-link" data-scroll-target="#코루틴으로-비동기-동작-흉내-내기">코루틴으로 비동기 동작 흉내 내기</a></li>
-  </ul></li>
-  <li><a href="#cargo-test-명령을-실행하면-두-테스트가-모두-성공하는-것을" id="toc-cargo-test-명령을-실행하면-두-테스트가-모두-성공하는-것을" class="nav-link" data-scroll-target="#cargo-test-명령을-실행하면-두-테스트가-모두-성공하는-것을"><code>cargo test</code> 명령을 실행하면 두 테스트가 모두 성공하는 것을</a>
-  <ul class="collapse">
-  <li><a href="#요약-4" id="toc-요약-4" class="nav-link" data-scroll-target="#요약-4">요약</a></li>
-  </ul></li>
   <li><a href="#제6장-리액티브-프로그래밍" id="toc-제6장-리액티브-프로그래밍" class="nav-link" data-scroll-target="#제6장-리액티브-프로그래밍">제6장 리액티브 프로그래밍</a></li>
   <li><a href="#그럼-기본적인-리액티브-시스템을-구축하는-것부터-리액티브-프로그래밍-여정" id="toc-그럼-기본적인-리액티브-시스템을-구축하는-것부터-리액티브-프로그래밍-여정" class="nav-link" data-scroll-target="#그럼-기본적인-리액티브-시스템을-구축하는-것부터-리액티브-프로그래밍-여정">그럼 기본적인 리액티브 시스템을 구축하는 것부터 리액티브 프로그래밍 여정</a>
   <ul class="collapse">
@@ -1247,50 +1191,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#주체-정의하기" id="toc-주체-정의하기" class="nav-link" data-scroll-target="#주체-정의하기">주체 정의하기</a></li>
   </ul></li>
-  <li><a href="#이-지점에서-우리는-왜-아토믹이-원자적atomic이라고-불리는지" id="toc-이-지점에서-우리는-왜-아토믹이-원자적atomic이라고-불리는지" class="nav-link" data-scroll-target="#이-지점에서-우리는-왜-아토믹이-원자적atomic이라고-불리는지">이 지점에서 우리는 왜 아토믹이 ’원자적(atomic)’이라고 불리는지</a>
-  <ul class="collapse">
-  <li><a href="#히터-및-열-손실-옵저버-구축하기" id="toc-히터-및-열-손실-옵저버-구축하기" class="nav-link" data-scroll-target="#히터-및-열-손실-옵저버-구축하기">히터 및 열 손실 옵저버 구축하기</a></li>
-  </ul></li>
-  <li><a href="#이제-시스템이-동작하므로-콜백callback을-사용하여-사용자로부터" id="toc-이제-시스템이-동작하므로-콜백callback을-사용하여-사용자로부터" class="nav-link" data-scroll-target="#이제-시스템이-동작하므로-콜백callback을-사용하여-사용자로부터">이제 시스템이 동작하므로, 콜백(callback)을 사용하여 사용자로부터</a>
-  <ul class="collapse">
-  <li><a href="#콜백을-통한-사용자-입력-받기" id="toc-콜백을-통한-사용자-입력-받기" class="nav-link" data-scroll-target="#콜백을-통한-사용자-입력-받기">콜백을 통한 사용자 입력 받기</a></li>
-  </ul></li>
   <li><a href="#모든-리액티브-시스템이-단순히-현재-시점의-정수-값에만-반응하는-것은-아" id="toc-모든-리액티브-시스템이-단순히-현재-시점의-정수-값에만-반응하는-것은-아" class="nav-link" data-scroll-target="#모든-리액티브-시스템이-단순히-현재-시점의-정수-값에만-반응하는-것은-아">모든 리액티브 시스템이 단순히 현재 시점의 정수 값에만 반응하는 것은 아</a>
   <ul class="collapse">
   <li><a href="#이벤트-버스를-통한-브로드캐스팅-구현" id="toc-이벤트-버스를-통한-브로드캐스팅-구현" class="nav-link" data-scroll-target="#이벤트-버스를-통한-브로드캐스팅-구현">이벤트 버스를 통한 브로드캐스팅 구현</a></li>
   </ul></li>
-  <li><a href="#이제-이벤트-버스-구조체를-구축하는-데-필요한-모든-것이-준비되었습니다." id="toc-이제-이벤트-버스-구조체를-구축하는-데-필요한-모든-것이-준비되었습니다." class="nav-link" data-scroll-target="#이제-이벤트-버스-구조체를-구축하는-데-필요한-모든-것이-준비되었습니다.">이제 이벤트 버스 구조체를 구축하는 데 필요한 모든 것이 준비되었습니다.</a>
-  <ul class="collapse">
-  <li><a href="#이벤트-버스-구조체-만들기" id="toc-이벤트-버스-구조체-만들기" class="nav-link" data-scroll-target="#이벤트-버스-구조체-만들기">이벤트 버스 구조체 만들기</a></li>
-  </ul></li>
-  <li><a href="#이제-핸들이-완성되었으며-메모리-누수의-위험-없이-버스에서-안전하게-이" id="toc-이제-핸들이-완성되었으며-메모리-누수의-위험-없이-버스에서-안전하게-이" class="nav-link" data-scroll-target="#이제-핸들이-완성되었으며-메모리-누수의-위험-없이-버스에서-안전하게-이">이제 핸들이 완성되었으며, 메모리 누수의 위험 없이 버스에서 안전하게 이</a>
-  <ul class="collapse">
-  <li><a href="#비동기-태스크를-통한-이벤트-버스와의-상호작용" id="toc-비동기-태스크를-통한-이벤트-버스와의-상호작용" class="nav-link" data-scroll-target="#비동기-태스크를-통한-이벤트-버스와의-상호작용">비동기 태스크를 통한 이벤트 버스와의 상호작용</a></li>
-  </ul></li>
-  <li><a href="#이벤트-버스는-리액티브-프로그래밍의-중추입니다.-동적인-방식으로-구독자를" id="toc-이벤트-버스는-리액티브-프로그래밍의-중추입니다.-동적인-방식으로-구독자를" class="nav-link" data-scroll-target="#이벤트-버스는-리액티브-프로그래밍의-중추입니다.-동적인-방식으로-구독자를">이벤트 버스는 리액티브 프로그래밍의 중추입니다. 동적인 방식으로 구독자를</a>
-  <ul class="collapse">
-  <li><a href="#요약-5" id="toc-요약-5" class="nav-link" data-scroll-target="#요약-5">요약</a></li>
-  </ul></li>
   <li><a href="#제7장-tokio-커스터마이징" id="toc-제7장-tokio-커스터마이징" class="nav-link" data-scroll-target="#제7장-tokio-커스터마이징">제7장 Tokio 커스터마이징</a></li>
-  <li><a href="#이번-장을-건너뛰더라도-책의-나머지-내용을-이해하는-데는-지장이-없습니다" id="toc-이번-장을-건너뛰더라도-책의-나머지-내용을-이해하는-데는-지장이-없습니다" class="nav-link" data-scroll-target="#이번-장을-건너뛰더라도-책의-나머지-내용을-이해하는-데는-지장이-없습니다">이번 장을 건너뛰더라도 책의 나머지 내용을 이해하는 데는 지장이 없습니다</a>
-  <ul class="collapse">
-  <li><a href="#런타임-구축하기" id="toc-런타임-구축하기" class="nav-link" data-scroll-target="#런타임-구축하기">런타임 구축하기</a></li>
-  </ul></li>
   <li><a href="#이제-스레드와-런타임을-정의했으므로-이러한-스레드들과-다양한-방식으로-상" id="toc-이제-스레드와-런타임을-정의했으므로-이러한-스레드들과-다양한-방식으로-상" class="nav-link" data-scroll-target="#이제-스레드와-런타임을-정의했으므로-이러한-스레드들과-다양한-방식으로-상">이제 스레드와 런타임을 정의했으므로 이러한 스레드들과 다양한 방식으로 상</a>
   <ul class="collapse">
   <li><a href="#로컬-풀을-사용한-태스크-처리" id="toc-로컬-풀을-사용한-태스크-처리" class="nav-link" data-scroll-target="#로컬-풀을-사용한-태스크-처리">로컬 풀을 사용한 태스크 처리</a></li>
   </ul></li>
-  <li><a href="#지금까지는-refcell을-사용하여-비동기-태스크에서-스레드의-상태에" id="toc-지금까지는-refcell을-사용하여-비동기-태스크에서-스레드의-상태에" class="nav-link" data-scroll-target="#지금까지는-refcell을-사용하여-비동기-태스크에서-스레드의-상태에">지금까지는 <code>RefCell</code>을 사용하여 비동기 태스크에서 스레드의 상태에</a>
-  <ul class="collapse">
-  <li><a href="#스레드-데이터에-unsafe-적용하기" id="toc-스레드-데이터에-unsafe-적용하기" class="nav-link" data-scroll-target="#스레드-데이터에-unsafe-적용하기">스레드 데이터에 Unsafe 적용하기</a></li>
-  </ul></li>
   <li><a href="#이제-스레드의-상태를-활용하여-비동기-태스크에-영향을-미칠-수-있게-되었" id="toc-이제-스레드의-상태를-활용하여-비동기-태스크에-영향을-미칠-수-있게-되었" class="nav-link" data-scroll-target="#이제-스레드의-상태를-활용하여-비동기-태스크에-영향을-미칠-수-있게-되었">이제 스레드의 상태를 활용하여 비동기 태스크에 영향을 미칠 수 있게 되었</a>
   <ul class="collapse">
   <li><a href="#정상적인-셧다운" id="toc-정상적인-셧다운" class="nav-link" data-scroll-target="#정상적인-셧다운">정상적인 셧다운</a></li>
-  </ul></li>
-  <li><a href="#kill-명령을-실행하면-ctrl-c를-눌렀을-때와-유사한-결과를-얻을" id="toc-kill-명령을-실행하면-ctrl-c를-눌렀을-때와-유사한-결과를-얻을" class="nav-link" data-scroll-target="#kill-명령을-실행하면-ctrl-c를-눌렀을-때와-유사한-결과를-얻을">kill 명령을 실행하면 Ctrl-C를 눌렀을 때와 유사한 결과를 얻을</a>
-  <ul class="collapse">
-  <li><a href="#요약-6" id="toc-요약-6" class="nav-link" data-scroll-target="#요약-6">요약</a></li>
   </ul></li>
   <li><a href="#제8장-액터-모델" id="toc-제8장-액터-모델" class="nav-link" data-scroll-target="#제8장-액터-모델">제8장 액터 모델</a></li>
   <li><a href="#액터의-격리성은-손쉬운-비동기-테스트와-간결한-비동기-시스템-구현을-가능" id="toc-액터의-격리성은-손쉬운-비동기-테스트와-간결한-비동기-시스템-구현을-가능" class="nav-link" data-scroll-target="#액터의-격리성은-손쉬운-비동기-테스트와-간결한-비동기-시스템-구현을-가능">액터의 격리성은 손쉬운 비동기 테스트와 간결한 비동기 시스템 구현을 가능</a>
@@ -1305,17 +1217,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#라우터-패턴-구현하기" id="toc-라우터-패턴-구현하기" class="nav-link" data-scroll-target="#라우터-패턴-구현하기">라우터 패턴 구현하기</a></li>
   </ul></li>
-  <li><a href="#키-값-저장소가-정상적으로-작동하고-있습니다.-하지만-시스템이-종료되거나" id="toc-키-값-저장소가-정상적으로-작동하고-있습니다.-하지만-시스템이-종료되거나" class="nav-link" data-scroll-target="#키-값-저장소가-정상적으로-작동하고-있습니다.-하지만-시스템이-종료되거나">키-값 저장소가 정상적으로 작동하고 있습니다. 하지만 시스템이 종료되거나</a>
-  <ul class="collapse">
-  <li><a href="#액터의-상태-복구-구현하기" id="toc-액터의-상태-복구-구현하기" class="nav-link" data-scroll-target="#액터의-상태-복구-구현하기">액터의 상태 복구 구현하기</a></li>
-  </ul></li>
   <li><a href="#이로써-시스템은-모든-키-값-트랜잭션을-메모리에서-처리하면서-동시에-파일" id="toc-이로써-시스템은-모든-키-값-트랜잭션을-메모리에서-처리하면서-동시에-파일" class="nav-link" data-scroll-target="#이로써-시스템은-모든-키-값-트랜잭션을-메모리에서-처리하면서-동시에-파일">이로써 시스템은 모든 키-값 트랜잭션을 메모리에서 처리하면서 동시에 파일</a>
   <ul class="collapse">
   <li><a href="#액터-감시-체계-구축하기" id="toc-액터-감시-체계-구축하기" class="nav-link" data-scroll-target="#액터-감시-체계-구축하기">액터 감시 체계 구축하기</a></li>
   </ul></li>
   <li><a href="#리셋-전후의-인스턴스가-서로-다르며-리셋-후-기존-라이터-인스턴스의-흔" id="toc-리셋-전후의-인스턴스가-서로-다르며-리셋-후-기존-라이터-인스턴스의-흔" class="nav-link" data-scroll-target="#리셋-전후의-인스턴스가-서로-다르며-리셋-후-기존-라이터-인스턴스의-흔">리셋 전후의 인스턴스가 서로 다르며, 리셋 후 기존 라이터 인스턴스의 흔</a>
   <ul class="collapse">
-  <li><a href="#요약-7" id="toc-요약-7" class="nav-link" data-scroll-target="#요약-7">요약</a></li>
+  <li><a href="#요약-4" id="toc-요약-4" class="nav-link" data-scroll-target="#요약-4">요약</a></li>
   </ul></li>
   <li><a href="#제9장-디자인-패턴" id="toc-제9장-디자인-패턴" class="nav-link" data-scroll-target="#제9장-디자인-패턴">제9장 디자인 패턴</a></li>
   <li><a href="#디자인-패턴을-본격적으로-구현하기에-앞서-무엇보다도-시스템에-비동기-코" id="toc-디자인-패턴을-본격적으로-구현하기에-앞서-무엇보다도-시스템에-비동기-코" class="nav-link" data-scroll-target="#디자인-패턴을-본격적으로-구현하기에-앞서-무엇보다도-시스템에-비동기-코">디자인 패턴을 본격적으로 구현하기에 앞서, 무엇보다도 시스템에 비동기 코</a>
@@ -1334,17 +1242,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#상태-머신-패턴" id="toc-상태-머신-패턴" class="nav-link" data-scroll-target="#상태-머신-패턴">상태 머신 패턴</a></li>
   </ul></li>
-  <li><a href="#태스크-수가-너무-많을-때-상태-머신이-새로운-태스크의-진행을-스로틀링하" id="toc-태스크-수가-너무-많을-때-상태-머신이-새로운-태스크의-진행을-스로틀링하" class="nav-link" data-scroll-target="#태스크-수가-너무-많을-때-상태-머신이-새로운-태스크의-진행을-스로틀링하">태스크 수가 너무 많을 때 상태 머신이 새로운 태스크의 진행을 스로틀링하</a>
-  <ul class="collapse">
-  <li><a href="#재시도-패턴" id="toc-재시도-패턴" class="nav-link" data-scroll-target="#재시도-패턴">재시도 패턴</a></li>
-  </ul></li>
   <li><a href="#하지만-계속해서-에러가-발생한다면-어떻게-해야-할까요-특정-임계값을-넘" id="toc-하지만-계속해서-에러가-발생한다면-어떻게-해야-할까요-특정-임계값을-넘" class="nav-link" data-scroll-target="#하지만-계속해서-에러가-발생한다면-어떻게-해야-할까요-특정-임계값을-넘">하지만 계속해서 에러가 발생한다면 어떻게 해야 할까요? 특정 임계값을 넘</a>
   <ul class="collapse">
   <li><a href="#서킷-브레이커-패턴" id="toc-서킷-브레이커-패턴" class="nav-link" data-scroll-target="#서킷-브레이커-패턴">서킷 브레이커 패턴</a></li>
-  </ul></li>
-  <li><a href="#임계값에-도달한-후에는-더-이상-태스크가-스폰되지-않습니다.-임계값에-도" id="toc-임계값에-도달한-후에는-더-이상-태스크가-스폰되지-않습니다.-임계값에-도" class="nav-link" data-scroll-target="#임계값에-도달한-후에는-더-이상-태스크가-스폰되지-않습니다.-임계값에-도">임계값에 도달한 후에는 더 이상 태스크가 스폰되지 않습니다. 임계값에 도</a>
-  <ul class="collapse">
-  <li><a href="#요약-8" id="toc-요약-8" class="nav-link" data-scroll-target="#요약-8">요약</a></li>
   </ul></li>
   <li><a href="#제10장-외부-의존성-없이-비동기-서버-구축하기" id="toc-제10장-외부-의존성-없이-비동기-서버-구축하기" class="nav-link" data-scroll-target="#제10장-외부-의존성-없이-비동기-서버-구축하기">제10장 외부 의존성 없이 비동기 서버 구축하기</a></li>
   <li><a href="#이번-장을-마치고-나면-들어오는-요청을-수락하고-비동기-실행자execu" id="toc-이번-장을-마치고-나면-들어오는-요청을-수락하고-비동기-실행자execu" class="nav-link" data-scroll-target="#이번-장을-마치고-나면-들어오는-요청을-수락하고-비동기-실행자execu">이번 장을 마치고 나면 들어오는 요청을 수락하고 비동기 실행자(execu</a>
@@ -1355,18 +1255,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#표준-라이브러리로-비동기-런타임-구축하기" id="toc-표준-라이브러리로-비동기-런타임-구축하기" class="nav-link" data-scroll-target="#표준-라이브러리로-비동기-런타임-구축하기">표준 라이브러리로 비동기 런타임 구축하기</a></li>
   </ul></li>
-  <li><a href="#실행자가-태스크를-다시-깨워-폴링할-수-있도록-돕는-웨이커waker가" id="toc-실행자가-태스크를-다시-깨워-폴링할-수-있도록-돕는-웨이커waker가" class="nav-link" data-scroll-target="#실행자가-태스크를-다시-깨워-폴링할-수-있도록-돕는-웨이커waker가">실행자가 태스크를 다시 깨워 폴링할 수 있도록 돕는 웨이커(waker)가</a>
-  <ul class="collapse">
-  <li><a href="#웨이커-구축하기" id="toc-웨이커-구축하기" class="nav-link" data-scroll-target="#웨이커-구축하기">웨이커 구축하기</a></li>
-  </ul></li>
-  <li><a href="#비록-웨이커의-뼈대만-간략히-구축했지만-자체-웨이커를-직접-구현함으로써" id="toc-비록-웨이커의-뼈대만-간략히-구축했지만-자체-웨이커를-직접-구현함으로써" class="nav-link" data-scroll-target="#비록-웨이커의-뼈대만-간략히-구축했지만-자체-웨이커를-직접-구현함으로써">비록 웨이커의 뼈대만 간략히 구축했지만, 자체 웨이커를 직접 구현함으로써</a>
-  <ul class="collapse">
-  <li><a href="#실행자-구축하기" id="toc-실행자-구축하기" class="nav-link" data-scroll-target="#실행자-구축하기">실행자 구축하기</a></li>
-  </ul></li>
-  <li><a href="#비동기-런타임의-근간이-완성되었으며-이제-비동기-코드를-실행할-수-있습니" id="toc-비동기-런타임의-근간이-완성되었으며-이제-비동기-코드를-실행할-수-있습니" class="nav-link" data-scroll-target="#비동기-런타임의-근간이-완성되었으며-이제-비동기-코드를-실행할-수-있습니">비동기 런타임의 근간이 완성되었으며 이제 비동기 코드를 실행할 수 있습니</a>
-  <ul class="collapse">
-  <li><a href="#실행자-실행해-보기" id="toc-실행자-실행해-보기" class="nav-link" data-scroll-target="#실행자-실행해-보기">실행자 실행해 보기</a></li>
-  </ul></li>
   <li><a href="#이제-센더-future가-정의되었으므로-리시버-future로-넘어갈-수" id="toc-이제-센더-future가-정의되었으므로-리시버-future로-넘어갈-수" class="nav-link" data-scroll-target="#이제-센더-future가-정의되었으므로-리시버-future로-넘어갈-수">이제 센더 future가 정의되었으므로 리시버 future로 넘어갈 수</a>
   <ul class="collapse">
   <li><a href="#리시버-구축하기" id="toc-리시버-구축하기" class="nav-link" data-scroll-target="#리시버-구축하기">리시버 구축하기</a></li>
@@ -1375,31 +1263,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#슬립-future-구축하기" id="toc-슬립-future-구축하기" class="nav-link" data-scroll-target="#슬립-future-구축하기">슬립 future 구축하기</a></li>
   </ul></li>
-  <li><a href="#이제-서버에서-이-컴포넌트들을-임포트할-수-있습니다.-모든-기능이-완성되" id="toc-이제-서버에서-이-컴포넌트들을-임포트할-수-있습니다.-모든-기능이-완성되" class="nav-link" data-scroll-target="#이제-서버에서-이-컴포넌트들을-임포트할-수-있습니다.-모든-기능이-완성되">이제 서버에서 이 컴포넌트들을 임포트할 수 있습니다. 모든 기능이 완성되</a>
-  <ul class="collapse">
-  <li><a href="#서버-구축하기" id="toc-서버-구축하기" class="nav-link" data-scroll-target="#서버-구축하기">서버 구축하기</a></li>
-  </ul></li>
-  <li><a href="#필요한-모든-준비가-끝났으므로-요청을-수락하는-코드를-작성할-수-있습니다" id="toc-필요한-모든-준비가-끝났으므로-요청을-수락하는-코드를-작성할-수-있습니다" class="nav-link" data-scroll-target="#필요한-모든-준비가-끝났으므로-요청을-수락하는-코드를-작성할-수-있습니다">필요한 모든 준비가 끝났으므로 요청을 수락하는 코드를 작성할 수 있습니다</a>
-  <ul class="collapse">
-  <li><a href="#요청-수락하기" id="toc-요청-수락하기" class="nav-link" data-scroll-target="#요청-수락하기">요청 수락하기</a></li>
-  </ul></li>
-  <li><a href="#그렇다면-요청을-실행자로-보낸-후에는-무엇을-해야-할까요-바로-요청을" id="toc-그렇다면-요청을-실행자로-보낸-후에는-무엇을-해야-할까요-바로-요청을" class="nav-link" data-scroll-target="#그렇다면-요청을-실행자로-보낸-후에는-무엇을-해야-할까요-바로-요청을">그렇다면 요청을 실행자로 보낸 후에는 무엇을 해야 할까요? 바로 요청을</a>
-  <ul class="collapse">
-  <li><a href="#요청-처리하기" id="toc-요청-처리하기" class="nav-link" data-scroll-target="#요청-처리하기">요청 처리하기</a></li>
-  </ul></li>
-  <li><a href="#이제-서버가-완벽히-동작합니다.-작성해야-할-마지막-조각은-클라이언트입니" id="toc-이제-서버가-완벽히-동작합니다.-작성해야-할-마지막-조각은-클라이언트입니" class="nav-link" data-scroll-target="#이제-서버가-완벽히-동작합니다.-작성해야-할-마지막-조각은-클라이언트입니">이제 서버가 완벽히 동작합니다. 작성해야 할 마지막 조각은 클라이언트입니</a>
-  <ul class="collapse">
-  <li><a href="#비동기-클라이언트-구축하기" id="toc-비동기-클라이언트-구축하기" class="nav-link" data-scroll-target="#비동기-클라이언트-구축하기">비동기 클라이언트 구축하기</a></li>
-  </ul></li>
   <li><a href="#테스트-준비가-끝났습니다.-서로-다른-터미널에서-서버와-클라이언트를-실행" id="toc-테스트-준비가-끝났습니다.-서로-다른-터미널에서-서버와-클라이언트를-실행" class="nav-link" data-scroll-target="#테스트-준비가-끝났습니다.-서로-다른-터미널에서-서버와-클라이언트를-실행">테스트 준비가 끝났습니다. 서로 다른 터미널에서 서버와 클라이언트를 실행</a>
   <ul class="collapse">
-  <li><a href="#요약-9" id="toc-요약-9" class="nav-link" data-scroll-target="#요약-9">요약</a></li>
+  <li><a href="#요약-5" id="toc-요약-5" class="nav-link" data-scroll-target="#요약-5">요약</a></li>
   </ul></li>
   <li><a href="#제11장-테스팅" id="toc-제11장-테스팅" class="nav-link" data-scroll-target="#제11장-테스팅">제11장 테스팅</a></li>
-  <li><a href="#동기-테스트의-기초부터-살펴보면서-테스팅-여정을-시작하겠습니다." id="toc-동기-테스트의-기초부터-살펴보면서-테스팅-여정을-시작하겠습니다." class="nav-link" data-scroll-target="#동기-테스트의-기초부터-살펴보면서-테스팅-여정을-시작하겠습니다.">동기 테스트의 기초부터 살펴보면서 테스팅 여정을 시작하겠습니다.</a>
-  <ul class="collapse">
-  <li><a href="#기본-동기-테스트-수행하기" id="toc-기본-동기-테스트-수행하기" class="nav-link" data-scroll-target="#기본-동기-테스트-수행하기">기본 동기 테스트 수행하기</a></li>
-  </ul></li>
   <li><a href="#이제-프로그램에-대한-기본적인-모킹을-정의했지만-모든-것에-격리된-모듈" id="toc-이제-프로그램에-대한-기본적인-모킹을-정의했지만-모든-것에-격리된-모듈" class="nav-link" data-scroll-target="#이제-프로그램에-대한-기본적인-모킹을-정의했지만-모든-것에-격리된-모듈">이제 프로그램에 대한 기본적인 모킹을 정의했지만, 모든 것에 격리된 모듈</a>
   <ul class="collapse">
   <li><a href="#비동기-코드-모킹하기" id="toc-비동기-코드-모킹하기" class="nav-link" data-scroll-target="#비동기-코드-모킹하기">비동기 코드 모킹하기</a></li>
@@ -1408,25 +1276,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#데드락-테스트하기" id="toc-데드락-테스트하기" class="nav-link" data-scroll-target="#데드락-테스트하기">데드락 테스트하기</a></li>
   </ul></li>
-  <li><a href="#데드락은-반드시-피해야-하지만-시스템이-완전히-멈춰-서기-때문에-일반적" id="toc-데드락은-반드시-피해야-하지만-시스템이-완전히-멈춰-서기-때문에-일반적" class="nav-link" data-scroll-target="#데드락은-반드시-피해야-하지만-시스템이-완전히-멈춰-서기-때문에-일반적">데드락은 반드시 피해야 하지만, 시스템이 완전히 멈춰 서기 때문에 일반적</a>
-  <ul class="collapse">
-  <li><a href="#경쟁-상태-테스트하기" id="toc-경쟁-상태-테스트하기" class="nav-link" data-scroll-target="#경쟁-상태-테스트하기">경쟁 상태 테스트하기</a></li>
-  </ul></li>
   <li><a href="#뮤텍스와-원자적-값만이-여러-태스크가-데이터에-접근할-수-있도록-하는-유" id="toc-뮤텍스와-원자적-값만이-여러-태스크가-데이터에-접근할-수-있도록-하는-유" class="nav-link" data-scroll-target="#뮤텍스와-원자적-값만이-여러-태스크가-데이터에-접근할-수-있도록-하는-유">뮤텍스와 원자적 값만이 여러 태스크가 데이터에 접근할 수 있도록 하는 유</a>
   <ul class="collapse">
   <li><a href="#채널-용량-테스트하기" id="toc-채널-용량-테스트하기" class="nav-link" data-scroll-target="#채널-용량-테스트하기">채널 용량 테스트하기</a></li>
   </ul></li>
-  <li><a href="#알다시피-채널을-사용하면-시스템-전체에-비동기식으로-데이터를-공유할-수" id="toc-알다시피-채널을-사용하면-시스템-전체에-비동기식으로-데이터를-공유할-수" class="nav-link" data-scroll-target="#알다시피-채널을-사용하면-시스템-전체에-비동기식으로-데이터를-공유할-수">알다시피 채널을 사용하면 시스템 전체에 비동기식으로 데이터를 공유할 수</a>
-  <ul class="collapse">
-  <li><a href="#네트워크-상호작용-테스트" id="toc-네트워크-상호작용-테스트" class="nav-link" data-scroll-target="#네트워크-상호작용-테스트">네트워크 상호작용 테스트</a></li>
-  </ul></li>
   <li><a href="#mockito에는-더-많은-기능이-있습니다.-예를-들어-json-본문" id="toc-mockito에는-더-많은-기능이-있습니다.-예를-들어-json-본문" class="nav-link" data-scroll-target="#mockito에는-더-많은-기능이-있습니다.-예를-들어-json-본문"><code>mockito</code>에는 더 많은 기능이 있습니다. 예를 들어 JSON 본문</a>
   <ul class="collapse">
   <li><a href="#세밀한-퓨처-테스팅" id="toc-세밀한-퓨처-테스팅" class="nav-link" data-scroll-target="#세밀한-퓨처-테스팅">세밀한 퓨처 테스팅</a></li>
-  </ul></li>
-  <li><a href="#여기서-우리는-비동기-시스템을-일시-정지시키고-상태를-검사한-다음-다" id="toc-여기서-우리는-비동기-시스템을-일시-정지시키고-상태를-검사한-다음-다" class="nav-link" data-scroll-target="#여기서-우리는-비동기-시스템을-일시-정지시키고-상태를-검사한-다음-다">여기서 우리는 비동기 시스템을 일시 정지시키고, 상태를 검사한 다음, 다</a>
-  <ul class="collapse">
-  <li><a href="#요약-10" id="toc-요약-10" class="nav-link" data-scroll-target="#요약-10">요약</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -1435,9 +1291,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../learn-rust/index.html">Rust 생태계</a></li><li class="breadcrumb-item"><a href="../async-rust/index.html"><span class="chapter-title">Async Rust</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../learn-rust/index.html">Rust 생태계</a></li><li class="breadcrumb-item"><a href="../async-rust/index.html"><span class="chapter-title">비동기 Rust</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Async Rust</span></h1>
+<h1 class="title"><span class="chapter-title">비동기 Rust</span></h1>
 <p class="subtitle lead">두려움 없는 동시성의 힘을 발휘하다</p>
 </div>
 
@@ -1472,8 +1328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>이 장을 읽고 나면 세부 구현을 깊이 파고들지 않아도 비동기 프로그래밍의 전체적인 모습을 이해할 수 있을 것입니다. 또한 비동기 런타임이 비동기 작업을 실행할 때 스레드를 사용하므로, 비동기 프로그래밍 전반에서 자주 등장하는 스레드와 Rust의 기본 개념도 익히게 됩니다. 그러면 보다 구체적인 비동기 프로그래밍 예제를 다루는 다음 장에서 비동기 프로그램의 동작 방식을 자세히 살펴볼 준비가 될 것입니다. 만약 프로세스, 스레드, 그리고 이들 간의 데이터 공유에 이미 익숙하다면 이번 장은 건너뛰어도 좋습니다. 2장에서는 <code>Future</code>, 태스크(<code>Task</code>), 그리고 비동기 런타임이 태스크를 실행하는 방식과 같은 비동기 고유 개념을 다룹니다.</p>
 <section id="이-장을-읽고-나면-세부-구현을-깊이-파고들지-않아도-비동기-프로그래밍의" class="level2">
 <h2 class="anchored" data-anchor-id="이-장을-읽고-나면-세부-구현을-깊이-파고들지-않아도-비동기-프로그래밍의">이 장을 읽고 나면 세부 구현을 깊이 파고들지 않아도 비동기 프로그래밍의</h2>
-<section id="비동기란-무엇인가" class="level3">
-<h3 class="anchored" data-anchor-id="비동기란-무엇인가">비동기란 무엇인가?</h3>
+<p>비동기란 무엇인가?</p>
 <p>컴퓨터를 사용할 때 우리는 컴퓨터가 여러 작업을 동시에 수행하기를 기대합니다. 그렇지 않다면 사용자 경험은 크게 떨어질 것입니다. 하지만 컴퓨터가 한 번에 수행하는 수많은 작업을 생각해 보십시오. 이 책을 집필하면서 8코어 Apple M1 MacBook의 활성 상태 보기(Activity Monitor)를 열어보았습니다. 그 순간 노트북은 CPU 사용률이 고작 7%에 불과한 상태에서 3,118개의 스레드와 453개의 프로세스를 실행하고 있었습니다. 왜 이렇게 많은 프로세스와 스레드가 존재할까요? 여러 애플리케이션이 실행 중이고, 브라우저 탭들이 열려 있으며, 각종 백그라운드 프로세스가 돌고 있기 때문입니다. 그렇다면 노트북은 어떻게 이 모든 스레드와 프로세스를 동시에 실행할 수 있을까요? 핵심은 컴퓨터가 실제로 3,118개의 스레드와 453개의 프로세스를 ‘동시에’ 실행하고 있는 것은 아니라는 점입니다. 컴퓨터는 자원을 스케줄링해야 합니다.</p>
 <p>자원 스케줄링의 필요성을 확인하기 위해, 연산 비용이 큰 코드를 실행하여 활성 상태 보기가 어떻게 변하는지 살펴볼 수 있습니다. CPU에 부하를 주기 위해 다음과 같은 피보나치 수열 재귀 계산을 사용합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> fibonacci(n<span class="op">:</span> <span class="dt">u64</span>) <span class="op">-&gt;</span> <span class="dt">u64</span> <span class="op">{</span></span>
@@ -1543,7 +1398,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>그림 1-1. 블로킹 동기 타임라인과 비동기 타임라인의 비교</figcaption>
 </figure>
 </div>
-</section>
 </section>
 <section id="그림-1-1.-블로킹-동기-타임라인과-비동기-타임라인의-비교asy" class="level2">
 <h2 class="anchored" data-anchor-id="그림-1-1.-블로킹-동기-타임라인과-비동기-타임라인의-비교asy">![그림 1-1. 블로킹 동기 타임라인과 비동기 타임라인의 비교](asy</h2>
@@ -1690,12 +1544,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이렇게 하면 관리해야 할 부품 수는 줄어들지만, 프로세스와 메인 프로그램 간에 데이터를 직렬화해야 하는 오버헤드와 함께 프로세스 자체의 확장성 문제는 여전히 남습니다. Rust는 메모리 안전성을 보장하고 에러를 값으로 처리할 수 있으므로, 프로세스가 제공하는 격리라는 이점이 상대적으로 덜 부각됩니다. 예를 들어 안전하지 않은 Rust(unsafe Rust) 코드를 의도적으로 작성하지 않는 한, 스레드 중 하나에서 메모리 누수가 발생할 일은 없습니다.</p>
 <p>비동기 프로그래밍으로 달성하고자 하는 바를 다시 떠올려 보십시오. 우리는 가볍고 넌블로킹(nonblocking)인 작업을 분기하고 이들이 완료되기를 기다리고자 합니다. 많은 경우 이러한 작업들로부터 데이터를 얻어 사용하고자 할 것입니다. 또한 태스크에 데이터를 담아 비동기 런타임으로 전달하는 기능도 필요합니다. 스레드 간 데이터 공유의 용이성을 고려할 때, 비동기 프로그래밍에는 프로세스보다 스레드가 훨씬 더 나은 선택으로 보입니다. 이제 스레드를 다루어 보겠습니다.</p>
-</section>
-</section>
-<section id="비동기-프로그래밍으로-달성하고자-하는-바를-다시-떠올려-보십시오.-우리는" class="level2">
-<h2 class="anchored" data-anchor-id="비동기-프로그래밍으로-달성하고자-하는-바를-다시-떠올려-보십시오.-우리는">비동기 프로그래밍으로 달성하고자 하는 바를 다시 떠올려 보십시오. 우리는</h2>
-<section id="스레드란-무엇인가" class="level3">
-<h3 class="anchored" data-anchor-id="스레드란-무엇인가">스레드란 무엇인가?</h3>
+<p>비동기 프로그래밍으로 달성하고자 하는 바를 다시 떠올려 보십시오. 우리는 스레드란 무엇인가?</p>
 <p>실행 스레드(thread of execution)는 CPU가 실행할 수 있는 프로그래밍된 명령어의 최소 시퀀스입니다. 스레드는 스케줄러에 의해 독립적으로 관리될 수 있습니다. 프로세스 내부에서는 여러 스레드 간에 메모리를 공유할 수 있습니다(그림 1-3).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1723,7 +1572,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>JoinHandle</code>을 사용하면 스레드가 완료될 때까지 기다릴 수 있으며, 해당 스레드가 끝날 때까지 프로그램을 일시 중지합니다. 스레드를 조인(join)한다는 것은 스레드가 종료될 때까지 프로그램을 블로킹한다는 뜻입니다. <code>JoinHandle</code>은 <code>Send</code>와 <code>Sync</code> 트레이트를 구현하므로 스레드 간에 전달될 수 있습니다. 하지만 <code>JoinHandle</code>은 <code>Clone</code> 트레이트를 구현하지 않습니다. 스레드마다 고유한 <code>JoinHandle</code>이 필요하기 때문입니다. 하나의 스레드에 여러 개의 <code>JoinHandle</code>이 존재할 수 있다면, 여러 스레드가 동시에 실행 중인 스레드를 조인하려고 시도하여 데이터 레이스(data race)가 발생할 위험이 있습니다.</p>
 <blockquote class="blockquote">
-<p>[!NOTE] 다른 프로그래밍 언어를 사용해 보았다면 그린 스레드(green threads)를 접해 보았을 것입니다. 이러한 스레드는 운영체제가 아닌 다른 주체(예: 런타임이나 가상 머신)에 의해 스케줄링됩니다. Rust도 원래 버전 1.0 이전에 그린 스레드를 구현했다가 제거했습니다. 그린 스레드를 제거하고 라이브러리 수준의 그린 스레드를 지원하는 네이티브 스레드로 전환한 주된 이유는 Rust에서 스레드와 I/O 작업이 결합되어 있어, 네이티브 스레드와 그린 스레드가 동일한 API를 유지해야만 했기 때문입니다. 이로 인해 I/O 작업 사용과 메모리 할당 지정에서 다양한 문제가 발생했습니다. 자세한 내용은 그린 스레드에 관한 Rust 문서를 참조하십시오. Rust 자체는 그린 스레드를 구현하지 않지만 Tokio와 같은 런타임이 이를 구현한다는 점에 유의하십시오.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>이제 <code>JoinHandle</code> 벡터가 준비되었으므로 스레드들이 실행을 마칠 때까지 기다린 후 소요된 시간을 출력할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> handle <span class="kw">in</span> handles <span class="op">{</span></span>
@@ -1771,7 +1620,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span>)<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>여기서 <code>Condvar</code> 알림을 기다리는 모습을 볼 수 있습니다. 대기하는 시점에서 스레드는 파킹(parked)되었다고 말합니다. 이는 스레드가 블로킹되어 실행되지 않는 상태임을 의미합니다. <code>Condvar</code>로부터 알림이 도착하면 스레드는 <code>Condvar</code>에 의해 깨어난 뒤 <code>Mutex</code> 내부의 변수에 접근합니다. 그런 다음 변수를 출력하고 스레드는 다시 잠듭니다. 루프가 무한히 지속되도록 <code>AtomicBool</code>이 <code>false</code>인 것에 의존합니다. 이를 통해 필요한 경우 스레드를 중지할 수 있습니다.</p>
 <blockquote class="blockquote">
-<p>[!NOTE] 코드에서 <code>unwrap</code>을 많이 사용하고 있습니다. 이는 비동기와 관련된 주요 개념에 집중할 수 있도록 코드를 간결하게 유지하기 위함이지만, 프로덕션 코드에서는 반드시 에러 처리를 해야 한다는 점을 기억하십시오. <code>unwrap()</code> 사용이 허용될 수 있는 유일한 경우는 뮤텍스에 락을 걸 때입니다. 패닉이 발생하는 유일한 이유는 이전에 락을 쥐고 있던 스레드가 패닉을 일으킨 경우뿐이며, 이를 락 포이즈닝(lock poisoning)이라고 부릅니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>다음 스레드에서는 4번의 반복만 실행한 후 스레드를 종료합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> updater_thread <span class="op">=</span> <span class="pp">thread::</span>spawn(<span class="kw">move</span> <span class="op">||</span> <span class="op">{</span></span>
@@ -1803,12 +1652,7 @@ Received value: true</code></pre>
 <p>업데이터 스레드가 공유 데이터의 값을 갱신하고 첫 번째 스레드에 이를 알려 접근하도록 하고 있습니다.</p>
 <p>값들이 일관되게 유지되므로 우리가 원하는 결과를 얻었지만, 솔직히 이는 비동기 동작이라고 부르기에는 투박한 구현입니다. 스레드가 멈추고 업데이트를 기다리는 방식이기 때문입니다. <code>updater_thread</code>가 순회하며 확인할 수 있도록 여러 개의 <code>Condvar</code>를 추가한다면, 하나의 스레드가 여러 작업을 추적하고 변경될 때마다 동작하게 만들 수는 있을 것입니다. 이것이 진정한 비동기 동작인지 아닌지에 대해서는 온라인에서 논쟁이 벌어질 수 있겠지만, 이것이 비동기 프로그래밍을 구현하는 최적의 방법이나 표준적인 방법이 아니라는 점은 분명합니다.</p>
 <p>그러나 스레드가 비동기 프로그래밍의 핵심 구성 요소임은 확인할 수 있습니다. 비동기 런타임은 단일 스레드 안에서 여러 비동기 연산이 동시에 실행될 수 있는 방식으로 태스크를 처리합니다. 이 스레드는 보통 메인 스레드와 분리되어 있습니다. 런타임은 태스크를 실행하기 위해 여러 스레드를 둘 수도 있습니다. 다음 절에서는 비동기 코드의 표준 구현을 사용해 보겠습니다.</p>
-</section>
-</section>
-<section id="그러나-스레드가-비동기-프로그래밍의-핵심-구성-요소임은-확인할-수-있습니" class="level2">
-<h2 class="anchored" data-anchor-id="그러나-스레드가-비동기-프로그래밍의-핵심-구성-요소임은-확인할-수-있습니">그러나 스레드가 비동기 프로그래밍의 핵심 구성 요소임은 확인할 수 있습니</h2>
-<section id="비동기는-어디에-활용할-수-있는가" class="level3">
-<h3 class="anchored" data-anchor-id="비동기는-어디에-활용할-수-있는가">비동기는 어디에 활용할 수 있는가?</h3>
+<p>그러나 스레드가 비동기 프로그래밍의 핵심 구성 요소임은 확인할 수 있습니 ### 비동기는 어디에 활용할 수 있는가?</p>
 <p>지금까지 비동기 프로그래밍을 소개하고 여러 HTTP 요청과 같은 예제를 통해 그 장점을 살펴보았습니다. 이들은 비동기의 강력함을 보여주기 위해 고안된 간단한 예제였습니다. 이 절에서는 비동기의 실무 활용 사례와 다음 프로젝트에 비동기를 도입해야 하는 이유를 제시합니다.</p>
 <p>먼저 비동기를 무엇에 활용할 수 있는지 생각해 봅시다. 주된 활용 사례는 실행하거나 수신하는 데 지연이 있거나 지연될 가능성이 있는 작업, 예를 들어 파일 시스템에 대한 I/O 호출이나 네트워크 요청과 같은 작업입니다. 비동기를 사용하면 이러한 작업을 호출하는 프로그램이 블로킹되지 않고 계속 실행될 수 있으므로, 프로그램이 멈추거나 반응성이 떨어지는 문제를 방지할 수 있습니다.</p>
 <p>파일 쓰기와 같은 I/O 작업은 일반적으로 하드 드라이브와 같은 외부 장치에 의존하기 때문에 인메모리(in-memory) 작업에 비해 느린 것으로 간주됩니다. 대부분의 하드 드라이브는 여전히 물리적으로 움직여야 하는 기계 부품에 의존하므로 RAM이나 CPU에서의 전자적 연산보다 느립니다. 또한 CPU에서 장치로 데이터를 전송할 수 있는 속도도 USB 연결 등과 같은 이유로 제한될 수 있습니다.</p>
@@ -1873,7 +1717,7 @@ Received value: true</code></pre>
 <li>매 반복마다 짧은 시간 동안 잠들어(sleep) 확인 대상 파일에 계속 부하를 주지 않도록 합니다.</li>
 </ol>
 <blockquote class="blockquote">
-<p>[!NOTE] 이 함수를 실행하기 위해 Tokio 스레드를 사용하면 Tokio 런타임은 문맥을 전환하여 동일한 프로세스 내의 다른 스레드를 실행할 수 있습니다. 표준 라이브러리의 <code>sleep</code> 함수를 사용하면 스레드가 블로킹됩니다. 표준 라이브러리의 <code>sleep</code>은 태스크를 Tokio 실행기(executor)로 전달하지 않기 때문입니다. 실행기에 대해서는 3장에서 다룹니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>첫 번째 루프가 정의되었으므로 이제 <code>main</code>에서 실행되는 루프로 넘어갈 수 있습니다. 이 시점에서 Tokio 스레드와 채널을 생성하는 방법을 알고 있다면 직접 <code>main</code> 함수를 작성해 보아도 좋습니다.</p>
 <p>직접 <code>main</code> 함수를 작성해 보았다면 다음과 유사한 형태일 것입니다.</p>
@@ -1974,11 +1818,7 @@ Time taken: 5.494735083s</code></pre>
 <h2 class="anchored" data-anchor-id="제2장-비동기-rust-기초">제2장 비동기 Rust 기초</h2>
 <p>이번 장에서는 Rust에서 비동기(async)를 사용하는 데 필요한 핵심 구성 요소를 소개하고 태스크(task), 퓨처(future), <code>async</code>, <code>await</code>의 전반적인 개념을 살펴봅니다. 또한 Rust 비동기 프로그래밍의 잠재력을 온전히 활용하는 데 필수적인 개념인 컨텍스트(context), 핀(pin), 폴링(polling), 클로저(closure)를 다룹니다. 이번 장에 수록된 예제들은 학습 목표를 명확히 보여주기 위해 고른 것으로, 효율성 측면에서 반드시 최적화된 형태는 아닐 수 있습니다. 본 장의 마지막에서는 이러한 모든 개념을 하나로 엮어, 보안이 중요한 프로그램을 위한 비동기 감사 로거(async audit logger)를 직접 구축해 보는 예제를 다룹니다.</p>
 <p>이 장을 끝마치고 나면 태스크와 퓨처를 명확히 정의할 수 있게 됩니다. 또한 컨텍스트와 핀을 포함하여 퓨처를 구성하는 기술적 구성 요소들도 깊이 이해하게 될 것입니다.</p>
-</section>
-<section id="이-장을-끝마치고-나면-태스크와-퓨처를-명확히-정의할-수-있게-됩니다." class="level2">
-<h2 class="anchored" data-anchor-id="이-장을-끝마치고-나면-태스크와-퓨처를-명확히-정의할-수-있게-됩니다.">이 장을 끝마치고 나면 태스크와 퓨처를 명확히 정의할 수 있게 됩니다.</h2>
-<section id="태스크-이해하기" class="level3">
-<h3 class="anchored" data-anchor-id="태스크-이해하기">태스크 이해하기</h3>
+<p>이 장을 끝마치고 나면 태스크와 퓨처를 명확히 정의할 수 있게 됩니다. ### 태스크 이해하기</p>
 <p>비동기 프로그래밍에서 태스크(task)는 하나의 비동기 연산을 나타냅니다. 태스크 기반 비동기 패턴(Task-based Asynchronous Pattern, TAP)은 비동기 코드에 대한 추상화를 제공합니다. 개발자는 일련의 문장(statement) 형태로 코드를 작성하며, 마치 각 문장이 이전 문장의 완료 후에 실행되는 것처럼 순차적으로 읽을 수 있습니다. 예를 들어 커피 한 잔과 토스트를 준비하는 과정을 생각해 봅시다. 이 작업에는 다음과 같은 단계가 필요합니다.</p>
 <ol type="1">
 <li>토스터에 빵 넣기</li>
@@ -2139,16 +1979,8 @@ It took: 18 seconds</code></pre>
 <span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> _ <span class="op">=</span> <span class="pp">tokio::join!</span>(person_one<span class="op">,</span> person_two)<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>사람을 나타내는 두 태스크를 조인하면 실행 시간은 28초가 됩니다. 세 태스크를 조인하면 실행 시간은 42초가 됩니다. 각 태스크의 총 블로킹 시간이 14초임을 감안하면 시간 증가는 합리적입니다. 시간이 이렇게 선형으로 늘어나는 양상을 보면, 세 태스크가 비동기 런타임으로 전달되어 큐에 들어가더라도 실행기(executor)는 <code>await</code>를 만날 때 해당 태스크를 유휴(idle) 상태로 두고 큐의 다음 태스크를 처리하면서 유휴 태스크들을 폴링한다는 점을 짐작할 수 있습니다.</p>
 <p>비동기 런타임은 여러 워커와 큐를 가질 수 있으며, 3장에서는 우리만의 런타임을 직접 작성해 볼 것입니다. 이번 절에서 다룬 내용을 고려하여 태스크를 다음과 같이 정의할 수 있습니다.</p>
-<blockquote class="blockquote">
-<p><strong>태스크(Task)란</strong> 실행기(executor)에 의해 완료될 때까지 관리되고 구동되는 비동기 연산 또는 계산 단위입니다. 태스크는 퓨처의 실행을 나타내며, 여러 퓨처가 합성되거나 체이닝된 형태를 포함할 수 있습니다.</p>
-</blockquote>
 <p>이제 퓨처가 무엇인지 살펴보겠습니다.</p>
-</section>
-</section>
-<section id="이제-퓨처가-무엇인지-살펴보겠습니다." class="level2">
-<h2 class="anchored" data-anchor-id="이제-퓨처가-무엇인지-살펴보겠습니다.">이제 퓨처가 무엇인지 살펴보겠습니다.</h2>
-<section id="퓨처" class="level3">
-<h3 class="anchored" data-anchor-id="퓨처">퓨처</h3>
+<p>이제 퓨처가 무엇인지 살펴보겠습니다. ### 퓨처</p>
 <p>비동기 프로그래밍의 핵심 기능 중 하나는 퓨처(future)라는 개념입니다. 앞서 언급했듯이 퓨처는 아직 완료되지 않은 비동기 연산의 결과를 나타내는 플레이스홀더 객체입니다. 퓨처를 사용하면 백그라운드에서 태스크가 실행되는 동안 태스크를 시작하고 다른 작업을 계속 진행할 수 있습니다. 퓨처의 작동 방식을 제대로 이해하기 위해 그 라이프사이클을 살펴보겠습니다.</p>
 <p>퓨처가 처음 생성되면 유휴(idle) 상태입니다. 아직 실행되지 않은 상태입니다. 퓨처가 실행되면 값을 산출하거나, 완료(resolve)되거나, 혹은 결과가 나오기를 기다리는 대기 상태(pending)이므로 휴면 상태로 들어갈 수 있습니다. 퓨처가 다시 폴링(poll)될 때 폴링 결과는 <code>Pending</code> 또는 <code>Ready</code> 중 하나가 될 수 있습니다. 퓨처는 완료되거나 취소될 때까지 계속 폴링됩니다.</p>
 <p>퓨처의 작동 방식을 설명하기 위해 기본적인 카운터 퓨처를 만들어 보겠습니다. 이 퓨처는 5까지 숫자를 센 후 완료(<code>Ready</code>) 상태가 됩니다. 먼저 다음 항목들을 임포트해야 합니다.</p>
@@ -2192,18 +2024,12 @@ It took: 18 seconds</code></pre>
 <span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>서로 다른 두 태스크에서 퓨처를 실행하면 다음과 같은 출력이 나타납니다.</p>
 <pre class="text"><code>polling with result: 1
-polling with result: 1
-polling with result: 2
 polling with result: 2
 polling with result: 3
-polling with result: 3
 polling with result: 4
-polling with result: 4
-polling with result: 5
 polling with result: 5</code></pre>
 <p>하나의 퓨처가 큐에서 꺼내져 폴링된 뒤 유휴 상태가 되는 동안, 태스크 큐에서 다른 퓨처가 꺼내져 폴링되었습니다. 이 퓨처들은 번갈아 가며 폴링되었습니다. 여기서 <code>poll</code> 함수가 <code>async</code> 함수가 아니라는 점에 주목하셨을 것입니다. <code>poll</code> 함수가 비동기라면 폴링 중인 퓨처를 해결하기 위해 또 다른 퓨처를 보내 폴링해야 하므로 순환 의존성(circular dependency)이 생기기 때문입니다. 이를 통해 퓨처가 비동기 연산의 기반임을 알 수 있습니다.</p>
 <p><code>poll</code> 함수는 자기 자신의 가변 참조자를 받습니다. 하지만 이 가변 참조자는 <code>Pin</code>으로 감싸져 있으며, 이에 대해 논의해 볼 필요가 있습니다.</p>
-</section>
 </section>
 <section id="poll-함수는-자기-자신의-가변-참조자를-받습니다.-하지만-이-가변" class="level2">
 <h2 class="anchored" data-anchor-id="poll-함수는-자기-자신의-가변-참조자를-받습니다.-하지만-이-가변"><code>poll</code> 함수는 자기 자신의 가변 참조자를 받습니다. 하지만 이 가변</h2>
@@ -2268,8 +2094,7 @@ polling with result: 5</code></pre>
 <span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>웨이커는 컨텍스트로 감싸져 있으며, 폴링 결과가 <code>Pending</code>이 될 때만 사용됩니다. 웨이커는 본질적으로 퓨처가 실행될 수 있도록 깨우는 역할을 합니다. 퓨처가 완료되면 더 이상 실행할 필요가 없습니다. 만약 웨이커 호출을 제거하고 프로그램을 다시 실행한다면 다음과 같은 출력만 남게 될 것입니다.</p>
-<pre class="text"><code>polling with result: 1
-polling with result: 1</code></pre>
+<pre class="text"><code>polling with result: 1</code></pre>
 <p>프로그램은 끝나지 않고 멈춰버립니다(hang). 태스크가 여전히 유휴 상태이지만, 다시 폴링되어 끝까지 실행되도록 깨워줄 방법이 없기 때문입니다. 퓨처에는 다시 폴링되어야 할 시점에 호출될 <code>Waker::wake()</code> 함수가 필요합니다. 이 과정은 다음 단계로 진행됩니다.</p>
 <ol type="1">
 <li>퓨처의 <code>poll</code> 함수가 호출되고, 퓨처가 값을 반환하기 전에 비동기 연산의 완료를 기다려야 한다는 결과(<code>Pending</code>)가 나옵니다.</li>
@@ -2509,12 +2334,7 @@ after increment: 0
 after decrement: -1
 after increment: 0</code></pre>
 <p>최종 결과는 여전히 0이므로 에러가 전체 결과에 영향을 미치지는 않았습니다. 퓨처가 다시 폴링되었을 뿐입니다. 이는 흥미로운 구현이었지만, Tokio와 같은 서드파티 크레이트의 고수준 추상화를 사용하면 훨씬 쉽게 동일한 동작을 흉내 낼 수 있습니다.</p>
-</section>
-</section>
-<section id="최종-결과는-여전히-0이므로-에러가-전체-결과에-영향을-미치지는-않았습니" class="level2">
-<h2 class="anchored" data-anchor-id="최종-결과는-여전히-0이므로-에러가-전체-결과에-영향을-미치지는-않았습니">최종 결과는 여전히 0이므로 에러가 전체 결과에 영향을 미치지는 않았습니</h2>
-<section id="고수준의-퓨처-간-데이터-공유" class="level3">
-<h3 class="anchored" data-anchor-id="고수준의-퓨처-간-데이터-공유">고수준의 퓨처 간 데이터 공유</h3>
+<p>최종 결과는 여전히 0이므로 에러가 전체 결과에 영향을 미치지는 않았습니 ### 고수준의 퓨처 간 데이터 공유</p>
 <p>앞선 절에서 만든 퓨처는 다음과 같은 비동기 함수로 대체할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb78"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">fn</span> count(</span>
 <span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>    count<span class="op">:</span> <span class="dt">u32</span><span class="op">,</span></span>
@@ -2549,12 +2369,7 @@ after increment: 0</code></pre>
 <span id="cb79-8"><a href="#cb79-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span>)<span class="op">;</span></span>
 <span id="cb79-9"><a href="#cb79-9" aria-hidden="true" tabindex="-1"></a><span class="pp">tokio::join!</span>(handle_one<span class="op">,</span> handle_two)<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이를 실행하면 이전 절의 퓨처와 완전히 동일한 출력과 동작을 얻을 수 있습니다. 하지만 분명 훨씬 더 단순하고 작성하기 쉽습니다. 두 접근 방식 모두 장단점이 있습니다. 예를 들어 작성한 동작만을 수행하는 퓨처를 원한다면 비동기 함수를 사용하는 것만으로 충분합니다. 그러나 퓨처가 폴링되는 방식을 더 세밀하게 제어해야 하거나, 비동기 구현체에 접근할 수는 없지만 시도(<code>try</code>)할 수 있는 블로킹 함수가 있는 상황이라면 <code>poll</code> 함수를 직접 작성하는 것이 합리적입니다.</p>
-</section>
-</section>
-<section id="이를-실행하면-이전-절의-퓨처와-완전히-동일한-출력과-동작을-얻을-수-있" class="level2">
-<h2 class="anchored" data-anchor-id="이를-실행하면-이전-절의-퓨처와-완전히-동일한-출력과-동작을-얻을-수-있">이를 실행하면 이전 절의 퓨처와 완전히 동일한 출력과 동작을 얻을 수 있</h2>
-<section id="rust의-퓨처가-다른-언어와-다른-점" class="level3">
-<h3 class="anchored" data-anchor-id="rust의-퓨처가-다른-언어와-다른-점">Rust의 퓨처가 다른 언어와 다른 점</h3>
+<p>이를 실행하면 이전 절의 퓨처와 완전히 동일한 출력과 동작을 얻을 수 있 ### Rust의 퓨처가 다른 언어와 다른 점</p>
 <p>다른 프로그래밍 언어들도 비동기 프로그래밍을 위해 퓨처를 구현하며, 그중 일부는 콜백(callback) 모델에 의존합니다. 콜백 모델은 어떤 함수가 완료될 때 실행되는 함수를 사용하며, 이 콜백 함수는 대개 해당 함수의 인자로 전달됩니다. 하지만 콜백 모델은 동적 디스패치(dynamic dispatch)에 의존하기 때문에 Rust에는 적합하지 않았습니다. 동적 디스패치는 컴파일 시점이 아니라 런타임에 실제로 호출될 함수가 결정된다는 것을 의미합니다. 프로그램이 런타임에 어떤 함수를 호출할지 알아내야 하므로 이는 추가적인 오버헤드를 발생시켰습니다. 이는 제로 비용(zero-cost) 접근 방식에 위배되며 성능 저하를 초래했습니다.</p>
 <p>Rust는 폴링(poll) 방식을 사용하는 <code>Future</code> 트레이트를 활용하여 런타임 성능을 최적화하는 대안적 접근 방식을 선택했습니다. 런타임은 언제 폴링을 호출할지 관리하는 책임을 집니다. 콜백을 스케줄링하고 어떤 함수를 호출할지 고민할 필요 없이, 퓨처가 완료되었는지 확인하기 위해 폴링을 사용하기만 하면 됩니다. 퓨처를 단일 힙 할당 내의 상태 머신(state machine)으로 표현할 수 있고, 이 상태 머신이 비동기 함수를 실행하는 데 필요한 지역 변수들을 캡처하므로 이 방식이 훨씬 효율적입니다. 즉, 메모리 할당 크기가 잘못될 염려 없이 태스크당 단 한 번의 메모리 할당만 이루어집니다. 이러한 결정은 구현을 올바르게 완성하기 위해 충분한 시간을 투자한 Rust 프로그래밍 언어의 진면목을 보여주는 증거입니다.</p>
 <p>종종 우리는 <code>async</code>/<code>await</code>를 단독으로 사용하지 않고 태스크가 완료되었을 때 다른 작업을 수행하기를 원합니다. Tokio에서 제공하는 <code>and_then</code>이나 <code>or_else</code>와 같은 특정 콤비네이터(combinator)를 사용하여 이를 지정할 수 있습니다.</p>
@@ -2769,7 +2584,7 @@ six</code></pre>
 <span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> (runnable<span class="op">,</span> task) <span class="op">=</span> <span class="pp">async_task::</span>spawn(future<span class="op">,</span> schedule)<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>여기서는 러너블을 인자로 받아 큐로 전송하는 클로저를 생성했습니다. 그런 다음 <code>async_task::spawn</code> 함수를 사용하여 러너블과 태스크를 만듭니다. 이 함수는 내부적으로 퓨처를 힙에 할당하는 안전하지 않은(unsafe) 함수를 호출합니다. <code>spawn</code> 함수가 반환하는 태스크와 러너블은 동일한 퓨처를 가리키는 포인터를 갖습니다.</p>
 <blockquote class="blockquote">
-<p>[!NOTE] 이번 장에서는 자체적인 실행기(executor)나 러너블을 생성하고 태스크를 스케줄링하는 코드를 밑바닥부터 직접 만들지는 않는다. 이는 외부 의존성 없이 순수 표준 라이브러리만으로 비동기 서버를 구축하는 제10장에서 다룰 것이다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>러너블과 태스크가 동일한 퓨처를 가리키고 있으므로, 이제 러너블이 실행되도록 스케줄링하고 태스크를 반환해야 합니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb97"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>runnable<span class="op">.</span>schedule()<span class="op">;</span></span>
@@ -2840,7 +2655,7 @@ six</code></pre>
 <span id="cb102-4"><a href="#cb102-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// . . .</span></span>
 <span id="cb102-5"><a href="#cb102-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span>)<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <blockquote class="blockquote">
-<p>[!NOTE] 프로그래밍의 대부분의 것들이 그렇듯, 여기에도 항상 트레이드오프가 존재한다. 슬립 태스크 앞에 대기 중인 태스크가 많다면, 매 폴링 사이에 다른 태스크들이 완료될 때까지 기다려야 할 수 있으므로 비동기 슬립 태스크가 실제로 완료되기까지 요구된 지연 시간보다 더 오래 대기하게 될 가능성이 커진다. 두 단계 사이에 정확히 x초가 지나야 하는 작업이라면 블로킹 슬립이 더 나은 선택일 수도 있지만, 이런 태스크가 많아지면 큐가 빠르게 막히게 된다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>다시 블로킹 예제로 돌아와서, 이제 다음과 같은 <code>main</code> 함수를 통해 런타임에서 몇 가지 퓨처를 실행해볼 수 있습니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb103"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">{</span></span>
@@ -2904,12 +2719,7 @@ polling with result: 3</code></pre>
 <p>비유를 통해 어떤 일이 일어나고 있는지 설명해 보겠습니다. 세탁이 필요한 더러운 코트가 있다고 가정해 보겠습니다. 코트 안쪽에 붙어 있는 세탁 방법 라벨과 소재 표시는 퓨처(future)에 해당합니다. 우리는 세탁소로 들어가 세탁 지침이 적힌 코트를 건넵니다. 세탁소 직원은 코트에 비닐 커버를 씌우고 번호표를 붙여 세탁 가능한 상태(runnable)로 만듭니다. 또한 직원분은 번호가 적힌 접수증을 건네주는데, 이것이 바로 <code>main</code> 함수가 전달받는 태스크(task)와 같습니다.</p>
 <p>코트가 세탁되는 동안 우리는 하루 일과를 보냅니다. 코트가 첫 번째 세탁 과정에서 깨끗해지지 않으면, 깨끗해질 때까지 세탁 사이클을 계속 반복해서 거칩니다. 그런 다음 우리는 접수증을 가지고 돌아와 직원에게 건넵니다. 이 단계가 바로 <code>block_on</code> 함수에 해당합니다. 충분히 여유를 두고 늦게 찾아왔다면 코트는 이미 깨끗하게 세탁되어 있을 것이므로 바로 수령해서 일상을 이어갈 수 있습니다. 반대로 세탁소에 너무 일찍 찾아가면 코트가 아직 다 세탁되지 않았을 것이고, 세탁이 끝날 때까지 기다려야 코트를 집으로 가져갈 수 있습니다. 깨끗해진 코트가 바로 최종 결과값(result)입니다.</p>
 <p>지금 현재 우리의 비동기 런타임에는 큐를 처리하는 스레드가 단 하나뿐입니다. 이는 세탁소에 직원이 단 한 명만 있어야 한다고 고집하는 것과 같습니다. 대부분의 CPU가 멀티코어를 탑재하고 있다는 점을 고려할 때, 이는 사용 가능한 자원을 가장 효율적으로 활용하는 방식이 아닙니다. 이를 감안할 때 더 많은 태스크를 처리할 수 있도록 작업자(워커)와 큐의 개수를 늘리는 방법을 살펴보는 것은 매우 유익할 것입니다.</p>
-</section>
-</section>
-<section id="지금-현재-우리의-비동기-런타임에는-큐를-처리하는-스레드가-단-하나뿐입니" class="level2">
-<h2 class="anchored" data-anchor-id="지금-현재-우리의-비동기-런타임에는-큐를-처리하는-스레드가-단-하나뿐입니">지금 현재 우리의 비동기 런타임에는 큐를 처리하는 스레드가 단 하나뿐입니</h2>
-<section id="워커와-큐-늘리기" class="level3">
-<h3 class="anchored" data-anchor-id="워커와-큐-늘리기">워커와 큐 늘리기</h3>
+<p>지금 현재 우리의 비동기 런타임에는 큐를 처리하는 스레드가 단 하나뿐입니 ### 워커와 큐 늘리기</p>
 <p>큐를 처리하는 스레드 수를 늘리기 위해, 큐 채널의 수신자를 복제(clone)하여 큐에서 작업을 소비하는 스레드를 하나 더 추가할 수 있습니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb106"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> (tx<span class="op">,</span> rx) <span class="op">=</span> <span class="pp">flume::unbounded::</span><span class="op">&lt;</span>Runnable<span class="op">&gt;</span>()<span class="op">;</span></span>
 <span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> queue_one <span class="op">=</span> rx<span class="op">.</span>clone()<span class="op">;</span></span>
@@ -2937,7 +2747,7 @@ polling with result: 3</code></pre>
 <span id="cb107-8"><a href="#cb107-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>CPU 집약적인 작업을 스레드 풀로 넘겨두고 프로그램의 나머지 부분을 계속 실행하다가, 태스크의 결과가 필요한 시점에 블로킹할 수 있습니다. 비동기 프로그래밍이 주로 I/O 작업의 조율을 최적화하기 위해 사용된다는 점을 생각하면 이것이 진정한 비동기 프로그래밍의 본래 취지와는 거리가 있을 수 있지만, 프로그램 초기에 CPU 집약적 작업을 다른 곳으로 위임하여 특정 문제를 해결할 수 있는 유용한 접근법이라는 점은 기억해둘 만합니다.</p>
 <blockquote class="blockquote">
-<p>[!NOTE] “비동기는 연산 집약적인 작업용이 아니다”라는 경고를 접해본 적이 있을 것이다. 비동기는 어디까지나 하나의 메커니즘일 뿐이며, 타당하기만 하다면 원하는 용도로 얼마든지 사용할 수 있다. 하지만 그 경고가 근거 없는 것은 아니다. 예를 들어 대부분의 웹 프레임워크처럼 비동기 런타임을 유입되는 요청 처리에 사용하고 있다면, 비동기 런타임 큐에 연산 집약적인 태스크를 마구 집어넣을 경우 해당 연산이 완료될 때까지 들어오는 요청을 처리하는 기능이 잠재적으로 차단될 수 있다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>여러 워커를 다루어 보았으니, 이제 여러 개의 큐를 사용하는 방법을 본격적으로 살펴보겠습니다.</p>
 <section id="태스크를-서로-다른-큐로-전달하기" class="level4">
@@ -3013,15 +2823,11 @@ polling with result: 3</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb115"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> one <span class="op">=</span> CounterFuture <span class="op">{</span> count<span class="op">:</span> <span class="dv">0</span><span class="op">,</span> order<span class="op">:</span> <span class="pp">FutureType::</span>High <span class="op">};</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>하지만 문제점이 하나 있습니다. 저우선순위 태스크가 엄청나게 많이 생성되고 고우선순위 태스크는 전혀 없는 상황을 상상해보십시오. 다른 두 소비자 스레드는 그냥 놀고 있는 동안 소비자 스레드 단 하나가 모든 태스크를 도맡아 처리하게 될 것입니다. 즉, 3분의 1 용량으로만 일하게 되는 셈입니다. 여기서 작업 훔치기(task stealing)가 필요해집니다.</p>
 <blockquote class="blockquote">
-<p>[!NOTE] 태스크 분배를 제어하기 위해 반드시 비동기 런타임 큐를 직접 작성해야만 하는 것은 아니다. 예를 들어 Tokio에서는 <code>LocalSet</code>을 사용하여 태스크의 분배를 제어할 수 있다. 이에 대해서는 제7장에서 다룬다.</p>
+<p>[!NOTE]</p>
 </blockquote>
-</section>
-</section>
-</section>
-<section id="note" class="level2">
-<h2 class="anchored" data-anchor-id="note">&gt; [!NOTE]</h2>
-<section id="작업-훔치기" class="level3">
-<h3 class="anchored" data-anchor-id="작업-훔치기">작업 훔치기</h3>
+<blockquote class="blockquote">
+<p>[!NOTE] ### 작업 훔치기</p>
+</blockquote>
 <p>작업 훔치기(task stealing)에서는 소비자 스레드가 자신의 큐가 비어 있을 때 다른 큐에서 태스크를 훔쳐와 실행합니다. 그림 3-2는 현재의 비동기 시스템과 관련된 작업 훔치기 메커니즘을 보여줍니다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -3044,7 +2850,7 @@ polling with result: 3</code></pre>
 <li><code>LOW_CHANNEL</code>에도 메시지가 없다면 다음 반복을 진행하기 전에 100밀리초 동안 대기합니다.</li>
 </ol>
 <blockquote class="blockquote">
-<p>[!TIP] 스레드가 유휴 상태일 때 스레드를 파킹(park)해 두고 들어오는 태스크를 처리해야 할 때 깨우는 방식을 사용할 수도 있다. 이렇게 하면 처리할 태스크가 없을 때 과도한 루프 회전과 슬립을 방지할 수 있다. 그러나 스레드 슬립에 의존하면 응답 지연 시간이 늘어날 수 있으며, 이는 프로덕션 코드에서는 바람직하지 않다. 프로덕션 환경에서는 스레드 슬립을 지양하고 스레드 파킹이나 조건 변수(condition variable)처럼 응답성이 뛰어난 메커니즘을 사용해야 한다. 비동기 큐와 관련된 스레드 파킹은 제10장에서 다룬다.</p>
+<p>[!TIP]</p>
 </blockquote>
 <p>고우선순위 큐는 다음 코드를 통해 이 단계들을 수행할 수 있습니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb118"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="kw">static</span> HIGH_QUEUE<span class="op">:</span> LazyLock<span class="op">&lt;</span><span class="pp">flume::</span>Sender<span class="op">&lt;</span>Runnable<span class="op">&gt;&gt;</span> <span class="op">=</span> <span class="pp">LazyLock::</span>new(<span class="op">||</span> <span class="op">{</span></span>
@@ -3075,10 +2881,11 @@ polling with result: 3</code></pre>
 <span id="cb118-26"><a href="#cb118-26" aria-hidden="true" tabindex="-1"></a><span class="op">}</span>)<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>저우선순위 큐는 단지 1단계와 2단계의 순서를 바꾸고 <code>LOW_CHANNEL.0.clone()</code>을 반환하기만 하면 됩니다. 이제 두 큐 모두 자신의 큐에서 먼저 태스크를 가져오고, 자신의 큐에 작업이 없을 때 다른 큐에서 태스크를 가져오게 됩니다. 처리할 작업이 전혀 남아 있지 않으면 소비자 스레드의 동작 속도가 느려집니다(100ms 대기).</p>
 <blockquote class="blockquote">
-<p>[!IMPORTANT] 큐와 채널은 지연 평가(lazy evaluation)된다는 점을 기억하자. 큐가 실행을 시작하려면 큐로 태스크가 전송되어야 한다. 만약 저우선순위 큐에만 태스크를 보내고 고우선순위 큐에는 전혀 보내지 않는다면, 고우선순위 큐는 결코 시작되지 않으므로 저우선순위 큐에서 태스크를 훔쳐오는 일도 결코 일어나지 않는다.</p>
+<p>[!IMPORTANT]</p>
 </blockquote>
 <p>이 시점에서 잠시 멈추고 우리가 해낸 일을 되돌아보겠습니다. 우리는 자체적인 비동기 런타임 큐를 만들고 서로 다른 우선순위 큐들을 정의했습니다! 이제 비동기 태스크가 어떻게 실행되는지 세밀하게 제어할 수 있게 되었습니다. 단, 작업 훔치기를 원하지 않는 경우도 있을 수 있음을 염두에 두어야 합니다. 예를 들어 고우선순위 큐에는 CPU 집약적 작업을 배치하고 저우선순위 큐에는 가벼운 네트워킹 작업을 배치한 경우라면, 저우선순위 큐가 고우선순위 큐의 작업을 훔쳐오기를 원치 않을 것입니다. 그렇지 않으면 저우선순위 큐의 소비자 스레드가 CPU 집약적인 작업에 발이 묶여 네트워크 처리가 중단되는 위험을 겪게 될 수 있습니다.</p>
 <p>트레이트 제약 조건을 두고 이를 퓨처에 구현하는 과정을 확인한 것은 흥미로웠지만, 이제 한 가지 단점이 생겼습니다. 일반적인 비동기 블록이나 비동기 함수는 <code>FutureOrderLabel</code> 트레이트를 구현하고 있지 않기 때문에 전달할 수 없다는 점입니다. 다른 개발자들은 태스크를 실행하기 위한 간결하고 깔끔한 인터페이스만을 원할 것입니다. 모든 비동기 태스크마다 <code>Future</code> 트레이트를 직접 구현하고 거기에 <code>FutureOrderLabel</code>까지 일일이 구현해야 한다면 코드가 얼마나 비대해질지 상상할 수 있겠습니까? 더 나은 개발자 경험을 위해 <code>spawn_task</code> 함수를 리팩터링해야 합니다.</p>
+</section>
 </section>
 </section>
 <section id="트레이트-제약-조건을-두고-이를-퓨처에-구현하는-과정을-확인한-것은-흥미" class="level2">
@@ -3286,11 +3093,7 @@ polling with result: 3</code></pre>
 <li><code>tokio</code>: 앞서 비동기 런타임을 시연할 때 사용했던 크레이트로, 이번 장에서도 다시 사용합니다.</li>
 </ul>
 <p>보시다시피 이번 예제에서는 <code>hyper</code>를 사용합니다. 이는 이전 예제에서 다룬 도구와는 다른 도구 모음을 접하게 하고, Tokio와 같은 도구가 자주 사용되는 다른 라이브러리들의 하위 계층을 어떻게 이루고 있는지 보여주기 위함입니다. 그러나 코드를 작성하기 전에 먼저 실행기(executor)와 커넥터(connector)의 개념을 짚고 넘어가야 합니다.</p>
-</section>
-<section id="보시다시피-이번-예제에서는-hyper를-사용합니다.-이는-이전-예제에" class="level2">
-<h2 class="anchored" data-anchor-id="보시다시피-이번-예제에서는-hyper를-사용합니다.-이는-이전-예제에">보시다시피 이번 예제에서는 <code>hyper</code>를 사용합니다. 이는 이전 예제에</h2>
-<section id="실행기와-커넥터-이해하기" class="level3">
-<h3 class="anchored" data-anchor-id="실행기와-커넥터-이해하기">실행기와 커넥터 이해하기</h3>
+<p>보시다시피 이번 예제에서는 <code>hyper</code>를 사용합니다. 이는 이전 예제에 ### 실행기와 커넥터 이해하기</p>
 <p>실행기(executor)는 퓨처를 끝까지 실행(run to completion)하는 역할을 담당합니다. 이는 작업을 스케줄링하고 준비된 작업이 실행되도록 보장하는 런타임의 핵심 구성 요소입니다. 런타임에 네트워킹을 도입할 때 실행기가 반드시 필요한 이유는, 실행기가 없으면 HTTP 요청과 같은 퓨처가 생성되기만 할 뿐 실제로 실행되지 않기 때문입니다.</p>
 <p>네트워킹에서 커넥터(connector)는 애플리케이션과 연결하려는 서비스 간의 연결을 수립하는 컴포넌트입니다. 커넥터는 TCP 연결을 열고 요청의 수명 주기 동안 이를 유지하는 등의 활동을 처리합니다.</p>
 <section id="비동기-런타임에-hyper-통합하기" class="level4">
@@ -3343,7 +3146,6 @@ running, must be called from the context of a Tokio 1.x runtime'</code></pre>
 <span id="cb140-10"><a href="#cb140-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이 코드는 커스텀 실행기와 <code>execute</code> 함수의 동작을 정의합니다. 이 함수 내부에서는 <code>spawn_task</code> 매크로를 호출합니다. 매크로 내부에서 비동기 블록을 생성하고 <code>execute</code> 함수로 전달된 퓨처를 <code>await</code>합니다. 여기서 <code>detach</code> 함수를 사용해야 합니다. 그렇지 않으면 채널이 닫히고 작업이 스코프를 벗어나 드롭(drop)되어 요청 처리를 계속 이어갈 수 없기 때문입니다. 3장에서 살펴보았듯이 <code>detach</code>는 작업이 드롭되기 전에 작업 포인터를 루프에 전달하여 완료될 때까지 폴링되도록 합니다.</p>
 <p>이제 <code>hyper</code> 클라이언트에 전달할 수 있는 커스텀 실행기가 준비되었습니다. 하지만 <code>hyper</code> 클라이언트는 여전히 연결 관리를 Tokio 런타임이 해줄 것으로 기대하기 때문에 요청 전송에 실패합니다. 커스텀 비동기 런타임과 <code>hyper</code>를 완전히 통합하려면, Tokio와 독립적으로 네트워크 연결을 처리하는 자체 비동기 커넥터를 구축해야 합니다.</p>
-</section>
 </section>
 </section>
 <section id="이제-hyper-클라이언트에-전달할-수-있는-커스텀-실행기가-준비되었" class="level2">
@@ -3419,12 +3221,7 @@ running, must be called from the context of a Tokio 1.x runtime'</code></pre>
 <p>HTTPS의 표준 포트는 443이므로 포트는 443으로 지정합니다. 그런 다음 소켓 주소를 반환하는 클로저를 <code>unblock</code> 함수에 전달합니다. <code>unblock</code> 함수는 스레드 풀에서 블로킹 코드를 실행하여 블로킹 코드에 대해서도 비동기 인터페이스를 제공합니다. 소켓 주소를 확인(resolving)하는 동안 스레드는 해제되어 다른 작업을 수행할 수 있습니다. 그런 다음 TCP 스트림을 연결하고 이를 네이티브 TLS에 연결합니다. 연결이 완료되면 최종적으로 <code>CustomStream</code> 열거형을 반환합니다.</p>
 <p>HTTP 코드는 거의 동일합니다. 포트만 443 대신 80을 사용하고 TLS 연결이 필요 없으므로, 결과적으로 <code>Ok(CustomStream::Plain(stream))</code>을 반환합니다.</p>
 <p>이제 <code>call</code> 함수가 정의되었습니다. 하지만 이 시점에서 스트림 열거형이나 연결 구조체를 사용해 웹사이트에 HTTPS 호출을 시도하면, 스트림 타입에 대해 Tokio의 <code>AsyncRead</code> 및 <code>AsyncWrite</code> 트레이트를 구현하지 않았다는 에러 메시지가 나타납니다. <code>hyper</code>가 연결 열거형을 사용하려면 이러한 트레이트가 구현되어 있어야 하기 때문입니다.</p>
-</section>
-</section>
-<section id="이제-call-함수가-정의되었습니다.-하지만-이-시점에서-스트림-열거" class="level2">
-<h2 class="anchored" data-anchor-id="이제-call-함수가-정의되었습니다.-하지만-이-시점에서-스트림-열거">이제 <code>call</code> 함수가 정의되었습니다. 하지만 이 시점에서 스트림 열거</h2>
-<section id="tokio-asyncread-트레이트-구현하기" class="level3">
-<h3 class="anchored" data-anchor-id="tokio-asyncread-트레이트-구현하기">Tokio AsyncRead 트레이트 구현하기</h3>
+<p>이제 <code>call</code> 함수가 정의되었습니다. 하지만 이 시점에서 스트림 열거 ### Tokio AsyncRead 트레이트 구현하기</p>
 <p><code>AsyncRead</code> 트레이트는 <code>std::io::Read</code> 트레이트와 유사하지만 비동기 작업 시스템과 연동됩니다. <code>AsyncRead</code> 트레이트를 구현할 때는 <code>poll_read</code> 함수만 정의하면 되며, 이 함수는 <code>Poll</code> 열거형을 반환합니다. <code>Poll::Ready</code>를 반환하면 데이터가 즉시 읽혀 출력 버퍼에 배치되었음을 의미합니다. <code>Poll::Pending</code>을 반환하면 제공된 버퍼로 읽어온 데이터가 없음을 의미합니다. 이는 I/O 객체가 현재는 읽을 수 없지만 나중에는 읽을 수 있게 될 수 있음을 나타냅니다. <code>Pending</code>이 반환되면 해당 객체가 읽기 가능해졌을 때 현재 퓨처의 태스크가 깨어나도록(unparked) 스케줄링됩니다. 마지막으로 반환할 수 있는 <code>Poll</code> 배리어언트는 보통 표준 I/O 에러를 담은 <code>Ready(Err(...))</code> 형태입니다.</p>
 <p>우리의 <code>AsyncRead</code> 트레이트 구현 코드는 다음과 같습니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb146"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb146-1"><a href="#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="kw">impl</span> <span class="pp">tokio::io::</span>AsyncRead <span class="cf">for</span> CustomStream <span class="op">{</span></span>
@@ -3569,7 +3366,6 @@ running, must be called from the context of a Tokio 1.x runtime'</code></pre>
 <span id="cb153-8"><a href="#cb153-8" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::task::</span><span class="op">{</span>Context<span class="op">,</span> Poll<span class="op">};</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <blockquote class="blockquote">
 <p><strong>mio 대 hyper</strong></p>
-<p>이번 장에서 다루는 <code>mio</code> 탐색은 TCP 서버를 구축하는 최적의 접근 방식은 아닙니다. 프로덕션 서버를 만들고자 한다면 다음과 같은 <code>hyper</code> 예제와 유사한 방식을 취해야 합니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb154"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb154-1"><a href="#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span><span class="pp">tokio::</span>main<span class="at">]</span></span>
 <span id="cb154-2"><a href="#cb154-2" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">fn</span> main() <span class="op">-&gt;</span> <span class="dt">Result</span><span class="op">&lt;</span>()<span class="op">,</span> <span class="dt">Box</span><span class="op">&lt;</span><span class="kw">dyn</span> <span class="pp">std::error::</span><span class="bu">Error</span> <span class="op">+</span> <span class="bu">Send</span> <span class="op">+</span> <span class="bu">Sync</span><span class="op">&gt;&gt;</span> <span class="op">{</span></span>
 <span id="cb154-3"><a href="#cb154-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> addr <span class="op">=</span> <span class="pp">SocketAddr::</span>from(([<span class="dv">127</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> <span class="dv">3000</span>))<span class="op">;</span></span>
@@ -3587,15 +3383,9 @@ running, must be called from the context of a Tokio 1.x runtime'</code></pre>
 <span id="cb154-15"><a href="#cb154-15" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span>)<span class="op">;</span></span>
 <span id="cb154-16"><a href="#cb154-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb154-17"><a href="#cb154-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<p>메인 스레드는 들어오는 데이터를 기다리며, 데이터가 도착하면 이를 처리하기 위해 새로운 작업이 스폰됩니다. 이렇게 하면 리스너가 더 많은 수신 데이터를 계속 수락할 수 있는 준비 상태를 유지합니다. <code>mio</code> 예제는 TCP 연결 폴링이 어떻게 동작하는지 이해하는 데 도움이 되겠지만, 웹 애플리케이션을 구축할 때는 프레임워크나 라이브러리가 제공하는 리스너를 사용하는 것이 가장 합리적입니다. 예제에 맥락을 제공하기 위해 몇 가지 웹 개념을 논의하겠지만, 웹 개발 전반에 대한 포괄적인 내용은 이 책의 범위를 벗어납니다.</p>
 </blockquote>
 <p>모든 기초 작업이 끝났으니 이제 퓨처 내에서 TCP 소켓을 폴링하는 단계로 넘어갈 수 있습니다.</p>
-</section>
-</section>
-<section id="모든-기초-작업이-끝났으니-이제-퓨처-내에서-tcp-소켓을-폴링하는-단계" class="level2">
-<h2 class="anchored" data-anchor-id="모든-기초-작업이-끝났으니-이제-퓨처-내에서-tcp-소켓을-폴링하는-단계">모든 기초 작업이 끝났으니 이제 퓨처 내에서 TCP 소켓을 폴링하는 단계</h2>
-<section id="퓨처에서-소켓-폴링하기" class="level3">
-<h3 class="anchored" data-anchor-id="퓨처에서-소켓-폴링하기">퓨처에서 소켓 폴링하기</h3>
+<p>모든 기초 작업이 끝났으니 이제 퓨처 내에서 TCP 소켓을 폴링하는 단계 ### 퓨처에서 소켓 폴링하기</p>
 <p><code>mio</code> 크레이트는 수많은 소켓(수천 개)을 처리하도록 제작되었습니다. 따라서 어떤 소켓이 알림을 발생시켰는지 식별해야 합니다. 토큰(Token)을 사용하면 이를 식별할 수 있습니다. 이벤트 루프에 소켓을 등록할 때 토큰을 함께 전달하면, 핸들러에서 해당 토큰이 반환됩니다. 토큰은 <code>usize</code>를 감싼 튜플 구조체입니다. 모든 OS가 소켓과 포인터 크기만큼의 데이터를 연결할 수 있도록 허용하기 때문입니다. 따라서 핸들러에서는 토큰을 키로 삼아 소켓과 매핑하는 함수를 둘 수 있습니다. 여기서 <code>mio</code>가 콜백을 사용하지 않는 이유는 제로 비용 추상화(zero-cost abstraction)를 원하기 때문이며, 토큰이 이를 달성할 수 있는 유일한 방법입니다. 콜백, 스트림, 퓨처 등은 <code>mio</code> 위에 구축할 수 있습니다.</p>
 <p>토큰을 사용하면 다음과 같은 단계가 진행됩니다:</p>
 <ol type="1">
@@ -3652,7 +3442,7 @@ running, must be called from the context of a Tokio 1.x runtime'</code></pre>
 <span id="cb158-14"><a href="#cb158-14" aria-hidden="true" tabindex="-1"></a>cx<span class="op">.</span>waker()<span class="op">.</span>wake_by_ref()<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>소켓에 데이터가 들어있으면 이벤트는 읽기 가능한 상태가 됩니다. 올바른 이벤트인 경우 <code>TcpStream</code>을 추출하고 <code>Vec</code>을 사용하여 힙에 <code>received_data</code> 컬렉션을 정의한 뒤, 버퍼 슬라이스를 사용하여 읽기를 수행합니다. 데이터가 비어 있으면 데이터가 아직 도착하지 않은 것이므로 소켓을 다시 폴링할 수 있도록 <code>Pending</code>을 반환합니다. 그런 다음 데이터를 문자열로 변환하고 <code>Ready</code>와 함께 반환합니다. 이는 데이터를 획득한 후 소켓 리스너가 종료됨을 의미합니다.</p>
 <blockquote class="blockquote">
-<p>[!TIP] 프로그램의 수명 주기 내내 소켓이 지속적으로 폴링되기를 원한다면, 다음과 같이 데이터를 받아 처리하는 비동기 함수로 데이터를 전달하는 분리된 작업(detached task)을 스폰하면 됩니다:</p>
+<p>[!TIP]</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb159"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb159-1"><a href="#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">!</span>received_data<span class="op">.</span>is_empty() <span class="op">{</span></span>
 <span id="cb159-2"><a href="#cb159-2" aria-hidden="true" tabindex="-1"></a>    <span class="pp">spawn_task!</span>(some_async_handle_function(<span class="op">&amp;</span>received_data))</span>
 <span id="cb159-3"><a href="#cb159-3" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span>detach()<span class="op">;</span></span>
@@ -3676,12 +3466,7 @@ running, must be called from the context of a Tokio 1.x runtime'</code></pre>
 <span id="cb160-14"><a href="#cb160-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>수신된 메시지가 버퍼보다 크더라도 상관없습니다. 루프가 계속해서 처리할 모든 바이트를 추출하여 <code>Vec</code>에 추가하기 때문입니다. 더 이상 바이트가 없으면 루프를 종료하고 데이터를 처리할 수 있습니다.</p>
 <p>이제 소켓에서 데이터를 수신할 때까지 계속 폴링되는 퓨처가 완성되었습니다. 데이터를 수신한 후 이 퓨처는 종료됩니다. 물론 이 퓨처가 소켓을 지속적으로 폴링하도록 만들 수도 있습니다. 필요한 경우 이러한 지속 폴링 퓨처를 사용하여 수천 개의 소켓을 관리할 수 있다고 볼 수 있습니다. 소켓당 하나의 퓨처를 두고 수천 개의 퓨처를 런타임에 스폰하는 방식입니다. 이제 <code>TcpListener</code> 로직을 정의했으므로, 소켓을 통해 퓨처로 데이터를 전송하는 클라이언트 로직으로 넘어갈 수 있습니다.</p>
-</section>
-</section>
-<section id="이제-소켓에서-데이터를-수신할-때까지-계속-폴링되는-퓨처가-완성되었습니다" class="level2">
-<h2 class="anchored" data-anchor-id="이제-소켓에서-데이터를-수신할-때까지-계속-폴링되는-퓨처가-완성되었습니다">이제 소켓에서 데이터를 수신할 때까지 계속 폴링되는 퓨처가 완성되었습니다</h2>
-<section id="소켓을-통해-데이터-전송하기" class="level3">
-<h3 class="anchored" data-anchor-id="소켓을-통해-데이터-전송하기">소켓을 통해 데이터 전송하기</h3>
+<p>이제 소켓에서 데이터를 수신할 때까지 계속 폴링되는 퓨처가 완성되었습니다 ### 소켓을 통해 데이터 전송하기</p>
 <p>클라이언트의 경우 모든 것을 <code>main</code> 함수에서 실행합니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb161"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb161-1"><a href="#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">-&gt;</span> <span class="dt">Result</span><span class="op">&lt;</span>()<span class="op">,</span> <span class="dt">Box</span><span class="op">&lt;</span><span class="kw">dyn</span> <span class="bu">Error</span><span class="op">&gt;&gt;</span> <span class="op">{</span></span>
 <span id="cb161-2"><a href="#cb161-2" aria-hidden="true" tabindex="-1"></a>    <span class="pp">Runtime::</span>new()<span class="op">.</span>with_low_num(<span class="dv">2</span>)<span class="op">.</span>with_high_num(<span class="dv">4</span>)<span class="op">.</span>run()<span class="op">;</span></span>
@@ -3754,17 +3539,12 @@ outcome: that's so dingo!</code></pre>
 <p>이 책의 이 단계까지 오셨다면 비동기 프로그래밍에 꽤 익숙해지셨을 것입니다. 이제 코드에서 <code>await</code> 문법을 보면 그 이면에서 퓨처(future), 태스크(task), 스레드(thread), 큐(queue)가 어떻게 동작하는지 알 수 있습니다. 그렇다면 비동기 프로그래밍의 기초 구성 요소는 어떨까요? 비동기 런타임 없이도 코드를 일시 정지(pause)했다가 다시 재개(resume)할 수 있다면 어떨까요? 더 나아가, 이 일시 정지 및 재개 메커니즘을 일반 테스트로 검증하여 다양한 폴링(polling) 순서와 구성에서 코드가 어떻게 동작하는지 살펴볼 수 있다면 어떨까요? 또한 이 메커니즘은 동기 코드와 비동기 코드 사이의 인터페이스 역할도 할 수 있습니다. 바로 여기서 코루틴(coroutine)이 등장합니다.</p>
 <p>이 장을 마치면 코루틴을 정의하고 활용 방법을 설명할 수 있게 됩니다. 또한 메모리를 많이 필요로 하는 작업에서 메모리 소비를 낮게 유지하도록 자신의 프로그램에 코루틴을 통합할 수 있습니다. 나아가 코루틴으로 비동기 런타임 없이 비동기 기능을 흉내 내고 기본적인 실행기(executor)를 구현하여, 메인 스레드에서도 비동기 기능을 얻고 코루틴이 폴링되는 시점과 순서를 세밀하게 제어할 수 있습니다.</p>
 <blockquote class="blockquote">
-<p>[!NOTE] 집필 시점 기준으로 우리는 나이틀리(nightly) Rust의 코루틴 문법을 사용하고 있습니다. 향후 문법이 변경되었거나 코루틴 문법이 안정(stable) Rust에 도입되었을 수도 있습니다. 문법 변경이 성가실 수는 있지만, 이 장에서 다루는 것은 코루틴의 본질적인 기본 원리입니다. 문법이 다소 바뀌더라도 코루틴의 전반적인 구현 방식과 활용법에는 영향을 주지 않습니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <section id="코루틴-소개" class="level5">
 <h5 class="anchored" data-anchor-id="코루틴-소개">코루틴 소개</h5>
 <p>코루틴을 본격적으로 살펴보기 전에, 먼저 코루틴이 무엇이고 왜 사용해야 하는지 이해할 필요가 있습니다.</p>
-</section>
-</section>
-<section id="코루틴을-본격적으로-살펴보기-전에-먼저-코루틴이-무엇이고-왜-사용해야" class="level2">
-<h2 class="anchored" data-anchor-id="코루틴을-본격적으로-살펴보기-전에-먼저-코루틴이-무엇이고-왜-사용해야">코루틴을 본격적으로 살펴보기 전에, 먼저 코루틴이 무엇이고 왜 사용해야</h2>
-<section id="코루틴이란-무엇인가" class="level3">
-<h3 class="anchored" data-anchor-id="코루틴이란-무엇인가">코루틴이란 무엇인가?</h3>
+<p>코루틴을 본격적으로 살펴보기 전에, 먼저 코루틴이 무엇이고 왜 사용해야 코루틴이란 무엇인가?</p>
 <p>코루틴은 실행을 일시 정지(pause)했다가 나중에 중단했던 지점부터 다시 재개(resume)할 수 있는 특별한 유형의 프로그램입니다. 이는 끝까지 실행된 후 일반적으로 값을 반환하거나 에러를 발생시키는 일반 서브루틴(함수 등)과는 다릅니다. 그림 5-1은 두 방식의 비교를 보여줍니다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -3782,12 +3562,7 @@ outcome: that's so dingo!</code></pre>
 <p>이제 코루틴이 스레드와 어떻게 비슷한지 생각해 보겠습니다. 겉보기에는 작업을 실행하고 나중에 일시 정지/재개한다는 점에서 꽤 유사해 보입니다. 차이점은 스케줄링 방식에 있습니다. 스레드는 선점형(preemptive)으로 스케줄링됩니다. 즉, 나중에 작업이 재개될 목적으로 외부 스케줄러에 의해 작업이 인터럽트(중단)됩니다. 반면 코루틴은 협력적(cooperative)입니다. 스케줄러나 OS의 개입 없이도 스스로 일시 정지하거나 다른 코루틴에 양보(yield)할 수 있습니다.</p>
 <p>코루틴을 사용하는 것이 매우 좋아 보이는데, 그렇다면 굳이 <code>async</code>/<code>await</code>를 사용할 필요가 있을까요? 프로그래밍의 모든 것이 그렇듯 여기에도 트레이드오프(절충점)가 있습니다. 먼저 장점부터 살펴보겠습니다. 코루틴은 동일한 스레드 내에서 실행되므로 뮤텍스(mutex)와 같은 동기화 원어가 필요 없습니다. 이는 결코 사소하지 않은 이점으로, 코드를 이해하고 작성하기가 훨씬 쉬워집니다. 단일 스레드 내에서 코루틴 사이를 전환하는 비용은 스레드 간 전환 비용보다 훨씬 저렴합니다. 이는 대기 시간이 긴 작업에서 특히 유용합니다. 예를 들어 100개 파일의 변경 사항을 추적해야 한다고 가정해 보겠습니다. OS가 각 파일을 순회하며 확인하는 스레드 100개를 스케줄링하게 만드는 것은 매우 번거롭고 부담스럽습니다. 컨텍스트 스위칭은 연산 비용이 많이 듭니다. 대신 100개의 코루틴이 각자 감시 중인 파일의 변경 여부를 확인하고, 변경이 발생했을 때 해당 파일을 스레드 풀로 전달하여 처리하도록 만드는 것이 훨씬 효율적이고 수월합니다.</p>
 <p>단일 스레드에서 코루틴을 사용할 때의 주요 단점은 컴퓨터의 컴퓨팅 능력을 온전히 활용하지 못한다는 점입니다. 하나의 스레드에서 프로그램을 실행한다는 것은 여러 코어에 작업을 분산시키지 못한다는 뜻입니다. 이제 코루틴이 무엇인지 알았으니, 왜 코루틴을 사용해야 하는지 살펴보겠습니다.</p>
-</section>
-</section>
-<section id="단일-스레드에서-코루틴을-사용할-때의-주요-단점은-컴퓨터의-컴퓨팅-능력을" class="level2">
-<h2 class="anchored" data-anchor-id="단일-스레드에서-코루틴을-사용할-때의-주요-단점은-컴퓨터의-컴퓨팅-능력을">단일 스레드에서 코루틴을 사용할 때의 주요 단점은 컴퓨터의 컴퓨팅 능력을</h2>
-<section id="왜-코루틴을-사용하는가" class="level3">
-<h3 class="anchored" data-anchor-id="왜-코루틴을-사용하는가">왜 코루틴을 사용하는가?</h3>
+<p>단일 스레드에서 코루틴을 사용할 때의 주요 단점은 컴퓨터의 컴퓨팅 능력을 ### 왜 코루틴을 사용하는가?</p>
 <p>높은 수준에서 볼 때, 코루틴을 사용하면 연산을 일시 정지하고, 코루틴을 실행한 스레드에 제어권을 양보한 다음, 필요할 때 연산을 다시 재개할 수 있습니다. 이는 비동기(async)와 매우 유사하게 들립니다. 비동기 태스크 역시 폴링을 통해 다른 태스크가 실행될 수 있도록 제어권을 양보할 수 있습니다. 멀티스레딩에서는 채널이나 <code>Sync</code> 원어로 래핑된 데이터 구조를 통해 스레드로 데이터를 보내고 필요에 따라 스레드를 확인할 수 있습니다. 반면 코루틴은 비동기 런타임이나 스레드 없이도 웨이커(waker)와 함께 연산을 일시 중단하고 재개할 수 있게 해 줍니다.</p>
 <p>다소 추상적으로 느껴질 수 있으므로, 간단한 파일 쓰기 예제를 통해 코루틴 사용의 장점을 설명해 보겠습니다. 수많은 정수를 전달받아 파일에 써야 하는 상황을 가정해 보겠습니다. 다른 프로그램으로부터 숫자를 전달받고 있는데, 모든 숫자를 다 받을 때까지 기다렸다가 쓰기를 시작할 수는 없습니다. 그렇게 하면 메모리를 너무 많이 차지하기 때문입니다.</p>
 <p>이번 실습을 위해 다음 의존성이 필요합니다:</p>
@@ -3860,7 +3635,7 @@ outcome: that's so dingo!</code></pre>
 <span id="cb177-4"><a href="#cb177-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이렇게 업데이트된 테스트는 대략 622.6ms 정도의 시간을 보여줍니다. 이는 약 6배 더 빠릅니다. 물론 루프 안에서 파일 디스크립터를 한 번만 생성해 참조하기만 해도 동일한 효과를 얻을 수 있었겠지만, 이는 코루틴의 상태를 일시 중단하고 필요할 때 재개하는 데 분명한 이점이 있음을 보여줍니다. 우리는 쓰기 로직을 격리된 상태로 유지하면서도 그러한 속도 향상을 위해 어떤 스레드나 비동기 런타임도 필요로 하지 않았습니다. 코루틴은 연산을 일시 중단하고 재개하기 위한 스레드 및 비동기 태스크 내부의 기초 구성 요소가 될 수 있습니다.</p>
 <blockquote class="blockquote">
-<p>[!NOTE] <code>Future</code> 트레이트와 <code>Coroutine</code> 트레이트를 구현하는 것 사이의 유사점을 눈치챘을 것입니다. 두 가지 가능한 상태가 존재하고, 두 가지 결과에 따라 재개하거나 완료하며, 코루틴과 비동기 태스크 모두 일시 중단하고 재개합니다. 넓은 의미에서 비동기 태스크는 코루틴의 일종이라고 볼 수 있으며, 차이점은 다른 스레드로 전송되어 실행기에 의해 폴링된다는 점입니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>코루틴은 활용처가 매우 넓습니다. 네트워크 요청 처리, 빅데이터 처리, UI 애플리케이션 등에 사용할 수 있습니다. 콜백을 사용하는 방식에 비해 비동기 태스크를 훨씬 간단하게 다룰 수 있는 방법을 제공합니다. 코루틴을 활용하면 큐나 별도의 실행기 없이도 단일 스레드에서 비동기 기능을 구현할 수 있습니다.</p>
 </section>
@@ -3934,7 +3709,7 @@ outcome: that's so dingo!</code></pre>
 4
 5</code></pre>
 <blockquote class="blockquote">
-<p>[!NOTE] <code>Coroutine</code> 트레이트는 이전에 <code>Generator</code> 트레이트 및 <code>GeneratorState</code>로 알려져 있었으며, 2023년 말에 이름 변경이 이루어졌습니다. 이미 구버전의 나이틀리 Rust가 설치되어 있다면 이 코드가 작동하도록 업데이트해야 합니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>이제 두 코루틴이 서로에게 양보하면서 함께 동작하는 방식으로 넘어가 보겠습니다. 여기서부터 코루틴 사용의 진정한 강력함을 확인하기 시작할 것입니다.</p>
 </section>
@@ -4050,12 +3825,7 @@ outcome: that's so dingo!</code></pre>
 <span id="cb190-13"><a href="#cb190-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>main</code> 함수는 두 코루틴이 어떻게 협력해야 하는지 명시적으로 지시하고 있습니다. 여기에는 수동 스케줄링이 수반되므로 엄밀히 말해 진정한 대칭 코루틴의 기준을 충족하지는 못합니다. 우리는 교육적 실습으로서 대칭 코루틴의 일부 기능을 흉내 내고 있는 것입니다. 진정한 대칭 코루틴이라면 <code>main</code> 함수로 제어권을 반환할 필요 없이 리더에서 라이터로 제어권을 직접 넘겨줄 것입니다. 하지만 두 코루틴이 서로를 참조해야 하므로 Rust의 대여 규칙(borrowing rules)에 의해 이것이 제한됩니다. 그럼에도 불구하고, 이는 자신만의 코루틴을 작성함으로써 더 많은 기능을 제공할 수 있는 방법을 보여주는 유용한 예제입니다.</p>
 <p>이제 비동기 동작을 살펴보고, 간단한 코루틴으로 이러한 기능 중 일부를 흉내 내는 방법으로 넘어가 보겠습니다.</p>
-</section>
-</section>
-<section id="이제-비동기-동작을-살펴보고-간단한-코루틴으로-이러한-기능-중-일부를" class="level2">
-<h2 class="anchored" data-anchor-id="이제-비동기-동작을-살펴보고-간단한-코루틴으로-이러한-기능-중-일부를">이제 비동기 동작을 살펴보고, 간단한 코루틴으로 이러한 기능 중 일부를</h2>
-<section id="코루틴으로-비동기-동작-흉내-내기" class="level3">
-<h3 class="anchored" data-anchor-id="코루틴으로-비동기-동작-흉내-내기">코루틴으로 비동기 동작 흉내 내기</h3>
+<p>이제 비동기 동작을 살펴보고, 간단한 코루틴으로 이러한 기능 중 일부를 ### 코루틴으로 비동기 동작 흉내 내기</p>
 <p>비동기 프로그래밍은 I/O를 기다리거나 조건이 충족되기를 기다리는 동안 작업을 일시 중단할 수 있게 해 줍니다. 모든 비동기 프로그래밍이 코루틴의 하위 집합이라는 강력한 주장이 제기될 수도 있습니다. 비동기 런타임은 본질적으로 여러 스레드에 걸쳐 실행되는 코루틴이라 할 수 있습니다.</p>
 <p>간단한 예제를 통해 실행의 일시 중단을 시연해 볼 수 있습니다. 먼저 1초 동안 잠드는(sleep) 코루틴을 설정합니다.</p>
 <p>이 실습을 위해 다음 임포트가 필요합니다:</p>
@@ -4185,7 +3955,7 @@ outcome: that's so dingo!</code></pre>
 <p>이 책 전체에서 우리는 비동기 태스크의 흐름을 내부적으로 제어해 왔습니다. 예를 들어 <code>Future</code> 트레이트를 구현할 때 <code>poll</code> 함수의 내부 로직에 따라 <code>Pending</code> 또는 <code>Ready</code>를 반환할 시점을 직접 선택합니다. 비동기 함수도 마찬가지입니다. <code>await</code> 문법으로 비동기 태스크가 실행기에 제어권을 양보할 시점을 선택하고, <code>return</code> 문으로 비동기 태스크가 <code>Ready</code>를 반환할 시점을 선택합니다.</p>
 <p>원자적 값(atomic value)이나 뮤텍스와 같은 외부 동기화(<code>Sync</code>) 원어를 사용하여 비동기 태스크가 이러한 원자적 값과 뮤텍스의 변화 및 값에 반응하도록 만듦으로써 비동기 태스크를 제어할 수 있습니다. 그러나 외부 신호에 반응하는 로직은 비동기 태스크를 런타임에 보내기 전에 태스크 내부에 미리 코딩되어 있어야 합니다. 단순한 경우에는 괜찮을 수 있지만, 비동기 태스크 주변 시스템이 발전하고 변화할 때 비동기 태스크가 취약해질 수 있습니다. 이는 다른 컨텍스트에서 비동기 태스크를 재사용하기 어렵게 만들기도 합니다. 비동기 태스크는 반응하기 전에 다른 비동기 태스크의 상태를 알아야 할 수도 있으며, 이는 데드락(교착 상태)과 같은 잠재적 문제로 이어질 수 있습니다.</p>
 <blockquote class="blockquote">
-<p>[!NOTE] 데드락은 태스크 A가 진행하기 위해 태스크 B의 무언가를 필요로 하고, 태스크 B가 진행하기 위해 태스크 A의 무언가를 필요로 하여 교착 상태에 빠질 때 발생할 수 있습니다. 11장에서는 데드락, 라이브락(livelock) 및 기타 잠재적 함정과 이를 테스트하는 방법을 다룹니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>바로 여기서 코루틴의 외부 제어 용이성이 유용하게 쓰일 수 있습니다. 외부 제어가 프로그램을 어떻게 단순화할 수 있는지 시연하기 위해, 값과 함께 활성(live) 또는 종료(dead) 상태를 가지는 코루틴 벡터를 순회하는 간단한 프로그램을 작성해 보겠습니다. 코루틴이 호출되면 값을 위한 난수가 생성되고 이 값이 양보됩니다. 우리는 이 값들을 모두 누적하고 언제 코루틴을 종료시킬지에 대한 간단한 규칙을 만들 수 있습니다. 난수 생성을 위해 다음 의존성이 필요합니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb199"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb199-1"><a href="#cb199-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[dependencies]</span></span>
@@ -4297,8 +4067,7 @@ outcome: that's so dingo!</code></pre>
 <span id="cb206-17"><a href="#cb206-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span>)<span class="op">;</span></span>
 <span id="cb206-18"><a href="#cb206-18" aria-hidden="true" tabindex="-1"></a><span class="pp">std::thread::</span>sleep(<span class="pp">Duration::</span>from_secs(<span class="dv">1</span>))<span class="op">;</span></span>
 <span id="cb206-19"><a href="#cb206-19" aria-hidden="true" tabindex="-1"></a>sender<span class="op">.</span>send(<span class="pp">RandCoRoutine::</span>new())<span class="op">.</span>unwrap()<span class="op">;</span></span>
-<span id="cb206-20"><a href="#cb206-20" aria-hidden="true" tabindex="-1"></a>sender<span class="op">.</span>send(<span class="pp">RandCoRoutine::</span>new())<span class="op">.</span>unwrap()<span class="op">;</span></span>
-<span id="cb206-21"><a href="#cb206-21" aria-hidden="true" tabindex="-1"></a><span class="pp">std::thread::</span>sleep(<span class="pp">Duration::</span>from_secs(<span class="dv">1</span>))<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb206-20"><a href="#cb206-20" aria-hidden="true" tabindex="-1"></a><span class="pp">std::thread::</span>sleep(<span class="pp">Duration::</span>from_secs(<span class="dv">1</span>))<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>코루틴은 스레드 안전하며 코루틴의 결과를 쉽게 매핑할 수 있으므로, 코루틴을 이해하는 여정을 마무리할 수 있습니다. 코루틴은 일시 정지하고 재개할 수 있는 연산 단위라고 결론지을 수 있습니다. 게다가 이러한 코루틴은 <code>resume</code> 함수를 호출하고 해당 함수의 결과를 <code>poll</code> 함수의 결과로 매핑할 수 있는 <code>Future</code> 트레이트를 구현할 수도 있습니다(그림 5-2 참조).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -4408,7 +4177,7 @@ outcome: that's so dingo!</code></pre>
 <span id="cb213-6"><a href="#cb213-6" aria-hidden="true" tabindex="-1"></a><span class="pp">assert_eq!</span>(<span class="op">*</span>lock<span class="op">,</span> <span class="dv">0</span>)<span class="op">;</span></span>
 <span id="cb213-7"><a href="#cb213-7" aria-hidden="true" tabindex="-1"></a><span class="pp">std::mem::</span>drop(lock)<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <blockquote class="blockquote">
-<p>[!NOTE] 처음 두 번의 yield에 대한 초기 테스트를 마친 후 락을 드롭(<code>drop</code>)했다는 것을 눈치챘을 것입니다. 이렇게 하지 않으면 우리의 코루틴이 결코 락을 획득할 수 없게 되어 나머지 테스트가 실패하게 됩니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>이 루프를 실행하는 이유는 코루틴이 락 획득에 실패했을 때 임계값 역시 변경되지 않는다는 것을 증명하기 위함입니다. 만약 임계값이 변경되었다면 두 번의 반복 후에 코루틴은 완료(<code>complete</code>)를 반환했을 것이고, 코루틴에 대한 다음 호출은 에러를 유발했을 것입니다. 루프가 없어도 테스트에서 이를 감지할 수 있었겠지만, 처음에 루프를 배치함으로써 무엇 때문에 테스트가 중단되었는지에 대한 혼란을 없앨 수 있습니다.</p>
 <p>락을 드롭한 후에는 두 코루틴을 각각 두 번씩 호출하여 예상한 값을 반환하는지 확인하고, 모든 호출 사이에 뮤텍스를 점검하여 상태가 우리가 원하는 정확한 방식으로 변경되고 있는지 확인합니다:</p>
@@ -4432,17 +4201,12 @@ outcome: that's so dingo!</code></pre>
 <span id="cb215-8"><a href="#cb215-8" aria-hidden="true" tabindex="-1"></a>handle_two<span class="op">.</span><span class="kw">await</span><span class="op">.</span>unwrap()<span class="op">;</span></span>
 <span id="cb215-9"><a href="#cb215-9" aria-hidden="true" tabindex="-1"></a><span class="pp">assert_eq!</span>(<span class="op">*</span>handle<span class="op">.</span>lock()<span class="op">.</span>unwrap()<span class="op">,</span> <span class="dv">4</span>)<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>cargo test</code> 명령을 실행하면 두 테스트가 모두 성공하는 것을 확인할 수 있습니다. 드디어 해냈습니다! 두 코루틴과 뮤텍스 사이의 상호작용을 단계별로 검사하고 각 단계 사이의 상태를 확인했습니다. 코루틴은 동기 코드에서 동작합니다. 하지만 간단한 어댑터를 사용하면 코루틴이 비동기 런타임에서도 기대한 그대로 정확하게 동작함을 확인할 수 있습니다! 비동기 테스트에서는 코루틴의 각 상호작용마다 뮤텍스를 검사할 수 없다는 점을 알 수 있습니다. 비동기 실행기가 스스로 동작하기 때문입니다.</p>
-</section>
-</section>
-</section>
-<section id="cargo-test-명령을-실행하면-두-테스트가-모두-성공하는-것을" class="level2">
-<h2 class="anchored" data-anchor-id="cargo-test-명령을-실행하면-두-테스트가-모두-성공하는-것을"><code>cargo test</code> 명령을 실행하면 두 테스트가 모두 성공하는 것을</h2>
-<section id="요약-4" class="level3">
-<h3 class="anchored" data-anchor-id="요약-4">요약</h3>
+<p><code>cargo test</code> 명령을 실행하면 두 테스트가 모두 성공하는 것을 ### 요약</p>
 <p>이 장에서는 <code>Coroutine</code> 트레이트를 구현하여 자신만의 코루틴을 만들고, <code>Yield</code>와 <code>Complete</code>를 사용하여 코루틴을 일시 정지하고 재개했습니다. 한 코루틴이 값을 양보하며 파일을 읽고, 두 번째 코루틴이 그 값을 받아 파일에 쓰는 파이프라인을 구현했습니다. 마지막으로 자체 실행기를 만들어 코루틴이 실제로 어떻게 일시 정지하고 재개되는지 확인했습니다.</p>
 <p>이 장을 진행하면서 코루틴의 <code>Yield</code>/<code>Complete</code>와 비동기의 <code>Pending</code>/<code>Ready</code> 사이의 유사점에 깊은 인상을 받았을 것입니다. 이를 바라보는 가장 좋은 관점은 <code>async</code>/<code>await</code>가 코루틴의 하위 유형이라는 점입니다. 이는 스레드에 걸쳐 동작하고 큐를 사용하는 코루틴입니다. 코루틴과 비동기 프로그래밍 모두에서 활동을 일시 중단하고 나중에 다시 돌아올 수 있습니다.</p>
 <p>코루틴은 비동기 코드와 동기 코드 사이의 접합선(seam) 역할을 하므로 코드를 체계화하는 데 도움이 됩니다. 코루틴을 사용하면 동기 코드 모듈을 구축한 뒤 표준 테스트로 이를 평가할 수 있습니다. 동기 코드가 비동기 기능을 필요로 하는 코드와 연결되도록 코루틴 어댑터를 만들 수 있으며, 이때 비동기 기능은 코루틴으로 표현됩니다. 그런 다음 코루틴이 다양한 순서와 조합으로 폴링될 때 어떻게 동작하는지 단위 테스트를 수행할 수 있습니다. 퓨처의 <code>poll</code> 함수 안에서 코루틴을 호출할 수 있으므로, 이러한 코루틴을 <code>Future</code> 트레이트 구현체에 주입하여 코드를 비동기 런타임에 통합할 수 있습니다. 이때 비동기 코드를 인터페이스로 격리하기만 하면 됩니다. 하나의 비동기 함수가 여러분의 코드를 호출한 뒤 서드파티 비동기 코드로 출력을 전달할 수 있으며, 그 반대도 가능합니다.</p>
 <p>코드를 격리하는 좋은 방법 중 하나는 반응형 프로그래밍(reactive programming)으로, 코드 단위가 브로드캐스트 채널 구독을 통해 데이터를 소비할 수 있도록 하는 것입니다. 6장에서 이에 대해 살펴봅니다.</p>
+</section>
 </section>
 </section>
 <section id="제6장-리액티브-프로그래밍" class="level2">
@@ -4501,7 +4265,7 @@ outcome: that's so dingo!</code></pre>
 <li><code>HEAT_ON</code>: 히터가 켜져야 하는지 꺼져야 하는지 여부. <code>bool</code>이 <code>true</code>이면 히터를 켜도록 지시하고, <code>false</code>이면 히터가 꺼집니다.</li>
 </ul>
 <blockquote class="blockquote">
-<p>[!NOTE] 이전에 리액티브 프로그래밍이나 리액티브 시스템에 대해 검색해 본 적이 있다면 메시지 및 이벤트 전달에 관한 내용을 읽어보셨을 것입니다. 메시지와 이벤트는 분명 리액티브 프로그래밍의 일부이지만, 소프트웨어 개발의 중요한 원칙 중 하나는 시스템을 과도하게 엔지니어링(overengineering)하지 않는 것임을 기억해야 합니다. 시스템이 복잡해질수록 유지보수와 변경이 어려워집니다. 우리 시스템은 단순한 피드백 요구사항만 가지고 있습니다. 숫자를 기반으로 히터가 켜지거나 꺼지는 것뿐입니다. 스레드 간에 메시지를 주고받는 락(lock)과 채널을 자세히 들여다보면, 결국 락을 위한 아토믹과 데이터를 처리하기 위한 컬렉션으로 귀결됩니다. 지금은 시스템의 단순한 요구사항 덕분에 아토믹만 사용하는 것으로도 충분합니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>옵저버를 통해 주체를 구독하면 코드가 분리(decouple)됩니다. 예를 들어, 새 옵저버가 주체를 관찰하도록 하기만 하면 옵저버의 수를 쉽게 늘릴 수 있습니다. 기존 주체의 코드는 전혀 수정할 필요가 없습니다.</p>
 <p>이제 주체에 필요한 모든 것이 준비되었으므로, 다음 단계는 주체를 표시하고 <code>HEAT_ON</code> 주체를 제어하는 옵저버를 구축하는 것입니다.</p>
@@ -4602,13 +4366,7 @@ outcome: that's so dingo!</code></pre>
 <span id="cb221-24"><a href="#cb221-24" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
 <span id="cb221-25"><a href="#cb221-25" aria-hidden="true" tabindex="-1"></a><span class="pp">assert_eq!</span>(some_var<span class="op">.</span>load(<span class="pp">Ordering::</span>Relaxed)<span class="op">,</span> <span class="dv">10</span>)<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이 지점에서 우리는 왜 아토믹이 ’원자적(atomic)’이라고 불리는지 그 이유를 실감할 수 있습니다. 바로 연산(트랜잭션)이 원자적이기 때문입니다. 즉, 어떤 값에 대해 연산이 수행되는 동안 다른 연산이 그 원자적 값에 끼어들 수 없습니다. <code>compare_exchange</code> 함수에서는 원자적 값을 새 값으로 업데이트하기 전에 해당 값이 특정 값인지 단언(assert)합니다. 값이 기대한 것과 일치하지 않으면 원자적 값의 실제 현재 값과 함께 에러를 반환합니다. <code>compare_exchange</code> 함수를 사용하여 옵저버가 반환된 값을 기반으로 다른 결정을 내리도록 유도하고, 갱신된 정보를 바탕으로 원자적 값을 다시 업데이트하도록 시도할 수 있습니다. 지금까지 리액티브 프로그래밍의 동시성 문제와 해결책을 제공하는 영역을 충분히 살펴보았습니다. 이제 히터와 열 손실 옵저버를 만들어 리액티브 시스템 구축을 계속해 보겠습니다.</p>
-</section>
-</section>
-</section>
-<section id="이-지점에서-우리는-왜-아토믹이-원자적atomic이라고-불리는지" class="level2">
-<h2 class="anchored" data-anchor-id="이-지점에서-우리는-왜-아토믹이-원자적atomic이라고-불리는지">이 지점에서 우리는 왜 아토믹이 ’원자적(atomic)’이라고 불리는지</h2>
-<section id="히터-및-열-손실-옵저버-구축하기" class="level3">
-<h3 class="anchored" data-anchor-id="히터-및-열-손실-옵저버-구축하기">히터 및 열 손실 옵저버 구축하기</h3>
+<p>이 지점에서 우리는 왜 아토믹이 ’원자적(atomic)’이라고 불리는지 ### 히터 및 열 손실 옵저버 구축하기</p>
 <p>히터 옵저버가 작동하려면 온도는 신경 쓰지 않고 <code>HEAT_ON</code> 부울(bool) 값만 읽으면 됩니다. 하지만 히터에는 ’시간’이라는 요소가 있습니다. 안타깝게도 글을 쓰는 현재, 우리는 히터가 즉각적으로 방을 데워주지 못하는 세상에 살고 있습니다. 방을 데우는 데는 시간이 걸립니다. 따라서 온도 스냅샷 대신 히터 퓨처는 시간 스냅샷을 가지며, 다음과 같은 형태를 띱니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb222"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb222-1"><a href="#cb222-1" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">struct</span> HeaterFuture <span class="op">{</span></span>
 <span id="cb222-2"><a href="#cb222-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">pub</span> time_snapshot<span class="op">:</span> Instant<span class="op">,</span></span>
@@ -4697,15 +4455,10 @@ outcome: that's so dingo!</code></pre>
 <span id="cb226-16"><a href="#cb226-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>희망 온도에 도달하고 나면 온도가 희망 온도를 중심으로 완만하게 오르내리는(진동하는) 모습을 볼 수 있을 것입니다.</p>
 <blockquote class="blockquote">
-<p>[!NOTE] 진동(oscillation)은 고전 시스템 이론에서 매우 흔히 나타나는 현상입니다. 디스플레이에 시간 스냅샷을 추가하고 <code>HEAT_ON</code> 플래그의 전환을 지연시키면 진동 폭이 더 커집니다. 진동은 유의해서 살펴볼 필요가 있습니다. 한 옵저버의 반응이 지연되고, 다른 옵저버 역시 초기 옵저버의 결과에 대해 지연되어 반응한다면 이해하거나 예측하기 매우 어려운 혼돈스러운(chaotic) 시스템이 될 수 있습니다. 이는 코로나19 팬데믹 기간 및 그 이후 공급망 혼란의 큰 원인이기도 했습니다. 도넬라 H. 메도우스(Donella H. Meadows)의 저서 <em>Thinking in Systems</em> (Chelsea Green Publishing, 2008)에서는 수요 반응의 지연이 공급망에서 진동을 유발할 수 있음을 보여줍니다. 긴 공급망은 진동하는 여러 부분으로 구성되어 있습니다. 진동의 박자가 너무 맞지 않게 되면 해결하기 복잡한 혼돈스러운 시스템이 됩니다. 이것이 팬데믹 이후 공급망 복구에 오랜 시간이 걸린 이유 중 하나입니다. 다행히 컴퓨터 시스템은 비교적 즉각적으로 반응합니다. 그러나 지연이 연쇄적으로 이어지고 이에 반응할 때 발생하는 위험성을 염두에 둘 가치는 충분합니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>이제 시스템이 동작하므로, 콜백(callback)을 사용하여 사용자로부터 입력을 받는 방법으로 넘어가 보겠습니다.</p>
-</section>
-</section>
-<section id="이제-시스템이-동작하므로-콜백callback을-사용하여-사용자로부터" class="level2">
-<h2 class="anchored" data-anchor-id="이제-시스템이-동작하므로-콜백callback을-사용하여-사용자로부터">이제 시스템이 동작하므로, 콜백(callback)을 사용하여 사용자로부터</h2>
-<section id="콜백을-통한-사용자-입력-받기" class="level3">
-<h3 class="anchored" data-anchor-id="콜백을-통한-사용자-입력-받기">콜백을 통한 사용자 입력 받기</h3>
+<p>이제 시스템이 동작하므로, 콜백(callback)을 사용하여 사용자로부터 ### 콜백을 통한 사용자 입력 받기</p>
 <p>터미널에서 사용자 입력을 받기 위해 다음과 같은 버전의 <code>device_query</code> 크레이트를 사용합니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb227"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb227-1"><a href="#cb227-1" aria-hidden="true" tabindex="-1"></a><span class="dt">device_query</span> <span class="op">=</span> <span class="st">"1.1.3"</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이를 위해 다음 트레이트와 구조체를 사용합니다:</p>
@@ -4792,13 +4545,14 @@ outcome: that's so dingo!</code></pre>
 <p>모든 리액티브 시스템이 단순히 현재 시점의 정수 값에만 반응하는 것은 아닙니다. 예를 들어 주식 거래 시스템을 구축한다면, 폴링할 기회가 생겼을 때의 현재 가격뿐만 아니라 주식의 과거 이력 데이터도 알고 싶을 것입니다. 또한 비동기 환경에서는 언제 폴링이 일어날지 보장할 수 없으므로, 주식 가격 이벤트를 폴링할 때 마지막 폴링 이후 발생한 모든 일에 접근하여 어떤 이벤트가 중요한지 판단해야 합니다. 이를 위해 구독할 수 있는 이벤트 버스(event bus)가 필요합니다.</p>
 </section>
 </section>
+</section>
 <section id="모든-리액티브-시스템이-단순히-현재-시점의-정수-값에만-반응하는-것은-아" class="level2">
 <h2 class="anchored" data-anchor-id="모든-리액티브-시스템이-단순히-현재-시점의-정수-값에만-반응하는-것은-아">모든 리액티브 시스템이 단순히 현재 시점의 정수 값에만 반응하는 것은 아</h2>
 <section id="이벤트-버스를-통한-브로드캐스팅-구현" class="level3">
 <h3 class="anchored" data-anchor-id="이벤트-버스를-통한-브로드캐스팅-구현">이벤트 버스를 통한 브로드캐스팅 구현</h3>
 <p>이벤트 버스는 더 넓은 시스템의 구성 요소들이 특정 정보를 담은 메시지를 보낼 수 있도록 해 주는 시스템입니다. 단순한 발행/구독(pub/sub) 관계인 브로드캐스트 채널과 달리, 이벤트 버스는 소수의 선택된 승객만 내리는 여러 정류장에 정차하는 버스에 비유할 수 있습니다. 즉, 단일 소스의 업데이트에 대해 여러 구독자가 존재할 수 있지만, 각 구독자는 브로드캐스트되는 모든 메시지가 아니라 특정 유형의 메시지만 수신하도록 요청할 수 있습니다. 주체가 이벤트 버스에 이벤트를 발행하면, 여러 옵저버가 발행된 순서대로 그 이벤트를 소비할 수 있습니다. 이 절에서는 기본 메커니즘을 살펴보기 위해 자체 이벤트 버스를 구축해 보겠습니다. 다만 Tokio와 같은 크레이트에서도 브로드캐스트 채널을 손쉽게 사용할 수 있습니다.</p>
 <blockquote class="blockquote">
-<p>[!NOTE] 브로드캐스트 채널은 라디오 방송에 비유할 수 있습니다. 라디오 방송국이 메시지를 송출하면 동일한 채널에 주파수를 맞추고 있는 한 여러 청취자가 동일한 메시지를 들을 수 있습니다. 프로그래밍의 브로드캐스트 채널에서도 여러 리스너가 동일한 메시지를 구독하고 수신할 수 있습니다. 브로드캐스트 채널은 일반 채널과 다릅니다. 일반 채널에서는 프로그램의 한 부분에서 보낸 메시지를 다른 한 부분에서만 수신합니다. 반면 브로드캐스트 채널에서는 프로그램의 한 부분에서 메시지를 보내면 동일한 메시지를 프로그램의 여러 부분이 함께 수신합니다. 특별한 요구사항이 없다면 직접 만드는 것보다 제공되는 브로드캐스트 채널을 그대로 사용하는 것이 좋습니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>이벤트 버스를 구축하기 전에 다음 의존성이 필요합니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb233"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb233-1"><a href="#cb233-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[dependencies]</span></span>
@@ -4810,12 +4564,7 @@ outcome: that's so dingo!</code></pre>
 <span id="cb234-3"><a href="#cb234-3" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::collections::</span><span class="op">{</span>VecDeque<span class="op">,</span> HashMap<span class="op">};</span></span>
 <span id="cb234-4"><a href="#cb234-4" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::marker::</span><span class="bu">Send</span><span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이제 이벤트 버스 구조체를 구축하는 데 필요한 모든 것이 준비되었습니다.</p>
-</section>
-</section>
-<section id="이제-이벤트-버스-구조체를-구축하는-데-필요한-모든-것이-준비되었습니다." class="level2">
-<h2 class="anchored" data-anchor-id="이제-이벤트-버스-구조체를-구축하는-데-필요한-모든-것이-준비되었습니다.">이제 이벤트 버스 구조체를 구축하는 데 필요한 모든 것이 준비되었습니다.</h2>
-<section id="이벤트-버스-구조체-만들기" class="level3">
-<h3 class="anchored" data-anchor-id="이벤트-버스-구조체-만들기">이벤트 버스 구조체 만들기</h3>
+<p>이제 이벤트 버스 구조체를 구축하는 데 필요한 모든 것이 준비되었습니다. ### 이벤트 버스 구조체 만들기</p>
 <p>비동기 프로그래밍에서는 비동기 태스크가 폴링되기 위해 구조체를 스레드 간에 전달해야 하므로, 발행된 각 이벤트를 복제(<code>clone</code>)하여 모든 구독자가 소비할 수 있도록 배포해야 합니다. 또한 어떤 이유로 소비자 처리가 지연된 경우에도 백로그(밀린 이벤트)에 접근할 수 있어야 합니다. 아울러 소비자는 이벤트 구독을 취소할 수도 있어야 합니다. 이러한 모든 요소를 고려할 때, 이벤트 버스 구조체는 다음과 같은 형태를 띱니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb235"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb235-1"><a href="#cb235-1" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">struct</span> EventBus<span class="op">&lt;</span>T<span class="op">:</span> <span class="bu">Clone</span> <span class="op">+</span> <span class="bu">Send</span><span class="op">&gt;</span> <span class="op">{</span></span>
 <span id="cb235-2"><a href="#cb235-2" aria-hidden="true" tabindex="-1"></a>    chamber<span class="op">:</span> AsyncMutex<span class="op">&lt;</span>HashMap<span class="op">&lt;</span><span class="dt">u32</span><span class="op">,</span> VecDeque<span class="op">&lt;</span>T<span class="op">&gt;&gt;&gt;,</span></span>
@@ -4874,7 +4623,7 @@ outcome: that's so dingo!</code></pre>
 <span id="cb237-9"><a href="#cb237-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이 코드에서는 <code>EventHandle</code> 구조체를 반환하며, 핸들은 다음 소절에서 정의합니다. 카운트를 1 증가시키고 새 카운트를 ID로 사용하며 해당 ID 아래에 새 큐를 삽입합니다. 그런 다음 소비자가 이벤트 버스와 상호작용할 수 있도록 ID와 <code>Arc</code>로 감싼 이벤트 버스에 대한 참조를 핸들 구조체에 담아 반환합니다.</p>
 <blockquote class="blockquote">
-<p>[!NOTE] 카운트를 1씩 늘려 새 ID로 사용하는 것은 ID를 할당하는 간단한 방법이지만, 처리량이 많고 오래 실행되는 시스템에서는 결국 숫자가 소진될 수 있습니다. 이러한 위험을 진지하게 고려해야 한다면 <code>dead_ids</code> 필드에서 정리된 후 재사용할 수 있는 ID 목록을 담는 필드를 추가할 수 있습니다. 새 ID를 할당할 때 재사용 가능한 ID 풀에서 먼저 가져오고, 재사용할 ID가 없는 경우에만 카운트를 증가시키면 됩니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>소비자가 버스를 구독했으므로 이제 다음 함수로 폴링할 수 있습니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb238"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb238-1"><a href="#cb238-1" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">async</span> <span class="kw">fn</span> poll(<span class="op">&amp;</span><span class="kw">self</span><span class="op">,</span> id<span class="op">:</span> <span class="dt">u32</span>) <span class="op">-&gt;</span> <span class="dt">Option</span><span class="op">&lt;</span>T<span class="op">&gt;</span> <span class="op">{</span></span>
@@ -4919,13 +4668,7 @@ outcome: that's so dingo!</code></pre>
 <span id="cb241-4"><a href="#cb241-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb241-5"><a href="#cb241-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이제 핸들이 완성되었으며, 메모리 누수의 위험 없이 버스에서 안전하게 이벤트를 소비하는 데 사용할 수 있습니다. 이 핸들을 사용하여 이벤트 버스와 상호작용하는 태스크들을 구축해 보겠습니다.</p>
-</section>
-</section>
-</section>
-<section id="이제-핸들이-완성되었으며-메모리-누수의-위험-없이-버스에서-안전하게-이" class="level2">
-<h2 class="anchored" data-anchor-id="이제-핸들이-완성되었으며-메모리-누수의-위험-없이-버스에서-안전하게-이">이제 핸들이 완성되었으며, 메모리 누수의 위험 없이 버스에서 안전하게 이</h2>
-<section id="비동기-태스크를-통한-이벤트-버스와의-상호작용" class="level3">
-<h3 class="anchored" data-anchor-id="비동기-태스크를-통한-이벤트-버스와의-상호작용">비동기 태스크를 통한 이벤트 버스와의 상호작용</h3>
+<p>이제 핸들이 완성되었으며, 메모리 누수의 위험 없이 버스에서 안전하게 이 ### 비동기 태스크를 통한 이벤트 버스와의 상호작용</p>
 <p>이번 장 전체에서 살펴본 옵저버들은 <code>Future</code> 트레이트를 구현하고 주체의 상태와 옵저버의 상태를 비교해 왔습니다. 이제는 이벤트가 특정 ID로 직접 스트리밍되므로, <code>async</code> 함수를 사용하여 소비자 비동기 태스크를 쉽게 구현할 수 있습니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb242"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb242-1"><a href="#cb242-1" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">fn</span> consume_event_bus(event_bus<span class="op">:</span> Arc<span class="op">&lt;</span>EventBus<span class="op">&lt;</span><span class="dt">f32</span><span class="op">&gt;&gt;</span>) <span class="op">{</span></span>
 <span id="cb242-2"><a href="#cb242-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> handle <span class="op">=</span> event_bus<span class="op">.</span>subscribe()<span class="op">.</span><span class="kw">await</span><span class="op">;</span></span>
@@ -4944,7 +4687,7 @@ outcome: that's so dingo!</code></pre>
 <span id="cb242-15"><a href="#cb242-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이 예제에서는 부동소수점 수를 스트리밍하며 <code>3.0</code>이 전송되면 루프를 빠져나옵니다. 이는 교육용 예제일 뿐이지만, <code>HEAT_ON</code> 원자적 불리언 값에 영향을 미치는 로직을 구현하는 것도 간단할 것입니다. 루프가 이벤트 버스를 너무 공격적으로 폴링하지 않도록 하려면 <code>None</code> 브랜치에 Tokio 비동기 수면(sleep) 함수를 구현할 수도 있습니다.</p>
 <blockquote class="blockquote">
-<p>[!NOTE] 때로는 이벤트의 생성 속도가 처리 속도보다 빠를 수 있습니다. 이로 인해 이벤트가 쌓이게 되는데, 이를 배압(backpressure)이라고 합니다. 배압은 이 책의 범위를 벗어나는 다양한 방식으로 해결할 수 있습니다. 버퍼링(buffering), 흐름 제어(flow control), 속도 제한(rate limiting), 배치 처리(batch processing), 부하 분산(load balancing)과 같은 개념이 배압이 누적될 때 이를 줄이는 데 도움이 될 수 있습니다. 채널의 배압을 테스트하는 방법은 제11장에서 다룹니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>또한 일정 시간이 지난 후 삭제된 ID들을 일괄(batch) 정리하는 백그라운드 태스크가 필요합니다. 이 가비지 컬렉션(garbage collection) 태스크 역시 <code>async</code> 함수로 정의할 수 있습니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb243"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb243-1"><a href="#cb243-1" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">fn</span> garbage_collector(event_bus<span class="op">:</span> Arc<span class="op">&lt;</span>EventBus<span class="op">&lt;</span><span class="dt">f32</span><span class="op">&gt;&gt;</span>) <span class="op">{</span></span>
@@ -4961,7 +4704,7 @@ outcome: that's so dingo!</code></pre>
 <span id="cb243-12"><a href="#cb243-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>일괄 삭제 직후 <code>chamber</code>를 드롭합니다. <code>chamber</code>를 사용하지 않는 동안 다른 태스크가 <code>chamber</code>에 접근하려는 것을 블로킹하고 싶지 않기 때문입니다.</p>
 <blockquote class="blockquote">
-<p>[!NOTE] 데이터베이스 시스템에서는 삭제 요청이 들어왔을 때 레코드를 즉시 삭제하지 않는 경우가 흔합니다. 이를 툼스톤(tombstoning)이라고 부릅니다. 대신 데이터베이스는 레코드에 표시를 남겨 GET 요청 시 해당 레코드가 삭제된 것처럼 처리하도록 합니다. 그런 다음 가비지 컬렉션 프로세스가 주기적으로 툼스톤 표시된 레코드를 정리합니다. 삭제 요청이 들어올 때마다 스토리지를 정리하고 재할당하는 것은 비용이 많이 드는 작업이며, 데이터베이스로 들어오는 비동기 요청을 계속해서 처리해야 하기 때문입니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>이벤트 버스와 상호작용하는 데 필요한 모든 것이 갖추어졌습니다. 이제 이벤트 버스와 그에 대한 참조들을 생성합니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb244"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb244-1"><a href="#cb244-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> event_bus <span class="op">=</span> <span class="pp">Arc::</span>new(<span class="pp">EventBus::</span><span class="op">&lt;</span><span class="dt">f32</span><span class="op">&gt;</span><span class="pp">::</span>new())<span class="op">;</span></span>
@@ -5000,15 +4743,11 @@ id: 1 value: 3
 {}</code></pre>
 <p>두 구독자 모두 이벤트를 수신하고, 구독을 취소했을 때 가비지 컬렉션이 정상적으로 작동함을 확인할 수 있습니다.</p>
 <p>이벤트 버스는 리액티브 프로그래밍의 중추입니다. 동적인 방식으로 구독자를 계속해서 추가하고 제거할 수 있습니다. 이벤트가 어떻게 배포되고 소비되는지 제어할 수 있으며, 이벤트 버스에 연결되는 코드를 구현하는 것 또한 간단합니다.</p>
-</section>
-</section>
-<section id="이벤트-버스는-리액티브-프로그래밍의-중추입니다.-동적인-방식으로-구독자를" class="level2">
-<h2 class="anchored" data-anchor-id="이벤트-버스는-리액티브-프로그래밍의-중추입니다.-동적인-방식으로-구독자를">이벤트 버스는 리액티브 프로그래밍의 중추입니다. 동적인 방식으로 구독자를</h2>
-<section id="요약-5" class="level3">
-<h3 class="anchored" data-anchor-id="요약-5">요약</h3>
+<p>이벤트 버스는 리액티브 프로그래밍의 중추입니다. 동적인 방식으로 구독자를 ### 요약</p>
 <p>리액티브 프로그래밍에 대한 포괄적인 내용을 모두 담는 것은 이 책의 범위를 벗어나지만, 주체를 폴링하고 직접 작성한 이벤트 버스를 통해 데이터를 비동기적으로 배포하는 것과 같은 기본적인 비동기적 특성들을 다루었습니다. 이제 리액티브 프로그래밍의 비동기 구현을 직접 설계할 수 있을 것입니다.</p>
 <p>리액티브 프로그래밍은 서로 다른 스레드와 채널을 가진 단일 프로그램에만 국한되지 않습니다. 리액티브 프로그래밍 개념은 리액티브 시스템(reactive systems)이라는 이름 아래 여러 컴퓨터와 프로세스에도 적용될 수 있습니다. 예를 들어, 우리의 메시지 버스는 클러스터 내의 다양한 서버로 메시지를 보낼 수도 있습니다. 이벤트 기반 시스템은 아키텍처를 확장할 때도 유용합니다. 그러나 리액티브 프로그래밍을 사용하면 솔루션에 움직이는 부품(moving parts)이 더 많아진다는 점을 명심해야 합니다. 라이브 시스템의 성능이 저하되기 시작했을 때 비로소 이벤트 기반 시스템으로 전환하는 경우가 많습니다. 처음부터 곧바로 리액티브 프로그래밍을 도입하면 유지보수하기 어려운 복잡한 솔루션이 될 수 있으므로 주의해야 합니다.</p>
 <p>비동기 코드를 구현할 때 Tokio에 의존했다는 점을 눈치채셨을 것입니다. 제7장에서는 제약 조건과 미묘한 차이가 있는 더 많은 문제를 해결하기 위해 Tokio를 커스터마이징하는 방법을 다룹니다. 한 장 전체를 Tokio에 할애하는 것이 논란의 여지가 있을 수 있지만, 실제로 Tokio는 Rust 생태계에서 가장 널리 사용되는 비동기 런타임입니다.</p>
+</section>
 </section>
 </section>
 <section id="제7장-tokio-커스터마이징" class="level2">
@@ -5016,11 +4755,7 @@ id: 1 value: 3
 <p>이 책에서는 예제에 Tokio를 사용해 왔습니다. Tokio는 널리 검증되어 있을 뿐만 아니라 구문이 깔끔하고, 단 하나의 매크로만으로도 비동기 예제를 바로 실행할 수 있기 때문입니다. 비동기 Rust 코드베이스에서 작업해 보셨다면 Tokio를 접해 보셨을 가능성이 큽니다. 하지만 지금까지는 표준 Tokio 런타임을 구축하고 그 런타임에 비동기 태스크를 전송하는 용도로만 이 크레이트를 사용했습니다. 이번 장에서는 여러 스레드 집합에서 태스크가 처리되는 방식을 세밀하게 제어하기 위해 Tokio 런타임을 커스터마이징해 보겠습니다. 또한 비동기 런타임 안에서 스레드 상태에 대한 <code>unsafe</code> 접근이 실제로 안전한지도 테스트할 것입니다. 마지막으로 비동기 런타임이 종료될 때 정상적인 셧다운(graceful shutdown)을 활성화하는 방법도 다룹니다.</p>
 <p>이번 장을 마치면 특정 문제를 해결하기 위해 Tokio 런타임을 직접 구성할 수 있게 됩니다. 또한 비동기 태스크가 배타적으로 처리될 특정 스레드를 지정할 수 있어, 태스크가 해당 스레드 전용 상태에 의존하도록 만들어 데이터 접근을 위한 락(lock)의 필요성을 잠재적으로 줄일 수 있습니다. 마지막으로 프로그램에 Ctrl-C나 kill 시그널이 전송되었을 때 프로그램이 종료되는 방식을 직접 제어할 수 있게 됩니다. 이제 Tokio 런타임을 직접 구축하는 것부터 시작하겠습니다.</p>
 <p>이번 장을 건너뛰더라도 책의 나머지 내용을 이해하는 데는 지장이 없습니다. 이 내용은 Tokio를 원하는 방식대로 사용하는 방법을 다루며, 새로운 비동기 이론을 소개하지는 않기 때문입니다.</p>
-</section>
-<section id="이번-장을-건너뛰더라도-책의-나머지-내용을-이해하는-데는-지장이-없습니다" class="level2">
-<h2 class="anchored" data-anchor-id="이번-장을-건너뛰더라도-책의-나머지-내용을-이해하는-데는-지장이-없습니다">이번 장을 건너뛰더라도 책의 나머지 내용을 이해하는 데는 지장이 없습니다</h2>
-<section id="런타임-구축하기" class="level3">
-<h3 class="anchored" data-anchor-id="런타임-구축하기">런타임 구축하기</h3>
+<p>이번 장을 건너뛰더라도 책의 나머지 내용을 이해하는 데는 지장이 없습니다 ### 런타임 구축하기</p>
 <p>제3장에서는 자체 태스크 생성(spawn) 함수를 구현하여 비동기 런타임에서 태스크가 처리되는 방식을 살펴보았습니다. 이를 통해 태스크가 처리되는 방식을 세밀하게 제어할 수 있었습니다. 이전의 Tokio 예제들은 단순히 <code>#[tokio::main]</code> 매크로만 사용했습니다. 이 매크로는 최소한의 코드로 비동기 예제를 구현하는 데 유용했지만, <code>#[tokio::main]</code>만으로는 비동기 런타임의 동작 방식을 세밀하게 제어하기 어렵습니다. Tokio를 깊이 탐구하기 위해 직접 호출할 수 있는 Tokio 런타임을 설정하는 것부터 시작하겠습니다. 커스텀 런타임 설정을 위해 다음 의존성이 필요합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb249"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb249-1"><a href="#cb249-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[dependencies]</span></span>
 <span id="cb249-2"><a href="#cb249-2" aria-hidden="true" tabindex="-1"></a><span class="dt">tokio</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">version</span><span class="op"> =</span> <span class="st">"1.33.0"</span><span class="op">, </span><span class="dt">features</span><span class="op"> =</span> <span class="op">[</span><span class="st">"full"</span><span class="op">] }</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
@@ -5092,10 +4827,8 @@ id: 1 value: 3
 <span id="cb254-9"><a href="#cb254-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>태스크를 스폰한 다음 런타임의 <code>block_on</code> 함수를 사용하여 태스크가 완료될 때까지 대기합니다. 또한 태스크가 완료되었는지 주기적으로 확인합니다. 코드를 실행하면 다음과 같은 출력이 나타납니다.</p>
 <pre class="text"><code>thread starting for runtime A
-thread starting for runtime A
 sleeping for 2 seconds
 thread starting for runtime A
-thread parking for runtime A
 thread parking for runtime A
 spawned task
 thread parking for runtime A
@@ -5135,7 +4868,6 @@ task result: 20</code></pre>
 <p>이 두 Tokio 런타임과 제3장에서 작업 훔치기(task stealing)가 적용된 두 개의 큐를 가졌던 런타임의 유일한 차이점은, 높은 우선순위 런타임의 스레드가 낮은 우선순위 런타임의 태스크를 훔치지 않는다는 점입니다. 또한 높은 우선순위 런타임에는 두 개의 큐가 있습니다. 같은 런타임 내의 스레드들은 태스크를 훔쳐 오므로, 태스크가 처리되는 정확한 순서를 신경 쓰지 않는 한 실질적으로는 하나의 큐와 같아서 차이가 그리 두드러지지는 않습니다.</p>
 <p>또한 처리할 비동기 태스크가 남아 있지 않으면 스레드가 파킹된다는 점도 기억해야 합니다. 코어 수보다 많은 스레드가 있으면 OS가 이러한 스레드 간의 리소스 할당과 컨텍스트 스위칭을 관리합니다. 단순히 코어 수를 넘어 스레드를 늘린다고 해서 속도가 선형적으로 증가하지는 않습니다. 하지만 높은 우선순위 런타임에 3개의 스레드를 두고 낮은 우선순위 런타임에 2개의 스레드를 두면 여전히 리소스를 효과적으로 분배할 수 있습니다. 낮은 우선순위 런타임에서 처리할 태스크가 없다면 해당 2개의 스레드는 파킹되고, 높은 우선순위 런타임의 3개 스레드가 더 많은 CPU를 할당받게 됩니다.</p>
 <p>이제 스레드와 런타임을 정의했으므로 이러한 스레드들과 다양한 방식으로 상호작용해야 합니다. 로컬 풀(local pool)을 사용하면 태스크의 흐름을 더욱 세밀하게 제어할 수 있습니다.</p>
-</section>
 </section>
 <section id="이제-스레드와-런타임을-정의했으므로-이러한-스레드들과-다양한-방식으로-상" class="level2">
 <h2 class="anchored" data-anchor-id="이제-스레드와-런타임을-정의했으므로-이러한-스레드들과-다양한-방식으로-상">이제 스레드와 런타임을 정의했으므로 이러한 스레드들과 다양한 방식으로 상</h2>
@@ -5243,15 +4975,10 @@ result: 6</code></pre>
 </div>
 <p>다른 세 스레드는 <code>Arc&lt;Mutex&lt;T&gt;&gt;</code>에 접근하기 위해 기다려야 합니다. 카운터의 상태를 각 스레드의 로컬로 유지하면 스레드가 뮤텍스 접근을 기다릴 필요가 없어져 처리 속도가 빨라집니다. 하지만 각 스레드의 로컬 카운터는 전체적인 상태를 담고 있지 않습니다. 이 카운터들은 다른 스레드에 있는 카운터의 상태를 알지 못합니다. 전체 카운트 상태를 얻는 한 가지 방법은 각 스레드에 카운터를 가져오는 비동기 태스크를 보내고 마지막에 각 스레드의 결과를 합치는 것입니다. 이 방식은 뒤의 “정상적인 셧다운(Graceful Shutdowns)” 절에서 다룹니다. 스레드 내의 로컬 데이터 접근은 CPU 데이터 캐싱 측면에서 CPU 바운드 태스크를 최적화하는 데도 도움이 될 수 있습니다. - <strong>Non-Send 리소스에 대한 안전한 접근</strong>: 때로는 데이터 리소스가 스레드 안전(thread-safe)하지 않을 수 있습니다. 해당 리소스를 한 스레드에 유지하고 태스크를 해당 스레드로 보내 처리하도록 하는 것이 이를 해결하는 방법입니다.</p>
 <blockquote class="blockquote">
-<p>[!WARNING] 이 책 전반에서 블로킹 태스크로 인해 스레드가 블로킹될 위험성을 강조해 왔습니다. 하지만 로컬 풀에서는 작업 훔치기가 전혀 없기 때문에 블로킹이 미치는 피해가 훨씬 더 두드러질 수 있다는 점을 명심해야 합니다. Tokio의 <code>spawn_blocking</code> 함수를 사용하면 이를 방지할 수 있습니다.</p>
+<p>[!WARNING]</p>
 </blockquote>
 <p>지금까지는 <code>RefCell</code>을 사용하여 비동기 태스크에서 스레드의 상태에 접근할 수 있었습니다. <code>RefCell</code>을 사용하면 런타임에 Rust의 빌림 규칙(borrow rules)을 검사하면서 데이터에 접근할 수 있습니다. 그러나 이러한 검사는 <code>RefCell</code>의 데이터를 빌릴 때 약간의 오버헤드를 유발합니다. <code>unsafe</code> 코드를 사용하면 이러한 검사를 제거하면서도 데이터에 안전하게 접근할 수 있는데, 이는 다음 섹션에서 살펴보겠습니다.</p>
-</section>
-</section>
-<section id="지금까지는-refcell을-사용하여-비동기-태스크에서-스레드의-상태에" class="level2">
-<h2 class="anchored" data-anchor-id="지금까지는-refcell을-사용하여-비동기-태스크에서-스레드의-상태에">지금까지는 <code>RefCell</code>을 사용하여 비동기 태스크에서 스레드의 상태에</h2>
-<section id="스레드-데이터에-unsafe-적용하기" class="level3">
-<h3 class="anchored" data-anchor-id="스레드-데이터에-unsafe-적용하기">스레드 데이터에 Unsafe 적용하기</h3>
+<p>지금까지는 <code>RefCell</code>을 사용하여 비동기 태스크에서 스레드의 상태에 ### 스레드 데이터에 Unsafe 적용하기</p>
 <p>스레드 데이터의 가변 빌림(mutable borrow)에 대한 런타임 검사를 제거하려면 데이터를 <code>UnsafeCell</code>로 감싸야 합니다. 이는 아무런 검사 없이 스레드 데이터에 직접 접근함을 의미합니다. 하지만 여러분이 무슨 생각을 하고 있는지 압니다. <code>UnsafeCell</code>을 사용하면 위험하지 않을까요? 잠재적으로는 그렇기 때문에 안전성을 보장하기 위해 주의를 기울여야 합니다.</p>
 <p>우리의 시스템을 생각해 보면, 다른 스레드로 이전되지 않는 비동기 태스크들을 처리하는 단일 스레드가 있습니다. 이 단일 스레드가 폴링을 통해 동시에 여러 비동기 태스크를 다룰 수는 있지만, 실제로 활성 상태로 처리할 수 있는 비동기 태스크는 한 번에 하나뿐이라는 점을 기억해야 합니다. 따라서 비동기 태스크 중 하나가 <code>UnsafeCell</code>의 데이터에 접근하여 처리하는 동안에는 다른 어떤 비동기 태스크도 해당 데이터에 접근하지 않는다고 가정할 수 있습니다. <code>UnsafeCell</code> 자체는 비동기가 아니기 때문입니다. 하지만 데이터에 대한 참조가 스코프 내에 유효할 때 <code>await</code>를 두지 않도록 주의해야 합니다. 만약 그렇게 하면 기존 태스크가 데이터에 대한 참조를 여전히 쥐고 있는 상태에서 스레드가 다른 태스크로 컨텍스트 스위칭될 수 있기 때문입니다.</p>
 <p><code>unsafe</code> 코드의 해시맵을 수천 개의 비동기 태스크에 노출시키고 각 태스크에서 키의 값을 증가시켜 이를 테스트해 볼 수 있습니다. 이 테스트를 실행하려면 다음 import 문이 필요합니다.</p>
@@ -5303,9 +5030,8 @@ result: 6</code></pre>
 <span id="cb274-2"><a href="#cb274-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> repeated_sequence <span class="op">{</span></span>
 <span id="cb274-3"><a href="#cb274-3" aria-hidden="true" tabindex="-1"></a>    futures<span class="op">.</span>push(pool<span class="op">.</span>spawn_pinned(<span class="kw">move</span> <span class="op">||</span> <span class="kw">async</span> <span class="kw">move</span> <span class="op">{</span></span>
 <span id="cb274-4"><a href="#cb274-4" aria-hidden="true" tabindex="-1"></a>        something(number)<span class="op">.</span><span class="kw">await</span><span class="op">;</span></span>
-<span id="cb274-5"><a href="#cb274-5" aria-hidden="true" tabindex="-1"></a>        something(number)<span class="op">.</span><span class="kw">await</span><span class="op">;</span></span>
-<span id="cb274-6"><a href="#cb274-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span>))<span class="op">;</span></span>
-<span id="cb274-7"><a href="#cb274-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb274-5"><a href="#cb274-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span>))<span class="op">;</span></span>
+<span id="cb274-6"><a href="#cb274-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>태스크를 처리할 때 스레드가 여러 번 컨텍스트 스위칭하도록 적극적으로 유도하고 있습니다. 이러한 컨텍스트 스위칭은 다양한 sleep 지속 시간 및 많은 태스크 총량과 결합되어, 데이터 접근 시 충돌이 발생한다면 카운트 결과에 불일치를 초래할 것입니다. 마지막으로 핸들들을 순회하면서 모두 조인(join)하여 모든 비동기 태스크가 실행되었음을 보장하고, 다음 코드를 사용하여 카운트를 출력합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb275"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb275-1"><a href="#cb275-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> futures <span class="op">{</span></span>
 <span id="cb275-2"><a href="#cb275-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> _ <span class="op">=</span> i<span class="op">.</span><span class="kw">await</span><span class="op">.</span>unwrap()<span class="op">;</span></span>
@@ -5438,13 +5164,12 @@ result: 6</code></pre>
 <span id="cb286-7"><a href="#cb286-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> repeated_sequence <span class="op">{</span></span>
 <span id="cb286-8"><a href="#cb286-8" aria-hidden="true" tabindex="-1"></a>    futures<span class="op">.</span>push(RUNTIME<span class="op">.</span>spawn_pinned(<span class="kw">move</span> <span class="op">||</span> <span class="kw">async</span> <span class="kw">move</span> <span class="op">{</span></span>
 <span id="cb286-9"><a href="#cb286-9" aria-hidden="true" tabindex="-1"></a>        something(number)<span class="op">.</span><span class="kw">await</span><span class="op">;</span></span>
-<span id="cb286-10"><a href="#cb286-10" aria-hidden="true" tabindex="-1"></a>        something(number)<span class="op">.</span><span class="kw">await</span><span class="op">;</span></span>
-<span id="cb286-11"><a href="#cb286-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span>))<span class="op">;</span></span>
-<span id="cb286-12"><a href="#cb286-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb286-13"><a href="#cb286-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> futures <span class="op">{</span></span>
-<span id="cb286-14"><a href="#cb286-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> _ <span class="op">=</span> i<span class="op">.</span><span class="kw">await</span><span class="op">.</span>unwrap()<span class="op">;</span></span>
-<span id="cb286-15"><a href="#cb286-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb286-16"><a href="#cb286-16" aria-hidden="true" tabindex="-1"></a><span class="pp">println!</span>(<span class="st">"All futures completed"</span>)<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb286-10"><a href="#cb286-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span>))<span class="op">;</span></span>
+<span id="cb286-11"><a href="#cb286-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb286-12"><a href="#cb286-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> futures <span class="op">{</span></span>
+<span id="cb286-13"><a href="#cb286-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> _ <span class="op">=</span> i<span class="op">.</span><span class="kw">await</span><span class="op">.</span>unwrap()<span class="op">;</span></span>
+<span id="cb286-14"><a href="#cb286-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb286-15"><a href="#cb286-15" aria-hidden="true" tabindex="-1"></a><span class="pp">println!</span>(<span class="st">"All futures completed"</span>)<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이제 시스템을 실행할 준비가 되었습니다. 모든 퓨처가 완료되었다는 출력이 나타날 때까지 프로그램을 실행한 후 Ctrl-C를 누르면 다음과 같은 출력이 나타납니다.</p>
 <pre class="text"><code>Complete counter: {1: 200000, 4: 200000, 2: 200000, 5: 200000, 3: 200000}</code></pre>
 <p><code>spawn_pinned_by_idx</code> 함수를 사용하여 각 스레드에 정확히 하나의 추출 태스크만 보냈고, 모든 태스크를 단일 스레드로 실행했을 때와 총 카운트가 동일하다는 것을 알고 있으므로 데이터 추출이 정확함을 결론지을 수 있습니다. 퓨처들이 완료되기 전에 Ctrl-C를 누르면 다음과 유사한 출력이 나타납니다.</p>
@@ -5462,12 +5187,7 @@ result: 6</code></pre>
 <p>다음 명령을 통해 시그널을 보낼 대상 PID를 알 수 있도록 PID를 출력합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb291"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb291-1"><a href="#cb291-1" aria-hidden="true" tabindex="-1"></a><span class="bu">kill</span> <span class="at">-SIGHUP</span> <span class="op">&lt;</span>pid<span class="op">&gt;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>kill 명령을 실행하면 Ctrl-C를 눌렀을 때와 유사한 결과를 얻을 수 있습니다. 이제 여러분은 런타임 구성 방식, 태스크 실행 방식, 런타임 종료 방식 측면에서 Tokio를 커스터마이징하는 방법을 익혔다고 할 수 있습니다.</p>
-</section>
-</section>
-<section id="kill-명령을-실행하면-ctrl-c를-눌렀을-때와-유사한-결과를-얻을" class="level2">
-<h2 class="anchored" data-anchor-id="kill-명령을-실행하면-ctrl-c를-눌렀을-때와-유사한-결과를-얻을">kill 명령을 실행하면 Ctrl-C를 눌렀을 때와 유사한 결과를 얻을</h2>
-<section id="요약-6" class="level3">
-<h3 class="anchored" data-anchor-id="요약-6">요약</h3>
+<p>kill 명령을 실행하면 Ctrl-C를 눌렀을 때와 유사한 결과를 얻을 ### 요약</p>
 <p>이번 장에서는 Tokio 런타임을 설정하는 구체적인 세부 사항과 해당 설정들이 런타임 동작 방식에 미치는 영향을 자세히 알아보았습니다. 이러한 세부 설정을 통해 런타임의 워커 스레드 수, 블로킹 스레드 수, 폴링할 새 태스크를 받아들이기 전에 수행되는 틱 수 등을 세밀하게 제어해 보았습니다. 또한 동일한 프로그램 안에서 서로 다른 런타임을 정의하여 태스크를 어떤 런타임으로 보낼지 선택하는 방법도 살펴보았습니다. Tokio 런타임의 스레드는 사용되지 않을 때 파킹되므로, 특정 런타임이 계속 사용되지 않더라도 리소스가 낭비되지 않는다는 점을 기억하십시오.</p>
 <p>그런 다음 로컬 풀을 사용하여 스레드가 태스크를 처리하는 방식을 제어했습니다. 심지어 Tokio 런타임 내에서 스레드 상태에 대한 <code>unsafe</code> 접근을 테스트하여 태스크 내에서 스레드 상태에 접근하는 것이 안전함을 입증하기도 했습니다. 마지막으로 정상적인 셧다운(graceful shutdown)을 다루었습니다. 비록 자체적인 보일러플레이트 코드를 작성할 필요는 없지만, Tokio는 여전히 뛰어난 유연성을 바탕으로 런타임을 구성할 수 있는 능력을 제공합니다. 비동기 Rust 개발자로 일하면서 Tokio를 사용하는 코드베이스를 접하게 될 것임은 의심의 여지가 없습니다. 이제 코드베이스에서 Tokio 런타임을 커스터마이징하고 비동기 태스크가 처리되는 방식을 능숙하게 관리할 수 있을 것입니다. 제8장에서는 모듈식으로 비동기 문제를 해결하기 위해 액터 모델(actor model)을 구현해 보겠습니다.</p>
 </section>
@@ -5604,9 +5324,6 @@ result: 6</code></pre>
 <span id="cb299-22"><a href="#cb299-22" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb299-23"><a href="#cb299-23" aria-hidden="true" tabindex="-1"></a><span class="pp">println!</span>(<span class="st">"Elapsed: {:?}"</span><span class="op">,</span> now<span class="op">.</span>elapsed())<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>집필 시점을 기준으로 이 테스트를 실행했을 때 뮤텍스는 103초가 걸렸습니다. 컴파일러 최적화가 시스템에 미치는 영향을 확인하기 위해 <code>--release</code> 모드로 테스트를 실행했다는 점에 유의하십시오. 액터 방식은 52초 더 빨랐습니다. 그 이유 중 하나는 뮤텍스 락 획득의 오버헤드입니다. 채널에 메시지를 넣을 때는 채널이 가득 찼는지, 닫혔는지만 확인하면 됩니다. 반면 뮤텍스를 획득할 때의 검사는 더 복잡합니다. 일반적으로 다른 태스크가 락을 쥐고 있는지 확인해야 하며, 만약 그렇다면 락을 획득하려는 태스크는 대기 등록을 하고 알림을 받을 때까지 기다려야 합니다.</p>
-<blockquote class="blockquote">
-<p><strong>참고:</strong> 동시성 환경에서는 일반적으로 채널을 통해 메시지를 전달하는 방식이 뮤텍스보다 확장성이 더 뛰어납니다. 송신자가 다른 태스크가 작업을 마칠 때까지 기다릴 필요가 없기 때문입니다. 채널 큐에 메시지를 넣기 위해 대기해야 할 수는 있지만, 큐에 메시지를 넣기 위해 대기하는 것이 뮤텍스로 작업 중인 연산이 끝나기를 기다리고, 락을 양도받고, 대기 중이던 태스크가 다시 락을 획득하는 과정보다 훨씬 빠릅니다. 결과적으로 채널을 사용하는 것이 더 높은 처리량(throughput)을 가져올 수 있습니다.</p>
-</blockquote>
 <p>요점을 더 명확히 하기 위해, 트랜잭션이 단순히 값을 1 증가시키는 것보다 더 복잡한 시나리오를 살펴봅시다. 최종 결과를 상태에 커밋하고 숫자를 반환하기 전에 몇 가지 유효성 검사와 계산을 거쳐야 한다고 가정해 보겠습니다. 효율성을 추구하는 엔지니어라면 이러한 처리가 진행되는 동안 다른 작업을 수행하고 싶을 것입니다. 액터 코드에서는 메시지를 전송하고 응답을 기다리는 구조이므로, 아래에서 볼 수 있듯이 이미 그러한 여유를 누릴 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb300"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb300-1"><a href="#cb300-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> future <span class="op">=</span> <span class="kw">async</span> <span class="kw">move</span> <span class="op">{</span></span>
 <span id="cb300-2"><a href="#cb300-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> (resp_tx<span class="op">,</span> resp_rx) <span class="op">=</span> <span class="pp">oneshot::channel::</span><span class="op">&lt;</span><span class="dt">i32</span><span class="op">&gt;</span>()<span class="op">;</span></span>
@@ -5723,12 +5440,6 @@ result: 6</code></pre>
 <p>라우터용 메인 채널을 생성할 때 이 송신자를 설정할 것입니다. 라우터 액터 함수 내부에서 메인 채널을 구성하고 <code>ROUTER_SENDER</code>를 설정하는 편이 더 인체공학적이지 않을까 생각할 수도 있습니다. 하지만 채널이 설정되기 전에 함수들이 메인 채널로 메시지를 보내려고 하면 동시성 문제가 발생할 수 있습니다. 비동기 런타임은 여러 스레드에 걸쳐 실행될 수 있으므로, 라우터 액터가 채널을 설정하려고 시도하는 동안 다른 비동기 태스크가 채널 호출을 시도할 가능성이 있습니다. 따라서 아무것도 스폰하기 전에 <code>main</code> 함수의 시작 부분에서 채널을 설정하는 것이 좋습니다. 그러면 라우터 액터가 비동기 런타임에서 가장 먼저 폴링되는 태스크가 아니더라도, 자신이 폴링되기 전에 채널로 전송된 메시지에 여전히 접근할 수 있습니다.</p>
 <blockquote class="blockquote">
 <p>[!WARNING] <strong>정적 전역 변수 사용 시 주의점</strong></p>
-<p>이 예제에서는 부가적인 설정 코드로 장을 복잡하게 만들지 않기 위해 <code>OnceLock</code>을 사용한 전역 변수(<code>ROUTER_SENDER</code>)를 사용하고 있습니다. 이러한 접근 방식은 코드를 단순하게 유지해 주지만, 비동기 러스트 코드에서 전역 상태를 사용할 때 발생할 수 있는 잠재적인 단점을 인지하는 것이 중요합니다.</p>
-<ul>
-<li><strong>취약성(Fragility):</strong> 전역 상태는 더 크고 복잡한 애플리케이션에서 추적하기 어려운 버그로 이어질 수 있습니다. 의도치 않게 상태가 수정되면 예상치 못한 부작용이 발생할 수 있습니다.</li>
-<li><strong>테스트의 어려움(Testing difficulty):</strong> 전역 상태에 의존하는 코드는 단위 테스트를 격리하여 실행하기가 더 까다롭습니다. 테스트가 실행되는 순서에 의존적이 되거나 서로 간섭할 수 있습니다.</li>
-<li><strong>자원 수명 관리(Resource management):</strong> 전역 상태를 사용할 경우 자원(예: 송신 채널)의 생명주기 관리가 더욱 복잡해집니다.</li>
-</ul>
 </blockquote>
 <p>이를 방지하기 위해 <code>main</code> 함수의 시작 부분에서 채널을 생성하고 액터들에 <code>Sender</code>를 전달할 수 있으며, <code>Sender</code> 구조체는 복제(clone)할 수 있으므로 액터가 다른 액터로 <code>Sender</code>를 다시 전달할 수도 있습니다. 아래와 같이 작성할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb307"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb307-1"><a href="#cb307-1" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span><span class="pp">tokio::</span>main<span class="at">]</span></span>
@@ -5800,12 +5511,7 @@ result: 6</code></pre>
 <pre class="text"><code>value: Ok("world")
 value: None</code></pre>
 <p>키-값 저장소가 정상적으로 작동하고 있습니다. 하지만 시스템이 종료되거나 비정상 종료(crash)되면 어떻게 될까요? 시스템 재시작 시 상태를 추적하고 복구할 수 있는 액터가 필요합니다.</p>
-</section>
-</section>
-<section id="키-값-저장소가-정상적으로-작동하고-있습니다.-하지만-시스템이-종료되거나" class="level2">
-<h2 class="anchored" data-anchor-id="키-값-저장소가-정상적으로-작동하고-있습니다.-하지만-시스템이-종료되거나">키-값 저장소가 정상적으로 작동하고 있습니다. 하지만 시스템이 종료되거나</h2>
-<section id="액터의-상태-복구-구현하기" class="level3">
-<h3 class="anchored" data-anchor-id="액터의-상태-복구-구현하기">액터의 상태 복구 구현하기</h3>
+<p>키-값 저장소가 정상적으로 작동하고 있습니다. 하지만 시스템이 종료되거나 ### 액터의 상태 복구 구현하기</p>
 <p>현재 시스템에는 키-값 저장소 액터가 있습니다. 그러나 시스템이 중지되었다가 다시 시작되거나 액터가 크래시될 수 있습니다. 이런 일이 발생하면 모든 데이터를 잃게 되므로 바람직하지 않습니다. 데이터 손실 위험을 줄이기 위해 데이터를 파일에 기록하는 또 다른 액터를 만들 것입니다. 새로운 시스템의 개요는 그림 8-2에 정의되어 있습니다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -5827,9 +5533,6 @@ value: None</code></pre>
 <li>키-값 저장소 액터가 라이터 액터를 생성합니다.</li>
 <li>라이터 액터가 시작되면 파일에서 데이터를 읽어 자체 상태를 채운 뒤, 그 데이터를 키-값 저장소 액터에도 전송합니다.</li>
 </ol>
-<blockquote class="blockquote">
-<p><strong>참고:</strong> 우리는 라이터 액터에 데이터 파일에 대한 독점적 접근 권한을 부여했습니다. 라이터 액터는 한 번에 하나의 트랜잭션만 처리할 수 있고 다른 어떤 리소스도 파일을 변경하지 않기 때문에 동시성 문제가 방지됩니다. 또한 라이터 액터가 파일에 독점적으로 접근하면 매 쓰기 작업마다 파일을 열 필요 없이 수명 주기 내내 파일 핸들을 열어 둘 수 있으므로 성능상 이점도 얻을 수 있습니다. 이는 권한 확인 및 파일 가용성 검사를 위해 OS를 호출하는 횟수를 대폭 줄여줍니다.</p>
-</blockquote>
 <p>새 코드를 작성하기 전에 다음과 같은 임포트가 필요합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb313"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb313-1"><a href="#cb313-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> serde_json<span class="op">;</span></span>
 <span id="cb313-2"><a href="#cb313-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">tokio::fs::</span>File<span class="op">;</span></span>
@@ -5904,9 +5607,6 @@ value: None</code></pre>
 <span id="cb317-13"><a href="#cb317-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb317-14"><a href="#cb317-14" aria-hidden="true" tabindex="-1"></a>    <span class="cn">Ok</span>(())</span>
 <span id="cb317-15"><a href="#cb317-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<blockquote class="blockquote">
-<p><strong>참고:</strong> 메시지 주기마다 파일을 비우고 맵 전체를 다시 작성하고 있음을 알 수 있습니다. 이는 파일을 다루는 효율적인 방법은 아닙니다. 하지만 이 장은 액터와 액터 사용법에 초점을 맞추고 있습니다. 트랜잭션을 파일에 기록할 때의 트레이드오프는 다양한 파일 형식, 배치 쓰기(batch writing), 데이터 정리를 위한 가비지 컬렉션 등을 포함하는 방대한 주제입니다. 관심이 있으시다면 알렉스 페트로프(Alex Petrov)의 《데이터베이스 인터널스》(O’Reilly, 2019)에서 파일 트랜잭션 기록에 대한 포괄적인 내용을 다루고 있으니 참고하시기 바랍니다.</p>
-</blockquote>
 <p>라이터 액터의 메시지 매칭 내부에서는 삽입, 삭제를 수행하거나 전체 맵을 복제하여 반환합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb318"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb318-1"><a href="#cb318-1" aria-hidden="true" tabindex="-1"></a><span class="cf">match</span> message <span class="op">{</span></span>
 <span id="cb318-2"><a href="#cb318-2" aria-hidden="true" tabindex="-1"></a>    <span class="pp">WriterLogMessage::</span>Set(key<span class="op">,</span> value) <span class="op">=&gt;</span> <span class="op">{</span></span>
@@ -6115,7 +5815,6 @@ value: None</code></pre>
 <p><code>main</code>을 실행하면 다음과 같은 출력을 얻을 수 있습니다.</p>
 <pre class="text"><code>Data loaded from file: {}
 value: Some([119, 111, 114, 108, 100])
-value: Some([119, 111, 114, 108, 100])
 Data loaded from file: {"hello": [119, 111, 114, 108, 100]}
 value: Some([119, 111, 114, 108, 100])</code></pre>
 <p>시스템 설정 시 처음에 라이터 액터에 의해 데이터가 로드되었음을 볼 수 있습니다. <code>hello</code> 값을 설정한 후 <code>get</code> 함수가 정상 작동합니다. 그런 다음 수동으로 강제 리셋을 트리거했습니다. 여기서 데이터가 다시 로드되는 것을 볼 수 있는데, 이는 라이터 액터가 재시작되었음을 의미합니다. 라이터 액터는 파일 핸들을 얻어 계속 유지하므로, 이전 라이터 액터가 종료되었음을 확신할 수 있습니다. 그렇지 않았다면 파일 디스크립터가 여전히 점유되어 있어 에러가 발생했을 것입니다.</p>
@@ -6130,19 +5829,14 @@ writer instance: Instant { tv_sec: 1627237, tv_nsec: 669830291 }
 Data loaded from file: {"hello": [119, 111, 114, 108, 100]}
 writer instance: Instant { tv_sec: 1627237, tv_nsec: 773026500 }
 value: Some([119, 111, 114, 108, 100])
-writer instance: Instant { tv_sec: 1627237, tv_nsec: 773026500 }
-writer instance: Instant { tv_sec: 1627237, tv_nsec: 773026500 }
-writer instance: Instant { tv_sec: 1627237, tv_nsec: 773026500 }
-writer instance: Instant { tv_sec: 1627237, tv_nsec: 773026500 }
-writer instance: Instant { tv_sec: 1627237, tv_nsec: 773026500 }
 writer instance: Instant { tv_sec: 1627237, tv_nsec: 773026500 }</code></pre>
 <p>리셋 전후의 인스턴스가 서로 다르며, 리셋 후 기존 라이터 인스턴스의 흔적이 남아 있지 않음을 확인할 수 있습니다. 이제 리셋이 정상 작동하며 목적 없이 방황하는 외로운 액터(우리 시스템에서는 그렇다는 뜻이며, 할리우드 배우들까지 보증할 수는 없습니다)가 존재하지 않는다는 사실을 확인하고 안심할 수 있습니다.</p>
 </section>
 </section>
 <section id="리셋-전후의-인스턴스가-서로-다르며-리셋-후-기존-라이터-인스턴스의-흔" class="level2">
 <h2 class="anchored" data-anchor-id="리셋-전후의-인스턴스가-서로-다르며-리셋-후-기존-라이터-인스턴스의-흔">리셋 전후의 인스턴스가 서로 다르며, 리셋 후 기존 라이터 인스턴스의 흔</h2>
-<section id="요약-7" class="level3">
-<h3 class="anchored" data-anchor-id="요약-7">요약</h3>
+<section id="요약-4" class="level3">
+<h3 class="anchored" data-anchor-id="요약-4">요약</h3>
 <p>이 장에서는 키-값 트랜잭션을 수신하고, 라이터 액터로 데이터를 백업하며, 하트비트 메커니즘을 통해 모니터링되는 시스템을 구축했습니다. 이 시스템에는 수많은 동작 부품이 있었지만, 라우터 패턴 덕분에 구현이 단순화되었습니다. 메시지가 목적지에 도달하기 전에 하나의 액터를 거쳐야 하므로 라우터 패턴은 액터를 직접 호출하는 것만큼 효율적이지는 않습니다. 하지만 라우터 패턴은 훌륭한 출발점입니다. 문제를 해결하는 데 필요한 액터를 파악할 때 라우터 패턴에 의지할 수 있습니다. 솔루션이 구체화되면 라우터 액터를 거치는 대신 액터들이 서로를 직접 호출하도록 점진적으로 전환할 수 있습니다.</p>
 <p>우리는 액터를 사용하여 전체 시스템을 구축하는 데 집중했지만, 액터 역시 비동기 런타임 위에서 실행된다는 점을 기억해야 합니다. 액터는 오직 메시지로만 통신하므로 격리되어 있고 테스트하기 쉬우므로, 액터를 활용한 하이브리드 접근 방식을 취할 수 있습니다. 즉, 액터를 사용하여 일반 비동기 시스템에 추가 기능을 덧붙일 수 있습니다. 액터 채널은 어디서나 접근할 수 있습니다. 라우터 액터에서 액터 간 직접 호출로 마이그레이션하는 것과 마찬가지로, 새로 추가한 비동기 기능의 전체적인 윤곽이 잡히면 새로운 비동기 코드를 액터에서 표준 비동기 코드로 천천히 마이그레이션할 수 있습니다. 또한 레거시 코드를 테스트 프레임워크에 넣기 위해 의존성을 격리하려 할 때, 레거시 코드의 기능을 분리해 내는 용도로도 액터를 활용할 수 있습니다.</p>
 <p>일반적으로 격리된 특성 덕분에 액터는 다양한 환경에서 구현할 수 있는 매우 유용한 도구입니다. 또한 액터는 탐색 단계에 머물러 있을 때 ‘코드의 중간 기착지(code limbo)’ 역할을 할 수도 있습니다. 저자 두 사람 모두 마이크로서비스 클러스터에서 챗봇 메시지를 캐싱하고 버퍼링하는 등 촉박한 마감 기한 내에 솔루션을 내놓아야 했을 때 액터를 유용하게 활용하곤 했습니다.</p>
@@ -6501,12 +6195,11 @@ Result of async computation</code></pre>
 <span id="cb368-3"><a href="#cb368-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> state <span class="op">=</span> <span class="pp">State::</span>On<span class="op">;</span></span>
 <span id="cb368-4"><a href="#cb368-4" aria-hidden="true" tabindex="-1"></a>    state <span class="op">=</span> state<span class="op">.</span>transition(<span class="pp">Event::</span>SwitchOff)<span class="op">.</span><span class="kw">await</span><span class="op">;</span></span>
 <span id="cb368-5"><a href="#cb368-5" aria-hidden="true" tabindex="-1"></a>    state <span class="op">=</span> state<span class="op">.</span>transition(<span class="pp">Event::</span>SwitchOn)<span class="op">.</span><span class="kw">await</span><span class="op">;</span></span>
-<span id="cb368-6"><a href="#cb368-6" aria-hidden="true" tabindex="-1"></a>    state <span class="op">=</span> state<span class="op">.</span>transition(<span class="pp">Event::</span>SwitchOn)<span class="op">.</span><span class="kw">await</span><span class="op">;</span></span>
-<span id="cb368-7"><a href="#cb368-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">match</span> state <span class="op">{</span></span>
-<span id="cb368-8"><a href="#cb368-8" aria-hidden="true" tabindex="-1"></a>        <span class="pp">State::</span>On <span class="op">=&gt;</span> <span class="pp">println!</span>(<span class="st">"State machine is in the On state"</span>)<span class="op">,</span></span>
-<span id="cb368-9"><a href="#cb368-9" aria-hidden="true" tabindex="-1"></a>        _ <span class="op">=&gt;</span> <span class="pp">println!</span>(<span class="st">"State machine is not in the expected state"</span>)<span class="op">,</span></span>
-<span id="cb368-10"><a href="#cb368-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb368-11"><a href="#cb368-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb368-6"><a href="#cb368-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">match</span> state <span class="op">{</span></span>
+<span id="cb368-7"><a href="#cb368-7" aria-hidden="true" tabindex="-1"></a>        <span class="pp">State::</span>On <span class="op">=&gt;</span> <span class="pp">println!</span>(<span class="st">"State machine is in the On state"</span>)<span class="op">,</span></span>
+<span id="cb368-8"><a href="#cb368-8" aria-hidden="true" tabindex="-1"></a>        _ <span class="op">=&gt;</span> <span class="pp">println!</span>(<span class="st">"State machine is not in the expected state"</span>)<span class="op">,</span></span>
+<span id="cb368-9"><a href="#cb368-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb368-10"><a href="#cb368-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이 코드를 실행하면 다음과 같은 출력이 나타납니다.</p>
 <pre class="text"><code>Transitioning to the Off state
 Transitioning to the On state
@@ -6546,12 +6239,7 @@ State machine is in the On state</code></pre>
 <span id="cb371-24"><a href="#cb371-24" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이 예제에서 퓨처는 백그라운드에서 지속적으로 폴링됩니다. 이를 통해 상태 머신은 현재 상태에 기반하여 계속 실행 중인 연산을 전환할 수 있습니다. 퓨처를 폴링하기 전에 채널을 통해 이벤트를 수신하여 상태를 변경할 수 있는 추가 기능도 쉽게 결합할 수 있습니다.</p>
 <p>태스크 수가 너무 많을 때 상태 머신이 새로운 태스크의 진행을 스로틀링하는 앞선 예제로 돌아가 봅시다. 상태 머신을 확인한 비동기 태스크들은 Off 상태를 어떻게 처리해야 할까요? 여기서 바로 재시도 패턴(retry pattern)이 등장합니다.</p>
-</section>
-</section>
-<section id="태스크-수가-너무-많을-때-상태-머신이-새로운-태스크의-진행을-스로틀링하" class="level2">
-<h2 class="anchored" data-anchor-id="태스크-수가-너무-많을-때-상태-머신이-새로운-태스크의-진행을-스로틀링하">태스크 수가 너무 많을 때 상태 머신이 새로운 태스크의 진행을 스로틀링하</h2>
-<section id="재시도-패턴" class="level3">
-<h3 class="anchored" data-anchor-id="재시도-패턴">재시도 패턴</h3>
+<p>태스크 수가 너무 많을 때 상태 머신이 새로운 태스크의 진행을 스로틀링하 ### 재시도 패턴</p>
 <p>비동기 태스크가 특정 리소스에 접근하려 할 때 차단되는 상황에 처할 수 있습니다. 상태 머신이 현재 태스크가 너무 많다고 알리는 상황일 수도 있고, 서버에 과부하가 걸린 상황일 수도 있습니다. 그렇다고 비동기 태스크가 즉시 포기하기를 바라지는 않으므로, 재시도를 통해 원하는 결과를 얻을 수 있습니다. 그러나 대상 리소스를 쉼 없이 두드리는 것은 피해야 합니다. 서버, 뮤텍스 또는 데이터베이스에 과부하가 걸려 있다면, 과부하 상태인 대상에 쉬지 않고 연속해서 요청을 쏟아붓는 것은 가장 피해야 할 행동입니다.</p>
 <p>재시도 패턴은 비동기 태스크가 요청을 재시도할 수 있도록 지원합니다. 다만 매 재시도마다 지연(delay) 시간을 두며, 시도할 때마다 이 지연 시간을 두 배씩 늘립니다(지수 백오프). 이러한 백오프(backing off) 덕분에 대상 리소스는 요청 빈도가 줄어드는 완충 시간을 얻어 현재 처리 중인 작업들을 따라잡을 수 있게 됩니다.</p>
 <p>재시도 패턴을 살펴보기 위해, 먼저 항상 에러를 반환하는 <code>get_data</code> 함수를 정의합니다.</p>
@@ -6642,11 +6330,9 @@ Outcome: Err("Error")</code></pre>
 <span id="cb379-2"><a href="#cb379-2" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">fn</span> main() <span class="op">-&gt;</span> <span class="dt">Result</span><span class="op">&lt;</span>()<span class="op">,</span> <span class="dt">String</span><span class="op">&gt;</span> <span class="op">{</span></span>
 <span id="cb379-3"><a href="#cb379-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> _ <span class="op">=</span> spawn_task(passing_task())<span class="op">?.</span><span class="kw">await</span><span class="op">;</span></span>
 <span id="cb379-4"><a href="#cb379-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> _ <span class="op">=</span> spawn_task(error_task())<span class="op">?.</span><span class="kw">await</span><span class="op">;</span></span>
-<span id="cb379-5"><a href="#cb379-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> _ <span class="op">=</span> spawn_task(error_task())<span class="op">?.</span><span class="kw">await</span><span class="op">;</span></span>
-<span id="cb379-6"><a href="#cb379-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> _ <span class="op">=</span> spawn_task(error_task())<span class="op">?.</span><span class="kw">await</span><span class="op">;</span></span>
-<span id="cb379-7"><a href="#cb379-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> _ <span class="op">=</span> spawn_task(passing_task())<span class="op">?.</span><span class="kw">await</span><span class="op">;</span></span>
-<span id="cb379-8"><a href="#cb379-8" aria-hidden="true" tabindex="-1"></a>    <span class="cn">Ok</span>(())</span>
-<span id="cb379-9"><a href="#cb379-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb379-5"><a href="#cb379-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> _ <span class="op">=</span> spawn_task(passing_task())<span class="op">?.</span><span class="kw">await</span><span class="op">;</span></span>
+<span id="cb379-6"><a href="#cb379-6" aria-hidden="true" tabindex="-1"></a>    <span class="cn">Ok</span>(())</span>
+<span id="cb379-7"><a href="#cb379-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이를 실행하면 다음과 같은 출력이 나타납니다.</p>
 <pre class="text"><code>passing task running
 error task running
@@ -6655,12 +6341,7 @@ error task running
 opening circuit
 Error: "Circuit Open"</code></pre>
 <p>임계값에 도달한 후에는 더 이상 태스크가 스폰되지 않습니다. 임계값에 도달했을 때 수행할 동작은 창의적으로 다양하게 구성할 수 있습니다. 모든 태스크를 추적하면서 개별 임계값을 초과한 특정 유형의 태스크만 선별하여 차단할 수도 있습니다. 혹은 정상 종료(graceful shutdown) 절차를 거쳐 프로그램을 완전히 중단하고 알림 시스템을 트리거하여 개발자 및 운영팀에 종료 사실을 알릴 수도 있습니다. 또한 타임스탬프를 기록해 두고 일정 시간이 흐른 뒤 서킷을 다시 닫아(close, 복구) 정상 상태로 돌릴 수도 있습니다. 이러한 세부 변형은 해결하려는 문제의 성격과 필요한 해결책에 따라 달라집니다. 이 서킷 브레이커 패턴을 마지막으로, 기존 코드베이스에 비동기 코드를 구현하는 데 유용한 여러 디자인 패턴을 충분히 살펴보았습니다.</p>
-</section>
-</section>
-<section id="임계값에-도달한-후에는-더-이상-태스크가-스폰되지-않습니다.-임계값에-도" class="level2">
-<h2 class="anchored" data-anchor-id="임계값에-도달한-후에는-더-이상-태스크가-스폰되지-않습니다.-임계값에-도">임계값에 도달한 후에는 더 이상 태스크가 스폰되지 않습니다. 임계값에 도</h2>
-<section id="요약-8" class="level3">
-<h3 class="anchored" data-anchor-id="요약-8">요약</h3>
+<p>임계값에 도달한 후에는 더 이상 태스크가 스폰되지 않습니다. 임계값에 도 ### 요약</p>
 <p>이번 장에서는 책 전반에서 배운 비동기 코드를 현업에 성공적으로 구현할 수 있도록 돕는 다양한 디자인 패턴들을 살펴보았습니다. 코드베이스 전체를 거시적으로 바라보는 안목이 핵심입니다. 비동기 코드가 전혀 없는 기존 코드베이스에 통합할 때는 격리된 모듈을 구축하는 것이 가장 확실한 첫걸음입니다. 이번 장의 모든 디자인 패턴은 단순한 코드 예제를 통해 설명되었습니다. 비동기 코드를 도입할 때는 작고 단순한 단계로 차근차근 나아가는 것이 가장 좋습니다. 이러한 접근 방식은 테스트를 용이하게 만들고, 최근 구현한 내용이 더 이상 필요하지 않거나 코드의 다른 부분을 망가뜨렸을 때 손쉽게 롤백할 수 있게 해줍니다.</p>
 <p>디자인 패턴을 미리부터 무분별하게 적용하고 싶은 유혹이 들 수 있지만, 오버엔지니어링(과도한 엔지니어링)은 디자인 패턴에 대해 제기되는 가장 대표적인 비판입니다. 평소처럼 자연스럽게 코드를 작성하다가, 패턴의 필요성이 명확히 드러나는 시점에 도입을 고려하세요. 억지로 디자인 패턴을 끼워 맞추려 하면 오버엔지니어링으로 이어져 구현의 위험성만 커집니다. 디자인 패턴을 깊이 이해하는 것은 언제, 어디에 패턴을 적용해야 하는지 판단하기 위해 반드시 필요합니다.</p>
 <p>10장에서는 외부 의존성 없이 표준 라이브러리만을 활용하여 자체 비동기 TCP 서버를 구축하는 네트워크 비동기 접근 방식을 다룹니다.</p>
@@ -6766,12 +6447,7 @@ Error: "Circuit Open"</code></pre>
 <li><strong>Sleeper</strong>: 태스크의 비동기 수면(sleep)을 가능하게 하는 비동기 future</li>
 </ol>
 <p>실행자가 태스크를 다시 깨워 폴링할 수 있도록 돕는 웨이커(waker)가 필요하므로, 웨이커 제작부터 시작하겠습니다.</p>
-</section>
-</section>
-<section id="실행자가-태스크를-다시-깨워-폴링할-수-있도록-돕는-웨이커waker가" class="level2">
-<h2 class="anchored" data-anchor-id="실행자가-태스크를-다시-깨워-폴링할-수-있도록-돕는-웨이커waker가">실행자가 태스크를 다시 깨워 폴링할 수 있도록 돕는 웨이커(waker)가</h2>
-<section id="웨이커-구축하기" class="level3">
-<h3 class="anchored" data-anchor-id="웨이커-구축하기">웨이커 구축하기</h3>
+<p>실행자가 태스크를 다시 깨워 폴링할 수 있도록 돕는 웨이커(waker)가 ### 웨이커 구축하기</p>
 <p>우리는 이 책 전반에서 <code>Future</code> 트레이트를 구현할 때 웨이커를 사용해 보았으며, future가 다시 폴링되려면 <code>wake</code> 또는 <code>wake_by_ref</code> 함수가 필요하다는 사실을 본능적으로 알고 있습니다. 따라서 future와 실행자가 웨이커를 다루기 때문에 웨이커가 첫 번째 선택이 되는 것은 자연스럽습니다. 웨이커를 만들기 위해 <code>async_runtime/src/waker.rs</code> 파일에서 다음 임포트로 시작합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb386"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb386-1"><a href="#cb386-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::task::</span><span class="op">{</span>RawWaker<span class="op">,</span> RawWakerVTable<span class="op">};</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>그런 다음 웨이커 가상 함수 테이블(vtable)을 정의합니다.</p>
@@ -6807,12 +6483,7 @@ Error: "Circuit Open"</code></pre>
 <p>태스크가 완료되었거나 취소되었을 때 더 이상 태스크를 폴링할 필요가 없으므로 웨이커는 드롭됩니다. <code>my_drop</code> 함수는 박스를 원시 포인터에서 복원한 뒤 드롭하는 역할을 합니다.</p>
 <p>이제 웨이커에 필요한 모든 함수가 정의되었습니다. 남은 것은 웨이커를 생성하는 함수입니다. 더미 데이터를 전달하고 함수 테이블에 대한 참조를 가진 <code>RawWaker</code>를 생성합니다. 이러한 저수준 접근 방식을 통해 얼마나 많은 커스터마이징이 가능한지 알 수 있습니다. 여러 개의 <code>RawWakerVTable</code> 정의를 두고, <code>create_raw_waker</code> 함수에 전달하는 값에 따라 <code>RawWaker</code>에 서로 다른 함수 테이블을 연결할 수도 있습니다. 실행자에서는 처리하는 future의 유형에 따라 입력을 다르게 구성할 수도 있습니다. 또한 <code>u32</code> 숫자 42 대신 실행자가 보유한 데이터 구조체에 대한 참조를 넘길 수도 있습니다. 숫자 42 자체에는 특별한 의미가 없으며, 단지 데이터가 전달되는 예시일 뿐입니다. 전달된 데이터 구조체는 테이블에 바인딩된 함수들 내부에서 참조될 수 있습니다.</p>
 <p>비록 웨이커의 뼈대만 간략히 구축했지만, 자체 웨이커를 직접 구현함으로써 얻을 수 있는 유연성과 커스터마이징의 강력함을 실감할 수 있습니다. 실행자에서 태스크를 실행하려면 이 웨이커를 사용해야 하므로, 이제 실행자 구축으로 넘어가겠습니다.</p>
-</section>
-</section>
-<section id="비록-웨이커의-뼈대만-간략히-구축했지만-자체-웨이커를-직접-구현함으로써" class="level2">
-<h2 class="anchored" data-anchor-id="비록-웨이커의-뼈대만-간략히-구축했지만-자체-웨이커를-직접-구현함으로써">비록 웨이커의 뼈대만 간략히 구축했지만, 자체 웨이커를 직접 구현함으로써</h2>
-<section id="실행자-구축하기" class="level3">
-<h3 class="anchored" data-anchor-id="실행자-구축하기">실행자 구축하기</h3>
+<p>비록 웨이커의 뼈대만 간략히 구축했지만, 자체 웨이커를 직접 구현함으로써 ### 실행자 구축하기</p>
 <p>거시적 관점에서 볼 때 우리의 실행자는 future를 받아 실행자가 실행할 수 있는 태스크로 변환하고, 핸들을 반환하며, 태스크를 큐에 넣습니다. 또한 주기적으로 해당 큐에 있는 태스크들을 폴링합니다. 실행자는 <code>async_runtime/src/executor.rs</code> 파일에 작성합니다. 먼저 다음 임포트가 필요합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb389"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb389-1"><a href="#cb389-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::</span><span class="op">{</span></span>
 <span id="cb389-2"><a href="#cb389-2" aria-hidden="true" tabindex="-1"></a>    <span class="pp">future::</span><span class="bu">Future</span><span class="op">,</span></span>
@@ -6862,7 +6533,7 @@ Error: "Circuit Open"</code></pre>
 <span id="cb392-27"><a href="#cb392-27" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>Executor</code>의 <code>polling</code> 필드는 폴링할 스폰된 태스크들을 보관하는 곳입니다.</p>
 <blockquote class="blockquote">
-<p>[!NOTE] <code>Executor</code>의 <code>create_waker</code> 함수에 주목하세요. 우리의 실행자는 단일 스레드에서 실행되며 한 번에 하나의 future만 처리할 수 있습니다. 만약 실행자가 특정 데이터 컬렉션을 보유하고 있다면, <code>create_raw_waker</code>가 이를 처리하도록 구성된 경우 해당 참조를 넘겨줄 수 있습니다. 한 번에 하나의 future만 처리되므로 future로부터 둘 이상의 가변 참조가 동시에 존재하지 않아 웨이커가 데이터 컬렉션에 안전하지 않은(unsafe) 접근을 하더라도 데이터 경합이 발생하지 않습니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>태스크를 폴링한 후 여전히 대기 상태(<code>Pending</code>)라면 태스크를 다시 폴링 큐에 넣어 나중에 다시 폴링되도록 합니다. 처음에 태스크를 큐에 넣기 위해 <code>spawn</code> 함수를 사용합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb393"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb393-1"><a href="#cb393-1" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">fn</span> spawn<span class="op">&lt;</span>F<span class="op">,</span> T<span class="op">&gt;</span>(<span class="op">&amp;</span><span class="kw">mut</span> <span class="kw">self</span><span class="op">,</span> future<span class="op">:</span> F) <span class="op">-&gt;</span> <span class="pp">mpsc::</span>Receiver<span class="op">&lt;</span>T<span class="op">&gt;</span></span>
@@ -6915,12 +6586,7 @@ Error: "Circuit Open"</code></pre>
 <span id="cb396-14"><a href="#cb396-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>큐 앞쪽에서 태스크를 꺼내고, 웨이커 참조를 컨텍스트로 감싼 후 future의 <code>poll</code> 함수에 전달하기만 하면 됩니다. future가 준비 완료(<code>Ready</code>) 상태이면 채널을 통해 결과를 돌려보내므로 아무것도 할 필요가 없으며 future는 드롭됩니다. future가 여전히 대기 중(<code>Pending</code>)이라면 다시 큐의 뒤쪽에 넣습니다.</p>
 <p>비동기 런타임의 근간이 완성되었으며 이제 비동기 코드를 실행할 수 있습니다. <code>async_runtime</code> 모듈의 나머지 부분을 구축하기 전에 잠시 경로를 변경하여 실행자를 직접 실행해 보겠습니다. 잘 작동하는지 보고 싶기도 하겠지만, future가 처리되는 방식을 직접 커스터마이징하며 다루어보고 싶을 것입니다. 지금이 시스템 동작 원리를 체감하기에 아주 좋은 타이밍입니다.</p>
-</section>
-</section>
-<section id="비동기-런타임의-근간이-완성되었으며-이제-비동기-코드를-실행할-수-있습니" class="level2">
-<h2 class="anchored" data-anchor-id="비동기-런타임의-근간이-완성되었으며-이제-비동기-코드를-실행할-수-있습니">비동기 런타임의 근간이 완성되었으며 이제 비동기 코드를 실행할 수 있습니</h2>
-<section id="실행자-실행해-보기" class="level3">
-<h3 class="anchored" data-anchor-id="실행자-실행해-보기">실행자 실행해 보기</h3>
+<p>비동기 런타임의 근간이 완성되었으며 이제 비동기 코드를 실행할 수 있습니 ### 실행자 실행해 보기</p>
 <p>비동기 런타임을 실행하는 것은 매우 직관적입니다. <code>async_runtime</code> 모듈의 <code>main.rs</code> 파일에서 다음 항목들을 임포트합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb397"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb397-1"><a href="#cb397-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::</span><span class="op">{</span></span>
 <span id="cb397-2"><a href="#cb397-2" aria-hidden="true" tabindex="-1"></a>    <span class="pp">future::</span><span class="bu">Future</span><span class="op">,</span></span>
@@ -6967,17 +6633,13 @@ Error: "Circuit Open"</code></pre>
 <span id="cb399-14"><a href="#cb399-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>스레드를 하나 생성하고 실행자 내부의 future들을 폴링하는 무한 루프를 실행합니다. 이 루프가 도는 동안 future 중 하나의 결과를 대기합니다. 서버에서는 프로그램의 전체 수명 동안 future를 계속 받아들일 수 있도록 실행자를 적절히 구현할 것입니다. 이 간단한 구현을 실행하면 다음과 같은 출력이 나타납니다.</p>
 <pre><code>CountingFuture is not done yet! 1
-CountingFuture is not done yet! 1
-CountingFuture is not done yet! 2
 CountingFuture is not done yet! 2
 CountingFuture is not done yet! 3
-CountingFuture is not done yet! 3
-CountingFuture is done!
 CountingFuture is done!
 Result: 4</code></pre>
 <p>제대로 작동하는 것을 확인할 수 있습니다! 표준 라이브러리만을 사용하여 동작하는 비동기 런타임을 만들었습니다!</p>
 <blockquote class="blockquote">
-<p>[!NOTE] 여기서 작성한 웨이커는 실제로 특별한 작업을 하지 않는다는 점을 기억하세요. 실행자 큐에 있는 future들을 조건 없이 폴링하고 있습니다. <code>CountingFuture</code>의 <code>poll</code> 함수에서 <code>cx.waker().wake_by_ref();</code> 라인을 주석 처리하더라도 완전히 동일한 결과를 얻게 되는데, 이는 <code>smol</code>이나 <code>Tokio</code> 같은 런타임에서 일어나는 일과는 다릅니다. 이는 완성도 높은 런타임들이 웨이커를 활용하여 깨워야 할 future만 선별적으로 폴링한다는 점을 시사합니다. 즉, 기존 런타임들이 폴링 측면에서 훨씬 더 효율적입니다.</p>
+<p>[!NOTE]</p>
 </blockquote>
 <p>이제 비동기 런타임이 실행되었으므로 나머지 비동기 프로세스들도 마무리 지어 보겠습니다. 먼저 센더(sender)부터 시작합니다.</p>
 <section id="센더-구축하기" class="level4">
@@ -7130,12 +6792,7 @@ Result: 4</code></pre>
 <span id="cb413-4"><a href="#cb413-4" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">mod</span> sleep<span class="op">;</span></span>
 <span id="cb413-5"><a href="#cb413-5" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">mod</span> sender<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이제 서버에서 이 컴포넌트들을 임포트할 수 있습니다. 모든 기능이 완성되었으니 이를 바탕으로 서버를 구축해 보겠습니다.</p>
-</section>
-</section>
-<section id="이제-서버에서-이-컴포넌트들을-임포트할-수-있습니다.-모든-기능이-완성되" class="level2">
-<h2 class="anchored" data-anchor-id="이제-서버에서-이-컴포넌트들을-임포트할-수-있습니다.-모든-기능이-완성되">이제 서버에서 이 컴포넌트들을 임포트할 수 있습니다. 모든 기능이 완성되</h2>
-<section id="서버-구축하기" class="level3">
-<h3 class="anchored" data-anchor-id="서버-구축하기">서버 구축하기</h3>
+<p>이제 서버에서 이 컴포넌트들을 임포트할 수 있습니다. 모든 기능이 완성되 ### 서버 구축하기</p>
 <p>서버를 구축하려면 앞서 작성한 데이터 모듈과 비동기 모듈이 필요합니다. 이를 설치하기 위해 <code>Cargo.toml</code> 파일의 의존성은 다음과 같은 형태가 됩니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb414"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb414-1"><a href="#cb414-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[dependencies]</span></span>
 <span id="cb414-2"><a href="#cb414-2" aria-hidden="true" tabindex="-1"></a><span class="dt">data_layer</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">path</span><span class="op"> =</span> <span class="st">"../data_layer"</span><span class="op"> }</span></span>
@@ -7156,12 +6813,7 @@ Result: 4</code></pre>
 <span id="cb415-10"><a href="#cb415-10" aria-hidden="true" tabindex="-1"></a>    <span class="pp">sleep::</span>Sleep</span>
 <span id="cb415-11"><a href="#cb415-11" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>필요한 모든 준비가 끝났으므로 요청을 수락하는 코드를 작성할 수 있습니다.</p>
-</section>
-</section>
-<section id="필요한-모든-준비가-끝났으므로-요청을-수락하는-코드를-작성할-수-있습니다" class="level2">
-<h2 class="anchored" data-anchor-id="필요한-모든-준비가-끝났으므로-요청을-수락하는-코드를-작성할-수-있습니다">필요한 모든 준비가 끝났으므로 요청을 수락하는 코드를 작성할 수 있습니다</h2>
-<section id="요청-수락하기" class="level3">
-<h3 class="anchored" data-anchor-id="요청-수락하기">요청 수락하기</h3>
+<p>필요한 모든 준비가 끝났으므로 요청을 수락하는 코드를 작성할 수 있습니다 ### 요청 수락하기</p>
 <p>메인 스레드가 들어오는 TCP 요청을 수신(listen) 대기하도록 할 수 있습니다. 그런 다음 그림 10-1과 같이 메인 스레드가 세 개의 스레드와 실행자에 요청을 분배합니다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -7172,9 +6824,7 @@ Result: 4</code></pre>
 <p>처리할 요청이 없을 때는 스레드가 파킹(park, 대기 상태로 진입)되도록 하고 싶습니다. 파킹과 관련하여 스레드와 통신하기 위해 각 스레드마다 <code>AtomicBool</code>을 하나씩 둡니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb416"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb416-1"><a href="#cb416-1" aria-hidden="true" tabindex="-1"></a><span class="kw">static</span> FLAGS<span class="op">:</span> [AtomicBool<span class="op">;</span> <span class="dv">3</span>] <span class="op">=</span> [</span>
 <span id="cb416-2"><a href="#cb416-2" aria-hidden="true" tabindex="-1"></a>    <span class="pp">AtomicBool::</span>new(<span class="cn">false</span>)<span class="op">,</span></span>
-<span id="cb416-3"><a href="#cb416-3" aria-hidden="true" tabindex="-1"></a>    <span class="pp">AtomicBool::</span>new(<span class="cn">false</span>)<span class="op">,</span></span>
-<span id="cb416-4"><a href="#cb416-4" aria-hidden="true" tabindex="-1"></a>    <span class="pp">AtomicBool::</span>new(<span class="cn">false</span>)<span class="op">,</span></span>
-<span id="cb416-5"><a href="#cb416-5" aria-hidden="true" tabindex="-1"></a>]<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb416-3"><a href="#cb416-3" aria-hidden="true" tabindex="-1"></a>]<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>각 <code>AtomicBool</code>은 하나의 스레드를 나타냅니다. <code>AtomicBool</code>이 <code>false</code>이면 스레드는 파킹되지 않은 상태입니다. <code>AtomicBool</code>이 <code>true</code>이면 라우터는 해당 스레드가 파킹되어 있음을 인지하고, 스레드에 요청을 보내기 전에 먼저 스레드를 깨워야(<code>unpark</code>) 한다는 것을 압니다.</p>
 <p>이제 <code>FLAGS</code>를 준비했으므로 각 스레드별로 들어오는 요청을 처리해야 합니다. 스레드 내부에서 실행자를 생성한 다음 스레드용 채널에서 메시지 수신을 시도합니다. 채널에 요청이 있으면 해당 실행자에서 태스크를 스폰합니다. 들어오는 요청이 없으면 폴링 대기 중인 태스크가 있는지 확인합니다. 태스크가 없으면 스레드는 <code>FLAG</code>를 <code>true</code>로 설정하고 스레드를 파킹합니다. 폴링할 태스크가 있다면 루프의 마지막에서 태스크를 폴링합니다. 이 프로세스는 다음 매크로를 통해 수행할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb417"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb417-1"><a href="#cb417-1" aria-hidden="true" tabindex="-1"></a><span class="pp">macro_rules!</span> spawn_worker <span class="op">{</span></span>
@@ -7203,7 +6853,7 @@ Result: 4</code></pre>
 <span id="cb417-24"><a href="#cb417-24" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이 매크로에서는 로깅 목적으로 스레드 이름, 들어오는 요청을 받기 위한 채널의 리시버, 그리고 스레드가 파킹될 때 시스템의 나머지 부분에 알리기 위한 플래그를 인자로 받습니다.</p>
 <blockquote class="blockquote">
-<p>[!TIP] 복잡한 매크로 작성에 대한 자세한 내용은 잉그바르 스테파냔(Ingvar Stepanyan)의 <em>Writing Complex Macros in Rust</em>를 참고하세요.</p>
+<p>[!TIP]</p>
 </blockquote>
 <p><code>main</code> 함수에서 요청 수락 과정을 조율할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb418"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb418-1"><a href="#cb418-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">-&gt;</span> <span class="pp">io::</span><span class="dt">Result</span><span class="op">&lt;</span>()<span class="op">&gt;</span> <span class="op">{</span></span>
@@ -7248,12 +6898,7 @@ Result: 4</code></pre>
 <span id="cb422-18"><a href="#cb422-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>TCP 요청을 수신하면 TCP 스트림을 스레드로 보내고, 스레드가 파킹되어 있는지 확인한 후 필요 시 파킹을 해제합니다. 다음으로 요청이 모든 스레드에 고르게 분배되도록 인덱스를 다음 스레드로 이동합니다.</p>
 <p>그렇다면 요청을 실행자로 보낸 후에는 무엇을 해야 할까요? 바로 요청을 처리해야 합니다.</p>
-</section>
-</section>
-<section id="그렇다면-요청을-실행자로-보낸-후에는-무엇을-해야-할까요-바로-요청을" class="level2">
-<h2 class="anchored" data-anchor-id="그렇다면-요청을-실행자로-보낸-후에는-무엇을-해야-할까요-바로-요청을">그렇다면 요청을 실행자로 보낸 후에는 무엇을 해야 할까요? 바로 요청을</h2>
-<section id="요청-처리하기" class="level3">
-<h3 class="anchored" data-anchor-id="요청-처리하기">요청 처리하기</h3>
+<p>그렇다면 요청을 실행자로 보낸 후에는 무엇을 해야 할까요? 바로 요청을 ### 요청 처리하기</p>
 <p>요청 처리와 관련하여 실행자에서 <code>handle_client</code> 함수가 호출된다는 점을 상기해 봅시다. 비동기 핸들러 함수는 다음과 같은 형태를 취합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb423"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb423-1"><a href="#cb423-1" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">fn</span> handle_client(<span class="kw">mut</span> stream<span class="op">:</span> TcpStream) <span class="op">-&gt;</span> <span class="pp">std::io::</span><span class="dt">Result</span><span class="op">&lt;</span>()<span class="op">&gt;</span> <span class="op">{</span></span>
 <span id="cb423-2"><a href="#cb423-2" aria-hidden="true" tabindex="-1"></a>    stream<span class="op">.</span>set_nonblocking(<span class="cn">true</span>)<span class="op">?;</span></span>
@@ -7296,12 +6941,7 @@ Result: 4</code></pre>
 <span id="cb424-18"><a href="#cb424-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>블로킹 상태가 발생하면 짧은 비동기 슬립을 두어 실행자가 해당 요청 핸들을 다시 큐에 넣고 다른 요청 핸들을 폴링할 수 있도록 합니다.</p>
 <p>이제 서버가 완벽히 동작합니다. 작성해야 할 마지막 조각은 클라이언트입니다.</p>
-</section>
-</section>
-<section id="이제-서버가-완벽히-동작합니다.-작성해야-할-마지막-조각은-클라이언트입니" class="level2">
-<h2 class="anchored" data-anchor-id="이제-서버가-완벽히-동작합니다.-작성해야-할-마지막-조각은-클라이언트입니">이제 서버가 완벽히 동작합니다. 작성해야 할 마지막 조각은 클라이언트입니</h2>
-<section id="비동기-클라이언트-구축하기" class="level3">
-<h3 class="anchored" data-anchor-id="비동기-클라이언트-구축하기">비동기 클라이언트 구축하기</h3>
+<p>이제 서버가 완벽히 동작합니다. 작성해야 할 마지막 조각은 클라이언트입니 ### 비동기 클라이언트 구축하기</p>
 <p>클라이언트 역시 동일한 의존성에 의존하므로, 클라이언트 <code>Cargo.toml</code>에 다음과 같은 의존성이 들어가는 것은 당연합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb425"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb425-1"><a href="#cb425-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[dependencies]</span></span>
 <span id="cb425-2"><a href="#cb425-2" aria-hidden="true" tabindex="-1"></a><span class="dt">data_layer</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">path</span><span class="op"> =</span> <span class="st">"../data_layer"</span><span class="op"> }</span></span>
@@ -7367,8 +7007,8 @@ Result: 4</code></pre>
 </section>
 <section id="테스트-준비가-끝났습니다.-서로-다른-터미널에서-서버와-클라이언트를-실행" class="level2">
 <h2 class="anchored" data-anchor-id="테스트-준비가-끝났습니다.-서로-다른-터미널에서-서버와-클라이언트를-실행">테스트 준비가 끝났습니다. 서로 다른 터미널에서 서버와 클라이언트를 실행</h2>
-<section id="요약-9" class="level3">
-<h3 class="anchored" data-anchor-id="요약-9">요약</h3>
+<section id="요약-5" class="level3">
+<h3 class="anchored" data-anchor-id="요약-5">요약</h3>
 <p>이번 장에서는 오직 표준 라이브러리만을 사용하여 상당히 효율적인 비동기 런타임을 구축해 보았습니다. 이러한 고성능의 일부는 서버를 Rust로 작성한 덕분이기도 합니다. 또 다른 요인은 비동기 모듈이 네트워크 연결과 같은 I/O 바운드 작업에 대해 시스템 리소스 활용률을 크게 끌어올려 주기 때문입니다. 물론 우리가 만든 서버가 Tokio와 같은 고도화된 런타임만큼 효율적이지는 않겠지만, 충분히 실용적입니다.</p>
 <p>그렇다고 해서 기존 프로젝트에서 Tokio와 웹 프레임워크를 걷어내는 것은 권장하지 않습니다. 수많은 크레이트가 Tokio와 같은 표준 런타임과 통합되도록 설계되었기 때문입니다. 이를 걷어내면 서드파티 크레이트와의 연동성을 크게 잃게 되며 런타임 효율성도 떨어질 수 있습니다. 하지만 프로그램 내에서 다른 런타임을 동시에 활성화하여 운용할 수도 있습니다. 예를 들어 Tokio 채널을 사용하여 자체 비동기 런타임으로 태스크를 전송할 수 있습니다. 이는 Tokio가 들어오는 요청 등 표준적인 비동기 작업을 처리하는 동안, 특수한 틈새 문제 해결을 위해 맞춤형 방식으로 태스크를 처리해야 하는 특정 요구사항이 있을 때 매우 유용합니다. 예를 들어 자체 키-값 저장소를 구축하고 트랜잭션 처리에 관한 최신 컴퓨터 과학 논문을 읽은 후, 해당 로직을 자체 비동기 런타임에 직접 구현하고자 할 때가 이에 해당합니다.</p>
 <p>결론적으로 자체 비동기 런타임을 구축하는 것이 무조건 최선이거나 최악인 것은 아닙니다. 기존의 정립된 런타임을 잘 알고 있으면서도 필요할 때 직접 구축할 수 있는 능력을 갖추는 것이 양쪽의 장점을 모두 취하는 최선의 방법입니다. 특정 도구의 맹목적인 전도사가 되기보다 두 가지 무기를 모두 손에 쥐고 언제 어디서 적용할지 아는 것이 훨씬 바람직합니다. 다만 이러한 도구들을 문제 해결에 즉각 꺼내 쓰기 전에 충분한 연습이 필요합니다. 다양한 프로젝트에서 커스텀 비동기 런타임을 시도하며 실력을 다져보기를 권합니다. 웨이커 주변에 다양한 타입의 데이터를 다루어 보는 실험은 여러 접근 방식을 탐색하기에 좋은 출발점이 될 것입니다.</p>
@@ -7381,11 +7021,7 @@ Result: 4</code></pre>
 <p>테스팅은 현재 구현 중인 코드에 대한 피드백을 향상시켜 코드를 더 빠르고 안전하게 작성할 수 있도록 해줍니다. 예를 들어, 거대한 코드베이스에서 특정 코드의 기능을 변경하거나 추가해야 할 때, 코드가 제대로 동작하는지 확인하기 위해 전체 시스템을 매번 구동하고 실행해야 한다면 작업이 매우 느려지고 위험할 것입니다. 그 대신 필요한 코드를 수정하거나 추가한 후 해당 코드에 대한 특정 테스트만 실행한다면 피드백 루프가 빨라질 뿐만 아니라 더 많은 엣지 케이스(edge case)를 테스트할 수 있어 코드가 훨씬 안전해집니다. 이 장에서는 비동기 코드와 외부 시스템 간의 인터페이스를 테스트하는 다양한 접근 방식을 살펴봅니다.</p>
 <p>이 장을 마치면 인터페이스를 모킹(mocking)하고 해당 인터페이스에 대한 호출을 검증할 수 있는 격리된 테스트를 구축할 수 있게 됩니다. 이를 통해 진정으로 격리된 원자적(atomic) 테스트를 만들 수 있습니다. 또한 비동기 태스크를 블로킹할 수 있는 데드락(deadlock, 교착 상태), 경쟁 상태(race condition), 채널 용량(channel capacity) 문제와 같은 동기화 함정을 테스트하는 방법도 배우게 됩니다. 마지막으로 서버와 같은 네트워크 상호작용을 모킹하는 방법, 모든 퓨처에 대해 미세 조정된 세밀한(fine-grained) 테스트 제어권을 확보하는 방법, 다양한 폴링(polling) 조건에서 시스템이 어떻게 진행되는지 확인하기 위해 언제 퓨처를 폴링해야 하는지 등을 배우게 됩니다.</p>
 <p>동기 테스트의 기초부터 살펴보면서 테스팅 여정을 시작하겠습니다.</p>
-</section>
-<section id="동기-테스트의-기초부터-살펴보면서-테스팅-여정을-시작하겠습니다." class="level2">
-<h2 class="anchored" data-anchor-id="동기-테스트의-기초부터-살펴보면서-테스팅-여정을-시작하겠습니다.">동기 테스트의 기초부터 살펴보면서 테스팅 여정을 시작하겠습니다.</h2>
-<section id="기본-동기-테스트-수행하기" class="level3">
-<h3 class="anchored" data-anchor-id="기본-동기-테스트-수행하기">기본 동기 테스트 수행하기</h3>
+<p>동기 테스트의 기초부터 살펴보면서 테스팅 여정을 시작하겠습니다. ### 기본 동기 테스트 수행하기</p>
 <p>“격리된 모듈 구축하기”(179페이지)에서 우리는 동기 인터페이스를 갖춘 비동기 런타임 환경을 구축했습니다. 당연하게도 인터페이스에 포함된 몇 가지 함수가 동기식이므로, 격리된 모듈은 가장 테스트하기 쉬운 대상 중 하나입니다. 먼저 동기 테스트를 수행하는 것으로 시작해 보겠습니다.</p>
 <p>테스트를 작성하기 전에 <code>Cargo.toml</code>에 다음 의존성을 추가해야 합니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb429"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb429-1"><a href="#cb429-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[dev-dependencies]</span></span>
@@ -7458,10 +7094,8 @@ test get_team_processes_tests::do_something_fail ... ok</code></pre>
 <p>테스트가 통과했습니다! 간결성을 위해 이 책에서 가능한 모든 결과를 정의하지는 않겠지만, 모든 엣지 케이스를 시도해 봄으로써 단위 테스트를 연습할 수 있는 좋은 기회입니다.</p>
 <blockquote class="blockquote">
 <p><strong>모킹과 테스트 주도 개발</strong></p>
-<p>모킹은 로직을 격리할 수 있게 해주므로 매우 강력합니다. 우리의 <code>do_something</code> 함수가 데이터베이스가 특정 상태에 있어야 하는 애플리케이션에 속해 있다고 상상해 보십시오. 예를 들어 <code>do_something</code>이 데이터베이스의 팀원 수를 처리한다면, 데이터베이스에 팀들이 미리 존재해야 할 것입니다. 그러나 <code>do_something</code>을 실행할 때마다 데이터베이스를 채우고 코드를 실행하기 전에 모든 것이 준비되었는지 확인하고 싶지는 않을 것입니다. 여기에는 몇 가지 이유가 있습니다. 다른 엣지 케이스에 대해 매개변수를 재정의하려면 데이터베이스를 다시 뒤섞어야 합니다. 이는 많은 시간이 걸리며 코드를 실행할 때마다 데이터베이스를 다시 만져야 합니다. 모킹은 테스트를 원자적으로 만들어 줍니다. 환경을 매번 설정할 필요 없이 코드를 반복해서 실행할 수 있습니다. 테스트 주도 개발(TDD)을 도입한 개발자는 일반적으로 더 적은 버그로 더 빠른 개발 속도를 유지합니다.</p>
 </blockquote>
 <p>이제 프로그램에 대한 기본적인 모킹을 정의했지만, 모든 것에 격리된 모듈만을 사용할 수는 없습니다. 여러분의 코드는 완전한 비동기일 수도 있습니다. 웹 개발을 하고 있다면 특히 그렇습니다. 비동기 모듈 내의 비동기 함수를 테스트하고 싶을 수 있습니다. 이를 위해서는 비동기 모킹을 다루어야 합니다.</p>
-</section>
 </section>
 <section id="이제-프로그램에-대한-기본적인-모킹을-정의했지만-모든-것에-격리된-모듈" class="level2">
 <h2 class="anchored" data-anchor-id="이제-프로그램에-대한-기본적인-모킹을-정의했지만-모든-것에-격리된-모듈">이제 프로그램에 대한 기본적인 모킹을 정의했지만, 모든 것에 격리된 모듈</h2>
@@ -7590,15 +7224,9 @@ test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; 
 <p>실행 시간은 5초를 막 넘겼으며, 잠재적 데드락이 감지되었다는 유용한 메시지를 얻게 됩니다. 데드락을 포착했을 뿐만 아니라 데드락을 유발하는 특정 함수를 격리해 냈습니다.</p>
 <blockquote class="blockquote">
 <p><strong>라이브락 (Livelocks)</strong></p>
-<p>라이브락(livelock, 활성 교착 상태)이라는 또 다른 락 문제는 데드락과 전반적으로 동일한 영향을 미칩니다. 즉, 시스템을 완전히 정지시킬 수 있습니다. 라이브락에서는 둘 이상의 비동기 태스크가 지연됩니다. 그러나 둘 이상의 비동기 태스크가 멈춰서 진행하지 못하는 대신, 서로에게 반응하느라 앞으로 나아가지 못합니다. 간단한 예로 두 비동기 태스크가 끊임없는 루프 속에서 서로에게 동일한 메시지를 메아리처럼 되돌려주는 상황을 들 수 있습니다. 데드락과 라이브락의 차이를 보여주는 고전적이면서도 명확한 비유는 다음과 같습니다. 데드락은 복도에서 두 사람이 가만히 서서 상대방이 비켜주기를 기다리며 둘 다 움직이지 않는 것과 같습니다. 반면 라이브락은 두 사람이 서로를 비켜가려고 계속 옆으로 발을 디디지만, 둘 다 매번 같은 방향으로 비켜서는 바람에 계속 부딪혀 결국 아무도 지나가지 못하는 것과 같습니다.</p>
 </blockquote>
 <p>데드락은 반드시 피해야 하지만, 시스템이 완전히 멈춰 서기 때문에 일반적으로 발생 여부가 명확히 드러납니다. 하지만 코드는 우리가 모르는 사이에 조용히 오류를 일으킬 수도 있습니다. 이것이 바로 경쟁 상태(race condition)를 테스트해야 하는 이유입니다.</p>
-</section>
-</section>
-<section id="데드락은-반드시-피해야-하지만-시스템이-완전히-멈춰-서기-때문에-일반적" class="level2">
-<h2 class="anchored" data-anchor-id="데드락은-반드시-피해야-하지만-시스템이-완전히-멈춰-서기-때문에-일반적">데드락은 반드시 피해야 하지만, 시스템이 완전히 멈춰 서기 때문에 일반적</h2>
-<section id="경쟁-상태-테스트하기" class="level3">
-<h3 class="anchored" data-anchor-id="경쟁-상태-테스트하기">경쟁 상태 테스트하기</h3>
+<p>데드락은 반드시 피해야 하지만, 시스템이 완전히 멈춰 서기 때문에 일반적 ### 경쟁 상태 테스트하기</p>
 <p>경쟁 상태(race condition)에서는 데이터의 상태가 변경되었음에도 해당 상태에 대한 참조가 구버전이 되어 버립니다. 데이터 레이스의 간단한 예가 그림 11-2에 묘사되어 있습니다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -7715,12 +7343,7 @@ right: `100000`: Race Condition occurred!'</code></pre>
 <span id="cb459-8"><a href="#cb459-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span>)<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이제 테스트를 실행하면 통과합니다. 송신자와 수신자로 이루어진 간단한 시스템을 테스트했지만, 메시지를 제대로 처리하지 않으면 시스템이 완전히 멈춰 버린다는 사실을 테스트를 통해 명확히 확인할 수 있었습니다. 채널 또한 뮤텍스와 마찬가지로 데드락을 유발할 수 있으며, 충분한 테스트를 거친다면 타임아웃 테스트를 통해 데드락을 발견할 수 있습니다.</p>
 <p>알다시피 채널을 사용하면 시스템 전체에 비동기식으로 데이터를 공유할 수 있습니다. 프로세스와 컴퓨터 간에 데이터를 공유할 때는 네트워크 프로토콜을 사용할 수 있습니다. 실무에서는 프로토콜을 사용하여 서버와 상호작용하는 비동기 코드를 작성하게 될 것입니다. 이러한 상호작용 역시 테스트되어야 합니다.</p>
-</section>
-</section>
-<section id="알다시피-채널을-사용하면-시스템-전체에-비동기식으로-데이터를-공유할-수" class="level2">
-<h2 class="anchored" data-anchor-id="알다시피-채널을-사용하면-시스템-전체에-비동기식으로-데이터를-공유할-수">알다시피 채널을 사용하면 시스템 전체에 비동기식으로 데이터를 공유할 수</h2>
-<section id="네트워크-상호작용-테스트" class="level3">
-<h3 class="anchored" data-anchor-id="네트워크-상호작용-테스트">네트워크 상호작용 테스트</h3>
+<p>알다시피 채널을 사용하면 시스템 전체에 비동기식으로 데이터를 공유할 수 ### 네트워크 상호작용 테스트</p>
 <p>개발 및 테스트 환경에서 네트워크 상호작용을 실행할 때, 로컬에 서버를 띄우고 해당 서버에 의존하고 싶은 유혹이 들 수 있습니다. 하지만 이는 테스팅에 좋지 않을 수 있습니다. 예를 들어 테스트를 한 번 실행한 후 서버에서 행(row)을 삭제하는 작업이 있다면, 행이 이미 삭제되었기 때문에 테스트를 즉시 다시 실행할 수 없습니다. 행을 다시 삽입하는 단계를 만들 수도 있지만, 행에 의존성이 있다면 작업이 훨씬 복잡해집니다. 또한 <code>cargo test</code> 명령은 여러 프로세스에 걸쳐 실행됩니다. 여러 테스트가 동일한 서버를 동시에 호출하면 서버에서 데이터 경쟁 상태가 발생할 수 있습니다. 바로 이 지점에서 <code>mockito</code>를 사용합니다. 이 크레이트를 사용하면 테스트 내에서 직접 서버를 모킹하고 서버 엔드포인트가 특정 매개변수로 호출되었는지 단언할 수 있습니다. 네트워크 테스트 예제를 위해 다음 의존성이 필요합니다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb460"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb460-1"><a href="#cb460-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[dependencies]</span></span>
 <span id="cb460-2"><a href="#cb460-2" aria-hidden="true" tabindex="-1"></a><span class="dt">tokio</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">version</span><span class="op"> =</span> <span class="st">"1.34.0"</span><span class="op">, </span><span class="dt">features</span><span class="op"> =</span> <span class="op">[</span><span class="st">"full"</span><span class="op">] }</span></span>
@@ -7782,7 +7405,6 @@ right: `100000`: Race Condition occurred!'</code></pre>
 <p>모든 비동기 태스크가 서버 호출이라는 목표를 달성했음을 단언할 수 있습니다. 태스크 중 하나라도 실패하면 테스트는 실패합니다.</p>
 <blockquote class="blockquote">
 <p><strong>동적 URL 정의하기</strong></p>
-<p>요청에 사용할 URL을 정의할 때는 하드코딩하기보다 동적으로 정의하는 것이 가장 좋습니다. 이렇게 하면 실제 운영 서버, 로컬 서버, 모의 서버 등 대상에 따라 URL의 호스트를 유연하게 변경할 수 있습니다. 환경 변수를 사용하는 것이 매력적으로 보일 수 있지만, 테스팅 시 <code>cargo test</code>의 멀티스레드 환경에서 문제를 일으킬 수 있습니다. 그 대신 설정 변수를 추출하는 트레이트를 정의하는 것이 가장 좋습니다. 그런 다음 이 추출 트레이트를 구현한 구조체를 전달합니다. 뷰 함수를 실제 서버에 바인딩할 때는 환경에서 설정 변수를 추출하는 구조체를 전달할 수 있습니다. 반면 다른 서버를 호출하는 함수와 뷰를 테스트할 때는 추출 트레이트 구현체에 <code>mockito</code> URL을 전달하기만 하면 됩니다.</p>
 </blockquote>
 <p><code>mockito</code>에는 더 많은 기능이 있습니다. 예를 들어 JSON 본문, 요청에 따른 응답을 결정하는 함수 및 기타 다양한 기능을 <code>mockito</code>의 API 문서에서 확인할 수 있습니다. 이제 서버와 트레이트를 모킹할 수 있으므로 격리된 환경에서 시스템을 테스트할 수 있습니다. 하지만 퓨처 자체를 격리하여 세밀하게 테스트하고, 폴링 사이에 퓨처가 어떤 상태인지 검사하는 것은 어떨까요? 바로 이 부분에서 비동기 테스팅 크레이트가 도움을 줍니다.</p>
 </section>
@@ -7847,12 +7469,7 @@ right: `100000`: Race Condition occurred!'</code></pre>
 <span id="cb476-2"><a href="#cb476-2" aria-hidden="true" tabindex="-1"></a><span class="pp">assert_eq!</span>(<span class="op">*</span>lock<span class="op">,</span> <span class="dv">2</span>)<span class="op">;</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>테스트를 실행하면 성공적으로 통과하는 것을 확인할 수 있습니다.</p>
 <p>여기서 우리는 비동기 시스템을 일시 정지시키고, 상태를 검사한 다음, 다시 폴링하여 퓨처를 한 단계씩 전진시키는 데 성공했습니다. 원한다면 테스트 내에서 언제든지 폴링 순서를 뒤바꿀 수도 있습니다. 이는 폴링 순서가 바뀔 때의 결과를 테스트하는 데 엄청난 제어력을 제공합니다.</p>
-</section>
-</section>
-<section id="여기서-우리는-비동기-시스템을-일시-정지시키고-상태를-검사한-다음-다" class="level2">
-<h2 class="anchored" data-anchor-id="여기서-우리는-비동기-시스템을-일시-정지시키고-상태를-검사한-다음-다">여기서 우리는 비동기 시스템을 일시 정지시키고, 상태를 검사한 다음, 다</h2>
-<section id="요약-10" class="level3">
-<h3 class="anchored" data-anchor-id="요약-10">요약</h3>
+<p>여기서 우리는 비동기 시스템을 일시 정지시키고, 상태를 검사한 다음, 다 ### 요약</p>
 <p>우리는 테스트 주도 개발(TDD) 접근 방식을 통해 비동기 문제에 대한 다양한 테스팅 기법을 살펴보았습니다. 새로운 비동기 러스트 프로젝트를 시작한다면 비동기 코드를 작성하면서 동시에 테스트를 구축할 것을 강력히 권장합니다. 결과적으로 빠른 개발 속도를 유지할 수 있을 것입니다.</p>
 <p>이제 우리는 함께한 여정의 끝에 도달했습니다. 비동기 러스트를 활용하는 것에 대해 많은 기대와 흥미를 느끼셨기를 바랍니다. 비동기 러스트는 매우 강력하며 끊임없이 발전하고 있는 분야입니다. 여러분이 새로 습득한 기술과 비동기 지식은 문제 해결을 위한 또 하나의 강력한 도구가 될 것입니다. 문제를 비동기 개념으로 분해하고, 강력하고 빠른 솔루션을 직접 구현할 수 있습니다. 비동기의 아름다움과 러스트가 비동기 시스템을 구현하는 우아한 방식에서 큰 즐거움을 느끼셨기를 진심으로 바랍니다. 여러분이 비동기 러스트로 앞으로 무엇을 만들어낼지 진심으로 기대됩니다!</p>
 

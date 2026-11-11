@@ -8,7 +8,7 @@
 
 <meta name="author" content="Daniel P. Friedman and Matthias Felleisen">
 
-<title>The Little Schemer – Machine translation</title>
+<title>리틀 스키머 – Machine translation</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -112,6 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "검색"
   }
 }</script>
+<meta name="quarto:status" content="draft">
 
 
 </head>
@@ -119,13 +120,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>초안</div>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../python-mastery/index.html">프로그래밍 언어와 파이썬</a></li><li class="breadcrumb-item"><a href="../little-schemer/index.html"><span class="chapter-title">The Little Schemer</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../python-mastery/index.html">프로그래밍 언어와 파이썬</a></li><li class="breadcrumb-item"><a href="../little-schemer/index.html"><span class="chapter-title">리틀 스키머</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
@@ -207,11 +208,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../little-schemer/index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">The Little Schemer</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../swift-for-py/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">파이썬 개발자를 위한 Swift</span></a>
   </div>
 </li>
@@ -243,7 +239,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../async-rust/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Async Rust</span></a>
+  <a href="../async-rust/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">비동기 Rust</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -302,12 +298,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">인공지능과 머신러닝</span></a>
+ <span class="menu-text">소프트웨어 설계</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../philosophy-of-software-design/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">소프트웨어 설계 철학</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">인공지능과 머신러닝</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../why-machines-learn/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">머신은 어떻게 학습하는가</span></a>
@@ -342,13 +354,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">데이터 과학과 데이터 엔지니어링</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../data-analysis/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">데이터 분석 가이드</span></a>
@@ -398,13 +410,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">인과추론과 통계 모델링</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../causal-inf-r/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">R을 이용한 인과 추론</span></a>
@@ -429,13 +441,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">생명정보학과 계산생물학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../py-biologists/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생명정보학 프로그래밍(초급)</span></a>
@@ -505,13 +517,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
  <span class="menu-text">단백질 공학과 항체 치료제</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../protein-engineering/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">단백질 공학 실전 가이드</span></a>
@@ -556,13 +568,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
  <span class="menu-text">면역학과 바이오마커</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../clinical-immunology/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">임상면역학</span></a>
@@ -587,13 +599,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
  <span class="menu-text">신약 개발과 바이오의약품 규제</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ai-drug-discovery/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">약물 발견에서의 인공 지능</span></a>
@@ -638,13 +650,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
  <span class="menu-text">비즈니스, 전략 및 리더십</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../personal-mba/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">퍼스널 MBA</span></a>
@@ -714,13 +726,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true">
  <span class="menu-text">커뮤니케이션과 설득</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../communication-book/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">의사소통의 책</span></a>
@@ -755,16 +767,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="true">
  <span class="menu-text">글쓰기와 연구</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../how-to-read-a-book/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">어떻게 책을 읽을 것인가 (How to Read a Book)</span></a>
+  <a href="../how-to-read-a-book/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">어떻게 책을 읽을 것인가</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -794,20 +806,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../manufacturing-consent/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">동의 제조</span></a>
+  <a href="../manufacturing-consent/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">동의하게 만들기</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="true">
  <span class="menu-text">생산성, 습관 및 삶의 설계</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../atomic-habits-workbook/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">아토믹 해빗 워크북</span></a>
@@ -902,13 +914,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true">
  <span class="menu-text">철학, 불교 및 영성</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../meditations-aurelius/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">명상록 (<em>Meditations</em>)</span></a>
@@ -983,13 +995,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="true">
  <span class="menu-text">심리학과 자기계발</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ego-is-the-enemy/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">에고는 적이다</span></a>
@@ -1129,10 +1141,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../python-mastery/index.html">프로그래밍 언어와 파이썬</a></li><li class="breadcrumb-item"><a href="../little-schemer/index.html"><span class="chapter-title">The Little Schemer</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../python-mastery/index.html">프로그래밍 언어와 파이썬</a></li><li class="breadcrumb-item"><a href="../little-schemer/index.html"><span class="chapter-title">리틀 스키머</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">The Little Schemer</span></h1>
-<p class="subtitle lead">리틀 스키머</p>
+<h1 class="title"><span class="chapter-title">리틀 스키머</span></h1>
 </div>
 
 
@@ -1445,9 +1456,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
-<p><strong>cdr의 법칙</strong><br>원시 함수 <code>cdr</code>은 비어 있지 않은 리스트에 대해서만 정의된다. 비어 있지 않은 리스트의 <code>cdr</code>은 언제나 또 다른 리스트이다.<br><br><code>(cons a l)</code>은 “원자 <code>a</code>를 리스트 <code>l</code> 위에 cons한다”라고 읽습니다.</p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -1490,9 +1498,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> 실제 구현에서는 <code>(cons a b)</code>가 모든 값 <code>a</code>, <code>b</code>에 대해 동작하며 <code>(car (cons a b)) = a</code>, <code>(cdr (cons a b)) = b</code>입니다.</p>
-</blockquote>
 <blockquote class="blockquote">
 <p><strong>cons의 법칙</strong><br>원시 함수 <code>cons</code>는 두 인자를 받는다. <code>cons</code>의 두 번째 인자는 리스트여야 한다. 결과는 리스트이다.</p>
 </blockquote>
@@ -1567,9 +1572,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> 실제 구현에서 <code>(null? a)</code>는 빈 리스트를 제외한 모든 것에 대해 거짓입니다. <code>atom?</code>은 <code>L</code>에서 <code>(defun atom? (x) (not (listp x)))</code>, <code>S</code>에서 <code>(define atom? (lambda (x) (and (not (pair? x)) (not (null? x)))))</code>로 정의됩니다.</p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -1650,9 +1652,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> 실제 구현에서는 리스트가 <code>eq?</code>의 인자가 될 수 있습니다. 두 리스트는 같은 리스트일 때 <code>eq?</code>입니다. 또한 어떤 숫자들은 <code>eq?</code>의 인자가 될 수 있습니다.</p>
-</blockquote>
 <blockquote class="blockquote">
 <p><strong>eq?의 법칙</strong><br>원시 함수 <code>eq?</code>는 두 인자를 받는다. 각 인자는 비숫자 원자여야 한다.</p>
 </blockquote>
@@ -1766,9 +1765,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> <code>L</code>에서의 정의는 <code>(defun lat? (l) (cond ((null l) t) ((atom? (car l)) (lat? (cdr l))) (t nil)))</code>입니다.</p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -3813,9 +3809,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>          (<span class="kw">else</span> (<span class="kw">cons</span> (<span class="kw">car</span> lat)</span>
 <span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>                      (multiinsertL new old</span>
 <span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>                                    (<span class="kw">cdr</span> lat)))))))))</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<blockquote class="blockquote">
-<p><strong>넷째 계명 (예비판)</strong><br>재귀할 때는 적어도 하나의 인자를 바꾼다. 그 인자는 종료에 더 가까워지도록 바뀌어야 한다. 바뀌는 인자는 종료 조건에서 검사되어야 한다. <code>cdr</code>을 쓸 때는 <code>null?</code>로 종료를 검사한다.</p>
-</blockquote>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -3945,12 +3938,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> <code>(sub1 n)</code>에서 <code>n</code>이 <code>0</code>이면 답이 없습니다. 우리는 음이 아닌 수만 다루기 때문입니다. 실제 구현에서는 결과가 <code>-1</code>입니다.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> <code>+</code>는 L과 S에서 이미 쓰이는 이름과 겹치므로, 원서는 이 함수를 <code>o+</code>라고 쓰라고 안내합니다(서문 참고). <code>add1</code>과 <code>sub1</code>은 우리가 정의한 것을 사용하세요.</p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -4197,9 +4184,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="넷째-계명-첫-번째-개정" class="level3">
 <h3 class="anchored" data-anchor-id="넷째-계명-첫-번째-개정">넷째 계명 (첫 번째 개정)</h3>
-<blockquote class="blockquote">
-<p>재귀할 때는 언제나 적어도 하나의 인자를 바꾼다. 그 인자는 종료에 더 가까워지도록 바뀌어야 한다. 바뀌는 인자는 종료 조건에서 검사되어야 한다. <code>cdr</code>을 쓸 때는 <code>null?</code>로 종료를 검사하고, <code>sub1</code>을 쓸 때는 <code>zero?</code>로 종료를 검사한다.</p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -4316,9 +4300,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="다섯째-계명-1" class="level3">
 <h3 class="anchored" data-anchor-id="다섯째-계명-1">다섯째 계명</h3>
-<blockquote class="blockquote">
-<p><code>+</code>로 값을 만들 때는 종료 줄의 값으로 언제나 <code>0</code>을 쓴다. <code>0</code>을 더해도 덧셈의 값은 바뀌지 않기 때문이다.<br><code>*</code>로 값을 만들 때는 종료 줄의 값으로 언제나 <code>1</code>을 쓴다. <code>1</code>을 곱해도 곱셈의 값은 바뀌지 않기 때문이다.<br><code>cons</code>로 값을 만들 때는 종료 줄의 값으로 언제나 <code>()</code>를 고려한다.</p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -4558,16 +4539,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">아니요, 다음 질문으로 넘어갑니다.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>(zero? 3)</code></td>
-<td style="text-align: left;">아니요, 다음 질문으로 넘어갑니다.</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;"><code>(&gt; (sub1 n) (sub1 m))</code>의 뜻은 무엇인가?</td>
 <td style="text-align: left;">재귀하되, 두 인자를 모두 1씩 줄여서 합니다.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>(zero? 2)</code></td>
-<td style="text-align: left;">아니요, 다음 질문으로 넘어갑니다.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>(zero? 2)</code></td>
@@ -4582,10 +4555,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">아니요, 다음 질문으로 넘어갑니다.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>(zero? 1)</code></td>
-<td style="text-align: left;">아니요, 다음 질문으로 넘어갑니다.</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;"><code>(&gt; (sub1 n) (sub1 m))</code>의 뜻은 무엇인가?</td>
 <td style="text-align: left;">재귀하되, 두 인자를 모두 1씩 줄여서 합니다.</td>
 </tr>
@@ -4736,9 +4705,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> L: <code>(defun quotient (n m) (values (truncate (/ n m))))</code>. S: 이것은 <code>quotient</code>와 같습니다.</p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -4916,9 +4882,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <blockquote class="blockquote">
 <p><strong>참고.</strong> <code>rember*</code>는 “rember-star”라고 읽습니다. 별표 <code>*</code>는 “맙소사(oh my gawd)”를 떠올리게 합니다.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> 앞의 예 중 하나의 인자를 그대로 넣고 이 함수를 따라가 보세요. 이제는 리스트의 <code>cdr</code>뿐 아니라 리스트의 <code>car</code> 쪽으로도 재귀한다는 점에 주목하세요.</p>
 </blockquote>
 <table class="caption-top table">
 <colgroup>
@@ -5192,9 +5155,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> <code>(cond ...)</code>도 모든 인자를 고려하지 않는 성질을 지닙니다. 그러나 이 성질 때문에 <code>(and ...)</code>도 <code>(or ...)</code>도 <code>(cond ...)</code>로 함수로서 정의할 수는 없습니다. 다만 둘 다 <code>(cond ...)</code> 식의 축약으로 표현할 수는 있습니다.<br><code>(and a b)</code> ≡ <code>(cond (a b) (else #f))</code><br>그리고<br><code>(or a b)</code> ≡ <code>(cond (a #t) (else b))</code></p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -6651,9 +6611,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>                          (rember-f test? a</span>
 <span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>                                    (<span class="kw">cdr</span> l)))))))))</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>훌륭합니다!</p>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> <code>L:</code>에서는 함수 인자를 호출할 때나 <code>defun</code>되지 않은 함수를 호출할 때 <code>(funcall test? (car l) a)</code>를 씁니다.</p>
-</blockquote>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -6803,9 +6760,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> <code>L:</code>에서는 <code>(setq eq?-salad (eq?-c 'salad))</code>로 정의합니다. <code>setq</code>는 <code>funcall</code>할 수 있는 함수를 정의할 때 씁니다. 또 <code>eq?-salad</code>는 <code>defun</code>되지 않았으므로 <code>(funcall eq?-salad y)</code>로 호출하고, <code>(eq?-c x)</code>도 <code>defun</code>되지 않았으므로 <code>(funcall (eq?-c x) y)</code>로 호출합니다.</p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -6896,9 +6850,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> <code>eq?</code>와 <code>eq?</code>의 차이를 눈여겨보셨나요? 앞의 것은 원자이고 뒤의 것은 함수입니다. 리스트 안의 <code>eq?</code>는 원자이고, <code>(rember-f eq?)</code>에 넘긴 <code>eq?</code>는 함수입니다.</p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -7171,9 +7122,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> <code>(yyy a l)</code>의 계산 과정을 한 단계씩 따라가 보세요. <code>a</code>는 <code>sausage</code>, <code>l</code>은 <code>(pizza with sausage and bacon)</code>입니다. <code>#f</code>는 어떤 역할을 할까요?</p>
-</blockquote>
 <section id="아홉째-계명-1" class="level3">
 <h3 class="anchored" data-anchor-id="아홉째-계명-1">아홉째 계명</h3>
 <p>공통된 패턴을 새로운 함수로 추상화한다.</p>
@@ -9997,9 +9945,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb94-8"><a href="#cb94-8" aria-hidden="true" tabindex="-1"></a>                (lookup-in-table name</span>
 <span id="cb94-9"><a href="#cb94-9" aria-hidden="true" tabindex="-1"></a>                  (<span class="kw">cdr</span> table)</span>
 <span id="cb94-10"><a href="#cb94-10" aria-hidden="true" tabindex="-1"></a>                  table-f)))))))</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> 이 책에서는 원자를 산세리프 활자 대신 코드 글꼴(예: <code>lat</code>, <code>cons</code>)로 표시합니다. 코드 글꼴이 아닌 낱말은 산세리프가 아닌 원자, 즉 식별자가 아닌 것으로 읽으면 됩니다.</p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -10184,9 +10129,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb96-15"><a href="#cb96-15" aria-hidden="true" tabindex="-1"></a>      ((<span class="kw">eq?</span> e (<span class="kw">quote</span> subl)) *const)</span>
 <span id="cb96-16"><a href="#cb96-16" aria-hidden="true" tabindex="-1"></a>      ((<span class="kw">eq?</span> e (<span class="kw">quote</span> <span class="kw">number?</span>)) *const)</span>
 <span id="cb96-17"><a href="#cb96-17" aria-hidden="true" tabindex="-1"></a>      (<span class="kw">else</span> *identifier))))</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> <code>(quote a b)</code>, <code>()</code>, <code>(lambda (#t) #t)</code>, <code>(lambda (5) 5)</code>, <code>(lambda (car) car)</code>, <code>(lambda a)</code>, <code>(cond (3 c) (else b) (6 a))</code>, <code>(1 2)</code>처럼 잘못 만들어진 S-표현식은 여기서 고려하지 않습니다. 이런 것들은 S-표현식이 <code>value</code>로 넘어가기 전에 적절한 함수로 걸러낼 수 있습니다.</p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -10239,9 +10181,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb98-5"><a href="#cb98-5" aria-hidden="true" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> meaning</span></span>
 <span id="cb98-6"><a href="#cb98-6" aria-hidden="true" tabindex="-1"></a>  (<span class="kw">lambda</span> (e table)</span>
 <span id="cb98-7"><a href="#cb98-7" aria-hidden="true" tabindex="-1"></a>    ((expression-to-action e) e table)))</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> 함수 <code>value</code>는 Scheme(과 Lisp)에서 쓸 수 있는 함수 <code>eval</code>에 가깝습니다. “행동이 말보다 크게 말한다”는 속담처럼, 여기서는 액션(action)이 말보다 중요합니다.</p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -10541,9 +10480,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb110-7"><a href="#cb110-7" aria-hidden="true" tabindex="-1"></a>      ((non-primitive? fun)</span>
 <span id="cb110-8"><a href="#cb110-8" aria-hidden="true" tabindex="-1"></a>       (apply-closure</span>
 <span id="cb110-9"><a href="#cb110-9" aria-hidden="true" tabindex="-1"></a>         (second fun) vals)))))</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> <code>((lambda (x) (x 5)) 3)</code>처럼 <code>fun</code>이 원시 함수도 비원시 함수도 아닌 값으로 평가되면 답이 없습니다. 함수 <code>apply</code>는 Scheme(과 Lisp)에서 쓸 수 있는 함수 <code>apply</code>에 가깝습니다.</p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -10607,9 +10543,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb112-6"><a href="#cb112-6" aria-hidden="true" tabindex="-1"></a>      ((<span class="kw">eq?</span> (<span class="kw">car</span> x) (<span class="kw">quote</span> primitive)) <span class="dv">#t</span>)</span>
 <span id="cb112-7"><a href="#cb112-7" aria-hidden="true" tabindex="-1"></a>      ((<span class="kw">eq?</span> (<span class="kw">car</span> x) (<span class="kw">quote</span> non-primitive)) <span class="dv">#t</span>)</span>
 <span id="cb112-8"><a href="#cb112-8" aria-hidden="true" tabindex="-1"></a>      (<span class="kw">else</span> <span class="dv">#f</span>))))</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<blockquote class="blockquote">
-<p><strong>참고.</strong> 함수 <code>apply-primitive</code>는 빈 리스트에 대한 <code>cdr</code> 적용이나 <code>0</code>에 대한 <code>subl</code> 적용 같은 경우를 검사할 수도 있습니다.</p>
-</blockquote>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
