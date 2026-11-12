@@ -102,7 +102,7 @@ $$x_{\text{estimate}} = \sqrt{x_L \cdot x_U}$$
 2. **출아효모(*S. cerevisiae*)**: 단세포 진핵생물, 부피 $\approx 40\ \mu\text{m}^3$.
 3. **HeLa 세포**: 인간 배양세포, 부피 $\approx 3,000\ \mu\text{m}^3$.
 
-#### [페르미 추정 사례] HeLa 세포 내 전사 인자 p53의 복제수 추정
+### [페르미 추정 사례] HeLa 세포 내 전사 인자 p53의 복제수 추정
 - 세포 전체 단백질 수: $3,000\ \mu\text{m}^3 \times (3 \times 10^6\text{개}/\mu\text{m}^3) \approx 10^{10}$개
 - 조절 단백질 분율을 전체의 약 1/1,000로 가정:
 $$\text{추정 복제수} \approx \frac{10^{10}}{1,000} \approx 10^7\text{개}$$
@@ -326,7 +326,7 @@ $$\text{C}_4 : \text{H}_7 : \text{O}_2 : \text{N}_1 \quad (\text{또는 } \text{
 
 세포의 pH는 얼마인가?
 
-## 대장균 세포질 pH는 $\approx 7.2\sim 7.8$, 효모는 $\approx 7.0$(액포 $5.5\sim 6.0$), 인간 세포질은 $\approx 7.3$(미토콘드리아 기질 8.0, 리소좀 $4.5\sim 5.0$)입니다.
+대장균 세포질 pH는 $\approx 7.2\sim 7.8$, 효모는 $\approx 7.0$(액포 $5.5\sim 6.0$), 인간 세포질은 $\approx 7.3$(미토콘드리아 기질 8.0, 리소좀 $4.5\sim 5.0$)입니다.
 부피 $1\ \mu\text{m}^3$ 대장균(pH 7.2) 내 유리 수소 이온($\text{H}^+$) 농도는 $10^{-7.2}\text{ M} \approx 60\text{ nM}$로, **세포 전체에 유리 수소 이온은 단 60~100개**에 불과합니다. 그럼에도 수백만 개 단백질의 산-염기 반응이 원활한 이유는:
 1. 글루탐산과 인산염 완충계가 pH 단위당 $10\sim 100\text{ mM}$의 완충능을 제공하고,
 2. 그로투스 메커니즘(Grotthuss mechanism)을 통해 수소 이온이 물 분자망을 $7,000\ \mu\text{m}^2/\text{s}$의 초고속으로 확산 이동하기 때문입니다.
@@ -341,7 +341,7 @@ $$\text{C}_4 : \text{H}_7 : \text{O}_2 : \text{N}_1 \quad (\text{또는 } \text{
 
 세포 내 대사물질 농도는 얼마인가?
 
-## 대장균 내 유리 대사물질의 총 몰농도는 $\approx 250\sim 300\text{ mM}$입니다.
+대장균 내 유리 대사물질의 총 몰농도는 $\approx 250\sim 300\text{ mM}$입니다.
 1. 글루탐산(Glutamate): $\approx 100\text{ mM}$ (세포당 약 $10^8$개 분자로 압도적 1위, 단백질 아미노산 잔기 총수의 10%에 필적)
 2. 글루타티온(Glutathione): $\approx 15\sim 20\text{ mM}$ (산화환원 완충)
 3. 과당 1,6-이중인산(FBP): $\approx 15\text{ mM}$

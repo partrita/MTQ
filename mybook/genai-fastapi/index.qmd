@@ -679,7 +679,7 @@ FastAPI에서 의존성은 불필요한 중복 연산을 방지하기 위해 *�
 
 [예제 2-5](#fastapi_dependency)와 같이 라우트 컨트롤러 함수를 위한 의존성을 정의할 수 있다.
 
-###### 예제 2-5. FastAPI에서의 의존성 주입
+##### 예제 2-5. FastAPI에서의 의존성 주입
 
 ```
 
@@ -750,7 +750,6 @@ def get_current_user_messages(email, db = Depends(get_db)):
 
 서비스를 구축하다 보면 표준 *REST 엔드포인트* 이상의 기능이 필요한 경우가 많다.
 
-### REST 엔드포인트
 
 *REST(Representational State Transfer)*는 API 설계를 위한 아키텍처 스타일로, GET, POST, PUT, DELETE와 같은 일반적인 HTTP 메서드를 사용하여 리소스에 접근하고 이를 조작한다.
 
@@ -964,7 +963,7 @@ FastAPI는 이를 돕기 위해 APIRouter 클래스를 제공한다.
 
 우수한 컨트롤러 설계는 항상 의존성을 사용하여 실행에 필요한 데이터나 로직을 주입받는다. [그림 2-4](#api_routers_controllers)를 참조하자.
 
-###### 그림 2-4. API 라우터와 컨트롤러
+##### 그림 2-4. API 라우터와 컨트롤러
 
 서비스/프로바이더: 서비스는 비즈니스 로직을 구현하기 위해 여러 내부 작업을 결합하거나 조율(orchestrating)하는 역할을 담당하며 프로바이더는 외부 시스템과의 인터페이스를 구현한다.
 
@@ -3957,7 +3956,7 @@ AI 추론 워크로드를 컴퓨팅 바운드가 아닌 I/O 바운드로 취급�
 
 [예제 5-1](#sync_execution)은 블로킹을 유발하는 `time.sleep()` 함수를 사용하여 I/O 블로킹 작업을 시뮬레이션하는 동기식 코드의 예다.
 
-##### 예제 5-1. 동기 실행
+#### 예제 5-1. 동기 실행
 
 ```
 import time
@@ -3995,7 +3994,7 @@ Process completed in: 15.014271020889282 seconds
 
 [예제 5-2](#async_execution)는 `asyncio`와 함께 `async` 및 `await` 키워드를 사용하여 [예제 5-1](#sync_execution)을 비동기식으로 실행하는 방법을 보여준다.
 
-###### 예제 5-2. 비동기 실행
+##### 예제 5-2. 비동기 실행
 
 ```
 import time
@@ -12631,7 +12630,7 @@ E2E 테스트를 구현하기 전에, [예제 11-21](#test_client)과 같이 Fas
 #### 예제 11-21. 테스트 클라이언트 픽스처 구현
 
 ```
-### conftest.py
+## conftest.py
 
 import pytest
 from aiohttp import ClientSession
@@ -13856,7 +13855,6 @@ Docker Compose `watch`를 사용하는 것 외에도 여러 Compose 파일을 �
 
 ```
 
-### compose.yml
 
 services:
  server:
@@ -13866,7 +13864,7 @@ services:
 # ...
  command: uvicorn main:app
 
-### compose.override.yml
+## compose.override.yml
 
 services:
  server:
@@ -14075,7 +14073,7 @@ Docker는 계층형 파일시스템(Layered filesystem)을 사용하여 Dockerfi
 
 ```
 FROM python:3.12-slim as base
-### Changes to the
+## Changes to the
 COPY . .
 RUN pip install requirements.txt
 ```

@@ -1355,7 +1355,7 @@ https://matplotlib.org/3..1/api/_as_gen/matplotlib.pyplot.boxplot.html 참조.
 
 #### 2.10.3 heapify의 수수께끼
 
-## 요약하자면, `_heapify`는 더 큰 분기 계수에서도 계속 향상되며 D==13 이후에는 실질적으로 정체(plateau) 상태에 도달한다고 볼 수 있지만 이러한 동작은 예상대로 잘 동작하는 `top`과 `_push_down` 메서드로 인한 것이 아니다.
+요약하자면, `_heapify`는 더 큰 분기 계수에서도 계속 향상되며 D==13 이후에는 실질적으로 정체(plateau) 상태에 도달한다고 볼 수 있지만 이러한 동작은 예상대로 잘 동작하는 `top`과 `_push_down` 메서드로 인한 것이 아니다.
 `_heapify` 실행 시간이 어떻게 증가하는지에 대해 몇 가지 설명이 있을 수 있다:
 
 1. 더 큰 분기 계수를 확인해보면 최솟값이 존재함을 발견할 가능성이 있다(아직 찾지 못했을 뿐이다).
@@ -2088,9 +2088,7 @@ function min(treap):
 
 > 매우 높은 확률로 균형을 이룸을 의미한다.
 
-#### 3.4.2 활용: 무작위 트립
-
-```
+#### 3.4.2 활용: 무작위 트립 ```
                 3-노드
                  Milk
               K1      K2
@@ -7921,12 +7919,12 @@ node가 리프 노드인지 확인합니다.
             if point == target then
                 return node    # 일치하는 점을 찾으면 현재 리프 노드를 반환합니다.
     else
-## 내부 노드를 순회 중인 경우, 모든 자식 노드를 순회하며 대상 점을 포함할 수 있는 자식을 확인합니다.
+내부 노드를 순회 중인 경우, 모든 자식 노드를 순회하며 대상 점을 포함할 수 있는 자식을 확인합니다.
 즉, 각 자식 childNode에 대해 도심과 대상 점 사이의 거리를 계산하고,
 이 거리가 childNode의 바운딩 엔벨로프 반지름보다 작거나 같으면 childNode를 재귀적으로 순회합니다.
         for childNode in node.children do
             if childNode.intersectsPoint(target) then
-# childNode가 target을 포함할 수 있는지 확인합니다 (코드 10.4 구현 참조).
+childNode가 target을 포함할 수 있는지 확인합니다 (코드 10.4 구현 참조).
                 result <- search(childNode, target)
                 if result != null then
                     return result   # 결과를 찾으면 즉시 반환합니다.
@@ -9037,7 +9035,7 @@ function addShop(treeRoot, shopName, shopLocation, items=[])
 트리가 비어 있다면... 단순히 새로운 루트를 생성한다.
   if treeRoot == null then
     return new Node(shop, null, null, 0)
-# 그렇지 않으면 트리에 새 매장을 삽입한다 (insert가 이를 위한 새 Node를 생성함).
+그렇지 않으면 트리에 새 매장을 삽입한다 (insert가 이를 위한 새 Node를 생성함).
   else
     return insert(treeRoot, shop, treeNode.level + 1)
 
@@ -9142,7 +9140,7 @@ NN과 그 거리에 대해 저장된 값을 업데이트해야 한다.
     (nnDist, nn) <- fNN(closeBranch, location, predicate, (nnDist, nn))
 
 코드 9.2에 정의된 헬퍼 함수 중 하나를 사용하여 현재 노드를 통과하는 분할선과 대상 점 사이의 거리를 계산한다.
-# 이 거리가 현재 최근접 이웃까지의 거리보다 가깝다면, 가장 먼 브랜치에 현재 최근접 이웃보다 가까운 점이 포함될 수 있다(그림 9.21 참조).
+이 거리가 현재 최근접 이웃까지의 거리보다 가깝다면, 가장 먼 브랜치에 현재 최근접 이웃보다 가까운 점이 포함될 수 있다(그림 9.21 참조).
     if splitDistance(location, node) < nnDist then
 ## 가장 먼 브랜치를 순회하고 NN과 그 거리에 대한 현재 값을 업데이트한다.
       (nnDist, nn) <- fNN(farBranch, location, predicate, (nnDist, nn))
@@ -9174,7 +9172,7 @@ function hasItem(item, node)
 ## 매장과 연관된 품목 목록에 품목이 포함되어 있는지 확인한다.
   return item in node.shop.items
 
-## 재고에 품목 X가 있는 매장 중 가장 가까운 점을 찾기 위해 hasItem의 커링된 인스턴스를 fNN 메서드에 전달한다(여기서 X는 찾고자 하는 품목이 담긴 변수라고 가정함).
+재고에 품목 X가 있는 매장 중 가장 가까운 점을 찾기 위해 hasItem의 커링된 인스턴스를 fNN 메서드에 전달한다(여기서 X는 찾고자 하는 품목이 담긴 변수라고 가정함).
 nn = fNN(root, customerLocation, hasItem(X))
 ```
 
@@ -9220,7 +9218,7 @@ cmpShops 메서드를 사용하여 어느 매장이 요구사항을 더 잘 충�
     (nnDist, nn) <- fNN(closeBranch, location, cmpShops, (nnDist, nn))
 
 코드 9.2에 정의된 헬퍼 함수 중 하나를 사용하여 현재 노드를 통과하는 분할선과 대상 점 사이의 거리를 계산한다.
-# 이 거리가 현재 최근접 이웃까지의 거리보다 가깝다면, 가장 먼 브랜치에 현재 최근접 이웃보다 가까운 점이 포함될 수 있다(그림 9.21 참조).
+이 거리가 현재 최근접 이웃까지의 거리보다 가깝다면, 가장 먼 브랜치에 현재 최근접 이웃보다 가까운 점이 포함될 수 있다(그림 9.21 참조).
     if splitDistance(location, node) < nnDist then
 ## 가장 먼 브랜치를 순회하고 NN과 그 거리에 대한 현재 값을 업데이트한다.
       (nnDist, nn) <- fNN(farBranch, location, cmpShops, (nnDist, nn))
@@ -9485,12 +9483,12 @@ DB(Memcached, SQL DB 또는 둘의 조합)와 (메인 앱과 독립적으로 데
 
 ```
 256개의 샘플링된 색상 목록에서 시작하여 SS-트리를 생성한다.
-## 여기서는 명확성을 위해 탐색 공간의 차원인 3을 명시적으로 전달한다(물론 목록의 점들로부터 유추할 수 있다).
+여기서는 명확성을 위해 탐색 공간의 차원인 3을 명시적으로 전달한다(물론 목록의 점들로부터 유추할 수 있다).
 컨테이너의 샘플링된 각 색상은 대상 색상 스케일의 해당 인덱스와 연결된다고 가정한다.
 tree <- SsTree(sampledColors, 3)
 
 원본 이미지의 각 픽셀을 순회한다.
-## 가장 일반적인 경우, 픽셀은 색상 외에도 더 많은 필드(예: 이미지 내 위치)를 가진 객체로 모델링될 수 있다.
+가장 일반적인 경우, 픽셀은 색상 외에도 더 많은 필드(예: 이미지 내 위치)를 가진 객체로 모델링될 수 있다.
 그렇다 하더라도 NN 탐색에는 RGB 구성요소만 필요하다.
 for pixel in sourceImage do
   (r, g, b) <- pixel.color
@@ -11967,7 +11965,7 @@ function dfs(graph, v, time=0, in_time={}, out_time={})
 정점 v의 나가는 모든 간선을 순회한다.
     for e in graph.adjacencyList[v] do
         u ← e.dest
-# 정점의 in-time이 여전히 null이라면, 아직 발견되지 않은 것이다(이 인자가 제대로 초기화되었다고 가정할 때).
+정점의 in-time이 여전히 null이라면, 아직 발견되지 않은 것이다(이 인자가 제대로 초기화되었다고 가정할 때).
 간선의 목적지 정점 u가 아직 발견되지 않았다면, 간선 e를 지나 u를 방문해야 한다.
         if in_time[u] == null then
 정점 u에 대해 dfs를 재귀적으로 호출하고 time 카운터를 포함한 모든 보조 데이터를 업데이트한다.
@@ -12360,7 +12358,7 @@ $^a$분할 상환(Amortized).
 ## aStar 메서드는 다음을 인자로 받는다:
 ## 그래프, 시작 정점, 탐색 목표에 도달했을 때 정점을 받아 true를 반환하는 술어(isGoal),
 ## 간선을 받아 두 정점 사이의 거리를 float으로 반환하는 함수(distance),
-## 정점 v를 받아 v와 목표 사이의 추정 거리를 float으로 반환하는 함수(heuristic).
+정점 v를 받아 v와 목표 사이의 추정 거리를 float으로 반환하는 함수(heuristic).
 aStar 메서드는 목표 정점(도달한 경우)과 최단 경로를 인코딩하는 딕셔너리의 쌍을 반환한다.
 function aStar(graph, start, isGoal, distance, heuristic)
 우선순위 큐를 초기화한다. 이는 구체적으로 예를 들어 힙일 수 있다.
@@ -14562,7 +14560,7 @@ TSP 해의 멋진 점 중 하나는 문제 공간이 그래프 정점의 가능�
 ```python
 ## tspTourCost 메서드는 그래프와 후보 해 P(문제 공간의 한 점, 즉 그래프 정점 목록의 순열)를 받아
 후보 투어에 포함된 모든 간선 가중치의 합으로 해의 비용을 계산한다.
-## 그래프의 모든 정점 쌍 사이에 간선이 존재한다고 가정한다(또는 간선이 없는 경우 메서드가 inf와 같은 특수 값을 반환함).
+그래프의 모든 정점 쌍 사이에 간선이 존재한다고 가정한다(또는 간선이 없는 경우 메서드가 inf와 같은 특수 값을 반환함).
 function tspTourCost(graph, P)
   cost ← 0
   for k in {0..|P|-1} do
@@ -15118,7 +15116,7 @@ f(x)
 ```python
 class Individual:
 Individual 클래스는 진화할 개체군의 각 유기체를 모델링합니다.
-# 각 개체는 하나의 염색체로 구성된 유전체를 가집니다(다중 염색체 유기체도 이론적으로 가능하지만 일반적이지는 않습니다).
+각 개체는 하나의 염색체로 구성된 유전체를 가집니다(다중 염색체 유기체도 이론적으로 가능하지만 일반적이지는 않습니다).
     chromosome: list
 
 # 염색체가 생성자의 인자로 전달된다고 가정합니다(자명한 구현은 생략).
@@ -15126,7 +15124,7 @@ Individual 클래스는 진화할 개체군의 각 유기체를 모델링합니�
     function Individual(chromosome):
         this.chromosome ← chromosome
 
-# 각 개체는 적합도를 질의받을 수 있습니다(적합도가 환경에 의존하는 경우 인자를 받을 수도 있습니다).
+각 개체는 적합도를 질의받을 수 있습니다(적합도가 환경에 의존하는 경우 인자를 받을 수도 있습니다).
     function fitness():
         ...
 ```

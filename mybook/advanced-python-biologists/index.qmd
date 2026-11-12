@@ -4793,7 +4793,6 @@ print(function_two())
 ```python
 def function_one:
  try:
-# do some processing...
  return 5
  except SomeException:
 # handle the exception...

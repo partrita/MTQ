@@ -409,9 +409,7 @@ lang: ko
 - 간결함 (Clarity & Brevity): 불필요한 미사여구를 제거하고 짧은 문장을 씁니다.
 - 시각화 활용: 복잡한 아키텍처나 흐름은 다이어그램과 표를 곁들여 설명합니다.
 
-## 12.2 글쓰기 구조 프레임워크
-
-```
+## 12.2 글쓰기 구조 프레임워크 ```
 1. 배경 및 요약 (Context & Executive Summary)
 2. 문제 상황 (Problem Statement)
 3. 제안하는 해결책 (Proposed Solution)

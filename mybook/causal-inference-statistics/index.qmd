@@ -1882,7 +1882,6 @@ Study average treatment effect: 0.
 
 ***
 
-## Theorem 4..
 
 *가 의 에 대한 총효과의 기울기라면,*
 

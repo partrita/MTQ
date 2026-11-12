@@ -96,7 +96,6 @@ You may freely share this content for non-commercial purposes, with a source cre
 
 - [부록 B: Bookdown으로 출판하기](#bookdown)에서는 Bookdown, GitHub, Zotero를 사용하여 이 책을 만드는 워크플로를 설명한다.
 
-## 저자 및 감사의 글 {- #authors}
 
 | 저자      | 저자 소개     |
 | ------------ | ------------ |
@@ -189,7 +188,7 @@ You may freely share this content for non-commercial purposes, with a source cre
 ::: {#fig-world-income-map1}
 <iframe src="https://datawrapper.dwcdn.net/NLMLg/" width="100%" height="405px" style="border:none;"></iframe>
 
-## 가장 최근 사용 가능한 데이터를 기준으로 상위 1% 인구가 보유한 국민 소득 비중으로 측정된 전 세계 소득 불평등의 [대화형 지도](https://datawrapper.dwcdn.net/NLMLg/)를 탐색해 보라. 출처: [World Inequality Database 2020](https://wid.world/world/#sptinc_p99p100_z/US;FR;DE;CN;ZA;GB;WO/last/eu/k/p/yearly/s/false/5.070499999999999/30/curve/false/country).
+가장 최근 사용 가능한 데이터를 기준으로 상위 1% 인구가 보유한 국민 소득 비중으로 측정된 전 세계 소득 불평등의 [대화형 지도](https://datawrapper.dwcdn.net/NLMLg/)를 탐색해 보라. 출처: [World Inequality Database 2020](https://wid.world/world/#sptinc_p99p100_z/US;FR;DE;CN;ZA;GB;WO/last/eu/k/p/yearly/s/false/5.070499999999999/30/curve/false/country).
 :::
 
 
@@ -5060,7 +5059,7 @@ KML 포맷은 무료이면서 2차원 및 3차원 지리적 데이터를 보고 
 #### MapInfo TAB {-}
 독점적인 TAB 포맷은 Esri의 경쟁사인 MapInfo가 만들고 지원하며 MapInfo Pro GIS 소프트웨어와 잘 작동하도록 설계되었다. Esri의 셰이프파일과 유사하게 MapInfo TAB 파일은 대개 `.tab`, `.dat`, `.ind` 및 기타 확장자를 갖는 파일들과 함께 하나의 폴더에 나타난다. 유감스럽게도 이를 셰이프파일이나 GeoJSON 포맷으로 변환하려면 MapInfo Pro, QGIS 또는 ArcGIS가 필요할 가능성이 크다.
 
-## 가장 일반적인 공간 파일 포맷 중 몇 가지만 언급했지만 수많은 [덜 알려진 포맷](https://en.wikipedia.org/wiki/GIS_file_formats)들이 존재한다. GeoJSON은 *벡터* 데이터를 위한 가장 훌륭하고 범용적인 포맷 중 하나라는 점을 기억하고 포인트, 폴리라인 및 다각형 데이터를 이 포맷으로 저장하고 공유할 것을 강력히 권장한다.
+가장 일반적인 공간 파일 포맷 중 몇 가지만 언급했지만 수많은 [덜 알려진 포맷](https://en.wikipedia.org/wiki/GIS_file_formats)들이 존재한다. GeoJSON은 *벡터* 데이터를 위한 가장 훌륭하고 범용적인 포맷 중 하나라는 점을 기억하고 포인트, 폴리라인 및 다각형 데이터를 이 포맷으로 저장하고 공유할 것을 강력히 권장한다.
 다음 섹션에서는 전 세계 여러 지역의 GeoJSON 경계 파일을 찾는 방법을 설명한다.
 
 ## GeoJSON 경계 파일 찾기 {- #find-geojson}
@@ -5288,7 +5287,7 @@ Mapshaper에서 지도 경계를 단순화하려면 다음 단계를 따르라.
 
 `-dissolve`
 
-## 내부 경계가 더 밝은 색으로 바뀐 것을 보게 될 것이며 이는 Mapshaper가 더 이상 그것들이 존재하지 않는다는 것을 말해주는 방식이다.
+내부 경계가 더 밝은 색으로 바뀐 것을 보게 될 것이며 이는 Mapshaper가 더 이상 그것들이 존재하지 않는다는 것을 말해주는 방식이다.
 이제 윤곽 모양을 내보낼 수 있다. 내보낸 GeoJSON 파일의 형식을 `.json`에서 `.geojson`으로 이름을 바꾸는 것을 잊지 마라.
 
 #### 윤곽선 레이어에 맞게 지도 자르기 {-}

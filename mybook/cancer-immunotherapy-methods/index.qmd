@@ -171,7 +171,6 @@ EDTA ethylenediaminetetraacetic acid / FACS fluorescence-activated cell sorting 
 large-scale primary CAR-NK cell preparation barely optimized되었다. 본 장에서는 비바이러스 PB transposon system과 인공 항원제시세포(artificial antigen-presenting cells, aAPCs)를 사용해 인체 말초혈액 primary NK세포로부터 대규모 NKG2D CAR-NK 세포 생성·확장 프로토콜을 제시한다(Fig. 1 참조). 이론적으로 이 방법은 PB transposon plasmid와 aAPCs를 그에 맞게 설계하면 다른 어떤 antigen-specific CAR constructs 지닌 NK세포 생성·확장에도 적용 가능하다.
 
 ## 재료
-## large-scale primary CAR-NK cell preparat
 ### 2. 세포 배양
 
 1. 건강한 기증자 leukocyte reduction system cones는 싱가포르 Health Sciences Authority에서 이용 가능하다.
@@ -201,7 +200,6 @@ THE™ NWSHPQFEK tag FITC Genescript 5A9F / CD PE Mitenyi Biotec BW264/56 / CD A
 
 Non-viralCAR-NKCellsGenerationProtocol 283
 
-## Non-viralCAR-NKCellsGenerationProtocol 2
 ### 2. 기능 분석
 Victor plate reader(PerkinElmer, Waltham, MA) / DELFIA EuTDA Cytotoxicity Reagents kit(PerkinElmer) / APC-conjugated CD107a antibody(BD Biosciences) / GolgiStop™ containing monensin(BD Biosciences) / U-bottom 96-well plate / anti-CD PE antibody staining(Miltenyi Biotec)(Note 1 참조)
 
@@ -238,7 +236,6 @@ Fig. 2 제조 과정 NK cells와 CAR-NK cells flow cytometry analysis. (a) NK ce
 
 Non-viralCAR-NKCellsGenerationProtocol 285
 
-## Non-viralCAR-NKCellsGenerationProtocol 2
 ### 3. 대규모 CAR-NK 세포 농축과 확장
 
 1. CAR-NK cells를 100 Gy gamma-irradiated K aAPCs로 E:T ratio 1:1 four rounds enrich·expand한다(rond당 7일; Note 6 참조).
@@ -319,7 +316,6 @@ p246-axe/txe stabilized plasmid는 luxCDABE cassette 제거 위해 modified되�
 
 EngineeringProbioticE.coliNissle1917forReleaseofTherapeuticNanobodies 291
 
-## EngineeringProbioticE.coliNissle1917forR
 ### 2. 실험용 마우스
 Female BALB/c mice(4~6주령)는 Taconic Biosciences purchased되었다.
 
@@ -341,7 +337,6 @@ Syringe 1 mL(Thermo Fisher Scientific, 14-841-32) / syringe 5 mL(Thermo Fisher S
 
 EngineeringProbioticE.coliNissle1917forReleaseofTherapeuticNanobodies 293
 
-## EngineeringProbioticE.coliNissle1917forR
 ### 2. 체외 분석 및 유세포 분석 시약
 Corning cell strainer, 100 micron(Thermo Fisher, 431,752) / 0.22-micron sterile syringe filter(Thermo Fisher, 09-720-511) / 96-well microplate V bottom(Thermo Fisher, 07-200-109) / ACK lysing buffer(Thermo Fisher, A1049201) / 5 mL microcentrifuge tube(Thermo Fisher, 03-391-276) / BD LSRFortessa cell analyzer(BD Biosciences)
 
@@ -349,7 +344,6 @@ Corning cell strainer, 100 micron(Thermo Fisher, 431,752) / 0.22-micron sterile 
 2. Protein visualization와 purification 시약
 Pierce Coomassie Plus(Bradford) Assay Kit(Thermo Fisher, 23,236) / HisPur Ni-NTA Resin(Thermo Fisher Scientific, PI88222) / MES SDS Running Buffer(Thermo Fisher, B0002)
 
-## 2. Protein visualization와 purificati
 ### 2. Imaging과 software
 Living Image / FlowJo Version 10
 
@@ -812,7 +806,6 @@ Human T Cell Transduction and Cytolysis Analysis 39
  1. 페니실린/스트렙토마이신 100 U/mL
 7. 50-mL 튜브.
 
-## 1. 페니실린/스트렙토마이신 100 U/mL
 ### 2. 비장세포 회수
 
 1. 마우스 비장(예: C57BL/6 또는 Balb/c 배경). 신선한 것(주의사항 3 참고).
@@ -822,7 +815,6 @@ Human T Cell Transduction and Cytolysis Analysis 39
 5. 10-mL 주사기.
 6. 50-mL 튜브.
 
-## 5. 10-mL 주사기.
 ### 2. T세포 활성화 및 배양
 
 1. RPMI 기반 CAR T세포 배지(2.2절 참고).
@@ -831,7 +823,6 @@ Human T Cell Transduction and Cytolysis Analysis 39
 4. 조직배양용 24웰 플레이트.
 5. 50-mL 튜브.
 
-## 4. 조직배양용 24웰 플레이트.
 2. 형질도입 방법 A: 형질도입 촉진제 RetroNectin®을 이용한 스피뉴큘레이션
 
 1. RetroNectin®(1 mg/mL 원액). -20 °C 보관.
@@ -1056,7 +1047,6 @@ Mouse CAR T-Cell Production 51
 
 주의사항 1 참고.
 
-## 주의사항 1 참고.
 ### 2. 탈세포화 수술
 
 ![그림 탈세포화 수술 과정 모식도](images/img-069-018.jpg)
@@ -1125,7 +1115,6 @@ ISDoT Applied to the Topographical Analysis of Tumor-Associated ECM 57
 
 ISDoT Applied to the Topographical Analysis of Tumor-Associated ECM 59
 
-## ISDoT Applied to the Topographical Analy
 ### 2. 시약
 
 1. 탈이온수(Milli-Q IQ 7000, Ultrapure lab water system; Merck, cat. no. ZIQ7000T0).
@@ -1238,7 +1227,6 @@ ISDoT Applied to the Topographical Analysis of Tumor-Associated ECM 65
 
 ISDoT Applied to the Topographical Analysis of Tumor-Associated ECM 67
 
-## ISDoT Applied to the Topographical Analy
 ### 3. 절차
 
 이 절은 유방 지방패 일차 유방암 종양, 림프 전이, 폐 전이를 탈세포화하기 위해 필요한 준비 및 수술 절차를 설명한다. 모든 실험은 정부 및 소속 기관 규정을 따라야 한다.
@@ -1293,7 +1281,6 @@ ISDoT Applied to the Topographical Analysis of Tumor-Associated ECM 69
 
 ISDoT Applied to the Topographical Analysis of Tumor-Associated ECM 71
 
-## ISDoT Applied to the Topographical Analy
 3. 다광자/공초점 형광현미경 촬영용 탈세포화 조직 준비
 
 1. 링 끝 미세겸자로 탈세포화 조직을 글래스바닥 접시에 조심스럽게 옮긴다. 촬영하고 싶은 면이 아래를 향하도록 글래스바닥에 놓는다. 피펫으로 여분의 보관 용액 한두 방울을 조직에 더해 말라붙지 않게 한다. 조직이 액체 속에서 떠다니지 않고 글래스바닥에 붙어 있는지 확인한다.
@@ -1382,7 +1369,6 @@ ISDoT Applied to the Topographical Analysis of Tumor-Associated ECM 71
 
 Cell Cytoskeleton Modifications upon Piezo-Stimulation 77
 
-## Cell Cytoskeleton Modifications upon Pie
 ### 2. 장비
 
 1. 세포배양 후드(MSC-Advantage™ Class II Biological Safety Cabinets, Thermo Fisher Scientific).
@@ -1394,7 +1380,6 @@ Cell Cytoskeleton Modifications upon Piezo-Stimulation 77
 7. 공초점 형광현미경(C system Nikon).
 8. 형광 플레이트 리더(VICTOR X, PerkinElmer).
 
-## 7. 공초점 형광현미경(C system Nikon).
 ### 2. 영상 및 통계 분석
 
 1. "Wound Healing" 플러그인이 있는 ImageJ 소프트웨어 (https://imagej.nih.gov/ij/plugins/index.html).
@@ -1455,7 +1440,6 @@ Cell Cytoskeleton Modifications upon Piezo-Stimulation 79
 
 **그림 1** 이동 분석 중 t = 0 h와 t = 24 h에서 calcein으로 염색한 T98G 세포의 대표 형광 이미지. (Elsevier 허락 하에 에서 재인용)
 
-## **그림 1** 이동 분석 중 t = 0 h와 t = 24 h에서 cal
 ### 3. Actin 골격 재배열
 
 1. 3.3절에서 설명한 대로 세포를 파종하고 배양물을 처리한다.
@@ -1469,7 +1453,6 @@ Cell Cytoskeleton Modifications upon Piezo-Stimulation 79
 
 ![그림 scratch 영역 T98G 공초점 이미지와 f-/g-actin 정량](images/img-092-021.jpg)
 
-## ![그림 scratch 영역 T98G 공초점 이미지와 f-/g-actin
 ### 3. 침습 분석
 
 모든 시약은 사용 직전 실온에 맞추고 침전이 생기지 않게 살살 흔든다. 필터에 collagen I 100 μL를 넣어 막을 만든다.
@@ -1540,7 +1523,6 @@ Cell Cytoskeleton Modifications upon Piezo-Stimulation 81
 
 ![그림 나노입자 빌딩블록 합성 모식도(PELGA-TAP/Dox)](images/img-099-022.jpg)
 
-## ![그림 나노입자 빌딩블록 합성 모식도(PELGA-TAP/Dox)](im
 ### 2. 세포 배양 시약
 
 1. NP에 대한 세포 반응을 시험하기 위해 사람 교종 세포주(U, ATCC)와 사람 진피섬유아세포(HDF, ECACC)를 각각 종양 조직과 정상 조직 모델로 사용한다(주의사항 3 참고)
@@ -1552,7 +1534,6 @@ Cell Cytoskeleton Modifications upon Piezo-Stimulation 81
 
 **그림 1** 각 구성 요소(PLGA, PEG, MMP 감수성 펩타이드[peptide], doxorubicin[dox])와 이들을 조합해 나노입자 준비의 빌딩블록으로 쓰는 여러 공중합체를 합성하는 모식도 (a). MMP 감수성 PELGA-TAP NPs (b)와 PELGA-Dox NPs (c)
 
-## **그림 1** 각 구성 요소(PLGA, PEG, MMP 감수성 펩타이드
 ### 2. MMP 절단 분석
 
 1. p-aminophenylmercuric acetate(APMA)(Sigma-Aldrich, USA) 3. mg을 0. M NaOH 1 mL에 녹여 100 μM APMA 용액을 만든다.
@@ -1607,7 +1588,6 @@ Nanoparticles for Tumor Targeting 89
 
 **표 1** PELGA-TAP 및 PELGA-Dox NP의 크기와 ζ-전위(다분산지수[PDI] < 0.2). Dox/NP 비는 PELGA-TAP이 20 μg/mg, PELGA-Dox가 21. μg/mg. 데이터는 mean ± SD로 표기. p < 0.05를 통계적 유의로 간주
 
-## **표 1** PELGA-TAP 및 PELGA-Dox NP의 크기와 ζ-
 ### 3. PELGA NP의 물리화학적 특성화
 
 위 절차로 얻은 NP는 동적광산란(DLS)으로 평균 크기, 크기 분포, ζ-전위를 측정해 특성화한다. NP 형태는 주사전자현미경(SEM)과 초저온 투과전자현미경(Cryo-TEM)으로 분석한다.
@@ -1692,7 +1672,6 @@ Nanoparticles for Tumor Targeting 93
 
 ![그림 U87/HDF 세포의 PELGA-rhod NP 섭취 속도](images/img-104-027.jpg)
 
-## ![그림 U87/HDF 세포의 PELGA-rhod NP 섭취 속도](im
 ### 3. MMP 매개 약물 방출 분석
 
 Dox 방출은 선행 문헌 처럼 MMP 완충액에서 수행하는 MMP 절단 분석으로 in vitro 평가한다.
@@ -1711,7 +1690,6 @@ Dox 방출은 선행 문헌 처럼 MMP 완충액에서 수행하는 MMP 절단 �
 
 ![그림 MMP 유무에 따른 Dox 방출 백분율(48시간)](images/img-105-028.jpg)
 
-## ![그림 MMP 유무에 따른 Dox 방출 백분율(48시간)](images
 ### 3. 스페로이드 형성
 
 1. 스페로이드 형성을 위해 U87과 HDF 세포를 70-80% confluency에서 트립신/EDTA 용액 1 mL로 37 °C, 5분간 떼어낸다.
@@ -1723,7 +1701,6 @@ Dox 방출은 선행 문헌 처럼 MMP 완충액에서 수행하는 MMP 절단 �
 
 ![그림 U 스페로이드 투과광·Dox 형광 이미지](images/img-106-029.jpg)
 
-## ![그림 U 스페로이드 투과광·Dox 형광 이미지](images/img-
 ### 3. 세포독성 시험
 
 1. 스페로이드를 회수해 저부착(low-attachment) 6웰 플레이트에 웰당 약 6-10개가 되도록 파종한다.
@@ -1794,7 +1771,6 @@ Nanoparticles for Tumor Targeting 97
 8. 2-Propanol.
 9. 몰드 실란화용 Tricholoro perfluoroctyl silane(TPS)(Sigma-Aldrich, 448931).
 
-## 8. 2-Propanol.
 ### 2. PDMS 복제 성형
 
 1. Sylgard 184(prepolymer와 경화제).
@@ -1863,7 +1839,6 @@ Microfluidic Device for Functional Assays 103
 
 ![그림 완성된 마이크로유체 플랫폼 사진](images/img-116-034.jpg)
 
-## ![그림 완성된 마이크로유체 플랫폼 사진](images/img-116-0
 ### 3. 마이크로유체 플랫폼을 이용한 기능 분석
 
 1. 마이크로유체 칩을 85 °C 오븐에서 1시간 멸균한다(주의사항 8 참고).
@@ -1951,7 +1926,6 @@ Ramon y Cajal Programme, Ministerio de Economia y Competitividad grant RYC-2015-
 
 ![그림 칩 구조와 겔·배지 저장조 표시 사진](images/img-123-035.jpg)
 
-## ![그림 칩 구조와 겔·배지 저장조 표시 사진](images/img-12
 ### 3. MC-38 세포 배양
 
 1. 완전 DMEM에서 세포를 배양한다.
@@ -1988,7 +1962,6 @@ Ramon y Cajal Programme, Ministerio de Economia y Competitividad grant RYC-2015-
 
 ![그림 MC-38 겔 로딩 Day1/Day 현미경 사진](images/img-124-036.jpg)
 
-## ![그림 MC-38 겔 로딩 Day1/Day 현미경 사진](images/
 ### 3. Caspase 3/7 분석
 
 1. CellEvent™ caspase-3/7(Thermo Fisher Scientific cat no C10723)를 외부 저장조에 최종 농도 2 μM이 되게 넣는다. 세포 현탁액을 1.5-mL 바이얼로 옮긴다.
@@ -1996,7 +1969,6 @@ Ramon y Cajal Programme, Ministerio de Economia y Competitividad grant RYC-2015-
 
 **그림 2** Day 1: 배지 추가 전 MC-38 세포와 겔 로딩 상태 (a). Day 2: 배지 추가 후 24시간 배양한 MC-38 세포 (b). 배율 10X
 
-## **그림 2** Day 1: 배지 추가 전 MC-38 세포와 겔 로딩 상
 ### 3. 비장세포 배양 및 공동배양
 
 1. 완전 RPMI 배지에서 세포를 배양하고 37 °C, 5% CO₂ 가습 조건에서 둔다. 비장세포 준비는 주의사항 1 참고.
@@ -2020,7 +1992,6 @@ Ramon y Cajal Programme, Ministerio de Economia y Competitividad grant RYC-2015-
 ![그림 time-lapse 시작시점 2D 합성 이미지](images/img-126-037.jpg)
 ![그림 6·9·12시간 3D Z-stack 투영 이미지](images/img-126-038.jpg)
 
-## ![그림 time-lapse 시작시점 2D 합성 이미지](images/i
 ### 3. 영상 분석
 
 1. 현미경 데이터세트는 정해진 시점별 또는 과정의 역동적 변화에 따라 세포사멸 사건 수를 정량화해 분석할 수 있다. 사건 수는 녹색 채널에서 기록·정량한 사건 수를 Hoechst 염색 기반 핵 정량으로 나타낸 전체 세포 수로 나눈 비율이다. 세포 현탁액을 1.5-mL 바이얼로 옮긴다.

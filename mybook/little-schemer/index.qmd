@@ -299,7 +299,7 @@ draft: true
 | 위 응용의 값 `#t`를 어떻게 알 수 있나요? | `(member? a lat)`에 대한 질문들에 답하면서 값이 정해집니다. 힌트: `member?` 함수의 정의를 적어 두고, 다음 질문 묶음을 푸는 동안 그것을 참고하세요. |
 | `(member? a lat)`이 처음 던지는 질문은? | `(null? lat)`입니다. 이것은 `lat?`이 처음 던지는 질문이기도 합니다. |
 
-### 첫째 계명
+## 첫째 계명
 
 함수를 표현할 때는 언제나 `null?`을 첫 번째 질문으로 던진다.
 
@@ -1001,7 +1001,7 @@ draft: true
 | 수에 대한 자연 재귀는 무엇인가? | `(sub1 n)`입니다. |
 | 수에 대해 몇 가지 질문을 해야 하는가? | 두 가지입니다. |
 
-### 첫째 계명 (첫 번째 개정)
+## 첫째 계명 (첫 번째 개정)
 
 - 원자들의 리스트 `lat`을 재귀할 때는 그것에 대해 두 가지 질문을 한다: `(null? lat)`과 `else`.
 - 수 `n`을 재귀할 때는 그것에 대해 두 가지 질문을 한다: `(zero? n)`과 `else`.
@@ -1211,7 +1211,7 @@ draft: true
 | 이제 `old`가 어디에 있든 그 오른쪽에 원자 `new`를 삽입하는 함수 `insertR*`를 작성하세요.<br>뼈대는 이렇습니다:<br>`(define insertR*`<br>`  (lambda (new old l)`<br>`    (cond`<br>`      (                  )`<br>`      (                  )`<br>`      (                  ))))` | `(define insertR*`<br>`  (lambda (new old l)`<br>`    (cond`<br>`      ((null? l) (quote ()))`<br>`      ((atom? (car l))`<br>`       (cond`<br>`         ((eq? (car l) old)`<br>`          (cons old`<br>`                (cons new`<br>`                      (insertR* new old (cdr l)))))`<br>`         (else (cons (car l)`<br>`                     (insertR* new old (cdr l))))))`<br>`      (else (cons (insertR* new old (car l))`<br>`                  (insertR* new old (cdr l)))))))` |
 | `insertR*`와 `rember*`는 어떻게 비슷한가? | 두 함수 모두 세 개의 질문을 합니다. |
 
-### 첫째 계명 (최종판)
+## 첫째 계명 (최종판)
 
 - 원자들의 리스트 `lat`을 재귀할 때는 그것에 대해 두 가지 질문을 한다: `(null? lat)`과 `else`.
 - 수 `n`을 재귀할 때는 그것에 대해 두 가지 질문을 한다: `(zero? n)`과 `else`.
@@ -1412,7 +1412,7 @@ draft: true
 |:-----|:-----|
 | 그럼 일반적으로는? | 하위 표현식들에 `value`로 재귀하면 됩니다. |
 
-### 일곱째 계명
+## 일곱째 계명
 
 > 같은 성질을 지닌 부분들로 재귀한다.
 >
@@ -1908,7 +1908,7 @@ draft: true
 | 그러면 `yyy`는 무엇일까요?<br>`(define yyy (lambda (a l) ((insert-g seqrem) #f a l)))`<br>`(define seqrem (lambda (new old l) #f))` | 깜짝 놀라실 겁니다! 우리의 옛 친구 `rember`입니다. |
 
 
-### 아홉째 계명
+## 아홉째 계명
 
 공통된 패턴을 새로운 함수로 추상화한다.
 
