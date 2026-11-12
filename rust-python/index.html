@@ -1094,7 +1094,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#빌드-도구-maturin" id="toc-빌드-도구-maturin" class="nav-link" data-scroll-target="#빌드-도구-maturin">빌드 도구: Maturin</a></li>
   <li><a href="#프로젝트-설정-파일-구조" id="toc-프로젝트-설정-파일-구조" class="nav-link" data-scroll-target="#프로젝트-설정-파일-구조">프로젝트 설정 파일 구조</a></li>
   </ul></li>
-  <li><a href="#프로젝트별-코드-심층-분석" id="toc-프로젝트별-코드-심층-분석" class="nav-link" data-scroll-target="#프로젝트별-코드-심층-분석">프로젝트별 코드 심층 분석</a></li>
+  <li><a href="#프로젝트별-코드-심층-분석" id="toc-프로젝트별-코드-심층-분석" class="nav-link" data-scroll-target="#프로젝트별-코드-심층-분석">프로젝트별 코드 심층 분석</a>
+  <ul class="collapse">
+  <li><a href="#rust-소스-코드-string_sumsrclib.rs" id="toc-rust-소스-코드-string_sumsrclib.rs" class="nav-link" data-scroll-target="#rust-소스-코드-string_sumsrclib.rs">Rust 소스 코드 (<code>string_sum/src/lib.rs</code>)</a></li>
+  </ul></li>
   <li><a href="#pyo-개발-모범-사례" id="toc-pyo-개발-모범-사례" class="nav-link" data-scroll-target="#pyo-개발-모범-사례">PyO 개발 모범 사례</a>
   <ul class="collapse">
   <li><a href="#gil-스코프-최소화" id="toc-gil-스코프-최소화" class="nav-link" data-scroll-target="#gil-스코프-최소화">2. GIL 스코프 최소화</a></li>
@@ -1142,8 +1145,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>개요</p>
 <p>이 문서는 <code>rust-python-binding</code> 저장소에 포함된 모든 예제 프로젝트의 코드와 구조를 설명한다.</p>
 <p>Rust의 메모리 안전성과 고성능 연산 능력, Python의 풍부한 생태계와 빠른 프로토타이핑 장점을 결합하려고 <strong>PyO3</strong>(Rust-Python 바인딩 프레임워크)와 <strong>Maturin</strong>(빌드 및 패키징 도구)을 활용한다.</p>
-<section id="저장소-서브프로젝트-구성" class="level3">
-<h3 class="anchored" data-anchor-id="저장소-서브프로젝트-구성">저장소 서브프로젝트 구성</h3>
+<section id="저장소-서브프로젝트-구성" class="level2">
+<h2 class="anchored" data-anchor-id="저장소-서브프로젝트-구성">저장소 서브프로젝트 구성</h2>
 <p>저장소는 난이도와 용도에 따라 다음 6개 프로젝트로 구성된다.</p>
 <table class="caption-top table">
 <colgroup>
@@ -1250,8 +1253,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>string_sum</code> - 기본 함수 및 서브모듈 구성 {.unnumbered}</li>
 </ol>
 <p><code>string_sum</code> 프로젝트는 PyO3의 가장 기본적인 매크로와 서브모듈(Hierarchical Submodule) 선언 방식을 보여준다.</p>
-<section id="rust-소스-코드-string_sumsrclib.rs" class="level4">
-<h4 class="anchored" data-anchor-id="rust-소스-코드-string_sumsrclib.rs">Rust 소스 코드 (<code>string_sum/src/lib.rs</code>)</h4>
+<section id="rust-소스-코드-string_sumsrclib.rs" class="level3">
+<h3 class="anchored" data-anchor-id="rust-소스-코드-string_sumsrclib.rs">Rust 소스 코드 (<code>string_sum/src/lib.rs</code>)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">pyo3::prelude::</span><span class="op">*;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">/// 두 숫자의 합을 문자열(String)로 포맷팅하여 반환하는 함수</span></span>
@@ -1298,7 +1301,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> func() <span class="op">-&gt;</span> <span class="dt">String</span> <span class="op">{</span></span>
 <span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    <span class="st">"func"</span><span class="op">.</span>to_string()</span>
 <span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
 <section id="코드-분석-및-주요-포인트" class="level4">
 <h4 class="anchored" data-anchor-id="코드-분석-및-주요-포인트">코드 분석 및 주요 포인트</h4>
 <ol type="1">
@@ -1876,6 +1878,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="bu">len</span>(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
 <span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.__rust_collection.count_documents()</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
+</section>
 </section>
 </section>
 <section id="pyo-개발-모범-사례" class="level2">

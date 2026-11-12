@@ -1180,7 +1180,10 @@ window.Quarto = {
   <li><a href="#단백질-언어-모델을-활용한-프로테옴의-기능-주해-prottrans-모델의-대규모-처리-구현" id="toc-단백질-언어-모델을-활용한-프로테옴의-기능-주해-prottrans-모델의-대규모-처리-구현" class="nav-link" data-scroll-target="#단백질-언어-모델을-활용한-프로테옴의-기능-주해-prottrans-모델의-대규모-처리-구현">단백질 언어 모델을 활용한 프로테옴의 기능 주해: ProtTrans 모델의 대규모 처리 구현</a></li>
   <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약">요약</a></li>
   <li><a href="#서론-4" id="toc-서론-4" class="nav-link" data-scroll-target="#서론-4">서론</a></li>
-  <li><a href="#재료-2" id="toc-재료-2" class="nav-link" data-scroll-target="#재료-2">재료</a></li>
+  <li><a href="#재료-2" id="toc-재료-2" class="nav-link" data-scroll-target="#재료-2">재료</a>
+  <ul class="collapse">
+  <li><a href="#fantasia-로컬-설치-gpu-지원" id="toc-fantasia-로컬-설치-gpu-지원" class="nav-link" data-scroll-target="#fantasia-로컬-설치-gpu-지원">3. FANTASIA 로컬 설치 (GPU 지원)</a></li>
+  </ul></li>
   <li><a href="#사례-연구" id="toc-사례-연구" class="nav-link" data-scroll-target="#사례-연구">사례 연구</a>
   <ul class="collapse">
   <li><a href="#rnaseq-데이터를-활용한-하위-go-농축-분석" id="toc-rnaseq-데이터를-활용한-하위-go-농축-분석" class="nav-link" data-scroll-target="#rnaseq-데이터를-활용한-하위-go-농축-분석">4. RNAseq 데이터를 활용한 하위 GO 농축 분석</a></li>
@@ -1196,7 +1199,6 @@ window.Quarto = {
   </ul></li>
   <li><a href="#재료-3" id="toc-재료-3" class="nav-link" data-scroll-target="#재료-3">재료</a></li>
   <li><a href="#참고-1" id="toc-참고-1" class="nav-link" data-scroll-target="#참고-1">참고</a></li>
-  <li><a href="#단백질-분류-예측에서-언어-모델의-실용적-응용-signalp-6.-deeploc-2.-deeplocpro-1." id="toc-단백질-분류-예측에서-언어-모델의-실용적-응용-signalp-6.-deeploc-2.-deeplocpro-1." class="nav-link" data-scroll-target="#단백질-분류-예측에서-언어-모델의-실용적-응용-signalp-6.-deeploc-2.-deeplocpro-1.">단백질 분류 예측에서 언어 모델의 실용적 응용: SignalP 6., DeepLoc 2., DeepLocPro 1.</a></li>
   <li><a href="#요약-2" id="toc-요약-2" class="nav-link" data-scroll-target="#요약-2">요약</a></li>
   <li><a href="#서론-6" id="toc-서론-6" class="nav-link" data-scroll-target="#서론-6">서론</a>
   <ul class="collapse">
@@ -1259,7 +1261,10 @@ window.Quarto = {
   <li><a href="#아키텍처" id="toc-아키텍처" class="nav-link" data-scroll-target="#아키텍처">2. 아키텍처</a></li>
   <li><a href="#예측-품질-및-실행-시간" id="toc-예측-품질-및-실행-시간" class="nav-link" data-scroll-target="#예측-품질-및-실행-시간">2. 예측 품질 및 실행 시간</a></li>
   </ul></li>
-  <li><a href="#웹-서버-2" id="toc-웹-서버-2" class="nav-link" data-scroll-target="#웹-서버-2">웹 서버</a></li>
+  <li><a href="#웹-서버-2" id="toc-웹-서버-2" class="nav-link" data-scroll-target="#웹-서버-2">웹 서버</a>
+  <ul class="collapse">
+  <li><a href="#다운로드" id="toc-다운로드" class="nav-link" data-scroll-target="#다운로드">다운로드</a></li>
+  </ul></li>
   <li><a href="#오픈-소스-자원" id="toc-오픈-소스-자원" class="nav-link" data-scroll-target="#오픈-소스-자원">오픈 소스 자원</a>
   <ul class="collapse">
   <li><a href="#코드-및-시각화-재현" id="toc-코드-및-시각화-재현" class="nav-link" data-scroll-target="#코드-및-시각화-재현">4. 코드 및 시각화 재현</a></li>
@@ -1564,10 +1569,7 @@ ESM-3
 <section id="인코더-전용-plm" class="level4">
 <h4 class="anchored" data-anchor-id="인코더-전용-plm">3. 인코더 전용 PLM</h4>
 <p>인코더 전용 PLM은 단백질 서열의 문맥적 표현을 추출하도록 설계되어 다양한 단백질 관련 작업의 분류 문제에 특히 적합하다. 이러한 모델은 트랜스포머 구조의 인코더 구성 요소를 사용하여 입력 서열을 처리하고 그들의 복잡한 관계와 특징을 포착한다. 몇 가지 인코더 전용 PLM을 모델별로 요약하면서 다양한 단백질 후속 작업의 훈련에 유용한 정보가 담긴 단백질 표현을 어떻게 만들어내는지 설명한다. 이 장에서 설명하는 인코더 전용 PLM 목록은 표 2에 나와 있다.</p>
-<section id="proteinbert" class="level5">
-<h5 class="anchored" data-anchor-id="proteinbert">ProteinBert</h5>
 <p>BERT 구조를 기반으로 구축된 ProteinBERT 는 UniProtKB/UniRef90에서 얻은 대규모 단백질 서열 데이터셋으로 학습된 PLM인다. 이 모델은 노이즈 제거 자기 부호화 구조를 바탕으로 단백질 서열의 양방향 언어 모델링과 GO(유전자 존재론) 주석이라는 두 가지 작업을 동시에 사전 학습하며 국소적(local-level) 및 전역적(global-level) 표현을 모두 추출한다. 이 구조는 스킵 연결(skip connection)과 층 정규화가 포함된 여러 트랜스포머 블록으로 구성된다. 모델은 미세 조정 방법을 통해 단백질 구조, 번역 후 변형, 생물물리학적 특성 작업에 대한 9개의 벤치마크 데이터셋에서 평가되었다. 벤치마크 작업의 타깃 변수에 따라 국소적 또는 전역적 특징이 사용되었으며 지도 미세 조정을 통해 각 단백질 벤치마크에서 다른 최첨단 모델들을 거의 능가하는 성능을 보였다. 또한 ProteinBERT 모델은 서열 길이에 의존하지 않으므로 서로 다른 서열 길이에 걸쳐 잘 일반화된다. 다른 단백질 언어 모델에 비해 ProteinBERT는 파라미터 수가 1,600만 개에 불과해 크기가 작으며 이로 인해 추론 시 계산 자원을 적게 소모한다.</p>
-</section>
 <section id="prottrans-모델-protelectra-protalbert-protbert" class="level5">
 <h5 class="anchored" data-anchor-id="prottrans-모델-protelectra-protalbert-protbert">ProtTrans 모델 (ProtElectra, ProtAlbert, ProtBert)</h5>
 <p>ProtTrans 는 단백질 언어 모델을 이끌어내기 위해 수십억 개의 단백질 서열로 언어 모델을 학습함으로써 생명의 언어를 이해하는 데 고성능 컴퓨팅을 활용한다. 저자들은 UniRef, UniRef, BFD 단백질 서열 데이터셋에 대해 두 개의 자기 회귀 모델인 Transformer-XL 및 XL-Net과 네 개의 자기 부호화 모델인 BERT, Albert, Electra, T5를 사전 학습한다. ProtTrans 모델은 토큰화된 아미노산을 입력으로 받아 CLM(자기 회귀 모델) 또는 MLM(자기 부호화 모델)을 사용하여 사전 학습한다. 모델은 트랜스포머 구조와 자기 주의 메커니즘을 활용하여 잔기(residue) 또는 아미노산 수준과 단백질 또는 전역 수준 모두에서 문맥 인식 표현을 얻는다. 결과적으로 생성된 임베딩(즉, 고차원 벡터 표현)은 tSNE 투영을 통해 생물물리학적 특징, 단백질 구조 클래스 및 계(kingdom)의 계통을 포착하는 것으로 나타났다. 작업에 따라 잔기 수준(개별 아미노산의 임베딩)에서 CNN을 학습시켜 결합 잔기 예측과 같은 토큰 수준 분류를 수행할 수 있다. 임베딩을 결합해 평균 풀링(average-pooled)하면 입력 서열 길이와 무관하게 고정된 길이의 벡터로 전역 문맥 인식 임베딩을 얻을 수 있다. 그 후 단백질 수준 임베딩은 세포 내 위치 예측과 같은 단백질 수준 분류를 위한 피드포워드 신경망 등의 학습에 사용될 수 있다. ProtTrans는 신호 펩타이드 분류 , 항체 구조 예측 , 글루타릴화 부위 예측 등 다양한 생물정보학 응용 분야에 사용되어 왔다. ProtBERT는 내재적 무질서 단백질/영역 예측 및 단백질 DNA 결합 예측 에 활용되었다.</p>
@@ -2781,8 +2783,8 @@ EC 번호
 <ol start="2" type="1">
 <li>다운로드가 완료되면 다음과 같이 실행할 수 있다(Singularity가 설치되어 있어야 한다). 문법: <code>./fantasia --infile protein.fasta [--outpath output_path] [--allisoforms gene_isoform_conversion.txt] [--keepintermediate]</code>. 옵션 설명은 참고 7을 확인하라.</li>
 </ol>
-<section id="fantasia-로컬-설치-gpu-지원" class="level4">
-<h4 class="anchored" data-anchor-id="fantasia-로컬-설치-gpu-지원">3. FANTASIA 로컬 설치 (GPU 지원)</h4>
+<section id="fantasia-로컬-설치-gpu-지원" class="level3">
+<h3 class="anchored" data-anchor-id="fantasia-로컬-설치-gpu-지원">3. FANTASIA 로컬 설치 (GPU 지원)</h3>
 <p>Singularity를 사용할 수 없는 환경을 위해 소스 코드를 제공하며 숙련된 사용자가 직접 설치할 수 있다.</p>
 <ol type="1">
 <li>http://gofile.me/5wDJy/CI8zCiijR 에서 스크립트와 파일을 다운로드한다.</li>
@@ -3154,9 +3156,7 @@ SVM
 <li>ESM-2는 800만 개에서 150억 개의 파라미터를 가진 다양한 사전 학습 단백질 언어 모델(pLM)을 제공한다. EquiPNAS는 기본적으로 150억 개의 파라미터를 가진 가장 큰 모델인 esm2_t48_15B_UR50D를 사용한다. 흥미롭게도 800만 개의 파라미터를 가진 가장 작은 모델인 esm2_t6_8M_UR50D를 사용했을 때 성능이 가장 낮았으며 파라미터 수가 증가함에 따라 성능이 지속적으로 개선되었다. 이는 150억 개 파라미터 모델이 단백질-DNA 및 단백질-RNA 결합 부위 예측 모두에서 최상의 결과를 낸다는 점을 확인시켜 주며 단백질 정보학에서 거대 언어 모델(LLM)의 중요성을 입증한다.</li>
 <li>EquiPNAS가 달성한 ROC-AUC는 높은 정확도를 보여주지만 PR-AUC 결과는 결합 부위 예측 측면에서 전반적으로 저조한 성능을 나타낸다. ROC-AUC는 높지만 PR-AUC가 낮은 모델은 양성 클래스와 음성 클래스를 구분하는 데는 효과적이지만 정밀도(precision) 확보에 어려움을 겪어 결합 잔기 예측에서 더 많은 거짓 양성(false positive)을 발생시킬 수 있음을 시사한다. 이러한 불일치는 더욱 신뢰할 수 있는 예측을 보장하기 위해 특히 불균형 데이터셋을 처리할 때 EquiPNAS의 정밀도를 정제하는 추가적인 최적화가 필요함을 시사한다.</li>
 </ol>
-</section>
-<section id="단백질-분류-예측에서-언어-모델의-실용적-응용-signalp-6.-deeploc-2.-deeplocpro-1." class="level2">
-<h2 class="anchored" data-anchor-id="단백질-분류-예측에서-언어-모델의-실용적-응용-signalp-6.-deeploc-2.-deeplocpro-1.">단백질 분류 예측에서 언어 모델의 실용적 응용: SignalP 6., DeepLoc 2., DeepLocPro 1.</h2>
+<p>단백질 분류 예측에서 언어 모델의 실용적 응용: SignalP 6., DeepLoc 2., DeepLocPro 1.</p>
 <p>Henrik Nielsen</p>
 </section>
 <section id="요약-2" class="level2">
@@ -5129,11 +5129,10 @@ SeqVec 서열 임베딩, GCN을 사용한 단백질 구조 특징
 <li><p>PLMSearch 생성 결과</p></li>
 </ol>
 <p>사용자는 결과 페이지에서 검색 결과를 “Download(다운로드)”하거나 “Preview(미리보기)”할 수 있다(그림 6).</p>
-<section id="다운로드" class="level4">
-<h4 class="anchored" data-anchor-id="다운로드">다운로드</h4>
+<section id="다운로드" class="level3">
+<h3 class="anchored" data-anchor-id="다운로드">다운로드</h3>
 <p>• Query: FASTA 형식의 모든 쿼리 단백질이다. • Similarity: 쿼리-타겟 쌍과 예측된 유사도이다.</p>
 <p>• NW sequence identity: Needleman-Wunsch 알고리즘을 통한 서열 동일성이다. • NW alignment: Needleman-Wunsch 알고리즘을 통한 서열 정렬 결과다. • PLMAlign score: PLMAlign에서 산출된 점수이다. • PLMAlign alignment: PLMAlign을 통한 서열 정렬 결과다.</p>
-</section>
 <section id="미리보기" class="level4">
 <h4 class="anchored" data-anchor-id="미리보기">미리보기</h4>
 <p>각 테이블은 쿼리 단백질별로 표시된다.</p>
@@ -5182,6 +5181,7 @@ SeqVec 서열 임베딩, GCN을 사용한 단백질 구조 특징
 <section id="참조-유사도-1" class="level4">
 <h4 class="anchored" data-anchor-id="참조-유사도-1">참조 유사도</h4>
 <p>자세한 논의는 원본 논문의 보충 자료 섹션 ’Reference Similarity’를 참조하라.</p>
+</section>
 </section>
 </section>
 <section id="오픈-소스-자원" class="level2">
@@ -6597,13 +6597,7 @@ IVEGQDAEVGLSPWQVMLFR
 <p>특징 기반 접근 방식의 대안은 레이블이 지정된 데이터셋을 사용하여 사전 훈련된 파운데이션 모델(즉, LLM 또는 pLM)을 다운스트림 작업에 적응시키는 것이다. 이 과정은 작업 특화 레이블을 사용하여 학습을 유도하면서 모델의 가중치를 미세 조정하는 과정을 포함한다. pLM의 미세 조정은 다음의 세 단계로 간소화될 수 있다.</p>
 <p>1단계. 사전 훈련: 모델은 먼저 대규모 단백질 서열 말뭉치에서 사전 훈련되며 일반적으로 마스크 언어 모델링(MLM) 목적을 사용하여 자기 지도 학습을 통해 서열의 일반적인 특징을 학습한다. 2단계. 레이블이 지정된 데이터셋 구축: 그 다음 레이블이 지정된 데이터셋을 생성한다. 이는 <code>&lt;입력, 출력&gt;</code> 쌍으로 표현되며 여기서 입력은 사전 훈련 중에 사용된 것과 같은 단백질 서열을 의미하고 출력은 작업 특화 레이블을 나타낸다. 3단계. 미세 조정: 마지막 단계로 오차 역전파를 통해 작업 특화 레이블을 사용하여 사전 훈련된 모델의 가중치를 업데이트한다.</p>
 <p>모든 미세 조정 접근 방식이 이 세 단계를 반드시 따라야 하는 것은 아니다. 사전 훈련된 모델을 도메인 특화 작업에 적응시키기 위해 미세 조정을 수행하는 방법은 더 다양하다. Raschka 는 이러한 접근 방식을 여섯 가지 범주로 분류하는데, 그 중 하나가 이미 이전 섹션에서 논의한 특징 기반 접근 방식이다. “미세 조정 I (출력 레이어만 업데이트)”, “미세 조정 II 또는 전체 미세 조정 (모든 레이어 업데이트)”, “파라미터 효율적 미세 조정(PEFT)”, “인컨텍스트 학습, 인덱싱 및 프롬프트 튜닝”, “인간 피드백 기반 강화 학습(RLHF)” 소제목 하에서 나머지 다섯 가지 범주를 간략하게 설명하여 독자들에게 기초 지식을 제공할 것이나, 포괄적인 설명은 Raschka의 훌륭한 저서 를 참고하시길 권장한다. 이후 “PTM 부위 예측 문맥에서의 미세 조정” 소제목에서는 PTM 부위 예측 문맥에 특화된 미세 조정 접근 방식에 초점을 맞출 것이다.</p>
-</section>
-<section id="미세-조정-i-출력-레이어만-업데이트" class="level4">
-<h4 class="anchored" data-anchor-id="미세-조정-i-출력-레이어만-업데이트">미세 조정 I (출력 레이어만 업데이트)</h4>
 <p>이 방법은 사전 훈련된 모델의 핵심 레이어는 동결한 채 출력 레이어만 업데이트한다. 메모리와 계산 면에서 효율적이며 가벼운 작업 특화 적응으로 충분할 때 적합하다. 이 접근 방식은 소제목 3..1에서 논의한 특징 기반 접근 방식(또는 특징 기반 미세 조정)과 혼동해서는 안 된다. 후자는 사전 훈련된 모델의 어떤 레이어도 튜닝하지 않고 분류 헤드만 추가하는 반면, 이 방법은 사전 훈련된 모델 내의 기존 출력 레이어 자체를 업데이트한다.</p>
-</section>
-<section id="미세-조정-ii-또는-전체-미세-조정-모든-레이어-업데이트" class="level4">
-<h4 class="anchored" data-anchor-id="미세-조정-ii-또는-전체-미세-조정-모든-레이어-업데이트">미세 조정 II 또는 전체 미세 조정 (모든 레이어 업데이트)</h4>
 <p>미세 조정 II는 모델의 모든 레이어를 업데이트하여 대상 작업에 완전히 적응시킨다. 계산 요구량이 많지만 이 전략은 종종 출력 레이어만 업데이트하는 것보다 도메인 특화 응용 분야에서 더 높은 성능을 달성한다.</p>
 </section>
 <section id="파라미터-효율적-미세-조정peft" class="level4">

@@ -1156,7 +1156,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#좋은-습관" id="toc-좋은-습관" class="nav-link" data-scroll-target="#좋은-습관">✅ 좋은 습관</a></li>
   <li><a href="#주의할-점" id="toc-주의할-점" class="nav-link" data-scroll-target="#주의할-점">❗ 주의할 점</a></li>
   </ul></li>
-  <li><a href="#이터레이터와-제로-코스트-추상화" id="toc-이터레이터와-제로-코스트-추상화" class="nav-link" data-scroll-target="#이터레이터와-제로-코스트-추상화">이터레이터와 제로 코스트 추상화</a></li>
+  <li><a href="#이터레이터와-제로-코스트-추상화" id="toc-이터레이터와-제로-코스트-추상화" class="nav-link" data-scroll-target="#이터레이터와-제로-코스트-추상화">이터레이터와 제로 코스트 추상화</a>
+  <ul class="collapse">
+  <li><a href="#꼭-필요하지-않다면-중간-컬렉션을-만들지-마세요" id="toc-꼭-필요하지-않다면-중간-컬렉션을-만들지-마세요" class="nav-link" data-scroll-target="#꼭-필요하지-않다면-중간-컬렉션을-만들지-마세요">❗ 꼭 필요하지 않다면 중간 컬렉션을 만들지 마세요:</a></li>
+  </ul></li>
   <li><a href="#sec-ch04" id="toc-sec-ch04" class="nav-link" data-scroll-target="#sec-ch04">Chapter 4 - 에러 처리</a></li>
   <li><a href="#result를-선호하고-패닉은-피하세요" id="toc-result를-선호하고-패닉은-피하세요" class="nav-link" data-scroll-target="#result를-선호하고-패닉은-피하세요"><code>Result</code>를 선호하고, 패닉은 피하세요 🫨</a>
   <ul class="collapse">
@@ -1245,7 +1248,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#너무-길거나-오래된-주석" id="toc-너무-길거나-오래된-주석" class="nav-link" data-scroll-target="#너무-길거나-오래된-주석">❌ 너무 길거나 오래된 주석</a></li>
   </ul></li>
   <li><a href="#살아있는-문서로서-주석을-작성하지-마세요리빙-코멘트" id="toc-살아있는-문서로서-주석을-작성하지-마세요리빙-코멘트" class="nav-link" data-scroll-target="#살아있는-문서로서-주석을-작성하지-마세요리빙-코멘트">살아있는 문서로서 주석을 작성하지 마세요(리빙 코멘트)</a></li>
-  <li><a href="#주석-대신-코드로-표현하기" id="toc-주석-대신-코드로-표현하기" class="nav-link" data-scroll-target="#주석-대신-코드로-표현하기">주석 대신 코드로 표현하기</a></li>
+  <li><a href="#주석-대신-코드로-표현하기" id="toc-주석-대신-코드로-표현하기" class="nav-link" data-scroll-target="#주석-대신-코드로-표현하기">주석 대신 코드로 표현하기</a>
+  <ul class="collapse">
+  <li><a href="#주석으로-설명한-코드-블록" id="toc-주석으로-설명한-코드-블록" class="nav-link" data-scroll-target="#주석으로-설명한-코드-블록">❌ 주석으로 설명한 코드 블록:</a></li>
+  </ul></li>
   <li><a href="#todo는-이슈로-만들기" id="toc-todo는-이슈로-만들기" class="nav-link" data-scroll-target="#todo는-이슈로-만들기"><code>TODO</code>는 이슈로 만들기</a>
   <ul class="collapse">
   <li><a href="#좋은-문서-주석" id="toc-좋은-문서-주석" class="nav-link" data-scroll-target="#좋은-문서-주석">✅ 좋은 문서 주석:</a></li>
@@ -1311,7 +1317,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">공개</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2026년 11월 11일</p>
+      <p class="date">2026년 11월 12일</p>
     </div>
   </div>
   
@@ -2345,8 +2351,8 @@ cargo flamegraph --example some_example --features some_features</code></pre>
 <li>컬렉션을 다룰 때는 손으로 짠 <code>for</code> 루프보다 <code>이터레이터</code>를 선호하세요. 직접 짜는 것보다 컴파일러가 더 잘 최적화합니다.</li>
 <li><code>.iter()</code>를 호출하면 원본 컬렉션에 대한 참조만 만들므로, 같은 컬렉션의 이터레이터를 여러 개 들고 있을 수 있습니다.</li>
 </ul>
-<section id="꼭-필요하지-않다면-중간-컬렉션을-만들지-마세요" class="level4">
-<h4 class="anchored" data-anchor-id="꼭-필요하지-않다면-중간-컬렉션을-만들지-마세요">❗ 꼭 필요하지 않다면 중간 컬렉션을 만들지 마세요:</h4>
+<section id="꼭-필요하지-않다면-중간-컬렉션을-만들지-마세요" class="level3">
+<h3 class="anchored" data-anchor-id="꼭-필요하지-않다면-중간-컬렉션을-만들지-마세요">❗ 꼭 필요하지 않다면 중간 컬렉션을 만들지 마세요:</h3>
 <ul>
 <li><code>process</code>가 <code>이터레이터</code>를 받는다고 가정해 보세요.</li>
 <li>❌ 나쁜 예 - 쓸데없는 중간 컬렉션:</li>
@@ -3429,8 +3435,8 @@ cargo flamegraph --example some_example --features some_features</code></pre>
 <section id="주석-대신-코드로-표현하기" class="level2">
 <h2 class="anchored" data-anchor-id="주석-대신-코드로-표현하기">주석 대신 코드로 표현하기</h2>
 <p>주석으로 길게 설명한 블록 대신, 로직을 이름이 잘 지어진 헬퍼 함수로 나누세요:</p>
-<section id="주석으로-설명한-코드-블록" class="level4">
-<h4 class="anchored" data-anchor-id="주석으로-설명한-코드-블록">❌ 주석으로 설명한 코드 블록:</h4>
+<section id="주석으로-설명한-코드-블록" class="level3">
+<h3 class="anchored" data-anchor-id="주석으로-설명한-코드-블록">❌ 주석으로 설명한 코드 블록:</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb97"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> save_user(<span class="op">&amp;</span><span class="kw">self</span>) <span class="op">-&gt;</span> <span class="dt">Result</span><span class="op">&lt;</span>()<span class="op">,</span> MyError<span class="op">&gt;</span> <span class="op">{</span></span>
 <span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// check if the user is authenticated</span></span>
 <span id="cb97-3"><a href="#cb97-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">self</span><span class="op">.</span>is_authenticated() <span class="op">{</span></span>

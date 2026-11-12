@@ -1098,7 +1098,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#함수" id="toc-함수" class="nav-link" data-scroll-target="#함수">함수</a></li>
   <li><a href="#스코프와-소유권" id="toc-스코프와-소유권" class="nav-link" data-scroll-target="#스코프와-소유권">스코프와 소유권</a></li>
   <li><a href="#숫자-데이터-타입" id="toc-숫자-데이터-타입" class="nav-link" data-scroll-target="#숫자-데이터-타입">숫자 데이터 타입</a></li>
-  <li><a href="#불리언과-문자-타입" id="toc-불리언과-문자-타입" class="nav-link" data-scroll-target="#불리언과-문자-타입">불리언과 문자 타입</a></li>
   <li><a href="#문자열" id="toc-문자열" class="nav-link" data-scroll-target="#문자열">문자열</a></li>
   <li><a href="#컬렉션" id="toc-컬렉션" class="nav-link" data-scroll-target="#컬렉션">컬렉션</a></li>
   <li><a href="#타입-변환" id="toc-타입-변환" class="nav-link" data-scroll-target="#타입-변환">타입 변환</a></li>
@@ -1933,9 +1932,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Rust의 숫자 타입을 이해하고 효과적으로 사용하는 것은 효율적이고 올바른 코드를 작성하는 데 필수적이다. 타입 시스템은 예상치 못한 오버플로나 정밀도 손실 같은 숫자 연산 관련 흔한 오류를 예방한다.</p>
 <p>이 타입들을 사용할 때는 Rust가 중시하는 명시성과 안전성을 기억하라. 표현해야 할 값의 범위, 메모리 사용량, 성능 요구 사항 등을 고려해 사용 사례에 적합한 타입을 항상 선택하라.</p>
 <p>다음 절에서는 Rust 타입 시스템에서 숫자 타입을 보완하는 불리언과 문자 타입을 살펴본다. 이 타입들은 각각 논리 조건과 텍스트 데이터 표현에 필수적이며 제어 흐름과 문자열 조작에서 중요한 역할을 한다.</p>
-</section>
-<section id="불리언과-문자-타입" class="level2">
-<h2 class="anchored" data-anchor-id="불리언과-문자-타입">불리언과 문자 타입</h2>
 <p>Rust는 논리값과 개별 문자를 표현하는 두 가지 필수 원시 타입, 즉 불리언 타입과 문자 타입을 제공한다. 이 타입들은 더 복잡한 데이터 구조를 만들고 Rust 프로그램에서 제어 흐름을 구현하는 기본 구성 요소이다.</p>
 <p><code>bool</code> 키워드로 표현되는 불리언 타입은 논리값을 표현하는 데 사용된다. true 또는 false 두 가지 값만 가질 수 있으며 조건문, 루프 조건, 논리 연산에 널리 쓰이다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb73"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> is_active <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>

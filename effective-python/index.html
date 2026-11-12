@@ -1088,9 +1088,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#chapter-1-파이썬답게-생각하기" id="toc-chapter-1-파이썬답게-생각하기" class="nav-link active" data-scroll-target="#chapter-1-파이썬답게-생각하기">Chapter 1: 파이썬답게 생각하기</a></li>
-  <li><a href="#chapter-2-문자열과-슬라이싱" id="toc-chapter-2-문자열과-슬라이싱" class="nav-link" data-scroll-target="#chapter-2-문자열과-슬라이싱">Chapter 2: 문자열과 슬라이싱</a></li>
-  <li><a href="#chapter-3-루프와-이터레이터" id="toc-chapter-3-루프와-이터레이터" class="nav-link" data-scroll-target="#chapter-3-루프와-이터레이터">Chapter 3: 루프와 이터레이터</a></li>
+  <li><a href="#chapter-1-파이썬답게-생각하기" id="toc-chapter-1-파이썬답게-생각하기" class="nav-link active" data-scroll-target="#chapter-1-파이썬답게-생각하기">Chapter 1: 파이썬답게 생각하기</a>
+  <ul class="collapse">
+  <li><a href="#공백" id="toc-공백" class="nav-link" data-scroll-target="#공백">공백</a></li>
+  </ul></li>
+  <li><a href="#chapter-2-문자열과-슬라이싱" id="toc-chapter-2-문자열과-슬라이싱" class="nav-link" data-scroll-target="#chapter-2-문자열과-슬라이싱">Chapter 2: 문자열과 슬라이싱</a>
+  <ul class="collapse">
+  <li><a href="#c-스타일-포매팅" id="toc-c-스타일-포매팅" class="nav-link" data-scroll-target="#c-스타일-포매팅">C 스타일 포매팅</a></li>
+  </ul></li>
+  <li><a href="#chapter-3-루프와-이터레이터" id="toc-chapter-3-루프와-이터레이터" class="nav-link" data-scroll-target="#chapter-3-루프와-이터레이터">Chapter 3: 루프와 이터레이터</a>
+  <ul class="collapse">
+  <li><a href="#이터레이터-연결하기" id="toc-이터레이터-연결하기" class="nav-link" data-scroll-target="#이터레이터-연결하기">이터레이터 연결하기</a></li>
+  </ul></li>
   <li><a href="#chapter-4-딕셔너리" id="toc-chapter-4-딕셔너리" class="nav-link" data-scroll-target="#chapter-4-딕셔너리">Chapter 4: 딕셔너리</a>
   <ul class="collapse">
   <li><a href="#아이템-26-누락된-딕셔너리-키를-처리할-때는-in과-keyerror보다-get-선호하기" id="toc-아이템-26-누락된-딕셔너리-키를-처리할-때는-in과-keyerror보다-get-선호하기" class="nav-link" data-scroll-target="#아이템-26-누락된-딕셔너리-키를-처리할-때는-in과-keyerror보다-get-선호하기">아이템 26: 누락된 딕셔너리 키를 처리할 때는 <code>in</code>과 <code>KeyError</code>보다 <code>get</code> 선호하기</a></li>
@@ -1102,6 +1111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#chapter-6-컴프리헨션과-제너레이터" id="toc-chapter-6-컴프리헨션과-제너레이터" class="nav-link" data-scroll-target="#chapter-6-컴프리헨션과-제너레이터">Chapter 6: 컴프리헨션과 제너레이터</a></li>
   <li><a href="#chapter-7-클래스와-인터페이스" id="toc-chapter-7-클래스와-인터페이스" class="nav-link" data-scroll-target="#chapter-7-클래스와-인터페이스">Chapter 7: 클래스와 인터페이스</a>
   <ul class="collapse">
+  <li><a href="#init__-보일러플레이트-피하기" id="toc-init__-보일러플레이트-피하기" class="nav-link" data-scroll-target="#init__-보일러플레이트-피하기"><code>__init__</code> 보일러플레이트 피하기</a></li>
   <li><a href="#아이템-53-super로-부모-클래스-초기화하기" id="toc-아이템-53-super로-부모-클래스-초기화하기" class="nav-link" data-scroll-target="#아이템-53-super로-부모-클래스-초기화하기">아이템 53: <code>super</code>로 부모 클래스 초기화하기</a></li>
   <li><a href="#아이템-54-믹스인-클래스로-기능-조합하기" id="toc-아이템-54-믹스인-클래스로-기능-조합하기" class="nav-link" data-scroll-target="#아이템-54-믹스인-클래스로-기능-조합하기">아이템 54: 믹스인 클래스로 기능 조합하기</a></li>
   <li><a href="#아이템-55-프라이빗-애트리뷰트보다-퍼블릭-애트리뷰트-사용하기" id="toc-아이템-55-프라이빗-애트리뷰트보다-퍼블릭-애트리뷰트-사용하기" class="nav-link" data-scroll-target="#아이템-55-프라이빗-애트리뷰트보다-퍼블릭-애트리뷰트-사용하기">아이템 55: 프라이빗 애트리뷰트보다 퍼블릭 애트리뷰트 사용하기</a></li>
@@ -1112,7 +1122,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#아이템-67-subprocess로-자식-프로세스-관리하기" id="toc-아이템-67-subprocess로-자식-프로세스-관리하기" class="nav-link" data-scroll-target="#아이템-67-subprocess로-자식-프로세스-관리하기">아이템 67: <code>subprocess</code>로 자식 프로세스 관리하기</a></li>
   </ul></li>
-  <li><a href="#chapter-10-견고함" id="toc-chapter-10-견고함" class="nav-link" data-scroll-target="#chapter-10-견고함">Chapter 10: 견고함</a></li>
+  <li><a href="#chapter-10-견고함" id="toc-chapter-10-견고함" class="nav-link" data-scroll-target="#chapter-10-견고함">Chapter 10: 견고함</a>
+  <ul class="collapse">
+  <li><a href="#else-블록" id="toc-else-블록" class="nav-link" data-scroll-target="#else-블록"><code>else</code> 블록</a></li>
+  </ul></li>
   <li><a href="#chapter-11-성능" id="toc-chapter-11-성능" class="nav-link" data-scroll-target="#chapter-11-성능">Chapter 11: 성능</a></li>
   <li><a href="#chapter-12-자료구조와-알고리즘이해요" id="toc-chapter-12-자료구조와-알고리즘이해요" class="nav-link" data-scroll-target="#chapter-12-자료구조와-알고리즘이해요">Chapter 12: 자료구조와 알고리즘이해요</a></li>
   <li><a href="#chapter-13-테스트와-디버깅" id="toc-chapter-13-테스트와-디버깅" class="nav-link" data-scroll-target="#chapter-13-테스트와-디버깅">Chapter 13: 테스트와 디버깅</a>
@@ -1121,6 +1134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#chapter-14-협업" id="toc-chapter-14-협업" class="nav-link" data-scroll-target="#chapter-14-협업">Chapter 14: 협업</a>
   <ul class="collapse">
+  <li><a href="#명령줄에서-venv-사용하기" id="toc-명령줄에서-venv-사용하기" class="nav-link" data-scroll-target="#명령줄에서-venv-사용하기">명령줄에서 <code>venv</code> 사용하기</a></li>
   <li><a href="#아이템-122-순환-의존성을-끊는-방법-알기" id="toc-아이템-122-순환-의존성을-끊는-방법-알기" class="nav-link" data-scroll-target="#아이템-122-순환-의존성을-끊는-방법-알기">아이템 122: 순환 의존성을 끊는 방법 알기</a></li>
   <li><a href="#아이템-123-리팩터링과-사용법-이전을-위해-warnings-활용하기" id="toc-아이템-123-리팩터링과-사용법-이전을-위해-warnings-활용하기" class="nav-link" data-scroll-target="#아이템-123-리팩터링과-사용법-이전을-위해-warnings-활용하기">아이템 123: 리팩터링과 사용법 이전을 위해 <code>warnings</code> 활용하기</a></li>
   <li><a href="#아이템-124-버그를-예방하려고-typing으로-정적-분석-고려하기" id="toc-아이템-124-버그를-예방하려고-typing으로-정적-분석-고려하기" class="nav-link" data-scroll-target="#아이템-124-버그를-예방하려고-typing으로-정적-분석-고려하기">아이템 124: 버그를 예방하려고 <code>typing</code>으로 정적 분석 고려하기</a></li>
@@ -1206,8 +1220,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>아이템 2: PEP 8 스타일 가이드를 따르세요</p>
 <p>Python Enhancement Proposal #8, 일명 PEP 8은 파이썬 코드를 어떻게 포맷할지에 대한 스타일 가이드예요. 문법만 맞으면 원하는 방식으로 파이썬 코드를 써도 돼요. 하지만 일관된 스타일을 쓰면 코드가 더 친근해지고 읽기 쉬워져요. 더 큰 파이썬 커뮤니티의 다른 프로그래머들과 공통 스타일을 공유하면 프로젝트 협업이 수월해져요. 코드를 읽을 사람이 나뿐이라고 해도 스타일 가이드를 따르면 나중에 변경하기가 쉬워지고 흔한 실수도 많이 피할 수 있어요.</p>
 <p>PEP 8은 명확한 파이썬 코드를 쓰는 법에 대한 풍부한 세부 사항을 담고 있어요. 파이썬 언어가 발전하면서 계속 업데이트되고 있어요. 온라인에서 전체 가이드를 읽어볼 만해요(<a href="https://www.python.org/dev/peps/pep-0008/">https://www.python.org/dev/peps/pep-0008/</a>). 꼭 지켜야 할 몇 가지 규칙을 소개할게요.</p>
-<section id="공백" class="level4">
-<h4 class="anchored" data-anchor-id="공백">공백</h4>
+<section id="공백" class="level3">
+<h3 class="anchored" data-anchor-id="공백">공백</h3>
 <p>파이썬에서는 공백이 문법적으로 중요해요. 파이썬 프로그래머는 공백이 코드 명확성에 미치는 영향에 특히 민감해요. 공백과 관련해 다음 지침을 따르세요.</p>
 <ul>
 <li>들여쓰기에는 탭 대신 공백을 사용하세요.</li>
@@ -1220,7 +1234,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>변수 대입에서 <code>=</code> 연산자 앞뒤에는 공백을 딱 한 칸씩만 넣으세요.</li>
 <li>타입 애너테이션에서는 변수 이름과 콜론 사이에 공백을 넣지 말고, 타입 정보 앞에는 공백을 넣으세요.</li>
 </ul>
-</section>
 <section id="네이밍" class="level4">
 <h4 class="anchored" data-anchor-id="네이밍">네이밍</h4>
 <p>PEP 8은 언어의 각 부분마다 고유한 네이밍 스타일을 제안해요. 이런 관례 덕분에 코드를 읽을 때 각 이름이 어떤 종류에 해당하는지 쉽게 구분할 수 있어요. 네이밍과 관련해 다음 지침을 따르세요.</p>
@@ -2181,6 +2194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
+</section>
 <section id="chapter-2-문자열과-슬라이싱" class="level2">
 <h2 class="anchored" data-anchor-id="chapter-2-문자열과-슬라이싱">Chapter 2: 문자열과 슬라이싱</h2>
 <p>파이썬은 처음에 명령줄 유틸리티를 엮고 입출력 데이터를 처리하는 스크립트 언어로 인기를 얻었어요. 문자열과 시퀀스 처리를 위한 내장 문법, 메서드, 모듈 덕분에 전통적인 셸이나 다른 스크립트 언어(예를 들어 Perl)를 대신할 매력적인 선택지였어요. 그 뒤로 파이썬은 주변 영역으로 계속 성장해서 텍스트 파싱, 구조화 데이터 생성, 파일 형식 살펴보기, 로그 분석 등에 이상적인 프로그래밍 언어가 됐어요.</p>
@@ -2354,8 +2368,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>아이템 11: C 스타일 포맷 문자열과 <code>str.format</code>보다 보간 f-스트링을 선호하세요</p>
 <p>문자열은 파이썬 코드베이스 곳곳에 있어요. 사용자 인터페이스와 명령줄 유틸리티에 메시지를 보여줄 때 써요. 파일과 소켓에 데이터를 쓸 때 써요. <code>Exception</code> 세부 정보에 뭐가 잘못됐는지 적을 때 써요(아이템 88: “트레이스백을 명확히 하려면 예외를 명시적으로 체이닝하세요” 참고). 로깅과 디버깅할 때 써요(아이템 12: “객체를 출력할 때 <code>repr</code>과 <code>str</code>의 차이점을 이해하세요” 참고).</p>
 <p><em>포매팅</em>은 미리 정해둔 텍스트와 데이터 값을 합쳐서 문자열로 저장된 사람이 읽기 쉬운 메시지 하나로 만드는 과정이에요. 파이썬에는 언어와 표준 라이브러리에 내장된 문자열 포매팅 방식이 네 가지 있어요. 그중 하나를 빼고는 이 아이템 뒤쪽에서 다루는데, 모두 알아두고 피해야 할 심각한 단점이 있어요.</p>
-<section id="c-스타일-포매팅" class="level4">
-<h4 class="anchored" data-anchor-id="c-스타일-포매팅">C 스타일 포매팅</h4>
+<section id="c-스타일-포매팅" class="level3">
+<h3 class="anchored" data-anchor-id="c-스타일-포매팅">C 스타일 포매팅</h3>
 <p>파이썬에서 문자열을 포맷하는 가장 흔한 방법은 <code>%</code> 포매팅 연산자를 쓰는 거예요. 연산자 왼쪽에는 <em>포맷 문자열</em>로 미리 정해진 텍스트 템플릿을 줘요. 연산자 오른쪽에는 템플릿에 넣을 값을 하나, 또는 여러 값의 <code>tuple</code>로 줘요. 예를 들어 여기서는 <code>%</code> 연산자로 읽기 어려운 이진수와 16진수 값을 정수 문자열로 바꿔요:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb116"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="bn">0b10111011</span></span>
 <span id="cb116-2"><a href="#cb116-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="bn">0xC5F</span></span>
@@ -2497,7 +2511,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb128-16"><a href="#cb128-16" aria-hidden="true" tabindex="-1"></a><span class="er">our special entrée is schnitzel.</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이 포매팅 표현식이 뭘 만들지 이해하려면 포맷 문자열 줄들과 딕셔너리 줄들을 눈이 계속 왔다 갔다 해야 해요. 이렇게 끊어져서 버그를 찾기 어렵고, 포매팅 전에 값을 살짝 고쳐야 하면 가독성은 더 나빠져요.</p>
 <p>더 좋은 방법이 있어야 해요.</p>
-</section>
 <section id="format-내장-함수와-str.format" class="level4">
 <h4 class="anchored" data-anchor-id="format-내장-함수와-str.format"><code>format</code> 내장 함수와 <code>str.format</code></h4>
 <p>파이썬 3에서는 <code>%</code> 연산자를 쓰는 옛 C 스타일 포맷 문자열보다 표현력이 좋은 <em>고급 문자열 포매팅</em>을 지원하기 시작했어요. 개별 파이썬 값에 대해서는 <code>format</code> 내장 함수로 이 새 기능을 쓸 수 있어요. 예를 들어 여기서는 새 옵션 일부(천 단위 구분자 <code>,</code>와 가운데 정렬 <code>^</code>)로 값을 포맷해요:</p>
@@ -3228,6 +3241,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </div>
+</section>
 </section>
 </section>
 <section id="chapter-3-루프와-이터레이터" class="level2">
@@ -3994,11 +4008,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>내장 모듈 <code>itertools</code>에는 이터레이터를 정리하고 상호작용하는 데 유용한 함수가 많이 들어 있어요 (배경 설명은 아이템 43: “리스트를 반환하는 대신 제너레이터를 고려하세요”와 아이템 21: “인수를 순회할 때는 방어적으로 코딩하세요” 참고):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb265"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb265-1"><a href="#cb265-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> itertools</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>까다로운 순회 코드를 다룰 때는 <code>itertools</code> 문서를 다시 보고 쓸 만한 게 있는지 확인해 볼 가치가 있어요 (<a href="https://docs.python.org/3/library/itertools.html">https://docs.python.org/3/library/itertools.html</a> 참고). 다음 섹션에서는 세 가지 주요 카테고리에서 알아야 할 가장 중요한 함수들을 설명해요.</p>
-<section id="이터레이터-연결하기" class="level4">
-<h4 class="anchored" data-anchor-id="이터레이터-연결하기">이터레이터 연결하기</h4>
+<section id="이터레이터-연결하기" class="level3">
+<h3 class="anchored" data-anchor-id="이터레이터-연결하기">이터레이터 연결하기</h3>
 <p>내장 모듈 <code>itertools</code>에는 이터레이터를 연결하는 함수가 여러 개 들어 있어요.</p>
-<section id="chain" class="level5">
-<h5 class="anchored" data-anchor-id="chain"><code>chain</code></h5>
+<section id="chain" class="level4">
+<h4 class="anchored" data-anchor-id="chain"><code>chain</code></h4>
 <p>여러 이터레이터를 하나의 순차 이터레이터로 합칠 때 <code>chain</code>을 사용하세요. 기본적으로 제공된 입력 이터레이터들을 하나의 아이템 이터레이터로 펼쳐요:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb266"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb266-1"><a href="#cb266-1" aria-hidden="true" tabindex="-1"></a>it <span class="op">=</span> itertools.chain([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
 <span id="cb266-2"><a href="#cb266-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(it))</span>
@@ -4014,7 +4028,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb267-6"><a href="#cb267-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb267-7"><a href="#cb267-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span></span>
 <span id="cb267-8"><a href="#cb267-8" aria-hidden="true" tabindex="-1"></a>[<span class="st">'aaa'</span>, <span class="st">'bbb'</span>, <span class="st">'ccc'</span>, <span class="st">'xx'</span>, <span class="st">'yy'</span>, <span class="st">'zz'</span>]</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
 <section id="repeat" class="level5">
 <h5 class="anchored" data-anchor-id="repeat"><code>repeat</code></h5>
 <p>단일 값을 계속 출력하거나 두 번째 선택 파라미터로 최대 횟수를 지정할 때 <code>repeat</code>을 사용하세요:</p>
@@ -4244,6 +4257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -7357,8 +7371,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>다만 파이썬의 방대한 객체 지향 기능은 특히 초보자에게 벅찰 수 있어요. 이런 기능을 더 쉽게 다가가게 하려고 파이썬은 다양한 내장 모듈을 제공하고 (아이템 57: “커스텀 컨테이너 타입에 <code>collections.abc</code> 클래스 상속하기” 참고), 커뮤니티 제작 패키지도 많아요 (<code>attrs</code>나 <code>pydantic</code> 같은 것들이 있어요—아이템 116: “커뮤니티 제작 모듈을 찾을 위치 알기” 참고).</p>
 <p>특히 유용한 내장 모듈 중 하나는 <code>dataclasses</code>인데, 클래스 정의에서 반복 코드를 크게 줄이는 데 쓸 수 있어요. 구현이 <code>exec</code>를 쓰는 방식이라 임포트 타임에 약간의 성능 오버헤드가 들지만 (아이템 91: “개발자 도구를 만들 때가 아니면 <code>exec</code>와 <code>eval</code> 피하기” 참고), 특히 애트리뷰트에 데이터를 저장하는 게 주목적인 메서드가 거의 없는 클래스에는 충분히 쓸 가치가 있어요.</p>
 <p><code>dataclasses</code>의 잠재적 장점은 각 기능을 직접 만들 때 얼마나 많은 노력이 드는지 생각해 보면 가장 분명해져요 (더 많은 예제는 아이템 56: “불변 객체 생성에 <code>dataclasses</code> 선호하기” 참고). 언젠가 더 많은 유연성이나 커스터마이징이 필요해서 <code>dataclasses</code>에서 벗어나 코드를 옮겨야 할 때를 대비해, 이런 흔한 객체 지향 관용구가 내부에서 어떻게 동작하는지 이해하는 것도 중요해요.</p>
-<section id="init__-보일러플레이트-피하기" class="level4">
-<h4 class="anchored" data-anchor-id="init__-보일러플레이트-피하기"><code>__init__</code> 보일러플레이트 피하기</h4>
+<section id="init__-보일러플레이트-피하기" class="level3">
+<h3 class="anchored" data-anchor-id="init__-보일러플레이트-피하기"><code>__init__</code> 보일러플레이트 피하기</h3>
 <p>객체로 가장 먼저 하는 일은 객체를 만드는 거예요. 클래스 이름을 함수 호출처럼 쓰면 객체를 생성하려고 <code>__init__</code> 특수 메서드가 호출돼요. 예를 들어 여기서는 RGB(빨강, 초록, 파랑) 색상 값을 저장하는 간단한 클래스를 정의해요:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb526"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb526-1"><a href="#cb526-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> RGB:</span>
 <span id="cb526-2"><a href="#cb526-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, red, green, blue):</span>
@@ -7416,7 +7430,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb532-5"><a href="#cb532-5" aria-hidden="true" tabindex="-1"></a>    red: Any</span>
 <span id="cb532-6"><a href="#cb532-6" aria-hidden="true" tabindex="-1"></a>    green: Any</span>
 <span id="cb532-7"><a href="#cb532-7" aria-hidden="true" tabindex="-1"></a>    blue: Any</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
 <section id="초기화-인수는-키워드로-전달하도록-요구하기" class="level4">
 <h4 class="anchored" data-anchor-id="초기화-인수는-키워드로-전달하도록-요구하기">초기화 인수는 키워드로 전달하도록 요구하기</h4>
 <p><code>__init__</code>에는 다른 함수 호출처럼 인수를 넘겨요. 즉 위치 인수와 키워드 인수가 모두 허용돼요 (배경은 아이템 35: “키워드 인수로 선택적 동작 제공하기” 참고). 예를 들어 여기서는 <code>RGB</code> 클래스를 세 가지 방식으로 초기화해요:</p>
@@ -7911,6 +7924,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </div>
+</section>
 </section>
 <section id="아이템-53-super로-부모-클래스-초기화하기" class="level3">
 <h3 class="anchored" data-anchor-id="아이템-53-super로-부모-클래스-초기화하기">아이템 53: <code>super</code>로 부모 클래스 초기화하기</h3>
@@ -12925,8 +12939,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>이렇게 유용한 파이썬 프로그램을 만들었다면, 다음으로 중요한 단계는 코드를 <em>제품화</em>해서 빈틈없게 만드는 거예요. 예상치 못한 상황을 만났을 때 프로그램이 믿음직하게 동작하도록 만드는 일은, 기능이 올바르게 동작하도록 만드는 일만큼 중요해요. 파이썬에는 다양한 상황에서 프로그램이 견고해지도록 단단하게 만들어 주는 내장 기능과 모듈이 있어요.</p>
 <p>아이템 80: <code>try</code>/<code>except</code>/<code>else</code>/<code>finally</code>의 각 블록을 활용하세요</p>
 <p>파이썬에서 예외 처리를 할 때 동작을 넣을 수 있는 시점은 <code>try</code>, <code>except</code>, <code>else</code>, <code>finally</code> 블록으로 네 가지가 있어요. 각 블록은 복합 문장에서 고유한 역할을 하고, 이 블록들의 다양한 조합이 유용해요 (또 다른 예는 아이템 121: “호출자를 API로부터 보호하기 위해 루트 <code>Exception</code>을 정의하세요” 참고).</p>
-<section id="finally-블록" class="level4">
-<h4 class="anchored" data-anchor-id="finally-블록"><code>finally</code> 블록</h4>
 <p>예외는 위로 전파되게 하면서, 예외가 발생해도 정리 코드를 실행하고 싶을 때는 <code>try</code>/<code>finally</code>를 사용하세요. <code>try</code>/<code>finally</code>의 흔한 용법 중 하나는 파일 핸들을 안정적으로 닫는 거예요 (아마 더 좋은 접근 방식은 아이템 82: “재사용 가능한 <code>try</code>/<code>finally</code> 동작을 위해 <code>contextlib</code>과 <code>with</code> 문을 고려하세요” 참고):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb931"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb931-1"><a href="#cb931-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> try_finally_example(filename):</span>
 <span id="cb931-2"><a href="#cb931-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"* Opening file"</span>)</span>
@@ -12960,9 +12972,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb933-5"><a href="#cb933-5" aria-hidden="true" tabindex="-1"></a>Traceback ...</span>
 <span id="cb933-6"><a href="#cb933-6" aria-hidden="true" tabindex="-1"></a><span class="pp">FileNotFoundError</span>: [Errno <span class="dv">2</span>] No such <span class="bu">file</span> <span class="kw">or</span> directory:</span>
 <span id="cb933-7"><a href="#cb933-7" aria-hidden="true" tabindex="-1"></a><span class="co">'does_not_exist.txt'</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="else-블록" class="level4">
-<h4 class="anchored" data-anchor-id="else-블록"><code>else</code> 블록</h4>
+<section id="else-블록" class="level3">
+<h3 class="anchored" data-anchor-id="else-블록"><code>else</code> 블록</h3>
 <p>내 코드가 처리할 예외가 뭔지, 위로 전파될 예외가 뭔지 분명하게 하려면 <code>try</code>/<code>except</code>/<code>else</code>를 사용하세요. <code>try</code> 블록에서 예외가 발생하지 않으면 <code>else</code> 블록이 실행돼요. <code>else</code> 블록은 <code>try</code> 블록 안의 코드 양을 줄여 줘서, 예외 원인을 격리하기 좋고 가독성도 좋아져요 (아이템 83: “항상 <code>try</code> 블록을 최대한 짧게 만드세요” 참고). 예를 들어, 문자열에서 JSON 딕셔너리 데이터를 읽어 와서 그 안에 있는 키 값을 반환하고 싶다고 해볼게요:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb934"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb934-1"><a href="#cb934-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
 <span id="cb934-2"><a href="#cb934-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -13004,7 +13015,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb937-5"><a href="#cb937-5" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Looking up key</span>
 <span id="cb937-6"><a href="#cb937-6" aria-hidden="true" tabindex="-1"></a>Traceback ...</span>
 <span id="cb937-7"><a href="#cb937-7" aria-hidden="true" tabindex="-1"></a><span class="pp">KeyError</span>: <span class="st">'does not exist'</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
 <section id="모든-것을-함께-사용하기" class="level4">
 <h4 class="anchored" data-anchor-id="모든-것을-함께-사용하기">모든 것을 함께 사용하기</h4>
 <p>하나의 복합 문장에서 모든 걸 다 하고 싶을 때는 <code>try</code>/<code>except</code>/<code>else</code>/<code>finally</code>를 사용하세요. 예를 들어, 파일에서 해야 할 작업 설명을 읽어 와서 처리한 뒤, 그 파일을 제자리에서 업데이트하고 싶다고 해볼게요. 여기서는 파일을 읽고 처리하는 데 <code>try</code> 블록을, <code>try</code> 블록에서 예상되는 예외를 처리하는 데 <code>except</code> 블록을, 파일을 제자리에서 업데이트하고 관련 예외는 위로 전파되게 하는 데 <code>else</code> 블록을, 파일 핸들을 정리하는 데 <code>finally</code> 블록을 사용해요:</p>
@@ -14457,6 +14467,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </div>
+</section>
 </section>
 </section>
 <section id="chapter-11-성능" class="level2">
@@ -18165,8 +18176,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>이런 문제를 모두 해결해주는 도구가 바로 <em>가상 환경</em>을 제공하는 <code>venv</code>예요. 파이썬 3.4부터는 파이썬 설치와 함께 기본적으로 <code>pip</code>과 <code>venv</code> 모듈을 사용할 수 있어요(<code>python -m venv</code>로 접근할 수 있어요).</p>
 <p><code>venv</code>를 사용하면 격리된 버전의 파이썬 환경을 만들 수 있어요. <code>venv</code>를 쓰면 충돌 없이 같은 컴퓨터에 같은 패키지의 여러 가지 다른 버전을 동시에 설치할 수 있어요. 그래서 같은 컴퓨터에서 여러 가지 다른 프로젝트와 도구를 함께 작업할 수 있어요.</p>
 <p><code>venv</code>는 패키지와 그 의존성의 명시적인 버전을 완전히 분리된 디렉터리 구조에 설치해서 이렇게 해줘요. 그래서 여러분의 코드와 잘 맞는다고 아는 파이썬 환경을 재현할 수 있어요. 예상치 못한 깨짐을 피하는 믿을 만한 방법이에요.</p>
-<section id="명령줄에서-venv-사용하기" class="level4">
-<h4 class="anchored" data-anchor-id="명령줄에서-venv-사용하기">명령줄에서 <code>venv</code> 사용하기</h4>
+<section id="명령줄에서-venv-사용하기" class="level3">
+<h3 class="anchored" data-anchor-id="명령줄에서-venv-사용하기">명령줄에서 <code>venv</code> 사용하기</h3>
 <p><code>venv</code>를 효과적으로 사용하는 방법을 간단히 살펴볼게요. 도구를 사용하기 전에 시스템의 <code>python3</code> 명령줄이 무엇을 뜻하는지 아는 게 중요해요. 제 컴퓨터에서는 <code>python3</code>이 <code>/usr/local/bin</code> 디렉터리에 있고 버전 3.13으로 확인돼요(아이템 1: “사용 중인 파이썬 버전을 알아두세요” 참고):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1278"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1278-1"><a href="#cb1278-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> which python3</span>
 <span id="cb1278-2"><a href="#cb1278-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/usr/local/bin/python3</span></span>
@@ -18217,7 +18228,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1288-4"><a href="#cb1288-4" aria-hidden="true" tabindex="-1"></a>$ which python3</span>
 <span id="cb1288-5"><a href="#cb1288-5" aria-hidden="true" tabindex="-1"></a><span class="op">/</span>usr<span class="op">/</span>local<span class="op">/</span><span class="bu">bin</span><span class="op">/</span>python3</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>myproject</code> 환경에서 다시 작업하고 싶으면 예전처럼 디렉터리에서 <code>source bin/activate</code>(윈도우에서는 비슷한 명령)를 실행하면 돼요.</p>
-</section>
 <section id="의존성-재현하기" class="level4">
 <h4 class="anchored" data-anchor-id="의존성-재현하기">의존성 재현하기</h4>
 <p>가상 환경에 들어간 뒤에는 필요에 따라 <code>pip</code>으로 계속 패키지를 설치할 수 있어요. 언젠가는 환경을 다른 곳에 복사하고 싶어질 수도 있어요. 예를 들어 워크스테이션의 개발 환경을 데이터센터의 서버에 그대로 재현하고 싶다고 해볼게요. 아니면 동료의 환경을 제 컴퓨터에 복제해서 동료의 코드를 디버깅하고 싶을 수도 있어요. <code>venv</code>를 쓰면 이런 작업이 쉬워요.</p>
@@ -18775,6 +18785,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </div>
+</section>
 </section>
 <section id="아이템-122-순환-의존성을-끊는-방법-알기" class="level3">
 <h3 class="anchored" data-anchor-id="아이템-122-순환-의존성을-끊는-방법-알기">아이템 122: 순환 의존성을 끊는 방법 알기</h3>

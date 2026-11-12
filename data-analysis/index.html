@@ -1117,10 +1117,12 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#제1권-데이터-분석의-기초" id="toc-제1권-데이터-분석의-기초" class="nav-link active" data-scroll-target="#제1권-데이터-분석의-기초">제1권: 데이터 분석의 기초</a></li>
+  <li><a href="#제1권-데이터-분석의-기초" id="toc-제1권-데이터-분석의-기초" class="nav-link active" data-scroll-target="#제1권-데이터-분석의-기초">제1권: 데이터 분석의 기초</a>
+  <ul class="collapse">
   <li><a href="#제2권-데이터-분석을-위한-회귀-기법" id="toc-제2권-데이터-분석을-위한-회귀-기법" class="nav-link" data-scroll-target="#제2권-데이터-분석을-위한-회귀-기법">제2권: 데이터 분석을 위한 회귀 기법</a></li>
   <li><a href="#제3권-고급-모델링과-데이터-당면-과제" id="toc-제3권-고급-모델링과-데이터-당면-과제" class="nav-link" data-scroll-target="#제3권-고급-모델링과-데이터-당면-과제">제3권: 고급 모델링과 데이터 당면 과제</a></li>
   <li><a href="#제4권-실험-설계" id="toc-제4권-실험-설계" class="nav-link" data-scroll-target="#제4권-실험-설계">제4권: 실험 설계</a></li>
+  </ul></li>
   <li><a href="#서론" id="toc-서론" class="nav-link" data-scroll-target="#서론">서론</a>
   <ul class="collapse">
   <li><a href="#일반적인-권장-사항" id="toc-일반적인-권장-사항" class="nav-link" data-scroll-target="#일반적인-권장-사항">일반적인 권장 사항</a>
@@ -1148,6 +1150,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#표준편차-sigma는-다음과-같이-주어진다" id="toc-표준편차-sigma는-다음과-같이-주어진다" class="nav-link" data-scroll-target="#표준편차-sigma는-다음과-같이-주어진다">표준편차 <span class="math inline">\(\sigma\)</span>는 다음과 같이 주어진다:</a>
   <ul class="collapse">
+  <li><a href="#다변량-확률변수" id="toc-다변량-확률변수" class="nav-link" data-scroll-target="#다변량-확률변수">다변량 확률변수</a></li>
   <li><a href="#적률생성함수" id="toc-적률생성함수" class="nav-link" data-scroll-target="#적률생성함수">적률생성함수</a></li>
   <li><a href="#적률" id="toc-적률" class="nav-link" data-scroll-target="#적률">적률</a></li>
   <li><a href="#왜도" id="toc-왜도" class="nav-link" data-scroll-target="#왜도">왜도</a></li>
@@ -1225,8 +1228,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#단순회귀기본-모델" id="toc-단순회귀기본-모델" class="nav-link" data-scroll-target="#단순회귀기본-모델">단순회귀(기본) 모델</a></li>
   </ul></li>
-  <li><a href="#non-linear-regression" id="toc-non-linear-regression" class="nav-link" data-scroll-target="#non-linear-regression">비선형 회귀</a></li>
-  <li><a href="#본질적-비선형-모델" id="toc-본질적-비선형-모델" class="nav-link" data-scroll-target="#본질적-비선형-모델">본질적 비선형 모델</a>
+  <li><a href="#non-linear-regression" id="toc-non-linear-regression" class="nav-link" data-scroll-target="#non-linear-regression">비선형 회귀</a>
   <ul class="collapse">
   <li><a href="#예시-지수-성장-모델" id="toc-예시-지수-성장-모델" class="nav-link" data-scroll-target="#예시-지수-성장-모델">예시: 지수 성장 모델</a></li>
   </ul></li>
@@ -1260,9 +1262,6 @@ window.Quarto = {
   <li><a href="#설명변수가-투입되는-두-가지-방식" id="toc-설명변수가-투입되는-두-가지-방식" class="nav-link" data-scroll-target="#설명변수가-투입되는-두-가지-방식">설명변수가 투입되는 두 가지 방식</a></li>
   <li><a href="#nnet과-mlogit을-활용한-추정" id="toc-nnet과-mlogit을-활용한-추정" class="nav-link" data-scroll-target="#nnet과-mlogit을-활용한-추정">nnet과 mlogit을 활용한 추정</a></li>
   <li><a href="#지불용의액과-소비자-잉여" id="toc-지불용의액과-소비자-잉여" class="nav-link" data-scroll-target="#지불용의액과-소비자-잉여">지불용의액과 소비자 잉여</a></li>
-  </ul></li>
-  <li><a href="#무관한-대안의-독립성" id="toc-무관한-대안의-독립성" class="nav-link" data-scroll-target="#무관한-대안의-독립성">무관한 대안의 독립성</a>
-  <ul class="collapse">
   <li><a href="#iia-속성과-그에-대한-비판" id="toc-iia-속성과-그에-대한-비판" class="nav-link" data-scroll-target="#iia-속성과-그에-대한-비판">IIA 속성과 그에 대한 비판</a></li>
   <li><a href="#iia-검정-하우스만과-맥패든" id="toc-iia-검정-하우스만과-맥패든" class="nav-link" data-scroll-target="#iia-검정-하우스만과-맥패든">IIA 검정: 하우스만과 맥패든</a></li>
   </ul></li>
@@ -2328,9 +2327,6 @@ window.Quarto = {
   <li><a href="#가중치-추정대상-밀도비-관점" id="toc-가중치-추정대상-밀도비-관점" class="nav-link" data-scroll-target="#가중치-추정대상-밀도비-관점">가중치, 추정대상, 밀도비 관점</a></li>
   <li><a href="#중첩-가중치" id="toc-중첩-가중치" class="nav-link" data-scroll-target="#중첩-가중치">중첩 가중치</a></li>
   <li><a href="#간단한-시뮬레이션" id="toc-간단한-시뮬레이션" class="nav-link" data-scroll-target="#간단한-시뮬레이션">간단한 시뮬레이션</a></li>
-  </ul></li>
-  <li><a href="#매칭과-회귀의-비교" id="toc-매칭과-회귀의-비교" class="nav-link" data-scroll-target="#매칭과-회귀의-비교">매칭과 회귀의 비교</a>
-  <ul class="collapse">
   <li><a href="#매칭-추정대상" id="toc-매칭-추정대상" class="nav-link" data-scroll-target="#매칭-추정대상">매칭 추정대상</a></li>
   <li><a href="#회귀-추정대상" id="toc-회귀-추정대상" class="nav-link" data-scroll-target="#회귀-추정대상">회귀 추정대상</a></li>
   <li><a href="#요약-표-매칭과-회귀" id="toc-요약-표-매칭과-회귀" class="nav-link" data-scroll-target="#요약-표-매칭과-회귀">요약 표: 매칭과 회귀</a></li>
@@ -2362,6 +2358,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-panel-matching" id="toc-sec-panel-matching" class="nav-link" data-scroll-target="#sec-panel-matching">시계열 횡단면 자료를 위한 패널 매칭</a>
   <ul class="collapse">
+  <li><a href="#매칭-집합" id="toc-매칭-집합" class="nav-link" data-scroll-target="#매칭-집합">매칭 집합</a></li>
   <li><a href="#복제-민주화와-경제-성장" id="toc-복제-민주화와-경제-성장" class="nav-link" data-scroll-target="#복제-민주화와-경제-성장">복제: 민주화와 경제 성장</a></li>
   <li><a href="#공변량-균형-및-twfe와의-비교" id="toc-공변량-균형-및-twfe와의-비교" class="nav-link" data-scroll-target="#공변량-균형-및-twfe와의-비교">공변량 균형 및 TWFE와의 비교</a></li>
   <li><a href="#확장-정제-방법-선택-및-강건성" id="toc-확장-정제-방법-선택-및-강건성" class="nav-link" data-scroll-target="#확장-정제-방법-선택-및-강건성">확장: 정제 방법 선택 및 강건성</a></li>
@@ -2373,7 +2370,6 @@ window.Quarto = {
   </ul></li>
   <li><a href="#이중-및-편향-제거-머신러닝" id="toc-이중-및-편향-제거-머신러닝" class="nav-link" data-scroll-target="#이중-및-편향-제거-머신러닝">이중 및 편향 제거 머신러닝</a>
   <ul class="collapse">
-  <li><a href="#neyman-직교-점수" id="toc-neyman-직교-점수" class="nav-link" data-scroll-target="#neyman-직교-점수">Neyman 직교 점수</a></li>
   <li><a href="#교차-적합" id="toc-교차-적합" class="nav-link" data-scroll-target="#교차-적합">교차 적합</a></li>
   <li><a href="#부분-선형-모형과-상호작용-모형" id="toc-부분-선형-모형과-상호작용-모형" class="nav-link" data-scroll-target="#부분-선형-모형과-상호작용-모형">부분 선형 모형과 상호작용 모형</a></li>
   <li><a href="#실행-가능한-부분-선형-예제" id="toc-실행-가능한-부분-선형-예제" class="nav-link" data-scroll-target="#실행-가능한-부분-선형-예제">실행 가능한 부분 선형 예제</a></li>
@@ -2939,8 +2935,8 @@ window.Quarto = {
 <p>이 책은 통계학, 계량경제학, 데이터 과학을 처음 접하는 입문자부터, 이 분야에 관심을 두고 더 깊은 지식을 쌓고자 하는 모든 분을 위해 쓰였다. 저자의 주 연구 분야는 마케팅이지만 이 책에서 다루는 원리와 방법론은 과학적 연구 방법이나 데이터 분석을 활용하는 모든 학문과 실무 영역에 두루 적용할 수 있다.</p>
 <p>데이터 분석과 인과추론이라는 매력적인 분야에 첫발을 내딛는 예비 통계학자, 계량경제학자, 데이터 과학자 독자에게 이 책이 든든한 길잡이가 되기를 바란다.</p>
 <p>인용 방법</p>
-<section id="제1권-데이터-분석의-기초" class="level3">
-<h3 class="anchored" data-anchor-id="제1권-데이터-분석의-기초">제1권: 데이터 분석의 기초</h3>
+<section id="제1권-데이터-분석의-기초" class="level2">
+<h2 class="anchored" data-anchor-id="제1권-데이터-분석의-기초">제1권: 데이터 분석의 기초</h2>
 <ol type="1">
 <li>APA (제7판)</li>
 </ol>
@@ -2966,7 +2962,6 @@ window.Quarto = {
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  doi       <span class="ot">=</span> {<span class="fl">10.1007</span><span class="sc">/</span><span class="dv">978-3-032-01858-8</span>},</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  url       <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>doi.org<span class="sc">/</span><span class="fl">10.1007</span><span class="sc">/</span><span class="dv">978-3-032-01858-8</span>}</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
 <section id="제2권-데이터-분석을-위한-회귀-기법" class="level3">
 <h3 class="anchored" data-anchor-id="제2권-데이터-분석을-위한-회귀-기법">제2권: 데이터 분석을 위한 회귀 기법</h3>
 <ol type="1">
@@ -3050,6 +3045,7 @@ window.Quarto = {
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  isbn      <span class="ot">=</span> {<span class="dv">978-3-032-01838-0</span>},</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  url       <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>link.springer.com<span class="sc">/</span>book<span class="sc">/</span><span class="dv">9783032018380</span>}</span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
 </section>
 <section id="서론" class="level1">
 <h1>서론</h1>
@@ -3996,8 +3992,8 @@ Avar(.) \neq \lim_{n \to \infty} Var(.)
 <p><span class="math display">\[
 \sigma = \sqrt{\sigma^2} = \sqrt{\text{Var}(X)}.
 \]</span></p>
-<section id="다변량-확률변수" class="level4">
-<h4 class="anchored" data-anchor-id="다변량-확률변수">다변량 확률변수</h4>
+<section id="다변량-확률변수" class="level3">
+<h3 class="anchored" data-anchor-id="다변량-확률변수">다변량 확률변수</h3>
 <p><span class="math inline">\(y_1, \dots, y_p\)</span>를 평균이 <span class="math inline">\(\mu_1, \dots, \mu_p\)</span>인 확률변수들이라고 하겠다. 그러면:</p>
 <p><span class="math display">\[
 \mathbf{y} = \begin{bmatrix}
@@ -4032,7 +4028,6 @@ y_p
 <li>대각합(Trace): <span class="math inline">\(\text{tr}(\mathbf{\Sigma}) = \lambda_1 + \dots + \lambda_p = \sigma_{11} + \dots+ \sigma_{pp} = \sum \sigma_{ii}\)</span> = 분산의 합 (총분산, total variance).</li>
 </ol>
 <p>참고: <span class="math inline">\(\mathbf{\Sigma}\)</span>는 양의 정부호(positive definite)여야 한다. 이는 모든 고윳값이 양수이며 <span class="math inline">\(\mathbf{\Sigma}^{-1}\mathbf{\Sigma}= \mathbf{I}_{p \times p} = \mathbf{\Sigma}\mathbf{\Sigma}^{-1}\)</span>를 만족하는 역행렬 <span class="math inline">\(\mathbf{\Sigma}^{-1}\)</span>가 존재함을 의미한다.</p>
-</section>
 <section id="상관행렬" class="level4">
 <h4 class="anchored" data-anchor-id="상관행렬">상관행렬</h4>
 <p>상관계수 <span class="math inline">\(\rho_{ij}\)</span>와 상관행렬 <span class="math inline">\(\mathbf{R}\)</span>은 다음과 같이 정의된다:</p>
@@ -4054,6 +4049,7 @@ y_p
 <li><span class="math inline">\(\text{Var}(\mathbf{A}\mathbf{y} + \mathbf{c}) = \mathbf{A}\Sigma_y\mathbf{A}'\)</span>.</li>
 <li><span class="math inline">\(\text{Cov}(\mathbf{Ay + c, By + d}) = \mathbf{A \Sigma_y B'}\)</span>.</li>
 </ul>
+</section>
 </section>
 <section id="적률생성함수" class="level3">
 <h3 class="anchored" data-anchor-id="적률생성함수">적률생성함수</h3>
@@ -12066,9 +12062,6 @@ s_i = a \bar{Y}_i^{\lambda}.
 <li>국소 선형 모델 또는 기저 함수 집합(Collections of locally linear models or basis functions, 예: 스플라인)</li>
 </ul>
 <p>이러한 접근법들은 데이터를 근사할 수 있지만 해석력 저하 문제를 겪거나 데이터가 희소할 때 일반화가 잘 되지 않을 수 있다. 따라서 본질적 비선형 모델(intrinsically non-linear models)이 선호되는 경우가 많다.</p>
-</section>
-<section id="본질적-비선형-모델" class="level2">
-<h2 class="anchored" data-anchor-id="본질적-비선형-모델">본질적 비선형 모델</h2>
 <p>본질적 비선형 회귀 모델의 일반적인 형태는 다음과 같다:</p>
 <p><span class="math display">\[
 Y_i = f(\mathbf{x}_i; \mathbf{\theta}) + \epsilon_i
@@ -13822,9 +13815,6 @@ E\Bigl(\max_j U_{ij}\Bigr) = \ln \sum_{j=1}^J e^{V_{ij}} + C,
 \]</span></p>
 <p>따라서 특정 대안의 자체 속성이 개선되면 해당 대안의 선택 확률이 증가하고 모든 경쟁 대안의 확률은 비례적으로 감소한다. 이러한 비례성이 바로 다음에 살펴볼 무관한 대안의 독립성(IIA) 속성이다.</p>
 </section>
-</section>
-<section id="무관한-대안의-독립성" class="level2">
-<h2 class="anchored" data-anchor-id="무관한-대안의-독립성">무관한 대안의 독립성</h2>
 <section id="iia-속성과-그에-대한-비판" class="level3">
 <h3 class="anchored" data-anchor-id="iia-속성과-그에-대한-비판">IIA 속성과 그에 대한 비판</h3>
 <p>모든 i.i.d. 로짓 모형에서 두 대안의 선택 확률 비율은 제3의 대안의 존재나 속성과 무관하게 오직 해당 두 대안에 의해서만 결정된다.</p>
@@ -18525,15 +18515,14 @@ y_t = \lambda_{s_t}\, y_{t-1} + \beta_{s_t}\, x_t + \varepsilon_t, \qquad \varep
 </ul>
 <p>결측치 대체의 목적</p>
 <p>결측치 대체(Imputation) 방법의 유용성은 분석의 목표가 <em>추론/설명(inference/explanation)</em>인지 <em>예측(prediction)</em>인지에 따라 크게 다르다. 각 목표는 결측 데이터 메커니즘에 대한 편향, 분산 및 가정에 대한 허용 오차와 우선순위가 다르다:</p>
-<section id="추론설명" class="level5">
-<h5 class="anchored" data-anchor-id="추론설명">추론/설명</h5>
+<section id="추론설명" class="level4">
+<h4 class="anchored" data-anchor-id="추론설명">추론/설명</h4>
 <p>인과 추론이나 설명적 분석에서 주된 목표는 유효한 통계적 추론을 보장하는 것이며 매개변수의 비편향 추정과 불확실성의 정확한 표현을 강조한다. 결측 데이터의 처리는 결측 데이터 이면의 메커니즘에 대한 가정, 즉 완전 무작위 결측(MCAR), 무작위 결측(MAR) 또는 비무작위 결측(MNAR)과 밀접하게 일치해야 한다:</p>
 <ul>
 <li><p>편향 민감도(Bias Sensitivity): 추론 분석은 대체된 데이터가 변수 간 관계의 무결성을 보존하도록 요구한다. 잘못 실행된 결측치 대체(Imputation)는 결측값을 표면적으로 해결하더라도 편향을 유발할 수 있다.</p></li>
 <li><p>분산 및 신뢰 구간: 추론의 경우 표준 오차, 신뢰 구간 및 검정 통계량의 품질이 매우 중요하다. 순진한 대체 방법(예: 평균 대체)은 종종 결측으로 인한 불확실성을 적절히 반영하지 못하여 매개변수 추정치에 대한 과신을 초래한다.</p></li>
 <li><p>메커니즘 고려사항: 다중 대체(Multiple Imputation, MI)와 같은 결측치 대체(Imputation) 방법은 결측 데이터의 불확실성을 설명하면서 관측된 데이터 분포와 일치하는 값을 생성하려고 시도한다. 그러나 다중 대체의 성능은 MAR 가정의 타당성에 크게 좌우된다. 결측 메커니즘이 비무작위 결측(MNAR)이고 적절히 다루어지지 않으면 대체된 데이터가 편향된 매개변수 추정치를 산출하여 추론의 목적을 훼손할 수 있다.</p></li>
 </ul>
-</section>
 <section id="예측" class="level5">
 <h5 class="anchored" data-anchor-id="예측">예측</h5>
 <p>예측 모델링에서 주된 목표는 모델의 정확도를 극대화하는 것이다(예: 연속형 결과에 대한 평균 제곱 오차 최소화 또는 분류 정확도 최대화). 여기서 초점은 편향 없는 매개변수 추정치를 보장하는 것보다 예측 성능을 최적화하는 데 맞춰진다:</p>
@@ -18551,6 +18540,7 @@ y_t = \lambda_{s_t}\, y_{t-1} + \beta_{s_t}\, x_t + \varepsilon_t, \qquad \varep
 <li><p>추론/설명: 주된 관심사는 유효한 통계적 추론이며 편향된 추정치는 허용되지 않는다. 결측치 대체(Imputation)는 기저에 있는 결측 데이터 메커니즘을 적절하게 다루지 못할 수 있기 때문에가 목적에 대해는 종종 유용성이 제한된다 <span class="citation" data-cites="Rubin_1996">[@Rubin_1996]</span>.</p></li>
 <li><p>예측: 결측치 대체(Imputation)는 불완전한 케이스로 인한 정보 손실을 줄여주므로 예측 모델링에서 더 유용할 수 있다. 관측된 데이터를 활용함으로써 결측치 대체(Imputation)는 표준 오차를 낮추고 모델의 정확도를 향상시킬 수 있다.</p></li>
 </ul>
+</section>
 </section>
 </section>
 <section id="통계-모델링에서-결측-데이터-처리의-중요성" class="level3">
@@ -19035,8 +19025,8 @@ c &amp; \text{if data are missing}
 <h3 class="anchored" data-anchor-id="단일-대체-기법">단일 대체 기법</h3>
 <p>단일 대체 방법(Single imputation methods)은 결측 데이터를 단일 값으로 대체하여 표준 기법을 사용해 분석할 수 있는 완전한 데이터셋을 생성한다. 편리하지만 단일 대체는 일반적으로 변동성을 과소평가하고 결과에 편향을 일으킬 위험이 있다.</p>
 <p>결정론적 방법</p>
-<section id="평균-중앙값-최빈값-대체" class="level5">
-<h5 class="anchored" data-anchor-id="평균-중앙값-최빈값-대체">평균, 중앙값, 최빈값 대체</h5>
+<section id="평균-중앙값-최빈값-대체" class="level4">
+<h4 class="anchored" data-anchor-id="평균-중앙값-최빈값-대체">평균, 중앙값, 최빈값 대체</h4>
 <p>이 방법은 결측값을 관측된 데이터의 평균, 중앙값 또는 최빈값으로 대체한다.</p>
 <p>장점 (Advantages):</p>
 <ul>
@@ -19049,7 +19039,6 @@ c &amp; \text{if data are missing}
 <li>표준 오차 과소평가: 지나치게 낙관적인 결론과 제1종 오류의 위험 증가를 초래한다.</li>
 <li>무시되는 종속 구조: 특징 간의 종속성을 포착하지 못하므로 고차원 데이터에서 특히 문저자가 된다.</li>
 </ul>
-</section>
 <section id="전방-및-후방-채우기-시계열-환경" class="level5">
 <h5 class="anchored" data-anchor-id="전방-및-후방-채우기-시계열-환경">전방 및 후방 채우기 (시계열 환경)</h5>
 <p>시계열 분석에서 사용되는이 방법은 이전 값(전방 채우기, forward filling) 또는 다음 값(후방 채우기, backward filling)을 사용하여 결측값을 대체한다.</p>
@@ -19063,6 +19052,7 @@ c &amp; \text{if data are missing}
 <li>결측이 긴 간격에 걸쳐 있거나 체계적으로 발생하는 경우 편향된다.</li>
 <li>기저 프로세스의 추세나 변화를 포착할 수 없다.</li>
 </ul>
+</section>
 </section>
 <section id="통계적-예측-모델" class="level4">
 <h4 class="anchored" data-anchor-id="통계적-예측-모델">통계적 예측 모델</h4>
@@ -19852,8 +19842,8 @@ x_{ij} &amp; \text{if } (i,j) \in \mathcal{O} \\
 <section id="머신-러닝과-최신-접근법" class="level3">
 <h3 class="anchored" data-anchor-id="머신-러닝과-최신-접근법">머신 러닝과 최신 접근법</h3>
 <p>트리 기반 방법</p>
-<section id="랜덤-포레스트-대체" class="level5">
-<h5 class="anchored" data-anchor-id="랜덤-포레스트-대체">랜덤 포레스트 대체</h5>
+<section id="랜덤-포레스트-대체" class="level4">
+<h4 class="anchored" data-anchor-id="랜덤-포레스트-대체">랜덤 포레스트 대체</h4>
 <p>랜덤 포레스트 대체(Random Forest Imputation)는 반복적인 프로세스를 사용하여 한 번에 한 변수의 결측치를 예측하며 다른 변수들을 예측 변수(predictors)로 취급한다. 이 과정은 수렴할 때까지 계속된다.</p>
 <ul>
 <li>수학적 프레임워크 (Mathematical Framework):</li>
@@ -19872,7 +19862,6 @@ x_{ij} &amp; \text{if } (i,j) \in \mathcal{O} \\
 <li>대규모 데이터셋에서는 계산 집약적이다.</li>
 <li>데이터 관계의 품질에 민감하다.</li>
 </ul>
-</section>
 <section id="그래디언트-부스팅-머신" class="level5">
 <h5 class="anchored" data-anchor-id="그래디언트-부스팅-머신">그래디언트 부스팅 머신</h5>
 <p>그래디언트 부스팅 머신은 손실 함수(loss functions)를 최소화하기 위해 모델을 반복적으로 구축한다. 대체(Imputation)를 위해, 결측치를 예측해야 할 타겟 변수로 취급한다.</p>
@@ -19888,6 +19877,7 @@ L = \sum_{i=1}^n \ell(y_i, f(x_i)),
 <li><p>과적합(Overfitting) 위험.</p></li>
 <li><p>신중한 하이퍼파라미터 튜닝 필요.</p></li>
 </ul>
+</section>
 </section>
 <section id="신경망-기반-대체" class="level4">
 <h4 class="anchored" data-anchor-id="신경망-기반-대체">신경망 기반 대체</h4>
@@ -22102,8 +22092,8 @@ P(Y \mid X) \ne P(Y) \text{이면 } X\text{가 } Y\text{의 원인이다.}
 <p>실제 비즈니스 예제를 통해가 역설을 살펴본다.</p>
 <p>시나리오: 마케팅 캠페인 성과</p>
 <p>어떤 기업이 신규 고객을 유치하기 위해 캠페인 A와 캠페인 B라는 두 가지 마케팅 캠페인을 운영하고 있다고 가정해 본다. 어느 캠페인의 전환율이 더 높은지 분석한다.</p>
-<section id="단계-데이터-생성" class="level5">
-<h5 class="anchored" data-anchor-id="단계-데이터-생성">1단계: 데이터 생성</h5>
+<section id="단계-데이터-생성" class="level4">
+<h4 class="anchored" data-anchor-id="단계-데이터-생성">1단계: 데이터 생성</h4>
 <p>두 개의 서로 다른 고객 세그먼트에 대한 전환율을 시뮬레이션한다:</p>
 <ol type="1">
 <li>고가치(High-Value) 고객 (일반적으로 전환율이 높음)</li>
@@ -22129,8 +22119,8 @@ P(Y \mid X) \ne P(Y) \text{이면 } X\text{가 } Y\text{의 원인이다.}
 <span id="cb201-18"><a href="#cb201-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb201-19"><a href="#cb201-19" aria-hidden="true" tabindex="-1"></a><span class="do">## 데이터 출력</span></span>
 <span id="cb201-20"><a href="#cb201-20" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(marketing_data)</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="데이터-해석" class="level6">
-<h6 class="anchored" data-anchor-id="데이터-해석">데이터 해석</h6>
+<section id="데이터-해석" class="level5">
+<h5 class="anchored" data-anchor-id="데이터-해석">데이터 해석</h5>
 <ul>
 <li><p>고가치 세그먼트에서의 캠페인 B: <span class="math inline">\(\frac{180}{300} = 60\%\)</span></p></li>
 <li><p>고가치 세그먼트에서의 캠페인 A: <span class="math inline">\(\frac{290}{500} = 58\%\)</span></p></li>
@@ -22142,7 +22132,6 @@ P(Y \mid X) \ne P(Y) \text{이면 } X\text{가 } Y\text{의 원인이다.}
 </ul>
 <p>=&gt; 저가치 세그먼트에서도 B가 더 우수하다 (9% vs 8.5%).</p>
 <p>따라서 각 개별 세그먼트에서는 B가 A보다 뛰어난 성과를 보인다.</p>
-</section>
 </section>
 <section id="단계-데이터-집계-고객-세그먼트-무시" class="level5">
 <h5 class="anchored" data-anchor-id="단계-데이터-집계-고객-세그먼트-무시">2단계: 데이터 집계 (고객 세그먼트 무시)</h5>
@@ -22205,6 +22194,7 @@ P(Y \mid X) \ne P(Y) \text{이면 } X\text{가 } Y\text{의 원인이다.}
 <span id="fig-simpson-paradox-14"><a href="#fig-simpson-paradox-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이 막대 그래프를 보면 두 세그먼트 모두에서 B의 막대가 더 높다(즉, B의 전환율이 더 높음). 세그먼트 수준의 데이터만 본다면 B가 더 우수한 캠페인이라고 결론을 내릴 것이다.</p>
 <p>그러나 데이터를 집계(세그먼트 무시)하면 전체적으로 A가 더 낫다는 정반대의 결론을 얻게 된다.</p>
+</section>
 </section>
 </section>
 <section id="왜-이런-현상이-발생하는가" class="level3">
@@ -42801,8 +42791,8 @@ Y_{it}(0)
 <p>F-검정 <span class="math inline">\(H_0\)</span>: 처치 전 기간의 잔차 평균 = 0</p>
 <p>아래 코드는 처치 반전 효과와 사건 시간에 따른 해당 F-검정 p-값을 보여주는 FECT 이탈 사건 진단을 생성한다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="did2-fect-exit" data-eval="FALSE"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="did2-fect-exit-1"><a href="#did2-fect-exit-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model.fect, <span class="at">stats =</span> <span class="st">"F.p"</span>, <span class="at">type =</span> <span class="st">'exit'</span>)</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="위약-검정-1" class="level5">
-<h5 class="anchored" data-anchor-id="위약-검정-1">위약 검정</h5>
+<section id="위약-검정-1" class="level4">
+<h4 class="anchored" data-anchor-id="위약-검정-1">위약 검정</h4>
 <p>데이터의 일부를 선택하고 지정된 범위 내의 관측치를 제외하여 모형 적합도를 높인 후, 이 범위 내에서 추정된 평균 처치 효과(ATT)가 0과 유의하게 다른지 평가한다. 이 접근법은 처치 전 기간을 분석하는 데 도움이 된다.</p>
 <p>이 검정이 실패하면 함수 형태나 엄격한 외생성 가정에 문저자가 있는 것이다. 아래 코드는 처치 전 기간인 -2기부터 0기까지를 마스킹하고 영가설인 0에 대해 마스킹된 기간의 평균 효과에 대한 p-값을 보고하는 FECT 위약 검정을 실행한다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="did2-fect-placebo" data-eval="FALSE"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="did2-fect-placebo-1"><a href="#did2-fect-placebo-1" aria-hidden="true" tabindex="-1"></a>out.fect.p <span class="ot">&lt;-</span></span>
@@ -42819,7 +42809,6 @@ Y_{it}(0)
 <span id="did2-fect-placebo-12"><a href="#did2-fect-placebo-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">placebo.period =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">0</span>)</span>
 <span id="did2-fect-placebo-13"><a href="#did2-fect-placebo-13" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="did2-fect-placebo-14"><a href="#did2-fect-placebo-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(out.fect.p, <span class="at">proportion =</span> <span class="fl">0.1</span>, <span class="at">stats =</span> <span class="st">"placebo.p"</span>)</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
 <section id="잔류-효과-검정-없음" class="level5">
 <h5 class="anchored" data-anchor-id="잔류-효과-검정-없음">잔류 효과 검정 (없음)</h5>
 <p>처치 전 기간 대신 여러 처치 후 기간을 마스킹하여 잔류 효과를 평가하도록 위약 검정을 수정할 수 있다. 잔류 효과가 없다면 평균 예측 오차는 대략 0이어야 한다. 잔류 효과 검정을 위해 <code>carryoverTest = TRUE</code>로 설정한다. carryover.period에 모형 적합에서 제외할 처치 후 기간 범위를 지정한 다음, 추정된 ATT가 0에서 유의하게 벗어나는지 평가한다.</p>
@@ -42839,6 +42828,7 @@ Y_{it}(0)
 <span id="did2-fect-carryover-13"><a href="#did2-fect-carryover-13" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="did2-fect-carryover-14"><a href="#did2-fect-carryover-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(out.fect.c,  <span class="at">stats =</span> <span class="st">"carryover.p"</span>)</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>잔류 효과의 증거가 확인된다.</p>
+</section>
 </section>
 </section>
 <section id="sec-matrix-completion-estimator" class="level3">
@@ -50875,10 +50865,6 @@ ESS = \frac{\left(\sum_i w_i\right)^2}{\sum_i w_i^2},
 <span id="ipw-overlap-simulation-36"><a href="#ipw-overlap-simulation-36" aria-hidden="true" tabindex="-1"></a>                           <span class="fu">ess</span>(w_ow[dat<span class="sc">$</span>d <span class="sc">==</span> <span class="dv">0</span>])))</span>
 <span id="ipw-overlap-simulation-37"><a href="#ipw-overlap-simulation-37" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>기초선 결과가 높은 곳에 처치가 집중되어 있어 단순 비교는 효과를 과대평가하지만 회귀 보정, IPW, 중첩 가중치는 모두 참값을 회복한다. 이 설계에서는 중첩이 양호하므로 IPW와 중첩 가중치가 유사하게 작동한다. 중첩이 악화되면 IPW 추정치는 불안정해지는 반면 중첩 가중 추정치는 안정성을 유지한다(단, 중첩 모집단에 대해만 답을 제공한다는 대가가 따른다). 실무에서는 <code>WeightIt</code> 패키지를 통해 균형 진단과 함께 이러한 모든 가중치 방식을 추정할 수 있으며 가중치는 대개 이중 강건 추정량에서 결과 모형과 결합되어 사용된다. 이 결합은 아래의 매칭과 회귀의 비교 및 머신러닝 인과추론 장(Chapter <a href="#sec-ml-causal" class="quarto-xref"><span>인과 추론을 위한 머신러닝</span></a>)에서 다룬다.</p>
-</section>
-</section>
-<section id="매칭과-회귀의-비교" class="level2">
-<h2 class="anchored" data-anchor-id="매칭과-회귀의-비교">매칭과 회귀의 비교</h2>
 <p>매칭과 회귀는 관찰연구에서 공변량 <span class="math inline">\(X\)</span>의 차이를 보정하고 인과효과를 추정하는 두 핵심 전략이다. 두 방법 모두 교란으로 인한 편향 제거를 목표로 하지만 관측치에 가중치를 부여하는 방식, 함수형 가정을 다루는 방식, 공변량 균형을 처리하는 방식에서 서로 다르게 접근한다.</p>
 <p>어느 방법도 비관측 교란 문제를 해결할 수는 없지만 주의 깊게 사용하고 적절한 진단으로 뒷받침하면 각각 강력한 도구가 될 수 있다.</p>
 <ul>
@@ -50892,6 +50878,7 @@ ESS = \frac{\left(\sum_i w_i\right)^2}{\sum_i w_i^2},
 </ul>
 <p>그 결과 추정대상과 민감도가 달라진다.</p>
 <p>특히 ATT 추정에서 매칭과 회귀의 추정대상이 어떻게 다른지 살펴본다.</p>
+</section>
 <section id="매칭-추정대상" class="level3">
 <h3 class="anchored" data-anchor-id="매칭-추정대상">매칭 추정대상</h3>
 <p>처치집단에 대한 처치효과를 구한다고 하자.</p>
@@ -53143,14 +53130,13 @@ Y_{it} = \alpha_i + \gamma_t + \beta X_{it} + \sum_{\ell=1}^{L}\left(\rho_\ell Y
 <p>Imai and Kim (2019, 2021)은이 모형과 시차 결과변수가 없는 단순 정적 이원고정효과 모형이 단위 간 및 시점 간의 모든 쌍별 비교의 분산 가중 평균과 근사적으로 동일하며 처치효과가 시간에 따라 또는 단위에 따라 달라질 때마다가 가중치가 음수가 될 수 있음을 증명했다 <span class="citation" data-cites="imai2019should imai2021use">[@imai2019should; @imai2021use]</span>. 이 경우 추정된 <span class="math inline">\(\hat\beta\)</span>의 부호는 데이터에 존재하는 모든 개별 단위 수준 효과의 부호와 완전히 다를 수 있으며 이는 2기간 스타일 이중차분법에서 <a href="#sec-goodman-bacon-decomposition">Goodman-Bacon 분해</a>를 촉발했던 것과 동일한 “금지된 비교(forbidden comparison)” 문제다. 패널 매칭은 동일한 근본 문제를 회귀 기반이 아닌 설계 기반 관점에서 해결한다.</p>
 <p>패널 매칭 프레임워크</p>
 <p><span class="math inline">\(X_{it} \in \{0,1\}\)</span>를 처치 상태, <span class="math inline">\(D_{it} = X_{it}(1-X_{i,t-1})\)</span>를 처치 시작(onset) 사건, <span class="math inline">\(L\)</span>을 비교 가능성을 정의하는 데 사용되는 처치 전 기간 수라 하자.</p>
-<section id="매칭-집합" class="level4">
-<h4 class="anchored" data-anchor-id="매칭-집합">매칭 집합</h4>
+<section id="매칭-집합" class="level3">
+<h3 class="anchored" data-anchor-id="매칭-집합">매칭 집합</h3>
 <p><span class="math inline">\(D_{it}=1\)</span>인 모든 처치 시작 <span class="math inline">\((i,t)\)</span>에 대해 매칭 집합은 이전 <span class="math inline">\(L\)</span> 기간 동안 처치 단위와 동일한 처치 이력을 공유하고 <span class="math inline">\(t\)</span> 시점에서는 처치받지 않은 통제 단위들을 수집한다.</p>
 <p><span class="math display">\[
 \mathcal{M}_{it} = \{\, i' : i' \neq i,\ X_{i't}=0,\ X_{i't'} = X_{it'} \text{ for } t'=t-1,\dots,t-L \,\}.
 \]</span></p>
 <p>이는 생존분석의 위험 집합(risk set)의 패널 대응물로, 단순히 동일한 시간 지수를 공유하는 것을 넘어 동일한 최근 처치 궤적을 갖는 비교군으로 제한된다.</p>
-</section>
 <section id="정제" class="level4">
 <h4 class="anchored" data-anchor-id="정제">정제</h4>
 <p>원시 매칭 집합은 크기가 클 수 있고 다른 처치 전 특성에서 이질적일 수 있으므로, 마할라노비스 거리</p>
@@ -53171,6 +53157,7 @@ S_{it}(i') = \frac{1}{L}\sum_{\ell=1}^{L} \sqrt{(V_{i,t-\ell}-V_{i',t-\ell})' \S
 <section id="식별-가정-7" class="level4">
 <h4 class="anchored" data-anchor-id="식별-가정-7">식별 가정</h4>
 <p>세 가지 가정이 추정량을 정당화한다. 단위 간 간섭 없음(한 단위의 결과가 다른 단위의 처치 상태에 의존하지 않음), 제한된 처치 이월 효과(처치 시작의 효과가 <span class="math inline">\(L\)</span>기간 매칭 윈도우 및 <span class="math inline">\(F\)</span>기간 리드 내에서 완전히 실현됨), 그리고 매칭된 처치 이력을 조건으로 한 평행 추세 가정이다. 즉, 직전 <span class="math inline">\(L\)</span>기간 동안 동일한 처치, 결과 및 공변량 이력을 공유했을 때, 처치 단위의 처치 시작이 없었더라면 처치 단위와 매칭된 통제 단위가 동일한 결과 궤적을 따랐을 것임을 의미한다.</p>
+</section>
 </section>
 <section id="복제-민주화와-경제-성장" class="level3">
 <h3 class="anchored" data-anchor-id="복제-민주화와-경제-성장">복제: 민주화와 경제 성장</h3>
@@ -53309,15 +53296,12 @@ Y = \theta_0 W + g_0(X) + \varepsilon, \qquad \mathbb{E}[\varepsilon \mid X, W] 
 <section id="이중-및-편향-제거-머신러닝" class="level2">
 <h2 class="anchored" data-anchor-id="이중-및-편향-제거-머신러닝">이중 및 편향 제거 머신러닝</h2>
 <p><span class="citation" data-cites="chernozhukov2018double">@chernozhukov2018double</span> 의 이중 또는 편향 제거 머신러닝(Double / Debiased Machine Learning; DML) 프레임워크는 임의의 머신러닝 방법으로 추정한 고차원 성가신 함수가 존재할 때 저차원 인과 모수를 추정하는 일반적 절차를 제공한다. 이 프레임워크는 Neyman 직교 점수와 교차 적합이라는 두 기둥 위에 세워진다.</p>
-<section id="neyman-직교-점수" class="level3">
-<h3 class="anchored" data-anchor-id="neyman-직교-점수">Neyman 직교 점수</h3>
 <p>관심 모수 <span class="math inline">\(\theta_0\)</span>가 모멘트 조건 <span class="math inline">\(\mathbb{E}[\psi(Z; \theta_0, \eta_0)] = 0\)</span>을 만족한다고 하자. 여기서 <span class="math inline">\(Z\)</span>는 관측자료를 모은 것이고 <span class="math inline">\(\psi\)</span>는 알려진 점수 함수이며 <span class="math inline">\(\eta_0\)</span>는 성가신 함수를 뜻한다. 참값에서 성가신 함수에 대한 기댓값의 미분이 0이면이 점수는 Neyman 직교다. <span class="math display">\[
 \partial_\eta \, \mathbb{E}\bigl[\psi(Z; \theta_0, \eta)\bigr]\Big|_{\eta = \eta_0} = 0.
 \]</span> 직교성은 <span class="math inline">\(\hat{\eta}\)</span>의 작은 오차가 모멘트 조건에 2차 효과만 미친다는 뜻이다. 머신러닝 오차는 느리지만 병리적이지 않으므로, 각 성가신 함수가 <span class="math inline">\(n^{-1/4}\)</span>보다 빠른 속도로 추정되면 <span class="math inline">\(\|\hat{\eta} - \eta_0\|^2\)</span> 형태의 2차항은 <span class="math inline">\(n^{-1/2}\)</span>보다 빠르게 0으로 간다. 유연한 학습기는 이러한 속도를 달성할 수 있다. 따라서 1차 정규화 편향은 구성 단계에서 제거된다.</p>
 <p>부분 선형 모형의 경우 단순 점수 <span class="math inline">\(W(Y - \theta W - g(X))\)</span>는 <span class="math inline">\(W\)</span>와의 상관관계를 통해 <span class="math inline">\(g\)</span>의 오차에 민감하므로 직교하지 않는다. 직교 점수는 처치 변수에서도 교란요인을 편회귀(partialling out)한다. 조건부 처치 평균 <span class="math inline">\(m_0(X) = \mathbb{E}[W \mid X]\)</span>와 잔차화된 처치 <span class="math inline">\(V = W - m_0(X)\)</span>를 정의하자. Robinson 스타일의 직교 점수는 다음과 같다. <span class="math display">\[
 \psi(Z; \theta, \eta) = \bigl(Y - g(X) - \theta\,(W - m(X))\bigr)\,\bigl(W - m(X)\bigr),
 \]</span> 여기서 성가신 함수는 <span class="math inline">\(\eta = (g, m)\)</span>이다. 이는 <span class="citation" data-cites="robinson1988root">@robinson1988root</span> 의 고전적 준모수 부분 선형 회귀의 기반이 되는 편회귀 추정량이며 이제 두 성가신 함수 모두 머신러닝으로 추정된다. 직관적으로 유연한 학습기를 사용하여 <span class="math inline">\(X\)</span>에 대해 <span class="math inline">\(Y\)</span>를 잔차화하고 <span class="math inline">\(X\)</span>에 대해 <span class="math inline">\(W\)</span>를 잔차화한 후, <span class="math inline">\(Y\)</span>-잔차를 <span class="math inline">\(W\)</span>-잔차에 회귀한다. 이 상호 잔차화가 점수를 어느 성가신 함수의 오차에 대해도 강건하게 만든다.</p>
-</section>
 <section id="교차-적합" class="level3">
 <h3 class="anchored" data-anchor-id="교차-적합">교차 적합</h3>
 <p>직교 점수를 사용하더라도 성가신 함수를 추정하고 모멘트 조건을 평가하는 데 동일한 관측치를 재사용하면 과적합 편향이 유입되며 학습기에 강력한 경험적 과정(empirical-process) 조건이 요구된다. 교차 적합은 표본 분할을 통해 이를 제거한다. 데이터를 <span class="math inline">\(K\)</span>개 폴드로 나눈다. 각 폴드 <span class="math inline">\(k\)</span>에 대해 폴드 <span class="math inline">\(k\)</span> 외부의 모든 관측치에서 성가신 함수를 추정한 다음, 해당 폴드 외부 추정치를 사용하여 남겨진 폴드 <span class="math inline">\(k\)</span>에서 직교 점수를 평가한다. 폴드별 모멘트 조건을 평균화하고 <span class="math inline">\(\theta\)</span>에 대해 풀면 교차 적합 추정량이 도출된다. 폴드의 역할을 바꾸어 가며 평균을 내면 완전한 효율성이 회복된다. 교차 적합은 Donsker 유형의 복잡성 제약 없이 거의 모든 학습기를 사용할 수 있게 해주며 현대의 매우 유연한 모형에서도가 프레임워크를 실용적으로 만들어 준다.</p>

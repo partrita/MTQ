@@ -1118,7 +1118,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#olap-온라인-분석-처리-시스템" id="toc-olap-온라인-분석-처리-시스템" class="nav-link" data-scroll-target="#olap-온라인-분석-처리-시스템">OLAP (온라인 분석 처리) 시스템</a></li>
   <li><a href="#sql-대-nosql-데이터베이스" id="toc-sql-대-nosql-데이터베이스" class="nav-link" data-scroll-target="#sql-대-nosql-데이터베이스">SQL 대 NoSQL 데이터베이스</a></li>
   <li><a href="#sql-데이터베이스-관계형-dbms" id="toc-sql-데이터베이스-관계형-dbms" class="nav-link" data-scroll-target="#sql-데이터베이스-관계형-dbms">SQL 데이터베이스 (관계형 DBMS)</a></li>
-  <li><a href="#속성-그래프-데이터베이스" id="toc-속성-그래프-데이터베이스" class="nav-link" data-scroll-target="#속성-그래프-데이터베이스">속성 그래프 데이터베이스</a></li>
   <li><a href="#하이퍼그래프-데이터베이스" id="toc-하이퍼그래프-데이터베이스" class="nav-link" data-scroll-target="#하이퍼그래프-데이터베이스">하이퍼그래프 데이터베이스</a></li>
   <li><a href="#rdf-자원-기술-프레임워크-데이터베이스" id="toc-rdf-자원-기술-프레임워크-데이터베이스" class="nav-link" data-scroll-target="#rdf-자원-기술-프레임워크-데이터베이스">RDF (자원 기술 프레임워크) 데이터베이스</a></li>
   </ul></li>
@@ -1138,7 +1137,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#snomed-ct" id="toc-snomed-ct" class="nav-link" data-scroll-target="#snomed-ct">SNOMED CT</a></li>
   <li><a href="#snomed-ct-활용-예시" id="toc-snomed-ct-활용-예시" class="nav-link" data-scroll-target="#snomed-ct-활용-예시">SNOMED CT 활용 예시</a></li>
   </ul></li>
-  <li><a href="#통합-의학-언어-시스템-활용" id="toc-통합-의학-언어-시스템-활용" class="nav-link" data-scroll-target="#통합-의학-언어-시스템-활용">통합 의학 언어 시스템 활용</a></li>
+  <li><a href="#통합-의학-언어-시스템-활용" id="toc-통합-의학-언어-시스템-활용" class="nav-link" data-scroll-target="#통합-의학-언어-시스템-활용">통합 의학 언어 시스템 활용</a>
+  <ul class="collapse">
+  <li><a href="#cui" id="toc-cui" class="nav-link" data-scroll-target="#cui">CUI</a></li>
+  </ul></li>
   <li><a href="#umls-데이터-처리-및-로딩-실습" id="toc-umls-데이터-처리-및-로딩-실습" class="nav-link" data-scroll-target="#umls-데이터-처리-및-로딩-실습">UMLS 데이터 처리 및 로딩 실습</a>
   <ul class="collapse">
   <li><a href="#metamorphosys를-활용한-umls-서브셋-추출" id="toc-metamorphosys를-활용한-umls-서브셋-추출" class="nav-link" data-scroll-target="#metamorphosys를-활용한-umls-서브셋-추출">MetamorphoSys를 활용한 UMLS 서브셋 추출</a></li>
@@ -1269,8 +1271,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#결론-및-요약-7" id="toc-결론-및-요약-7" class="nav-link" data-scroll-target="#결론-및-요약-7">결론 및 요약</a></li>
   <li><a href="#제7장-헬스케어-분석의-최신-트렌드" id="toc-제7장-헬스케어-분석의-최신-트렌드" class="nav-link" data-scroll-target="#제7장-헬스케어-분석의-최신-트렌드">제7장 헬스케어 분석의 최신 트렌드</a></li>
-  <li><a href="#연합의-과거와-현재" id="toc-연합의-과거와-현재" class="nav-link" data-scroll-target="#연합의-과거와-현재">연합의 과거와 현재</a></li>
-  <li><a href="#연합-학습과-연합-분석" id="toc-연합-학습과-연합-분석" class="nav-link" data-scroll-target="#연합-학습과-연합-분석">연합 학습과 연합 분석</a>
+  <li><a href="#연합의-과거와-현재" id="toc-연합의-과거와-현재" class="nav-link" data-scroll-target="#연합의-과거와-현재">연합의 과거와 현재</a>
   <ul class="collapse">
   <li><a href="#연합-학습의-작동-원리" id="toc-연합-학습의-작동-원리" class="nav-link" data-scroll-target="#연합-학습의-작동-원리">연합 학습의 작동 원리</a></li>
   <li><a href="#왜-연합-분석-및-학습을-도입하는가" id="toc-왜-연합-분석-및-학습을-도입하는가" class="nav-link" data-scroll-target="#왜-연합-분석-및-학습을-도입하는가">왜 연합 분석 및 학습을 도입하는가?</a></li>
@@ -1478,9 +1479,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- 조인 테이블을 사용하여 아세트아미노펜을 복용하는 환자 ID와 생년월일 가져오기</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> P.Patient_id, P.DOB <span class="kw">FROM</span> Patient P <span class="kw">INNER</span> <span class="kw">JOIN</span> Medication_Order MO <span class="kw">ON</span> P.Patient_id <span class="op">=</span> MO.Patient_id <span class="kw">INNER</span> <span class="kw">JOIN</span> Medication M <span class="kw">ON</span> MO.Medication_id <span class="op">=</span> M.Medication_id <span class="kw">WHERE</span> M.Medication_name <span class="op">=</span> <span class="ot">"Acetaminophen (Tylenol)"</span>;</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>예시 2-1은 환자와 그들의 약물 사이에 조인 테이블이 없는 의 스키마에 해당하는 기본 SQL 쿼리를 보여준다. 이것은 가장 단순한 스키마이며 INNER JOIN이 이를 가능하게 하는 SQL의 핵심 요소이다. 조인은 관계형 데이터베이스를 쿼리하고 여러 테이블에 걸쳐 분산된 데이터를 추출할 수 있게 해주는 메커니즘이다. 과거에 SQL로 작업한 적이 있다면 이것은 검토를 위한 것이다. SQL이 처음이라면, 여기서의 주요 의도는 높은 수준의 개요를 제공하고 관계형 데이터베이스를 쿼리하는 방법에 대한 기본적인 이해를 개발하도록 돕는 것이다. 예시 2-2는 SQL 쿼리를 확장하고 에서 제공되는 스키마를 가정한다. 여기서는 세 개의 다른 테이블에서 조인해야 하기 때문에 쿼리가 약간 더 복잡해지는 것을 볼 수 있다. 예시 2-2의 마지막 쿼리는 환자의 생년월일과 같은 추가 속성을 쿼리하려 할 때 쿼리가 어떻게 더 복잡해질 수 있는지를 보여준다. 이러한 예시와 특히 조인 테이블의 개념은 데이터의 그래프 기반 표현과 그래프 데이터베이스를 생각하는 데 중요하다. 첫 번째 유형의 그래프 데이터베이스인 속성 그래프 데이터베이스를 살펴보자.</p>
-</section>
-<section id="속성-그래프-데이터베이스" class="level3">
-<h3 class="anchored" data-anchor-id="속성-그래프-데이터베이스">속성 그래프 데이터베이스</h3>
 <p>레이블이 있는 속성 그래프(LPG) 데이터베이스는 흔히 속성 그래프 데이터베이스라고 불리며 오늘날 사용되는 가장 일반적인 그래프 데이터베이스 중 하나일 것이다. 유일한 유형의 그래프 데이터베이스도 아니고 첫 번째도 아니다. 그러나 Neo4j와 같은 회사가 최근 인기를 얻었다. 핵심에서 속성 그래프는 본질적으로 노드(가끔 정점이라고도 함)와 관계(가끔 엣지라고도 함)의 모음이며 에서 볼 수 있다.</p>
 <p>관계는 방향적이며 항상 하나의 노드에서 다른 노드를 가리킨다. 그러나 그래프 질의 언어는 일반적으로 방향성을 무시하고 관계를 쿼리할 수 있게 해준다. 레이블이 있는 속성 그래프에서는 노드에 레이블도 있어 데이터베이스에 있을 수 있는 모든 노드의 더 높은 수준의 조직을 제공한다. 이러한 레이블은 관계형 데이터베이스의 테이블과 어느 정도 유사하다. 앞선 예시를 계속하자면, Patient와 Medication이라는 두 가지 레이블 또는 유형의 노드가 있을 것이다. 각 노드에는 테이블의 열과 유사한 속성을 가질 수 있다. 의 스키마에 대한 한 가지 가능한 그래프 기반 표현은 에 나와 있다.</p>
 <p>보듯이, 관련 열을 추적하면서 환자, 약물, 약물 주문을 표현할 수 있는 능력을 여전히 가지고 있다. 이렇게 사용될 때, 속성 그래프와 관계형 데이터베이스는 많은 유사점을 가지며 일반적으로 동일한 기능을 제공한다. 차이점이 무엇이며 왜 그래프 데이터베이스를 쓰는지(특히 이미 관계형 데이터베이스가 배포되어 있다면) 궁금할 수 있다. 관계형 데이터베이스에서 관계는 데이터베이스의 기본 스키마의 일부로 테이블을 연결하는 데 초점을 맞춘다. 두 데이터 포인트가 연결되는 의미는 기본 데이터베이스의 설계와 관리에 녹아든다. 이것은 잘 문서화되어야 한다. 그렇지 않으면 담당 엔지니어가 조직을 떠나면 이 지식은 사라질 것이다. 기본 이유가 데이터의 의미와 관련이 없고 기술적 문제의 결과인 경우 특히 문제가 될 수 있다. 또한 데이터 엔지니어나 데이터 과학자가 테이블 사이에 새로운 유형의 관계를 추가하려면 데이터베이스 관리자 및 엔지니어와 협력하여 데이터베이스 스키마를 해당 방식으로 업데이트해야 한다. 반면에 속성 그래프 데이터베이스 내에서는 모든 데이터 측면(레이블, 속성, 관계 유형)이 데이터로 간주된다. 즉, 온더플라이로 업데이트할 수 있으며 데이터베이스 스키마를 재설계할 필요가 없다. 따라서 속성 그래프 데이터베이스는 스키마리스 데이터베이스 범주에 속한다. 이것은 다소 오해의 소지가 있다. 왜냐하면 데이터베이스에 분명히 스키마가 있기 때문이다. 그러나 스키마는 온더플라이로 변경될 수 있으며 데이터베이스 관리자에 의해 설정/관리되지 않는다. 더 나은 설명은 동적 스키마를 가지고 있다는 것이다.</p>
@@ -1668,8 +1666,8 @@ WHERE {?medication ex:medication_name "Acetaminophen (Tylenol)". ?patient ex:has
 <p>아톰(Atom) 아톰은 UMLS 내에서 가장 근본적인 의미 블록이다. 각 아톰은 UMLS 내의 단일 소스 맥락에서 하나의 개념을 나타낸다. 일반적으로 아톰은 문자열 레이블, 코드, 소스의 튜플로 생각할 수 있다. 따라서 서로 다른 소스(예: ICD-9 대 ICD-10)에서 동일한 문자열 레이블(및 개념)은 각각 고유한 아톰 고유 식별자(AUI)를 가진 별도의 아ATOM으로 처리된다(개념과 아톰의 비교는 참조).</p>
 <p>아톰 고유 식별자(AUI) AUI는 숫자 앞에 문자 A가 붙은 식별자이다. CUI와 달리, UMLS 내의 여러 서로 다른 소스에 걸쳐 있는 동일한 개념은 서로 다른 AUI를 갖는다. 결과적으로, AUI를 볼 때 본래적인 의미는 없다. 그들의 주요 기능은 UMLS 전반에 걸쳐 기본키-외부키 관계를 제공하는 것이다.</p>
 <p>개념(Concept) 개념은 UMLS의 핵심에 있으며 텍스트 표현의 소스에 관계없이 단일 의미를 나타낸다. 동일한 개념은 UMLS 내의 여러 소스에 걸쳐 존재할 수 있다. 아톰과 AUI는 소스 간에 다르지만 아톰이 동일한 개념을 나타내는 경우 모든 것이 동일한 CUI를 공유할 것이다. 의 예시에서 두 아톰은 ICD-9와 ICD-10에 걸쳐 동일한 개념을 나타내므로 공통 CUI를 공유한다.</p>
-<section id="cui" class="level4">
-<h4 class="anchored" data-anchor-id="cui">CUI</h4>
+<section id="cui" class="level3">
+<h3 class="anchored" data-anchor-id="cui">CUI</h3>
 <p>CUI는 숫자 앞에 문자 C가 붙은 식별자이며 각 CUI는 고유하고 동의어 개념은 동일한 CUI를 공유한다. 기본 소스나 텍스트 표현에 관계없이, CUI를 공유하는 두 개념은 의미상 동등한 것으로 간주된다.</p>
 <p>소스(Source) UMLS는 어휘, 전문 용어, 온톨로지의 모음이며 각각은 소스로 지칭된다. 따라서 UMLS를 소스와 그들 사이의 매핑 및 관계의 모음으로 생각할 수 있다. 개념 수준에서의 매핑 외에도, UMLS는 텍스트/단어 수준에서 작동하는 어휘 변형 생성기와 같은 추가 도구를 가지고 있다. 이러한 아이디어와 정의는 UMLS에 포함된 기능의 일부만 포착한다. 강력하지만, 그 결과로 상당히 복잡하며, 이것이 UMLS에 대한 첫 노출인 경우 압도적일 수 있다. 이것들은 시작하는 데 도움이 되고 UMLS를 좀 더 자세히 탐구하면서 기본적인 어휘를 제공할 것이다. 이 두 아이디어, 개념과 개념 고유 식별자(CUI)는 UMLS와 작업하는 데 핵심적이다. 다음은 “개념 지향”이라는 이 아이디어에 대한 더 깊은 탐구 — 단순히 코드나 용어가 아니라 기본 개념에 초점을 맞추는 것이다.</p>
 <p>개념 지향(Concept Orientation) 우리가 제어된 어휘, 전문 용어 또는 온톨로지를 사용하든, 공통 주제 중 하나는 레이블이나 용어가 아니라 기본 개념에 초점을 맞추려는 것이다. 예를 들어, “심장 마비”라고 부르든 “심근 경색”이라고 부르든 ICD-10 코드 “I21”이라고 부르든, 우리는 심장의 관상 동맥이 막혀 심장 근육과 조직이 괴사하는 의학적 상태를 가리킨다. UMLS 내에서 이것은 개념 고유 식별자를 사용하여 포착되며 이는 무작위로 생성된 숫자 코드로 문자 C가 앞에 붙는다. 각 CUI는 UMLS 내의 특정 소스에서의 개념 항목에 해당하는 여러 아톰에 의해 표현될 수 있는 특정 개념을 나타낸다. UMLS와 작업할 때 기억해야 할 핵심은 CUI의 사용을 중심으로 한다는 것이다. 그들을 나타내는 아톰이나 문자열에 관계없이, 동등한 개념은 서로 다른 소스 전반에 걸쳐 동일한 CUI를 공유할 것이다. 다시 말해, UMLS 내의 서로 다른 원어 전문 용어에서 온 두 용어나 개념이 동일한 CUI를 공유하면, 그것들은 동의어로 간주된다. 그럼에도 불구하고 “동등”이나 “동의어”라는 개념이 사용 사례에 크게 의존할 수 있음을 기억하는 것이 중요하다. 두 개념은 하나의 관점에서는 동등할 수 있지만 다른 관점에서는 아닐 수 있다.</p>
@@ -2820,9 +2818,6 @@ Bryan Perrozi et al., “DeepWalk: Online Learning of Social Representations”,
 <p>’연합(federated)’이라는 용어는 헬스케어 분야, 특히 연구자들 사이에서 꽤 오랫동안 사용되어 왔다. 그 개념은 연구자들이 데이터를 공통 용어를 사용하는 공통 데이터 모델(OMOP이 대표적인 예)로 변환한 다음 SQL 쿼리를 공유하여 연구 네트워크에 참여하는 각 기관에서 동일한 쿼리를 실행하도록 하는 것이었다. 그런 다음 결과를 수동으로 집계하여 연구의 통계적 검정력(statistical power)을 높일 수 있었다. 이 접근 방식을 통해 연구자들은 상당한 시간과 자원이 소모되는 비식별화(de-identification)나 익명화(anonymization)를 거칠 필요 없이 기관 간 협업을 진행할 수 있었다.</p>
 <p>그러나 오늘날 데이터 접근의 연합이라는 개념은 완전히 다른 의미를 띠게 되었다. 대부분의 사람들에게 가장 먼저 떠오르는 것은 연합 (머신)러닝(federated learning), 연합 평균/확률적 경사 하강법(federated average/stochastic gradient descent), 차분 프라이버시(differential privacy), 프라이버시 보존 분석(privacy-preserving analytics)이다. 모든 경우에서 분석이나 머신러닝의 연합화는 소프트웨어 라이브러리에 의해 전적으로 처리되는 자동화를 전제로 한다. 따라서 다른 데이터 과학자 및 연구자들과 교류할 때, 특히 의료정보학 및 임상 연구자들과 일하는 경우라면 용어 정의를 먼저 명확히 맞추는 것이 좋다.</p>
 <p>따라서 다음 절에서는 특히 헬스케어 RWD의 맥락에서 연합 학습과 연합 분석의 현재 정의를 자세히 살펴볼 것이다.</p>
-</section>
-<section id="연합-학습과-연합-분석" class="level2">
-<h2 class="anchored" data-anchor-id="연합-학습과-연합-분석">연합 학습과 연합 분석</h2>
 <p>우리의 첫 번째 목적지는 헬스케어뿐만 아니라 여러 산업 전반에서 목격되는 가장 뜨거운 트렌드 중 하나다. 구글의 만화(comic)와 같은 맥락에서 연합 학습이라는 용어를 들어보았을 것이다. 엣지 컴퓨팅(edge computing)과 결합된 이러한 연합 학습 사례는 불과 몇 년 전만 해도 상상할 수 없었던 수준의 데이터 “공유”를 가능하게 했다.</p>
 <p>예를 들어, 오늘날 스마트폰에서 사용되는 수많은 키보드를 생각해 보자. 구글, 애플, 삼성과 같은 기업들은 키보드의 예측 성능을 향상시키기 위해 노력하고 있다. 하지만 이러한 모델을 훈련하려면 사용자가 휴대폰에 입력하는 모든 내용에 접근할 수 있어야 한다. 우리 모두가 휴대폰을 사용하여 뱅킹 서비스, 건강 기록에 접근하고 캘린더와 이메일을 통해 일상생활의 세부 사항까지 다루고 있다는 점을 감안할 때 이는 엄청난 프라이버시 악몽이 될 것이다.</p>
 <p>헬스케어 분야에서는 (아직은!) 모든 환자의 개별 스마트폰에 접근하는 것을 논하지는 않는다. 현재의 이니셔티브는 기관이나 조직 간의 연합에 초점을 맞추고 있다. 다음 몇 개 절에서는 연합 학습이 어떻게 작동하는지, 그리고 일부 연구자들이 연합 머신러닝(예: 여러 조직에 걸친 데이터로 모델 훈련)과 연합 분석(예: 기술 통계, 생물통계학)을 어떻게 구분하고 있는지 살펴볼 것이다. 그런 다음 연합 접근 방식, 데이터 조율, 그래프의 교차점을 살펴볼 것이다. 이제 연합 학습이 어떻게 작동하는지 알아보자.</p>

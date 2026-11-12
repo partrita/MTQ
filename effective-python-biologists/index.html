@@ -1214,6 +1214,7 @@ window.Quarto = {
   <li><a href="#성능-최적화-지침" id="toc-성능-최적화-지침" class="nav-link" data-scroll-target="#성능-최적화-지침">성능 최적화 지침</a></li>
   <li><a href="#성능-개선-실용-팁" id="toc-성능-개선-실용-팁" class="nav-link" data-scroll-target="#성능-개선-실용-팁">성능 개선 실용 팁</a>
   <ul class="collapse">
+  <li><a href="#과도한-터미널-출력-제한" id="toc-과도한-터미널-출력-제한" class="nav-link" data-scroll-target="#과도한-터미널-출력-제한">과도한 터미널 출력 제한</a></li>
   <li><a href="#기존-모듈과-알고리즘-쓰기" id="toc-기존-모듈과-알고리즘-쓰기" class="nav-link" data-scroll-target="#기존-모듈과-알고리즘-쓰기">기존 모듈과 알고리즘 쓰기</a></li>
   <li><a href="#같은-계산-반복하지-않기" id="toc-같은-계산-반복하지-않기" class="nav-link" data-scroll-target="#같은-계산-반복하지-않기">같은 계산 반복하지 않기</a></li>
   <li><a href="#가능하면-루프-피하기" id="toc-가능하면-루프-피하기" class="nav-link" data-scroll-target="#가능하면-루프-피하기">가능하면 루프 피하기</a></li>
@@ -3854,14 +3855,13 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 <span id="cb235-3"><a href="#cb235-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
 <span id="cb235-4"><a href="#cb235-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> lines:</span>
 <span id="cb235-5"><a href="#cb235-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(line[<span class="dv">0</span>:i])</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="과도한-터미널-출력-제한" class="level4">
-<h4 class="anchored" data-anchor-id="과도한-터미널-출력-제한">과도한 터미널 출력 제한</h4>
+<section id="과도한-터미널-출력-제한" class="level3">
+<h3 class="anchored" data-anchor-id="과도한-터미널-출력-제한">과도한 터미널 출력 제한</h3>
 <p>터미널 콘솔 출력(<code>print</code>) 역시 I/O 작업이므로 루프 안에서 빈번하게 호출되면 심각한 병목이 된다. 진행 상황을 표시하고 싶다면 일정 주기마다 한 번씩만 출력하는 패턴을 사용한다.<a href="#fn87" class="footnote-ref" id="fnref87" role="doc-noteref"><sup>87</sup></a></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb236"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb236-1"><a href="#cb236-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100000</span>):</span>
 <span id="cb236-2"><a href="#cb236-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">%</span> <span class="dv">1000</span> <span class="op">==</span> <span class="dv">0</span>:  <span class="co"># 1,000회마다 한 번만 출력</span></span>
 <span id="cb236-3"><a href="#cb236-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"processing number: "</span> <span class="op">+</span> <span class="bu">str</span>(i))</span>
 <span id="cb236-4"><a href="#cb236-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 실제 데이터 처리 코드</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
 <section id="효율적인-데이터-직렬화-및-압축" class="level4">
 <h4 class="anchored" data-anchor-id="효율적인-데이터-직렬화-및-압축">효율적인 데이터 직렬화 및 압축</h4>
 <p>프로그램 간 중간 데이터를 주고받을 때는 텍스트 플랫 파일보다 압축 및 직렬화 형식을 활용하는 것이 디스크 I/O를 크게 줄여준다.</p>
@@ -3880,6 +3880,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 <span id="cb237-4"><a href="#cb237-4" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> urllib2.urlopen(<span class="st">'http://example.org/protein/'</span> <span class="op">+</span> <span class="bu">id</span>)</span>
 <span id="cb237-5"><a href="#cb237-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 데이터 처리</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>중복 조회를 제거하거나 결과를 메모리에 캐싱하고, 대용량 분석의 경우 데이터베이스의 로컬 덤프 사본을 구축하여 네트워크 요청 자체를 없애는 것이 가장 효과적이다.</p>
+</section>
 </section>
 <section id="기존-모듈과-알고리즘-쓰기" class="level3">
 <h3 class="anchored" data-anchor-id="기존-모듈과-알고리즘-쓰기">기존 모듈과 알고리즘 쓰기</h3>

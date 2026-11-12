@@ -4264,16 +4264,15 @@ sorry, couldn't open the file: Is a directory</code></pre>
 <p>“do some processing…”로 표현된 코드가 잠재적으로 예외를 일으킬 수 있다고 해 봅시다. function_one에서 예외를 잡아 처리할 수 있다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb356"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb356-1"><a href="#cb356-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> function_one:</span>
 <span id="cb356-2"><a href="#cb356-2" aria-hidden="true" tabindex="-1"></a> <span class="cf">try</span>:</span>
-<span id="cb356-3"><a href="#cb356-3" aria-hidden="true" tabindex="-1"></a><span class="co"># do some processing...</span></span>
-<span id="cb356-4"><a href="#cb356-4" aria-hidden="true" tabindex="-1"></a> <span class="cf">return</span> <span class="dv">5</span></span>
-<span id="cb356-5"><a href="#cb356-5" aria-hidden="true" tabindex="-1"></a> <span class="cf">except</span> SomeException:</span>
-<span id="cb356-6"><a href="#cb356-6" aria-hidden="true" tabindex="-1"></a><span class="co"># handle the exception...</span></span>
-<span id="cb356-7"><a href="#cb356-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb356-8"><a href="#cb356-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> function_two:</span>
-<span id="cb356-9"><a href="#cb356-9" aria-hidden="true" tabindex="-1"></a> my_number <span class="op">=</span> function_one()</span>
-<span id="cb356-10"><a href="#cb356-10" aria-hidden="true" tabindex="-1"></a> <span class="cf">return</span> my_number <span class="op">+</span> <span class="dv">2</span></span>
-<span id="cb356-11"><a href="#cb356-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb356-12"><a href="#cb356-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(function_two())</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb356-3"><a href="#cb356-3" aria-hidden="true" tabindex="-1"></a> <span class="cf">return</span> <span class="dv">5</span></span>
+<span id="cb356-4"><a href="#cb356-4" aria-hidden="true" tabindex="-1"></a> <span class="cf">except</span> SomeException:</span>
+<span id="cb356-5"><a href="#cb356-5" aria-hidden="true" tabindex="-1"></a><span class="co"># handle the exception...</span></span>
+<span id="cb356-6"><a href="#cb356-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb356-7"><a href="#cb356-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> function_two:</span>
+<span id="cb356-8"><a href="#cb356-8" aria-hidden="true" tabindex="-1"></a> my_number <span class="op">=</span> function_one()</span>
+<span id="cb356-9"><a href="#cb356-9" aria-hidden="true" tabindex="-1"></a> <span class="cf">return</span> my_number <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb356-10"><a href="#cb356-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb356-11"><a href="#cb356-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(function_two())</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
 <p>하지만 하지 않으면 어떻게 될까? 답은 예외가 function_one을 호출한 코드 부분, 우리 경우 function_two로 넘겨진다는 것이다. 그래서 거기서 예외를 처리할 두 번째 기회가 생긴다:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb357"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb357-1"><a href="#cb357-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> function_one:</span>
 <span id="cb357-2"><a href="#cb357-2" aria-hidden="true" tabindex="-1"></a><span class="co"># do some processing...</span></span>
